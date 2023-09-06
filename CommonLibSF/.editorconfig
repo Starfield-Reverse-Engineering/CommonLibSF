@@ -1,0 +1,11 @@
+[*]
+charset = utf-8
+insert_final_newline = true
+
+[*.{asm,c,cc,cpp,cxx,h,hpp,hxx,inc,inl,ixx}]
+indent_style = tab
+indent_size = 4
+
+[*.{ini,json,toml,xml}]
+indent_style = space
+indent_size = 2

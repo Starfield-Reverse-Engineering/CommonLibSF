@@ -1,0 +1,13 @@
+/[Bb]uild*
+CMakeUserPresets.json
+CMakeFiles
+CMakeCache.txt
+*.cmake
+/out*
+/.vs*
+/.vscode*
+/.idea
+conan.lock
+conanbuildinfo.*
+conaninfo.txt
+graph_info.json

@@ -1,0 +1,12 @@
+on: [push]
+
+jobs:
+  sourcegen:
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: make Starfield.h
+      shell: pwsh
+      run: "& ${{ GITHUB_WORKSPACE }}/CommonLibSF/cmake/make-directives.ps1 ${{ GITHUB_WORKSPACE }}/CommonLibSF"
