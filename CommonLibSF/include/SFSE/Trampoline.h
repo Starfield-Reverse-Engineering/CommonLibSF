@@ -178,6 +178,13 @@ namespace SFSE
 			return write_call<N>(a_src, stl::unrestricted_cast<std::uintptr_t>(a_dst));
 		}
 
+		template <class T>
+		void write_thunk_call(std::uintptr_t a_src)
+		{
+			SFSE::AllocTrampoline(14);
+			T::func = write_call<5>(a_src, T::thunk);
+		}
+
 	private:
 		[[nodiscard]] void* do_create(std::size_t a_size, std::uintptr_t a_address);
 

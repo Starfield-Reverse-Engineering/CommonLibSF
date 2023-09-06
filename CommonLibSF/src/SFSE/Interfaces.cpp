@@ -58,14 +58,14 @@ namespace SFSE
 		return result;
 	}
 
-	bool MessagingInterface::RegisterListener(EventCallback* a_callback) const
+	bool MessagingInterface::RegisterListener(EventCallback a_callback) const
 	{
 		return RegisterListener("SFSE", a_callback);
 	}
 
-	bool MessagingInterface::RegisterListener(const char* a_sender, EventCallback* a_callback) const
+	bool MessagingInterface::RegisterListener(const char* a_sender, EventCallback a_callback) const
 	{
-		auto result = GetProxy()->RegisterListener(GetPluginHandle(), a_sender, reinterpret_cast<void*>(a_callback));
+		auto result = GetProxy()->RegisterListener(GetPluginHandle(), a_sender, std::bit_cast<void*>(a_callback));
 		if (!result) {
 			log::error("Failed to register messaging listener for {}", a_sender);
 		}

@@ -576,6 +576,11 @@ namespace REL
 	class Relocation
 	{
 	public:
+		using value_type =
+			std::conditional_t<
+				std::is_member_pointer_v<T> || std::is_function_v<std::remove_pointer_t<T>>,
+				std::decay_t<T>, T>;
+
 		constexpr Relocation() noexcept = default;
 		constexpr Relocation(const std::uintptr_t a_addr) noexcept :
 			_address(a_addr)
@@ -597,22 +602,59 @@ namespace REL
 		{
 			return _address;
 		}
+		[[nodiscard]] std::size_t offset() const noexcept { return _address - base(); }
 
+		template <class U = value_type>
 		[[nodiscard]] constexpr decltype(auto) operator*() const noexcept
 			requires(std::is_pointer_v<U>)
 		{
 			return *get();
 		}
 
+		template <class U = value_type>
+		[[nodiscard]] constexpr auto operator->() const noexcept  //
+			requires(std::is_pointer_v<U>)
+		{
+			return get();
+		}
+
 		template <class... Args>
-		std::invoke_result_t<const U&, Args...> operator()(Args&&... a_args) const  //
-			noexcept(std::is_nothrow_invocable_v<const U&, Args...>)                //
-			requires(std::invocable<const U&, Args...>)
+		std::invoke_result_t<const value_type&, Args...> operator()(Args&&... a_args) const  //
+			noexcept(std::is_nothrow_invocable_v<const value_type&, Args...>)                //
+			requires(std::invocable<const value_type&, Args...>)
 		{
 			return invoke(get(), std::forward<Args>(a_args)...);
 		}
 
+		template <class U = value_type>
+		std::uintptr_t write_vfunc(std::size_t a_idx, std::uintptr_t a_newFunc)  //
+			requires(std::same_as<U, std::uintptr_t>)
+		{
+			const auto addr = address() + (sizeof(void*) * a_idx);
+			const auto result = *std::bit_cast<std::uintptr_t*>(addr);
+			safe_write(addr, a_newFunc);
+			return result;
+		}
+
+		template <class F>
+		std::uintptr_t write_vfunc(std::size_t a_idx, F a_newFunc)  //
+			requires(std::same_as<value_type, std::uintptr_t>)
+		{
+			return write_vfunc(a_idx, stl::unrestricted_cast<std::uintptr_t>(a_newFunc));
+		}
+
+		/**
+		template <class F, std::size_t idx, class T>
+		void write_vfunc()
+		{
+			REL::Relocation<std::uintptr_t> vtbl{ F::VTABLE[0] };
+			T::func = vtbl.write_vfunc(idx, T::thunk);
+		}
+		/**/
+
 	private:
+		[[nodiscard]] static std::uintptr_t base() { return Module::get().base(); }
+
 		std::uintptr_t _address{ 0 };
 	};
 }

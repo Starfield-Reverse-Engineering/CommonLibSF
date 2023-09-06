@@ -65,8 +65,8 @@ namespace SFSE
 		[[nodiscard]] std::uint32_t Version() const;
 
 		bool Dispatch(std::uint32_t a_messageType, void* a_data, std::uint32_t a_dataLen, const char* a_receiver) const;
-		bool RegisterListener(EventCallback* a_callback) const;
-		bool RegisterListener(const char* a_sender, EventCallback* a_callback) const;
+		bool RegisterListener(EventCallback a_callback) const;
+		bool RegisterListener(const char* a_sender, EventCallback a_callback) const;
 
 	protected:
 		[[nodiscard]] const detail::SFSEMessagingInterface* GetProxy() const;
@@ -124,7 +124,7 @@ namespace SFSE
 				a_versions, std::begin(compatibleVersions),
 				[](const REL::Version& a_version) noexcept { return a_version.pack(); });
 		}
-		constexpr void MinimumRequiredXSEVersion(std::uint32_t a_version) noexcept { xseMinimum = a_version; }
+		constexpr void MinimumRequiredXSEVersion(REL::Version a_version) noexcept { xseMinimum = a_version.pack(); }
 
 		const std::uint32_t dataVersion{ kVersion };
 		std::uint32_t       pluginVersion = 0;
@@ -133,7 +133,7 @@ namespace SFSE
 		std::uint32_t       addressIndependence;
 		std::uint32_t       structureCompatibility;
 		std::uint32_t       compatibleVersions[16] = {};
-		std::uint32_t       xseMinimum = SFSE_PACK_LATEST.pack();
+		std::uint32_t       xseMinimum = 0;
 		const std::uint32_t reservedNonBreaking = 0;
 		const std::uint32_t reservedBreaking = 0;
 
