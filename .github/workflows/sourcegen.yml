@@ -9,4 +9,12 @@ jobs:
     
     - name: make Starfield.h
       shell: pwsh
-      run: "& ${{ GITHUB_WORKSPACE }}/CommonLibSF/cmake/make-directives.ps1 ${{ GITHUB_WORKSPACE }}/CommonLibSF"
+      run: "& ${{ github.workspace }}/CommonLibSF/cmake/make-directives.ps1 ${{ github.workspace }}/CommonLibSF"
+
+    - name: commit
+      uses: EndBug/add-and-commit@v9
+      with:
+        author_name: sourcegen
+        message: 'chore: update `Starfield.h`'
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

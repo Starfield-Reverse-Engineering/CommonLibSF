@@ -56,108 +56,107 @@
 	REL_MAKE_MEMBER_FUNCTION_NON_POD_TYPE_HELPER(&, ##__VA_ARGS__) \
 	REL_MAKE_MEMBER_FUNCTION_NON_POD_TYPE_HELPER(&&, ##__VA_ARGS__)
 
-
 namespace REL
 {
-    namespace detail
-    {
-        template <class>
-        struct member_function_pod_type;
+	namespace detail
+	{
+		template <class>
+		struct member_function_pod_type;
 
-        REL_MAKE_MEMBER_FUNCTION_POD_TYPE();
-        REL_MAKE_MEMBER_FUNCTION_POD_TYPE(const);
-        REL_MAKE_MEMBER_FUNCTION_POD_TYPE(volatile);
-        REL_MAKE_MEMBER_FUNCTION_POD_TYPE(const volatile);
+		REL_MAKE_MEMBER_FUNCTION_POD_TYPE();
+		REL_MAKE_MEMBER_FUNCTION_POD_TYPE(const);
+		REL_MAKE_MEMBER_FUNCTION_POD_TYPE(volatile);
+		REL_MAKE_MEMBER_FUNCTION_POD_TYPE(const volatile);
 
-        template <class F>
-        using member_function_pod_type_t = typename member_function_pod_type<F>::type;
+		template <class F>
+		using member_function_pod_type_t = typename member_function_pod_type<F>::type;
 
-        template <class>
-        struct member_function_non_pod_type;
+		template <class>
+		struct member_function_non_pod_type;
 
-        REL_MAKE_MEMBER_FUNCTION_NON_POD_TYPE();
-        REL_MAKE_MEMBER_FUNCTION_NON_POD_TYPE(const);
-        REL_MAKE_MEMBER_FUNCTION_NON_POD_TYPE(volatile);
-        REL_MAKE_MEMBER_FUNCTION_NON_POD_TYPE(const volatile);
+		REL_MAKE_MEMBER_FUNCTION_NON_POD_TYPE();
+		REL_MAKE_MEMBER_FUNCTION_NON_POD_TYPE(const);
+		REL_MAKE_MEMBER_FUNCTION_NON_POD_TYPE(volatile);
+		REL_MAKE_MEMBER_FUNCTION_NON_POD_TYPE(const volatile);
 
-        template <class F>
-        using member_function_non_pod_type_t = typename member_function_non_pod_type<F>::type;
+		template <class F>
+		using member_function_non_pod_type_t = typename member_function_non_pod_type<F>::type;
 
-        // https://docs.microsoft.com/en-us/cpp/build/x64-calling-convention
+		// https://docs.microsoft.com/en-us/cpp/build/x64-calling-convention
 
-        template <class T>
-        struct meets_length_req :
-            std::disjunction<
-                std::bool_constant<sizeof(T) == 1>,
-                std::bool_constant<sizeof(T) == 2>,
-                std::bool_constant<sizeof(T) == 4>,
-                std::bool_constant<sizeof(T) == 8>>
-        {
-        };
+		template <class T>
+		struct meets_length_req :
+			std::disjunction<
+				std::bool_constant<sizeof(T) == 1>,
+				std::bool_constant<sizeof(T) == 2>,
+				std::bool_constant<sizeof(T) == 4>,
+				std::bool_constant<sizeof(T) == 8>>
+		{
+		};
 
-        template <class T>
-        struct meets_function_req :
-            std::conjunction<
-                std::is_trivially_constructible<T>,
-                std::is_trivially_destructible<T>,
-                std::is_trivially_copy_assignable<T>,
-                std::negation<
-                    std::is_polymorphic<T>>>
-        {
-        };
+		template <class T>
+		struct meets_function_req :
+			std::conjunction<
+				std::is_trivially_constructible<T>,
+				std::is_trivially_destructible<T>,
+				std::is_trivially_copy_assignable<T>,
+				std::negation<
+					std::is_polymorphic<T>>>
+		{
+		};
 
-        template <class T>
-        struct meets_member_req :
-            std::is_standard_layout<T>
-        {
-        };
+		template <class T>
+		struct meets_member_req :
+			std::is_standard_layout<T>
+		{
+		};
 
-        template <class T, class = void>
-        struct is_x64_pod :
-            std::true_type
-        {
-        };
+		template <class T, class = void>
+		struct is_x64_pod :
+			std::true_type
+		{
+		};
 
-        template <class T>
-        struct is_x64_pod<
-            T,
-            std::enable_if_t<
-                std::is_union_v<T>>> :
-            std::false_type
-        {
-        };
+		template <class T>
+		struct is_x64_pod<
+			T,
+			std::enable_if_t<
+				std::is_union_v<T>>> :
+			std::false_type
+		{
+		};
 
-        template <class T>
-        struct is_x64_pod<
-            T,
-            std::enable_if_t<
-                std::is_class_v<T>>> :
-            std::conjunction<
-                meets_length_req<T>,
-                meets_function_req<T>,
-                meets_member_req<T>>
-        {
-        };
+		template <class T>
+		struct is_x64_pod<
+			T,
+			std::enable_if_t<
+				std::is_class_v<T>>> :
+			std::conjunction<
+				meets_length_req<T>,
+				meets_function_req<T>,
+				meets_member_req<T>>
+		{
+		};
 
-        template <class T>
-        static constexpr bool is_x64_pod_v = is_x64_pod<T>::value;
+		template <class T>
+		static constexpr bool is_x64_pod_v = is_x64_pod<T>::value;
 
-        template <
-            class F,
-            class First,
-            class... Rest>
-        decltype(auto) invoke_member_function_non_pod(F&& a_func, First&& a_first, Rest&&... a_rest)  //
-            noexcept(std::is_nothrow_invocable_v<F, First, Rest...>)
-        {
-            using result_t = std::invoke_result_t<F, First, Rest...>;
-            alignas(result_t) std::byte result[sizeof(result_t)]{};
+		template <
+			class F,
+			class First,
+			class... Rest>
+		decltype(auto) invoke_member_function_non_pod(F&& a_func, First&& a_first, Rest&&... a_rest)  //
+			noexcept(std::is_nothrow_invocable_v<F, First, Rest...>)
+		{
+			using result_t = std::invoke_result_t<F, First, Rest...>;
+			alignas(result_t) std::byte result[sizeof(result_t)]{};
 
-            using func_t = member_function_non_pod_type_t<F>;
-            auto func = std::bit_cast<func_t*>(std::forward<F>(a_func));
+			using func_t = member_function_non_pod_type_t<F>;
+			auto func = std::bit_cast<func_t*>(std::forward<F>(a_func));
 
-            return func(std::forward<First>(a_first), std::addressof(result), std::forward<Rest>(a_rest)...);
-        }
-    }
+			return func(std::forward<First>(a_first), std::addressof(result), std::forward<Rest>(a_rest)...);
+		}
+	}
 
 	inline constexpr std::uint8_t NOP = 0x90;
 	inline constexpr std::uint8_t NOP2[] = { 0x66, 0x90 };
@@ -248,7 +247,7 @@ namespace REL
 		assert(success != 0);
 	};
 
-    class Version
+	class Version
 	{
 	public:
 		using value_type = std::uint16_t;
@@ -512,7 +511,10 @@ namespace REL
 
 		[[nodiscard]] constexpr auto base() const noexcept { return _base; }
 		template <typename T = void>
-		[[nodiscard]] constexpr auto* pointer() const noexcept { return std::bit_cast<T*>(base()); }
+		[[nodiscard]] constexpr auto* pointer() const noexcept
+		{
+			return std::bit_cast<T*>(base());
+		}
 		[[nodiscard]] constexpr auto segment(Segment::Name a_segment) noexcept { return _segments[a_segment]; }
 		[[nodiscard]] static Module& get(const std::uintptr_t a_address) noexcept
 		{
@@ -569,7 +571,6 @@ namespace REL
 	private:
 		std::ptrdiff_t _offset{ 0 };
 	};
-
 
 	template <typename T = std::uintptr_t, typename U = std::conditional_t<std::is_member_pointer_v<T> || std::is_function_v<std::remove_pointer_t<T>>, std::decay_t<T>, T>>
 	class Relocation

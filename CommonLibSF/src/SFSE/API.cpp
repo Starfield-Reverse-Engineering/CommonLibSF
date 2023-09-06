@@ -17,10 +17,9 @@ namespace SFSE
 			PluginHandle  pluginHandle{ static_cast<PluginHandle>(-1) };
 			std::uint32_t releaseIndex{ 0 };
 
-			TrampolineInterface*	trampolineInterface{ nullptr };
+			TrampolineInterface* trampolineInterface{ nullptr };
 
-			MessagingInterface*		messagingInterface{ nullptr };
-
+			MessagingInterface* messagingInterface{ nullptr };
 
 			std::mutex                         apiLock;
 			std::vector<std::function<void()>> apiInitRegs;

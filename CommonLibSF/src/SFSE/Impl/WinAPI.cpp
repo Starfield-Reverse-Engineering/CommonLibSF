@@ -354,17 +354,17 @@ namespace SFSE::WinAPI
 			static_cast<::LPCWSTR>(a_outputString));
 	}
 
-    long RegGetValueW(HKEY hkey, const char* subKey, const char* value, unsigned long flags, unsigned long* type,
-                      void* data, unsigned long* length)
-    {
-        return ::RegGetValueA(reinterpret_cast<::HKEY>(hkey), subKey, value, flags, type, data, length);
-    }
+	long RegGetValueW(HKEY hkey, const char* subKey, const char* value, unsigned long flags, unsigned long* type,
+		void* data, unsigned long* length)
+	{
+		return ::RegGetValueA(reinterpret_cast<::HKEY>(hkey), subKey, value, flags, type, data, length);
+	}
 
-    long RegGetValueW(HKEY hkey, const wchar_t* subKey, const wchar_t* value, unsigned long flags, unsigned long* type,
-                      void* data, unsigned long* length)
-    {
-        return ::RegGetValueW(reinterpret_cast<::HKEY>(hkey), subKey, value, flags, type, data, length);
-    }
+	long RegGetValueW(HKEY hkey, const wchar_t* subKey, const wchar_t* value, unsigned long flags, unsigned long* type,
+		void* data, unsigned long* length)
+	{
+		return ::RegGetValueW(reinterpret_cast<::HKEY>(hkey), subKey, value, flags, type, data, length);
+	}
 
 	int ShowCursor(bool bShow) noexcept
 	{

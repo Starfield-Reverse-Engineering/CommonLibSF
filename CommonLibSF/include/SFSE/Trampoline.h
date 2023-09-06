@@ -19,8 +19,8 @@ namespace SFSE
 
 			const auto remainder = a_number % a_multiple;
 			return remainder == 0 ?
-                       a_number :
-                       a_number + a_multiple - remainder;
+			           a_number :
+			           a_number + a_multiple - remainder;
 		}
 
 		[[nodiscard]] constexpr std::size_t rounddown(std::size_t a_number, std::size_t a_multiple) noexcept
@@ -31,8 +31,8 @@ namespace SFSE
 
 			const auto remainder = a_number % a_multiple;
 			return remainder == 0 ?
-                       a_number :
-                       a_number - remainder;
+			           a_number :
+			           a_number - remainder;
 		}
 	}
 

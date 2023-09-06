@@ -252,7 +252,7 @@ namespace SFSE
 			template <class... Args>
 			constexpr enumeration(Args... a_values) noexcept  //
 				requires(std::same_as<Args, enum_type> && ...)
-			:
+				:
 				_impl((static_cast<underlying_type>(a_values) | ...))
 			{}
 
@@ -725,7 +725,7 @@ namespace SFSE
 		}
 
 		[[noreturn]] inline void report_and_fail(std::string_view a_msg,
-			SFSE::stl::source_location a_loc = SFSE::stl::source_location::current())
+			SFSE::stl::source_location                            a_loc = SFSE::stl::source_location::current())
 		{
 			report_and_error(a_msg, true, a_loc);
 		}

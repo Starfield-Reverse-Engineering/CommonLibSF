@@ -33,9 +33,9 @@ namespace SFSE
 			kTotal
 		};
 
-		[[nodiscard]] PluginHandle  GetPluginHandle() const;
-		const PluginInfo*           GetPluginInfo(const char* a_name) const;
-		[[nodiscard]] void*         QueryInterface(std::uint32_t a_id) const;
+		[[nodiscard]] PluginHandle GetPluginHandle() const;
+		const PluginInfo*          GetPluginInfo(const char* a_name) const;
+		[[nodiscard]] void*        QueryInterface(std::uint32_t a_id) const;
 	};
 
 	class MessagingInterface
@@ -64,9 +64,9 @@ namespace SFSE
 
 		[[nodiscard]] std::uint32_t Version() const;
 
-		bool                Dispatch(std::uint32_t a_messageType, void* a_data, std::uint32_t a_dataLen, const char* a_receiver) const;
-		bool                RegisterListener(EventCallback* a_callback) const;
-		bool                RegisterListener(const char* a_sender, EventCallback* a_callback) const;
+		bool Dispatch(std::uint32_t a_messageType, void* a_data, std::uint32_t a_dataLen, const char* a_receiver) const;
+		bool RegisterListener(EventCallback* a_callback) const;
+		bool RegisterListener(const char* a_sender, EventCallback* a_callback) const;
 
 	protected:
 		[[nodiscard]] const detail::SFSEMessagingInterface* GetProxy() const;
@@ -133,7 +133,7 @@ namespace SFSE
 		std::uint32_t       addressIndependence;
 		std::uint32_t       structureCompatibility;
 		std::uint32_t       compatibleVersions[16] = {};
-		std::uint32_t		xseMinimum = SFSE_PACK_LATEST.pack();
+		std::uint32_t       xseMinimum = SFSE_PACK_LATEST.pack();
 		const std::uint32_t reservedNonBreaking = 0;
 		const std::uint32_t reservedBreaking = 0;
 
@@ -158,4 +158,4 @@ namespace SFSE
 	static_assert(offsetof(PluginVersionData, reservedNonBreaking) == 0x254);
 	static_assert(offsetof(PluginVersionData, reservedBreaking) == 0x258);
 	static_assert(sizeof(PluginVersionData) == 0x25C);
-} // namespace SFSE
+}  // namespace SFSE
