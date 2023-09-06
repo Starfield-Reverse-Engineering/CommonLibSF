@@ -1,11 +1,15 @@
 on: [push]
 
 jobs:
-  formatting:
+  maintainance:
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v3
+
+    - shell: pwsh
+      run: "& ${{ github.workspace }}/CommonLibSF/cmake/make-directives.ps1 ${{ github.workspace }}/CommonLibSF"
+
     - uses: DoozyX/clang-format-lint-action@v0.16.2
       with:
         source: '.'
@@ -13,9 +17,10 @@ jobs:
         extensions: 'c,cc,cpp,cxx,h,hpp,hxx,inl,inc,ixx'
         clangFormatVersion: 16
         inplace: True
+
     - uses: EndBug/add-and-commit@v9
       with:
-        author_name: clang-format
-        message: 'chore: style formatting'
+        author_name: maintenance
+        message: 'chore: maintenance'
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
