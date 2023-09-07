@@ -3,5 +3,4 @@
 #include "REL/Relocation.h"
 
 namespace RE
-{
-}
+{}

@@ -3,7 +3,7 @@
   "name": "commonlibsf",
   "version-date": "2023-09-07",
   "port-version": 0,
-  "description": "CommonLibSF, the collaborative effort with advanced features for modern SFSE development.",
+  "description": "A collaborative reverse-engineered library for Starfield.",
   "homepage": "https://github.com/Starfield-Reverse-Engineering/CommonLibSF",
   "license": "GPL-3.0-or-later",
   "supports": "windows & x64",

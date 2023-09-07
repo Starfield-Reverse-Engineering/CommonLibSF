@@ -7,7 +7,8 @@ namespace SFSE
 	std::uint32_t InputMap::GamepadMaskToKeycode(std::uint32_t keyMask)
 	{
 		using XInputButton = RE::XInput::XInputButton;
-		switch (keyMask) {
+		switch (keyMask)
+		{
 		case XInputButton::XINPUT_GAMEPAD_DPAD_UP:
 			return kGamepadButtonOffset_DPAD_UP;
 		case XInputButton::XINPUT_GAMEPAD_DPAD_DOWN:
@@ -36,12 +37,12 @@ namespace SFSE
 			return kGamepadButtonOffset_X;
 		case XInputButton::XINPUT_GAMEPAD_Y:
 			return kGamepadButtonOffset_Y;
-		case 0x9:  // Left Trigger game-defined ID
+		case 0x9: // Left Trigger game-defined ID
 			return kGamepadButtonOffset_LT;
-		case 0xA:  // Right Trigger game-defined ID
+		case 0xA: // Right Trigger game-defined ID
 			return kGamepadButtonOffset_RT;
 		default:
-			return kMaxMacros;  // Invalid
+			return kMaxMacros; // Invalid
 		}
 	}
 
@@ -49,7 +50,8 @@ namespace SFSE
 	{
 		using XInputButton = RE::XInput::XInputButton;
 
-		switch (keyCode) {
+		switch (keyCode)
+		{
 		case kGamepadButtonOffset_DPAD_UP:
 			return XInputButton::XINPUT_GAMEPAD_DPAD_UP;
 		case kGamepadButtonOffset_DPAD_DOWN:
@@ -79,21 +81,26 @@ namespace SFSE
 		case kGamepadButtonOffset_Y:
 			return XInputButton::XINPUT_GAMEPAD_Y;
 		case kGamepadButtonOffset_LT:
-			return 0x9;  // Left Trigger game-defined ID
+			return 0x9; // Left Trigger game-defined ID
 		case kGamepadButtonOffset_RT:
-			return 0xA;  // Right Trigger game-defined ID
+			return 0xA; // Right Trigger game-defined ID
 		default:
-			return 0xFF;  // Invalid
+			return 0xFF; // Invalid
 		}
 	}
 
 	std::string InputMap::GetKeyName(std::uint32_t a_keyCode)
 	{
-		if (a_keyCode >= kMacro_MouseButtonOffset && a_keyCode < kMacro_GamepadOffset) {
+		if (a_keyCode >= kMacro_MouseButtonOffset && a_keyCode < kMacro_GamepadOffset)
+		{
 			return GetMouseButtonName(a_keyCode);
-		} else if (a_keyCode >= kMacro_GamepadOffset && a_keyCode < kMaxMacros) {
+		}
+		else if (a_keyCode >= kMacro_GamepadOffset && a_keyCode < kMaxMacros)
+		{
 			return GetGamepadButtonName(a_keyCode);
-		} else {
+		}
+		else
+		{
 			return GetKeyboardKeyName(a_keyCode);
 		}
 	}
@@ -104,54 +111,56 @@ namespace SFSE
 
 		using DIKey = RE::DirectInput8::DIKey;
 
-		switch (scancode) {
-		case DIKey::DIK_NUMPADENTER:  // Numpad Enter
+		switch (scancode)
+		{
+		case DIKey::DIK_NUMPADENTER: // Numpad Enter
 			scancode = 0x11C;
 			break;
-		case DIKey::DIK_RCONTROL:  // Right Control
+		case DIKey::DIK_RCONTROL: // Right Control
 			scancode = 0x11D;
 			break;
-		case DIKey::DIK_DIVIDE:  // Numpad /
+		case DIKey::DIK_DIVIDE: // Numpad /
 			scancode = 0x135;
 			break;
-		case DIKey::DIK_RALT:  // Right Alt
+		case DIKey::DIK_RALT: // Right Alt
 			scancode = 0x138;
 			break;
-		case DIKey::DIK_HOME:  // Home
+		case DIKey::DIK_HOME: // Home
 			scancode = 0x147;
 			break;
-		case DIKey::DIK_UPARROW:  // Up Arrow
+		case DIKey::DIK_UPARROW: // Up Arrow
 			scancode = 0x148;
 			break;
-		case DIKey::DIK_PGUP:  // Page Up
+		case DIKey::DIK_PGUP: // Page Up
 			scancode = 0x149;
 			break;
-		case DIKey::DIK_LEFTARROW:  // Left Arrow
+		case DIKey::DIK_LEFTARROW: // Left Arrow
 			scancode = 0x14B;
 			break;
-		case DIKey::DIK_RIGHTARROW:  // Right Arrow
+		case DIKey::DIK_RIGHTARROW: // Right Arrow
 			scancode = 0x14D;
 			break;
-		case DIKey::DIK_END:  // End
+		case DIKey::DIK_END: // End
 			scancode = 0x14F;
 			break;
-		case DIKey::DIK_DOWNARROW:  // Down Arrow
+		case DIKey::DIK_DOWNARROW: // Down Arrow
 			scancode = 0x150;
 			break;
-		case DIKey::DIK_PGDN:  // Page Down
+		case DIKey::DIK_PGDN: // Page Down
 			scancode = 0x151;
 			break;
-		case DIKey::DIK_INSERT:  // Insert
+		case DIKey::DIK_INSERT: // Insert
 			scancode = 0x152;
 			break;
-		case DIKey::DIK_DELETE:  // Delete
+		case DIKey::DIK_DELETE: // Delete
 			scancode = 0x153;
 			break;
 		}
 
 		std::int32_t lParam = scancode << 16;
 
-		if (scancode == 0x45) {
+		if (scancode == 0x45)
+		{
 			lParam |= (0x1 << 24);
 		}
 
@@ -164,7 +173,8 @@ namespace SFSE
 
 	std::string InputMap::GetMouseButtonName(std::uint32_t a_keyCode)
 	{
-		switch (a_keyCode) {
+		switch (a_keyCode)
+		{
 		case 256:
 			return "Left Mouse Button"s;
 		case 257:
@@ -192,7 +202,8 @@ namespace SFSE
 
 	std::string InputMap::GetGamepadButtonName(std::uint32_t a_keyCode)
 	{
-		switch (a_keyCode) {
+		switch (a_keyCode)
+		{
 		case kGamepadButtonOffset_DPAD_UP:
 			return "Gamepad DPad Up"s;
 		case kGamepadButtonOffset_DPAD_DOWN:
@@ -229,4 +240,4 @@ namespace SFSE
 			return ""s;
 		}
 	}
-}
+} // namespace SFSE
