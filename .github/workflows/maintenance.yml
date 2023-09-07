@@ -1,26 +1,46 @@
-on: [push]
+name: "Maintainance"
+
+on:   
+  workflow_run:
+    workflows: ["Main CI"]
+    types:
+      - completed
 
 jobs:
   maintainance:
     runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
 
     steps:
-    - uses: actions/checkout@v3
+    - name: Checkout
+      uses: actions/checkout@v2
 
-    - shell: pwsh
-      run: "& ${{ github.workspace }}/CommonLibSF/cmake/make-directives.ps1 ${{ github.workspace }}/CommonLibSF"
+    - name: Update Starfield.h
+      shell: pwsh
+      run: "& ${{ github.workspace }}/.github/make-directives.ps1 ${{ github.workspace }}/CommonLibSF"
 
-    - uses: DoozyX/clang-format-lint-action@v0.16.2
+    - name: Enforce style formatting
+      uses: DoozyX/clang-format-lint-action@v0.16.2
       with:
         source: '.'
         exclude: './docs'
-        extensions: 'c,cc,cpp,cxx,h,hpp,hxx,inl,inc,ixx'
+        extensions: 'c,cc,cpp,cppm,cxx,h,hpp,hxx,inl,inc,ixx,mxx'
         clangFormatVersion: 16
         inplace: True
+    
+    - name: Update vcpkg version-date
+      id: versioning
+      shell: pwsh
+      run: "& ${{ github.workspace }}/.github/update-registry.ps1 ${{ github.workspace }}"
+    
+    - name: Check for success
+      run: exit 1
+      if: ${{ steps.versioning.outputs.VCPKG_SUCCESS == 'false' }}
 
-    - uses: EndBug/add-and-commit@v9
+    - name: Check for commit
+      uses: EndBug/add-and-commit@v9
       with:
         author_name: maintenance
-        message: 'chore: maintenance'
+        message: 'ci: maintenance `${{ steps.versioning.outputs.VCPKG_VERSION }}`'
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -2,7 +2,7 @@
 	"version": 3,
 	"cmakeMinimumRequired": {
 		"major": 3,
-		"minor": 21,
+		"minor": 26,
 		"patch": 0
 	},
 	"configurePresets": [
@@ -114,7 +114,7 @@
 			"environment": {
 				"CC": "clang-cl",
 				"CXX": "clang-cl",
-				"PROJECT_COMPILER_FLAGS": "/permissive- /EHsc /W4 /WX -Wno-overloaded-virtual -Wno-delete-non-abstract-non-virtual-dtor -Wno-inconsistent-missing-override -Wno-reinterpret-base-class"
+				"PROJECT_COMPILER_FLAGS": "/permissive- /EHsc /W4 /WX -Wno-overloaded-virtual -Wno-delete-non-abstract-non-virtual-dtor -Wno-inconsistent-missing-override -Wno-reinterpret-base-class -D__cpp_consteval"
 			}
 		},
 		{
@@ -202,7 +202,7 @@
 			"inherits": [
 				"common",
 				"packaging-vcpkg",
-				"buildtype-minsizerel",
+				"buildtype-debug",
 				"generator-msvc",
 				"compiler-msvc"
 			]
@@ -213,7 +213,7 @@
 			"inherits": [
 				"common",
 				"packaging-vcpkg",
-				"buildtype-minsizerel",
+				"buildtype-debug",
 				"generator-msvc",
 				"compiler-clang-cl"
 			]
