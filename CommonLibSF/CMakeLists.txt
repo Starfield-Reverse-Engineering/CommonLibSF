@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.21)
+cmake_minimum_required(VERSION 3.26)
 
 # singleton target across multiple projects
 if(TARGET CommonLibSF)
@@ -101,7 +101,7 @@ if (MSVC)
 			/wd5053 # support for 'explicit(<expr>)' in C++17 and earlier is a vendor extension
 			/wd5204 # 'type-name': class has virtual functions, but its trivial destructor is not virtual; instances of objects derived from this class may not be destructed correctly
 			/wd5220 # 'member': a non-static data member with a volatile qualified type no longer implies that compiler generated copy / move constructors and copy / move assignment operators are not trivial
-			/FI${CMAKE_BINARY_DIR}/${PROJECT_NAME}/${PROJECT_NAME}/CMakeFiles/${PROJECT_NAME}.dir/$<CONFIG>/cmake_pch.hxx
+			/FI${CMAKE_CURRENT_SOURCE_DIR}/include/SFSE/Impl/PCH.h
 	)
 endif()
 

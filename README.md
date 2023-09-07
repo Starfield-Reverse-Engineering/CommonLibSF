@@ -8,7 +8,7 @@ https://en.cppreference.com/w/cpp/compiler_support)
 [![Game version](https://img.shields.io/badge/game%20version-1.7.23-orange)](#use)
 
 ## Build Dependencies
-+ [CMake](https://cmake.org/)
++ [CMake 3.26+](https://cmake.org/)
   + Add this to your PATH
 + [PowerShell](https://github.com/PowerShell/PowerShell/releases/tag/v7.3.6)
 + [Vcpkg](https://github.com/microsoft/vcpkg)
