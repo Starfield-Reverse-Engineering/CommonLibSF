@@ -53,8 +53,8 @@ add_library(${PROJECT_NAME}::${PROJECT_NAME} ALIAS ${PROJECT_NAME})
 target_compile_definitions(
 	${PROJECT_NAME}
 	PUBLIC
-		WINVER=0x0601	# windows 7, minimum supported version by skyrim special edition
-		_WIN32_WINNT=0x0601
+		WINVER=0x0A00	# windows 10, minimum supported version by starfield
+		_WIN32_WINNT=0x0A00
 		"$<$<BOOL:${SFSE_SUPPORT_XBYAK}>:SFSE_SUPPORT_XBYAK=1>"
 )
 
