@@ -1,0 +1,19 @@
+{
+  "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg-tool/main/docs/vcpkg.schema.json",
+  "name": "commonlibsf",
+  "version-semver": "1.0.0",
+  "port-version": 0,
+  "description": "CommonLibSF, the collaborative effort with advanced features for modern SFSE development.",
+  "homepage": "https://github.com/Starfield-Reverse-Engineering/CommonLibSF",
+  "license": "MIT",
+  "supports": "windows & x64",
+  "dependencies": [
+    {
+      "name": "vcpkg-cmake-config",
+      "host": true
+    },
+    "fmt",
+    "spdlog",
+    "xbyak"
+  ]
+}
