@@ -8,7 +8,7 @@ param (
 
 $ErrorActionPreference = "Stop"
 
-$SourceExt = @('.asm', '.c', '.cc', '.cpp', '.cxx', '.h', '.hpp', '.hxx', 'inc', '.inl', '.ixx')
+$SourceExt = @('.asm', '.c', '.cc', '.cpp', 'cppm', '.cxx', '.h', '.hpp', '.hxx', 'inc', '.inl', '.ixx', '.mxx')
 $ConfigExt = @('.ini', '.json', '.toml', '.xml')
 $DocsExt = @('.md')
 
@@ -38,8 +38,7 @@ function Resolve-Files {
                 Write-Host "[$PathIn/$directory]"
 
                 Get-ChildItem "$PathIn/$directory" -Recurse -File -ErrorAction SilentlyContinue | Where-Object {
-                    ($_.Extension -in ($SourceExt + $DocsExt)) -and 
-                    ($_.Name -notmatch 'Plugin.h|Version.h')
+                    ($_.Extension -in ($SourceExt + $DocsExt))
                 } | Resolve-Path -Relative | ForEach-Object {
                     Write-Host "`t<$_>"
                     $_generated.Add("`n`t`"$(Normalize-Path $_.Substring(2))`"") | Out-Null
