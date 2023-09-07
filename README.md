@@ -44,6 +44,18 @@ CommonLib is incompatible with SFSE and is intended to replace it as a static de
 
 ## License
 
-[GPL-3.0-or-later](COPYING) WITH [Modding Exception AND GPL-3.0 Linking Exception (with Corresponding Source)](EXCEPTIONS).
+[GPL-3.0-or-later][LICENSE] WITH [Modding Exception AND GPL-3.0 Linking Exception (with Corresponding Source)](EXCEPTIONS).
 
 Specifically, the **Modded Code** is Starfield (and its variants) and **Modding Libraries** include [SFSE](https://sfse.silverlock.org/) ([GitHub link](https://github.com/ianpatt/sfse)).
+
+For additional information on GPL licenses, see the [FSF FAQ](https://www.gnu.org/licenses/gpl-faq.en.html)
+
+## Credits
+
+This is based on [CommonLibSSE][CommonlibSSE] started by [Ryan-rsm-McKenzie](https://github.com/Ryan-rsm-McKenzie) under a [MIT License][Commonlib_MIT]. Without him putting that together, much of the joint Bethesda RE scene would be drastically different. The MIT License is kept for historical purposes only and the [GPL](#license) controls. To the extent you want the [MIT licensed code][Commonlib_MIT], please reference [CommonlibSSE and forks][CommonlibSSE].
+
+---
+
+[Commonlib_MIT]: /CommonLibSF/LICENSES/COMMONLIB
+[LICENSE]: COPYING
+[CommonlibSSE]: https://github.com/Ryan-rsm-McKenzie/CommonLibSSE
