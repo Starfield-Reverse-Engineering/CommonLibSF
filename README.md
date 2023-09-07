@@ -6,6 +6,7 @@ A collaborative reverse-engineered library for Starfield.
 ![Platform](https://img.shields.io/static/v1?label=platform&message=windows&color=dimgray&style=flat&logo=windows)
 [![Game version](https://img.shields.io/badge/game%20version-1.7.23-orange)](#Get-started)
 [![VCPKG_VER](https://img.shields.io/static/v1?label=vcpkg&message=2023-09-07&color=green&style=flat)](https://github.com/Starfield-Reverse-Engineering/Starfield-RE-vcpkg)
+[![Main CI](https://img.shields.io/github/actions/workflow/status/Starfield-Reverse-Engineering/CommonLibSF/main_ci.yml)](https://github.com/Starfield-Reverse-Engineering/CommonLibSF/actions/workflows/main_ci.yml)
 
 ## Build Dependencies
 + [CMake 3.26+](https://cmake.org/)
@@ -15,6 +16,8 @@ A collaborative reverse-engineered library for Starfield.
   + Add the environment variable VCPKG_ROOT with the value as the path to the folder containing vcpkg
 + [Visual Studio Community 2022](https://visualstudio.microsoft.com/)
   + Desktop development with C++
+  + *ClangCL toolset and build support if using clang-cl configuration
+
 
 ## Get started
 ### use example plugin template
