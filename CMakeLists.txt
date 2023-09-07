@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.26)
 
 # singleton target across multiple projects
 if(TARGET CommonLib)
-	return() 
+	return()
 endif()
 
 # info

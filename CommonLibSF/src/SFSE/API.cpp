@@ -26,26 +26,27 @@ namespace SFSE
 			bool                               apiInit{ false };
 
 		private:
-			APIStorage() noexcept = default;
+			APIStorage() noexcept         = default;
 			APIStorage(const APIStorage&) = delete;
-			APIStorage(APIStorage&&) = delete;
+			APIStorage(APIStorage&&)      = delete;
 
 			~APIStorage() noexcept = default;
 
 			APIStorage& operator=(const APIStorage&) = delete;
-			APIStorage& operator=(APIStorage&&) = delete;
+			APIStorage& operator=(APIStorage&&)      = delete;
 		};
 
 		template <class T>
 		T* QueryInterface(const LoadInterface* a_intfc, std::uint32_t a_id)
 		{
 			auto result = static_cast<T*>(a_intfc->QueryInterface(a_id));
-			if (result && result->Version() > T::kVersion) {
+			if (result && result->Version() > T::kVersion)
+			{
 				log::warn("interface definition is out of date"sv);
 			}
 			return result;
 		}
-	}
+	} // namespace detail
 
 	void Init(const LoadInterface* a_intfc) noexcept
 	{
@@ -54,18 +55,20 @@ namespace SFSE
 		(void)REL::Module::get();
 
 		auto&       storage = detail::APIStorage::get();
-		const auto& intfc = *a_intfc;
+		const auto& intfc   = *a_intfc;
 
 		const std::scoped_lock l(storage.apiLock);
-		if (!storage.apiInit) {
+		if (!storage.apiInit)
+		{
 			storage.pluginHandle = intfc.GetPluginHandle();
 
 			storage.trampolineInterface = detail::QueryInterface<TrampolineInterface>(a_intfc, LoadInterface::kTrampoline);
-			storage.messagingInterface = detail::QueryInterface<MessagingInterface>(a_intfc, LoadInterface::kMessaging);
+			storage.messagingInterface  = detail::QueryInterface<MessagingInterface>(a_intfc, LoadInterface::kMessaging);
 
 			storage.apiInit = true;
-			auto& regs = storage.apiInitRegs;
-			for (const auto& reg : regs) {
+			auto& regs      = storage.apiInitRegs;
+			for (const auto& reg : regs)
+			{
 				reg();
 			}
 			regs.clear();
@@ -78,7 +81,8 @@ namespace SFSE
 		{
 			auto&                  storage = detail::APIStorage::get();
 			const std::scoped_lock l(storage.apiLock);
-			if (!storage.apiInit) {
+			if (!storage.apiInit)
+			{
 				storage.apiInitRegs.push_back(a_fn);
 				return;
 			}
@@ -116,10 +120,11 @@ namespace SFSE
 	void AllocTrampoline(std::size_t a_size, bool a_trySFSEReserve)
 	{
 		auto& trampoline = GetTrampoline();
-		if (auto intfc = GetTrampolineInterface();
-			intfc && a_trySFSEReserve) {
+		if (auto intfc = GetTrampolineInterface(); intfc && a_trySFSEReserve)
+		{
 			auto memory = intfc->AllocateFromBranchPool(a_size);
-			if (memory) {
+			if (memory)
+			{
 				trampoline.set_trampoline(memory, a_size);
 				return;
 			}
@@ -127,4 +132,4 @@ namespace SFSE
 
 		trampoline.create(a_size);
 	}
-}
+} // namespace SFSE

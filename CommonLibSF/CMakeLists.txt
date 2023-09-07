@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.26)
 
 # singleton target across multiple projects
 if(TARGET CommonLibSF)
-	return() 
+	return()
 endif()
 
 # options if not defined
@@ -60,9 +60,9 @@ target_compile_definitions(
 
 # FIXME: https://gitlab.kitware.com/cmake/cmake/-/issues/24922
 set_property(
-	TARGET 
+	TARGET
 	${PROJECT_NAME}
-	PROPERTY VS_USER_PROPS 
+	PROPERTY VS_USER_PROPS
 	"${CMAKE_CURRENT_SOURCE_DIR}/cmake/build_stl_modules.props"
 )
 
@@ -119,7 +119,7 @@ target_link_libraries(
 		Version.lib
 )
 
-if (SFSE_SUPPORT_XBYAK) 
+if (SFSE_SUPPORT_XBYAK)
 find_package(xbyak CONFIG REQUIRED)
 
 target_link_libraries(

@@ -16,7 +16,7 @@ function Normalize-Path {
     param (
         [string]$in
     )
-    
+
     $out = $in -replace '\\', '/'
     while ($out.Contains('//')) {
         $out = $out -replace '//', '/'
@@ -28,7 +28,7 @@ function Resolve-Files {
     param (
         [string[]]$range = @('include', 'src', 'test')
     )
-    
+
     process {
         Push-Location $PathIn
         $_generated = [System.Collections.ArrayList]::new(2048)

@@ -11,7 +11,7 @@ function Normalize-Path {
 	param (
 		[string]$in
 	)
-    
+
 	$out = $in -replace '\\', '/'
 	while ($out.Contains('//')) {
 		$out = $out -replace '//', '/'
@@ -25,7 +25,7 @@ function Resolve-Files {
 		$_generated = [System.Collections.ArrayList]::new(2048)
 
 		try {
-			Get-ChildItem "$PathIn/include/RE" -Recurse -File -ErrorAction SilentlyContinue 
+			Get-ChildItem "$PathIn/include/RE" -Recurse -File -ErrorAction SilentlyContinue
 			| Where-Object { ($_.Extension -eq '.h') } | Resolve-Path -Relative | ForEach-Object {
 				if (!$_.EndsWith('Starfield.h')) {
 					Write-Host "`t<$_>"
