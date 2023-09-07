@@ -1,0 +1,49 @@
+name: Main CI
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - '.github/workflows/main_ci.yml'
+      - 'CommonLibSF/**'
+  pull_request:
+    branches: [ main, feature/* ]
+  workflow_dispatch:
+
+env:
+  VCPKG_COMMIT_ID: 095ee8757ec933b22d445738d2dbb1ce89bb8021
+
+jobs:
+  build-and-test-vcpkg:
+    runs-on: windows-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        build-type:
+          - debug
+          - release
+        compiler:
+          - msvc
+          - clang-cl
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup MSVC Environment
+        uses: ilammy/msvc-dev-cmd@v1.10.0
+
+      - name: Setup vcpkg
+        uses: lukka/run-vcpkg@v11
+        with:
+          vcpkgGitCommitId: ${{ env.VCPKG_COMMIT_ID }}
+
+      - name: Setup cmake
+        uses: jwlawson/actions-setup-cmake@v1.14
+        with:
+          cmake-version: '3.26'
+
+      - name: Generate
+        run: cmake -B "${{ github.workspace }}/build" -S "${{ github.workspace }}/CommonLibSF" --preset=build-debug-${{ matrix.compiler }}
+      
+      - name: Build
+        run: cmake --build "${{ github.workspace }}/build" --config ${{ matrix.build-type }}
