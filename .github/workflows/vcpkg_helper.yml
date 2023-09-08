@@ -4,9 +4,6 @@ on:
   push:
     branches: main
 
-permissions:
-  contents: write
-
 jobs:
   helper:
     runs-on: ubuntu-latest
@@ -14,7 +11,7 @@ jobs:
       - name: Repository Dispatch
         uses: peter-evans/repository-dispatch@v2
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.VCPKG_HELPER_TOKEN }}
           repository: Starfield-Reverse-Engineering/Starfield-RE-vcpkg
           event-type: update-event
           client-payload: '{"sha": "${{ github.sha }}"}'
