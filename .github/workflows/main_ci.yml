@@ -3,6 +3,8 @@ name: Main CI
 on:
   pull_request:
     branches: [main, feature/*]
+    paths:
+      - "CommonLibSF/**"
   workflow_dispatch:
 
 env:
