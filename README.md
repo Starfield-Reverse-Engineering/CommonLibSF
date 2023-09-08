@@ -68,8 +68,8 @@ For additional information on GPL licenses, see the [FSF FAQ](https://www.gnu.or
 
 ## Credits
 
-This work is based on [CommonLibSSE][CommonlibSSE] created by [Ryan-rsm-McKenzie](https://github.com/Ryan-rsm-McKenzie) under an [MIT License][CommonLib_MIT]. Without him putting that together, much of the joint Bethesda RE scene would be drastically different. The MIT License is kept for historical purposes only and the [GPL](#License) governs this work. To the extent that you want the [MIT licensed code][CommonLib_MIT], please reference [CommonlibSSE and its forks][CommonlibSSE].
+This work is based on [CommonLibSSE][CLibSSE] created by [Ryan-rsm-McKenzie](https://github.com/Ryan-rsm-McKenzie) under an [MIT License][CommonLib_MIT]. Without him putting that together, much of the joint Bethesda RE scene would be drastically different. The MIT License is kept for historical purposes only and the [GPL](#License) governs this work. To the extent that you want the [MIT licensed code][CommonLib_MIT], please reference [CommonLibSSE and its forks][CLibSSE].
 
 [CommonLib_MIT]: /CommonLibSF/LICENSES/COMMONLIB
 [LICENSE]: COPYING
-[CommonlibSSE]: https://github.com/Ryan-rsm-McKenzie/CommonLibSSE
+[CLibSSE]: https://github.com/Ryan-rsm-McKenzie/CommonLibSSE
