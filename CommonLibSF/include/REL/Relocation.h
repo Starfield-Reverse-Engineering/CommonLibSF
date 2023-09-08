@@ -638,18 +638,6 @@ namespace REL
 			return write_vfunc(a_idx, stl::unrestricted_cast<std::uintptr_t>(a_newFunc));
 		}
 
-		/**
-		template <class F, std::size_t idx, class T>
-		void write_vfunc()
-		{
-		    REL::Relocation<std::uintptr_t> vtbl{ F::VTABLE[0]
-
-
-		 * * * };
-		    T::func = vtbl.write_vfunc(idx, T::thunk);
-		}
-		**/
-
 	private:
 		[[nodiscard]] static std::uintptr_t base()
 		{
