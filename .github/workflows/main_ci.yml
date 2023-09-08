@@ -2,7 +2,7 @@ name: Main CI
 
 on:
   pull_request:
-    branches: [ main, feature/* ]
+    branches: [main, feature/*]
   workflow_dispatch:
 
 env:
@@ -32,10 +32,10 @@ jobs:
       - name: Setup cmake
         uses: jwlawson/actions-setup-cmake@v1.14
         with:
-          cmake-version: '3.26'
+          cmake-version: "3.26"
 
       - name: Generate
         run: cmake -B "${{ github.workspace }}/build" -S "${{ github.workspace }}/CommonLibSF" --preset=build-release-${{ matrix.compiler }}
-      
+
       - name: Build
         run: cmake --build "${{ github.workspace }}/build" --config release
