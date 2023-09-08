@@ -762,4 +762,12 @@ namespace REL
 #include "RE/Offsets_RTTI.h"
 #include "RE/Offsets_VTABLE.h"
 
+#ifdef _DEBUG
+// Generates a concrete function to force the class to be included in the PDB when loading types from PDB for IDA/Ghidra
+#define KEEP_FOR_RE() void KeepForRE(){};
+#else
+// Generates a concrete function to help with RE, does nothing on release builds
+#define KEEP_FOR_RE()
+#endif
+
 #undef cdecl // Workaround for Clang.
