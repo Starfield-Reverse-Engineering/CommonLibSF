@@ -22,7 +22,7 @@ $vcpkg = $vcpkg | ConvertTo-Json -Depth 9 | ForEach-Object { $_ -replace "(?m)  
 
 # update readme
 $readme = [IO.File]::ReadAllLines("$PathIn/README.md")
-$readme = $readme -replace "(?<=label=vcpkg&message=).+?(?=&color)", $version
+$readme = $readme -replace "(?<=label=vcpkg%20registry&message=).+?(?=&color)", $version
 [IO.File]::WriteAllLines("$PathIn/README.md", $readme)
 
 # status
