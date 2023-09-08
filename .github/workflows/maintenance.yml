@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
     paths:
-      - ".github/workflows/main_ci.yml"
+      - ".github/workflows/*.yml"
       - "CommonLibSF/**"
 
 jobs:
@@ -14,7 +14,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Update Starfield.h
         shell: pwsh
@@ -28,6 +28,11 @@ jobs:
           extensions: "c,cc,cpp,cppm,cxx,h,hpp,hxx,inl,inc,ixx,mxx"
           clangFormatVersion: 16
           inplace: True
+
+      - name: Prettier
+        uses: actionsx/prettier@v3
+        with:
+          args: --write "{.github/workflows/*.yml}" "{CommonLibSF/*.json}"
 
       - name: Update vcpkg version-date
         id: versioning
