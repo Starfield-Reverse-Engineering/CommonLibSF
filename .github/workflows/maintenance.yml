@@ -1,24 +1,19 @@
-name: "Maintainance"
+name: Maintenance
 
 on:
   push:
-    branches: [main]
+    branches: main
     paths:
-      - ".github/workflows/*.yml"
       - "CommonLibSF/**"
 
 jobs:
-  maintainance:
+  maintenance:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Update Starfield.h
-        shell: pwsh
-        run: "& ${{ github.workspace }}/.github/make-directives.ps1 ${{ github.workspace }}/CommonLibSF"
-
-      - name: Enforce style formatting
+      - name: Run clang-format
         uses: DoozyX/clang-format-lint-action@v0.16.2
         with:
           source: "."
@@ -27,10 +22,9 @@ jobs:
           clangFormatVersion: 16
           inplace: True
 
-      - name: Prettier
-        uses: actionsx/prettier@v3
-        with:
-          args: --write "${{ github.workspace }}/.github/workflows/*.yml" "${{ github.workspace }}/CommonLibSF/*.json"
+      - name: Update Starfield.h
+        shell: pwsh
+        run: "& ${{ github.workspace }}/.github/make-directives.ps1 ${{ github.workspace }}/CommonLibSF"
 
       - name: Update vcpkg version-date
         id: versioning

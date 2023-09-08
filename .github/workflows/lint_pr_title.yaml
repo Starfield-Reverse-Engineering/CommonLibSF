@@ -1,5 +1,5 @@
 # https://github.com/amannn/action-semantic-pull-request
-name: "Lint PR against Conventional Commits"
+name: Lint PR against Conventional Commits
 
 on:
   pull_request_target:
