@@ -30,7 +30,7 @@ jobs:
       - name: Prettier
         uses: actionsx/prettier@v3
         with:
-          args: --write "{.github/workflows/*.yml}" "{CommonLibSF/*.json}"
+          args: --write "${{ github.workspace }}/.github/workflows/*.yml" "${{ github.workspace }}/CommonLibSF/*.json}"
 
       - name: Update vcpkg version-date
         id: versioning
