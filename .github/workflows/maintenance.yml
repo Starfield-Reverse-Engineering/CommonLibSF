@@ -1,17 +1,14 @@
-name: "Maintainance"
+name: Maintenance
 
 on:
   push:
-    branches: [main]
+    branches: main
     paths:
-      - ".github/workflows/*.yml"
       - "CommonLibSF/**"
 
 jobs:
-  maintainance:
+  maintenance:
     runs-on: ubuntu-latest
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -20,7 +17,7 @@ jobs:
         shell: pwsh
         run: "& ${{ github.workspace }}/.github/make-directives.ps1 ${{ github.workspace }}/CommonLibSF"
 
-      - name: Enforce style formatting
+      - name: Run clang-format
         uses: DoozyX/clang-format-lint-action@v0.16.2
         with:
           source: "."
@@ -28,11 +25,6 @@ jobs:
           extensions: "c,cc,cpp,cppm,cxx,h,hpp,hxx,inl,inc,ixx,mxx"
           clangFormatVersion: 16
           inplace: True
-
-      - name: Prettier
-        uses: actionsx/prettier@v3
-        with:
-          args: --write "{.github/workflows/*.yml}" "{CommonLibSF/*.json}"
 
       - name: Update vcpkg version-date
         id: versioning
@@ -50,3 +42,11 @@ jobs:
           message: "ci: maintenance `${{ steps.versioning.outputs.VCPKG_VERSION }}`"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Repository Dispatch
+        uses: peter-evans/repository-dispatch@v2
+        with:
+          token: ${{ secrets.VCPKG_HELPER_TOKEN }}
+          repository: Starfield-Reverse-Engineering/Starfield-RE-vcpkg
+          event-type: update-event
+          client-payload: '{"sha": "${{ github.sha }}"}'

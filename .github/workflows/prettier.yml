@@ -1,0 +1,19 @@
+name: Prettier
+
+on:
+  push:
+    branches: main
+    paths:
+      - ".github/workflows/*.yml"
+
+jobs:
+  maintenance:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Prettier
+        uses: actionsx/prettier@v3
+        with:
+          args: --write "${{ github.workspace }}/.github/workflows/*.yml" "${{ github.workspace }}/CommonLibSF/*.json"
