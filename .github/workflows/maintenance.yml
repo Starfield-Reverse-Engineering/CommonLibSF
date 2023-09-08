@@ -13,6 +13,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Update Starfield.h
+        shell: pwsh
+        run: "& ${{ github.workspace }}/.github/make-directives.ps1 ${{ github.workspace }}/CommonLibSF"
+
       - name: Run clang-format
         uses: DoozyX/clang-format-lint-action@v0.16.2
         with:
@@ -21,10 +25,6 @@ jobs:
           extensions: "c,cc,cpp,cppm,cxx,h,hpp,hxx,inl,inc,ixx,mxx"
           clangFormatVersion: 16
           inplace: True
-
-      - name: Update Starfield.h
-        shell: pwsh
-        run: "& ${{ github.workspace }}/.github/make-directives.ps1 ${{ github.workspace }}/CommonLibSF"
 
       - name: Update vcpkg version-date
         id: versioning
