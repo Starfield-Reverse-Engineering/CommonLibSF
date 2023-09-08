@@ -6,7 +6,7 @@
 ![Platform](https://img.shields.io/static/v1?label=platform&message=windows&color=dimgray&style=flat&logo=windows)
 [![Game version](https://img.shields.io/badge/game%20version-1.7.23-orange)](#Developing-with-CommonLibSF)
 [![VCPKG_VER](https://img.shields.io/static/v1?label=vcpkg%20registry&message=2023-09-08&color=green&style=flat)](https://github.com/Starfield-Reverse-Engineering/Starfield-RE-vcpkg)
-[![Main CI](https://img.shields.io/github/actions/workflow/status/Starfield-Reverse-Engineering/CommonLibSF/main_ci.yml)][CI]
+[![Main CI](https://img.shields.io/github/actions/workflow/status/Starfield-Reverse-Engineering/CommonLibSF/main_ci.yml)](https://github.com/Starfield-Reverse-Engineering/CommonLibSF/actions/workflows/main_ci.yml)
 
 ## Build Dependencies
 
@@ -73,4 +73,3 @@ This work is based on [CommonLibSSE][CommonlibSSE] created by [Ryan-rsm-McKenzie
 [CommonLib_MIT]: /CommonLibSF/LICENSES/COMMONLIB
 [LICENSE]: COPYING
 [CommonlibSSE]: https://github.com/Ryan-rsm-McKenzie/CommonLibSSE
-[CI]: /CommonLibSF/actions/workflows/main_ci.yml
