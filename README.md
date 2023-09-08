@@ -26,6 +26,8 @@
 
 ### Including CommonLibSF in your project
 
+#### vcpkg
+
 Add the following to your `vcpkg-configuration`:
 
 ```json
@@ -45,6 +47,26 @@ And the following to your `CMakeLists.txt`:
 
 ```cmake
 find_package(CommonLibSF CONFIG REQUIRED)
+target_link_libraries(${PROJECT_NAME}
+        PRIVATE
+        CommonLibSF::CommonLibSF)
+```
+
+---
+
+#### git submodule
+
+`cd` into your project directory and run:
+
+```ps
+git submodule add https://github.com/Starfield-Reverse-Engineering/CommonLibSF extern/CommonLibSF
+git submodule update -f --init
+```
+
+Then add the following to your `CMakeLists.txt`:
+
+```cmake
+add_subdirectory(extern/CommonLibSF)
 target_link_libraries(${PROJECT_NAME}
         PRIVATE
         CommonLibSF::CommonLibSF)
