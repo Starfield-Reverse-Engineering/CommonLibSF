@@ -11,7 +11,7 @@ env:
   VCPKG_COMMIT_ID: 095ee8757ec933b22d445738d2dbb1ce89bb8021
 
 jobs:
-  build-and-test-vcpkg:
+  build:
     runs-on: windows-latest
     strategy:
       fail-fast: false
@@ -37,7 +37,7 @@ jobs:
           cmake-version: "3.26"
 
       - name: Generate
-        run: cmake -B "${{ github.workspace }}/build" -S "${{ github.workspace }}/CommonLibSF" --preset=build-release-${{ matrix.compiler }}
+        run: cmake -B "${{ github.workspace }}/build" -S "${{ github.workspace }}/CommonLibSF" --preset=build-release-${{ matrix.compiler }}-ninja
 
       - name: Build
-        run: cmake --build "${{ github.workspace }}/build" --config release
+        run: cmake --build "${{ github.workspace }}/build"

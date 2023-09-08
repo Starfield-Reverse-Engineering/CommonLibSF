@@ -138,7 +138,7 @@
       ]
     },
     {
-      "name": "build-debug-clang-cl",
+      "name": "build-debug-clang-cl-ninja",
       "inherits": [
         "common",
         "packaging-vcpkg",
@@ -168,7 +168,7 @@
       ]
     },
     {
-      "name": "build-release-clang-cl",
+      "name": "build-release-clang-cl-ninja",
       "inherits": [
         "common",
         "packaging-vcpkg",
@@ -201,12 +201,12 @@
     },
     {
       "name": "debug-clang-cl",
-      "configurePreset": "build-debug-clang-cl",
+      "configurePreset": "build-debug-clang-cl-ninja",
       "displayName": "5. (Debug) Clang - Ninja"
     },
     {
       "name": "release-clang-cl",
-      "configurePreset": "build-release-clang-cl",
+      "configurePreset": "build-release-clang-cl-ninja",
       "displayName": "6. (Release) Clang - Ninja"
     }
   ]
