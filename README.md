@@ -28,29 +28,7 @@
 
 #### vcpkg
 
-Add the following to your `vcpkg-configuration`:
-
-```json
-"registries": [
-  {
-    "kind": "git",
-    "repository": "https://github.com/Starfield-Reverse-Engineering/Starfield-RE-vcpkg",
-    "baseline": "<SHA of latest commit to the above repository>",
-    "packages": [
-      "commonlibsf"
-    ]
-  }
-]
-```
-
-And the following to your `CMakeLists.txt`:
-
-```cmake
-find_package(CommonLibSF CONFIG REQUIRED)
-target_link_libraries(${PROJECT_NAME}
-        PRIVATE
-        CommonLibSF::CommonLibSF)
-```
+[See how to use CommonLibSF with vcpkg in your project.](https://github.com/Starfield-Reverse-Engineering/Starfield-RE-vcpkg)
 
 ---
 
@@ -67,9 +45,11 @@ Then add the following to your `CMakeLists.txt`:
 
 ```cmake
 add_subdirectory(extern/CommonLibSF)
-target_link_libraries(${PROJECT_NAME}
-        PRIVATE
-        CommonLibSF::CommonLibSF)
+target_link_libraries(
+  ${PROJECT_NAME}
+  PRIVATE
+  CommonLibSF::CommonLibSF
+)
 ```
 
 ## End-User Dependencies

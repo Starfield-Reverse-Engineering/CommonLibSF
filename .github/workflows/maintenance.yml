@@ -5,6 +5,7 @@ on:
     branches: main
     paths:
       - "CommonLibSF/**"
+  workflow_dispatch:
 
 jobs:
   maintenance:
@@ -17,7 +18,7 @@ jobs:
         shell: pwsh
         run: "& ${{ github.workspace }}/.github/make-directives.ps1 ${{ github.workspace }}/CommonLibSF"
 
-      - name: Run clang-format
+      - name: Apply Clang-Format
         uses: DoozyX/clang-format-lint-action@v0.16.2
         with:
           source: "."
@@ -26,16 +27,16 @@ jobs:
           clangFormatVersion: 16
           inplace: True
 
-      - name: Update vcpkg version-date
+      - name: Update VCPKG Version
         id: versioning
         shell: pwsh
         run: "& ${{ github.workspace }}/.github/update-registry.ps1 ${{ github.workspace }}"
 
-      - name: Check for success
+      - name: Check Failure
         run: exit 1
         if: ${{ steps.versioning.outputs.VCPKG_SUCCESS == 'false' }}
 
-      - name: Check for commit
+      - name: Check for Commit
         uses: EndBug/add-and-commit@v9
         with:
           author_name: maintenance
@@ -47,6 +48,5 @@ jobs:
         uses: peter-evans/repository-dispatch@v2
         with:
           token: ${{ secrets.VCPKG_HELPER_TOKEN }}
-          repository: Starfield-Reverse-Engineering/Starfield-RE-vcpkg
+          repository: ${{ github.repository_owner }}/Starfield-RE-vcpkg
           event-type: update-event
-          client-payload: '{"sha": "${{ github.sha }}"}'
