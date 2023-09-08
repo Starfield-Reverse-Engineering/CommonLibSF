@@ -3,7 +3,6 @@
 namespace SFSE
 {
 	using PluginHandle = std::uint32_t;
-
 	enum : PluginHandle
 	{
 		kInvalidPluginHandle = static_cast<PluginHandle>(-1)
@@ -22,6 +21,7 @@ namespace SFSE
 		{
 			std::uint32_t sfseVersion;
 			std::uint32_t runtimeVersion;
+			std::uint32_t interfaceVersion;
 			void* (*QueryInterface)(std::uint32_t);
 			PluginHandle (*GetPluginHandle)();
 			const void* (*GetPluginInfo)(const char*);
@@ -40,5 +40,5 @@ namespace SFSE
 			void* (*AllocateFromBranchPool)(PluginHandle, std::size_t);
 			void* (*AllocateFromLocalPool)(PluginHandle, std::size_t);
 		};
-	} // namespace detail
-} // namespace SFSE
+	}
+}
