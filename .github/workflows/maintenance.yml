@@ -42,3 +42,11 @@ jobs:
           message: "ci: maintenance `${{ steps.versioning.outputs.VCPKG_VERSION }}`"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Repository Dispatch
+        uses: peter-evans/repository-dispatch@v2
+        with:
+          token: ${{ secrets.VCPKG_HELPER_TOKEN }}
+          repository: Starfield-Reverse-Engineering/Starfield-RE-vcpkg
+          event-type: update-event
+          client-payload: '{"sha": "${{ github.sha }}"}'
