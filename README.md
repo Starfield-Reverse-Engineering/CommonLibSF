@@ -3,7 +3,6 @@
 A collaborative reverse-engineered library for Starfield.
 
 [![C++23](https://img.shields.io/static/v1?label=standard&message=c%2B%2B23&color=blue&logo=c%2B%2B&&logoColor=red&style=flat)](https://en.cppreference.com/w/cpp/compiler_support)
-[![C++23](https://img.shields.io/static/v1?label=standard&message=c%2B%2B23&color=blue&logo=c%2B%2B&&logoColor=red&style=flat)](https://en.cppreference.com/w/cpp/compiler_support)
 ![Platform](https://img.shields.io/static/v1?label=platform&message=windows&color=dimgray&style=flat&logo=windows)
 [![Game version](https://img.shields.io/badge/game%20version-1.7.23-orange)](#Get-started)
 [![VCPKG_VER](https://img.shields.io/static/v1?label=vcpkg&message=2023-09-07&color=green&style=flat)](https://github.com/Starfield-Reverse-Engineering/Starfield-RE-vcpkg)
