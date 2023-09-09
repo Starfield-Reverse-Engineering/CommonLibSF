@@ -110,7 +110,7 @@ namespace SFSE
 			pluginVersion = a_version;
 		}
 
-	 	[[nodiscard]] constexpr std::uint32_t GetPluginVersion() const noexcept
+		[[nodiscard]] constexpr std::uint32_t GetPluginVersion() const noexcept
 		{
 			return pluginVersion;
 		}
