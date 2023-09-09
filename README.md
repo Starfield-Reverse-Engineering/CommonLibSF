@@ -38,7 +38,7 @@ git submodule update -f --init
 Then add the following to your `CMakeLists.txt`:
 
 ```cmake
-add_subdirectory(CommonLibSF CONFIG REQUIRED)
+add_subdirectory(extern/CommonLibSF)
 target_link_libraries(${PROJECT_NAME}
         PRIVATE
         CommonLibSF::CommonLibSF)
