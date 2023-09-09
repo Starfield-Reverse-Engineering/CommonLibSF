@@ -39,10 +39,9 @@ jobs:
       - name: Check for Commit
         uses: EndBug/add-and-commit@v9
         with:
-          author_name: maintenance
+          committer_name: maintenance
+          committer_email: 41898282+github-actions[bot]@users.noreply.github.com
           message: "ci: maintenance `${{ steps.versioning.outputs.VCPKG_VERSION }}`"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Repository Dispatch
         uses: peter-evans/repository-dispatch@v2
@@ -50,3 +49,4 @@ jobs:
           token: ${{ secrets.VCPKG_HELPER_TOKEN }}
           repository: ${{ github.repository_owner }}/Starfield-RE-vcpkg
           event-type: update-event
+          client-payload: '{"sha": "${{ github.sha }}", "vcpkg-version": "${{ steps.versioning.outputs.VCPKG_VERSION }}"}'
