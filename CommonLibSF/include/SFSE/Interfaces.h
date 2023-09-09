@@ -120,9 +120,9 @@ namespace SFSE
 			SetCharBuffer(a_plugin, std::span{ pluginName });
 		}
 
-		constexpr std::string GetPluginName() noexcept
+		constexpr std::string_view GetPluginName() noexcept
 		{
-			return std::string{ pluginName };
+			return std::string_view{ pluginName };
 		}
 
 		constexpr void AuthorName(std::string_view a_name) noexcept
@@ -130,9 +130,9 @@ namespace SFSE
 			SetCharBuffer(a_name, std::span{ author });
 		}
 
-		constexpr std::string GetAuthorName() noexcept
+		constexpr std::string_view GetAuthorName() noexcept
 		{
-			return std::string{ author };
+			return std::string_view{ author };
 		}
 
 		constexpr void UsesSigScanning(bool a_value) noexcept
