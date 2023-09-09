@@ -26,6 +26,8 @@
 
 [See how to use CommonLibSF with vcpkg in your project.](https://github.com/Starfield-Reverse-Engineering/Starfield-RE-vcpkg)
 
+---
+
 #### git submodule
 
 `cd` into your project directory and run:
@@ -39,9 +41,11 @@ Then add the following to your `CMakeLists.txt`:
 
 ```cmake
 add_subdirectory(extern/CommonLibSF)
-target_link_libraries(${PROJECT_NAME}
-        PRIVATE
-        CommonLibSF::CommonLibSF)
+target_link_libraries(
+  ${PROJECT_NAME}
+  PRIVATE
+  CommonLibSF::CommonLibSF
+)
 ```
 
 ## End-User Dependencies

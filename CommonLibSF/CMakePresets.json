@@ -1,5 +1,5 @@
 {
-  "version": 6,
+  "version": 3,
   "cmakeMinimumRequired": {
     "major": 3,
     "minor": 26,
@@ -10,7 +10,6 @@
       "name": "common",
       "hidden": true,
       "cacheVariables": {
-        "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreaded$<$<CONFIG:Debug>:Debug>DLL",
         "CMAKE_CXX_FLAGS": "$env{PROJECT_PLATFORM_FLAGS} $env{PROJECT_TEXT_FLAGS} $env{PROJECT_COMPILER_FLAGS} $penv{CXXFLAGS}"
       },
       "vendor": {
@@ -25,46 +24,34 @@
       "name": "packaging-vcpkg",
       "hidden": true,
       "cacheVariables": {
-        "CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
+        "CMAKE_TOOLCHAIN_FILE": {
+          "type": "STRING",
+          "value": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake"
+        },
         "VCPKG_TARGET_TRIPLET": "x64-windows-static-md"
       }
     },
     {
-      "name": "buildtype-debug-clang",
+      "name": "buildtype-debug",
       "hidden": true,
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Debug"
       }
     },
     {
-      "name": "buildtype-release-clang",
+      "name": "buildtype-release",
       "hidden": true,
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Release"
       }
     },
     {
-      "name": "buildtype-debug-msvc",
-      "hidden": true,
-      "cacheVariables": {
-        "CMAKE_BUILD_TYPE": "Debug",
-        "CMAKE_CXX_FLAGS_DEBUG": "/Od /MDd",
-        "CMAKE_SHARED_LINKER_FLAGS_DEBUG": "/DEBUG:FULL /LTCG:INCREMENTAL /DEBUGTYPE:FIXUP"
-      }
-    },
-    {
-      "name": "buildtype-release-msvc",
-      "hidden": true,
-      "cacheVariables": {
-        "CMAKE_BUILD_TYPE": "Release",
-        "CMAKE_CXX_FLAGS_RELEASE": "/fp:fast /GL /GR- /Gw /O2 /Ob3 /Qpar",
-        "CMAKE_SHARED_LINKER_FLAGS_RELEASE": "/OPT:REF,ICF=4"
-      }
-    },
-    {
       "name": "x64",
       "hidden": true,
-      "architecture": "x64"
+      "architecture": "x64",
+      "cacheVariables": {
+        "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreaded$<$<CONFIG:Debug>:Debug>DLL"
+      }
     },
     {
       "name": "generator-msvc",
@@ -81,9 +68,8 @@
       "name": "compiler-msvc",
       "hidden": true,
       "environment": {
-        "PROJECT_COMPILER": "msvc",
-        "PROJECT_COMPILER_FLAGS": "/cgthreads8 /diagnostics:caret /EHsc /fp:contract /fp:except- /guard:cf- /MP /permissive- /sdl /W4 /Zc:__cplusplus /Zc:enumTypes /Zc:lambda /Zc:preprocessor /Zc:referenceBinding /Zc:rvalueCast /Zc:templateScope /Zc:ternary /bigobj",
-        "CMAKE_SHARED_LINKER_FLAGS": "/CGTHREADS:8 /MACHINE:x64 /LTCG:INCREMENTAL"
+        "PROJECT_COMPILER_FLAGS": "/cgthreads8 /diagnostics:caret /fp:contract /fp:except- /guard:cf- /permissive- /Zc:__cplusplus /Zc:enumTypes /Zc:lambda /Zc:preprocessor /Zc:referenceBinding /Zc:rvalueCast /Zc:templateScope /Zc:ternary /Zc:preprocessor /EHsc /MP /W4 /WX /external:anglebrackets /external:W0",
+        "PROJECT_COMPILER": "msvc"
       }
     },
     {
@@ -122,7 +108,7 @@
       "inherits": [
         "common",
         "packaging-vcpkg",
-        "buildtype-debug-msvc",
+        "buildtype-debug",
         "generator-msvc",
         "compiler-msvc"
       ]
@@ -132,9 +118,20 @@
       "inherits": [
         "common",
         "packaging-vcpkg",
-        "buildtype-debug-msvc",
+        "buildtype-debug",
         "generator-ninja",
         "compiler-msvc"
+      ]
+    },
+    {
+      "name": "build-debug-clang-cl-msvc",
+      "toolset": "ClangCL",
+      "inherits": [
+        "common",
+        "packaging-vcpkg",
+        "buildtype-debug",
+        "generator-msvc",
+        "compiler-clang-cl"
       ]
     },
     {
@@ -142,8 +139,8 @@
       "inherits": [
         "common",
         "packaging-vcpkg",
-        "buildtype-debug-clang",
-        "generator-msvc",
+        "buildtype-debug",
+        "generator-ninja",
         "compiler-clang-cl"
       ]
     },
@@ -152,7 +149,7 @@
       "inherits": [
         "common",
         "packaging-vcpkg",
-        "buildtype-release-msvc",
+        "buildtype-release",
         "generator-msvc",
         "compiler-msvc"
       ]
@@ -162,9 +159,20 @@
       "inherits": [
         "common",
         "packaging-vcpkg",
-        "buildtype-release-msvc",
+        "buildtype-release",
         "generator-ninja",
         "compiler-msvc"
+      ]
+    },
+    {
+      "name": "build-release-clang-cl-msvc",
+      "toolset": "ClangCL",
+      "inherits": [
+        "common",
+        "packaging-vcpkg",
+        "buildtype-release",
+        "generator-msvc",
+        "compiler-clang-cl"
       ]
     },
     {
@@ -172,7 +180,7 @@
       "inherits": [
         "common",
         "packaging-vcpkg",
-        "buildtype-release-clang",
+        "buildtype-release",
         "generator-ninja",
         "compiler-clang-cl"
       ]
@@ -200,14 +208,24 @@
       "displayName": "4. (Release) MSVC - MSVC"
     },
     {
-      "name": "debug-clang-cl",
+      "name": "debug-clang-cl-ninja",
       "configurePreset": "build-debug-clang-cl-ninja",
       "displayName": "5. (Debug) Clang - Ninja"
     },
     {
-      "name": "release-clang-cl",
+      "name": "release-clang-cl-ninja",
       "configurePreset": "build-release-clang-cl-ninja",
       "displayName": "6. (Release) Clang - Ninja"
+    },
+    {
+      "name": "debug-clang-cl-msvc",
+      "configurePreset": "build-debug-clang-cl-msvc",
+      "displayName": "7. (Debug) Clang - MSVC"
+    },
+    {
+      "name": "release-clang-cl-msvc",
+      "configurePreset": "build-release-clang-cl-msvc",
+      "displayName": "8. (Release) Clang - MSVC"
     }
   ]
 }
