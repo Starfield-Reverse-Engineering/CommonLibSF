@@ -110,14 +110,29 @@ namespace SFSE
 			pluginVersion = a_version;
 		}
 
+	 	[[nodiscard]] constexpr std::uint32_t GetPluginVersion() const noexcept
+		{
+			return pluginVersion;
+		}
+
 		constexpr void PluginName(std::string_view a_plugin) noexcept
 		{
 			SetCharBuffer(a_plugin, std::span{ pluginName });
 		}
 
+		[[nodiscard]] constexpr std::string_view GetPluginName() const noexcept
+		{
+			return std::string_view{ pluginName };
+		}
+
 		constexpr void AuthorName(std::string_view a_name) noexcept
 		{
 			SetCharBuffer(a_name, std::span{ author });
+		}
+
+		[[nodiscard]] constexpr std::string_view GetAuthorName() const noexcept
+		{
+			return std::string_view{ author };
 		}
 
 		constexpr void UsesSigScanning(bool a_value) noexcept
@@ -185,3 +200,5 @@ namespace SFSE
 	static_assert(offsetof(PluginVersionData, reservedBreaking) == 0x258);
 	static_assert(sizeof(PluginVersionData) == 0x25C);
 } // namespace SFSE
+
+#define SFSEPluginLoad(...) extern "C" [[maybe_unused]] __declspec(dllexport) bool SFSEPlugin_Load(__VA_ARGS__)
