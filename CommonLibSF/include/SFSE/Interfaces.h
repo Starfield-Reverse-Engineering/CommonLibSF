@@ -110,7 +110,7 @@ namespace SFSE
 			pluginVersion = a_version;
 		}
 
-		constexpr std::uint32_t GetPluginVersion() noexcept
+	 	[[nodiscard]] constexpr std::uint32_t GetPluginVersion() const noexcept
 		{
 			return pluginVersion;
 		}
@@ -120,7 +120,7 @@ namespace SFSE
 			SetCharBuffer(a_plugin, std::span{ pluginName });
 		}
 
-		constexpr std::string_view GetPluginName() noexcept
+		[[nodiscard]] constexpr std::string_view GetPluginName() const noexcept
 		{
 			return std::string_view{ pluginName };
 		}
@@ -130,7 +130,7 @@ namespace SFSE
 			SetCharBuffer(a_name, std::span{ author });
 		}
 
-		constexpr std::string_view GetAuthorName() noexcept
+		[[nodiscard]] constexpr std::string_view GetAuthorName() const noexcept
 		{
 			return std::string_view{ author };
 		}
