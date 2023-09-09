@@ -64,6 +64,11 @@ Specifically, the **Modded Code** is Starfield (and its variants) and **Modding 
 
 For additional information on GPL licenses, see the [FSF FAQ](https://www.gnu.org/licenses/gpl-faq.en.html)
 
+## Contributors
+
+<!--CONTRIBUTORS_BEGIN-->
+<!--CONTRIBUTORS_END-->
+
 ## Credits
 
 This work is based on [CommonLibSSE][CLibSSE] created by [Ryan-rsm-McKenzie](https://github.com/Ryan-rsm-McKenzie) under an [MIT License][CommonLib_MIT]. Without him putting that together, much of the joint Bethesda RE scene would be drastically different. The MIT License is kept for historical purposes only and the [GPL](#License) governs this work. To the extent that you want the [MIT licensed code][CommonLib_MIT], please reference [CommonLibSSE and its forks][CLibSSE].

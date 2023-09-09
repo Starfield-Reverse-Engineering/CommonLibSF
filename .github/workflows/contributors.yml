@@ -1,0 +1,27 @@
+name: Contributors
+
+on:
+  push:
+    branches: main
+  workflow_dispatch:
+
+jobs:
+  contributors:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate Contributors Images
+        uses: jaywcjlove/github-action-contributors@main
+        id: contributors
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          filter-author: (renovate\[bot\]|renovate-bot|dependabot\[bot\])
+          openDelimiter: "<!--CONTRIBUTORS_BEGIN-->"
+          closeDelimiter: "<!--CONTRIBUTORS_END-->"
+          hideName: "true" # Hide names in htmlTable
+          avatarSize: 50
+
+      - name: Modify htmlTable README.md
+        uses: jaywcjlove/github-action-modify-file-content@main
+        with:
+          path: README.md
+          body: "${{steps.contributors.outputs.htmlTable}}"
