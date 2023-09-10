@@ -87,25 +87,13 @@ namespace SFSE
 		a_fn();
 	}
 
-	PluginHandle GetPluginHandle() noexcept
-	{
-		return detail::APIStorage::get().pluginHandle;
-	}
+	PluginHandle GetPluginHandle() noexcept { return detail::APIStorage::get().pluginHandle; }
 
-	std::uint32_t GetReleaseIndex() noexcept
-	{
-		return detail::APIStorage::get().releaseIndex;
-	}
+	std::uint32_t GetReleaseIndex() noexcept { return detail::APIStorage::get().releaseIndex; }
 
-	const TrampolineInterface* GetTrampolineInterface() noexcept
-	{
-		return detail::APIStorage::get().trampolineInterface;
-	}
+	const TrampolineInterface* GetTrampolineInterface() noexcept { return detail::APIStorage::get().trampolineInterface; }
 
-	const MessagingInterface* GetMessagingInterface() noexcept
-	{
-		return detail::APIStorage::get().messagingInterface;
-	}
+	const MessagingInterface* GetMessagingInterface() noexcept { return detail::APIStorage::get().messagingInterface; }
 
 	Trampoline& GetTrampoline()
 	{

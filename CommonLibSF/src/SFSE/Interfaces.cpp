@@ -18,10 +18,7 @@ namespace SFSE
 		return { major, minor, revision, build };
 	}
 
-	std::uint32_t QueryInterface::SFSEVersion() const
-	{
-		return GetProxy()->sfseVersion;
-	}
+	std::uint32_t QueryInterface::SFSEVersion() const { return GetProxy()->sfseVersion; }
 
 	const detail::SFSEInterface* QueryInterface::GetProxy() const
 	{
@@ -29,25 +26,13 @@ namespace SFSE
 		return reinterpret_cast<const detail::SFSEInterface*>(this);
 	}
 
-	PluginHandle LoadInterface::GetPluginHandle() const
-	{
-		return GetProxy()->GetPluginHandle();
-	}
+	PluginHandle LoadInterface::GetPluginHandle() const { return GetProxy()->GetPluginHandle(); }
 
-	const PluginInfo* LoadInterface::GetPluginInfo(const char* a_name) const
-	{
-		return static_cast<const PluginInfo*>(GetProxy()->GetPluginInfo(a_name));
-	}
+	const PluginInfo* LoadInterface::GetPluginInfo(const char* a_name) const { return static_cast<const PluginInfo*>(GetProxy()->GetPluginInfo(a_name)); }
 
-	void* LoadInterface::QueryInterface(std::uint32_t a_id) const
-	{
-		return GetProxy()->QueryInterface(a_id);
-	}
+	void* LoadInterface::QueryInterface(std::uint32_t a_id) const { return GetProxy()->QueryInterface(a_id); }
 
-	std::uint32_t MessagingInterface::Version() const
-	{
-		return GetProxy()->interfaceVersion;
-	}
+	std::uint32_t MessagingInterface::Version() const { return GetProxy()->interfaceVersion; }
 
 	bool MessagingInterface::Dispatch(std::uint32_t a_messageType, void* a_data, std::uint32_t a_dataLen, const char* a_receiver) const
 	{
@@ -58,10 +43,7 @@ namespace SFSE
 		return result;
 	}
 
-	bool MessagingInterface::RegisterListener(EventCallback a_callback) const
-	{
-		return RegisterListener("SFSE", a_callback);
-	}
+	bool MessagingInterface::RegisterListener(EventCallback a_callback) const { return RegisterListener("SFSE", a_callback); }
 
 	bool MessagingInterface::RegisterListener(const char* a_sender, EventCallback a_callback) const
 	{
@@ -78,20 +60,11 @@ namespace SFSE
 		return reinterpret_cast<const detail::SFSEMessagingInterface*>(this);
 	}
 
-	std::uint32_t TrampolineInterface::Version() const
-	{
-		return GetProxy()->interfaceVersion;
-	}
+	std::uint32_t TrampolineInterface::Version() const { return GetProxy()->interfaceVersion; }
 
-	void* TrampolineInterface::AllocateFromBranchPool(std::size_t a_size) const
-	{
-		return GetProxy()->AllocateFromBranchPool(GetPluginHandle(), a_size);
-	}
+	void* TrampolineInterface::AllocateFromBranchPool(std::size_t a_size) const { return GetProxy()->AllocateFromBranchPool(GetPluginHandle(), a_size); }
 
-	void* TrampolineInterface::AllocateFromLocalPool(std::size_t a_size) const
-	{
-		return GetProxy()->AllocateFromLocalPool(GetPluginHandle(), a_size);
-	}
+	void* TrampolineInterface::AllocateFromLocalPool(std::size_t a_size) const { return GetProxy()->AllocateFromLocalPool(GetPluginHandle(), a_size); }
 
 	const detail::SFSETrampolineInterface* TrampolineInterface::GetProxy() const
 	{

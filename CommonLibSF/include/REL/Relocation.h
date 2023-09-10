@@ -191,13 +191,9 @@ namespace REL
 
 		constexpr Version() noexcept = default;
 
-		explicit constexpr Version(std::array<value_type, 4> a_version) noexcept :
-			_impl(a_version)
-		{}
+		explicit constexpr Version(std::array<value_type, 4> a_version) noexcept : _impl(a_version) {}
 
-		constexpr Version(value_type a_v1, value_type a_v2 = 0, value_type a_v3 = 0, value_type a_v4 = 0) noexcept :
-			_impl{ a_v1, a_v2, a_v3, a_v4 }
-		{}
+		constexpr Version(value_type a_v1, value_type a_v2 = 0, value_type a_v3 = 0, value_type a_v4 = 0) noexcept : _impl{ a_v1, a_v2, a_v3, a_v4 } {}
 
 		explicit constexpr Version(std::string_view a_version)
 		{
@@ -225,35 +221,17 @@ namespace REL
 			}
 		}
 
-		[[nodiscard]] constexpr reference operator[](std::size_t a_idx) noexcept
-		{
-			return _impl[a_idx];
-		}
+		[[nodiscard]] constexpr reference operator[](std::size_t a_idx) noexcept { return _impl[a_idx]; }
 
-		[[nodiscard]] constexpr const_reference operator[](std::size_t a_idx) const noexcept
-		{
-			return _impl[a_idx];
-		}
+		[[nodiscard]] constexpr const_reference operator[](std::size_t a_idx) const noexcept { return _impl[a_idx]; }
 
-		[[nodiscard]] constexpr decltype(auto) begin() const noexcept
-		{
-			return _impl.begin();
-		}
+		[[nodiscard]] constexpr decltype(auto) begin() const noexcept { return _impl.begin(); }
 
-		[[nodiscard]] constexpr decltype(auto) cbegin() const noexcept
-		{
-			return _impl.cbegin();
-		}
+		[[nodiscard]] constexpr decltype(auto) cbegin() const noexcept { return _impl.cbegin(); }
 
-		[[nodiscard]] constexpr decltype(auto) end() const noexcept
-		{
-			return _impl.end();
-		}
+		[[nodiscard]] constexpr decltype(auto) end() const noexcept { return _impl.end(); }
 
-		[[nodiscard]] constexpr decltype(auto) cend() const noexcept
-		{
-			return _impl.cend();
-		}
+		[[nodiscard]] constexpr decltype(auto) cend() const noexcept { return _impl.cend(); }
 
 		[[nodiscard]] std::strong_ordering constexpr compare(const Version& a_rhs) const noexcept
 		{
@@ -265,30 +243,15 @@ namespace REL
 			return std::strong_ordering::equal;
 		}
 
-		[[nodiscard]] constexpr std::uint32_t pack() const noexcept
-		{
-			return static_cast<std::uint32_t>((_impl[0] & 0x0FF) << 24u | (_impl[1] & 0x0FF) << 16u | (_impl[2] & 0xFFF) << 4u | (_impl[3] & 0x00F) << 0u);
-		}
+		[[nodiscard]] constexpr std::uint32_t pack() const noexcept { return static_cast<std::uint32_t>((_impl[0] & 0x0FF) << 24u | (_impl[1] & 0x0FF) << 16u | (_impl[2] & 0xFFF) << 4u | (_impl[3] & 0x00F) << 0u); }
 
-		[[nodiscard]] constexpr value_type major() const noexcept
-		{
-			return _impl[0];
-		}
+		[[nodiscard]] constexpr value_type major() const noexcept { return _impl[0]; }
 
-		[[nodiscard]] constexpr value_type minor() const noexcept
-		{
-			return _impl[1];
-		}
+		[[nodiscard]] constexpr value_type minor() const noexcept { return _impl[1]; }
 
-		[[nodiscard]] constexpr value_type patch() const noexcept
-		{
-			return _impl[2];
-		}
+		[[nodiscard]] constexpr value_type patch() const noexcept { return _impl[2]; }
 
-		[[nodiscard]] constexpr value_type build() const noexcept
-		{
-			return _impl[3];
-		}
+		[[nodiscard]] constexpr value_type build() const noexcept { return _impl[3]; }
 
 		[[nodiscard]] std::string string(std::string_view a_separator = "-"sv) const
 		{
@@ -312,25 +275,15 @@ namespace REL
 			return result;
 		}
 
-		[[nodiscard]] static constexpr Version unpack(std::uint32_t a_packedVersion) noexcept
-		{
-			return REL::Version{ static_cast<value_type>((a_packedVersion >> 24) & 0x0FF), static_cast<value_type>((a_packedVersion >> 16) & 0x0FF),
-				static_cast<value_type>((a_packedVersion >> 4) & 0xFFF), static_cast<value_type>(a_packedVersion & 0x0F) };
-		}
+		[[nodiscard]] static constexpr Version unpack(std::uint32_t a_packedVersion) noexcept { return REL::Version{ static_cast<value_type>((a_packedVersion >> 24) & 0x0FF), static_cast<value_type>((a_packedVersion >> 16) & 0x0FF), static_cast<value_type>((a_packedVersion >> 4) & 0xFFF), static_cast<value_type>(a_packedVersion & 0x0F) }; }
 
 	private:
 		std::array<value_type, 4> _impl{ 0, 0, 0, 0 };
 	};
 
-	[[nodiscard]] constexpr bool operator==(const Version& a_lhs, const Version& a_rhs) noexcept
-	{
-		return a_lhs.compare(a_rhs) == std::strong_ordering::equal;
-	}
+	[[nodiscard]] constexpr bool operator==(const Version& a_lhs, const Version& a_rhs) noexcept { return a_lhs.compare(a_rhs) == std::strong_ordering::equal; }
 
-	[[nodiscard]] constexpr std::strong_ordering operator<=>(const Version& a_lhs, const Version& a_rhs) noexcept
-	{
-		return a_lhs.compare(a_rhs);
-	}
+	[[nodiscard]] constexpr std::strong_ordering operator<=>(const Version& a_lhs, const Version& a_rhs) noexcept { return a_lhs.compare(a_rhs); }
 
 	namespace literals
 	{
@@ -370,10 +323,7 @@ namespace REL
 			return REL::Version(result);
 		}
 
-		[[nodiscard]] constexpr REL::Version operator""_v(const char* str, std::size_t len)
-		{
-			return Version(std::string_view(str, len));
-		}
+		[[nodiscard]] constexpr REL::Version operator""_v(const char* str, std::size_t len) { return Version(std::string_view(str, len)); }
 	}  // namespace literals
 
 	[[nodiscard]] inline std::optional<Version> get_file_version(stl::zwstring a_filename)
@@ -422,31 +372,15 @@ namespace REL
 
 		Segment() noexcept = default;
 
-		Segment(std::uintptr_t a_proxyBase, std::uintptr_t a_address, std::uintptr_t a_size) noexcept
-			:
-			_proxyBase(a_proxyBase),
-			_address(a_address), _size(a_size)
-		{}
+		Segment(std::uintptr_t a_proxyBase, std::uintptr_t a_address, std::uintptr_t a_size) noexcept : _proxyBase(a_proxyBase), _address(a_address), _size(a_size) {}
 
-		[[nodiscard]] std::uintptr_t address() const noexcept
-		{
-			return _address;
-		}
+		[[nodiscard]] std::uintptr_t address() const noexcept { return _address; }
 
-		[[nodiscard]] std::size_t offset() const noexcept
-		{
-			return address() - _proxyBase;
-		}
+		[[nodiscard]] std::size_t offset() const noexcept { return address() - _proxyBase; }
 
-		[[nodiscard]] std::size_t size() const noexcept
-		{
-			return _size;
-		}
+		[[nodiscard]] std::size_t size() const noexcept { return _size; }
 
-		[[nodiscard]] void* pointer() const noexcept
-		{
-			return reinterpret_cast<void*>(address());
-		}
+		[[nodiscard]] void* pointer() const noexcept { return reinterpret_cast<void*>(address()); }
 
 		template <class T>
 		[[nodiscard]] T* pointer() const noexcept
@@ -469,10 +403,7 @@ namespace REL
 		explicit Module(std::uintptr_t a_base);
 		explicit Module(std::string_view a_filePath);
 
-		[[nodiscard]] constexpr auto base() const noexcept
-		{
-			return _base;
-		}
+		[[nodiscard]] constexpr auto base() const noexcept { return _base; }
 
 		template <typename T = void>
 		[[nodiscard]] constexpr auto* pointer() const noexcept
@@ -480,10 +411,7 @@ namespace REL
 			return std::bit_cast<T*>(base());
 		}
 
-		[[nodiscard]] constexpr auto segment(Segment::Name a_segment) noexcept
-		{
-			return _segments[a_segment];
-		}
+		[[nodiscard]] constexpr auto segment(Segment::Name a_segment) noexcept { return _segments[a_segment]; }
 
 		[[nodiscard]] static Module& get(const std::uintptr_t a_address) noexcept
 		{
@@ -504,14 +432,7 @@ namespace REL
 		}
 
 	private:
-		static constexpr std::array SEGMENTS{ std::make_pair(".text"sv, IMAGE_SCN_MEM_EXECUTE),
-			std::make_pair(".idata"sv, static_cast<std::uint32_t>(0)),
-			std::make_pair(".rdata"sv, static_cast<std::uint32_t>(0)),
-			std::make_pair(".data"sv, static_cast<std::uint32_t>(0)),
-			std::make_pair(".pdata"sv, static_cast<std::uint32_t>(0)),
-			std::make_pair(".tls"sv, static_cast<std::uint32_t>(0)),
-			std::make_pair(".text"sv, IMAGE_SCN_MEM_WRITE),
-			std::make_pair(".gfids"sv, static_cast<std::uint32_t>(0)) };
+		static constexpr std::array SEGMENTS{ std::make_pair(".text"sv, IMAGE_SCN_MEM_EXECUTE), std::make_pair(".idata"sv, static_cast<std::uint32_t>(0)), std::make_pair(".rdata"sv, static_cast<std::uint32_t>(0)), std::make_pair(".data"sv, static_cast<std::uint32_t>(0)), std::make_pair(".pdata"sv, static_cast<std::uint32_t>(0)), std::make_pair(".tls"sv, static_cast<std::uint32_t>(0)), std::make_pair(".text"sv, IMAGE_SCN_MEM_WRITE), std::make_pair(".gfids"sv, static_cast<std::uint32_t>(0)) };
 
 		std::uintptr_t                      _base;
 		std::array<Segment, Segment::total> _segments;
@@ -522,19 +443,11 @@ namespace REL
 	public:
 		constexpr Offset() = default;
 
-		constexpr Offset(std::ptrdiff_t a_offset) :
-			_offset(a_offset)
-		{}
+		constexpr Offset(std::ptrdiff_t a_offset) : _offset(a_offset) {}
 
-		[[nodiscard]] constexpr std::uintptr_t offset() const noexcept
-		{
-			return _offset;
-		}
+		[[nodiscard]] constexpr std::uintptr_t offset() const noexcept { return _offset; }
 
-		[[nodiscard]] constexpr std::uintptr_t address() const noexcept
-		{
-			return Module::get().base() + _offset;
-		}
+		[[nodiscard]] constexpr std::uintptr_t address() const noexcept { return Module::get().base() + _offset; }
 
 	private:
 		std::ptrdiff_t _offset{ 0 };
@@ -548,17 +461,11 @@ namespace REL
 
 		constexpr Relocation() noexcept = default;
 
-		constexpr Relocation(const std::uintptr_t a_addr) noexcept :
-			_address(a_addr)
-		{}
+		constexpr Relocation(const std::uintptr_t a_addr) noexcept : _address(a_addr) {}
 
-		constexpr Relocation(Offset a_rva) noexcept :
-			_address(a_rva.address())
-		{}
+		constexpr Relocation(Offset a_rva) noexcept : _address(a_rva.address()) {}
 
-		constexpr Relocation(Offset a_rva, std::ptrdiff_t a_offset) noexcept :
-			_address(a_rva.address() + a_offset)
-		{}
+		constexpr Relocation(Offset a_rva, std::ptrdiff_t a_offset) noexcept : _address(a_rva.address() + a_offset) {}
 
 		template <typename U = value_type>
 		[[nodiscard]] constexpr U get() const noexcept(std::is_nothrow_copy_constructible_v<U>)
@@ -566,15 +473,9 @@ namespace REL
 			return std::bit_cast<U>(_address);
 		}
 
-		[[nodiscard]] constexpr decltype(auto) address() const noexcept
-		{
-			return _address;
-		}
+		[[nodiscard]] constexpr decltype(auto) address() const noexcept { return _address; }
 
-		[[nodiscard]] std::size_t offset() const noexcept
-		{
-			return _address - base();
-		}
+		[[nodiscard]] std::size_t offset() const noexcept { return _address - base(); }
 
 		[[nodiscard]] constexpr decltype(auto) operator*() const noexcept
 			requires(std::is_pointer_v<value_type>)
@@ -613,10 +514,7 @@ namespace REL
 		}
 
 	private:
-		[[nodiscard]] static std::uintptr_t base()
-		{
-			return Module::get().base();
-		}
+		[[nodiscard]] static std::uintptr_t base() { return Module::get().base(); }
 
 		std::uintptr_t _address{ 0 };
 	};

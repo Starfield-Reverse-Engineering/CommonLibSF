@@ -40,19 +40,11 @@ namespace SFSE
 		Trampoline() = default;
 		Trampoline(const Trampoline&) = delete;
 
-		Trampoline(Trampoline&& a_rhs)
-		{
-			move_from(std::move(a_rhs));
-		}
+		Trampoline(Trampoline&& a_rhs) { move_from(std::move(a_rhs)); }
 
-		explicit Trampoline(std::string_view a_name) :
-			_name(a_name)
-		{}
+		explicit Trampoline(std::string_view a_name) : _name(a_name) {}
 
-		~Trampoline()
-		{
-			release();
-		}
+		~Trampoline() { release(); }
 
 		Trampoline& operator=(const Trampoline&) = delete;
 
@@ -64,10 +56,7 @@ namespace SFSE
 			return *this;
 		}
 
-		void create(std::size_t a_size)
-		{
-			return create(a_size, nullptr);
-		}
+		void create(std::size_t a_size) { return create(a_size, nullptr); }
 
 		void create(std::size_t a_size, void* a_module)
 		{
@@ -88,10 +77,7 @@ namespace SFSE
 			set_trampoline(mem, a_size, [](void* a_mem, std::size_t) { WinAPI::VirtualFree(a_mem, 0, MEM_RELEASE); });
 		}
 
-		void set_trampoline(void* a_trampoline, std::size_t a_size)
-		{
-			set_trampoline(a_trampoline, a_size, {});
-		}
+		void set_trampoline(void* a_trampoline, std::size_t a_size) { set_trampoline(a_trampoline, a_size, {}); }
 
 		void set_trampoline(void* a_trampoline, std::size_t a_size, deleter_type a_deleter)
 		{
@@ -128,25 +114,13 @@ namespace SFSE
 			return static_cast<T*>(allocate(sizeof(T)));
 		}
 
-		[[nodiscard]] constexpr std::size_t empty() const noexcept
-		{
-			return _capacity == 0;
-		}
+		[[nodiscard]] constexpr std::size_t empty() const noexcept { return _capacity == 0; }
 
-		[[nodiscard]] constexpr std::size_t capacity() const noexcept
-		{
-			return _capacity;
-		}
+		[[nodiscard]] constexpr std::size_t capacity() const noexcept { return _capacity; }
 
-		[[nodiscard]] constexpr std::size_t allocated_size() const noexcept
-		{
-			return _size;
-		}
+		[[nodiscard]] constexpr std::size_t allocated_size() const noexcept { return _size; }
 
-		[[nodiscard]] constexpr std::size_t free_size() const noexcept
-		{
-			return _capacity - _size;
-		}
+		[[nodiscard]] constexpr std::size_t free_size() const noexcept { return _capacity - _size; }
 
 		template <std::size_t N>
 		std::uintptr_t write_branch(std::uintptr_t a_src, std::uintptr_t a_dst)

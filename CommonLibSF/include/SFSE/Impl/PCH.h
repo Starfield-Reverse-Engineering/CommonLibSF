@@ -130,35 +130,17 @@ namespace SFSE
 					return c[a_pos];
 				}
 
-				[[nodiscard]] consteval const_reference back() const noexcept
-				{
-					return (*this)[size() - 1];
-				}
+				[[nodiscard]] consteval const_reference back() const noexcept { return (*this)[size() - 1]; }
 
-				[[nodiscard]] consteval const_pointer data() const noexcept
-				{
-					return c;
-				}
+				[[nodiscard]] consteval const_pointer data() const noexcept { return c; }
 
-				[[nodiscard]] consteval bool empty() const noexcept
-				{
-					return this->size() == 0;
-				}
+				[[nodiscard]] consteval bool empty() const noexcept { return this->size() == 0; }
 
-				[[nodiscard]] consteval const_reference front() const noexcept
-				{
-					return (*this)[0];
-				}
+				[[nodiscard]] consteval const_reference front() const noexcept { return (*this)[0]; }
 
-				[[nodiscard]] consteval size_type length() const noexcept
-				{
-					return N;
-				}
+				[[nodiscard]] consteval size_type length() const noexcept { return N; }
 
-				[[nodiscard]] consteval size_type size() const noexcept
-				{
-					return length();
-				}
+				[[nodiscard]] consteval size_type size() const noexcept { return length(); }
 
 				template <std::size_t POS = 0, std::size_t COUNT = npos>
 				[[nodiscard]] consteval auto substr() const noexcept
@@ -221,16 +203,10 @@ namespace SFSE
 				}
 			}
 
-			void release() noexcept
-			{
-				_fn.reset();
-			}
+			void release() noexcept { _fn.reset(); }
 
 		private:
-			[[nodiscard]] bool active() const noexcept
-			{
-				return _fn.has_value();
-			}
+			[[nodiscard]] bool active() const noexcept { return _fn.has_value(); }
 
 			std::optional<std::remove_reference_t<EF>> _fn;
 		};
@@ -255,15 +231,13 @@ namespace SFSE
 			constexpr enumeration(enumeration&&) noexcept = default;
 
 			template <class U2>  // NOLINTNEXTLINE(google-explicit-constructor)
-			constexpr enumeration(enumeration<Enum, U2> a_rhs) noexcept :
-				_impl(static_cast<underlying_type>(a_rhs.get()))
+			constexpr enumeration(enumeration<Enum, U2> a_rhs) noexcept : _impl(static_cast<underlying_type>(a_rhs.get()))
 			{}
 
 			template <class... Args>
 			constexpr enumeration(Args... a_values) noexcept  //
 				requires(std::same_as<Args, enum_type> && ...)
-				:
-				_impl((static_cast<underlying_type>(a_values) | ...))
+				: _impl((static_cast<underlying_type>(a_values) | ...))
 			{}
 
 			~enumeration() noexcept = default;
@@ -283,25 +257,13 @@ namespace SFSE
 				return *this;
 			}
 
-			[[nodiscard]] explicit constexpr operator bool() const noexcept
-			{
-				return _impl != static_cast<underlying_type>(0);
-			}
+			[[nodiscard]] explicit constexpr operator bool() const noexcept { return _impl != static_cast<underlying_type>(0); }
 
-			[[nodiscard]] constexpr enum_type operator*() const noexcept
-			{
-				return get();
-			}
+			[[nodiscard]] constexpr enum_type operator*() const noexcept { return get(); }
 
-			[[nodiscard]] constexpr enum_type get() const noexcept
-			{
-				return static_cast<enum_type>(_impl);
-			}
+			[[nodiscard]] constexpr enum_type get() const noexcept { return static_cast<enum_type>(_impl); }
 
-			[[nodiscard]] constexpr underlying_type underlying() const noexcept
-			{
-				return _impl;
-			}
+			[[nodiscard]] constexpr underlying_type underlying() const noexcept { return _impl; }
 
 			template <class... Args>
 			constexpr enumeration& set(Args... a_args) noexcept  //
@@ -375,42 +337,41 @@ namespace SFSE
 		return a_enum = a_enum a_op a_shift;                                                                      \
 	}
 
-#define SFSE_MAKE_ENUMERATION_OP(a_op)                                                                                   \
-	template <class E, class U1, class U2>                                                                               \
-	[[nodiscard]] constexpr auto operator a_op(enumeration<E, U1> a_lhs, enumeration<E, U2> a_rhs) noexcept              \
-		-> enumeration<E, std::common_type_t<U1, U2>>                                                                    \
-	{                                                                                                                    \
-		return static_cast<E>(static_cast<U1>(a_lhs.get()) a_op static_cast<U2>(a_rhs.get()));                           \
-	}                                                                                                                    \
-                                                                                                                         \
-	template <class E, class U>                                                                                          \
-	[[nodiscard]] constexpr auto operator a_op(enumeration<E, U> a_lhs, E a_rhs) noexcept -> enumeration<E, U>           \
-	{                                                                                                                    \
-		return static_cast<E>(static_cast<U>(a_lhs.get()) a_op static_cast<U>(a_rhs));                                   \
-	}                                                                                                                    \
-                                                                                                                         \
-	template <class E, class U>                                                                                          \
-	[[nodiscard]] constexpr auto operator a_op(E a_lhs, enumeration<E, U> a_rhs) noexcept -> enumeration<E, U>           \
-	{                                                                                                                    \
-		return static_cast<E>(static_cast<U>(a_lhs) a_op static_cast<U>(a_rhs.get()));                                   \
-	}                                                                                                                    \
-                                                                                                                         \
-	template <class E, class U1, class U2>                                                                               \
-	constexpr auto operator a_op##=(enumeration<E, U1>& a_lhs, enumeration<E, U2> a_rhs) noexcept -> enumeration<E, U1>& \
-	{                                                                                                                    \
-		return a_lhs = a_lhs a_op a_rhs;                                                                                 \
-	}                                                                                                                    \
-                                                                                                                         \
-	template <class E, class U>                                                                                          \
-	constexpr auto operator a_op##=(enumeration<E, U>& a_lhs, E a_rhs) noexcept -> enumeration<E, U>&                    \
-	{                                                                                                                    \
-		return a_lhs = a_lhs a_op a_rhs;                                                                                 \
-	}                                                                                                                    \
-                                                                                                                         \
-	template <class E, class U>                                                                                          \
-	constexpr auto operator a_op##=(E& a_lhs, enumeration<E, U> a_rhs) noexcept -> E&                                    \
-	{                                                                                                                    \
-		return a_lhs = *(a_lhs a_op a_rhs);                                                                              \
+#define SFSE_MAKE_ENUMERATION_OP(a_op)                                                                                                                    \
+	template <class E, class U1, class U2>                                                                                                                \
+	[[nodiscard]] constexpr auto operator a_op(enumeration<E, U1> a_lhs, enumeration<E, U2> a_rhs) noexcept -> enumeration<E, std::common_type_t<U1, U2>> \
+	{                                                                                                                                                     \
+		return static_cast<E>(static_cast<U1>(a_lhs.get()) a_op static_cast<U2>(a_rhs.get()));                                                            \
+	}                                                                                                                                                     \
+                                                                                                                                                          \
+	template <class E, class U>                                                                                                                           \
+	[[nodiscard]] constexpr auto operator a_op(enumeration<E, U> a_lhs, E a_rhs) noexcept -> enumeration<E, U>                                            \
+	{                                                                                                                                                     \
+		return static_cast<E>(static_cast<U>(a_lhs.get()) a_op static_cast<U>(a_rhs));                                                                    \
+	}                                                                                                                                                     \
+                                                                                                                                                          \
+	template <class E, class U>                                                                                                                           \
+	[[nodiscard]] constexpr auto operator a_op(E a_lhs, enumeration<E, U> a_rhs) noexcept -> enumeration<E, U>                                            \
+	{                                                                                                                                                     \
+		return static_cast<E>(static_cast<U>(a_lhs) a_op static_cast<U>(a_rhs.get()));                                                                    \
+	}                                                                                                                                                     \
+                                                                                                                                                          \
+	template <class E, class U1, class U2>                                                                                                                \
+	constexpr auto operator a_op##=(enumeration<E, U1>& a_lhs, enumeration<E, U2> a_rhs) noexcept -> enumeration<E, U1>&                                  \
+	{                                                                                                                                                     \
+		return a_lhs = a_lhs a_op a_rhs;                                                                                                                  \
+	}                                                                                                                                                     \
+                                                                                                                                                          \
+	template <class E, class U>                                                                                                                           \
+	constexpr auto operator a_op##=(enumeration<E, U>& a_lhs, E a_rhs) noexcept -> enumeration<E, U>&                                                     \
+	{                                                                                                                                                     \
+		return a_lhs = a_lhs a_op a_rhs;                                                                                                                  \
+	}                                                                                                                                                     \
+                                                                                                                                                          \
+	template <class E, class U>                                                                                                                           \
+	constexpr auto operator a_op##=(E& a_lhs, enumeration<E, U> a_rhs) noexcept -> E&                                                                     \
+	{                                                                                                                                                     \
+		return a_lhs = *(a_lhs a_op a_rhs);                                                                                                               \
 	}
 
 #define SFSE_MAKE_INCREMENTER_OP(a_op)                                                                            \
@@ -465,9 +426,7 @@ namespace SFSE
 		public:
 			using value_type = typename super::value_type;
 
-			explicit atomic_ref(volatile T& a_obj) noexcept(std::is_nothrow_constructible_v<super, value_type&>) :
-				super(const_cast<value_type&>(a_obj))
-			{}
+			explicit atomic_ref(volatile T& a_obj) noexcept(std::is_nothrow_constructible_v<super, value_type&>) : super(const_cast<value_type&>(a_obj)) {}
 
 			using super::super;
 			using super::operator=;
@@ -497,15 +456,9 @@ namespace SFSE
 		template <class T>
 		struct ssizeof
 		{
-			[[nodiscard]] constexpr operator std::ptrdiff_t() const noexcept
-			{
-				return value;
-			}
+			[[nodiscard]] constexpr operator std::ptrdiff_t() const noexcept { return value; }
 
-			[[nodiscard]] constexpr std::ptrdiff_t operator()() const noexcept
-			{
-				return value;
-			}
+			[[nodiscard]] constexpr std::ptrdiff_t operator()() const noexcept { return value; }
 
 			static constexpr auto value = static_cast<std::ptrdiff_t>(sizeof(T));
 		};
@@ -568,9 +521,7 @@ namespace SFSE
 
 		[[nodiscard]] inline auto utf8_to_utf16(std::string_view a_in) noexcept -> std::optional<std::wstring>
 		{
-			const auto cvt = [&](wchar_t* a_dst, std::size_t a_length) {
-				return WinAPI::MultiByteToWideChar(CP_UTF8, 0, a_in.data(), static_cast<int>(a_in.length()), a_dst, static_cast<int>(a_length));
-			};
+			const auto cvt = [&](wchar_t* a_dst, std::size_t a_length) { return WinAPI::MultiByteToWideChar(CP_UTF8, 0, a_in.data(), static_cast<int>(a_in.length()), a_dst, static_cast<int>(a_length)); };
 
 			const auto len = cvt(nullptr, 0);
 			if (len == 0) {
@@ -587,10 +538,7 @@ namespace SFSE
 
 		[[nodiscard]] inline auto utf16_to_utf8(std::wstring_view a_in) noexcept -> std::optional<std::string>
 		{
-			const auto cvt = [&](char* a_dst, std::size_t a_length) {
-				return WinAPI::WideCharToMultiByte(CP_UTF8, 0, a_in.data(), static_cast<int>(a_in.length()), a_dst, static_cast<int>(a_length),
-					nullptr, nullptr);
-			};
+			const auto cvt = [&](char* a_dst, std::size_t a_length) { return WinAPI::WideCharToMultiByte(CP_UTF8, 0, a_in.data(), static_cast<int>(a_in.length()), a_dst, static_cast<int>(a_length), nullptr, nullptr); };
 
 			const auto len = cvt(nullptr, 0);
 			if (len == 0) {
@@ -639,8 +587,7 @@ namespace SFSE
 				}
 			}();
 
-			spdlog::log(spdlog::source_loc{ a_loc.file_name(), static_cast<int>(a_loc.line()), a_loc.function_name() }, spdlog::level::critical,
-				a_msg);
+			spdlog::log(spdlog::source_loc{ a_loc.file_name(), static_cast<int>(a_loc.line()), a_loc.function_name() }, spdlog::level::critical, a_msg);
 
 			if (a_fail) {
 				MessageBox(nullptr, body.c_str(), (caption.empty() ? nullptr : caption.c_str()), 0);
