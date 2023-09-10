@@ -50,4 +50,4 @@ jobs:
           token: ${{ secrets.VCPKG_HELPER_TOKEN }}
           repository: ${{ github.repository_owner }}/Starfield-RE-vcpkg
           event-type: update-event
-          client-payload: '{"sha": "${{ steps.registry.outputs.commit_sha }}", "vcpkg-version": "${{ steps.versioning.outputs.VCPKG_VERSION }}"}'
+          client-payload: '{"sha": "${{ steps.registry.outputs.commit_long_sha }}", "vcpkg-version": "${{ steps.versioning.outputs.VCPKG_VERSION }}"}'
