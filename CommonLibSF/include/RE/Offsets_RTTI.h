@@ -5407,7 +5407,6 @@ namespace RE
 		inline constexpr REL::Offset BSComponentDB2__Detail__CreateAndDeleteCommand__lambda_c0ba88bc81ce3f3f3c92cfa1668386f1__BGSPerk_unsigned__int64_{ 0x051E7400 };
 		inline constexpr REL::Offset BSComponentDB2__Detail__CreateAndDeleteCommand__lambda_c0f5994d28403811cf2be55a55199742__unsignedint_{ 0x051905B0 };
 		inline constexpr REL::Offset BSComponentDB2__Detail__CreateAndDeleteCommand__lambda_c1e567e18ce5c2a0940481ac92356f1d__BSMaterial__TaggedID_BSMaterial__Tag__UVStreamTag_const_BSMaterial__UVStreamParamBoolconst_unsignedshort_{ 0x0539D410 };
-		inline constexpr REL::Offset BSComponentDB2__Detail__CreateAndDeleteCommand__lambda_c26eecb9ade590333fb6e56e120d9661__BGSSaveLoadFileconst_char__[260]_{ 0x052A9940 };
 		inline constexpr REL::Offset BSComponentDB2__Detail__CreateAndDeleteCommand__lambda_c31361456e1310fdc438cea778582499__{ 0x052ADAD0 };
 		inline constexpr REL::Offset BSComponentDB2__Detail__CreateAndDeleteCommand__lambda_c37e7551942d910897df90ba09d50d55__BSResource2__DBHandle_BSResource2__TEntryTraits_0_TempLoadedCellDB__DBTraits_BSResource2__DBDefaultStreamPolicy___{ 0x052AA6B0 };
 		inline constexpr REL::Offset BSComponentDB2__Detail__CreateAndDeleteCommand__lambda_c3a137ad0882de34ef84e21c0cab422e__BSComponentDB2__Detail__ComponentKey_BSComponentDB2__Detail__SortByTypeTraits__BSGalaxy__PlayerKnowledge_{ 0x0519B880 };
@@ -10195,7 +10194,6 @@ namespace RE
 		inline constexpr REL::Offset BSService__TCommandBase_BSComponentDB2__Detail__CreateAndDeleteCommand__lambda_c0ba88bc81ce3f3f3c92cfa1668386f1__BGSPerk_unsigned__int64__{ 0x051E7490 };
 		inline constexpr REL::Offset BSService__TCommandBase_BSComponentDB2__Detail__CreateAndDeleteCommand__lambda_c0f5994d28403811cf2be55a55199742__unsignedint__{ 0x05190C20 };
 		inline constexpr REL::Offset BSService__TCommandBase_BSComponentDB2__Detail__CreateAndDeleteCommand__lambda_c1e567e18ce5c2a0940481ac92356f1d__BSMaterial__TaggedID_BSMaterial__Tag__UVStreamTag_const_BSMaterial__UVStreamParamBoolconst_unsignedshort__{ 0x0539D5C0 };
-		inline constexpr REL::Offset BSService__TCommandBase_BSComponentDB2__Detail__CreateAndDeleteCommand__lambda_c26eecb9ade590333fb6e56e120d9661__BGSSaveLoadFileconst_char__[260]__{ 0x052A9890 };
 		inline constexpr REL::Offset BSService__TCommandBase_BSComponentDB2__Detail__CreateAndDeleteCommand__lambda_c31361456e1310fdc438cea778582499___{ 0x052ADB50 };
 		inline constexpr REL::Offset BSService__TCommandBase_BSComponentDB2__Detail__CreateAndDeleteCommand__lambda_c37e7551942d910897df90ba09d50d55__BSResource2__DBHandle_BSResource2__TEntryTraits_0_TempLoadedCellDB__DBTraits_BSResource2__DBDefaultStreamPolicy____{ 0x052AA9F0 };
 		inline constexpr REL::Offset BSService__TCommandBase_BSComponentDB2__Detail__CreateAndDeleteCommand__lambda_c3a137ad0882de34ef84e21c0cab422e__BSComponentDB2__Detail__ComponentKey_BSComponentDB2__Detail__SortByTypeTraits__BSGalaxy__PlayerKnowledge__{ 0x0519B780 };
@@ -27674,7 +27672,6 @@ namespace RE
 		inline constexpr REL::Offset bnet_std__detail__FunctionImpl_bnet_std__detail__attrib__Copyable_void___CopyableCallable_void___bnet__LogParamsconst__{ 0x054085E0 };
 		inline constexpr REL::Offset bnet_std__detail__FunctionImpl_bnet_std__detail__attrib__Copyable_void___ICallableBase{ 0x05407D30 };
 		inline constexpr REL::Offset bnet_std__detail__FunctionImpl_bnet_std__detail__attrib__Copyable_void___ICopyableCallable{ 0x05407DC0 };
-		inline constexpr REL::Offset bool{ 0x05090A88 };
 		inline constexpr REL::Offset bool___BSScrapArray_BSScript__Variable__{ 0x0508F980 };
 		inline constexpr REL::Offset bool___CombatActorRefPtrconst_CombatPathconst_float_{ 0x05090520 };
 		inline constexpr REL::Offset bool___TESObjectREFR___int64_{ 0x0508D4C8 };
@@ -28629,7 +28626,6 @@ namespace RE
 		inline constexpr REL::Offset hsm__State_void_{ 0x0515F708 };
 		inline constexpr REL::Offset idLogging__ILogger{ 0x052BBDF8 };
 		inline constexpr REL::Offset idTCP{ 0x05407CA8 };
-		inline constexpr REL::Offset int{ 0x050917C0 };
 		inline constexpr REL::Offset nlohmann__detail__exception{ 0x0529B530 };
 		inline constexpr REL::Offset nlohmann__detail__input_adapter_protocol{ 0x0529B3E0 };
 		inline constexpr REL::Offset nlohmann__detail__input_buffer_adapter{ 0x0529B3A0 };
@@ -29214,7 +29210,6 @@ namespace RE
 		inline constexpr REL::Offset std___Ref_count_resource_StorageTable__Particle__ParticleDataBufferPooled_Particles__PooledBufferOwningHandle_StorageTable__Particle__ParticleDataBufferPooled___ReleaseToPool_{ 0x053AC8A0 };
 		inline constexpr REL::Offset std___Ref_count_resource_Workshop__PowerLinkWorkshopItem_stl__detail__AlignedDelete_Workshop__PowerLinkWorkshopItem__{ 0x05358E00 };
 		inline constexpr REL::Offset std___Ref_count_resource_Workshop__TransferLinkWorkshopItem_stl__detail__AlignedDelete_Workshop__TransferLinkWorkshopItem__{ 0x05358F20 };
-		inline constexpr REL::Offset std___Ref_count_resource_unsignedchar_std__default_delete_unsignedchar[0]__{ 0x053F2500 };
 		inline constexpr REL::Offset std___Root_node{ 0x05129FE8 };
 		inline constexpr REL::Offset std__bad_alloc{ 0x0508C798 };
 		inline constexpr REL::Offset std__bad_array_new_length{ 0x0508C7E8 };
@@ -29246,7 +29241,6 @@ namespace RE
 		inline constexpr REL::Offset std__default_delete_BSChargenAPI__RestorePoint_{ 0x05091600 };
 		inline constexpr REL::Offset std__default_delete_BSTHashMap_BSSimpleTaggedType_BGSTerrain__Tag__FileIDTag_unsigned__int64_0__NiPoint2_BSTDefaultScatterTable__{ 0x0508F2A0 };
 		inline constexpr REL::Offset std__default_delete_BSTHashMap_BSSimpleTaggedType_BGSTerrain__Tag__FileIDTag_unsigned__int64_0__float_BSTDefaultScatterTable__{ 0x0508F020 };
-		inline constexpr REL::Offset std__default_delete_unsignedchar[0]_{ 0x050988A0 };
 		inline constexpr REL::Offset std__enable_shared_from_this_BGSBaseLODBlock_{ 0x0515F6C0 };
 		inline constexpr REL::Offset std__exception{ 0x0508C7C0 };
 		inline constexpr REL::Offset std__greater_float_{ 0x05090DA0 };

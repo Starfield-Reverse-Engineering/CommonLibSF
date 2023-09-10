@@ -4739,7 +4739,6 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSComponentDB2__Detail__CreateAndDeleteCommand__lambda_c0ba88bc81ce3f3f3c92cfa1668386f1__BGSPerk_unsigned__int64_{ REL::Offset(0x04409930) };
 		inline constexpr std::array<REL::Offset, 1> BSComponentDB2__Detail__CreateAndDeleteCommand__lambda_c0f5994d28403811cf2be55a55199742__unsignedint_{ REL::Offset(0x04377740) };
 		inline constexpr std::array<REL::Offset, 1> BSComponentDB2__Detail__CreateAndDeleteCommand__lambda_c1e567e18ce5c2a0940481ac92356f1d__BSMaterial__TaggedID_BSMaterial__Tag__UVStreamTag_const_BSMaterial__UVStreamParamBoolconst_unsignedshort_{ REL::Offset(0x0458E0B0) };
-		inline constexpr std::array<REL::Offset, 1> BSComponentDB2__Detail__CreateAndDeleteCommand__lambda_c26eecb9ade590333fb6e56e120d9661__BGSSaveLoadFileconst_char__[260]_{ REL::Offset(0x044CD228) };
 		inline constexpr std::array<REL::Offset, 1> BSComponentDB2__Detail__CreateAndDeleteCommand__lambda_c31361456e1310fdc438cea778582499__{ REL::Offset(0x044CFF30) };
 		inline constexpr std::array<REL::Offset, 1> BSComponentDB2__Detail__CreateAndDeleteCommand__lambda_c37e7551942d910897df90ba09d50d55__BSResource2__DBHandle_BSResource2__TEntryTraits_0_TempLoadedCellDB__DBTraits_BSResource2__DBDefaultStreamPolicy___{ REL::Offset(0x044CD8F0) };
 		inline constexpr std::array<REL::Offset, 1> BSComponentDB2__Detail__CreateAndDeleteCommand__lambda_c3a137ad0882de34ef84e21c0cab422e__BSComponentDB2__Detail__ComponentKey_BSComponentDB2__Detail__SortByTypeTraits__BSGalaxy__PlayerKnowledge_{ REL::Offset(0x0437DA40) };
@@ -20087,7 +20086,6 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> std___Ref_count_resource_StorageTable__Particle__ParticleDataBufferPooled_Particles__PooledBufferOwningHandle_StorageTable__Particle__ParticleDataBufferPooled___ReleaseToPool_{ REL::Offset(0x04597C90) };
 		inline constexpr std::array<REL::Offset, 1> std___Ref_count_resource_Workshop__PowerLinkWorkshopItem_stl__detail__AlignedDelete_Workshop__PowerLinkWorkshopItem__{ REL::Offset(0x0455BBA0) };
 		inline constexpr std::array<REL::Offset, 1> std___Ref_count_resource_Workshop__TransferLinkWorkshopItem_stl__detail__AlignedDelete_Workshop__TransferLinkWorkshopItem__{ REL::Offset(0x0455D428) };
-		inline constexpr std::array<REL::Offset, 1> std___Ref_count_resource_unsignedchar_std__default_delete_unsignedchar[0]__{ REL::Offset(0x045C79C8) };
 		inline constexpr std::array<REL::Offset, 1> std___Root_node{ REL::Offset(0x03F29060) };
 		inline constexpr std::array<REL::Offset, 1> std__bad_alloc{ REL::Offset(0x040743B8) };
 		inline constexpr std::array<REL::Offset, 1> std__bad_array_new_length{ REL::Offset(0x040743D0) };
