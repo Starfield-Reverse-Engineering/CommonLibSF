@@ -24,7 +24,7 @@ jobs:
           source: "."
           exclude: "./docs"
           extensions: "c,cc,cpp,cppm,cxx,h,hpp,hxx,inl,inc,ixx,mxx"
-          clangFormatVersion: 16
+          clangFormatVersion: 10
           inplace: True
 
       - name: Update VCPKG Version
