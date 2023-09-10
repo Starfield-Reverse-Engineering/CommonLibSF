@@ -41,5 +41,5 @@ namespace SFSE
 			void* (*AllocateFromBranchPool)(PluginHandle, std::size_t);
 			void* (*AllocateFromLocalPool)(PluginHandle, std::size_t);
 		};
-	} // namespace detail
-} // namespace SFSE
+	}  // namespace detail
+}  // namespace SFSE

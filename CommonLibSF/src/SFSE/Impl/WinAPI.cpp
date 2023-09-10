@@ -81,13 +81,13 @@ namespace SFSE::WinAPI
 	bool GetFileVersionInfo(const char* a_filename, std::uint32_t a_handle, std::uint32_t a_len, void* a_data) noexcept
 	{
 		return static_cast<bool>(::GetFileVersionInfoA(static_cast<::LPCSTR>(a_filename), static_cast<::DWORD>(a_handle), static_cast<::DWORD>(a_len),
-		                                               static_cast<::LPVOID>(a_data)));
+			static_cast<::LPVOID>(a_data)));
 	}
 
 	bool GetFileVersionInfo(const wchar_t* a_filename, std::uint32_t a_handle, std::uint32_t a_len, void* a_data) noexcept
 	{
 		return static_cast<bool>(::GetFileVersionInfoW(static_cast<::LPCWSTR>(a_filename), static_cast<::DWORD>(a_handle),
-		                                               static_cast<::DWORD>(a_len), static_cast<::LPVOID>(a_data)));
+			static_cast<::DWORD>(a_len), static_cast<::LPVOID>(a_data)));
 	}
 
 	std::uint32_t GetFileVersionInfoSize(const char* a_filename, std::uint32_t* a_handle) noexcept
@@ -143,19 +143,19 @@ namespace SFSE::WinAPI
 	}
 
 	std::uint32_t GetPrivateProfileString(const char* a_appName, const char* a_keyName, const char* a_default, char* a_outString,
-	                                      std::uint32_t a_size, const char* a_fileName) noexcept
+		std::uint32_t a_size, const char* a_fileName) noexcept
 	{
 		return static_cast<std::uint32_t>(::GetPrivateProfileStringA(static_cast<::LPCSTR>(a_appName), static_cast<::LPCSTR>(a_keyName),
-		                                                             static_cast<::LPCSTR>(a_default), static_cast<::LPSTR>(a_outString),
-		                                                             static_cast<::DWORD>(a_size), static_cast<::LPCSTR>(a_fileName)));
+			static_cast<::LPCSTR>(a_default), static_cast<::LPSTR>(a_outString),
+			static_cast<::DWORD>(a_size), static_cast<::LPCSTR>(a_fileName)));
 	}
 
 	std::uint32_t GetPrivateProfileString(const wchar_t* a_appName, const wchar_t* a_keyName, const wchar_t* a_default, wchar_t* a_outString,
-	                                      std::uint32_t a_size, const wchar_t* a_fileName) noexcept
+		std::uint32_t a_size, const wchar_t* a_fileName) noexcept
 	{
 		return static_cast<std::uint32_t>(::GetPrivateProfileStringW(static_cast<::LPCWSTR>(a_appName), static_cast<::LPCWSTR>(a_keyName),
-		                                                             static_cast<::LPCWSTR>(a_default), static_cast<::LPWSTR>(a_outString),
-		                                                             static_cast<::DWORD>(a_size), static_cast<::LPCWSTR>(a_fileName)));
+			static_cast<::LPCWSTR>(a_default), static_cast<::LPWSTR>(a_outString),
+			static_cast<::DWORD>(a_size), static_cast<::LPCWSTR>(a_fileName)));
 	}
 
 	void* GetProcAddress(void* a_module, const char* a_procName) noexcept
@@ -167,10 +167,9 @@ namespace SFSE::WinAPI
 	{
 		static std::string fileName(MAX_PATH + 1, ' ');
 		auto               res = GetModuleFileName(a_handle, fileName.data(), MAX_PATH + 1);
-		if (res == 0)
-		{
+		if (res == 0) {
 			fileName = "[ProcessHost]";
-			res      = 13;
+			res = 13;
 		}
 
 		return { fileName.c_str(), res };
@@ -200,14 +199,14 @@ namespace SFSE::WinAPI
 	std::int32_t MessageBox(void* a_wnd, const wchar_t* a_text, const wchar_t* a_caption, unsigned int a_type) noexcept
 	{
 		return static_cast<std::int32_t>(::MessageBoxW(static_cast<::HWND>(a_wnd), static_cast<::LPCWSTR>(a_text), static_cast<::LPCWSTR>(a_caption),
-		                                               static_cast<::UINT>(a_type)));
+			static_cast<::UINT>(a_type)));
 	}
 
 	int MultiByteToWideChar(unsigned int a_codePage, std::uint32_t a_flags, const char* a_multiByteStr, int a_multiByte, wchar_t* a_wideCharStr,
-	                        int a_wideChar)
+		int a_wideChar)
 	{
 		return ::MultiByteToWideChar(static_cast<::UINT>(a_codePage), static_cast<::DWORD>(a_flags), static_cast<::LPCCH>(a_multiByteStr),
-		                             a_multiByte, static_cast<::LPWSTR>(a_wideCharStr), a_wideChar);
+			a_multiByte, static_cast<::LPWSTR>(a_wideCharStr), a_wideChar);
 	}
 
 	void OutputDebugString(const char* a_outputString) noexcept
@@ -226,7 +225,7 @@ namespace SFSE::WinAPI
 	}
 
 	long RegGetValueW(HKEY hkey, const wchar_t* subKey, const wchar_t* value, unsigned long flags, unsigned long* type, void* data,
-	                  unsigned long* length)
+		unsigned long* length)
 	{
 		return ::RegGetValueW(reinterpret_cast<::HKEY>(hkey), subKey, value, flags, type, data, length);
 	}
@@ -264,27 +263,27 @@ namespace SFSE::WinAPI
 	bool VerQueryValue(const void* a_block, const char* a_subBlock, void** a_buffer, unsigned int* a_len) noexcept
 	{
 		return static_cast<bool>(::VerQueryValueA(static_cast<::LPCVOID>(a_block), static_cast<::LPCSTR>(a_subBlock),
-		                                          static_cast<::LPVOID*>(a_buffer), static_cast<::PUINT>(a_len)));
+			static_cast<::LPVOID*>(a_buffer), static_cast<::PUINT>(a_len)));
 	}
 
 	bool VerQueryValue(const void* a_block, const wchar_t* a_subBlock, void** a_buffer, unsigned int* a_len) noexcept
 	{
 		return static_cast<bool>(::VerQueryValueW(static_cast<::LPCVOID>(a_block), static_cast<::LPCWSTR>(a_subBlock),
-		                                          static_cast<::LPVOID*>(a_buffer), static_cast<::PUINT>(a_len)));
+			static_cast<::LPVOID*>(a_buffer), static_cast<::PUINT>(a_len)));
 	}
 
 	bool VirtualProtect(void* a_address, std::size_t a_size, std::uint32_t a_newProtect, std::uint32_t* a_oldProtect) noexcept
 	{
 		return static_cast<bool>(::VirtualProtect(static_cast<::LPVOID>(a_address), static_cast<::SIZE_T>(a_size), static_cast<::DWORD>(a_newProtect),
-		                                          reinterpret_cast<::PDWORD>(a_oldProtect)));
+			reinterpret_cast<::PDWORD>(a_oldProtect)));
 	}
 
 	int WideCharToMultiByte(unsigned int a_codePage, std::uint32_t a_flags, const wchar_t* a_wideCharStr, int a_wideChar, char* a_multiByteStr,
-	                        int a_multiByte, const char* a_defaultChar, int* a_usedDefaultChar)
+		int a_multiByte, const char* a_defaultChar, int* a_usedDefaultChar)
 	{
 		return ::WideCharToMultiByte(static_cast<::UINT>(a_codePage), static_cast<::DWORD>(a_flags), static_cast<::LPCWCH>(a_wideCharStr), a_wideChar,
-		                             static_cast<::LPSTR>(a_multiByteStr), a_multiByte, static_cast<::LPCCH>(a_defaultChar),
-		                             static_cast<::LPBOOL>(a_usedDefaultChar));
+			static_cast<::LPSTR>(a_multiByteStr), a_multiByte, static_cast<::LPCCH>(a_defaultChar),
+			static_cast<::LPBOOL>(a_usedDefaultChar));
 	}
 
-} // namespace SFSE::WinAPI
+}  // namespace SFSE::WinAPI

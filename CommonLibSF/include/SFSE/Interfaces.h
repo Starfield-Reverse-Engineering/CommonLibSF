@@ -160,7 +160,7 @@ namespace SFSE
 			// must be zero-terminated
 			assert(a_versions.size() < std::size(compatibleVersions) - 1);
 			std::ranges::transform(a_versions, std::begin(compatibleVersions),
-			                       [](const REL::Version& a_version) noexcept { return a_version.pack(); });
+				[](const REL::Version& a_version) noexcept { return a_version.pack(); });
 		}
 
 		constexpr void MinimumRequiredXSEVersion(REL::Version a_version) noexcept
@@ -169,15 +169,15 @@ namespace SFSE
 		}
 
 		const std::uint32_t dataVersion{ kVersion };
-		std::uint32_t       pluginVersion   = 0;
+		std::uint32_t       pluginVersion = 0;
 		char                pluginName[256] = {};
-		char                author[256]     = {};
+		char                author[256] = {};
 		std::uint32_t       addressIndependence;
 		std::uint32_t       structureCompatibility;
 		std::uint32_t       compatibleVersions[16] = {};
-		std::uint32_t       xseMinimum             = 0;
-		const std::uint32_t reservedNonBreaking    = 0;
-		const std::uint32_t reservedBreaking       = 0;
+		std::uint32_t       xseMinimum = 0;
+		const std::uint32_t reservedNonBreaking = 0;
+		const std::uint32_t reservedBreaking = 0;
 
 	private:
 		static constexpr void SetCharBuffer(std::string_view a_src, std::span<char> a_dst) noexcept
@@ -199,6 +199,6 @@ namespace SFSE
 	static_assert(offsetof(PluginVersionData, reservedNonBreaking) == 0x254);
 	static_assert(offsetof(PluginVersionData, reservedBreaking) == 0x258);
 	static_assert(sizeof(PluginVersionData) == 0x25C);
-} // namespace SFSE
+}  // namespace SFSE
 
 #define SFSEPluginLoad(...) extern "C" [[maybe_unused]] __declspec(dllexport) bool SFSEPlugin_Load(__VA_ARGS__)

@@ -10,11 +10,11 @@ namespace SFSE
 {
 	REL::Version QueryInterface::RuntimeVersion() const
 	{
-		const auto packed   = GetProxy()->runtimeVersion;
-		const auto major    = static_cast<std::uint16_t>((packed & 0xFF000000) >> 24);
-		const auto minor    = static_cast<std::uint16_t>((packed & 0x00FF0000) >> 16);
+		const auto packed = GetProxy()->runtimeVersion;
+		const auto major = static_cast<std::uint16_t>((packed & 0xFF000000) >> 24);
+		const auto minor = static_cast<std::uint16_t>((packed & 0x00FF0000) >> 16);
 		const auto revision = static_cast<std::uint16_t>((packed & 0x0000FFF0) >> 4);
-		const auto build    = static_cast<std::uint16_t>((packed & 0x0000000F) >> 0);
+		const auto build = static_cast<std::uint16_t>((packed & 0x0000000F) >> 0);
 		return { major, minor, revision, build };
 	}
 
@@ -52,8 +52,7 @@ namespace SFSE
 	bool MessagingInterface::Dispatch(std::uint32_t a_messageType, void* a_data, std::uint32_t a_dataLen, const char* a_receiver) const
 	{
 		auto result = GetProxy()->Dispatch(GetPluginHandle(), a_messageType, a_data, a_dataLen, a_receiver);
-		if (!result)
-		{
+		if (!result) {
 			log::error("Failed to dispatch message to {}", (a_receiver ? a_receiver : "all listeners"));
 		}
 		return result;
@@ -67,8 +66,7 @@ namespace SFSE
 	bool MessagingInterface::RegisterListener(const char* a_sender, EventCallback a_callback) const
 	{
 		auto result = GetProxy()->RegisterListener(GetPluginHandle(), a_sender, std::bit_cast<void*>(a_callback));
-		if (!result)
-		{
+		if (!result) {
 			log::error("Failed to register messaging listener for {}", a_sender);
 		}
 		return result;
@@ -100,4 +98,4 @@ namespace SFSE
 		assert(this);
 		return reinterpret_cast<const detail::SFSETrampolineInterface*>(this);
 	}
-} // namespace SFSE
+}  // namespace SFSE

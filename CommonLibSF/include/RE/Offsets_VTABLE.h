@@ -294,10 +294,10 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  AimOpticalSightStates__Ready{ REL::Offset(0x04462268) };
 		inline constexpr std::array<REL::Offset, 2>  AlarmPackage{ REL::Offset(0x044E0640), REL::Offset(0x044E0658) };
 		inline constexpr std::array<REL::Offset, 13> AlchemyItem{ REL::Offset(0x043600E8), REL::Offset(0x04360148), REL::Offset(0x043601A8),
-			                                                      REL::Offset(0x04360208), REL::Offset(0x04360268), REL::Offset(0x043602C8),
-			                                                      REL::Offset(0x04360340), REL::Offset(0x04360360), REL::Offset(0x043603D0),
-			                                                      REL::Offset(0x04360430), REL::Offset(0x04360448), REL::Offset(0x04360940),
-			                                                      REL::Offset(0x043609A8) };
+			REL::Offset(0x04360208), REL::Offset(0x04360268), REL::Offset(0x043602C8),
+			REL::Offset(0x04360340), REL::Offset(0x04360360), REL::Offset(0x043603D0),
+			REL::Offset(0x04360430), REL::Offset(0x04360448), REL::Offset(0x04360940),
+			REL::Offset(0x043609A8) };
 		inline constexpr std::array<REL::Offset, 1>  AliasLegendaryRankCalculator{ REL::Offset(0x0440A050) };
 		inline constexpr std::array<REL::Offset, 1>  AllowRotationHandler{ REL::Offset(0x044E3218) };
 		inline constexpr std::array<REL::Offset, 1>  AllowRotationHandlerReference{ REL::Offset(0x044E6028) };
@@ -318,7 +318,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  AnimationImpactSelector{ REL::Offset(0x045696B0) };
 		inline constexpr std::array<REL::Offset, 1>  AnimationImpactSelectorInstance{ REL::Offset(0x04569718) };
 		inline constexpr std::array<REL::Offset, 4>  AnimationManager{ REL::Offset(0x045610B8), REL::Offset(0x04561228), REL::Offset(0x04561238),
-                                                                      REL::Offset(0x04561248) };
+            REL::Offset(0x04561248) };
 		inline constexpr std::array<REL::Offset, 1>  AnimationNode{ REL::Offset(0x0456ACF0) };
 		inline constexpr std::array<REL::Offset, 1>  AnimationNodeInstance{ REL::Offset(0x0456AC80) };
 		inline constexpr std::array<REL::Offset, 1>  AnimationObjectDrawHandler{ REL::Offset(0x044E3680) };
@@ -343,17 +343,17 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  AnticipateAttackHandler{ REL::Offset(0x044E31E8) };
 		inline constexpr std::array<REL::Offset, 1>  ArchiveFile{ REL::Offset(0x045B27A0) };
 		inline constexpr std::array<REL::Offset, 14> ArmorCraftingMenu{ REL::Offset(0x044A4D18), REL::Offset(0x044A4DF8), REL::Offset(0x044A4E10),
-			                                                            REL::Offset(0x044A4E68), REL::Offset(0x044A4E80), REL::Offset(0x044A4EE8),
-			                                                            REL::Offset(0x044A4F00), REL::Offset(0x044A4F18), REL::Offset(0x044A4F30),
-			                                                            REL::Offset(0x044A4F48), REL::Offset(0x044A4F60), REL::Offset(0x044A4F78),
-			                                                            REL::Offset(0x044A4F90), REL::Offset(0x044A4FA8) };
+			REL::Offset(0x044A4E68), REL::Offset(0x044A4E80), REL::Offset(0x044A4EE8),
+			REL::Offset(0x044A4F00), REL::Offset(0x044A4F18), REL::Offset(0x044A4F30),
+			REL::Offset(0x044A4F48), REL::Offset(0x044A4F60), REL::Offset(0x044A4F78),
+			REL::Offset(0x044A4F90), REL::Offset(0x044A4FA8) };
 		inline constexpr std::array<REL::Offset, 2>  ArrayChangeTrackerUIValue_InternalNestedArrayWithChangesUIValue_Key__{ REL::Offset(0x044AB388),
-                                                                                                                           REL::Offset(0x044AB3D0) };
+            REL::Offset(0x044AB3D0) };
 		inline constexpr std::array<REL::Offset, 2>  ArrayChangeTrackerUIValue_InternalNestedArrayWithChangesUIValue_Patch__{
             REL::Offset(0x044ACDD0), REL::Offset(0x044ACE38)
 		};
 		inline constexpr std::array<REL::Offset, 2> ArrayChangeTrackerUIValue_InternalNestedArrayWithChangesUIValue_Ring__{ REL::Offset(0x044AB438),
-			                                                                                                                REL::Offset(0x044AB480) };
+			REL::Offset(0x044AB480) };
 		inline constexpr std::array<REL::Offset, 2> ArrayChangeTrackerUIValue_InternalNestedArrayWithChangesUIValue_TargetCombatValues__{
 			REL::Offset(0x04496EA8), REL::Offset(0x04496F10)
 		};
@@ -371,20 +371,20 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_BuffInfo_0_{ REL::Offset(0x0448F4E8), REL::Offset(0x0448F530) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_BuildItemData_0_{ REL::Offset(0x0449C9D8), REL::Offset(0x0449CA20) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_BuilderRequirementsData__InputRequirement_0_{ REL::Offset(0x0449CA88),
-			                                                                                                         REL::Offset(0x0449CAD0) };
+			REL::Offset(0x0449CAD0) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_CargoLinkData__CargoLinkResource_0_{ REL::Offset(0x0449D6E0),
-			                                                                                                REL::Offset(0x0449D728) };
+			REL::Offset(0x0449D728) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_ComponentFlashEventInfo_0_{ REL::Offset(0x04496FC0), REL::Offset(0x044970B8) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_ControlBindingsData__InputSetting_0_{ REL::Offset(0x04493818),
-			                                                                                                 REL::Offset(0x04493860) };
+			REL::Offset(0x04493860) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_ControlConflictsData__ConflictingControl_0_{ REL::Offset(0x04493978),
-			                                                                                                        REL::Offset(0x044951F8) };
+			REL::Offset(0x044951F8) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_ControlConflictsData__ControlConflicts_0_{ REL::Offset(0x044936B8),
-			                                                                                                      REL::Offset(0x04493700) };
+			REL::Offset(0x04493700) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_ControlMapDataModel__MappedEvent_0_{ REL::Offset(0x0458F2E0),
-			                                                                                                REL::Offset(0x0458F328) };
+			REL::Offset(0x0458F328) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_CraftingRecipesDataModel__RecipeData_0_{ REL::Offset(0x04487870),
-			                                                                                                    REL::Offset(0x044878D8) };
+			REL::Offset(0x044878D8) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_CraftingRequirementsDataModel__RequirementsData__AdditionalCondition_0_{
 			REL::Offset(0x0447E6B8), REL::Offset(0x0447E700)
 		};
@@ -392,25 +392,25 @@ namespace RE
 			REL::Offset(0x0447E650), REL::Offset(0x0447E768)
 		};
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_CreditsDataModel__CreditsSection_0_{ REL::Offset(0x04477E18),
-			                                                                                                REL::Offset(0x04477E60) };
+			REL::Offset(0x04477E60) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_CrewInfo_0_{ REL::Offset(0x04495600), REL::Offset(0x04495668) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_CrewSkillInfo_0_{ REL::Offset(0x0447F308), REL::Offset(0x0447F350) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_DialogueUIDataModel__DialogueEntryData_0_{ REL::Offset(0x0449E2B0),
-			                                                                                                      REL::Offset(0x0449E410) };
+			REL::Offset(0x0449E410) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_DialogueUIDataModel__PersuasionEntryData_0_{ REL::Offset(0x0449E330),
-			                                                                                                        REL::Offset(0x0449E378) };
+			REL::Offset(0x0449E378) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_DocData_0_{ REL::Offset(0x04489788), REL::Offset(0x04489838) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_EffectData_0_{ REL::Offset(0x04486AC0), REL::Offset(0x04486BD8) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_EffectGroup_0_{ REL::Offset(0x0448F2E8), REL::Offset(0x0448F330) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_ExplosiveIndicator_0_{ REL::Offset(0x044815D8), REL::Offset(0x04481688) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_FavoritesManager__FavoritesEntryData_0_{ REL::Offset(0x0451E220),
-			                                                                                                    REL::Offset(0x0451E268) };
+			REL::Offset(0x0451E268) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_FireForgetModel__EventNameShuttle_0_{ REL::Offset(0x044818A0),
-			                                                                                                 REL::Offset(0x04481908) };
+			REL::Offset(0x04481908) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_HUDCommandIconData_0_{ REL::Offset(0x044A1168), REL::Offset(0x044A11D0) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_HUDDirectionalHitData_0_{ REL::Offset(0x044A1640), REL::Offset(0x044A16A8) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_HUDEnemyData__EnemyDatum_0_{ REL::Offset(0x044851D0),
-			                                                                                        REL::Offset(0x04485218) };
+			REL::Offset(0x04485218) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_HUDHitKillDatum_0_{ REL::Offset(0x04484B70), REL::Offset(0x04484BB8) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_HUDLocationData_0_{ REL::Offset(0x044853B8), REL::Offset(0x04485400) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_HailingData_0_{ REL::Offset(0x04496DF8), REL::Offset(0x04496E60) };
@@ -419,40 +419,40 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_IconData_DS_0_{ REL::Offset(0x044BBF58), REL::Offset(0x044BBFA0) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_ImageFixtureUIData_0_{ REL::Offset(0x04479638), REL::Offset(0x04479680) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_InventoryDataModelNS__ElementalStatInfo_0_{ REL::Offset(0x04478A50),
-			                                                                                                       REL::Offset(0x04478B00) };
+			REL::Offset(0x04478B00) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_InventoryDataModelNS__InventoryCategoryData_0_{ REL::Offset(0x04482960),
-			                                                                                                           REL::Offset(0x044829A8) };
+			REL::Offset(0x044829A8) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_InventoryDataModelNS__InventoryItem_0_{ REL::Offset(0x044828B0),
-			                                                                                                   REL::Offset(0x044828F8) };
+			REL::Offset(0x044828F8) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_InventoryDataModelNS__ModInfo_0_{ REL::Offset(0x044789E0),
-			                                                                                             REL::Offset(0x04478A98) };
+			REL::Offset(0x04478A98) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_ItemModsDataModel__ItemModData_0_{ REL::Offset(0x044882B0),
-			                                                                                              REL::Offset(0x04488340) };
+			REL::Offset(0x04488340) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_ItemModsDataModel__ItemModSlotData_0_{ REL::Offset(0x044882F8),
-			                                                                                                  REL::Offset(0x044883A8) };
+			REL::Offset(0x044883A8) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_Key_0_{ REL::Offset(0x044AB2D8), REL::Offset(0x044AB320) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_LevelUpPerkData_0_{ REL::Offset(0x044A1B78), REL::Offset(0x044A1BC0) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_LoadSavePanelData__CharacterData_0_{ REL::Offset(0x04488EB0),
-			                                                                                                REL::Offset(0x04488F18) };
+			REL::Offset(0x04488F18) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_LoadSavePanelData__GameData_0_{ REL::Offset(0x04488E00),
-			                                                                                           REL::Offset(0x04488E68) };
+			REL::Offset(0x04488E68) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_MainMenuListData__ActionData_0_{ REL::Offset(0x044897F0),
-			                                                                                            REL::Offset(0x04489880) };
+			REL::Offset(0x04489880) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_MessageButton_0_{ REL::Offset(0x0451F720), REL::Offset(0x0451F788) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_MiscInfo_0_{ REL::Offset(0x0448F398), REL::Offset(0x0448F3E0) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_MissionDetailsEntry_DS_0_{ REL::Offset(0x044A7DD8), REL::Offset(0x044A7E20) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_MissionListEntry_DS_0_{ REL::Offset(0x044A7D28), REL::Offset(0x044A7D70) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_MonocleUIDataModel__ResourceData_0_{ REL::Offset(0x0449EF28),
-			                                                                                                REL::Offset(0x0449EF70) };
+			REL::Offset(0x0449EF70) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_MonocleUIDataModel__ScannableMapMarkerData_0_{ REL::Offset(0x0449F008),
-			                                                                                                          REL::Offset(0x0449F050) };
+			REL::Offset(0x0449F050) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_MonocleUIDataModel__SocialSpellData_0_{ REL::Offset(0x0449F0E8),
-			                                                                                                   REL::Offset(0x0449F130) };
+			REL::Offset(0x0449F130) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_NewCompassMarker_0_{ REL::Offset(0x04484550), REL::Offset(0x04484598) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_ObjectiveData_0_{ REL::Offset(0x044A3328), REL::Offset(0x044A3390) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_Patch_0_{ REL::Offset(0x044ACD20), REL::Offset(0x044ACD88) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_PauseMenuListData__ActionData_0_{ REL::Offset(0x0448B880),
-			                                                                                             REL::Offset(0x0448B8C8) };
+			REL::Offset(0x0448B8C8) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_PhotoModeDataModel__PhotoModeSettingsData__CategoryData_0_{
 			REL::Offset(0x0448D0D0), REL::Offset(0x0448D1A0)
 		};
@@ -463,72 +463,72 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_PlayerInventoryItem_0_{ REL::Offset(0x0448DF18), REL::Offset(0x0448DF60) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_Powers_0_{ REL::Offset(0x04479C50), REL::Offset(0x04479C98) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_QuestDataModel__Objective_0_{ REL::Offset(0x0448FF88),
-			                                                                                         REL::Offset(0x0448FFF0) };
+			REL::Offset(0x0448FFF0) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_QuestDataModel__Quest_0_{ REL::Offset(0x0448F6E0), REL::Offset(0x0448F748) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_QuestUpdate_0_{ REL::Offset(0x044A3110), REL::Offset(0x044A3158) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_RankData_0_{ REL::Offset(0x044ADC60), REL::Offset(0x044ADD10) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_Requirements_0_{ REL::Offset(0x044ADC18), REL::Offset(0x044ADCA8) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_ResearchCategoryPreview_0_{ REL::Offset(0x04491630), REL::Offset(0x044916E0) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_ResearchPopupInfo__ItemInfo_0_{ REL::Offset(0x04491518),
-			                                                                                           REL::Offset(0x044915E8) };
+			REL::Offset(0x044915E8) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_ResearchProjectDetails__LinkedProject_0_{ REL::Offset(0x044913B8),
-			                                                                                                     REL::Offset(0x044914D0) };
+			REL::Offset(0x044914D0) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_ResearchProjectDetails__MaterialRequirment_0_{ REL::Offset(0x04491420),
-			                                                                                                          REL::Offset(0x04491580) };
+			REL::Offset(0x04491580) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_ResearchProjectPreview_0_{ REL::Offset(0x04491468), REL::Offset(0x04491698) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_Ring_0_{ REL::Offset(0x044AB228), REL::Offset(0x044AB270) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_RolloverActivationButtonData_0_{ REL::Offset(0x044832E0),
-			                                                                                            REL::Offset(0x04483328) };
+			REL::Offset(0x04483328) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_SettingsCategoriesList__SettingsCategoryHeader_0_{ REL::Offset(0x04493768),
-			                                                                                                              REL::Offset(0x044937B0) };
+			REL::Offset(0x044937B0) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_ShipComponent_0_{ REL::Offset(0x04480180), REL::Offset(0x044801E8) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_ShipHangar__ShipMenuTab_DS_0_{ REL::Offset(0x0447AA90),
-			                                                                                          REL::Offset(0x0447AAD8) };
+			REL::Offset(0x0447AAD8) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_Skill_0_{ REL::Offset(0x04480030), REL::Offset(0x04480078) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_SpaceshipEditor__ColorTabData_DS_0_{ REL::Offset(0x0435B2D0),
-			                                                                                                REL::Offset(0x0435B318) };
+			REL::Offset(0x0435B318) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_SpaceshipEditor__FlightCheckEntry_DS_0_{ REL::Offset(0x04359A28),
-			                                                                                                    REL::Offset(0x04359A90) };
+			REL::Offset(0x04359A90) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_SpaceshipEditor__FlightCheckTab_DS_0_{ REL::Offset(0x04359978),
-			                                                                                                  REL::Offset(0x043599E0) };
+			REL::Offset(0x043599E0) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_SpaceshipEditor__HelpEntry_DS_0_{ REL::Offset(0x0435E558),
-			                                                                                             REL::Offset(0x0435EB40) };
+			REL::Offset(0x0435EB40) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_SpaceshipEditor__ModuleEntry_DS_0_{ REL::Offset(0x0434C1C8),
-			                                                                                               REL::Offset(0x0434C230) };
+			REL::Offset(0x0434C230) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_SpaceshipEditor__StatEntry_DS_0_{ REL::Offset(0x0435E4F0),
-			                                                                                             REL::Offset(0x0435E608) };
+			REL::Offset(0x0435E608) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_SpaceshipEditor__SystemUpgradeEntry_DS_0_{ REL::Offset(0x0434B750),
-			                                                                                                      REL::Offset(0x0434B7B8) };
+			REL::Offset(0x0434B7B8) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_SpaceshipEditor__WeaponAssignEntry_DS_0_{ REL::Offset(0x0435A5A8),
-			                                                                                                     REL::Offset(0x0435A610) };
+			REL::Offset(0x0435A610) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_SpaceshipEditor__WeaponAssignGroup_DS_0_{ REL::Offset(0x04359AD8),
-			                                                                                                     REL::Offset(0x04359B40) };
+			REL::Offset(0x04359B40) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_StarMap__BodyInfoToUI_0_{ REL::Offset(0x0447FF10), REL::Offset(0x0447FF68) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_StarMap__BodyPOIDef_0_{ REL::Offset(0x044B5098), REL::Offset(0x044B50E0) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_StarMap__BodyPOIMarkersDef_0_{ REL::Offset(0x044B51F8),
-			                                                                                          REL::Offset(0x044B5240) };
+			REL::Offset(0x044B5240) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_StarMap__BodyPOIPos_0_{ REL::Offset(0x044B5148), REL::Offset(0x044B5190) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_StarMap__GalaxyMarkerData_0_{ REL::Offset(0x044B6C08),
-			                                                                                         REL::Offset(0x044B6C70) };
+			REL::Offset(0x044B6C70) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_StarMap__GalaxyMarkerDef_0_{ REL::Offset(0x044B6B58),
-			                                                                                        REL::Offset(0x044B6BC0) };
+			REL::Offset(0x044B6BC0) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_StarMap__MenuMarkerCoords_0_{ REL::Offset(0x044B8338),
-			                                                                                         REL::Offset(0x044B83A0) };
+			REL::Offset(0x044B83A0) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_StarMap__Outpost_DS_0_{ REL::Offset(0x044BB4A8), REL::Offset(0x044BB4F0) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_StarMap__PlanetInfoToUI_0_{ REL::Offset(0x04480118), REL::Offset(0x04480230) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_StarMap__ResourceInfoFlashObject_0_{ REL::Offset(0x04497120),
-			                                                                                                REL::Offset(0x04497188) };
+			REL::Offset(0x04497188) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_StarMap__StarMapMenuMarkerData_0_{ REL::Offset(0x044B8288),
-			                                                                                              REL::Offset(0x044B82F0) };
+			REL::Offset(0x044B82F0) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_StarMap__StarMapOffscreenQuestMarkerData_0_{ REL::Offset(0x044B8240),
-			                                                                                                        REL::Offset(0x044B83E8) };
+			REL::Offset(0x044B83E8) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_StarMap__SurfaceMarkerStaticData_0_{ REL::Offset(0x044BA4C0),
-			                                                                                                REL::Offset(0x044BA508) };
+			REL::Offset(0x044BA508) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_StatCategory_0_{ REL::Offset(0x0448F188), REL::Offset(0x0448F1D0) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_SubSettingsList__GeneralSetting_0_{ REL::Offset(0x044938C8),
-			                                                                                               REL::Offset(0x04493910) };
+			REL::Offset(0x04493910) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_TESNPCData__ChargenData__FacialBoneRegionData_0_{ REL::Offset(0x043A9530),
-			                                                                                                             REL::Offset(0x043A95C0) };
+			REL::Offset(0x043A95C0) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_TESNPCData__ChargenMetadata__FacialBoneRegionMetadata_0_{
 			REL::Offset(0x043A9788), REL::Offset(0x043A9880)
 		};
@@ -542,13 +542,13 @@ namespace RE
 			REL::Offset(0x043A9838), REL::Offset(0x043A9930)
 		};
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_TESNPCData__CodeBuiltSliderMetadata_0_{ REL::Offset(0x043A92B0),
-			                                                                                                   REL::Offset(0x043A9318) };
+			REL::Offset(0x043A9318) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_TESNPCData__CodeBuiltStepperData_0_{ REL::Offset(0x043A98E8),
-			                                                                                                REL::Offset(0x043A99E0) };
+			REL::Offset(0x043A99E0) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_TESNPCData__HeadPartMetadata_0_{ REL::Offset(0x043A96D8),
-			                                                                                            REL::Offset(0x043A97D0) };
+			REL::Offset(0x043A97D0) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_TESNPCData__MorphSliderData_0_{ REL::Offset(0x043A9578),
-			                                                                                           REL::Offset(0x043A9670) };
+			REL::Offset(0x043A9670) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_TESNPCData__PostBlendFaceCustomizationData__LayerData_0_{
 			REL::Offset(0x043A6F48), REL::Offset(0x043A6FB0)
 		};
@@ -557,85 +557,85 @@ namespace RE
 		};
 		inline constexpr std::array<REL::Offset, 2>
 			ArrayNestedUIValue_TESNPCData__PostBlendFaceCustomizationMetaData__LayerMetaData__EntryMetaData_0_{ REL::Offset(0x043A90F0),
-			                                                                                                    REL::Offset(0x043A9158) };
+				REL::Offset(0x043A9158) };
 		inline constexpr std::array<REL::Offset, 2>
-			ArrayNestedUIValue_TESNPCData__PostBlendFaceCustomizationMetaData__LayerMetaData__ModulationEntryMetaData_0_{ REL::Offset(0x043A9040),
-			                                                                                                              REL::Offset(0x043A90A8) };
+													ArrayNestedUIValue_TESNPCData__PostBlendFaceCustomizationMetaData__LayerMetaData__ModulationEntryMetaData_0_{ REL::Offset(0x043A9040),
+                REL::Offset(0x043A90A8) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_TESNPCData__PostBlendSliderMetadata_0_{ REL::Offset(0x043A9998),
-			                                                                                                   REL::Offset(0x043A9A48) };
+			REL::Offset(0x043A9A48) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_TargetCombatValues_0_{ REL::Offset(0x04497238), REL::Offset(0x04497378) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_TargetComponentData_0_{ REL::Offset(0x04498CE8), REL::Offset(0x04498D50) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_TargetHighFreq_0_{ REL::Offset(0x04497008), REL::Offset(0x04497070) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_TargetLowFreq_0_{ REL::Offset(0x044971D0), REL::Offset(0x04497280) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_TestMenu__TestData__ArcanaData_0_{ REL::Offset(0x044BE638),
-			                                                                                              REL::Offset(0x044BE680) };
+			REL::Offset(0x044BE680) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_TestMenu__TestResourcesData__ResourceData_0_{ REL::Offset(0x044BE708),
-			                                                                                                         REL::Offset(0x044BE750) };
+			REL::Offset(0x044BE750) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_TraitDatum_0_{ REL::Offset(0x044AF450), REL::Offset(0x044AF4B8) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_TraitInfo_0_{ REL::Offset(0x0448F238), REL::Offset(0x0448F280) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_UICraftingUtils__SkillRequirement_0_{ REL::Offset(0x0435E4A8),
-			                                                                                                 REL::Offset(0x0435E5A0) };
+			REL::Offset(0x0435E5A0) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_WeaponGroupAssignment__ShipWeapon_DS_0_{ REL::Offset(0x04357518),
-			                                                                                                    REL::Offset(0x04357580) };
+			REL::Offset(0x04357580) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_WorkshopAreaResourcesData__AreaResource_0_{ REL::Offset(0x0449B058),
-			                                                                                                       REL::Offset(0x0449B0C0) };
+			REL::Offset(0x0449B0C0) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_WorkshopCategoryBarData__CategoryBarData_0_{ REL::Offset(0x0449B1B8),
-			                                                                                                        REL::Offset(0x0449B220) };
+			REL::Offset(0x0449B220) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_WorkshopCategoryInfoData__PreviewIconData_0_{ REL::Offset(0x0449B108),
-			                                                                                                         REL::Offset(0x0449B170) };
+			REL::Offset(0x0449B170) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_WorkshopCategoryInfoData__PreviewIconData__VariantData_0_{
 			REL::Offset(0x0449C428), REL::Offset(0x0449C490)
 		};
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_WorkshopInterfaceShared__ItemRequirement_0_{ REL::Offset(0x0449AEF8),
-			                                                                                                        REL::Offset(0x0449AF60) };
+			REL::Offset(0x0449AF60) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_WorkshopInterfaceShared__ResourceProduced_0_{ REL::Offset(0x0449AFA8),
-			                                                                                                         REL::Offset(0x0449B010) };
+			REL::Offset(0x0449B010) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_WorkshopTargetMenu__OutpostData_0_{ REL::Offset(0x044C1458),
-			                                                                                               REL::Offset(0x044C14C0) };
+			REL::Offset(0x044C14C0) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_WorkshopTargetMenu__ResourceData_0_{ REL::Offset(0x044C0FB0),
-			                                                                                                REL::Offset(0x044C1018) };
+			REL::Offset(0x044C1018) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_WorkshopTargetMenu__TargetData_0_{ REL::Offset(0x044C1060),
-			                                                                                              REL::Offset(0x044C1120) };
+			REL::Offset(0x044C1120) };
 		inline constexpr std::array<REL::Offset, 2> ArrayNestedUIValue_XPData_0_{ REL::Offset(0x044A1918), REL::Offset(0x044A1960) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_AlertData__0_{ REL::Offset(0x04487110), REL::Offset(0x04487158) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_ArrayAction__0_{ REL::Offset(0x04496BE8), REL::Offset(0x04496C50) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_AssignmentCategory__0_{ REL::Offset(0x04495718),
-			                                                                                           REL::Offset(0x04495780) };
+			REL::Offset(0x04495780) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_AssignmentInfo__0_{ REL::Offset(0x04495A70), REL::Offset(0x04495AD8) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_BackgroundDatum__0_{ REL::Offset(0x044AF800),
-			                                                                                        REL::Offset(0x044AF908) };
+			REL::Offset(0x044AF908) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_BuffInfo__0_{ REL::Offset(0x0448EF20), REL::Offset(0x0448F0C8) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_BuildItemData__0_{ REL::Offset(0x0449C820), REL::Offset(0x0449C868) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_BuilderRequirementsData__InputRequirement__0_{
 			REL::Offset(0x0449C770), REL::Offset(0x0449CDC8)
 		};
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_CargoLinkData__CargoLinkResource__0_{ REL::Offset(0x0449D5E8),
-			                                                                                                         REL::Offset(0x0449D630) };
+			REL::Offset(0x0449D630) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_ComponentFlashEventInfo__0_{ REL::Offset(0x044977F0),
-			                                                                                                REL::Offset(0x044979B8) };
+			REL::Offset(0x044979B8) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_ControlBindingsData__InputSetting__0_{ REL::Offset(0x04494AB8),
-			                                                                                                          REL::Offset(0x04494B00) };
+			REL::Offset(0x04494B00) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_ControlConflictsData__ConflictingControl__0_{
 			REL::Offset(0x04493FF8), REL::Offset(0x04494120)
 		};
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_ControlConflictsData__ControlConflicts__0_{ REL::Offset(0x04493DA8),
-			                                                                                                               REL::Offset(0x044941D0) };
+			REL::Offset(0x044941D0) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_ControlMapDataModel__MappedEvent__0_{ REL::Offset(0x0458F5C8),
-			                                                                                                         REL::Offset(0x0458F610) };
+			REL::Offset(0x0458F610) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_CraftingRecipesDataModel__RecipeData__0_{ REL::Offset(0x04487708),
-			                                                                                                             REL::Offset(0x04487770) };
+			REL::Offset(0x04487770) };
 		inline constexpr std::array<REL::Offset, 2>
 			ArrayUIValue_NestedUIValue_CraftingRequirementsDataModel__RequirementsData__AdditionalCondition__0_{ REL::Offset(0x0447E920),
-			                                                                                                     REL::Offset(0x0447EC70) };
+				REL::Offset(0x0447EC70) };
 		inline constexpr std::array<REL::Offset, 2>
-			ArrayUIValue_NestedUIValue_CraftingRequirementsDataModel__RequirementsData__ComponentRequirement__0_{ REL::Offset(0x0447E818),
-			                                                                                                      REL::Offset(0x0447E860) };
+													ArrayUIValue_NestedUIValue_CraftingRequirementsDataModel__RequirementsData__ComponentRequirement__0_{ REL::Offset(0x0447E818),
+                REL::Offset(0x0447E860) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_CreditsDataModel__CreditsSection__0_{ REL::Offset(0x04477BC0),
-			                                                                                                         REL::Offset(0x04477CC8) };
+			REL::Offset(0x04477CC8) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_CrewInfo__0_{ REL::Offset(0x04495C28), REL::Offset(0x04495C90) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_CrewSkillInfo__0_{ REL::Offset(0x0447F6A8), REL::Offset(0x0447F6F0) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_DialogueUIDataModel__DialogueEntryData__0_{ REL::Offset(0x0449EAB0),
-			                                                                                                               REL::Offset(0x0449EAF8) };
+			REL::Offset(0x0449EAF8) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_DialogueUIDataModel__PersuasionEntryData__0_{
 			REL::Offset(0x0449E760), REL::Offset(0x0449EA00)
 		};
@@ -643,69 +643,69 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_EffectData__0_{ REL::Offset(0x04486970), REL::Offset(0x044869B8) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_EffectGroup__0_{ REL::Offset(0x0448E8F8), REL::Offset(0x0448E940) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_ExplosiveIndicator__0_{ REL::Offset(0x04481528),
-			                                                                                           REL::Offset(0x04481590) };
+			REL::Offset(0x04481590) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_FavoritesManager__FavoritesEntryData__0_{ REL::Offset(0x0451DBC8),
-			                                                                                                             REL::Offset(0x0451DC10) };
+			REL::Offset(0x0451DC10) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_FireForgetModel__EventNameShuttle__0_{ REL::Offset(0x04481A20),
-			                                                                                                          REL::Offset(0x04481A88) };
+			REL::Offset(0x04481A88) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_HUDCommandIconData__0_{ REL::Offset(0x044A1070),
-			                                                                                           REL::Offset(0x044A10D8) };
+			REL::Offset(0x044A10D8) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_HUDDirectionalHitData__0_{ REL::Offset(0x044A13B0),
-			                                                                                              REL::Offset(0x044A1590) };
+			REL::Offset(0x044A1590) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_HUDEnemyData__EnemyDatum__0_{ REL::Offset(0x04485068),
-			                                                                                                 REL::Offset(0x044850B0) };
+			REL::Offset(0x044850B0) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_HUDHitKillDatum__0_{ REL::Offset(0x04484828),
-			                                                                                        REL::Offset(0x04484870) };
+			REL::Offset(0x04484870) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_HUDLocationData__0_{ REL::Offset(0x044854C0),
-			                                                                                        REL::Offset(0x04485760) };
+			REL::Offset(0x04485760) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_HailingData__0_{ REL::Offset(0x04498530), REL::Offset(0x04498878) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_HelpTopicData__0_{ REL::Offset(0x0447CC20), REL::Offset(0x0447CEC0) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_HudModeVisibilityInfo__0_{ REL::Offset(0x04485E18),
-			                                                                                              REL::Offset(0x04485E60) };
+			REL::Offset(0x04485E60) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_IconData_DS__0_{ REL::Offset(0x044BC248), REL::Offset(0x044BC290) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_ImageFixtureUIData__0_{ REL::Offset(0x04479A28),
-			                                                                                           REL::Offset(0x04479A70) };
+			REL::Offset(0x04479A70) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_InventoryDataModelNS__ElementalStatInfo__0_{ REL::Offset(0x044790E0),
-			                                                                                                                REL::Offset(0x04479288) };
+			REL::Offset(0x04479288) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_InventoryDataModelNS__InventoryCategoryData__0_{
 			REL::Offset(0x04483100), REL::Offset(0x04483148)
 		};
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_InventoryDataModelNS__InventoryItem__0_{ REL::Offset(0x04482A78),
-			                                                                                                            REL::Offset(0x04482CB0) };
+			REL::Offset(0x04482CB0) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_InventoryDataModelNS__ModInfo__0_{ REL::Offset(0x04478F08),
-			                                                                                                      REL::Offset(0x04479030) };
+			REL::Offset(0x04479030) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_ItemModsDataModel__ItemModData__0_{ REL::Offset(0x04487F30),
-			                                                                                                       REL::Offset(0x04488038) };
+			REL::Offset(0x04488038) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_ItemModsDataModel__ItemModSlotData__0_{ REL::Offset(0x04487C70),
-			                                                                                                           REL::Offset(0x04488150) };
+			REL::Offset(0x04488150) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_Key__0_{ REL::Offset(0x044ABA50), REL::Offset(0x044ABA98) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_LevelUpPerkData__0_{ REL::Offset(0x044A1EC8),
-			                                                                                        REL::Offset(0x044A1F30) };
+			REL::Offset(0x044A1F30) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_LoadSavePanelData__CharacterData__0_{ REL::Offset(0x04488B30),
-			                                                                                                         REL::Offset(0x04488C38) };
+			REL::Offset(0x04488C38) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_LoadSavePanelData__GameData__0_{ REL::Offset(0x04488A18),
-			                                                                                                    REL::Offset(0x04488D50) };
+			REL::Offset(0x04488D50) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_MainMenuListData__ActionData__0_{ REL::Offset(0x0448A2D0),
-			                                                                                                     REL::Offset(0x0448A338) };
+			REL::Offset(0x0448A338) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_MessageButton__0_{ REL::Offset(0x0451F7D0), REL::Offset(0x0451F838) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_MiscInfo__0_{ REL::Offset(0x0448E6C8), REL::Offset(0x0448E710) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_MissionDetailsEntry_DS__0_{ REL::Offset(0x044A81C0),
-			                                                                                               REL::Offset(0x044A8208) };
+			REL::Offset(0x044A8208) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_MissionListEntry_DS__0_{ REL::Offset(0x044A7FA0),
-			                                                                                            REL::Offset(0x044A7FE8) };
+			REL::Offset(0x044A7FE8) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_MonocleUIDataModel__ResourceData__0_{ REL::Offset(0x0449FA40),
-			                                                                                                         REL::Offset(0x0449FCC8) };
+			REL::Offset(0x0449FCC8) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_MonocleUIDataModel__ScannableMapMarkerData__0_{
 			REL::Offset(0x0449F5E8), REL::Offset(0x0449F888)
 		};
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_MonocleUIDataModel__SocialSpellData__0_{ REL::Offset(0x0449F938),
-			                                                                                                            REL::Offset(0x0449F980) };
+			REL::Offset(0x0449F980) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_NewCompassMarker__0_{ REL::Offset(0x044844A0),
-			                                                                                         REL::Offset(0x044844E8) };
+			REL::Offset(0x044844E8) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_ObjectiveData__0_{ REL::Offset(0x044A2EF0), REL::Offset(0x044A3018) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_Patch__0_{ REL::Offset(0x044AD4F0), REL::Offset(0x044AD558) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_PauseMenuListData__ActionData__0_{ REL::Offset(0x0448B710),
-			                                                                                                      REL::Offset(0x0448B818) };
+			REL::Offset(0x0448B818) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_PhotoModeDataModel__PhotoModeSettingsData__CategoryData__0_{
 			REL::Offset(0x0448C900), REL::Offset(0x0448CA28)
 		};
@@ -713,86 +713,86 @@ namespace RE
 			REL::Offset(0x0448C6B0), REL::Offset(0x0448CAD8)
 		};
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_PickpocketItemData__0_{ REL::Offset(0x044AA078),
-			                                                                                           REL::Offset(0x044AA0C0) };
+			REL::Offset(0x044AA0C0) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_PlayerInventoryItem__0_{ REL::Offset(0x0448E098),
-			                                                                                            REL::Offset(0x0448E1C0) };
+			REL::Offset(0x0448E1C0) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_Powers__0_{ REL::Offset(0x0447A0C0), REL::Offset(0x0447A108) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_QuestDataModel__Objective__0_{ REL::Offset(0x0448FDD8),
-			                                                                                                  REL::Offset(0x0448FF00) };
+			REL::Offset(0x0448FF00) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_QuestDataModel__Quest__0_{ REL::Offset(0x0448FAA8),
-			                                                                                              REL::Offset(0x0448FC68) };
+			REL::Offset(0x0448FC68) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_QuestUpdate__0_{ REL::Offset(0x044A2D28), REL::Offset(0x044A2D70) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_RankData__0_{ REL::Offset(0x044ACF30), REL::Offset(0x044AD038) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_Requirements__0_{ REL::Offset(0x044AD150), REL::Offset(0x044AD258) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_ResearchCategoryPreview__0_{ REL::Offset(0x04490C40),
-			                                                                                                REL::Offset(0x04490C88) };
+			REL::Offset(0x04490C88) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_ResearchPopupInfo__ItemInfo__0_{ REL::Offset(0x04490AC0),
-			                                                                                                    REL::Offset(0x04490B08) };
+			REL::Offset(0x04490B08) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_ResearchProjectDetails__LinkedProject__0_{ REL::Offset(0x04491140),
-			                                                                                                              REL::Offset(0x04491188) };
+			REL::Offset(0x04491188) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_ResearchProjectDetails__MaterialRequirment__0_{
 			REL::Offset(0x04491238), REL::Offset(0x04491280)
 		};
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_ResearchProjectPreview__0_{ REL::Offset(0x04490A10),
-			                                                                                               REL::Offset(0x04490A58) };
+			REL::Offset(0x04490A58) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_Ring__0_{ REL::Offset(0x044AB718), REL::Offset(0x044AB760) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_RolloverActivationButtonData__0_{ REL::Offset(0x04482DD8),
-			                                                                                                     REL::Offset(0x04482FE8) };
+			REL::Offset(0x04482FE8) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_SettingsCategoriesList__SettingsCategoryHeader__0_{
 			REL::Offset(0x04494BD0), REL::Offset(0x04494D78)
 		};
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_ShipComponent__0_{ REL::Offset(0x04480FB0), REL::Offset(0x04481018) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_ShipHangar__ShipMenuTab_DS__0_{ REL::Offset(0x0447A7F8),
-			                                                                                                   REL::Offset(0x0447A840) };
+			REL::Offset(0x0447A840) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_Skill__0_{ REL::Offset(0x04480B08), REL::Offset(0x04480C10) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_SpaceshipEditor__ColorTabData_DS__0_{ REL::Offset(0x0435B5F8),
-			                                                                                                         REL::Offset(0x0435B640) };
+			REL::Offset(0x0435B640) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_SpaceshipEditor__FlightCheckEntry_DS__0_{ REL::Offset(0x0435A3B8),
-			                                                                                                             REL::Offset(0x0435A420) };
+			REL::Offset(0x0435A420) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_SpaceshipEditor__FlightCheckTab_DS__0_{ REL::Offset(0x04359C90),
-			                                                                                                           REL::Offset(0x04359CF8) };
+			REL::Offset(0x04359CF8) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_SpaceshipEditor__HelpEntry_DS__0_{ REL::Offset(0x0435F058),
-			                                                                                                      REL::Offset(0x0435F180) };
+			REL::Offset(0x0435F180) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_SpaceshipEditor__ModuleEntry_DS__0_{ REL::Offset(0x0434C2D0),
-			                                                                                                        REL::Offset(0x0434C338) };
+			REL::Offset(0x0434C338) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_SpaceshipEditor__StatEntry_DS__0_{ REL::Offset(0x0435E700),
-			                                                                                                      REL::Offset(0x0435E828) };
+			REL::Offset(0x0435E828) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_SpaceshipEditor__SystemUpgradeEntry_DS__0_{ REL::Offset(0x0434BB08),
-			                                                                                                               REL::Offset(0x0434BB70) };
+			REL::Offset(0x0434BB70) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_SpaceshipEditor__WeaponAssignEntry_DS__0_{ REL::Offset(0x04359EB0),
-			                                                                                                              REL::Offset(0x04359F18) };
+			REL::Offset(0x04359F18) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_SpaceshipEditor__WeaponAssignGroup_DS__0_{ REL::Offset(0x0435A198),
-			                                                                                                              REL::Offset(0x0435A200) };
+			REL::Offset(0x0435A200) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_StarMap__BodyInfoToUI__0_{ REL::Offset(0x044802A8),
-			                                                                                              REL::Offset(0x044803B0) };
+			REL::Offset(0x044803B0) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_StarMap__BodyPOIDef__0_{ REL::Offset(0x044B47C8),
-			                                                                                            REL::Offset(0x044B4810) };
+			REL::Offset(0x044B4810) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_StarMap__BodyPOIMarkersDef__0_{ REL::Offset(0x044B4C08),
-			                                                                                                   REL::Offset(0x044B4C50) };
+			REL::Offset(0x044B4C50) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_StarMap__BodyPOIPos__0_{ REL::Offset(0x044B4B58),
-			                                                                                            REL::Offset(0x044B4BA0) };
+			REL::Offset(0x044B4BA0) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_StarMap__GalaxyMarkerData__0_{ REL::Offset(0x044B64F0),
-			                                                                                                  REL::Offset(0x044B6558) };
+			REL::Offset(0x044B6558) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_StarMap__GalaxyMarkerDef__0_{ REL::Offset(0x044B6440),
-			                                                                                                 REL::Offset(0x044B64A8) };
+			REL::Offset(0x044B64A8) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_StarMap__MenuMarkerCoords__0_{ REL::Offset(0x044B8450),
-			                                                                                                  REL::Offset(0x044B8608) };
+			REL::Offset(0x044B8608) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_StarMap__Outpost_DS__0_{ REL::Offset(0x044BB270),
-			                                                                                            REL::Offset(0x044BB2B8) };
+			REL::Offset(0x044BB2B8) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_StarMap__PlanetInfoToUI__0_{ REL::Offset(0x04480520),
-			                                                                                                REL::Offset(0x04480638) };
+			REL::Offset(0x04480638) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_StarMap__ResourceInfoFlashObject__0_{ REL::Offset(0x04497BD8),
-			                                                                                                         REL::Offset(0x04497CF0) };
+			REL::Offset(0x04497CF0) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_StarMap__StarMapMenuMarkerData__0_{ REL::Offset(0x044B7B50),
-			                                                                                                       REL::Offset(0x044B7BB8) };
+			REL::Offset(0x044B7BB8) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_StarMap__StarMapOffscreenQuestMarkerData__0_{
 			REL::Offset(0x044B7AA0), REL::Offset(0x044B7B08)
 		};
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_StarMap__SurfaceMarkerStaticData__0_{ REL::Offset(0x044BA700),
-			                                                                                                         REL::Offset(0x044BA748) };
+			REL::Offset(0x044BA748) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_StatCategory__0_{ REL::Offset(0x0448EE08), REL::Offset(0x0448EE50) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_SubSettingsList__GeneralSetting__0_{ REL::Offset(0x04494330),
-			                                                                                                        REL::Offset(0x044944D8) };
+			REL::Offset(0x044944D8) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_TESNPCData__ChargenData__FacialBoneRegionData__0_{
 			REL::Offset(0x043A7980), REL::Offset(0x043A79E8)
 		};
@@ -801,21 +801,21 @@ namespace RE
 		};
 		inline constexpr std::array<REL::Offset, 2>
 			ArrayUIValue_NestedUIValue_TESNPCData__ChargenMetadata__FacialBoneRegionMetadata__AdditionalSliders__0_{ REL::Offset(0x043A8A90),
-			                                                                                                         REL::Offset(0x043A8B98) };
+				REL::Offset(0x043A8B98) };
 		inline constexpr std::array<REL::Offset, 2>
-			ArrayUIValue_NestedUIValue_TESNPCData__ChargenMetadata__FacialBoneRegionMetadata__SliderMetadata__0_{ REL::Offset(0x043A8768),
-			                                                                                                      REL::Offset(0x043A8870) };
+													ArrayUIValue_NestedUIValue_TESNPCData__ChargenMetadata__FacialBoneRegionMetadata__SliderMetadata__0_{ REL::Offset(0x043A8768),
+                REL::Offset(0x043A8870) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_TESNPCData__ChargenMetadata__FacialMorphGroupMetadata__0_{
 			REL::Offset(0x043A8ED0), REL::Offset(0x043A8FD8)
 		};
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_TESNPCData__CodeBuiltSliderMetadata__0_{ REL::Offset(0x043A88D8),
-			                                                                                                            REL::Offset(0x043A8978) };
+			REL::Offset(0x043A8978) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_TESNPCData__CodeBuiltStepperData__0_{ REL::Offset(0x043A8CB0),
-			                                                                                                         REL::Offset(0x043A8DB8) };
+			REL::Offset(0x043A8DB8) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_TESNPCData__HeadPartMetadata__0_{ REL::Offset(0x043A72C8),
-			                                                                                                     REL::Offset(0x043A73D0) };
+			REL::Offset(0x043A73D0) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_TESNPCData__MorphSliderData__0_{ REL::Offset(0x043A7878),
-			                                                                                                    REL::Offset(0x043A78E0) };
+			REL::Offset(0x043A78E0) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_TESNPCData__PostBlendFaceCustomizationData__LayerData__0_{
 			REL::Offset(0x043A7550), REL::Offset(0x043A75B8)
 		};
@@ -824,32 +824,32 @@ namespace RE
 		};
 		inline constexpr std::array<REL::Offset, 2>
 			ArrayUIValue_NestedUIValue_TESNPCData__PostBlendFaceCustomizationMetaData__LayerMetaData__EntryMetaData__0_{ REL::Offset(0x043A8068),
-			                                                                                                             REL::Offset(0x043A80D0) };
+				REL::Offset(0x043A80D0) };
 		inline constexpr std::array<REL::Offset, 2>
 			ArrayUIValue_NestedUIValue_TESNPCData__PostBlendFaceCustomizationMetaData__LayerMetaData__ModulationEntryMetaData__0_{
 				REL::Offset(0x043A8288), REL::Offset(0x043A82F0)
 			};
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_TESNPCData__PostBlendSliderMetadata__0_{ REL::Offset(0x043A7E48),
-			                                                                                                            REL::Offset(0x043A7EB0) };
+			REL::Offset(0x043A7EB0) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_TargetCombatValues__0_{ REL::Offset(0x04498A78),
-			                                                                                           REL::Offset(0x04498AE0) };
+			REL::Offset(0x04498AE0) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_TargetComponentData__0_{ REL::Offset(0x04497500),
-			                                                                                            REL::Offset(0x04497858) };
+			REL::Offset(0x04497858) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_TargetHighFreq__0_{ REL::Offset(0x044985F0), REL::Offset(0x04498658) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_TargetLowFreq__0_{ REL::Offset(0x04498760), REL::Offset(0x044987C8) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_TestMenu__TestData__ArcanaData__0_{ REL::Offset(0x044BEBF8),
-			                                                                                                       REL::Offset(0x044BEC40) };
+			REL::Offset(0x044BEC40) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_TestMenu__TestResourcesData__ResourceData__0_{
 			REL::Offset(0x044BEB48), REL::Offset(0x044BEE90)
 		};
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_TraitDatum__0_{ REL::Offset(0x044AF5E0), REL::Offset(0x044AF6E8) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_TraitInfo__0_{ REL::Offset(0x0448E778), REL::Offset(0x0448E7C0) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_UICraftingUtils__SkillRequirement__0_{ REL::Offset(0x0435E8D8),
-			                                                                                                          REL::Offset(0x0435EA80) };
+			REL::Offset(0x0435EA80) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_WeaponGroupAssignment__ShipWeapon_DS__0_{ REL::Offset(0x04357880),
-			                                                                                                             REL::Offset(0x043578E8) };
+			REL::Offset(0x043578E8) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_WorkshopAreaResourcesData__AreaResource__0_{ REL::Offset(0x0449C020),
-			                                                                                                                REL::Offset(0x0449C088) };
+			REL::Offset(0x0449C088) };
 		inline constexpr std::array<REL::Offset, 2> ArrayUIValue_NestedUIValue_WorkshopCategoryBarData__CategoryBarData__0_{
 			REL::Offset(0x0449BD38), REL::Offset(0x0449BDA0)
 		};
@@ -866,11 +866,11 @@ namespace RE
 			REL::Offset(0x0449B618), REL::Offset(0x0449B680)
 		};
 		inline constexpr std::array<REL::Offset, 2>  ArrayUIValue_NestedUIValue_WorkshopTargetMenu__OutpostData__0_{ REL::Offset(0x044C0E98),
-                                                                                                                    REL::Offset(0x044C0F00) };
+            REL::Offset(0x044C0F00) };
 		inline constexpr std::array<REL::Offset, 2>  ArrayUIValue_NestedUIValue_WorkshopTargetMenu__ResourceData__0_{ REL::Offset(0x044C1608),
-                                                                                                                     REL::Offset(0x044C1670) };
+            REL::Offset(0x044C1670) };
 		inline constexpr std::array<REL::Offset, 2>  ArrayUIValue_NestedUIValue_WorkshopTargetMenu__TargetData__0_{ REL::Offset(0x044C0988),
-                                                                                                                   REL::Offset(0x044C09F0) };
+            REL::Offset(0x044C09F0) };
 		inline constexpr std::array<REL::Offset, 2>  ArrayUIValue_NestedUIValue_XPData__0_{ REL::Offset(0x044A1E18), REL::Offset(0x044A1E80) };
 		inline constexpr std::array<REL::Offset, 2>  ArrayUIValue_StringUIValue_0_{ REL::Offset(0x04477A60), REL::Offset(0x04477AC8) };
 		inline constexpr std::array<REL::Offset, 2>  ArrayUIValue_StringUIValue_3_{ REL::Offset(0x0435D1D8), REL::Offset(0x0435D240) };
@@ -883,9 +883,9 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  ArrowAttachHandler{ REL::Offset(0x044E3410) };
 		inline constexpr std::array<REL::Offset, 1>  ArrowDetachHandler{ REL::Offset(0x044E3398) };
 		inline constexpr std::array<REL::Offset, 11> ArrowProjectile{ REL::Offset(0x044E6B18), REL::Offset(0x044E6B30), REL::Offset(0x044E7628),
-			                                                          REL::Offset(0x044E7640), REL::Offset(0x044E7658), REL::Offset(0x044E7670),
-			                                                          REL::Offset(0x044E7688), REL::Offset(0x044E7758), REL::Offset(0x044E7770),
-			                                                          REL::Offset(0x044E77D8), REL::Offset(0x044E77F8) };
+			REL::Offset(0x044E7640), REL::Offset(0x044E7658), REL::Offset(0x044E7670),
+			REL::Offset(0x044E7688), REL::Offset(0x044E7758), REL::Offset(0x044E7770),
+			REL::Offset(0x044E77D8), REL::Offset(0x044E77F8) };
 		inline constexpr std::array<REL::Offset, 1>  AssignVariable{ REL::Offset(0x04569B30) };
 		inline constexpr std::array<REL::Offset, 1>  AssignVariableInstance{ REL::Offset(0x04569B98) };
 		inline constexpr std::array<REL::Offset, 1>  AssigniState{ REL::Offset(0x04569A58) };
@@ -1060,7 +1060,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			AutoRegisterCombatObject_CombatInventoryItemMagicT_CombatInventoryItemStaff_CombatMagicCasterTargetEffect__{ REL::Offset(0x03F124F0) };
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterCombatObject_CombatInventoryItemMagicT_CombatInventoryItemStaff_CombatMagicCasterWard__{ REL::Offset(0x03F12338) };
+													AutoRegisterCombatObject_CombatInventoryItemMagicT_CombatInventoryItemStaff_CombatMagicCasterWard__{ REL::Offset(0x03F12338) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterCombatObject_CombatInventoryItemMelee_{ REL::Offset(0x03F14598) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterCombatObject_CombatInventoryItemOneHandedBlock_{ REL::Offset(0x03F15010) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterCombatObject_CombatInventoryItemRanged_{ REL::Offset(0x03F14A98) };
@@ -1849,8 +1849,8 @@ namespace RE
 			AutoRegisterCreator_AwakeSoundResumeHandler_BSTCreateFactoryManager_BSFixedString_IHandlerFunctor_Actor_BSFixedString__256__{ REL::Offset(
 				0x044E54F0) };
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterCreator_AwakeSoundStopHandler_BSTCreateFactoryManager_BSFixedString_IHandlerFunctor_Actor_BSFixedString__256__{ REL::Offset(
-				0x044E5540) };
+													AutoRegisterCreator_AwakeSoundStopHandler_BSTCreateFactoryManager_BSFixedString_IHandlerFunctor_Actor_BSFixedString__256__{ REL::Offset(
+                0x044E5540) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterCreator_BGSAIWorldLocationEditorSpacePointRadius_BGSAIWorldLocationFactory_{
 			REL::Offset(0x044453B0)
 		};
@@ -1863,7 +1863,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterCreator_BGSAIWorldLocationRefRadius_BGSAIWorldLocationFactory_{ REL::Offset(
 			0x04445450) };
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterCreator_BGSConveyorBelt__ConveyorBelt_BSTCreateFactoryManager_unsignedint_InitActionI_16__{ REL::Offset(0x03F215C8) };
+													AutoRegisterCreator_BGSConveyorBelt__ConveyorBelt_BSTCreateFactoryManager_unsignedint_InitActionI_16__{ REL::Offset(0x03F215C8) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterCreator_BGSMotorAction__FanMotor_BSTCreateFactoryManager_unsignedint_InitActionI_16__{
 			REL::Offset(0x03F21578)
 		};
@@ -1890,7 +1890,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			AutoRegisterCreator_BGSPackageDataLocation_BSTCreateFactoryManager_BSFixedString_IPackageData_256__{ REL::Offset(0x03F20968) };
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterCreator_BGSPackageDataObjectList_BSTCreateFactoryManager_BSFixedString_IPackageData_256__{ REL::Offset(0x03F20B70) };
+													AutoRegisterCreator_BGSPackageDataObjectList_BSTCreateFactoryManager_BSFixedString_IPackageData_256__{ REL::Offset(0x03F20B70) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterCreator_BGSPackageDataRefOLD_BSTCreateFactoryManager_BSFixedString_IPackageData_256__{
 			REL::Offset(0x03F20AD0)
 		};
@@ -1901,7 +1901,7 @@ namespace RE
 			REL::Offset(0x04342FF8)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterCreator_BGSPackageDataTargetSelector_BSTCreateFactoryManager_BSFixedString_IPackageData_256__{ REL::Offset(0x03F20A58) };
+													AutoRegisterCreator_BGSPackageDataTargetSelector_BSTCreateFactoryManager_BSFixedString_IPackageData_256__{ REL::Offset(0x03F20A58) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterCreator_BGSPackageDataTopic_BSTCreateFactoryManager_BSFixedString_IPackageData_256__{
 			REL::Offset(0x04444688)
 		};
@@ -1924,12 +1924,12 @@ namespace RE
 			REL::Offset(0x04445360)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterCreator_BGSProcedureCombatTravel_BSTCreateFactoryManager_BSFixedString_IProcedure_256__{ REL::Offset(0x04446870) };
+													AutoRegisterCreator_BGSProcedureCombatTravel_BSTCreateFactoryManager_BSFixedString_IProcedure_256__{ REL::Offset(0x04446870) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterCreator_BGSProcedureDialogueActivateExecState_BGSProcedureTreeExecStateFactory_{
 			REL::Offset(0x04445388)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterCreator_BGSProcedureDialogueActivate_BSTCreateFactoryManager_BSFixedString_IProcedure_256__{ REL::Offset(0x04446C00) };
+													AutoRegisterCreator_BGSProcedureDialogueActivate_BSTCreateFactoryManager_BSFixedString_IProcedure_256__{ REL::Offset(0x04446C00) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterCreator_BGSProcedureDialogueExecState_BGSProcedureTreeExecStateFactory_{ REL::Offset(
 			0x04445310) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterCreator_BGSProcedureDialogue_BSTCreateFactoryManager_BSFixedString_IProcedure_256__{
@@ -1994,7 +1994,7 @@ namespace RE
 			REL::Offset(0x044457C0)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterCreator_BGSProcedureHoldPosition_BSTCreateFactoryManager_BSFixedString_IProcedure_256__{ REL::Offset(0x04449428) };
+													AutoRegisterCreator_BGSProcedureHoldPosition_BSTCreateFactoryManager_BSFixedString_IProcedure_256__{ REL::Offset(0x04449428) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterCreator_BGSProcedureHoverExecState_BGSProcedureTreeExecStateFactory_{ REL::Offset(
 			0x04445928) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterCreator_BGSProcedureHover_BSTCreateFactoryManager_BSFixedString_IProcedure_256__{
@@ -2004,7 +2004,7 @@ namespace RE
 			REL::Offset(0x04445950)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterCreator_BGSProcedureKeepAnEyeOn_BSTCreateFactoryManager_BSFixedString_IProcedure_256__{ REL::Offset(0x044497A8) };
+													AutoRegisterCreator_BGSProcedureKeepAnEyeOn_BSTCreateFactoryManager_BSFixedString_IProcedure_256__{ REL::Offset(0x044497A8) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterCreator_BGSProcedureLockUnlockExecState_BGSProcedureTreeExecStateFactory_{
 			REL::Offset(0x04445900)
 		};
@@ -2061,7 +2061,7 @@ namespace RE
 			REL::Offset(0x044456A8)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterCreator_BGSProcedureTargetingModeAutopilot_BSTCreateFactoryManager_BSFixedString_IProcedure_256__{ REL::Offset(0x04344788) };
+													AutoRegisterCreator_BGSProcedureTargetingModeAutopilot_BSTCreateFactoryManager_BSFixedString_IProcedure_256__{ REL::Offset(0x04344788) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterCreator_BGSProcedureTravelExecState_BGSProcedureTreeExecStateFactory_{ REL::Offset(
 			0x044455E0) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterCreator_BGSProcedureTravel_BSTCreateFactoryManager_BSFixedString_IProcedure_256__{
@@ -2073,27 +2073,27 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			AutoRegisterCreator_BGSProcedureTreeFallback_BSTCreateFactoryManager_BSFixedString_IProcedureTreeItem_32__{ REL::Offset(0x04445518) };
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterCreator_BGSProcedureTreeProcedure_BSTCreateFactoryManager_BSFixedString_IProcedureTreeItem_32__{ REL::Offset(0x04445540) };
+													AutoRegisterCreator_BGSProcedureTreeProcedure_BSTCreateFactoryManager_BSFixedString_IProcedureTreeItem_32__{ REL::Offset(0x04445540) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterCreator_BGSProcedureTreeRandomExecState_BGSProcedureTreeExecStateFactory_{
 			REL::Offset(0x04445220)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterCreator_BGSProcedureTreeRandom_BSTCreateFactoryManager_BSFixedString_IProcedureTreeItem_32__{ REL::Offset(0x044454C8) };
+													AutoRegisterCreator_BGSProcedureTreeRandom_BSTCreateFactoryManager_BSFixedString_IProcedureTreeItem_32__{ REL::Offset(0x044454C8) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterCreator_BGSProcedureTreeSequenceExecState_BGSProcedureTreeExecStateFactory_{
 			REL::Offset(0x04445478)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterCreator_BGSProcedureTreeSequence_BSTCreateFactoryManager_BSFixedString_IProcedureTreeItem_32__{ REL::Offset(0x04445568) };
+													AutoRegisterCreator_BGSProcedureTreeSequence_BSTCreateFactoryManager_BSFixedString_IProcedureTreeItem_32__{ REL::Offset(0x04445568) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterCreator_BGSProcedureTreeSimultaneousExecState_BGSProcedureTreeExecStateFactory_{
 			REL::Offset(0x044451F8)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterCreator_BGSProcedureTreeSimultaneous_BSTCreateFactoryManager_BSFixedString_IProcedureTreeItem_32__{ REL::Offset(0x044454A0) };
+													AutoRegisterCreator_BGSProcedureTreeSimultaneous_BSTCreateFactoryManager_BSFixedString_IProcedureTreeItem_32__{ REL::Offset(0x044454A0) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterCreator_BGSProcedureTreeStackedExecState_BGSProcedureTreeExecStateFactory_{
 			REL::Offset(0x04445248)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterCreator_BGSProcedureTreeStacked_BSTCreateFactoryManager_BSFixedString_IProcedureTreeItem_32__{ REL::Offset(0x044454F0) };
+													AutoRegisterCreator_BGSProcedureTreeStacked_BSTCreateFactoryManager_BSFixedString_IProcedureTreeItem_32__{ REL::Offset(0x044454F0) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterCreator_BGSProcedureUnlock_BSTCreateFactoryManager_BSFixedString_IProcedure_256__{
 			REL::Offset(0x04449920)
 		};
@@ -2101,7 +2101,7 @@ namespace RE
 			REL::Offset(0x04445590)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterCreator_BGSProcedureUseIdleMarker_BSTCreateFactoryManager_BSFixedString_IProcedure_256__{ REL::Offset(0x0444AE10) };
+													AutoRegisterCreator_BGSProcedureUseIdleMarker_BSTCreateFactoryManager_BSFixedString_IProcedure_256__{ REL::Offset(0x0444AE10) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterCreator_BGSProcedureUseMagicExecState_BGSProcedureTreeExecStateFactory_{ REL::Offset(
 			0x04445770) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterCreator_BGSProcedureUseMagic_BSTCreateFactoryManager_BSFixedString_IProcedure_256__{
@@ -2123,7 +2123,7 @@ namespace RE
 			REL::Offset(0x0444C578)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterCreator_BSAnimationAnimDBData_BSTCreateFactoryManager_BSFixedString_BSAnimationDBData_32__{ REL::Offset(0x03EFCF20) };
+													AutoRegisterCreator_BSAnimationAnimDBData_BSTCreateFactoryManager_BSFixedString_BSAnimationDBData_32__{ REL::Offset(0x03EFCF20) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterCreator_BSNoise__Add_BSTCreateFactoryManager_BSFixedString_BSNoise__IGenerator_32__{
 			REL::Offset(0x04585E28)
 		};
@@ -2366,8 +2366,8 @@ namespace RE
 			REL::Offset(0x03EFDB90)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterCreator_LoopingActivateHandler_BSTCreateFactoryManager_BSFixedString_IHandlerFunctor_Actor_BSFixedString__256__{ REL::Offset(
-				0x044E57E8) };
+													AutoRegisterCreator_LoopingActivateHandler_BSTCreateFactoryManager_BSFixedString_IHandlerFunctor_Actor_BSFixedString__256__{ REL::Offset(
+                0x044E57E8) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterCreator_MorphDriverData_BSTCreateFactoryManager_BSFixedString_BoneModifierData_32__{
 			REL::Offset(0x03EFDB18)
 		};
@@ -2398,8 +2398,8 @@ namespace RE
 			AutoRegisterCreator_PairedStopHandler_BSTCreateFactoryManager_BSFixedString_IHandlerFunctor_Actor_BSFixedString__256__{ REL::Offset(
 				0x044E6580) };
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterCreator_PassengerInteraction_BSTCreateFactoryManager_RefrInteraction__INTERACT_METHOD_RefrInteraction_2__{ REL::Offset(
-				0x03EFFC38) };
+													AutoRegisterCreator_PassengerInteraction_BSTCreateFactoryManager_RefrInteraction__INTERACT_METHOD_RefrInteraction_2__{ REL::Offset(
+                0x03EFFC38) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterCreator_PathingCell_BSTSmartPointerPathingFactoryManager_BSPathingCell_64__{
 			REL::Offset(0x03F058A8)
 		};
@@ -2587,8 +2587,8 @@ namespace RE
 			AutoRegisterCreator_UncullWeaponsHandler_BSTCreateFactoryManager_BSFixedString_IHandlerFunctor_Actor_BSFixedString__256__{ REL::Offset(
 				0x044E5450) };
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterCreator_UseStimpakHandler_BSTCreateFactoryManager_BSFixedString_IHandlerFunctor_Actor_BSFixedString__256__{ REL::Offset(
-				0x044E5590) };
+													AutoRegisterCreator_UseStimpakHandler_BSTCreateFactoryManager_BSFixedString_IHandlerFunctor_Actor_BSFixedString__256__{ REL::Offset(
+                0x044E5590) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterCreator_VirtualPathingDoor_BSTSmartPointerPathingFactoryManager_BSPathingDoor_64__{
 			REL::Offset(0x03F057D8)
 		};
@@ -2635,7 +2635,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			AutoRegisterCreator___BSAnimationTableDBData_BSTCreateFactoryManager_BSFixedString_BSAnimationDBData_32__{ REL::Offset(0x04560DB8) };
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterCreator___BSAnimationTextDBData_BSTCreateFactoryManager_BSFixedString_BSAnimationDBData_32__{ REL::Offset(0x04560C68) };
+													AutoRegisterCreator___BSAnimationTextDBData_BSTCreateFactoryManager_BSFixedString_BSAnimationDBData_32__{ REL::Offset(0x04560C68) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterEvent_TUIEventDispatcher_BarterMenu_BuyItem__{ REL::Offset(0x03F194F8) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterEvent_TUIEventDispatcher_BarterMenu_CloseMenu__{ REL::Offset(0x03F17D40) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterEvent_TUIEventDispatcher_BarterMenu_HideModel__{ REL::Offset(0x03F18688) };
@@ -7902,22 +7902,22 @@ namespace RE
 			REL::Offset(0x03EF3FA0)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterFormFactoryComponent_BGSActivityTrackerFormComponent_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x043524B8) };
+													AutoRegisterFormFactoryComponent_BGSActivityTrackerFormComponent_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x043524B8) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterFormFactoryComponent_BGSAddToInventoryOnDestroy_DefaultFormComponentMoverPolicy_{
 			REL::Offset(0x03F0FFB0)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterFormFactoryComponent_BGSAddToInventoryOnDestroy_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x04352588) };
+													AutoRegisterFormFactoryComponent_BGSAddToInventoryOnDestroy_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x04352588) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterFormFactoryComponent_BGSAnimationGraphComponent_DefaultFormComponentMoverPolicy_{
 			REL::Offset(0x03F0FF38)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterFormFactoryComponent_BGSAnimationGraphComponent_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x04352658) };
+													AutoRegisterFormFactoryComponent_BGSAnimationGraphComponent_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x04352658) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterFormFactoryComponent_BGSAttachParentArray_DefaultFormComponentMoverPolicy_{
 			REL::Offset(0x03EF43F0)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterFormFactoryComponent_BGSAttachParentArray_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x04352748) };
+													AutoRegisterFormFactoryComponent_BGSAttachParentArray_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x04352748) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterFormFactoryComponent_BGSAttackDataForm_DefaultFormComponentMoverPolicy_{ REL::Offset(
 			0x03F0F320) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterFormFactoryComponent_BGSAttackDataForm_DefaultFormComponentMoverPolicy___ReserveType{
@@ -7932,12 +7932,12 @@ namespace RE
 			REL::Offset(0x03F10208)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterFormFactoryComponent_BGSContactShadowComponent_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x0434A5D0) };
+													AutoRegisterFormFactoryComponent_BGSContactShadowComponent_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x0434A5D0) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterFormFactoryComponent_BGSCraftingResourceOwner_DefaultFormComponentMoverPolicy_{
 			REL::Offset(0x03F0F950)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterFormFactoryComponent_BGSCraftingResourceOwner_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x04352850) };
+													AutoRegisterFormFactoryComponent_BGSCraftingResourceOwner_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x04352850) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterFormFactoryComponent_BGSCrowdComponent_DefaultFormComponentMoverPolicy_{ REL::Offset(
 			0x03F0FB70) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterFormFactoryComponent_BGSCrowdComponent_DefaultFormComponentMoverPolicy___ReserveType{
@@ -7952,27 +7952,27 @@ namespace RE
 			REL::Offset(0x03F0F580)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterFormFactoryComponent_BGSDestructibleObjectForm_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x0436C320) };
+													AutoRegisterFormFactoryComponent_BGSDestructibleObjectForm_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x0436C320) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterFormFactoryComponent_BGSDisplayCaseFormComponent_DefaultFormComponentMoverPolicy_{
 			REL::Offset(0x03F0F450)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterFormFactoryComponent_BGSDisplayCaseFormComponent_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x04352B08) };
+													AutoRegisterFormFactoryComponent_BGSDisplayCaseFormComponent_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x04352B08) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterFormFactoryComponent_BGSEffectSequenceFormComponent_DefaultFormComponentMoverPolicy_{
 			REL::Offset(0x03F0E278)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterFormFactoryComponent_BGSEffectSequenceFormComponent_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x04352B70) };
+													AutoRegisterFormFactoryComponent_BGSEffectSequenceFormComponent_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x04352B70) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterFormFactoryComponent_BGSExternalComponentDataSource_DefaultFormComponentMoverPolicy_{
 			REL::Offset(0x03F10118)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterFormFactoryComponent_BGSExternalComponentDataSource_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x04352D00) };
+													AutoRegisterFormFactoryComponent_BGSExternalComponentDataSource_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x04352D00) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterFormFactoryComponent_BGSForcedLocRefType_DefaultFormComponentMoverPolicy_{
 			REL::Offset(0x03F0F508)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterFormFactoryComponent_BGSForcedLocRefType_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x04352DC0) };
+													AutoRegisterFormFactoryComponent_BGSForcedLocRefType_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x04352DC0) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterFormFactoryComponent_BGSFormLinkData_DefaultFormComponentMoverPolicy_{ REL::Offset(
 			0x03F0F170) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterFormFactoryComponent_BGSFormLinkData_DefaultFormComponentMoverPolicy___ReserveType{
@@ -7992,42 +7992,42 @@ namespace RE
 			REL::Offset(0x03F0E3A8)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterFormFactoryComponent_BGSLodOwnerComponent_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x043530D8) };
+													AutoRegisterFormFactoryComponent_BGSLodOwnerComponent_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x043530D8) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterFormFactoryComponent_BGSMaterialPropertyComponent_DefaultFormComponentMoverPolicy_{
 			REL::Offset(0x03F0E1C0)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterFormFactoryComponent_BGSMaterialPropertyComponent_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x04353240) };
+													AutoRegisterFormFactoryComponent_BGSMaterialPropertyComponent_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x04353240) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterFormFactoryComponent_BGSObjectPlacementDefaults_DefaultFormComponentMoverPolicy_{
 			REL::Offset(0x03F0F820)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterFormFactoryComponent_BGSObjectPlacementDefaults_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x04353568) };
+													AutoRegisterFormFactoryComponent_BGSObjectPlacementDefaults_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x04353568) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterFormFactoryComponent_BGSObjectWindowFilterComponent_DefaultFormComponentMoverPolicy_{
 			REL::Offset(0x03F0FA80)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterFormFactoryComponent_BGSObjectWindowFilterComponent_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x0434A7A0) };
+													AutoRegisterFormFactoryComponent_BGSObjectWindowFilterComponent_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x0434A7A0) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterFormFactoryComponent_BGSOrbitalDataComponent_CopyFormComponentMoverPolicy_{
 			REL::Offset(0x03F102F8)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterFormFactoryComponent_BGSOrbitalDataComponent_CopyFormComponentMoverPolicy___ReserveType{ REL::Offset(0x043536E0) };
+													AutoRegisterFormFactoryComponent_BGSOrbitalDataComponent_CopyFormComponentMoverPolicy___ReserveType{ REL::Offset(0x043536E0) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterFormFactoryComponent_BGSOrbitedDataComponent_CopyFormComponentMoverPolicy_{
 			REL::Offset(0x03F0F5F8)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterFormFactoryComponent_BGSOrbitedDataComponent_CopyFormComponentMoverPolicy___ReserveType{ REL::Offset(0x043537E0) };
+													AutoRegisterFormFactoryComponent_BGSOrbitedDataComponent_CopyFormComponentMoverPolicy___ReserveType{ REL::Offset(0x043537E0) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterFormFactoryComponent_BGSOverridePackCollection_DefaultFormComponentMoverPolicy_{
 			REL::Offset(0x03F0EF10)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterFormFactoryComponent_BGSOverridePackCollection_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x0436C8B0) };
+													AutoRegisterFormFactoryComponent_BGSOverridePackCollection_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x0436C8B0) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterFormFactoryComponent_BGSPapyrusScriptsComponent_DefaultFormComponentMoverPolicy_{
 			REL::Offset(0x03EF42F8)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterFormFactoryComponent_BGSPapyrusScriptsComponent_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x043539C0) };
+													AutoRegisterFormFactoryComponent_BGSPapyrusScriptsComponent_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x043539C0) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterFormFactoryComponent_BGSPathingData_DefaultFormComponentMoverPolicy_{ REL::Offset(
 			0x03F103E8) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterFormFactoryComponent_BGSPathingData_DefaultFormComponentMoverPolicy___ReserveType{
@@ -8036,13 +8036,13 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			AutoRegisterFormFactoryComponent_BGSPlanetContentManagerContentProperties_DefaultFormComponentMoverPolicy_{ REL::Offset(0x03F0FE08) };
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterFormFactoryComponent_BGSPlanetContentManagerContentProperties_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(
-				0x0437CD18) };
+													AutoRegisterFormFactoryComponent_BGSPlanetContentManagerContentProperties_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(
+                0x0437CD18) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterFormFactoryComponent_BGSPrimitiveComponent_DefaultFormComponentMoverPolicy_{
 			REL::Offset(0x03F0F6B0)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterFormFactoryComponent_BGSPrimitiveComponent_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x04353B98) };
+													AutoRegisterFormFactoryComponent_BGSPrimitiveComponent_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x04353B98) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterFormFactoryComponent_BGSPropertySheet_DefaultFormComponentMoverPolicy_{ REL::Offset(
 			0x03F10518) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterFormFactoryComponent_BGSPropertySheet_DefaultFormComponentMoverPolicy___ReserveType{
@@ -8052,7 +8052,7 @@ namespace RE
 			REL::Offset(0x03F10370)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterFormFactoryComponent_BGSScannableFormComponent_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x04353808) };
+													AutoRegisterFormFactoryComponent_BGSScannableFormComponent_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x04353808) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterFormFactoryComponent_BGSShipManagement_DefaultFormComponentMoverPolicy_{ REL::Offset(
 			0x03EF4800) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterFormFactoryComponent_BGSShipManagement_DefaultFormComponentMoverPolicy___ReserveType{
@@ -8067,32 +8067,32 @@ namespace RE
 			REL::Offset(0x03F0F398)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterFormFactoryComponent_BGSSoundTagComponent_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x04353DD8) };
+													AutoRegisterFormFactoryComponent_BGSSoundTagComponent_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x04353DD8) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterFormFactoryComponent_BGSSpacePhysicsFormComponent_DefaultFormComponentMoverPolicy_{
 			REL::Offset(0x03EF4150)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterFormFactoryComponent_BGSSpacePhysicsFormComponent_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x04353E40) };
+													AutoRegisterFormFactoryComponent_BGSSpacePhysicsFormComponent_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x04353E40) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterFormFactoryComponent_BGSSpaceshipAIActor_DefaultFormComponentMoverPolicy_{
 			REL::Offset(0x03F0FD90)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterFormFactoryComponent_BGSSpaceshipAIActor_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x04353F10) };
+													AutoRegisterFormFactoryComponent_BGSSpaceshipAIActor_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x04353F10) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterFormFactoryComponent_BGSSpaceshipEquipment_DefaultFormComponentMoverPolicy_{
 			REL::Offset(0x03EF49B0)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterFormFactoryComponent_BGSSpaceshipEquipment_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x04353FA8) };
+													AutoRegisterFormFactoryComponent_BGSSpaceshipEquipment_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x04353FA8) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterFormFactoryComponent_BGSSpaceshipHullCode_DefaultFormComponentMoverPolicy_{
 			REL::Offset(0x03EF41C8)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterFormFactoryComponent_BGSSpaceshipHullCode_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x04354058) };
+													AutoRegisterFormFactoryComponent_BGSSpaceshipHullCode_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x04354058) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterFormFactoryComponent_BGSSpaceshipWeaponBinding_DefaultFormComponentMoverPolicy_{
 			REL::Offset(0x03F0FEC0)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterFormFactoryComponent_BGSSpaceshipWeaponBinding_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x04354170) };
+													AutoRegisterFormFactoryComponent_BGSSpaceshipWeaponBinding_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x04354170) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterFormFactoryComponent_BGSSpawnOnDestroy_DefaultFormComponentMoverPolicy_{ REL::Offset(
 			0x03EF4690) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterFormFactoryComponent_BGSSpawnOnDestroy_DefaultFormComponentMoverPolicy___ReserveType{
@@ -8132,62 +8132,62 @@ namespace RE
 			REL::Offset(0x04389AA0)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterFormFactoryComponent_BGSSurface____WaterHeightComponent_CopyFormComponentMoverPolicy___ReserveType{ REL::Offset(0x04389BC8) };
+													AutoRegisterFormFactoryComponent_BGSSurface____WaterHeightComponent_CopyFormComponentMoverPolicy___ReserveType{ REL::Offset(0x04389BC8) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterFormFactoryComponent_BGSVolumeFormComponent_DefaultFormComponentMoverPolicy_{
 			REL::Offset(0x03F0FBE8)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterFormFactoryComponent_BGSVolumeFormComponent_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x043545B8) };
+													AutoRegisterFormFactoryComponent_BGSVolumeFormComponent_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x043545B8) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterFormFactoryComponent_BGSWorkshopItemColorComponent_DefaultFormComponentMoverPolicy_{
 			REL::Offset(0x03EF4938)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterFormFactoryComponent_BGSWorkshopItemColorComponent_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x0434A8A0) };
+													AutoRegisterFormFactoryComponent_BGSWorkshopItemColorComponent_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x0434A8A0) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterFormFactoryComponent_BGSWorldSpaceOverlayComponent_DefaultFormComponentMoverPolicy_{
 			REL::Offset(0x03F0EE58)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterFormFactoryComponent_BGSWorldSpaceOverlayComponent_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x04354B18) };
+													AutoRegisterFormFactoryComponent_BGSWorldSpaceOverlayComponent_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x04354B18) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterFormFactoryComponent_Blueprints__BlueprintVariant_DefaultFormComponentMoverPolicy_{
 			REL::Offset(0x03F10280)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterFormFactoryComponent_Blueprints__BlueprintVariant_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x0434A968) };
+													AutoRegisterFormFactoryComponent_Blueprints__BlueprintVariant_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x0434A968) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterFormFactoryComponent_Blueprints__Blueprint_DefaultFormComponentMoverPolicy_{
 			REL::Offset(0x03F10190)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterFormFactoryComponent_Blueprints__Blueprint_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x04354C08) };
+													AutoRegisterFormFactoryComponent_Blueprints__Blueprint_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x04354C08) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterFormFactoryComponent_LensFlareAttachmentComponent_DefaultFormComponentMoverPolicy_{
 			REL::Offset(0x03F0EC70)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterFormFactoryComponent_LensFlareAttachmentComponent_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x0434AAA0) };
+													AutoRegisterFormFactoryComponent_LensFlareAttachmentComponent_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x0434AAA0) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterFormFactoryComponent_LightAnimFormComponent_DefaultFormComponentMoverPolicy_{
 			REL::Offset(0x03EF4520)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterFormFactoryComponent_LightAnimFormComponent_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x04354DB8) };
+													AutoRegisterFormFactoryComponent_LightAnimFormComponent_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x04354DB8) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterFormFactoryComponent_LightAttachmentFormComponent_DefaultFormComponentMoverPolicy_{
 			REL::Offset(0x03EF4280)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterFormFactoryComponent_LightAttachmentFormComponent_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x04354EE0) };
+													AutoRegisterFormFactoryComponent_LightAttachmentFormComponent_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x04354EE0) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterFormFactoryComponent_ObjectAttachmentFormComponent_DefaultFormComponentMoverPolicy_{
 			REL::Offset(0x03F0EBF8)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterFormFactoryComponent_ObjectAttachmentFormComponent_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x04355010) };
+													AutoRegisterFormFactoryComponent_ObjectAttachmentFormComponent_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x04355010) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterFormFactoryComponent_ParticleFormComponent_DefaultFormComponentMoverPolicy_{
 			REL::Offset(0x03F0E330)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterFormFactoryComponent_ParticleFormComponent_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x043551E0) };
+													AutoRegisterFormFactoryComponent_ParticleFormComponent_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x043551E0) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterFormFactoryComponent_ReflectionProbeCellComponent_DefaultFormComponentMoverPolicy_{
 			REL::Offset(0x03F0E148)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterFormFactoryComponent_ReflectionProbeCellComponent_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x0434D510) };
+													AutoRegisterFormFactoryComponent_ReflectionProbeCellComponent_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x0434D510) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterFormFactoryComponent_TESAIForm_DefaultFormComponentMoverPolicy_{ REL::Offset(
 			0x03F0F0B8) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterFormFactoryComponent_TESAIForm_DefaultFormComponentMoverPolicy___ReserveType{
@@ -8217,7 +8217,7 @@ namespace RE
 			REL::Offset(0x03EF4788)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterFormFactoryComponent_TESImageSpaceModifiableForm_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x0436D758) };
+													AutoRegisterFormFactoryComponent_TESImageSpaceModifiableForm_DefaultFormComponentMoverPolicy___ReserveType{ REL::Offset(0x0436D758) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterFormFactoryComponent_TESMagicTargetForm_DefaultFormComponentMoverPolicy_{ REL::Offset(
 			0x03F100A0) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterFormFactoryComponent_TESMagicTargetForm_DefaultFormComponentMoverPolicy___ReserveType{
@@ -8408,7 +8408,7 @@ namespace RE
 			REL::Offset(0x03EEC090)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterPathBuilderFactory_PathingRequestFlyAction_PathBuilderFlight__PathBuilderFlyActionPath_{ REL::Offset(0x03F1FA28) };
+													AutoRegisterPathBuilderFactory_PathingRequestFlyAction_PathBuilderFlight__PathBuilderFlyActionPath_{ REL::Offset(0x03F1FA28) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterPathBuilderFactory_PathingRequestFlyHover_PathBuilderFlight__PathBuilderFlyHoverPath_{
 			REL::Offset(0x03F1F980)
 		};
@@ -8419,7 +8419,7 @@ namespace RE
 			REL::Offset(0x03F1F9C8)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterPathBuilderFactory_PathingRequestFlyTakeOff_PathBuilderFlight__PathBuilderFlyTakeOffPath_{ REL::Offset(0x03F1F968) };
+													AutoRegisterPathBuilderFactory_PathingRequestFlyTakeOff_PathBuilderFlight__PathBuilderFlyTakeOffPath_{ REL::Offset(0x03F1F968) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterPathBuilderFactory_PathingRequestFly_PathBuilderFlight__PathBuilderFlyPath_{
 			REL::Offset(0x03F1FA88)
 		};
@@ -8434,8 +8434,8 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterPathBuilderFactory_PathingRequestRotate___PathBuilderRotatePath_{ REL::Offset(
 			0x04451538) };
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterPathBuilderFactory_PathingRequestSafeStraightLine_PathBuilderSafeStraightLine__PathBuilderSafeStraightLinePath_{ REL::Offset(
-				0x03F1F9E0) };
+													AutoRegisterPathBuilderFactory_PathingRequestSafeStraightLine_PathBuilderSafeStraightLine__PathBuilderSafeStraightLinePath_{ REL::Offset(
+                0x03F1F9E0) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterPathBuilderFactory_PathingRequestStopMoving___PathBuilderStopMovingPath_{ REL::Offset(
 			0x04451508) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterPathBuilderFactory_PathingRequest___PathBuilderPathingRequest_{ REL::Offset(
@@ -8473,7 +8473,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			AutoRegisterPathing_MovementMessageBlocked_BSTSmartPointerPathingFactoryManager_MovementMessage_64__{ REL::Offset(0x03EF7328) };
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterPathing_MovementMessageGravJump_BSTSmartPointerPathingFactoryManager_MovementMessage_64__{ REL::Offset(0x03F1F360) };
+													AutoRegisterPathing_MovementMessageGravJump_BSTSmartPointerPathingFactoryManager_MovementMessage_64__{ REL::Offset(0x03F1F360) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterPathing_MovementMessageJump_BSTSmartPointerPathingFactoryManager_MovementMessage_64__{
 			REL::Offset(0x03EF7238)
 		};
@@ -8547,7 +8547,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			AutoRegisterPlacementCreator_AssigniState_BSTCreateFactoryManager_BSFixedString_AnimGraphNode_64__{ REL::Offset(0x04566138) };
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterPlacementCreator_BlendNode_BSTCreateFactoryManager_AnimGraphNodeType_AnimGraphNode_64__{ REL::Offset(0x04566768) };
+													AutoRegisterPlacementCreator_BlendNode_BSTCreateFactoryManager_AnimGraphNodeType_AnimGraphNode_64__{ REL::Offset(0x04566768) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterPlacementCreator_BlendNode_BSTCreateFactoryManager_BSFixedString_AnimGraphNode_64__{
 			REL::Offset(0x04566740)
 		};
@@ -8624,7 +8624,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			AutoRegisterPlacementCreator_EveryNEvents_BSTCreateFactoryManager_BSFixedString_AnimGraphNode_64__{ REL::Offset(0x04566DA8) };
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterPlacementCreator_FootIKNode_BSTCreateFactoryManager_AnimGraphNodeType_AnimGraphNode_64__{ REL::Offset(0x04566DF8) };
+													AutoRegisterPlacementCreator_FootIKNode_BSTCreateFactoryManager_AnimGraphNodeType_AnimGraphNode_64__{ REL::Offset(0x04566DF8) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterPlacementCreator_FootIKNode_BSTCreateFactoryManager_BSFixedString_AnimGraphNode_64__{
 			REL::Offset(0x04566DD0)
 		};
@@ -8645,7 +8645,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			AutoRegisterPlacementCreator_LocomotionBlend_BSTCreateFactoryManager_BSFixedString_AnimGraphNode_64__{ REL::Offset(0x04564F68) };
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterPlacementCreator_LookAtNode_BSTCreateFactoryManager_AnimGraphNodeType_AnimGraphNode_64__{ REL::Offset(0x04566598) };
+													AutoRegisterPlacementCreator_LookAtNode_BSTCreateFactoryManager_AnimGraphNodeType_AnimGraphNode_64__{ REL::Offset(0x04566598) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterPlacementCreator_LookAtNode_BSTCreateFactoryManager_BSFixedString_AnimGraphNode_64__{
 			REL::Offset(0x04566628)
 		};
@@ -8660,7 +8660,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			AutoRegisterPlacementCreator_MaterialLayerSequence_BSTCreateFactoryManager_BSFixedString_AnimGraphNode_64__{ REL::Offset(0x04566948) };
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterPlacementCreator_MergeNode_BSTCreateFactoryManager_AnimGraphNodeType_AnimGraphNode_64__{ REL::Offset(0x04565080) };
+													AutoRegisterPlacementCreator_MergeNode_BSTCreateFactoryManager_AnimGraphNodeType_AnimGraphNode_64__{ REL::Offset(0x04565080) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterPlacementCreator_MergeNode_BSTCreateFactoryManager_BSFixedString_AnimGraphNode_64__{
 			REL::Offset(0x04565058)
 		};
@@ -8715,17 +8715,17 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			AutoRegisterPlacementCreator_RandomAnimationNode_BSTCreateFactoryManager_BSFixedString_AnimGraphNode_64__{ REL::Offset(0x04565210) };
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterPlacementCreator_RigSwitch_BSTCreateFactoryManager_AnimGraphNodeType_AnimGraphNode_64__{ REL::Offset(0x04566AC8) };
+													AutoRegisterPlacementCreator_RigSwitch_BSTCreateFactoryManager_AnimGraphNodeType_AnimGraphNode_64__{ REL::Offset(0x04566AC8) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterPlacementCreator_RigSwitch_BSTCreateFactoryManager_BSFixedString_AnimGraphNode_64__{
 			REL::Offset(0x04566AA0)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterPlacementCreator_RollingBone_BSTCreateFactoryManager_AnimGraphNodeType_AnimGraphNode_64__{ REL::Offset(0x04566858) };
+													AutoRegisterPlacementCreator_RollingBone_BSTCreateFactoryManager_AnimGraphNodeType_AnimGraphNode_64__{ REL::Offset(0x04566858) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterPlacementCreator_RollingBone_BSTCreateFactoryManager_BSFixedString_AnimGraphNode_64__{
 			REL::Offset(0x04566830)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterPlacementCreator_RootTwist_BSTCreateFactoryManager_AnimGraphNodeType_AnimGraphNode_64__{ REL::Offset(0x045667B8) };
+													AutoRegisterPlacementCreator_RootTwist_BSTCreateFactoryManager_AnimGraphNodeType_AnimGraphNode_64__{ REL::Offset(0x045667B8) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterPlacementCreator_RootTwist_BSTCreateFactoryManager_BSFixedString_AnimGraphNode_64__{
 			REL::Offset(0x04566790)
 		};
@@ -8738,12 +8738,12 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			AutoRegisterPlacementCreator_SetOrientNode_BSTCreateFactoryManager_BSFixedString_AnimGraphNode_64__{ REL::Offset(0x045664D0) };
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterPlacementCreator_SetPosNode_BSTCreateFactoryManager_AnimGraphNodeType_AnimGraphNode_64__{ REL::Offset(0x04566570) };
+													AutoRegisterPlacementCreator_SetPosNode_BSTCreateFactoryManager_AnimGraphNodeType_AnimGraphNode_64__{ REL::Offset(0x04566570) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterPlacementCreator_SetPosNode_BSTCreateFactoryManager_BSFixedString_AnimGraphNode_64__{
 			REL::Offset(0x045664A8)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterPlacementCreator_SpeedScale_BSTCreateFactoryManager_AnimGraphNodeType_AnimGraphNode_64__{ REL::Offset(0x045667E0) };
+													AutoRegisterPlacementCreator_SpeedScale_BSTCreateFactoryManager_AnimGraphNodeType_AnimGraphNode_64__{ REL::Offset(0x045667E0) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterPlacementCreator_SpeedScale_BSTCreateFactoryManager_BSFixedString_AnimGraphNode_64__{
 			REL::Offset(0x04566718)
 		};
@@ -8760,7 +8760,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			AutoRegisterPlacementCreator_SwapGraphNode_BSTCreateFactoryManager_BSFixedString_AnimGraphNode_64__{ REL::Offset(0x04566200) };
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterPlacementCreator_SwitchNode_BSTCreateFactoryManager_AnimGraphNodeType_AnimGraphNode_64__{ REL::Offset(0x04564FE0) };
+													AutoRegisterPlacementCreator_SwitchNode_BSTCreateFactoryManager_AnimGraphNodeType_AnimGraphNode_64__{ REL::Offset(0x04564FE0) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterPlacementCreator_SwitchNode_BSTCreateFactoryManager_BSFixedString_AnimGraphNode_64__{
 			REL::Offset(0x04565008)
 		};
@@ -8769,7 +8769,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			AutoRegisterPlacementCreator_TagPropagationNode_BSTCreateFactoryManager_BSFixedString_AnimGraphNode_64__{ REL::Offset(0x04565FA8) };
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterPlacementCreator_TimerEvent_BSTCreateFactoryManager_AnimGraphNodeType_AnimGraphNode_64__{ REL::Offset(0x04565260) };
+													AutoRegisterPlacementCreator_TimerEvent_BSTCreateFactoryManager_AnimGraphNodeType_AnimGraphNode_64__{ REL::Offset(0x04565260) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterPlacementCreator_TimerEvent_BSTCreateFactoryManager_BSFixedString_AnimGraphNode_64__{
 			REL::Offset(0x04565238)
 		};
@@ -8791,7 +8791,7 @@ namespace RE
 				REL::Offset(0x0444C5A0)
 			};
 		inline constexpr std::array<REL::Offset, 1>
-			AutoRegisterSmartPtrDerivedPathingType_BSTPathingRequest_EscortPathingRequestPolicy__BSPathingRequest_64_{ REL::Offset(0x03F1F680) };
+													AutoRegisterSmartPtrDerivedPathingType_BSTPathingRequest_EscortPathingRequestPolicy__BSPathingRequest_64_{ REL::Offset(0x03F1F680) };
 		inline constexpr std::array<REL::Offset, 1> AutoRegisterSmartPtrDerivedPathingType_CombatPathingRequestAdapter_BSPathingRequest_64_{
 			REL::Offset(0x03F1F798)
 		};
@@ -8941,12 +8941,12 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 2> BGSActivity{ REL::Offset(0x0436E530), REL::Offset(0x0436E590) };
 		inline constexpr std::array<REL::Offset, 2> BGSActivityRuntimeT_BGSActorValueActivity_{ REL::Offset(0x0433E2F8), REL::Offset(0x0433E310) };
 		inline constexpr std::array<REL::Offset, 2> BGSActivityRuntimeT_BGSApplyMagicEffectActivity_{ REL::Offset(0x0433E988),
-			                                                                                          REL::Offset(0x0433E9A0) };
+			REL::Offset(0x0433E9A0) };
 		inline constexpr std::array<REL::Offset, 2> BGSActivityRuntimeT_BGSBarterActivity_{ REL::Offset(0x043415D0), REL::Offset(0x043415E8) };
 		inline constexpr std::array<REL::Offset, 2> BGSActivityRuntimeT_BGSBleedoutActivity_{ REL::Offset(0x0433EBF8), REL::Offset(0x0433EC10) };
 		inline constexpr std::array<REL::Offset, 2> BGSActivityRuntimeT_BGSBuildWorkshopActivity_{ REL::Offset(0x0433EE18), REL::Offset(0x0433EE30) };
 		inline constexpr std::array<REL::Offset, 2> BGSActivityRuntimeT_BGSCompleteResearchActivity_{ REL::Offset(0x0433F028),
-			                                                                                          REL::Offset(0x0433F0C8) };
+			REL::Offset(0x0433F0C8) };
 		inline constexpr std::array<REL::Offset, 2> BGSActivityRuntimeT_BGSConsumeActivity_{ REL::Offset(0x0433F230), REL::Offset(0x0433F248) };
 		inline constexpr std::array<REL::Offset, 2> BGSActivityRuntimeT_BGSCraftActivity_{ REL::Offset(0x0433F468), REL::Offset(0x0433F508) };
 		inline constexpr std::array<REL::Offset, 2> BGSActivityRuntimeT_BGSCrippleLimbActivity_{ REL::Offset(0x0433F678), REL::Offset(0x0433F718) };
@@ -8960,24 +8960,24 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 2> BGSActivityRuntimeT_BGSLootContainerActivity_{ REL::Offset(0x04340508), REL::Offset(0x043405A8) };
 		inline constexpr std::array<REL::Offset, 2> BGSActivityRuntimeT_BGSLoseEnemyActivity_{ REL::Offset(0x04340740), REL::Offset(0x04340758) };
 		inline constexpr std::array<REL::Offset, 2> BGSActivityRuntimeT_BGSPlayerPickpocketActivity_{ REL::Offset(0x04340940),
-			                                                                                          REL::Offset(0x043409E0) };
+			REL::Offset(0x043409E0) };
 		inline constexpr std::array<REL::Offset, 2> BGSActivityRuntimeT_BGSProduceActivity_{ REL::Offset(0x04340B40), REL::Offset(0x04340BE0) };
 		inline constexpr std::array<REL::Offset, 2> BGSActivityRuntimeT_BGSReloadWeaponActivity_{ REL::Offset(0x04340D58), REL::Offset(0x04340D70) };
 		inline constexpr std::array<REL::Offset, 2> BGSActivityRuntimeT_BGSScanPlanetActivity_{ REL::Offset(0x04340F58), REL::Offset(0x04340FF8) };
 		inline constexpr std::array<REL::Offset, 2> BGSActivityRuntimeT_BGSScanSurfaceActivity_{ REL::Offset(0x043417E0), REL::Offset(0x043417F8) };
 		inline constexpr std::array<REL::Offset, 2> BGSActivityRuntimeT_BGSShipCollectionActivity_{ REL::Offset(0x04341DF8),
-			                                                                                        REL::Offset(0x04341E10) };
+			REL::Offset(0x04341E10) };
 		inline constexpr std::array<REL::Offset, 2> BGSActivityRuntimeT_BGSShipbuilderActivity_{ REL::Offset(0x04341BF8), REL::Offset(0x04341C98) };
 		inline constexpr std::array<REL::Offset, 2> BGSActivityRuntimeT_BGSSpeechChallengeActivity_{ REL::Offset(0x04342028),
-			                                                                                         REL::Offset(0x043420C8) };
+			REL::Offset(0x043420C8) };
 		inline constexpr std::array<REL::Offset, 2> BGSActivityRuntimeT_BGSSprintActivity_{ REL::Offset(0x04342240), REL::Offset(0x04342258) };
 		inline constexpr std::array<REL::Offset, 2> BGSActivityRuntimeT_BGSTakeActorDamageActivity_{ REL::Offset(0x04342460),
-			                                                                                         REL::Offset(0x04342500) };
+			REL::Offset(0x04342500) };
 		inline constexpr std::array<REL::Offset, 2> BGSActivityRuntimeT_BGSTakeDamageActivity_{ REL::Offset(0x04342660), REL::Offset(0x04342700) };
 		inline constexpr std::array<REL::Offset, 1> BGSActivityTrackerFormComponent{ REL::Offset(0x043524D0) };
 		inline constexpr std::array<REL::Offset, 2> BGSActorValueActivity{ REL::Offset(0x0433E8E0), REL::Offset(0x0433E8F8) };
 		inline constexpr std::array<REL::Offset, 4> BGSActorValueActivity_Runtime{ REL::Offset(0x0433E7F8), REL::Offset(0x0433E810),
-			                                                                       REL::Offset(0x0433E828), REL::Offset(0x0433E840) };
+			REL::Offset(0x0433E828), REL::Offset(0x0433E840) };
 		inline constexpr std::array<REL::Offset, 1> BGSAddToInventoryOnDestroy{ REL::Offset(0x043525A0) };
 		inline constexpr std::array<REL::Offset, 3> BGSAddonNode{ REL::Offset(0x043AF430), REL::Offset(0x043AF848), REL::Offset(0x043AF8C0) };
 		inline constexpr std::array<REL::Offset, 1> BGSAddonNodeSoundHandleExtra{ REL::Offset(0x043AF250) };
@@ -8992,10 +8992,10 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BGSAnimationPathImplementation{ REL::Offset(0x044D79E8) };
 		inline constexpr std::array<REL::Offset, 2> BGSApplyMagicEffectActivity{ REL::Offset(0x0433EB40), REL::Offset(0x0433EB58) };
 		inline constexpr std::array<REL::Offset, 5> BGSApplyMagicEffectActivity_Runtime{ REL::Offset(0x0433EA40), REL::Offset(0x0433EA58),
-			                                                                             REL::Offset(0x0433EA70), REL::Offset(0x0433EA88),
-			                                                                             REL::Offset(0x0433EAA0) };
+			REL::Offset(0x0433EA70), REL::Offset(0x0433EA88),
+			REL::Offset(0x0433EAA0) };
 		inline constexpr std::array<REL::Offset, 5> BGSArtObject{ REL::Offset(0x043AF8D8), REL::Offset(0x043AF940), REL::Offset(0x043AF960),
-			                                                      REL::Offset(0x043AFA70), REL::Offset(0x043AFE88) };
+			REL::Offset(0x043AFA70), REL::Offset(0x043AFE88) };
 		inline constexpr std::array<REL::Offset, 1> BGSArtObjectCloneTask{ REL::Offset(0x043AF9D8) };
 		inline constexpr std::array<REL::Offset, 2> BGSAssociationType{ REL::Offset(0x04404D28), REL::Offset(0x04404D40) };
 		inline constexpr std::array<REL::Offset, 2> BGSAtmosphere{ REL::Offset(0x043AA0C8), REL::Offset(0x043AA0E0) };
@@ -9019,7 +9019,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BGSAudio__WwiseService{ REL::Offset(0x044577C0) };
 		inline constexpr std::array<REL::Offset, 2> BGSBarterActivity{ REL::Offset(0x04341758), REL::Offset(0x04341770) };
 		inline constexpr std::array<REL::Offset, 3> BGSBarterActivity_Runtime{ REL::Offset(0x04341688), REL::Offset(0x043416A0),
-			                                                                   REL::Offset(0x043416B8) };
+			REL::Offset(0x043416B8) };
 		inline constexpr std::array<REL::Offset, 1> BGSBaseAlias{ REL::Offset(0x04408E48) };
 		inline constexpr std::array<REL::Offset, 2> BGSBaseFormT_AimDownSightData_153_{ REL::Offset(0x0438AF80), REL::Offset(0x0438AFF8) };
 		inline constexpr std::array<REL::Offset, 2> BGSBaseFormT_AimOpticalSightData_194_{ REL::Offset(0x0438BD00), REL::Offset(0x0438C018) };
@@ -9029,26 +9029,26 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BGSBaseLODRuntimeComponent{ REL::Offset(0x0434FB80) };
 		inline constexpr std::array<REL::Offset, 2> BGSBendableSpline{ REL::Offset(0x043AFF50), REL::Offset(0x043B0368) };
 		inline constexpr std::array<REL::Offset, 5> BGSBiome{ REL::Offset(0x043AA840), REL::Offset(0x043AA8C0), REL::Offset(0x043AA938),
-			                                                  REL::Offset(0x043AA9A0), REL::Offset(0x043AACB8) };
+			REL::Offset(0x043AA9A0), REL::Offset(0x043AACB8) };
 		inline constexpr std::array<REL::Offset, 5> BGSBiomeMarkerObject{ REL::Offset(0x0438E268), REL::Offset(0x0438E680), REL::Offset(0x0438E6F8),
-			                                                              REL::Offset(0x0438E710), REL::Offset(0x0438E730) };
+			REL::Offset(0x0438E710), REL::Offset(0x0438E730) };
 		inline constexpr std::array<REL::Offset, 1> BGSBiome__MarkerKeywordData{ REL::Offset(0x043AA800) };
 		inline constexpr std::array<REL::Offset, 2> BGSBleedoutActivity{ REL::Offset(0x0433ED80), REL::Offset(0x0433ED98) };
 		inline constexpr std::array<REL::Offset, 3> BGSBleedoutActivity_Runtime{ REL::Offset(0x0433ECB0), REL::Offset(0x0433ECC8),
-			                                                                     REL::Offset(0x0433ECE0) };
+			REL::Offset(0x0433ECE0) };
 		inline constexpr std::array<REL::Offset, 1> BGSBlockBashData{ REL::Offset(0x0436C268) };
 		inline constexpr std::array<REL::Offset, 2> BGSBodyManager{ REL::Offset(0x0434A148), REL::Offset(0x0434A160) };
 		inline constexpr std::array<REL::Offset, 4> BGSBodyPartData{ REL::Offset(0x04405088), REL::Offset(0x044053A0), REL::Offset(0x04405418),
-			                                                         REL::Offset(0x04405430) };
+			REL::Offset(0x04405430) };
 		inline constexpr std::array<REL::Offset, 1> BGSBodyPartInfo{ REL::Offset(0x04352798) };
 		inline constexpr std::array<REL::Offset, 1> BGSBodyUtils__SkinColorUpdateNode{ REL::Offset(0x0434A0F8) };
 		inline constexpr std::array<REL::Offset, 2> BGSBoneModifier{ REL::Offset(0x0438FE98), REL::Offset(0x0438FEB0) };
 		inline constexpr std::array<REL::Offset, 2> BGSBuildWorkshopActivity{ REL::Offset(0x0433EFA0), REL::Offset(0x0433EFB8) };
 		inline constexpr std::array<REL::Offset, 3> BGSBuildWorkshopActivity_Runtime{ REL::Offset(0x0433EED0), REL::Offset(0x0433EEE8),
-			                                                                          REL::Offset(0x0433EF88) };
+			REL::Offset(0x0433EF88) };
 		inline constexpr std::array<REL::Offset, 2> BGSCameraPath{ REL::Offset(0x043D3A20), REL::Offset(0x043D3D38) };
 		inline constexpr std::array<REL::Offset, 6> BGSCameraShot{ REL::Offset(0x043D3ED0), REL::Offset(0x043D41E8), REL::Offset(0x043D4200),
-			                                                       REL::Offset(0x043D4278), REL::Offset(0x043D42E0), REL::Offset(0x043D4300) };
+			REL::Offset(0x043D4278), REL::Offset(0x043D42E0), REL::Offset(0x043D4300) };
 		inline constexpr std::array<REL::Offset, 2> BGSChallengeForm{ REL::Offset(0x0434E3D8), REL::Offset(0x0434E3F0) };
 		inline constexpr std::array<REL::Offset, 1> BGSCharacterMorph__FacialBoneSculptSlider{ REL::Offset(0x043A6238) };
 		inline constexpr std::array<REL::Offset, 1> BGSCharacterMorph__FacialBoneSlider{ REL::Offset(0x043A6290) };
@@ -9057,25 +9057,25 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 3> BGSColorForm{ REL::Offset(0x043D4690), REL::Offset(0x043D4708), REL::Offset(0x043D4A20) };
 		inline constexpr std::array<REL::Offset, 2> BGSCompleteResearchActivity{ REL::Offset(0x0433F1B0), REL::Offset(0x0433F1C8) };
 		inline constexpr std::array<REL::Offset, 3> BGSCompleteResearchActivity_Runtime{ REL::Offset(0x0433F0E0), REL::Offset(0x0433F0F8),
-			                                                                             REL::Offset(0x0433F198) };
+			REL::Offset(0x0433F198) };
 		inline constexpr std::array<REL::Offset, 2> BGSConditionForm{ REL::Offset(0x043AACD0), REL::Offset(0x043AACE8) };
 		inline constexpr std::array<REL::Offset, 7> BGSConstructibleObject{ REL::Offset(0x043B0490), REL::Offset(0x043B0508), REL::Offset(0x043B0568),
-			                                                                REL::Offset(0x043B05C8), REL::Offset(0x043B0628), REL::Offset(0x043B0948),
-			                                                                REL::Offset(0x043B0960) };
+			REL::Offset(0x043B05C8), REL::Offset(0x043B0628), REL::Offset(0x043B0948),
+			REL::Offset(0x043B0960) };
 		inline constexpr std::array<REL::Offset, 2> BGSConsumeActivity{ REL::Offset(0x0433F3C8), REL::Offset(0x0433F3E0) };
 		inline constexpr std::array<REL::Offset, 3> BGSConsumeActivity_Runtime{ REL::Offset(0x0433F2F8), REL::Offset(0x0433F310),
-			                                                                    REL::Offset(0x0433F3B0) };
+			REL::Offset(0x0433F3B0) };
 		inline constexpr std::array<REL::Offset, 1> BGSContactShadowComponent{ REL::Offset(0x0434A600) };
 		inline constexpr std::array<REL::Offset, 1> BGSConveyorBelt__ConveyorBelt{ REL::Offset(0x04356B90) };
 		inline constexpr std::array<REL::Offset, 2> BGSCraftActivity{ REL::Offset(0x0433F550), REL::Offset(0x0433F608) };
 		inline constexpr std::array<REL::Offset, 3> BGSCraftActivity_Runtime{ REL::Offset(0x0433F520), REL::Offset(0x0433F538),
-			                                                                  REL::Offset(0x0433F568) };
+			REL::Offset(0x0433F568) };
 		inline constexpr std::array<REL::Offset, 4> BGSCraftableForm{ REL::Offset(0x0438E798), REL::Offset(0x0438E7B0), REL::Offset(0x0438EAD0),
-			                                                          REL::Offset(0x0438EB48) };
+			REL::Offset(0x0438EB48) };
 		inline constexpr std::array<REL::Offset, 1> BGSCraftingResourceOwner{ REL::Offset(0x04352868) };
 		inline constexpr std::array<REL::Offset, 2> BGSCrippleLimbActivity{ REL::Offset(0x0433F760), REL::Offset(0x0433F818) };
 		inline constexpr std::array<REL::Offset, 3> BGSCrippleLimbActivity_Runtime{ REL::Offset(0x0433F730), REL::Offset(0x0433F748),
-			                                                                        REL::Offset(0x0433F778) };
+			REL::Offset(0x0433F778) };
 		inline constexpr std::array<REL::Offset, 1> BGSCrowdComponent{ REL::Offset(0x04352A00) };
 		inline constexpr std::array<REL::Offset, 2> BGSCurve3DForm{ REL::Offset(0x0438A3E8), REL::Offset(0x0438A750) };
 		inline constexpr std::array<REL::Offset, 2> BGSCurveForm{ REL::Offset(0x0438A768), REL::Offset(0x0438AAD0) };
@@ -9088,14 +9088,14 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 2> BGSDefaultObjectManager{ REL::Offset(0x03F26180), REL::Offset(0x03F26498) };
 		inline constexpr std::array<REL::Offset, 2> BGSDestroyShipActivity{ REL::Offset(0x0433FA30), REL::Offset(0x0433FA48) };
 		inline constexpr std::array<REL::Offset, 3> BGSDestroyShipActivity_Runtime{ REL::Offset(0x0433F960), REL::Offset(0x0433F978),
-			                                                                        REL::Offset(0x0433FA18) };
+			REL::Offset(0x0433FA18) };
 		inline constexpr std::array<REL::Offset, 1> BGSDestructibleObjectForm{ REL::Offset(0x0436C338) };
 		inline constexpr std::array<REL::Offset, 2> BGSDialogueBranch{ REL::Offset(0x04405448), REL::Offset(0x04405760) };
 		inline constexpr std::array<REL::Offset, 1> BGSDisplayCaseFormComponent{ REL::Offset(0x04352AA8) };
 		inline constexpr std::array<REL::Offset, 1> BGSDistantObjectBlock{ REL::Offset(0x044515F0) };
 		inline constexpr std::array<REL::Offset, 2> BGSDockingActivity{ REL::Offset(0x0433FBB8), REL::Offset(0x0433FC88) };
 		inline constexpr std::array<REL::Offset, 3> BGSDockingActivity_Runtime{ REL::Offset(0x0433FBA0), REL::Offset(0x0433FBD0),
-			                                                                    REL::Offset(0x0433FBE8) };
+			REL::Offset(0x0433FBE8) };
 		inline constexpr std::array<REL::Offset, 2> BGSDualCastData{ REL::Offset(0x04360A20), REL::Offset(0x04360A38) };
 		inline constexpr std::array<REL::Offset, 1> BGSDynamicLODBlock{ REL::Offset(0x0434FF30) };
 		inline constexpr std::array<REL::Offset, 1> BGSDynamicLODBlock__InstancedAutoDetachBlock{ REL::Offset(0x0434FFE8) };
@@ -9115,8 +9115,8 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BGSEntryPointPerkEntry{ REL::Offset(0x04409EF0) };
 		inline constexpr std::array<REL::Offset, 2> BGSEquipSlot{ REL::Offset(0x04407B78), REL::Offset(0x04407E90) };
 		inline constexpr std::array<REL::Offset, 7> BGSExplosion{ REL::Offset(0x043B0D18), REL::Offset(0x043B0D30), REL::Offset(0x043B0D90),
-			                                                      REL::Offset(0x043B0DA8), REL::Offset(0x043B0E20), REL::Offset(0x043B0E98),
-			                                                      REL::Offset(0x043B0F00) };
+			REL::Offset(0x043B0DA8), REL::Offset(0x043B0E20), REL::Offset(0x043B0E98),
+			REL::Offset(0x043B0F00) };
 		inline constexpr std::array<REL::Offset, 1> BGSExternalComponentDataSource{ REL::Offset(0x04352D18) };
 		inline constexpr std::array<REL::Offset, 1> BGSFaceFX{ REL::Offset(0x04351598) };
 		inline constexpr std::array<REL::Offset, 1> BGSFadeManager{ REL::Offset(0x0434A1E8) };
@@ -9136,23 +9136,23 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BGSGrassManager__CellGrass{ REL::Offset(0x0436FA70) };
 		inline constexpr std::array<REL::Offset, 2> BGSGravJumpActivity{ REL::Offset(0x0433FE70), REL::Offset(0x0433FE88) };
 		inline constexpr std::array<REL::Offset, 3> BGSGravJumpActivity_Runtime{ REL::Offset(0x0433FDA0), REL::Offset(0x0433FDB8),
-			                                                                     REL::Offset(0x0433FE58) };
+			REL::Offset(0x0433FE58) };
 		inline constexpr std::array<REL::Offset, 2> BGSGroundCover{ REL::Offset(0x043C8848), REL::Offset(0x043C8B60) };
 		inline constexpr std::array<REL::Offset, 1> BGSGroupedInstancedGeometry{ REL::Offset(0x0434A2B8) };
 		inline constexpr std::array<REL::Offset, 2> BGSHarvestActivity{ REL::Offset(0x04340070), REL::Offset(0x04340088) };
 		inline constexpr std::array<REL::Offset, 3> BGSHarvestActivity_Runtime{ REL::Offset(0x0433FFA0), REL::Offset(0x04340040),
-			                                                                    REL::Offset(0x04340058) };
+			REL::Offset(0x04340058) };
 		inline constexpr std::array<REL::Offset, 1> BGSHavokGeometryAttach{ REL::Offset(0x0436E868) };
 		inline constexpr std::array<REL::Offset, 1> BGSHavokGeometryAttach__ActionPolicy{ REL::Offset(0x0436E838) };
 		inline constexpr std::array<REL::Offset, 1> BGSHavokGeometryAttach__AttachPolicy{ REL::Offset(0x0436E850) };
 		inline constexpr std::array<REL::Offset, 1> BGSHavokGeometryAttach__DetachPolicy{ REL::Offset(0x0436E8A8) };
 		inline constexpr std::array<REL::Offset, 6> BGSHazard{ REL::Offset(0x03EF4A28), REL::Offset(0x03EF4A40), REL::Offset(0x03EF4A58),
-			                                                   REL::Offset(0x03EF4AD0), REL::Offset(0x03EF4EE8), REL::Offset(0x03EF4F60) };
+			REL::Offset(0x03EF4AD0), REL::Offset(0x03EF4EE8), REL::Offset(0x03EF4F60) };
 		inline constexpr std::array<REL::Offset, 4> BGSHeadPart{ REL::Offset(0x04407F90), REL::Offset(0x044082A8), REL::Offset(0x044082C0),
-			                                                     REL::Offset(0x04408338) };
+			REL::Offset(0x04408338) };
 		inline constexpr std::array<REL::Offset, 1> BGSIdleCollection{ REL::Offset(0x0436C420) };
 		inline constexpr std::array<REL::Offset, 6> BGSIdleMarker{ REL::Offset(0x044084E8), REL::Offset(0x04408508), REL::Offset(0x04408580),
-			                                                       REL::Offset(0x044085E0), REL::Offset(0x044089F8), REL::Offset(0x04408A10) };
+			REL::Offset(0x044085E0), REL::Offset(0x044089F8), REL::Offset(0x04408A10) };
 		inline constexpr std::array<REL::Offset, 3> BGSImpactData{ REL::Offset(0x043D7620), REL::Offset(0x043D7938), REL::Offset(0x043D79B0) };
 		inline constexpr std::array<REL::Offset, 3> BGSImpactDataSet{ REL::Offset(0x043D7A20), REL::Offset(0x043D7A38), REL::Offset(0x043D7A50) };
 		inline constexpr std::array<REL::Offset, 3> BGSImpactManager{ REL::Offset(0x044D0238), REL::Offset(0x044D0250), REL::Offset(0x044D0268) };
@@ -9163,7 +9163,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 2> BGSKeywordForm{ REL::Offset(0x0436C4B8), REL::Offset(0x0436C4D8) };
 		inline constexpr std::array<REL::Offset, 2> BGSKillActivity{ REL::Offset(0x043401E0), REL::Offset(0x043402E0) };
 		inline constexpr std::array<REL::Offset, 3> BGSKillActivity_Runtime{ REL::Offset(0x043401B0), REL::Offset(0x043401C8),
-			                                                                 REL::Offset(0x04340240) };
+			REL::Offset(0x04340240) };
 		inline constexpr std::array<REL::Offset, 3> BGSLODManager{ REL::Offset(0x04451A88), REL::Offset(0x04451A98), REL::Offset(0x04451AB0) };
 		inline constexpr std::array<REL::Offset, 1> BGSLODStates__Geometry__Attached{ REL::Offset(0x0434F6A0) };
 		inline constexpr std::array<REL::Offset, 1> BGSLODStates__Geometry__Attaching{ REL::Offset(0x0434F710) };
@@ -9194,17 +9194,17 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BGSLODStates__Node__Unloaded{ REL::Offset(0x044522C8) };
 		inline constexpr std::array<REL::Offset, 2> BGSLandPlanetActivity{ REL::Offset(0x04340490), REL::Offset(0x043404F0) };
 		inline constexpr std::array<REL::Offset, 3> BGSLandPlanetActivity_Runtime{ REL::Offset(0x043403C0), REL::Offset(0x043403D8),
-			                                                                       REL::Offset(0x04340478) };
+			REL::Offset(0x04340478) };
 		inline constexpr std::array<REL::Offset, 3> BGSLayeredMaterialSwap{ REL::Offset(0x0438DA28), REL::Offset(0x0438DA40),
-			                                                                REL::Offset(0x0438DDA8) };
+			REL::Offset(0x0438DDA8) };
 		inline constexpr std::array<REL::Offset, 4> BGSLegendaryItem{ REL::Offset(0x0438EF28), REL::Offset(0x0438EF40), REL::Offset(0x0438F358),
-			                                                          REL::Offset(0x0438F3D0) };
+			REL::Offset(0x0438F3D0) };
 		inline constexpr std::array<REL::Offset, 2> BGSLensFlare{ REL::Offset(0x043B1B00), REL::Offset(0x043B1E18) };
 		inline constexpr std::array<REL::Offset, 1> BGSLensFlareSprite{ REL::Offset(0x043B1E48) };
 		inline constexpr std::array<REL::Offset, 4> BGSLevGenericBaseForm{ REL::Offset(0x043B1E60), REL::Offset(0x043B1ED8), REL::Offset(0x043B22F0),
-			                                                               REL::Offset(0x043B2308) };
+			REL::Offset(0x043B2308) };
 		inline constexpr std::array<REL::Offset, 5> BGSLevPackIn{ REL::Offset(0x043B2398), REL::Offset(0x043B2428), REL::Offset(0x043B24A0),
-			                                                      REL::Offset(0x043B2500), REL::Offset(0x043B2918) };
+			REL::Offset(0x043B2500), REL::Offset(0x043B2918) };
 		inline constexpr std::array<REL::Offset, 3> BGSLevSpaceCell{ REL::Offset(0x043C8C28), REL::Offset(0x043C8CB8), REL::Offset(0x043C8CD0) };
 		inline constexpr std::array<REL::Offset, 2> BGSLightingTemplate{ REL::Offset(0x043C8FE8), REL::Offset(0x043C9300) };
 		inline constexpr std::array<REL::Offset, 1> BGSLinkedVoiceType{ REL::Offset(0x04352F80) };
@@ -9215,29 +9215,29 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BGSLoadedSceneLODBlock{ REL::Offset(0x044523D8) };
 		inline constexpr std::array<REL::Offset, 1> BGSLocAlias{ REL::Offset(0x04408DE0) };
 		inline constexpr std::array<REL::Offset, 7> BGSLocation{ REL::Offset(0x043C9610), REL::Offset(0x043C9678), REL::Offset(0x043C96D8),
-			                                                     REL::Offset(0x043C96F8), REL::Offset(0x043C9760), REL::Offset(0x043C97D8),
-			                                                     REL::Offset(0x043C97F0) };
+			REL::Offset(0x043C96F8), REL::Offset(0x043C9760), REL::Offset(0x043C97D8),
+			REL::Offset(0x043C97F0) };
 		inline constexpr std::array<REL::Offset, 2> BGSLocationRefType{ REL::Offset(0x043C9FF0), REL::Offset(0x043CA008) };
 		inline constexpr std::array<REL::Offset, 2> BGSLockPickActivity{ REL::Offset(0x04341AB0), REL::Offset(0x04341BC8) };
 		inline constexpr std::array<REL::Offset, 3> BGSLockPickActivity_Runtime{ REL::Offset(0x04341A98), REL::Offset(0x04341B10),
-			                                                                     REL::Offset(0x04341B28) };
+			REL::Offset(0x04341B28) };
 		inline constexpr std::array<REL::Offset, 2> BGSLodOwnerComponent{ REL::Offset(0x04353100), REL::Offset(0x04353148) };
 		inline constexpr std::array<REL::Offset, 1> BGSLodRuntimeOwnerComponent{ REL::Offset(0x0434FAB0) };
 		inline constexpr std::array<REL::Offset, 2> BGSLootContainerActivity{ REL::Offset(0x04340608), REL::Offset(0x04340668) };
 		inline constexpr std::array<REL::Offset, 4> BGSLootContainerActivity_Runtime{ REL::Offset(0x043405C0), REL::Offset(0x043405D8),
-			                                                                          REL::Offset(0x043405F0), REL::Offset(0x04340680) };
+			REL::Offset(0x043405F0), REL::Offset(0x04340680) };
 		inline constexpr std::array<REL::Offset, 2> BGSLoseEnemyActivity{ REL::Offset(0x043408C8), REL::Offset(0x04340928) };
 		inline constexpr std::array<REL::Offset, 3> BGSLoseEnemyActivity_Runtime{ REL::Offset(0x043407F8), REL::Offset(0x04340898),
-			                                                                      REL::Offset(0x043408B0) };
+			REL::Offset(0x043408B0) };
 		inline constexpr std::array<REL::Offset, 2> BGSMaterialPathForm{ REL::Offset(0x0438D610), REL::Offset(0x0438D628) };
 		inline constexpr std::array<REL::Offset, 2> BGSMaterialPropertyComponent{ REL::Offset(0x04353258), REL::Offset(0x043532C0) };
 		inline constexpr std::array<REL::Offset, 2> BGSMaterialType{ REL::Offset(0x043D8110), REL::Offset(0x043D8438) };
 		inline constexpr std::array<REL::Offset, 2> BGSMeleeAimAssistModel{ REL::Offset(0x0438AC50), REL::Offset(0x0438AF68) };
 		inline constexpr std::array<REL::Offset, 4> BGSMessage{ REL::Offset(0x043D8478), REL::Offset(0x043D84F0), REL::Offset(0x043D8508),
-			                                                    REL::Offset(0x043D8820) };
+			REL::Offset(0x043D8820) };
 		inline constexpr std::array<REL::Offset, 5> BGSMod__Attachment__Mod{ REL::Offset(0x043B3648), REL::Offset(0x043B3960),
-			                                                                 REL::Offset(0x043B3978), REL::Offset(0x043B39F0),
-			                                                                 REL::Offset(0x043B3A50) };
+			REL::Offset(0x043B3978), REL::Offset(0x043B39F0),
+			REL::Offset(0x043B3A50) };
 		inline constexpr std::array<REL::Offset, 1> BGSMod__Property__BridgeI{ REL::Offset(0x03EF3CB8) };
 		inline constexpr std::array<REL::Offset, 1> BGSMod__Property__Bridge_Spaceship__InstanceData_{ REL::Offset(0x03F21780) };
 		inline constexpr std::array<REL::Offset, 1> BGSMod__Property__Bridge_TESFloraInstanceData_{ REL::Offset(0x03F21880) };
@@ -9254,8 +9254,8 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BGSMotorAction__Action{ REL::Offset(0x04356E68) };
 		inline constexpr std::array<REL::Offset, 1> BGSMotorAction__FanMotor{ REL::Offset(0x04356E20) };
 		inline constexpr std::array<REL::Offset, 9> BGSMovableStatic{ REL::Offset(0x043B2C78), REL::Offset(0x043B2CD8), REL::Offset(0x043B2D38),
-			                                                          REL::Offset(0x043B2DA0), REL::Offset(0x043B2DC0), REL::Offset(0x043B2DD8),
-			                                                          REL::Offset(0x043B2E50), REL::Offset(0x043B2EB0), REL::Offset(0x043B2F10) };
+			REL::Offset(0x043B2DA0), REL::Offset(0x043B2DC0), REL::Offset(0x043B2DD8),
+			REL::Offset(0x043B2E50), REL::Offset(0x043B2EB0), REL::Offset(0x043B2F10) };
 		inline constexpr std::array<REL::Offset, 2> BGSMovementType{ REL::Offset(0x04408EB8), REL::Offset(0x044091D0) };
 		inline constexpr std::array<REL::Offset, 1> BGSMoviePlayer{ REL::Offset(0x044D0308) };
 		inline constexpr std::array<REL::Offset, 1> BGSMultiTechniqueAttach{ REL::Offset(0x0436E7E0) };
@@ -9267,7 +9267,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BGSMusicSingleTrack{ REL::Offset(0x043D8AC0) };
 		inline constexpr std::array<REL::Offset, 1> BGSMusicTrack{ REL::Offset(0x043D8908) };
 		inline constexpr std::array<REL::Offset, 3> BGSMusicTrackFormWrapper{ REL::Offset(0x043D8B38), REL::Offset(0x043D8E50),
-			                                                                  REL::Offset(0x043D8EB0) };
+			REL::Offset(0x043D8EB0) };
 		inline constexpr std::array<REL::Offset, 3> BGSMusicType{ REL::Offset(0x043D8EC8), REL::Offset(0x043D91E0), REL::Offset(0x043D9228) };
 		inline constexpr std::array<REL::Offset, 1> BGSNamedNodeAttach{ REL::Offset(0x0436E758) };
 		inline constexpr std::array<REL::Offset, 1> BGSNamedNodeAttach__ActionPolicy{ REL::Offset(0x0436E890) };
@@ -9275,33 +9275,33 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BGSNamedNodeAttach__DetachPolicy{ REL::Offset(0x0436E780) };
 		inline constexpr std::array<REL::Offset, 2> BGSNamedPackageData_IAITarget_{ REL::Offset(0x04443C58), REL::Offset(0x04443CC0) };
 		inline constexpr std::array<REL::Offset, 2> BGSNamedPackageData_IPackageDataAIWorldLocationHandle_{ REL::Offset(0x04443A38),
-			                                                                                                REL::Offset(0x04443AA8) };
+			REL::Offset(0x04443AA8) };
 		inline constexpr std::array<REL::Offset, 1> BGSNamedPackageData_IPackageData_{ REL::Offset(0x04342F88) };
 		inline constexpr std::array<REL::Offset, 6> BGSNavigationGridManager{ REL::Offset(0x04376A28), REL::Offset(0x04376A40),
-			                                                                  REL::Offset(0x04376A58), REL::Offset(0x04376A70),
-			                                                                  REL::Offset(0x04376A88), REL::Offset(0x04376AA0) };
+			REL::Offset(0x04376A58), REL::Offset(0x04376A70),
+			REL::Offset(0x04376A88), REL::Offset(0x04376AA0) };
 		inline constexpr std::array<REL::Offset, 7> BGSNote{ REL::Offset(0x044091E8), REL::Offset(0x04409260), REL::Offset(0x044092D8),
-			                                                 REL::Offset(0x04409338), REL::Offset(0x04409750), REL::Offset(0x04409768),
-			                                                 REL::Offset(0x044097C8) };
+			REL::Offset(0x04409338), REL::Offset(0x04409750), REL::Offset(0x04409768),
+			REL::Offset(0x044097C8) };
 		inline constexpr std::array<REL::Offset, 1> BGSObjectInstanceExtra{ REL::Offset(0x04350EB0) };
 		inline constexpr std::array<REL::Offset, 1> BGSObjectPlacementDefaults{ REL::Offset(0x04353598) };
 		inline constexpr std::array<REL::Offset, 2> BGSObjectSwap{ REL::Offset(0x043ABE58), REL::Offset(0x043ABE70) };
 		inline constexpr std::array<REL::Offset, 3> BGSObjectVisibilityManager{ REL::Offset(0x03F10CA0), REL::Offset(0x03F10CB8),
-			                                                                    REL::Offset(0x03F10CD0) };
+			REL::Offset(0x03F10CD0) };
 		inline constexpr std::array<REL::Offset, 1> BGSObjectWindowFilterComponent{ REL::Offset(0x0434A740) };
 		inline constexpr std::array<REL::Offset, 1> BGSOrbitalDataComponent{ REL::Offset(0x04353670) };
 		inline constexpr std::array<REL::Offset, 1> BGSOrbitedDataComponent{ REL::Offset(0x04353770) };
 		inline constexpr std::array<REL::Offset, 2> BGSOutfit{ REL::Offset(0x043B3C78), REL::Offset(0x043B3C90) };
 		inline constexpr std::array<REL::Offset, 1> BGSOverridePackCollection{ REL::Offset(0x0436C8C8) };
 		inline constexpr std::array<REL::Offset, 8> BGSPackIn{ REL::Offset(0x043B4368), REL::Offset(0x043B4388), REL::Offset(0x043B43F0),
-			                                                   REL::Offset(0x043B4408), REL::Offset(0x043B4820), REL::Offset(0x043B4880),
-			                                                   REL::Offset(0x043B48E0), REL::Offset(0x043B4940) };
+			REL::Offset(0x043B4408), REL::Offset(0x043B4820), REL::Offset(0x043B4880),
+			REL::Offset(0x043B48E0), REL::Offset(0x043B4940) };
 		inline constexpr std::array<REL::Offset, 2>
 			BGSPackageDataBasicTemplate_IAITarget_TESPointerHandleDetail__PointerHandle_TESHandleManagerTag_TESObjectREFR_2097152__kPackageDataRefTypeName_0_{
 				REL::Offset(0x04443AD0), REL::Offset(0x04443B40)
 			};
 		inline constexpr std::array<REL::Offset, 1>
-			BGSPackageDataBasicTemplate_IPackageData_float_kPackageDataFloatTypeName_fPackageDataFloatDefault_{ REL::Offset(0x04443DA8) };
+													BGSPackageDataBasicTemplate_IPackageData_float_kPackageDataFloatTypeName_fPackageDataFloatDefault_{ REL::Offset(0x04443DA8) };
 		inline constexpr std::array<REL::Offset, 1> BGSPackageDataBasicTemplate_IPackageData_int_kPackageDataIntTypeName_iPackageDataIntDefault_{
 			REL::Offset(0x04443D30)
 		};
@@ -9315,8 +9315,8 @@ namespace RE
 			REL::Offset(0x04444500), REL::Offset(0x04444570)
 		};
 		inline constexpr std::array<REL::Offset, 2>
-			BGSPackageDataPointerTemplate_IPackageDataAIWorldLocationHandle_PackageLocation_kPackageDataLocationTypeName_{ REL::Offset(0x044439C8),
-			                                                                                                               REL::Offset(0x04443C28) };
+													BGSPackageDataPointerTemplate_IPackageDataAIWorldLocationHandle_PackageLocation_kPackageDataLocationTypeName_{ REL::Offset(0x044439C8),
+                REL::Offset(0x04443C28) };
 		inline constexpr std::array<REL::Offset, 1> BGSPackageDataPointerTemplate_IPackageData_PackageTarget_kPackageDataTargetSelectorTypeName_{
 			REL::Offset(0x04443BB0)
 		};
@@ -9345,7 +9345,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 2> BGSParticleSystemDefineCollection{ REL::Offset(0x0438F448), REL::Offset(0x0438F460) };
 		inline constexpr std::array<REL::Offset, 1> BGSPathingData{ REL::Offset(0x04353A28) };
 		inline constexpr std::array<REL::Offset, 4> BGSPerk{ REL::Offset(0x04409970), REL::Offset(0x04409C88), REL::Offset(0x04409CA0),
-			                                                 REL::Offset(0x04409D18) };
+			REL::Offset(0x04409D18) };
 		inline constexpr std::array<REL::Offset, 1> BGSPerkRank{ REL::Offset(0x04409DB0) };
 		inline constexpr std::array<REL::Offset, 3> BGSPhotoModeFeature{ REL::Offset(0x0434E838), REL::Offset(0x0434E850), REL::Offset(0x0434EB68) };
 		inline constexpr std::array<REL::Offset, 1> BGSPickupPutdownSounds{ REL::Offset(0x0436C988) };
@@ -9358,245 +9358,245 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BGSPlanetContentManager__LogEventData_0_BGSPlanetContentManagerPlacementContext_{ REL::Offset(
 			0x043821D0) };
 		inline constexpr std::array<REL::Offset, 1>
-			BGSPlanetContentManager__LogEventData_15_BGSPlanetContentManagerContentNode__PackInPlacementFailure_{ REL::Offset(0x04381B48) };
+													BGSPlanetContentManager__LogEventData_15_BGSPlanetContentManagerContentNode__PackInPlacementFailure_{ REL::Offset(0x04381B48) };
 		inline constexpr std::array<REL::Offset, 1> BGSPlanetContentManager__LogEventData_1_TESForm_{ REL::Offset(0x04381B90) };
 		inline constexpr std::array<REL::Offset, 1> BGSPlanetContentManager__LogEventData_2_BGSPlanetContentManagerPlacementContext_{ REL::Offset(
 			0x04381728) };
 		inline constexpr std::array<REL::Offset, 1>
-			BGSPlanetContentManager__LogEventData_7_BGSPlanetContentManagerContentProperties__PlacementResult_{ REL::Offset(0x04381C40) };
-		inline constexpr std::array<REL::Offset, 1> BGSPlanetContentManager__LogEventData_8_BGSBiomeMarkerObjectconst_{ REL::Offset(0x04381B80) };
-		inline constexpr std::array<REL::Offset, 1> BGSPlanetContentManager__LogEvent_0_{ REL::Offset(0x043821A8) };
-		inline constexpr std::array<REL::Offset, 1> BGSPlanetContentManager__LogEvent_10_{ REL::Offset(0x043816B0) };
-		inline constexpr std::array<REL::Offset, 1> BGSPlanetContentManager__LogEvent_11_{ REL::Offset(0x04381C50) };
-		inline constexpr std::array<REL::Offset, 1> BGSPlanetContentManager__LogEvent_12_{ REL::Offset(0x04381BF0) };
-		inline constexpr std::array<REL::Offset, 1> BGSPlanetContentManager__LogEvent_13_{ REL::Offset(0x04381BC8) };
-		inline constexpr std::array<REL::Offset, 1> BGSPlanetContentManager__LogEvent_14_{ REL::Offset(0x04381688) };
-		inline constexpr std::array<REL::Offset, 1> BGSPlanetContentManager__LogEvent_15_{ REL::Offset(0x04381B20) };
-		inline constexpr std::array<REL::Offset, 1> BGSPlanetContentManager__LogEvent_1_{ REL::Offset(0x04381CA0) };
-		inline constexpr std::array<REL::Offset, 1> BGSPlanetContentManager__LogEvent_2_{ REL::Offset(0x04381700) };
-		inline constexpr std::array<REL::Offset, 1> BGSPlanetContentManager__LogEvent_3_{ REL::Offset(0x04381660) };
-		inline constexpr std::array<REL::Offset, 1> BGSPlanetContentManager__LogEvent_4_{ REL::Offset(0x043816D8) };
-		inline constexpr std::array<REL::Offset, 1> BGSPlanetContentManager__LogEvent_5_{ REL::Offset(0x04381C78) };
-		inline constexpr std::array<REL::Offset, 1> BGSPlanetContentManager__LogEvent_6_{ REL::Offset(0x043820A0) };
-		inline constexpr std::array<REL::Offset, 1> BGSPlanetContentManager__LogEvent_7_{ REL::Offset(0x04381C18) };
-		inline constexpr std::array<REL::Offset, 1> BGSPlanetContentManager__LogEvent_8_{ REL::Offset(0x04381B58) };
-		inline constexpr std::array<REL::Offset, 1> BGSPlanetContentManager__LogEvent_9_{ REL::Offset(0x04381BA0) };
-		inline constexpr std::array<REL::Offset, 1> BGSPlanetContentManager__QueueContentRequestOnPlanet__25__RequestPlanetContentNode{ REL::Offset(
-			0x044D3BA8) };
-		inline constexpr std::array<REL::Offset, 1> BGSPlanet__Atmosphere{ REL::Offset(0x0437D558) };
-		inline constexpr std::array<REL::Offset, 1> BGSPlanet__ContentPlacement{ REL::Offset(0x0437EBC8) };
-		inline constexpr std::array<REL::Offset, 1> BGSPlanet__IModule{ REL::Offset(0x0437D290) };
-		inline constexpr std::array<REL::Offset, 1> BGSPlanet__LODNotifierModule{ REL::Offset(0x0437EC50) };
-		inline constexpr std::array<REL::Offset, 2> BGSPlanet__LandingMarkers{ REL::Offset(0x0437E170), REL::Offset(0x0437E1F8) };
-		inline constexpr std::array<REL::Offset, 1> BGSPlanet__Landscape{ REL::Offset(0x0437E5F0) };
-		inline constexpr std::array<REL::Offset, 1> BGSPlanet__Manager{ REL::Offset(0x0437ED58) };
-		inline constexpr std::array<REL::Offset, 1> BGSPlanet__Manager__MoveToNode{ REL::Offset(0x0437ECD8) };
-		inline constexpr std::array<REL::Offset, 1> BGSPlanet__Manager__ShiftToTask{ REL::Offset(0x0437ED40) };
-		inline constexpr std::array<REL::Offset, 1> BGSPlanet__MultiFiles__Grid{ REL::Offset(0x0437E400) };
-		inline constexpr std::array<REL::Offset, 1> BGSPlanet__MultiFiles__MasterFile{ REL::Offset(0x0437E378) };
-		inline constexpr std::array<REL::Offset, 7> BGSPlanet__NavMeshGen{ REL::Offset(0x0437EF10), REL::Offset(0x0437EF28), REL::Offset(0x0437EF50),
-			                                                               REL::Offset(0x0437F040), REL::Offset(0x0437F058), REL::Offset(0x0437F070),
-			                                                               REL::Offset(0x0437F088) };
-		inline constexpr std::array<REL::Offset, 1> BGSPlanet__OrderedLandTextures{ REL::Offset(0x0437E820) };
-		inline constexpr std::array<REL::Offset, 1> BGSPlanet__Overlays{ REL::Offset(0x0437E798) };
-		inline constexpr std::array<REL::Offset, 2> BGSPlanet__PlanetData{ REL::Offset(0x0437DB50), REL::Offset(0x0437DB68) };
-		inline constexpr std::array<REL::Offset, 1> BGSPlanet__ProcGen{ REL::Offset(0x0437F958) };
-		inline constexpr std::array<REL::Offset, 2> BGSPlanet__ProcGenRuntimeService{ REL::Offset(0x04380BC0), REL::Offset(0x04380C48) };
-		inline constexpr std::array<REL::Offset, 4> BGSPlanet__ScanCollection{ REL::Offset(0x044774C0), REL::Offset(0x044774D8),
-			                                                                   REL::Offset(0x044774F0), REL::Offset(0x04477508) };
-		inline constexpr std::array<REL::Offset, 1> BGSPlanet__SurfaceMapModule{ REL::Offset(0x0437E710) };
-		inline constexpr std::array<REL::Offset, 1> BGSPlanet__UpdateNavMeshTaskNode{ REL::Offset(0x0437EFD8) };
-		inline constexpr std::array<REL::Offset, 1> BGSPlanet____AddOverlayBlockFunctor{ REL::Offset(0x0437E360) };
-		inline constexpr std::array<REL::Offset, 1> BGSPlanet____GameStatusHandler{ REL::Offset(0x0437D318) };
-		inline constexpr std::array<REL::Offset, 3> BGSPlayerMusicChanger{ REL::Offset(0x044C7BE8), REL::Offset(0x044C7C00),
-			                                                               REL::Offset(0x044C7C18) };
-		inline constexpr std::array<REL::Offset, 2> BGSPlayerPickpocketActivity{ REL::Offset(0x04340AC8), REL::Offset(0x04340B28) };
-		inline constexpr std::array<REL::Offset, 3> BGSPlayerPickpocketActivity_Runtime{ REL::Offset(0x043409F8), REL::Offset(0x04340A98),
-			                                                                             REL::Offset(0x04340AB0) };
-		inline constexpr std::array<REL::Offset, 1> BGSPreviewTransform{ REL::Offset(0x04353B08) };
-		inline constexpr std::array<REL::Offset, 1> BGSPrimitive{ REL::Offset(0x043707D8) };
-		inline constexpr std::array<REL::Offset, 1> BGSPrimitiveBox{ REL::Offset(0x043706F0) };
-		inline constexpr std::array<REL::Offset, 1> BGSPrimitiveComponent{ REL::Offset(0x04353BB0) };
-		inline constexpr std::array<REL::Offset, 1> BGSPrimitiveCylinder{ REL::Offset(0x04370780) };
-		inline constexpr std::array<REL::Offset, 1> BGSPrimitiveEllipsoid{ REL::Offset(0x04370660) };
-		inline constexpr std::array<REL::Offset, 1> BGSPrimitiveLine{ REL::Offset(0x04370820) };
-		inline constexpr std::array<REL::Offset, 1> BGSPrimitivePlane{ REL::Offset(0x04370738) };
-		inline constexpr std::array<REL::Offset, 1> BGSPrimitiveSphere{ REL::Offset(0x043706A8) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureAcquire{ REL::Offset(0x04446388) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureAcquireExecState{ REL::Offset(0x04446338) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureActivate{ REL::Offset(0x04446660) };
-		inline constexpr std::array<REL::Offset, 3> BGSProcedureActivateExecState{ REL::Offset(0x044465E0), REL::Offset(0x04446630),
-			                                                                       REL::Offset(0x04446648) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureAmbush{ REL::Offset(0x043431C0) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureAmbushExecState{ REL::Offset(0x04343170) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureBase{ REL::Offset(0x043432E8) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureCombatTravel{ REL::Offset(0x04446898) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureCombatTravelExecState{ REL::Offset(0x04446820) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureDialogue{ REL::Offset(0x04446A60) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureDialogueActivate{ REL::Offset(0x04446C28) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureDialogueActivateExecState{ REL::Offset(0x04446BB0) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureDialogueExecState{ REL::Offset(0x044459C8) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureDone{ REL::Offset(0x04446178) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureDoneExecState{ REL::Offset(0x04445A18) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureEat{ REL::Offset(0x04446DC0) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureEatExecState{ REL::Offset(0x04446070) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureEscort{ REL::Offset(0x04447DD8) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureEscortExecState{ REL::Offset(0x04447C28) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureFind{ REL::Offset(0x04448170) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureFindExecState{ REL::Offset(0x04446020) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureFlee{ REL::Offset(0x04448410) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureFleeExecState{ REL::Offset(0x04448360) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureFlightGrab{ REL::Offset(0x044485F0) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureFlightGrabExecState{ REL::Offset(0x04448578) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureFollow{ REL::Offset(0x04448CD8) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureFollowExecState{ REL::Offset(0x04448B60) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureFollowTo{ REL::Offset(0x04448BB0) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureForceGreet{ REL::Offset(0x04448EA8) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureGuard{ REL::Offset(0x04449278) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureGuardArea{ REL::Offset(0x04449150) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureGuardExecState{ REL::Offset(0x04449100) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureHeadtrack{ REL::Offset(0x04343660) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureHeadtrackExecState{ REL::Offset(0x043435E8) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureHoldPosition{ REL::Offset(0x04449450) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureHoldPositionExecState{ REL::Offset(0x044460C0) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureHover{ REL::Offset(0x04449628) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureHoverExecState{ REL::Offset(0x044495B0) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureKeepAnEyeOn{ REL::Offset(0x044497D0) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureKeepAnEyeOnExecState{ REL::Offset(0x04445F80) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureLock{ REL::Offset(0x04449AC0) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureLockUnlockExecState{ REL::Offset(0x04449948) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureOrbit{ REL::Offset(0x04449D40) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureOrbitExecState{ REL::Offset(0x04449CC8) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedurePatrol{ REL::Offset(0x04449FD8) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedurePatrolExecState{ REL::Offset(0x04449F60) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedurePlayIdle{ REL::Offset(0x04343920) };
-		inline constexpr std::array<REL::Offset, 2> BGSProcedurePlayIdleExecState{ REL::Offset(0x04343880), REL::Offset(0x043438D0) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedurePursue{ REL::Offset(0x0444A170) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureRange{ REL::Offset(0x04343F98) };
-		inline constexpr std::array<REL::Offset, 2> BGSProcedureRangeExecState{ REL::Offset(0x04343F30), REL::Offset(0x04343F48) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureSandbox{ REL::Offset(0x0444A558) };
-		inline constexpr std::array<REL::Offset, 2> BGSProcedureSandboxExecState{ REL::Offset(0x0444A4F0), REL::Offset(0x0444A508) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureSay{ REL::Offset(0x0444A6D0) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureSayExecState{ REL::Offset(0x04445FD0) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureSit{ REL::Offset(0x0444AA10) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureSitSleepExecState{ REL::Offset(0x0444A820) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureSleep{ REL::Offset(0x0444A8E8) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureStayAway{ REL::Offset(0x04344510) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureStayAwayExecState{ REL::Offset(0x043444C0) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureTargetingModeAutopilot{ REL::Offset(0x04344660) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureTargetingModeAutopilotExecState{ REL::Offset(0x04344808) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureTravel{ REL::Offset(0x0444AC50) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureTravelExecState{ REL::Offset(0x0444ABB0) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureTreeBranch{ REL::Offset(0x04445B00) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureTreeConditionalItem{ REL::Offset(0x04445A68) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureTreeFallback{ REL::Offset(0x04444D20) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureTreeFallbackExecState{ REL::Offset(0x04445E88) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureTreeOneChildExecState{ REL::Offset(0x04445DD8) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureTreeProcedure{ REL::Offset(0x0444AD78) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureTreeRandom{ REL::Offset(0x04445C88) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureTreeRandomExecState{ REL::Offset(0x04445D28) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureTreeSequence{ REL::Offset(0x04444E88) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureTreeSequenceExecState{ REL::Offset(0x04445D80) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureTreeSimultaneous{ REL::Offset(0x04445EE0) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureTreeSimultaneousExecState{ REL::Offset(0x04445C38) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureTreeStacked{ REL::Offset(0x04444DC0) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureTreeStackedExecState{ REL::Offset(0x04445E30) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureUnlock{ REL::Offset(0x04449998) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureUseIdleMarker{ REL::Offset(0x0444AEC8) };
-		inline constexpr std::array<REL::Offset, 2> BGSProcedureUseIdleMarkerExecState{ REL::Offset(0x0444AE38), REL::Offset(0x0444AE50) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureUseMagic{ REL::Offset(0x0444B0A8) };
-		inline constexpr std::array<REL::Offset, 2> BGSProcedureUseMagicExecState{ REL::Offset(0x0444AFF0), REL::Offset(0x0444B008) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureUseWeapon{ REL::Offset(0x0444B438) };
-		inline constexpr std::array<REL::Offset, 2> BGSProcedureUseWeaponExecState{ REL::Offset(0x0444B3D0), REL::Offset(0x0444B420) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureWait{ REL::Offset(0x0444B5D0) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureWaitExecState{ REL::Offset(0x04445978) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureWander{ REL::Offset(0x0444C738) };
-		inline constexpr std::array<REL::Offset, 1> BGSProcedureWanderExecState{ REL::Offset(0x0444C6E8) };
-		inline constexpr std::array<REL::Offset, 2> BGSProduceActivity{ REL::Offset(0x04340C10), REL::Offset(0x04340C70) };
-		inline constexpr std::array<REL::Offset, 3> BGSProduceActivity_Runtime{ REL::Offset(0x04340BF8), REL::Offset(0x04340C88),
-			                                                                    REL::Offset(0x04340D28) };
-		inline constexpr std::array<REL::Offset, 2> BGSProjectedDecal{ REL::Offset(0x0438C7F8), REL::Offset(0x0438C810) };
-		inline constexpr std::array<REL::Offset, 6> BGSProjectile{ REL::Offset(0x043B49E8), REL::Offset(0x043B4A60), REL::Offset(0x043B4AD8),
-			                                                       REL::Offset(0x043B4AF0), REL::Offset(0x043B4F08), REL::Offset(0x043B4F68) };
-		inline constexpr std::array<REL::Offset, 1> BGSPropertySheet{ REL::Offset(0x04353C60) };
-		inline constexpr std::array<REL::Offset, 1> BGSQuestPerkEntry{ REL::Offset(0x04409E70) };
-		inline constexpr std::array<REL::Offset, 1> BGSRefAlias{ REL::Offset(0x04409FE8) };
-		inline constexpr std::array<REL::Offset, 1> BGSRefCollectionAlias{ REL::Offset(0x043A62D8) };
-		inline constexpr std::array<REL::Offset, 2> BGSReferenceGroup{ REL::Offset(0x043CA320), REL::Offset(0x043CA338) };
-		inline constexpr std::array<REL::Offset, 2> BGSReflectedForm{ REL::Offset(0x04389C60), REL::Offset(0x04389C78) };
-		inline constexpr std::array<REL::Offset, 2> BGSRelationship{ REL::Offset(0x0440A160), REL::Offset(0x0440A478) };
-		inline constexpr std::array<REL::Offset, 2> BGSReloadWeaponActivity{ REL::Offset(0x04340EE0), REL::Offset(0x04340F40) };
-		inline constexpr std::array<REL::Offset, 3> BGSReloadWeaponActivity_Runtime{ REL::Offset(0x04340E10), REL::Offset(0x04340EB0),
-			                                                                         REL::Offset(0x04340EC8) };
-		inline constexpr std::array<REL::Offset, 4> BGSResearchProjectForm{ REL::Offset(0x0438F810), REL::Offset(0x0438FB30), REL::Offset(0x0438FB90),
-			                                                                REL::Offset(0x0438FBA8) };
-		inline constexpr std::array<REL::Offset, 6> BGSResource{ REL::Offset(0x043AB5D8), REL::Offset(0x043AB5F8), REL::Offset(0x043AB660),
-			                                                     REL::Offset(0x043AB6C0), REL::Offset(0x043AB9D8), REL::Offset(0x043ABA50) };
-		inline constexpr std::array<REL::Offset, 2> BGSResourceGenerationData{ REL::Offset(0x043AC1A8), REL::Offset(0x043AC1C0) };
-		inline constexpr std::array<REL::Offset, 1> BGSRetargetOnDeleteExtraData{ REL::Offset(0x04344AD0) };
-		inline constexpr std::array<REL::Offset, 2> BGSReverbParameters{ REL::Offset(0x043D9240), REL::Offset(0x043D9258) };
-		inline constexpr std::array<REL::Offset, 1> BGSSaveFormBuffer{ REL::Offset(0x044CFA40) };
-		inline constexpr std::array<REL::Offset, 1> BGSSaveGameBuffer{ REL::Offset(0x044CFA90) };
-		inline constexpr std::array<REL::Offset, 1> BGSSaveGameBufferSimple{ REL::Offset(0x044CFA68) };
-		inline constexpr std::array<REL::Offset, 1> BGSSaveLoadJobSite{ REL::Offset(0x044CED08) };
-		inline constexpr std::array<REL::Offset, 2> BGSSaveLoadManager{ REL::Offset(0x044CEC68), REL::Offset(0x044CEC78) };
-		inline constexpr std::array<REL::Offset, 1> BGSSaveLoadStatsMap{ REL::Offset(0x044CF5C8) };
-		inline constexpr std::array<REL::Offset, 1> BGSSaveLoadThread{ REL::Offset(0x044CECE8) };
-		inline constexpr std::array<REL::Offset, 1> BGSSaveLoadUtilities__BGSSaveFormBufferIgnoreIDs{ REL::Offset(0x044CF5A0) };
-		inline constexpr std::array<REL::Offset, 2> BGSScanPlanetActivity{ REL::Offset(0x04341010), REL::Offset(0x043410F8) };
-		inline constexpr std::array<REL::Offset, 3> BGSScanPlanetActivity_Runtime{ REL::Offset(0x04341028), REL::Offset(0x043410C8),
-			                                                                       REL::Offset(0x043410E0) };
-		inline constexpr std::array<REL::Offset, 2> BGSScanSurfaceActivity{ REL::Offset(0x04341968), REL::Offset(0x04341980) };
-		inline constexpr std::array<REL::Offset, 3> BGSScanSurfaceActivity_Runtime{ REL::Offset(0x04341898), REL::Offset(0x043418B0),
-			                                                                        REL::Offset(0x043418C8) };
-		inline constexpr std::array<REL::Offset, 1> BGSScannableFormComponent{ REL::Offset(0x04353838) };
-		inline constexpr std::array<REL::Offset, 3> BGSScene{ REL::Offset(0x0440A688), REL::Offset(0x0440A6A8), REL::Offset(0x0440A6C0) };
-		inline constexpr std::array<REL::Offset, 1> BGSSceneActionAnimation{ REL::Offset(0x043A6378) };
-		inline constexpr std::array<REL::Offset, 1> BGSSceneActionCamera{ REL::Offset(0x043A6490) };
-		inline constexpr std::array<REL::Offset, 1> BGSSceneActionDialogue{ REL::Offset(0x0440AD50) };
-		inline constexpr std::array<REL::Offset, 1> BGSSceneActionFX{ REL::Offset(0x043A65A8) };
-		inline constexpr std::array<REL::Offset, 1> BGSSceneActionList{ REL::Offset(0x043A66B0) };
-		inline constexpr std::array<REL::Offset, 1> BGSSceneActionMove{ REL::Offset(0x043A67C8) };
-		inline constexpr std::array<REL::Offset, 1> BGSSceneActionPackage{ REL::Offset(0x0440AC48) };
-		inline constexpr std::array<REL::Offset, 1> BGSSceneActionPlayerDialogue{ REL::Offset(0x0440AB40) };
-		inline constexpr std::array<REL::Offset, 1> BGSSceneActionRadio{ REL::Offset(0x0440AA38) };
-		inline constexpr std::array<REL::Offset, 1> BGSSceneActionStartScene{ REL::Offset(0x043A6930) };
-		inline constexpr std::array<REL::Offset, 1> BGSSceneActionTimeline{ REL::Offset(0x043A6AA0) };
-		inline constexpr std::array<REL::Offset, 1> BGSSceneActionTimer{ REL::Offset(0x0440AF40) };
-		inline constexpr std::array<REL::Offset, 2> BGSSecondaryDamageList{ REL::Offset(0x0438CC28), REL::Offset(0x0438CF40) };
-		inline constexpr std::array<REL::Offset, 2> BGSShaderParticleGeometryData{ REL::Offset(0x043CA650), REL::Offset(0x043CA668) };
-		inline constexpr std::array<REL::Offset, 2> BGSShipCollectionActivity{ REL::Offset(0x04341FB0), REL::Offset(0x04341FC8) };
-		inline constexpr std::array<REL::Offset, 5> BGSShipCollectionActivity_Runtime{ REL::Offset(0x04341EB0), REL::Offset(0x04341EC8),
-			                                                                           REL::Offset(0x04341EE0), REL::Offset(0x04341EF8),
-			                                                                           REL::Offset(0x04341F98) };
-		inline constexpr std::array<REL::Offset, 1> BGSShipManagement{ REL::Offset(0x043538E0) };
-		inline constexpr std::array<REL::Offset, 2> BGSShipbuilderActivity{ REL::Offset(0x04341D68), REL::Offset(0x04341D80) };
-		inline constexpr std::array<REL::Offset, 3> BGSShipbuilderActivity_Runtime{ REL::Offset(0x04341CB0), REL::Offset(0x04341CC8),
-			                                                                        REL::Offset(0x04341DE0) };
-		inline constexpr std::array<REL::Offset, 1> BGSSkinForm{ REL::Offset(0x0436CA18) };
-		inline constexpr std::array<REL::Offset, 1> BGSSkinnedDecalChild{ REL::Offset(0x0436ED58) };
-		inline constexpr std::array<REL::Offset, 1> BGSSkinnedDecalGroup{ REL::Offset(0x0436F000) };
-		inline constexpr std::array<REL::Offset, 2> BGSSnapBehavior{ REL::Offset(0x043B4F80), REL::Offset(0x043B4F98) };
-		inline constexpr std::array<REL::Offset, 3> BGSSnapTemplate{ REL::Offset(0x043B5360), REL::Offset(0x043B53C0), REL::Offset(0x043B53D8) };
-		inline constexpr std::array<REL::Offset, 1> BGSSnapTemplateComponent{ REL::Offset(0x04353CE8) };
-		inline constexpr std::array<REL::Offset, 5> BGSSnapTemplateNode{ REL::Offset(0x043B5830), REL::Offset(0x043B5848), REL::Offset(0x043B5C60),
-			                                                             REL::Offset(0x043B5C80), REL::Offset(0x043B5CE8) };
-		inline constexpr std::array<REL::Offset, 2> BGSSoundEcho{ REL::Offset(0x043AC930), REL::Offset(0x043ACD48) };
-		inline constexpr std::array<REL::Offset, 2> BGSSoundKeywordMapping{ REL::Offset(0x043AC518), REL::Offset(0x043AC830) };
-		inline constexpr std::array<REL::Offset, 1> BGSSoundTagComponent{ REL::Offset(0x04353D78) };
-		inline constexpr std::array<REL::Offset, 2> BGSSoundTagSet{ REL::Offset(0x043ACD60), REL::Offset(0x043ACD78) };
-		inline constexpr std::array<REL::Offset, 2> BGSSpacePhysicsFormComponent{ REL::Offset(0x04353E58), REL::Offset(0x04353E70) };
-		inline constexpr std::array<REL::Offset, 1> BGSSpaceshipAIActor{ REL::Offset(0x04353F28) };
-		inline constexpr std::array<REL::Offset, 1> BGSSpaceshipEquipment{ REL::Offset(0x04353FC0) };
-		inline constexpr std::array<REL::Offset, 1> BGSSpaceshipHullCode{ REL::Offset(0x04354070) };
-		inline constexpr std::array<REL::Offset, 1> BGSSpaceshipWeaponBinding{ REL::Offset(0x04354110) };
-		inline constexpr std::array<REL::Offset, 1> BGSSpatialCombinedGrid{ REL::Offset(0x0437C670) };
-		inline constexpr std::array<REL::Offset, 1> BGSSpatialGraph{ REL::Offset(0x0437AA20) };
-		inline constexpr std::array<REL::Offset, 1> BGSSpatialGraphCellGrid{ REL::Offset(0x0437A490) };
-		inline constexpr std::array<REL::Offset, 1> BGSSpatialGraphCellGrid__MergeTask{ REL::Offset(0x0437A438) };
-		inline constexpr std::array<REL::Offset, 1> BGSSpatialGraphChild{ REL::Offset(0x0437A958) };
-		inline constexpr std::array<REL::Offset, 1> BGSSpatialGraphExteriorCell{ REL::Offset(0x0437A620) };
-		inline constexpr std::array<REL::Offset, 1> BGSSpatialGraphInteriorCell{ REL::Offset(0x0437AAE8) };
+													 BGSPlanetContentManager__LogEventData_7_BGSPlanetContentManagerContentProperties__PlacementResult_{ REL::Offset(0x04381C40) };
+		inline constexpr std::array<REL::Offset, 1>  BGSPlanetContentManager__LogEventData_8_BGSBiomeMarkerObjectconst_{ REL::Offset(0x04381B80) };
+		inline constexpr std::array<REL::Offset, 1>  BGSPlanetContentManager__LogEvent_0_{ REL::Offset(0x043821A8) };
+		inline constexpr std::array<REL::Offset, 1>  BGSPlanetContentManager__LogEvent_10_{ REL::Offset(0x043816B0) };
+		inline constexpr std::array<REL::Offset, 1>  BGSPlanetContentManager__LogEvent_11_{ REL::Offset(0x04381C50) };
+		inline constexpr std::array<REL::Offset, 1>  BGSPlanetContentManager__LogEvent_12_{ REL::Offset(0x04381BF0) };
+		inline constexpr std::array<REL::Offset, 1>  BGSPlanetContentManager__LogEvent_13_{ REL::Offset(0x04381BC8) };
+		inline constexpr std::array<REL::Offset, 1>  BGSPlanetContentManager__LogEvent_14_{ REL::Offset(0x04381688) };
+		inline constexpr std::array<REL::Offset, 1>  BGSPlanetContentManager__LogEvent_15_{ REL::Offset(0x04381B20) };
+		inline constexpr std::array<REL::Offset, 1>  BGSPlanetContentManager__LogEvent_1_{ REL::Offset(0x04381CA0) };
+		inline constexpr std::array<REL::Offset, 1>  BGSPlanetContentManager__LogEvent_2_{ REL::Offset(0x04381700) };
+		inline constexpr std::array<REL::Offset, 1>  BGSPlanetContentManager__LogEvent_3_{ REL::Offset(0x04381660) };
+		inline constexpr std::array<REL::Offset, 1>  BGSPlanetContentManager__LogEvent_4_{ REL::Offset(0x043816D8) };
+		inline constexpr std::array<REL::Offset, 1>  BGSPlanetContentManager__LogEvent_5_{ REL::Offset(0x04381C78) };
+		inline constexpr std::array<REL::Offset, 1>  BGSPlanetContentManager__LogEvent_6_{ REL::Offset(0x043820A0) };
+		inline constexpr std::array<REL::Offset, 1>  BGSPlanetContentManager__LogEvent_7_{ REL::Offset(0x04381C18) };
+		inline constexpr std::array<REL::Offset, 1>  BGSPlanetContentManager__LogEvent_8_{ REL::Offset(0x04381B58) };
+		inline constexpr std::array<REL::Offset, 1>  BGSPlanetContentManager__LogEvent_9_{ REL::Offset(0x04381BA0) };
+		inline constexpr std::array<REL::Offset, 1>  BGSPlanetContentManager__QueueContentRequestOnPlanet__25__RequestPlanetContentNode{ REL::Offset(
+            0x044D3BA8) };
+		inline constexpr std::array<REL::Offset, 1>  BGSPlanet__Atmosphere{ REL::Offset(0x0437D558) };
+		inline constexpr std::array<REL::Offset, 1>  BGSPlanet__ContentPlacement{ REL::Offset(0x0437EBC8) };
+		inline constexpr std::array<REL::Offset, 1>  BGSPlanet__IModule{ REL::Offset(0x0437D290) };
+		inline constexpr std::array<REL::Offset, 1>  BGSPlanet__LODNotifierModule{ REL::Offset(0x0437EC50) };
+		inline constexpr std::array<REL::Offset, 2>  BGSPlanet__LandingMarkers{ REL::Offset(0x0437E170), REL::Offset(0x0437E1F8) };
+		inline constexpr std::array<REL::Offset, 1>  BGSPlanet__Landscape{ REL::Offset(0x0437E5F0) };
+		inline constexpr std::array<REL::Offset, 1>  BGSPlanet__Manager{ REL::Offset(0x0437ED58) };
+		inline constexpr std::array<REL::Offset, 1>  BGSPlanet__Manager__MoveToNode{ REL::Offset(0x0437ECD8) };
+		inline constexpr std::array<REL::Offset, 1>  BGSPlanet__Manager__ShiftToTask{ REL::Offset(0x0437ED40) };
+		inline constexpr std::array<REL::Offset, 1>  BGSPlanet__MultiFiles__Grid{ REL::Offset(0x0437E400) };
+		inline constexpr std::array<REL::Offset, 1>  BGSPlanet__MultiFiles__MasterFile{ REL::Offset(0x0437E378) };
+		inline constexpr std::array<REL::Offset, 7>  BGSPlanet__NavMeshGen{ REL::Offset(0x0437EF10), REL::Offset(0x0437EF28), REL::Offset(0x0437EF50),
+            REL::Offset(0x0437F040), REL::Offset(0x0437F058), REL::Offset(0x0437F070),
+            REL::Offset(0x0437F088) };
+		inline constexpr std::array<REL::Offset, 1>  BGSPlanet__OrderedLandTextures{ REL::Offset(0x0437E820) };
+		inline constexpr std::array<REL::Offset, 1>  BGSPlanet__Overlays{ REL::Offset(0x0437E798) };
+		inline constexpr std::array<REL::Offset, 2>  BGSPlanet__PlanetData{ REL::Offset(0x0437DB50), REL::Offset(0x0437DB68) };
+		inline constexpr std::array<REL::Offset, 1>  BGSPlanet__ProcGen{ REL::Offset(0x0437F958) };
+		inline constexpr std::array<REL::Offset, 2>  BGSPlanet__ProcGenRuntimeService{ REL::Offset(0x04380BC0), REL::Offset(0x04380C48) };
+		inline constexpr std::array<REL::Offset, 4>  BGSPlanet__ScanCollection{ REL::Offset(0x044774C0), REL::Offset(0x044774D8),
+            REL::Offset(0x044774F0), REL::Offset(0x04477508) };
+		inline constexpr std::array<REL::Offset, 1>  BGSPlanet__SurfaceMapModule{ REL::Offset(0x0437E710) };
+		inline constexpr std::array<REL::Offset, 1>  BGSPlanet__UpdateNavMeshTaskNode{ REL::Offset(0x0437EFD8) };
+		inline constexpr std::array<REL::Offset, 1>  BGSPlanet____AddOverlayBlockFunctor{ REL::Offset(0x0437E360) };
+		inline constexpr std::array<REL::Offset, 1>  BGSPlanet____GameStatusHandler{ REL::Offset(0x0437D318) };
+		inline constexpr std::array<REL::Offset, 3>  BGSPlayerMusicChanger{ REL::Offset(0x044C7BE8), REL::Offset(0x044C7C00),
+            REL::Offset(0x044C7C18) };
+		inline constexpr std::array<REL::Offset, 2>  BGSPlayerPickpocketActivity{ REL::Offset(0x04340AC8), REL::Offset(0x04340B28) };
+		inline constexpr std::array<REL::Offset, 3>  BGSPlayerPickpocketActivity_Runtime{ REL::Offset(0x043409F8), REL::Offset(0x04340A98),
+            REL::Offset(0x04340AB0) };
+		inline constexpr std::array<REL::Offset, 1>  BGSPreviewTransform{ REL::Offset(0x04353B08) };
+		inline constexpr std::array<REL::Offset, 1>  BGSPrimitive{ REL::Offset(0x043707D8) };
+		inline constexpr std::array<REL::Offset, 1>  BGSPrimitiveBox{ REL::Offset(0x043706F0) };
+		inline constexpr std::array<REL::Offset, 1>  BGSPrimitiveComponent{ REL::Offset(0x04353BB0) };
+		inline constexpr std::array<REL::Offset, 1>  BGSPrimitiveCylinder{ REL::Offset(0x04370780) };
+		inline constexpr std::array<REL::Offset, 1>  BGSPrimitiveEllipsoid{ REL::Offset(0x04370660) };
+		inline constexpr std::array<REL::Offset, 1>  BGSPrimitiveLine{ REL::Offset(0x04370820) };
+		inline constexpr std::array<REL::Offset, 1>  BGSPrimitivePlane{ REL::Offset(0x04370738) };
+		inline constexpr std::array<REL::Offset, 1>  BGSPrimitiveSphere{ REL::Offset(0x043706A8) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureAcquire{ REL::Offset(0x04446388) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureAcquireExecState{ REL::Offset(0x04446338) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureActivate{ REL::Offset(0x04446660) };
+		inline constexpr std::array<REL::Offset, 3>  BGSProcedureActivateExecState{ REL::Offset(0x044465E0), REL::Offset(0x04446630),
+            REL::Offset(0x04446648) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureAmbush{ REL::Offset(0x043431C0) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureAmbushExecState{ REL::Offset(0x04343170) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureBase{ REL::Offset(0x043432E8) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureCombatTravel{ REL::Offset(0x04446898) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureCombatTravelExecState{ REL::Offset(0x04446820) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureDialogue{ REL::Offset(0x04446A60) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureDialogueActivate{ REL::Offset(0x04446C28) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureDialogueActivateExecState{ REL::Offset(0x04446BB0) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureDialogueExecState{ REL::Offset(0x044459C8) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureDone{ REL::Offset(0x04446178) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureDoneExecState{ REL::Offset(0x04445A18) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureEat{ REL::Offset(0x04446DC0) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureEatExecState{ REL::Offset(0x04446070) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureEscort{ REL::Offset(0x04447DD8) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureEscortExecState{ REL::Offset(0x04447C28) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureFind{ REL::Offset(0x04448170) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureFindExecState{ REL::Offset(0x04446020) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureFlee{ REL::Offset(0x04448410) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureFleeExecState{ REL::Offset(0x04448360) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureFlightGrab{ REL::Offset(0x044485F0) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureFlightGrabExecState{ REL::Offset(0x04448578) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureFollow{ REL::Offset(0x04448CD8) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureFollowExecState{ REL::Offset(0x04448B60) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureFollowTo{ REL::Offset(0x04448BB0) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureForceGreet{ REL::Offset(0x04448EA8) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureGuard{ REL::Offset(0x04449278) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureGuardArea{ REL::Offset(0x04449150) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureGuardExecState{ REL::Offset(0x04449100) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureHeadtrack{ REL::Offset(0x04343660) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureHeadtrackExecState{ REL::Offset(0x043435E8) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureHoldPosition{ REL::Offset(0x04449450) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureHoldPositionExecState{ REL::Offset(0x044460C0) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureHover{ REL::Offset(0x04449628) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureHoverExecState{ REL::Offset(0x044495B0) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureKeepAnEyeOn{ REL::Offset(0x044497D0) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureKeepAnEyeOnExecState{ REL::Offset(0x04445F80) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureLock{ REL::Offset(0x04449AC0) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureLockUnlockExecState{ REL::Offset(0x04449948) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureOrbit{ REL::Offset(0x04449D40) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureOrbitExecState{ REL::Offset(0x04449CC8) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedurePatrol{ REL::Offset(0x04449FD8) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedurePatrolExecState{ REL::Offset(0x04449F60) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedurePlayIdle{ REL::Offset(0x04343920) };
+		inline constexpr std::array<REL::Offset, 2>  BGSProcedurePlayIdleExecState{ REL::Offset(0x04343880), REL::Offset(0x043438D0) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedurePursue{ REL::Offset(0x0444A170) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureRange{ REL::Offset(0x04343F98) };
+		inline constexpr std::array<REL::Offset, 2>  BGSProcedureRangeExecState{ REL::Offset(0x04343F30), REL::Offset(0x04343F48) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureSandbox{ REL::Offset(0x0444A558) };
+		inline constexpr std::array<REL::Offset, 2>  BGSProcedureSandboxExecState{ REL::Offset(0x0444A4F0), REL::Offset(0x0444A508) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureSay{ REL::Offset(0x0444A6D0) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureSayExecState{ REL::Offset(0x04445FD0) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureSit{ REL::Offset(0x0444AA10) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureSitSleepExecState{ REL::Offset(0x0444A820) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureSleep{ REL::Offset(0x0444A8E8) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureStayAway{ REL::Offset(0x04344510) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureStayAwayExecState{ REL::Offset(0x043444C0) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureTargetingModeAutopilot{ REL::Offset(0x04344660) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureTargetingModeAutopilotExecState{ REL::Offset(0x04344808) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureTravel{ REL::Offset(0x0444AC50) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureTravelExecState{ REL::Offset(0x0444ABB0) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureTreeBranch{ REL::Offset(0x04445B00) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureTreeConditionalItem{ REL::Offset(0x04445A68) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureTreeFallback{ REL::Offset(0x04444D20) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureTreeFallbackExecState{ REL::Offset(0x04445E88) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureTreeOneChildExecState{ REL::Offset(0x04445DD8) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureTreeProcedure{ REL::Offset(0x0444AD78) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureTreeRandom{ REL::Offset(0x04445C88) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureTreeRandomExecState{ REL::Offset(0x04445D28) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureTreeSequence{ REL::Offset(0x04444E88) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureTreeSequenceExecState{ REL::Offset(0x04445D80) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureTreeSimultaneous{ REL::Offset(0x04445EE0) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureTreeSimultaneousExecState{ REL::Offset(0x04445C38) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureTreeStacked{ REL::Offset(0x04444DC0) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureTreeStackedExecState{ REL::Offset(0x04445E30) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureUnlock{ REL::Offset(0x04449998) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureUseIdleMarker{ REL::Offset(0x0444AEC8) };
+		inline constexpr std::array<REL::Offset, 2>  BGSProcedureUseIdleMarkerExecState{ REL::Offset(0x0444AE38), REL::Offset(0x0444AE50) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureUseMagic{ REL::Offset(0x0444B0A8) };
+		inline constexpr std::array<REL::Offset, 2>  BGSProcedureUseMagicExecState{ REL::Offset(0x0444AFF0), REL::Offset(0x0444B008) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureUseWeapon{ REL::Offset(0x0444B438) };
+		inline constexpr std::array<REL::Offset, 2>  BGSProcedureUseWeaponExecState{ REL::Offset(0x0444B3D0), REL::Offset(0x0444B420) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureWait{ REL::Offset(0x0444B5D0) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureWaitExecState{ REL::Offset(0x04445978) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureWander{ REL::Offset(0x0444C738) };
+		inline constexpr std::array<REL::Offset, 1>  BGSProcedureWanderExecState{ REL::Offset(0x0444C6E8) };
+		inline constexpr std::array<REL::Offset, 2>  BGSProduceActivity{ REL::Offset(0x04340C10), REL::Offset(0x04340C70) };
+		inline constexpr std::array<REL::Offset, 3>  BGSProduceActivity_Runtime{ REL::Offset(0x04340BF8), REL::Offset(0x04340C88),
+            REL::Offset(0x04340D28) };
+		inline constexpr std::array<REL::Offset, 2>  BGSProjectedDecal{ REL::Offset(0x0438C7F8), REL::Offset(0x0438C810) };
+		inline constexpr std::array<REL::Offset, 6>  BGSProjectile{ REL::Offset(0x043B49E8), REL::Offset(0x043B4A60), REL::Offset(0x043B4AD8),
+            REL::Offset(0x043B4AF0), REL::Offset(0x043B4F08), REL::Offset(0x043B4F68) };
+		inline constexpr std::array<REL::Offset, 1>  BGSPropertySheet{ REL::Offset(0x04353C60) };
+		inline constexpr std::array<REL::Offset, 1>  BGSQuestPerkEntry{ REL::Offset(0x04409E70) };
+		inline constexpr std::array<REL::Offset, 1>  BGSRefAlias{ REL::Offset(0x04409FE8) };
+		inline constexpr std::array<REL::Offset, 1>  BGSRefCollectionAlias{ REL::Offset(0x043A62D8) };
+		inline constexpr std::array<REL::Offset, 2>  BGSReferenceGroup{ REL::Offset(0x043CA320), REL::Offset(0x043CA338) };
+		inline constexpr std::array<REL::Offset, 2>  BGSReflectedForm{ REL::Offset(0x04389C60), REL::Offset(0x04389C78) };
+		inline constexpr std::array<REL::Offset, 2>  BGSRelationship{ REL::Offset(0x0440A160), REL::Offset(0x0440A478) };
+		inline constexpr std::array<REL::Offset, 2>  BGSReloadWeaponActivity{ REL::Offset(0x04340EE0), REL::Offset(0x04340F40) };
+		inline constexpr std::array<REL::Offset, 3>  BGSReloadWeaponActivity_Runtime{ REL::Offset(0x04340E10), REL::Offset(0x04340EB0),
+            REL::Offset(0x04340EC8) };
+		inline constexpr std::array<REL::Offset, 4>  BGSResearchProjectForm{ REL::Offset(0x0438F810), REL::Offset(0x0438FB30), REL::Offset(0x0438FB90),
+            REL::Offset(0x0438FBA8) };
+		inline constexpr std::array<REL::Offset, 6>  BGSResource{ REL::Offset(0x043AB5D8), REL::Offset(0x043AB5F8), REL::Offset(0x043AB660),
+            REL::Offset(0x043AB6C0), REL::Offset(0x043AB9D8), REL::Offset(0x043ABA50) };
+		inline constexpr std::array<REL::Offset, 2>  BGSResourceGenerationData{ REL::Offset(0x043AC1A8), REL::Offset(0x043AC1C0) };
+		inline constexpr std::array<REL::Offset, 1>  BGSRetargetOnDeleteExtraData{ REL::Offset(0x04344AD0) };
+		inline constexpr std::array<REL::Offset, 2>  BGSReverbParameters{ REL::Offset(0x043D9240), REL::Offset(0x043D9258) };
+		inline constexpr std::array<REL::Offset, 1>  BGSSaveFormBuffer{ REL::Offset(0x044CFA40) };
+		inline constexpr std::array<REL::Offset, 1>  BGSSaveGameBuffer{ REL::Offset(0x044CFA90) };
+		inline constexpr std::array<REL::Offset, 1>  BGSSaveGameBufferSimple{ REL::Offset(0x044CFA68) };
+		inline constexpr std::array<REL::Offset, 1>  BGSSaveLoadJobSite{ REL::Offset(0x044CED08) };
+		inline constexpr std::array<REL::Offset, 2>  BGSSaveLoadManager{ REL::Offset(0x044CEC68), REL::Offset(0x044CEC78) };
+		inline constexpr std::array<REL::Offset, 1>  BGSSaveLoadStatsMap{ REL::Offset(0x044CF5C8) };
+		inline constexpr std::array<REL::Offset, 1>  BGSSaveLoadThread{ REL::Offset(0x044CECE8) };
+		inline constexpr std::array<REL::Offset, 1>  BGSSaveLoadUtilities__BGSSaveFormBufferIgnoreIDs{ REL::Offset(0x044CF5A0) };
+		inline constexpr std::array<REL::Offset, 2>  BGSScanPlanetActivity{ REL::Offset(0x04341010), REL::Offset(0x043410F8) };
+		inline constexpr std::array<REL::Offset, 3>  BGSScanPlanetActivity_Runtime{ REL::Offset(0x04341028), REL::Offset(0x043410C8),
+            REL::Offset(0x043410E0) };
+		inline constexpr std::array<REL::Offset, 2>  BGSScanSurfaceActivity{ REL::Offset(0x04341968), REL::Offset(0x04341980) };
+		inline constexpr std::array<REL::Offset, 3>  BGSScanSurfaceActivity_Runtime{ REL::Offset(0x04341898), REL::Offset(0x043418B0),
+            REL::Offset(0x043418C8) };
+		inline constexpr std::array<REL::Offset, 1>  BGSScannableFormComponent{ REL::Offset(0x04353838) };
+		inline constexpr std::array<REL::Offset, 3>  BGSScene{ REL::Offset(0x0440A688), REL::Offset(0x0440A6A8), REL::Offset(0x0440A6C0) };
+		inline constexpr std::array<REL::Offset, 1>  BGSSceneActionAnimation{ REL::Offset(0x043A6378) };
+		inline constexpr std::array<REL::Offset, 1>  BGSSceneActionCamera{ REL::Offset(0x043A6490) };
+		inline constexpr std::array<REL::Offset, 1>  BGSSceneActionDialogue{ REL::Offset(0x0440AD50) };
+		inline constexpr std::array<REL::Offset, 1>  BGSSceneActionFX{ REL::Offset(0x043A65A8) };
+		inline constexpr std::array<REL::Offset, 1>  BGSSceneActionList{ REL::Offset(0x043A66B0) };
+		inline constexpr std::array<REL::Offset, 1>  BGSSceneActionMove{ REL::Offset(0x043A67C8) };
+		inline constexpr std::array<REL::Offset, 1>  BGSSceneActionPackage{ REL::Offset(0x0440AC48) };
+		inline constexpr std::array<REL::Offset, 1>  BGSSceneActionPlayerDialogue{ REL::Offset(0x0440AB40) };
+		inline constexpr std::array<REL::Offset, 1>  BGSSceneActionRadio{ REL::Offset(0x0440AA38) };
+		inline constexpr std::array<REL::Offset, 1>  BGSSceneActionStartScene{ REL::Offset(0x043A6930) };
+		inline constexpr std::array<REL::Offset, 1>  BGSSceneActionTimeline{ REL::Offset(0x043A6AA0) };
+		inline constexpr std::array<REL::Offset, 1>  BGSSceneActionTimer{ REL::Offset(0x0440AF40) };
+		inline constexpr std::array<REL::Offset, 2>  BGSSecondaryDamageList{ REL::Offset(0x0438CC28), REL::Offset(0x0438CF40) };
+		inline constexpr std::array<REL::Offset, 2>  BGSShaderParticleGeometryData{ REL::Offset(0x043CA650), REL::Offset(0x043CA668) };
+		inline constexpr std::array<REL::Offset, 2>  BGSShipCollectionActivity{ REL::Offset(0x04341FB0), REL::Offset(0x04341FC8) };
+		inline constexpr std::array<REL::Offset, 5>  BGSShipCollectionActivity_Runtime{ REL::Offset(0x04341EB0), REL::Offset(0x04341EC8),
+            REL::Offset(0x04341EE0), REL::Offset(0x04341EF8),
+            REL::Offset(0x04341F98) };
+		inline constexpr std::array<REL::Offset, 1>  BGSShipManagement{ REL::Offset(0x043538E0) };
+		inline constexpr std::array<REL::Offset, 2>  BGSShipbuilderActivity{ REL::Offset(0x04341D68), REL::Offset(0x04341D80) };
+		inline constexpr std::array<REL::Offset, 3>  BGSShipbuilderActivity_Runtime{ REL::Offset(0x04341CB0), REL::Offset(0x04341CC8),
+            REL::Offset(0x04341DE0) };
+		inline constexpr std::array<REL::Offset, 1>  BGSSkinForm{ REL::Offset(0x0436CA18) };
+		inline constexpr std::array<REL::Offset, 1>  BGSSkinnedDecalChild{ REL::Offset(0x0436ED58) };
+		inline constexpr std::array<REL::Offset, 1>  BGSSkinnedDecalGroup{ REL::Offset(0x0436F000) };
+		inline constexpr std::array<REL::Offset, 2>  BGSSnapBehavior{ REL::Offset(0x043B4F80), REL::Offset(0x043B4F98) };
+		inline constexpr std::array<REL::Offset, 3>  BGSSnapTemplate{ REL::Offset(0x043B5360), REL::Offset(0x043B53C0), REL::Offset(0x043B53D8) };
+		inline constexpr std::array<REL::Offset, 1>  BGSSnapTemplateComponent{ REL::Offset(0x04353CE8) };
+		inline constexpr std::array<REL::Offset, 5>  BGSSnapTemplateNode{ REL::Offset(0x043B5830), REL::Offset(0x043B5848), REL::Offset(0x043B5C60),
+            REL::Offset(0x043B5C80), REL::Offset(0x043B5CE8) };
+		inline constexpr std::array<REL::Offset, 2>  BGSSoundEcho{ REL::Offset(0x043AC930), REL::Offset(0x043ACD48) };
+		inline constexpr std::array<REL::Offset, 2>  BGSSoundKeywordMapping{ REL::Offset(0x043AC518), REL::Offset(0x043AC830) };
+		inline constexpr std::array<REL::Offset, 1>  BGSSoundTagComponent{ REL::Offset(0x04353D78) };
+		inline constexpr std::array<REL::Offset, 2>  BGSSoundTagSet{ REL::Offset(0x043ACD60), REL::Offset(0x043ACD78) };
+		inline constexpr std::array<REL::Offset, 2>  BGSSpacePhysicsFormComponent{ REL::Offset(0x04353E58), REL::Offset(0x04353E70) };
+		inline constexpr std::array<REL::Offset, 1>  BGSSpaceshipAIActor{ REL::Offset(0x04353F28) };
+		inline constexpr std::array<REL::Offset, 1>  BGSSpaceshipEquipment{ REL::Offset(0x04353FC0) };
+		inline constexpr std::array<REL::Offset, 1>  BGSSpaceshipHullCode{ REL::Offset(0x04354070) };
+		inline constexpr std::array<REL::Offset, 1>  BGSSpaceshipWeaponBinding{ REL::Offset(0x04354110) };
+		inline constexpr std::array<REL::Offset, 1>  BGSSpatialCombinedGrid{ REL::Offset(0x0437C670) };
+		inline constexpr std::array<REL::Offset, 1>  BGSSpatialGraph{ REL::Offset(0x0437AA20) };
+		inline constexpr std::array<REL::Offset, 1>  BGSSpatialGraphCellGrid{ REL::Offset(0x0437A490) };
+		inline constexpr std::array<REL::Offset, 1>  BGSSpatialGraphCellGrid__MergeTask{ REL::Offset(0x0437A438) };
+		inline constexpr std::array<REL::Offset, 1>  BGSSpatialGraphChild{ REL::Offset(0x0437A958) };
+		inline constexpr std::array<REL::Offset, 1>  BGSSpatialGraphExteriorCell{ REL::Offset(0x0437A620) };
+		inline constexpr std::array<REL::Offset, 1>  BGSSpatialGraphInteriorCell{ REL::Offset(0x0437AAE8) };
 		inline constexpr std::array<REL::Offset, 13> BGSSpatialGraphManager{
 			REL::Offset(0x0437B670), REL::Offset(0x0437B688), REL::Offset(0x0437B6A0), REL::Offset(0x0437B6B8), REL::Offset(0x0437B6D0),
 			REL::Offset(0x0437B6E8), REL::Offset(0x0437B700), REL::Offset(0x0437B718), REL::Offset(0x0437B730), REL::Offset(0x0437B748),
@@ -9618,7 +9618,7 @@ namespace RE
 			BGSSpatialGridFieldWrapperT_unsignedint_BGSSpatialGridFieldT_unsignedint_BGSSpatialGridFieldBitField_unsignedint_2___{ REL::Offset(
 				0x044601B8) };
 		inline constexpr std::array<REL::Offset, 1>
-			BGSSpatialGridPathBuilder_BGSProcedureWanderExecState__ProcessHigh__62__PathingRequestWanderingPolicy_{ REL::Offset(0x0444B898) };
+													BGSSpatialGridPathBuilder_BGSProcedureWanderExecState__ProcessHigh__62__PathingRequestWanderingPolicy_{ REL::Offset(0x0444B898) };
 		inline constexpr std::array<REL::Offset, 1> BGSSpatialGridPathBuilder_EscortPathingRequestPolicy_{ REL::Offset(0x04446FF8) };
 		inline constexpr std::array<REL::Offset, 1>
 			BGSSpatialGridSearchAdapter_BSPathingRequestPolicies__DestinationArea_BGSSpatialGridSearchPolicies__RandomPositionInsideArea_{
@@ -11325,12 +11325,12 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  BGSSpawnOnDestroy{ REL::Offset(0x04354208) };
 		inline constexpr std::array<REL::Offset, 2>  BGSSpeechChallengeActivity{ REL::Offset(0x043421B0), REL::Offset(0x04342210) };
 		inline constexpr std::array<REL::Offset, 3>  BGSSpeechChallengeActivity_Runtime{ REL::Offset(0x043420E0), REL::Offset(0x043420F8),
-                                                                                        REL::Offset(0x04342110) };
+            REL::Offset(0x04342110) };
 		inline constexpr std::array<REL::Offset, 4>  BGSSpeechChallengeObject{ REL::Offset(0x043AD090), REL::Offset(0x043AD0A8),
-                                                                              REL::Offset(0x043AD3C0), REL::Offset(0x043AD3E0) };
+            REL::Offset(0x043AD3C0), REL::Offset(0x043AD3E0) };
 		inline constexpr std::array<REL::Offset, 2>  BGSSprintActivity{ REL::Offset(0x04342328), REL::Offset(0x043423E0) };
 		inline constexpr std::array<REL::Offset, 3>  BGSSprintActivity_Runtime{ REL::Offset(0x043422F8), REL::Offset(0x04342310),
-                                                                               REL::Offset(0x04342340) };
+            REL::Offset(0x04342340) };
 		inline constexpr std::array<REL::Offset, 1>  BGSStarDataComponent{ REL::Offset(0x043542E8) };
 		inline constexpr std::array<REL::Offset, 3>  BGSStaticCollection{ REL::Offset(0x043B5F08), REL::Offset(0x043B5F20), REL::Offset(0x043B63D0) };
 		inline constexpr std::array<REL::Offset, 1>  BGSStaticCollection__RootFacade{ REL::Offset(0x043B6448) };
@@ -11357,18 +11357,18 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  BGSTTypedFormComponent_BGSVoiceType_1179927366_{ REL::Offset(0x04352FE0) };
 		inline constexpr std::array<REL::Offset, 2>  BGSTakeActorDamageActivity{ REL::Offset(0x04342518), REL::Offset(0x04342578) };
 		inline constexpr std::array<REL::Offset, 3>  BGSTakeActorDamageActivity_Runtime{ REL::Offset(0x04342590), REL::Offset(0x043425A8),
-                                                                                        REL::Offset(0x043425C0) };
+            REL::Offset(0x043425C0) };
 		inline constexpr std::array<REL::Offset, 2>  BGSTakeDamageActivity{ REL::Offset(0x04342730), REL::Offset(0x043427C0) };
 		inline constexpr std::array<REL::Offset, 4>  BGSTakeDamageActivity_Runtime{ REL::Offset(0x04342718), REL::Offset(0x04342790),
-                                                                                   REL::Offset(0x043427A8), REL::Offset(0x043427D8) };
+            REL::Offset(0x043427A8), REL::Offset(0x043427D8) };
 		inline constexpr std::array<REL::Offset, 12> BGSTalkingActivator{ REL::Offset(0x043B6748), REL::Offset(0x043B67A8), REL::Offset(0x043B6808),
-			                                                              REL::Offset(0x043B6868), REL::Offset(0x043B68E0), REL::Offset(0x043B6940),
-			                                                              REL::Offset(0x043B6958), REL::Offset(0x043B69D0), REL::Offset(0x043B6A38),
-			                                                              REL::Offset(0x043B6A58), REL::Offset(0x043B6AB8), REL::Offset(0x043B6AE8) };
+			REL::Offset(0x043B6868), REL::Offset(0x043B68E0), REL::Offset(0x043B6940),
+			REL::Offset(0x043B6958), REL::Offset(0x043B69D0), REL::Offset(0x043B6A38),
+			REL::Offset(0x043B6A58), REL::Offset(0x043B6AB8), REL::Offset(0x043B6AE8) };
 		inline constexpr std::array<REL::Offset, 12> BGSTerminal{ REL::Offset(0x043B7008), REL::Offset(0x043B7080), REL::Offset(0x043B70E0),
-			                                                      REL::Offset(0x043B70F8), REL::Offset(0x043B7170), REL::Offset(0x043B71D8),
-			                                                      REL::Offset(0x043B71F8), REL::Offset(0x043B7258), REL::Offset(0x043B7288),
-			                                                      REL::Offset(0x043B76A8), REL::Offset(0x043B7708), REL::Offset(0x043B7768) };
+			REL::Offset(0x043B70F8), REL::Offset(0x043B7170), REL::Offset(0x043B71D8),
+			REL::Offset(0x043B71F8), REL::Offset(0x043B7258), REL::Offset(0x043B7288),
+			REL::Offset(0x043B76A8), REL::Offset(0x043B7708), REL::Offset(0x043B7768) };
 		inline constexpr std::array<REL::Offset, 3>  BGSTerminalMenu{ REL::Offset(0x043902D8), REL::Offset(0x043905F0), REL::Offset(0x04390668) };
 		inline constexpr std::array<REL::Offset, 1>  BGSTerrainBlock__AlignmentModifier{ REL::Offset(0x043A0370) };
 		inline constexpr std::array<REL::Offset, 1>  BGSTerrainBlock__ContinentalModifier{ REL::Offset(0x043A0458) };
@@ -11451,7 +11451,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  BSAnimationAnimDBData{ REL::Offset(0x04560E68) };
 		inline constexpr std::array<REL::Offset, 1>  BSAnimationDBData{ REL::Offset(0x04560E88) };
 		inline constexpr std::array<REL::Offset, 4>  BSAnimationGraph{ REL::Offset(0x04561290), REL::Offset(0x045614D8), REL::Offset(0x045614E8),
-                                                                      REL::Offset(0x045614F8) };
+            REL::Offset(0x045614F8) };
 		inline constexpr std::array<REL::Offset, 1>  BSAnimationGraphChannel{ REL::Offset(0x043D0428) };
 		inline constexpr std::array<REL::Offset, 1>  BSAnimationGraphLoadScrapper{ REL::Offset(0x03F2BA20) };
 		inline constexpr std::array<REL::Offset, 1>  BSAnimationGraphManager{ REL::Offset(0x0456AE60) };
@@ -11473,8 +11473,8 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  BSAttachTechniques__BSAttachTechnique{ REL::Offset(0x03F25B38) };
 		inline constexpr std::array<REL::Offset, 1>  BSAutoQueuedDependentNodeBase{ REL::Offset(0x04581540) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSAutoQueuedResourceCollection_AnimationSystemUtils__TESModelAndAnimationHandles_BSTSmartPointerIntrusiveRefCount_{ REL::Offset(
-				0x04349C18) };
+													BSAutoQueuedResourceCollection_AnimationSystemUtils__TESModelAndAnimationHandles_BSTSmartPointerIntrusiveRefCount_{ REL::Offset(
+                0x04349C18) };
 		inline constexpr std::array<REL::Offset, 1> BSAutoQueuedResourceCollection_BSMorphDB__QueuedHandles_BSTSmartPointerGamebryoRefCount_{
 			REL::Offset(0x04351CE0)
 		};
@@ -11610,14 +11610,14 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSComponentDB2__Detail__ComponentFactoryImpl_BGSSurface__CTBlockCellHeightGrid_{ REL::Offset(
 			0x03F2C148) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSComponentDB2__Detail__ComponentFactoryImpl_BGSSurface__OverlayPlacement____BGSDesignatedInfoComponent_{ REL::Offset(0x04389340) };
+													BSComponentDB2__Detail__ComponentFactoryImpl_BGSSurface__OverlayPlacement____BGSDesignatedInfoComponent_{ REL::Offset(0x04389340) };
 		inline constexpr std::array<REL::Offset, 1> BSComponentDB2__Detail__ComponentFactoryImpl_BGSSurface__OverlayPlacement____CTDesignatedInfo_{
 			REL::Offset(0x043893F8)
 		};
 		inline constexpr std::array<REL::Offset, 1>
 			BSComponentDB2__Detail__ComponentFactoryImpl_BGSSurface__PatternPlacement____BlockHeightAdjustmentComponent_{ REL::Offset(0x04389618) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSComponentDB2__Detail__ComponentFactoryImpl_BGSSurface__PatternPlacement____CTBlockHeightAdjustment_{ REL::Offset(0x04389660) };
+													BSComponentDB2__Detail__ComponentFactoryImpl_BGSSurface__PatternPlacement____CTBlockHeightAdjustment_{ REL::Offset(0x04389660) };
 		inline constexpr std::array<REL::Offset, 1> BSComponentDB2__Detail__ComponentFactoryImpl_BGSSurface____CTWaterHeight_{ REL::Offset(
 			0x04389B18) };
 		inline constexpr std::array<REL::Offset, 1> BSComponentDB2__Detail__ComponentFactoryImpl_BGSSurface____WaterHeightComponent_{ REL::Offset(
@@ -11639,8 +11639,8 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSComponentDB2__Detail__ComponentFactoryImpl_BSComponentDB2__OuterEdge_{ REL::Offset(
 			0x0457F350) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSComponentDB2__Detail__ComponentFactoryImpl_BSComponentDB__TaggedFixedStringComponent_BSComponentDB__CTNameTag__{ REL::Offset(
-				0x0457BFD0) };
+													BSComponentDB2__Detail__ComponentFactoryImpl_BSComponentDB__TaggedFixedStringComponent_BSComponentDB__CTNameTag__{ REL::Offset(
+                0x0457BFD0) };
 		inline constexpr std::array<REL::Offset, 1> BSComponentDB2__Detail__ComponentFactoryImpl_BSForces__ForceReceiverComponent_{ REL::Offset(
 			0x0457F2D0) };
 		inline constexpr std::array<REL::Offset, 1> BSComponentDB2__Detail__ComponentFactoryImpl_BSGalaxy__BodyChild_{ REL::Offset(0x04572390) };
@@ -11766,7 +11766,7 @@ namespace RE
 			REL::Offset(0x0458A088)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			BSComponentDB2__Detail__ComponentFactoryImpl_BSMaterial__TaggedID_BSMaterial__Tag__TextureSetTag__{ REL::Offset(0x04589D78) };
+													BSComponentDB2__Detail__ComponentFactoryImpl_BSMaterial__TaggedID_BSMaterial__Tag__TextureSetTag__{ REL::Offset(0x04589D78) };
 		inline constexpr std::array<REL::Offset, 1> BSComponentDB2__Detail__ComponentFactoryImpl_BSMaterial__TaggedID_BSMaterial__Tag__UVStreamTag__{
 			REL::Offset(0x04589E38)
 		};
@@ -11858,7 +11858,7 @@ namespace RE
 				REL::Offset(0x03F2C888)
 			};
 		inline constexpr std::array<REL::Offset, 1>
-			BSComponentDB2__Detail__ComponentFactoryImpl_SaveLoadGlobalRAIIComponents__HeldHandles_unsignedint__{ REL::Offset(0x03F2BDC8) };
+													BSComponentDB2__Detail__ComponentFactoryImpl_SaveLoadGlobalRAIIComponents__HeldHandles_unsignedint__{ REL::Offset(0x03F2BDC8) };
 		inline constexpr std::array<REL::Offset, 1> BSComponentDB2__Detail__ComponentFactoryImpl_ScannableComponent_{ REL::Offset(0x03EF7710) };
 		inline constexpr std::array<REL::Offset, 1> BSComponentDB2__Detail__ComponentFactoryImpl_ShipCellBlueprintOwner_{ REL::Offset(0x03F2C788) };
 		inline constexpr std::array<REL::Offset, 1> BSComponentDB2__Detail__ComponentFactoryImpl_ShipManagementComponent_{ REL::Offset(0x03F2C048) };
@@ -11895,7 +11895,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSComponentDB2__Detail__ComponentFactoryImpl_TESPlanetModel_{ REL::Offset(0x03EF3EE8) };
 		inline constexpr std::array<REL::Offset, 1> BSComponentDB2__Detail__ComponentFactoryImpl_TESTexture_{ REL::Offset(0x03F2B878) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSComponentDB2__Detail__ComponentFactoryImpl_TESTopicInfoComponentUtils__PendingDialogueOnEndEvent_{ REL::Offset(0x03F2BAF8) };
+													BSComponentDB2__Detail__ComponentFactoryImpl_TESTopicInfoComponentUtils__PendingDialogueOnEndEvent_{ REL::Offset(0x03F2BAF8) };
 		inline constexpr std::array<REL::Offset, 1> BSComponentDB2__Detail__ComponentFactoryImpl_TESValueForm_{ REL::Offset(0x03F2BE48) };
 		inline constexpr std::array<REL::Offset, 1> BSComponentDB2__Detail__ComponentFactoryImpl_TESWeightForm_{ REL::Offset(0x03F2C208) };
 		inline constexpr std::array<REL::Offset, 1> BSComponentDB2__Detail__ComponentFactoryImpl_TempDataHandleEdge_{ REL::Offset(0x03F2C8C8) };
@@ -12035,7 +12035,7 @@ namespace RE
 			REL::Offset(0x043CCDF8)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			BSComponentDB2__Detail__CreateAndDeleteCommand__lambda_23350e4dea609692679fecb219e44f90__BSCore__NumericID_{ REL::Offset(0x043B4148) };
+													BSComponentDB2__Detail__CreateAndDeleteCommand__lambda_23350e4dea609692679fecb219e44f90__BSCore__NumericID_{ REL::Offset(0x043B4148) };
 		inline constexpr std::array<REL::Offset, 1> BSComponentDB2__Detail__CreateAndDeleteCommand__lambda_23993791ff518d80c3881d0df1b5f94a__{
 			REL::Offset(0x044775E0)
 		};
@@ -12339,7 +12339,7 @@ namespace RE
 			REL::Offset(0x04369BA8)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			BSComponentDB2__Detail__CreateAndDeleteCommand__lambda_7b4d724c1688d5484b1fa06fe2b80fc8__BSComponentDB2__ID_{ REL::Offset(0x04559228) };
+													BSComponentDB2__Detail__CreateAndDeleteCommand__lambda_7b4d724c1688d5484b1fa06fe2b80fc8__BSComponentDB2__ID_{ REL::Offset(0x04559228) };
 		inline constexpr std::array<REL::Offset, 1> BSComponentDB2__Detail__CreateAndDeleteCommand__lambda_7c3ec67db782ff6376f5774be894cc44__{
 			REL::Offset(0x04589608)
 		};
@@ -12384,7 +12384,7 @@ namespace RE
 				REL::Offset(0x0437D9E0)
 			};
 		inline constexpr std::array<REL::Offset, 1>
-			BSComponentDB2__Detail__CreateAndDeleteCommand__lambda_8556c71063c67d4d750c8b90344839b3__BSComponentDB2__ID_{ REL::Offset(0x04373AE0) };
+													BSComponentDB2__Detail__CreateAndDeleteCommand__lambda_8556c71063c67d4d750c8b90344839b3__BSComponentDB2__ID_{ REL::Offset(0x04373AE0) };
 		inline constexpr std::array<REL::Offset, 1> BSComponentDB2__Detail__CreateAndDeleteCommand__lambda_85b29ddd9f79f4bc3bdb398b991b5996__{
 			REL::Offset(0x043693A0)
 		};
@@ -12410,8 +12410,8 @@ namespace RE
 				REL::Offset(0x0457C218)
 			};
 		inline constexpr std::array<REL::Offset, 1>
-			BSComponentDB2__Detail__CreateAndDeleteCommand__lambda_8ee449afe10d933a75c65bdc18cda39b__unsignedint_BSResource__IDconst_{ REL::Offset(
-				0x04369CD8) };
+													BSComponentDB2__Detail__CreateAndDeleteCommand__lambda_8ee449afe10d933a75c65bdc18cda39b__unsignedint_BSResource__IDconst_{ REL::Offset(
+                0x04369CD8) };
 		inline constexpr std::array<REL::Offset, 1> BSComponentDB2__Detail__CreateAndDeleteCommand__lambda_8fd312ccd6849cff4f0fedfa7efbb27d__{
 			REL::Offset(0x04477760)
 		};
@@ -12680,8 +12680,8 @@ namespace RE
 			REL::Offset(0x043D3098)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			BSComponentDB2__Detail__CreateAndDeleteCommand__lambda_e5b16867ea606e7b2476ed212c239991__BSComponentDB2__ID_unsignedshort_{ REL::Offset(
-				0x0437D9A0) };
+													BSComponentDB2__Detail__CreateAndDeleteCommand__lambda_e5b16867ea606e7b2476ed212c239991__BSComponentDB2__ID_unsignedshort_{ REL::Offset(
+                0x0437D9A0) };
 		inline constexpr std::array<REL::Offset, 1> BSComponentDB2__Detail__CreateAndDeleteCommand__lambda_e62da2059af5db5c342cde0b6609067f__{
 			REL::Offset(0x04477358)
 		};
@@ -12844,7 +12844,7 @@ namespace RE
 				REL::Offset(0x0437D980)
 			};
 		inline constexpr std::array<REL::Offset, 1>
-			BSComponentDB2__Detail__TReadAndUpdateTraverser_void__lambda_6497014aa024c3f18002eea2ae03e338_const_{ REL::Offset(0x0437E6F0) };
+													BSComponentDB2__Detail__TReadAndUpdateTraverser_void__lambda_6497014aa024c3f18002eea2ae03e338_const_{ REL::Offset(0x0437E6F0) };
 		inline constexpr std::array<REL::Offset, 1> BSComponentDB2__Detail__TReadAndUpdateTraverser_void__lambda_893c6d705c84a7e0d51d399d9f566036__{
 			REL::Offset(0x04589800)
 		};
@@ -12973,7 +12973,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSFixedSizeBlockAllocator__IAlloc{ REL::Offset(0x0456BE68) };
 		inline constexpr std::array<REL::Offset, 1> BSFixedSizeBlockAllocator__TAlloc_4294967296_16777216_128_{ REL::Offset(0x044CFF78) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSFixedSizeBlockAllocator__TUserPoolImpl_0_128_BSComponentDB__EnvType__ViewControlFallbackAllocator_{ REL::Offset(0x0457BF78) };
+													BSFixedSizeBlockAllocator__TUserPoolImpl_0_128_BSComponentDB__EnvType__ViewControlFallbackAllocator_{ REL::Offset(0x0457BF78) };
 		inline constexpr std::array<REL::Offset, 1> BSFixedSizeBlockAllocator__TUserPoolImpl_0_24___BSPointerAllocatorPageAllocatorSingleThread_{
 			REL::Offset(0x0478A840)
 		};
@@ -13008,7 +13008,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSGFxFunctionHandler{ REL::Offset(0x0458FB30) };
 		inline constexpr std::array<REL::Offset, 1> BSGFxObject{ REL::Offset(0x0458E6A8) };
 		inline constexpr std::array<REL::Offset, 4> BSGalaxy__BGSStar{ REL::Offset(0x04356070), REL::Offset(0x04356090), REL::Offset(0x043560F8),
-			                                                           REL::Offset(0x04356110) };
+			REL::Offset(0x04356110) };
 		inline constexpr std::array<REL::Offset, 2> BSGalaxy__BGSSunPresetForm{ REL::Offset(0x04356428), REL::Offset(0x04356440) };
 		inline constexpr std::array<REL::Offset, 1> BSGalaxy__BiomeMapDB__LoadBiome{ REL::Offset(0x04356808) };
 		inline constexpr std::array<REL::Offset, 1> BSGalaxy__Biomes__Map{ REL::Offset(0x03F259C8) };
@@ -13282,14 +13282,14 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  BSMaterialBinding__MaterialPropertyNode{ REL::Offset(0x0458CF58) };
 		inline constexpr std::array<REL::Offset, 1>  BSMaterialBinding__MaterialUVStreamPropertyNode{ REL::Offset(0x0458DB50) };
 		inline constexpr std::array<REL::Offset, 3>  BSMaterial__ModuleState{ REL::Offset(0x04589C90), REL::Offset(0x04589E78),
-                                                                             REL::Offset(0x0458A070) };
+            REL::Offset(0x0458A070) };
 		inline constexpr std::array<REL::Offset, 1>  BSMemStorage{ REL::Offset(0x04354458) };
 		inline constexpr std::array<REL::Offset, 1>  BSMemStorageAllocated_BSMemoryHeapAllocator_{ REL::Offset(0x0452DD98) };
 		inline constexpr std::array<REL::Offset, 1>  BSMemStorageReadOnly{ REL::Offset(0x0456D4B8) };
 		inline constexpr std::array<REL::Offset, 12> BSMissionMenu{ REL::Offset(0x044A5EB8), REL::Offset(0x044A5F98), REL::Offset(0x044A5FF0),
-			                                                        REL::Offset(0x044A6008), REL::Offset(0x044A6030), REL::Offset(0x044A6048),
-			                                                        REL::Offset(0x044A6060), REL::Offset(0x044A6078), REL::Offset(0x044A6090),
-			                                                        REL::Offset(0x044A60A8), REL::Offset(0x044A60C0), REL::Offset(0x044A60D8) };
+			REL::Offset(0x044A6008), REL::Offset(0x044A6030), REL::Offset(0x044A6048),
+			REL::Offset(0x044A6060), REL::Offset(0x044A6078), REL::Offset(0x044A6090),
+			REL::Offset(0x044A60A8), REL::Offset(0x044A60C0), REL::Offset(0x044A60D8) };
 		inline constexpr std::array<REL::Offset, 1>  BSMissionMenu__MissionMenuEventShuttle{ REL::Offset(0x044A6110) };
 		inline constexpr std::array<REL::Offset, 1>  BSModelDB__AutoQueuedDependentNode{ REL::Offset(0x0457D8A0) };
 		inline constexpr std::array<REL::Offset, 1>  BSModelDB__BSModelProcessor{ REL::Offset(0x0436C0A8) };
@@ -13334,8 +13334,8 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  BSNavMeshGenTaskBase_BSNavMeshGenTaskContextBase_BSNavMeshGenContextGroup__{ REL::Offset(
             0x0459A8F0) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSNavMeshGenTaskBase_BSNavMeshGenTaskContextBase_BSTSmartPointer_BSNavMeshGenContext_BSTSmartPointerIntrusiveRefCount___{ REL::Offset(
-				0x0434CE68) };
+													BSNavMeshGenTaskBase_BSNavMeshGenTaskContextBase_BSTSmartPointer_BSNavMeshGenContext_BSTSmartPointerIntrusiveRefCount___{ REL::Offset(
+                0x0434CE68) };
 		inline constexpr std::array<REL::Offset, 1> BSNavMeshGenTaskGraphProcessor{ REL::Offset(0x0459A9B0) };
 		inline constexpr std::array<REL::Offset, 1> BSNavMeshGenTaskGroup{ REL::Offset(0x0459AB20) };
 		inline constexpr std::array<REL::Offset, 1>
@@ -13436,7 +13436,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSNavMeshGenVertexDataTask{ REL::Offset(0x0459AF90) };
 		inline constexpr std::array<REL::Offset, 1> BSNavMeshGenWaypointTask{ REL::Offset(0x0459B0A8) };
 		inline constexpr std::array<REL::Offset, 4> BSNavMeshGenerator{ REL::Offset(0x0459A910), REL::Offset(0x0459A920), REL::Offset(0x0459A930),
-			                                                            REL::Offset(0x0459A980) };
+			REL::Offset(0x0459A980) };
 		inline constexpr std::array<REL::Offset, 1> BSNavMeshGenerator__BSNavMeshGenBarrierNode{ REL::Offset(0x0459AA78) };
 		inline constexpr std::array<REL::Offset, 1> BSNavMeshGenerator__BSNavMeshGenBeginFinalizeAdjacenCellsNode{ REL::Offset(0x0459AA20) };
 		inline constexpr std::array<REL::Offset, 1> BSNavMeshGenerator__BSNavMeshGenBeginFinalizerNode{ REL::Offset(0x0459FFA8) };
@@ -13503,8 +13503,8 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			BSNavmeshSearchFloodFill_BSNavmeshSegmentCastEdgeVisitor_BSPathing__CheckLineOfSightFilterAdapter__{ REL::Offset(0x04599CA0) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSNavmeshSearchFloodFill_BSNavmeshSegmentCastEdgeVisitor_CombatNavmeshUtilities__CheckStraightPathLineOfSightFilter__{ REL::Offset(
-				0x044F8F38) };
+													BSNavmeshSearchFloodFill_BSNavmeshSegmentCastEdgeVisitor_CombatNavmeshUtilities__CheckStraightPathLineOfSightFilter__{ REL::Offset(
+                0x044F8F38) };
 		inline constexpr std::array<REL::Offset, 1> BSNavmeshSearchFloodFill_BSNavmeshSegmentCastEdgeVisitor_EdgeFilterFunctor__{ REL::Offset(
 			0x045A1EB8) };
 		inline constexpr std::array<REL::Offset, 1> BSNavmeshSearchFloodFill_BSPathing__DetermineAvailableRadiusAtPositionVisitor_{ REL::Offset(
@@ -13623,7 +13623,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			BSQueuedResourceCollection_BSResource2__DB_BSMorphDB__DBTraits_BSResource2__DBResourceStreamPolicy__{ REL::Offset(0x04454558) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSQueuedResourceCollection_BSResource2__DB_BShkbHkxDB__DBTraits_BSResource2__DBResourceStreamPolicy__{ REL::Offset(0x04455138) };
+													BSQueuedResourceCollection_BSResource2__DB_BShkbHkxDB__DBTraits_BSResource2__DBResourceStreamPolicy__{ REL::Offset(0x04455138) };
 		inline constexpr std::array<REL::Offset, 1> BSRangeNode{ REL::Offset(0x04581708) };
 		inline constexpr std::array<REL::Offset, 1> BSRecastModule__BSRecastJob{ REL::Offset(0x045A4738) };
 		inline constexpr std::array<REL::Offset, 1> BSReference{ REL::Offset(0x045843B8) };
@@ -13657,7 +13657,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSReflection__BSArrayType_BSTArray_BSResource__ID_BSTArrayHeapAllocator__{ REL::Offset(
 			0x03F23330) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSReflection__BSArrayType_BSTArray_BSTPoint3_float_BSTPointDefaultOps_float___BSTArrayHeapAllocator__{ REL::Offset(0x03F232B0) };
+													BSReflection__BSArrayType_BSTArray_BSTPoint3_float_BSTPointDefaultOps_float___BSTArrayHeapAllocator__{ REL::Offset(0x03F232B0) };
 		inline constexpr std::array<REL::Offset, 1> BSReflection__BSArrayType_BSTArray_DirectX__XMFLOAT2_BSTArrayHeapAllocator__{ REL::Offset(
 			0x03F23BB0) };
 		inline constexpr std::array<REL::Offset, 1> BSReflection__BSArrayType_BSTArray_DirectX__XMFLOAT3_BSTArrayHeapAllocator__{ REL::Offset(
@@ -13677,8 +13677,8 @@ namespace RE
 			REL::Offset(0x03F247B0)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			BSReflection__BSArrayType_BSTArray_Particles__Intrinsics__SpawnParticleParamSet__BindingSettings_BSTArrayHeapAllocator__{ REL::Offset(
-				0x03F24630) };
+													BSReflection__BSArrayType_BSTArray_Particles__Intrinsics__SpawnParticleParamSet__BindingSettings_BSTArrayHeapAllocator__{ REL::Offset(
+                0x03F24630) };
 		inline constexpr std::array<REL::Offset, 1> BSReflection__BSArrayType_BSTArray_Particles__Intrinsics__VariableInput_BSTArrayHeapAllocator__{
 			REL::Offset(0x03F242B0)
 		};
@@ -13696,8 +13696,8 @@ namespace RE
 			BSReflection__BSArrayType_BSTArray_Particles__MinimalEmitterDefinition__InternalCoordinateSystem_BSTArrayHeapAllocator__{ REL::Offset(
 				0x03F235B0) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSReflection__BSArrayType_BSTArray_Particles__MinimalEmitterDefinition__PublishedVariable_BSTArrayHeapAllocator__{ REL::Offset(
-				0x03F23EB0) };
+													BSReflection__BSArrayType_BSTArray_Particles__MinimalEmitterDefinition__PublishedVariable_BSTArrayHeapAllocator__{ REL::Offset(
+                0x03F23EB0) };
 		inline constexpr std::array<REL::Offset, 1> BSReflection__BSArrayType_BSTArray_Particles__MinimalOperation_BSTArrayHeapAllocator__{
 			REL::Offset(0x03F234B0)
 		};
@@ -13748,7 +13748,7 @@ namespace RE
 			0x03F23DB0) };
 		inline constexpr std::array<REL::Offset, 1> BSReflection__BSFixedStringType{ REL::Offset(0x03F24AE0) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSReflection__BSSmartPointerType_BSTSmartPointer_BSBind__IController_BSTSmartPointerIntrusiveRefCount__{ REL::Offset(0x03F25550) };
+													BSReflection__BSSmartPointerType_BSTSmartPointer_BSBind__IController_BSTSmartPointerIntrusiveRefCount__{ REL::Offset(0x03F25550) };
 		inline constexpr std::array<REL::Offset, 1> BSReflection__BSStringType_BSStaticStringT_260__{ REL::Offset(0x03F24B80) };
 		inline constexpr std::array<REL::Offset, 1> BSReflection__BSStringType_BSStringT_char_1_DynamicMemoryManagementPol__{ REL::Offset(
 			0x03F24B30) };
@@ -13756,7 +13756,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSReflection__ClassType{ REL::Offset(0x03EF7510) };
 		inline constexpr std::array<REL::Offset, 1> BSReflection__ConstCStringType{ REL::Offset(0x03F24A90) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSReflection__ConstIteratorEnumeratorAdaptor_BSTArrayIterator_ActorValueSnapshot__ActorValueBinding__{ REL::Offset(0x04392618) };
+													BSReflection__ConstIteratorEnumeratorAdaptor_BSTArrayIterator_ActorValueSnapshot__ActorValueBinding__{ REL::Offset(0x04392618) };
 		inline constexpr std::array<REL::Offset, 1> BSReflection__ConstIteratorEnumeratorAdaptor_BSTArrayIterator_AssetDiagnostics__CellObject__{
 			REL::Offset(0x04392B18)
 		};
@@ -13776,7 +13776,7 @@ namespace RE
 			REL::Offset(0x043925D8)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			BSReflection__ConstIteratorEnumeratorAdaptor_BSTArrayIterator_BGSMaterialPropertyComponent__Entry__{ REL::Offset(0x04392478) };
+													BSReflection__ConstIteratorEnumeratorAdaptor_BSTArrayIterator_BGSMaterialPropertyComponent__Entry__{ REL::Offset(0x04392478) };
 		inline constexpr std::array<REL::Offset, 1> BSReflection__ConstIteratorEnumeratorAdaptor_BSTArrayIterator_BSAttachConfig__NodeName__{
 			REL::Offset(0x0457F7A0)
 		};
@@ -13790,13 +13790,13 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSReflection__ConstIteratorEnumeratorAdaptor_BSTArrayIterator_BSResource__ID__{ REL::Offset(
 			0x045919B8) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSReflection__ConstIteratorEnumeratorAdaptor_BSTArrayIterator_BSTPoint3_float_BSTPointDefaultOps_float____{ REL::Offset(0x045916F8) };
+													BSReflection__ConstIteratorEnumeratorAdaptor_BSTArrayIterator_BSTPoint3_float_BSTPointDefaultOps_float____{ REL::Offset(0x045916F8) };
 		inline constexpr std::array<REL::Offset, 1> BSReflection__ConstIteratorEnumeratorAdaptor_BSTArrayIterator_DirectX__XMFLOAT2__{ REL::Offset(
 			0x04591658) };
 		inline constexpr std::array<REL::Offset, 1> BSReflection__ConstIteratorEnumeratorAdaptor_BSTArrayIterator_DirectX__XMFLOAT3__{ REL::Offset(
 			0x0457BF58) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSReflection__ConstIteratorEnumeratorAdaptor_BSTArrayIterator_NavMeshSplineExtraData__ChunkDataRef__{ REL::Offset(0x04392C58) };
+													BSReflection__ConstIteratorEnumeratorAdaptor_BSTArrayIterator_NavMeshSplineExtraData__ChunkDataRef__{ REL::Offset(0x04392C58) };
 		inline constexpr std::array<REL::Offset, 1> BSReflection__ConstIteratorEnumeratorAdaptor_BSTArrayIterator_Particles__BundleInfo__{
 			REL::Offset(0x04591918)
 		};
@@ -13816,7 +13816,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			BSReflection__ConstIteratorEnumeratorAdaptor_BSTArrayIterator_Particles__Intrinsics__VariableInput__{ REL::Offset(0x04591678) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSReflection__ConstIteratorEnumeratorAdaptor_BSTArrayIterator_Particles__Intrinsics__Vector3Input__{ REL::Offset(0x04591718) };
+													BSReflection__ConstIteratorEnumeratorAdaptor_BSTArrayIterator_Particles__Intrinsics__Vector3Input__{ REL::Offset(0x04591718) };
 		inline constexpr std::array<REL::Offset, 1> BSReflection__ConstIteratorEnumeratorAdaptor_BSTArrayIterator_Particles__LODCurve__{ REL::Offset(
 			0x04591838) };
 		inline constexpr std::array<REL::Offset, 1> BSReflection__ConstIteratorEnumeratorAdaptor_BSTArrayIterator_Particles__LODLevel__{ REL::Offset(
@@ -13829,13 +13829,13 @@ namespace RE
 				REL::Offset(0x045918D8)
 			};
 		inline constexpr std::array<REL::Offset, 1>
-			BSReflection__ConstIteratorEnumeratorAdaptor_BSTArrayIterator_Particles__MinimalEmitterDefinition__PublishedVariable__{ REL::Offset(
-				0x045918B8) };
+													BSReflection__ConstIteratorEnumeratorAdaptor_BSTArrayIterator_Particles__MinimalEmitterDefinition__PublishedVariable__{ REL::Offset(
+                0x045918B8) };
 		inline constexpr std::array<REL::Offset, 1> BSReflection__ConstIteratorEnumeratorAdaptor_BSTArrayIterator_Particles__MinimalOperation__{
 			REL::Offset(0x045917B8)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			BSReflection__ConstIteratorEnumeratorAdaptor_BSTArrayIterator_Particles__SpawnBindingEntries__Entry__{ REL::Offset(0x045919D8) };
+													BSReflection__ConstIteratorEnumeratorAdaptor_BSTArrayIterator_Particles__SpawnBindingEntries__Entry__{ REL::Offset(0x045919D8) };
 		inline constexpr std::array<REL::Offset, 1> BSReflection__ConstIteratorEnumeratorAdaptor_BSTArrayIterator_Particles__SystemInternalUID__{
 			REL::Offset(0x04591A18)
 		};
@@ -13880,8 +13880,8 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			BSReflection__ConstIteratorEnumeratorAdaptor_std___Array_const_iterator_BGSCloudForm__CloudPlane_4__{ REL::Offset(0x04392638) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSReflection__ConstIteratorEnumeratorAdaptor_std___Array_const_iterator_BSForces__ReceiverSettings__ChannelSettings_2__{ REL::Offset(
-				0x0457E670) };
+													BSReflection__ConstIteratorEnumeratorAdaptor_std___Array_const_iterator_BSForces__ReceiverSettings__ChannelSettings_2__{ REL::Offset(
+                0x0457E670) };
 		inline constexpr std::array<REL::Offset, 1> BSReflection__ConstIteratorEnumeratorAdaptor_std___Array_const_iterator_LODMeshOverrides_3__{
 			REL::Offset(0x043924B8)
 		};
@@ -13889,7 +13889,7 @@ namespace RE
 			REL::Offset(0x04392498)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			BSReflection__ConstIteratorEnumeratorAdaptor_std___Array_const_iterator_ReflectionProbeInstanceData_4__{ REL::Offset(0x043925F8) };
+													BSReflection__ConstIteratorEnumeratorAdaptor_std___Array_const_iterator_ReflectionProbeInstanceData_4__{ REL::Offset(0x043925F8) };
 		inline constexpr std::array<REL::Offset, 1> BSReflection__ConstIteratorEnumeratorAdaptor_std___Array_const_iterator_float_3__{ REL::Offset(
 			0x0458CE30) };
 		inline constexpr std::array<REL::Offset, 1> BSReflection__ConstIteratorEnumeratorAdaptor_std___Array_const_iterator_signedchar_48__{
@@ -14078,8 +14078,8 @@ namespace RE
 			REL::Offset(0x04591AE8), REL::Offset(0x04591B10)
 		};
 		inline constexpr std::array<REL::Offset, 2>
-			BSReflection__IteratorEnumeratorAdaptor_BSTArrayIterator_BSTPoint3_float_BSTPointDefaultOps_float____{ REL::Offset(0x04592060),
-			                                                                                                       REL::Offset(0x045920C8) };
+													BSReflection__IteratorEnumeratorAdaptor_BSTArrayIterator_BSTPoint3_float_BSTPointDefaultOps_float____{ REL::Offset(0x04592060),
+                REL::Offset(0x045920C8) };
 		inline constexpr std::array<REL::Offset, 2> BSReflection__IteratorEnumeratorAdaptor_BSTArrayIterator_DirectX__XMFLOAT2__{
 			REL::Offset(0x04592210), REL::Offset(0x04592278)
 		};
@@ -14142,15 +14142,15 @@ namespace RE
 			REL::Offset(0x04591448), REL::Offset(0x04591470)
 		};
 		inline constexpr std::array<REL::Offset, 2> BSReflection__IteratorEnumeratorAdaptor_BSTArrayIterator_TESForm__{ REL::Offset(0x04392AA8),
-			                                                                                                            REL::Offset(0x04392AD0) };
+			REL::Offset(0x04392AD0) };
 		inline constexpr std::array<REL::Offset, 2> BSReflection__IteratorEnumeratorAdaptor_BSTArrayIterator_float__{ REL::Offset(0x04591E20),
-			                                                                                                          REL::Offset(0x04591E88) };
+			REL::Offset(0x04591E88) };
 		inline constexpr std::array<REL::Offset, 2>
 			BSReflection__IteratorEnumeratorAdaptor_BSTArrayIterator_std__shared_ptr_HavokParticleDef__BaseShape___{ REL::Offset(0x0457BEA8),
-			                                                                                                         REL::Offset(0x0457BED0) };
+				REL::Offset(0x0457BED0) };
 		inline constexpr std::array<REL::Offset, 2>
 			BSReflection__IteratorEnumeratorAdaptor_BSTArrayIterator_std__shared_ptr_Particles__ResourceDependency___{ REL::Offset(0x04591490),
-			                                                                                                           REL::Offset(0x045914D0) };
+				REL::Offset(0x045914D0) };
 		inline constexpr std::array<REL::Offset, 2>
 			BSReflection__IteratorEnumeratorAdaptor_BSTArrayIterator_std__unique_ptr_BSSequence__Event_stl__detail__AlignedDelete_BSSequence__Event____{
 				REL::Offset(0x0457F4F0), REL::Offset(0x0457F970)
@@ -14185,8 +14185,8 @@ namespace RE
 			REL::Offset(0x04392CB8), REL::Offset(0x04392DB0)
 		};
 		inline constexpr std::array<REL::Offset, 2>
-			BSReflection__IteratorEnumeratorAdaptor_std___Array_iterator_BSForces__ReceiverSettings__ChannelSettings_2__{ REL::Offset(0x0457F5A8),
-			                                                                                                              REL::Offset(0x0457F5C8) };
+													BSReflection__IteratorEnumeratorAdaptor_std___Array_iterator_BSForces__ReceiverSettings__ChannelSettings_2__{ REL::Offset(0x0457F5A8),
+                REL::Offset(0x0457F5C8) };
 		inline constexpr std::array<REL::Offset, 2> BSReflection__IteratorEnumeratorAdaptor_std___Array_iterator_LODMeshOverrides_3__{
 			REL::Offset(0x043927F8), REL::Offset(0x04392820)
 		};
@@ -14197,7 +14197,7 @@ namespace RE
 			REL::Offset(0x04392DF8), REL::Offset(0x04392E20)
 		};
 		inline constexpr std::array<REL::Offset, 2> BSReflection__IteratorEnumeratorAdaptor_std___Array_iterator_float_3__{ REL::Offset(0x0458CAA0),
-			                                                                                                                REL::Offset(0x0458DBA8) };
+			REL::Offset(0x0458DBA8) };
 		inline constexpr std::array<REL::Offset, 2> BSReflection__IteratorEnumeratorAdaptor_std___Array_iterator_signedchar_48__{
 			REL::Offset(0x045921C8), REL::Offset(0x04592230)
 		};
@@ -14686,7 +14686,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			BSResource2__DBStreamOps_1_BShkbHkxDB__DBTraits_BSResource2__DBResourceStreamPolicy___CreateWithArgs{ REL::Offset(0x0456AEA0) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSResource2__DBStreamOps_1_FaceFXAnimDB__DBTraits_BSResource2__DBResourceStreamPolicy___CreateWithArgs{ REL::Offset(0x043512A8) };
+													BSResource2__DBStreamOps_1_FaceFXAnimDB__DBTraits_BSResource2__DBResourceStreamPolicy___CreateWithArgs{ REL::Offset(0x043512A8) };
 		inline constexpr std::array<REL::Offset, 1> BSResource2__EntryBase{ REL::Offset(0x045A6120) };
 		inline constexpr std::array<REL::Offset, 1> BSResource2__IResourceCreator{ REL::Offset(0x04351328) };
 		inline constexpr std::array<REL::Offset, 1> BSResource2__ProxyStream{ REL::Offset(0x045A6070) };
@@ -14703,8 +14703,8 @@ namespace RE
 			BSResource2__TEntryBase_CreationRendererPrivate__MaterialDB__LayerDB__DBTraits_BSResource2__DBDefaultStreamPolicy_{ REL::Offset(
 				0x045B3818) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSResource2__TEntryBase_CreationRendererPrivate__MaterialDB__LayeredMatDB__DBTraits_BSResource2__DBDefaultStreamPolicy_{ REL::Offset(
-				0x045B3830) };
+													BSResource2__TEntryBase_CreationRendererPrivate__MaterialDB__LayeredMatDB__DBTraits_BSResource2__DBDefaultStreamPolicy_{ REL::Offset(
+                0x045B3830) };
 		inline constexpr std::array<REL::Offset, 1> BSResource2__TEntryBase_DisposableInstancedFormDB__DBTraits_BSResource2__DBDefaultStreamPolicy_{
 			REL::Offset(0x044778C8)
 		};
@@ -14717,7 +14717,7 @@ namespace RE
 			REL::Offset(0x0437F940)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			BSResource2__TEntryType_0_BGSPlanet__ProcGenLayersDB__DBTraits_BSResource2__DBDefaultStreamPolicy_{ REL::Offset(0x04380D08) };
+													BSResource2__TEntryType_0_BGSPlanet__ProcGenLayersDB__DBTraits_BSResource2__DBDefaultStreamPolicy_{ REL::Offset(0x04380D08) };
 		inline constexpr std::array<REL::Offset, 1> BSResource2__TEntryType_0_BSCPUMeshDB__DBTraits_BSResource2__DBResourceStreamPolicy_{ REL::Offset(
 			0x04585F48) };
 		inline constexpr std::array<REL::Offset, 1> BSResource2__TEntryType_0_BSFaceDB__DBTraits_BSResource2__DBDefaultStreamPolicy_{ REL::Offset(
@@ -14754,7 +14754,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			BSResource2__TEntryType_0_CreationRenderer__MeshLODDB__DBTraits_BSResource2__DBDefaultStreamPolicy_{ REL::Offset(0x045BDC18) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSResource2__TEntryType_0_CreationRenderer__MeshLODDB__UpgradeDBTraits_BSResource2__DBDefaultStreamPolicy_{ REL::Offset(0x045BDC30) };
+													BSResource2__TEntryType_0_CreationRenderer__MeshLODDB__UpgradeDBTraits_BSResource2__DBDefaultStreamPolicy_{ REL::Offset(0x045BDC30) };
 		inline constexpr std::array<REL::Offset, 1> BSResource2__TEntryType_0_CreationRenderer__MorphDB__DBTraits_BSResource2__DBDefaultStreamPolicy_{
 			REL::Offset(0x045C0408)
 		};
@@ -16010,9 +16010,9 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSScript__Internal__RawFuncCallQuery{ REL::Offset(0x045AE210) };
 		inline constexpr std::array<REL::Offset, 1> BSScript__Internal__ScriptFunction{ REL::Offset(0x045B2008) };
 		inline constexpr std::array<REL::Offset, 7> BSScript__Internal__VirtualMachine{ REL::Offset(0x045AD728), REL::Offset(0x045AD948),
-			                                                                            REL::Offset(0x045AD9A8), REL::Offset(0x045ADAB0),
-			                                                                            REL::Offset(0x045ADAE8), REL::Offset(0x045ADB08),
-			                                                                            REL::Offset(0x045ADB20) };
+			REL::Offset(0x045AD9A8), REL::Offset(0x045ADAB0),
+			REL::Offset(0x045ADAE8), REL::Offset(0x045ADB08),
+			REL::Offset(0x045ADB20) };
 		inline constexpr std::array<REL::Offset, 1> BSScript__Internal__VirtualMachine__AttemptFunctionCall__2__Callbacks{ REL::Offset(0x045AD698) };
 		inline constexpr std::array<REL::Offset, 1> BSScript__Internal__VirtualMachine__CallInTasklet__2__Callbacks{ REL::Offset(0x045AD638) };
 		inline constexpr std::array<REL::Offset, 1> BSScript__Internal__VirtualMachine__HandleCallMessage__2__Callbacks{ REL::Offset(0x045AD6C8) };
@@ -16095,7 +16095,7 @@ namespace RE
 			REL::Offset(0x0453A0E8)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			BSScript__NativeFunction0_BSScript__StaticFunctionTag_BSScript__ArrayWrapper_GameScript__SpaceshipRef__{ REL::Offset(0x0453A520) };
+													BSScript__NativeFunction0_BSScript__StaticFunctionTag_BSScript__ArrayWrapper_GameScript__SpaceshipRef__{ REL::Offset(0x0453A520) };
 		inline constexpr std::array<REL::Offset, 1> BSScript__NativeFunction0_BSScript__StaticFunctionTag_BSScript__ArrayWrapper_TESQuest__{
 			REL::Offset(0x0453A448)
 		};
@@ -16124,7 +16124,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSScript__NativeFunction0_GameScript__SpaceshipBase_bool_{ REL::Offset(0x04524B10) };
 		inline constexpr std::array<REL::Offset, 1> BSScript__NativeFunction0_GameScript__SpaceshipRef_BGSKeywordconst_{ REL::Offset(0x04528A88) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSScript__NativeFunction0_GameScript__SpaceshipRef_BSScript__ArrayWrapper_GameScript__SpaceshipRef__{ REL::Offset(0x04526C28) };
+													BSScript__NativeFunction0_GameScript__SpaceshipRef_BSScript__ArrayWrapper_GameScript__SpaceshipRef__{ REL::Offset(0x04526C28) };
 		inline constexpr std::array<REL::Offset, 1> BSScript__NativeFunction0_GameScript__SpaceshipRef_BSScript__ArrayWrapper_TESObjectREFR__{
 			REL::Offset(0x04527210)
 		};
@@ -16218,8 +16218,8 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			BSScript__NativeFunction11_BSInputEnableLayer_void_bool_bool_bool_bool_bool_bool_bool_bool_bool_bool_bool_{ REL::Offset(0x0453D1B0) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSScript__NativeFunction11_TESObjectREFR_void_TESObjectREFR_float_float_float_float_float_float_float_float_int_float_{ REL::Offset(
-				0x0454E788) };
+													BSScript__NativeFunction11_TESObjectREFR_void_TESObjectREFR_float_float_float_float_float_float_float_float_int_float_{ REL::Offset(
+                0x0454E788) };
 		inline constexpr std::array<REL::Offset, 1> BSScript__NativeFunction1_Actor_SpellItem_unsignedint_{ REL::Offset(0x04532710) };
 		inline constexpr std::array<REL::Offset, 1> BSScript__NativeFunction1_Actor_TESObjectWEAP_unsignedint_{ REL::Offset(0x04532638) };
 		inline constexpr std::array<REL::Offset, 1> BSScript__NativeFunction1_Actor_bool_Actor_{ REL::Offset(0x04532F80) };
@@ -16316,7 +16316,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSScript__NativeFunction1_BSScript__StaticFunctionTag_BSFixedString_unsignedint_{ REL::Offset(
 			0x04555440) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSScript__NativeFunction1_BSScript__StaticFunctionTag_BSScript__ArrayWrapper_unsignedint__BSFixedStringconst_{ REL::Offset(0x045551B8) };
+													BSScript__NativeFunction1_BSScript__StaticFunctionTag_BSScript__ArrayWrapper_unsignedint__BSFixedStringconst_{ REL::Offset(0x045551B8) };
 		inline constexpr std::array<REL::Offset, 1> BSScript__NativeFunction1_BSScript__StaticFunctionTag_TESForm_int_{ REL::Offset(0x0453C3A0) };
 		inline constexpr std::array<REL::Offset, 1> BSScript__NativeFunction1_BSScript__StaticFunctionTag_bool_Actor_{ REL::Offset(0x0453BDB8) };
 		inline constexpr std::array<REL::Offset, 1> BSScript__NativeFunction1_BSScript__StaticFunctionTag_bool_BGSResearchProjectFormconst_{
@@ -16372,7 +16372,7 @@ namespace RE
 		};
 		inline constexpr std::array<REL::Offset, 1> BSScript__NativeFunction1_GameScript__RefrOrInventoryObj_void_bool_{ REL::Offset(0x0454D5E8) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSScript__NativeFunction1_GameScript__SpaceshipRef_BSScript__ArrayWrapper_TESObjectREFR__BGSKeyword_{ REL::Offset(0x04527138) };
+													BSScript__NativeFunction1_GameScript__SpaceshipRef_BSScript__ArrayWrapper_TESObjectREFR__BGSKeyword_{ REL::Offset(0x04527138) };
 		inline constexpr std::array<REL::Offset, 1> BSScript__NativeFunction1_GameScript__SpaceshipRef_TESObjectWEAPconst_ActorValueInfoconst_{
 			REL::Offset(0x04527A80)
 		};
@@ -16494,7 +16494,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSScript__NativeFunction2_BGSWwiseEventForm_int_BSFixedStringconst_float_{ REL::Offset(
 			0x045235C0) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSScript__NativeFunction2_BSScript__Object_bool_BSFixedStringconst_BSScript__ArrayWrapper_BSScript__Variable__{ REL::Offset(0x0453F4E8) };
+													BSScript__NativeFunction2_BSScript__Object_bool_BSFixedStringconst_BSScript__ArrayWrapper_BSScript__Variable__{ REL::Offset(0x0453F4E8) };
 		inline constexpr std::array<REL::Offset, 1> BSScript__NativeFunction2_BSScript__Object_bool_BSFixedStringconst_BSScript__Variable_{
 			REL::Offset(0x0453F338)
 		};
@@ -16504,7 +16504,7 @@ namespace RE
 			0x0453E918) };
 		inline constexpr std::array<REL::Offset, 1> BSScript__NativeFunction2_BSScript__Object_void_Actor_TESObjectREFR_{ REL::Offset(0x0453E690) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSScript__NativeFunction2_BSScript__Object_void_BSFixedStringconst_BSScript__ArrayWrapper_BSScript__Variable__{ REL::Offset(0x0453E330) };
+													BSScript__NativeFunction2_BSScript__Object_void_BSFixedStringconst_BSScript__ArrayWrapper_BSScript__Variable__{ REL::Offset(0x0453E330) };
 		inline constexpr std::array<REL::Offset, 1> BSScript__NativeFunction2_BSScript__Object_void_BSFixedStringconst_BSScript__Variable_{
 			REL::Offset(0x0453EF00)
 		};
@@ -16559,7 +16559,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			BSScript__NativeFunction2_GameScript__LeveledSpaceshipBase_void_GameScript__SpaceshipBase_unsignedint_{ REL::Offset(0x0447C0D8) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSScript__NativeFunction2_GameScript__RefrOrInventoryObj_bool_BGSMod__Attachment__Mod_unsignedint_{ REL::Offset(0x04550E58) };
+													BSScript__NativeFunction2_GameScript__RefrOrInventoryObj_bool_BGSMod__Attachment__Mod_unsignedint_{ REL::Offset(0x04550E58) };
 		inline constexpr std::array<REL::Offset, 1> BSScript__NativeFunction2_GameScript__RefrOrInventoryObj_void_Actor_bool_{ REL::Offset(
 			0x0454F508) };
 		inline constexpr std::array<REL::Offset, 1> BSScript__NativeFunction2_GameScript__RefrOrInventoryObj_void_Actor_float_{ REL::Offset(
@@ -16606,7 +16606,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			BSScript__NativeFunction2_TESObjectREFR_BSScript__ArrayWrapper_TESObjectREFR__BGSKeyword_BGSKeyword_{ REL::Offset(0x04549850) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSScript__NativeFunction2_TESObjectREFR_BSScript__ArrayWrapper_TESObjectREFR__BGSKeyword_unsignedint_{ REL::Offset(0x0454C508) };
+													BSScript__NativeFunction2_TESObjectREFR_BSScript__ArrayWrapper_TESObjectREFR__BGSKeyword_unsignedint_{ REL::Offset(0x0454C508) };
 		inline constexpr std::array<REL::Offset, 1> BSScript__NativeFunction2_TESObjectREFR_BSScript__ArrayWrapper_TESObjectREFR__TESForm_float_{
 			REL::Offset(0x04551950)
 		};
@@ -16673,8 +16673,8 @@ namespace RE
 				REL::Offset(0x04555008)
 			};
 		inline constexpr std::array<REL::Offset, 1>
-			BSScript__NativeFunction3_BSScript__StaticFunctionTag_void_BSFixedStringconst_BSScript__ArrayWrapper_TESObjectREFR__bool_{ REL::Offset(
-				0x0454DAF8) };
+													BSScript__NativeFunction3_BSScript__StaticFunctionTag_void_BSFixedStringconst_BSScript__ArrayWrapper_TESObjectREFR__bool_{ REL::Offset(
+                0x0454DAF8) };
 		inline constexpr std::array<REL::Offset, 1> BSScript__NativeFunction3_BSScript__StaticFunctionTag_void_TESObjectREFR_float_float_{
 			REL::Offset(0x0453AF40)
 		};
@@ -16690,8 +16690,8 @@ namespace RE
 				REL::Offset(0x04523848)
 			};
 		inline constexpr std::array<REL::Offset, 1>
-			BSScript__NativeFunction3_GameScript__RefrOrInventoryObj_bool_TESObjectREFR_BSFixedStringconst_BSFixedStringconst_{ REL::Offset(
-				0x0454FF28) };
+													BSScript__NativeFunction3_GameScript__RefrOrInventoryObj_bool_TESObjectREFR_BSFixedStringconst_BSFixedStringconst_{ REL::Offset(
+                0x0454FF28) };
 		inline constexpr std::array<REL::Offset, 1> BSScript__NativeFunction3_GameScript__RefrOrInventoryObj_bool_float_float_float_{ REL::Offset(
 			0x0454F790) };
 		inline constexpr std::array<REL::Offset, 1> BSScript__NativeFunction3_GameScript__SpaceshipRef_void_unsignedint_int_bool_{ REL::Offset(
@@ -16741,8 +16741,8 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			BSScript__NativeFunction4_BSScript__Object_void_BSScript__Object_BSScript__Object_float_unsignedint_{ REL::Offset(0x0453E840) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSScript__NativeFunction4_BSScript__Object_void_TESObjectREFR_TESObjectREFR_BSFixedStringconst_BSFixedStringconst_{ REL::Offset(
-				0x0453E5B8) };
+													BSScript__NativeFunction4_BSScript__Object_void_TESObjectREFR_TESObjectREFR_BSFixedStringconst_BSFixedStringconst_{ REL::Offset(
+                0x0453E5B8) };
 		inline constexpr std::array<REL::Offset, 1> BSScript__NativeFunction4_BSScript__StaticFunctionTag_Actor_float_float_float_float_{ REL::Offset(
 			0x0453BC08) };
 		inline constexpr std::array<REL::Offset, 1>
@@ -16752,15 +16752,15 @@ namespace RE
 			BSScript__NativeFunction4_BSScript__StaticFunctionTag_BSScript__ArrayWrapper_int__unsignedint_unsignedint_int_int_{ REL::Offset(
 				0x04555290) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSScript__NativeFunction4_TESObjectREFR_bool_GameScript__FormOrInventoryObj_int_bool_TESObjectREFR_{ REL::Offset(0x0454F940) };
+													BSScript__NativeFunction4_TESObjectREFR_bool_GameScript__FormOrInventoryObj_int_bool_TESObjectREFR_{ REL::Offset(0x0454F940) };
 		inline constexpr std::array<REL::Offset, 1> BSScript__NativeFunction4_TESObjectREFR_bool_TESForm_unsignedint_bool_TESObjectREFR_{ REL::Offset(
 			0x0454F868) };
 		inline constexpr std::array<REL::Offset, 1> BSScript__NativeFunction4_TESObjectREFR_bool_float_float_float_float_{ REL::Offset(0x04550360) };
 		inline constexpr std::array<REL::Offset, 1> BSScript__NativeFunction4_TESObjectREFR_void_BGSKeyword_Actor_bool_TESObjectREFR_{ REL::Offset(
 			0x0454EA10) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSScript__NativeFunction4_TESObjectREFR_void_BGSTerminalMenu_unsignedint_unsignedint_BSScript__ArrayWrapper_TESForm__{ REL::Offset(
-				0x045520E8) };
+													BSScript__NativeFunction4_TESObjectREFR_void_BGSTerminalMenu_unsignedint_unsignedint_BSScript__ArrayWrapper_TESForm__{ REL::Offset(
+                0x045520E8) };
 		inline constexpr std::array<REL::Offset, 1> BSScript__NativeFunction4_TESObjectREFR_void_TESObjectREFR_float_float_bool_{ REL::Offset(
 			0x0454AE40) };
 		inline constexpr std::array<REL::Offset, 1> BSScript__NativeFunction4_TESObjectREFR_void_TESTopic_Actor_bool_TESObjectREFR_{ REL::Offset(
@@ -16828,8 +16828,8 @@ namespace RE
 				REL::Offset(0x0454FD78)
 			};
 		inline constexpr std::array<REL::Offset, 1>
-			BSScript__NativeFunction6_TESObjectCELL_void_unsignedint_unsignedint_unsignedint_unsignedint_unsignedint_unsignedint_{ REL::Offset(
-				0x04544A20) };
+													BSScript__NativeFunction6_TESObjectCELL_void_unsignedint_unsignedint_unsignedint_unsignedint_unsignedint_unsignedint_{ REL::Offset(
+                0x04544A20) };
 		inline constexpr std::array<REL::Offset, 1> BSScript__NativeFunction6_TESObjectREFR_void_BSFixedStringconst_float_float_float_bool_bool_{
 			REL::Offset(0x04550510)
 		};
@@ -16857,8 +16857,8 @@ namespace RE
 				REL::Offset(0x0454AA08)
 			};
 		inline constexpr std::array<REL::Offset, 1>
-			BSScript__NativeFunction8_TESObjectREFR_bool_BGSImpactDataSet_BSFixedStringconst_float_float_float_float_bool_bool_{ REL::Offset(
-				0x0454DD68) };
+													BSScript__NativeFunction8_TESObjectREFR_bool_BGSImpactDataSet_BSFixedStringconst_float_float_float_float_bool_bool_{ REL::Offset(
+                0x0454DD68) };
 		inline constexpr std::array<REL::Offset, 1> BSScript__NativeFunction8_TESObjectREFR_void_float_float_float_float_float_float_float_float_{
 			REL::Offset(0x0454D870)
 		};
@@ -16869,7 +16869,7 @@ namespace RE
 			BSScript__NativeFunction9_BSScript__Object_void_BSScript__Object_BSScript__Object_TESForm_TESForm_int_int_int_int_bool_{ REL::Offset(
 				0x0453E768) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSScript__NativeFunction9_TESObjectREFR_void_float_float_float_float_float_float_float_float_float_{ REL::Offset(0x0454D1B0) };
+													BSScript__NativeFunction9_TESObjectREFR_void_float_float_float_float_float_float_float_float_float_{ REL::Offset(0x0454D1B0) };
 		inline constexpr std::array<REL::Offset, 1> BSScript__NativeLatentFunction0_Actor_void_{ REL::Offset(0x04533640) };
 		inline constexpr std::array<REL::Offset, 1> BSScript__NativeLatentFunction0_BGSBaseAlias_void_{ REL::Offset(0x04534188) };
 		inline constexpr std::array<REL::Offset, 1> BSScript__NativeLatentFunction0_EffectSetting_BSFixedStringconst_{ REL::Offset(0x04538B48) };
@@ -16926,8 +16926,8 @@ namespace RE
 				REL::Offset(0x045550E0)
 			};
 		inline constexpr std::array<REL::Offset, 1>
-			BSScript__NativeLatentFunction3_GameScript__RefrOrInventoryObj_void_TESObjectREFR_BSFixedStringconst_BSFixedStringconst_{ REL::Offset(
-				0x0454ABB8) };
+													BSScript__NativeLatentFunction3_GameScript__RefrOrInventoryObj_void_TESObjectREFR_BSFixedStringconst_BSFixedStringconst_{ REL::Offset(
+                0x0454ABB8) };
 		inline constexpr std::array<REL::Offset, 1> BSScript__NativeLatentFunction3_GameScript__RefrOrInventoryObj_void_float_float_float_{
 			REL::Offset(0x0454F430)
 		};
@@ -16943,8 +16943,8 @@ namespace RE
 				REL::Offset(0x04523410)
 			};
 		inline constexpr std::array<REL::Offset, 1>
-			BSScript__NativeLatentFunction4_TESObjectREFR_unsignedint_GameScript__FormOrInventoryObj_int_bool_TESObjectREFR_{ REL::Offset(
-				0x0454E350) };
+													BSScript__NativeLatentFunction4_TESObjectREFR_unsignedint_GameScript__FormOrInventoryObj_int_bool_TESObjectREFR_{ REL::Offset(
+                0x0454E350) };
 		inline constexpr std::array<REL::Offset, 1> BSScript__NativeLatentFunction4_TESObjectREFR_unsignedint_TESForm_unsignedint_bool_TESObjectREFR_{
 			REL::Offset(0x0454EFF8)
 		};
@@ -16980,7 +16980,7 @@ namespace RE
 				REL::Offset(0x0454AD68)
 			};
 		inline constexpr std::array<REL::Offset, 1>
-			BSScript__NativeLatentFunction9_BGSMessage_int_float_float_float_float_float_float_float_float_float_{ REL::Offset(0x045360C8) };
+													BSScript__NativeLatentFunction9_BGSMessage_int_float_float_float_float_float_float_float_float_float_{ REL::Offset(0x045360C8) };
 		inline constexpr std::array<REL::Offset, 1> BSScript__ObjectBindPolicy{ REL::Offset(0x0452E250) };
 		inline constexpr std::array<REL::Offset, 1> BSScript__ObjectTypeInfo{ REL::Offset(0x045A8240) };
 		inline constexpr std::array<REL::Offset, 1> BSScript__SimpleAllocMemoryPagePolicy{ REL::Offset(0x045AA1B8) };
@@ -17026,9 +17026,9 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 2> BSSequence__ImpactEffectTrack{ REL::Offset(0x04350928), REL::Offset(0x04350978) };
 		inline constexpr std::array<REL::Offset, 2> BSSequence__LightColorTrack{ REL::Offset(0x04392088), REL::Offset(0x043921D8) };
 		inline constexpr std::array<REL::Offset, 3> BSSequence__LightEffectReferenceTrack{ REL::Offset(0x04350550), REL::Offset(0x04350578),
-			                                                                               REL::Offset(0x043505A0) };
+			REL::Offset(0x043505A0) };
 		inline constexpr std::array<REL::Offset, 3> BSSequence__LightEffectTrack{ REL::Offset(0x04391E90), REL::Offset(0x04391EB8),
-			                                                                      REL::Offset(0x04391EE0) };
+			REL::Offset(0x04391EE0) };
 		inline constexpr std::array<REL::Offset, 2> BSSequence__LightIntensityTrack{ REL::Offset(0x043920D8), REL::Offset(0x04392108) };
 		inline constexpr std::array<REL::Offset, 2> BSSequence__LightLensFlareVisiblityTrack{ REL::Offset(0x04392158), REL::Offset(0x04392188) };
 		inline constexpr std::array<REL::Offset, 2> BSSequence__LightRadiusTrack{ REL::Offset(0x04391F68), REL::Offset(0x04391F98) };
@@ -17049,9 +17049,9 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSSequence__ObjectSpawnEvent{ REL::Offset(0x04391008) };
 		inline constexpr std::array<REL::Offset, 2> BSSequence__ObjectSpawnTrack{ REL::Offset(0x043508B0), REL::Offset(0x04350900) };
 		inline constexpr std::array<REL::Offset, 3> BSSequence__ParticleEffectReferenceTrack{ REL::Offset(0x04391150), REL::Offset(0x04391178),
-			                                                                                  REL::Offset(0x043911A0) };
+			REL::Offset(0x043911A0) };
 		inline constexpr std::array<REL::Offset, 3> BSSequence__ParticleEffectTrack{ REL::Offset(0x04391100), REL::Offset(0x04391298),
-			                                                                         REL::Offset(0x043912C0) };
+			REL::Offset(0x043912C0) };
 		inline constexpr std::array<REL::Offset, 1> BSSequence__ParticleEvent{ REL::Offset(0x04391248) };
 		inline constexpr std::array<REL::Offset, 1> BSSequence__ParticleMaterialPropertyTrack{ REL::Offset(0x04391388) };
 		inline constexpr std::array<REL::Offset, 1> BSSequence__ParticleParameterTrack{ REL::Offset(0x043913E0) };
@@ -17115,7 +17115,7 @@ namespace RE
 			};
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd_BGSBaseLODBlock__AsyncAttachJob_void_{ REL::Offset(0x0434F490) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd_BSJobs2__Detail__TWhileJob__lambda_1c3bfbf7fb74499cbb80b7d46fcc49fd___void_{ REL::Offset(0x0476CF20) };
+													BSService__Detail__TCmd_BSJobs2__Detail__TWhileJob__lambda_1c3bfbf7fb74499cbb80b7d46fcc49fd___void_{ REL::Offset(0x0476CF20) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_0002d342d4b96ed14f514008f14570c1__void_{ REL::Offset(
 			0x04763D00) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_006b35553229add112942d17ed32bb42__{ REL::Offset(0x04383810) };
@@ -17167,18 +17167,18 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_034dfa4d5e97d71c1bac340e699d3d85__void_{ REL::Offset(
 			0x045C0E68) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_035ca4d135ab12d1ada395740d09ae1b__CreationRendererPrivate__SetPointParams_{ REL::Offset(0x045C0120) };
+													BSService__Detail__TCmd__lambda_035ca4d135ab12d1ada395740d09ae1b__CreationRendererPrivate__SetPointParams_{ REL::Offset(0x045C0120) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_0362ce151de36dc19c3b9e0b065e428f__{ REL::Offset(0x04597DC0) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_03a8632d7a9099fcd05af7a34fdfc31a__void_{ REL::Offset(
 			0x045C5C90) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_03c7a44cfe63f654f076dacdfb834679__BSResource__Server__Commands__Pause_{ REL::Offset(0x045B1F18) };
+													BSService__Detail__TCmd__lambda_03c7a44cfe63f654f076dacdfb834679__BSResource__Server__Commands__Pause_{ REL::Offset(0x045B1F18) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_03e39a4e5bc7955ee600125c3c8414bd__void_{ REL::Offset(
 			0x044BC960) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_041073601cf9f78b6a0541c88dd4c120__void_{ REL::Offset(
 			0x044A75E8) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_0416055efafe3f589688876268cbf923__BSResource__Server__Commands__AddDependency_{ REL::Offset(0x0457D720) };
+													BSService__Detail__TCmd__lambda_0416055efafe3f589688876268cbf923__BSResource__Server__Commands__AddDependency_{ REL::Offset(0x0457D720) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_044c6458e6cb5693642c4b3cac1fff04__void_{ REL::Offset(
 			0x0455EC98) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_047defe610e1e29e448903298b1a0364__void_{ REL::Offset(
@@ -17205,7 +17205,7 @@ namespace RE
 			BSService__Detail__TCmd__lambda_06167b3f0a5ba8433b063b6afbf04f97__Particles__PSM__Commands__StopParticleSystem_{ REL::Offset(
 				0x045978B8) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_06172112a25e26480a5f9c508ac18f22__Particles__PPM__Commands__StartQueuedSystem_{ REL::Offset(0x04597A38) };
+													BSService__Detail__TCmd__lambda_06172112a25e26480a5f9c508ac18f22__Particles__PPM__Commands__StartQueuedSystem_{ REL::Offset(0x04597A38) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_06a711be13e37f10943499bf203dfad0__void_{ REL::Offset(
 			0x044D4A18) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_06ce8beed408a87c8d1eaa7376977972__void_{ REL::Offset(
@@ -17227,7 +17227,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_082360f606088c4ab0076fd3f12c2ff3__void_{ REL::Offset(
 			0x044D5038) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_082d842b52704dfe6aab31c72b0894cc__RefrAudioUtils____LoopService__RemoveMsg_{ REL::Offset(0x044762F8) };
+													BSService__Detail__TCmd__lambda_082d842b52704dfe6aab31c72b0894cc__RefrAudioUtils____LoopService__RemoveMsg_{ REL::Offset(0x044762F8) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_083725449ce9e0d3c679208d63e53e92__{ REL::Offset(0x04386518) };
 		inline constexpr std::array<REL::Offset, 1>
 			BSService__Detail__TCmd__lambda_086fbda4eebb50c6f4df48f1f6fe6d27__CreationRendererPrivate__SetStarmapGravityWavesParentGeometry_{
@@ -17261,7 +17261,7 @@ namespace RE
 			0x044D2FB8) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_0b1190f9854567a76c31e15f706198e1__{ REL::Offset(0x0458AAF0) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_0b1d03580f6f0a5a6a5dfd19b320d7f7__Particles__PNM__Commands__EnqueueBinding_{ REL::Offset(0x04590C30) };
+													BSService__Detail__TCmd__lambda_0b1d03580f6f0a5a6a5dfd19b320d7f7__Particles__PNM__Commands__EnqueueBinding_{ REL::Offset(0x04590C30) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_0b3f977e5810541ada5b8e7123e4a876__BSComponentDB2__ObjectSaved_{
 			REL::Offset(0x04589938)
 		};
@@ -17280,8 +17280,8 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_0bd4acb67198cdf73ba29134d580c17e__void_{ REL::Offset(
 			0x04373BE0) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_0c03c7330473892ba670105402efef07__CreationRendererPrivate__Messaging__SwapChain__Destroy_{ REL::Offset(
-				0x045BC9B8) };
+													BSService__Detail__TCmd__lambda_0c03c7330473892ba670105402efef07__CreationRendererPrivate__Messaging__SwapChain__Destroy_{ REL::Offset(
+                0x045BC9B8) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_0c232cc3ac8cae764e7ee93ff79e28ac__{ REL::Offset(0x043CCEC0) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_0c247aedd97c7f96423e3ddd7608ea80__void_{ REL::Offset(
 			0x045C5D90) };
@@ -17348,7 +17348,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			BSService__Detail__TCmd__lambda_1179c0d39af89e3c5612f8c3062153d6__SaveLoadTester__Service__DecrementBusy_{ REL::Offset(0x044CF978) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_117f4ead7583bfb71b48a89a154b3482__IOManager__SystemTaskService__RemoveCmd_{ REL::Offset(0x0457D260) };
+													BSService__Detail__TCmd__lambda_117f4ead7583bfb71b48a89a154b3482__IOManager__SystemTaskService__RemoveCmd_{ REL::Offset(0x0457D260) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_1181752b037322e77a0e38ec51afb85a__{ REL::Offset(0x04384478) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_11c34d3eb78eee830c941a9ee33a851c__void_{ REL::Offset(
 			0x043695A0) };
@@ -17376,13 +17376,13 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_13bc4b69b9bb200ce8639726ff52dd1b__{ REL::Offset(0x0455F760) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_13ddb005de572f8b0cf5d5b4f31fdf39__{ REL::Offset(0x04384770) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_13f2f1fdc9b77224a1f3ab99e3e8b208__CreationRendererPrivate__LoadMenuHidden_{ REL::Offset(0x045BA3A0) };
+													BSService__Detail__TCmd__lambda_13f2f1fdc9b77224a1f3ab99e3e8b208__CreationRendererPrivate__LoadMenuHidden_{ REL::Offset(0x045BA3A0) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_13fb5261bf961ea5ffe8bc99d857d9b6__void_{ REL::Offset(
 			0x045C0BD8) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_14348470d6afd06ac22201fb09357cdb__void_{ REL::Offset(
 			0x0459BAE8) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_14563e1568e6d890487357d5b6106ffe__CreationRendererPrivate__LODList_{ REL::Offset(0x045BAA40) };
+													BSService__Detail__TCmd__lambda_14563e1568e6d890487357d5b6106ffe__CreationRendererPrivate__LODList_{ REL::Offset(0x045BAA40) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_148af1c827fe4f82fd6d721558747331__void_{ REL::Offset(
 			0x0448DD30) };
 		inline constexpr std::array<REL::Offset, 1>
@@ -17397,7 +17397,7 @@ namespace RE
 			};
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_14c624d060d53f090d9f6653c9d8716b__{ REL::Offset(0x04455278) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_14c7ea9486cedf1533fcee4c4a4cb042__ScalarAnimation__ScalarAnimUpdateCommand_{ REL::Offset(0x045615C0) };
+													BSService__Detail__TCmd__lambda_14c7ea9486cedf1533fcee4c4a4cb042__ScalarAnimation__ScalarAnimUpdateCommand_{ REL::Offset(0x045615C0) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_1511d67fd91bdd9800c7fb8a0a547ac1__void_{ REL::Offset(
 			0x0447FFD0) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_1522e0518122fe3f79c62fd4d69b2778__void_{ REL::Offset(
@@ -17421,7 +17421,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_168dd5f9379d2fd02919c4b287afeb1a__void_{ REL::Offset(
 			0x0448DD70) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_16db958dc41d0c66db77acdf4c42d6c1__WorkshopEngine__ItemCombatChangedEvent_{ REL::Offset(0x0455B920) };
+													BSService__Detail__TCmd__lambda_16db958dc41d0c66db77acdf4c42d6c1__WorkshopEngine__ItemCombatChangedEvent_{ REL::Offset(0x0455B920) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_16e8324d5b2572cd72b95b4d7c867a5e__void_{ REL::Offset(
 			0x044D51B8) };
 		inline constexpr std::array<REL::Offset, 1>
@@ -17441,8 +17441,8 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_1806fb42aa1c1e9e52bcea8a68aaa87e__void_{ REL::Offset(
 			0x044A5BD0) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_180c459f37941f35f0a93ec666eb98b9__Particles__PNM__Commands__StopParticleSystem_{ REL::Offset(
-				0x04590C10) };
+													BSService__Detail__TCmd__lambda_180c459f37941f35f0a93ec666eb98b9__Particles__PNM__Commands__StopParticleSystem_{ REL::Offset(
+                0x04590C10) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_187988143b9bf44be919f8d51b1b1b63__void_{ REL::Offset(
 			0x044A75C8) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_18ccbf1e684f7cd76a882ba490e89fd2__void_{ REL::Offset(
@@ -17467,7 +17467,7 @@ namespace RE
 			REL::Offset(0x045859B0)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_1aa7972c397c239d8c334fcca51f809b__CreationRenderer__ResetCullingMemoryRequest_{ REL::Offset(0x04761DE8) };
+													BSService__Detail__TCmd__lambda_1aa7972c397c239d8c334fcca51f809b__CreationRenderer__ResetCullingMemoryRequest_{ REL::Offset(0x04761DE8) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_1aab385b1d2c973b43db622647dd6935__void_{ REL::Offset(
 			0x044AA7E8) };
 		inline constexpr std::array<REL::Offset, 1>
@@ -17479,8 +17479,8 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_1b1de50a30aecd9038df8bec83bce1d1__void_{ REL::Offset(
 			0x04484C70) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_1b2eff87bafecc7bbc43ce302fdee705__CreationRendererPrivate__SetStarmapOrbitsColor_{ REL::Offset(
-				0x045C01B0) };
+													BSService__Detail__TCmd__lambda_1b2eff87bafecc7bbc43ce302fdee705__CreationRendererPrivate__SetStarmapOrbitsColor_{ REL::Offset(
+                0x045C01B0) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_1b6954ed9f9f23860fc5a5777dbda38f__void_{ REL::Offset(
 			0x044AE378) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_1b7586faf3d45a3ccdbe562c615deea8__void_{ REL::Offset(
@@ -17490,8 +17490,8 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_1bf2a8d41dba84ffc96c5d4aafbdf0cc__void_{ REL::Offset(
 			0x044AE358) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_1bf785c93d8ad6d842d65a8bfb1aea2b__BSStreaming__ErrorCode_BSStreaming__DataHandle_{ REL::Offset(
-				0x045A6878) };
+													BSService__Detail__TCmd__lambda_1bf785c93d8ad6d842d65a8bfb1aea2b__BSStreaming__ErrorCode_BSStreaming__DataHandle_{ REL::Offset(
+                0x045A6878) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_1bf7c3047063bf194f956149815127bf__void_{ REL::Offset(
 			0x044A17B8) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_1c7ff35eeeec7cd1d9a2e5a0c39e495c__{ REL::Offset(0x04386558) };
@@ -17512,7 +17512,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_1dc94482c6a0eeb04309cec409833161__void_{ REL::Offset(
 			0x044D8FF0) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_1dca1393cf167ec33c942351d43db67d__Particles__PNM__Commands__RemoveDeadSystem_{ REL::Offset(0x04590BF0) };
+													BSService__Detail__TCmd__lambda_1dca1393cf167ec33c942351d43db67d__Particles__PNM__Commands__RemoveDeadSystem_{ REL::Offset(0x04590BF0) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_1dcd6055c087c81e7b34ff0e9b242b7b__void_{ REL::Offset(
 			0x0434C128) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_1e3b3b65e4deb17ca33e10e3fc7a4114__void_{ REL::Offset(
@@ -17522,12 +17522,12 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_1e9994414b30943f97930cd97387f08f__void_{ REL::Offset(
 			0x045C0BF8) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_1ed8251b1a65468a26281b769d4cce60__BSTextureStreamer__Command__Cancel_{ REL::Offset(0x04582428) };
+													BSService__Detail__TCmd__lambda_1ed8251b1a65468a26281b769d4cce60__BSTextureStreamer__Command__Cancel_{ REL::Offset(0x04582428) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_1ee85f381440a2d09017dd8965db720f__void_{ REL::Offset(
 			0x0449D790) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_1ee934e5d6c8ce4a9aa5155f812e5e98__CreationRendererPrivate__MeshDB__CreateSubMeshParams_{ REL::Offset(
-				0x045BACE0) };
+													BSService__Detail__TCmd__lambda_1ee934e5d6c8ce4a9aa5155f812e5e98__CreationRendererPrivate__MeshDB__CreateSubMeshParams_{ REL::Offset(
+                0x045BACE0) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_1f3aad7b634a2fd4477eeee64a63e161__void_{ REL::Offset(
 			0x044D4858) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_1f7e28043a2aff61a071f26e42547073__void_{ REL::Offset(
@@ -17535,12 +17535,12 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_1f92a890228578814c2c2a03e8cac3ef__void_{ REL::Offset(
 			0x0449ED70) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_1fada1a49a815c74778c622ce536d0dd__BSResource__Server__Commands__NotifyComplete_{ REL::Offset(
-				0x045A66E0) };
+													BSService__Detail__TCmd__lambda_1fada1a49a815c74778c622ce536d0dd__BSResource__Server__Commands__NotifyComplete_{ REL::Offset(
+                0x045A66E0) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_1fe0fdf7c71e3cc627f4ec4b8dbb2309__void_{ REL::Offset(
 			0x045B2A90) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_1fe4aa3c08afa23c78527d1835dc5bc4__BSResource__Server__Commands__Resume_{ REL::Offset(0x0457D300) };
+													BSService__Detail__TCmd__lambda_1fe4aa3c08afa23c78527d1835dc5bc4__BSResource__Server__Commands__Resume_{ REL::Offset(0x0457D300) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_1feb0118ea67ec51efc7b906b04c6a3e__void_{ REL::Offset(
 			0x044A7628) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_1ff618fa23044ab7190c611f0f4f4a1e__void_{ REL::Offset(
@@ -17571,7 +17571,7 @@ namespace RE
 			BSService__Detail__TCmd__lambda_217e4d66bceb166c823cda642795bd7b__DynamicNavmeshService__DynamicNavMeshTaskCellRemapEvent_{ REL::Offset(
 				0x0434E240) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_21920c043a7f059388cb9b1da8931b1a__RefrAudioUtils____LoopService__AddMsg_{ REL::Offset(0x044762D8) };
+													BSService__Detail__TCmd__lambda_21920c043a7f059388cb9b1da8931b1a__RefrAudioUtils____LoopService__AddMsg_{ REL::Offset(0x044762D8) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_2270a8b534503d70aacdbbbb48eacacd__void_{ REL::Offset(
 			0x04495530) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_229923dcb46d68329aed5eaced3ec2f7__void_{ REL::Offset(
@@ -17633,7 +17633,7 @@ namespace RE
 			0x04364038) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_261e62996e5289c528fa08224fb8f4c1__{ REL::Offset(0x04384790) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_265c9c2cc28dea70b44738922c3942bf__BSResource__Server__Commands__Reschedule_{ REL::Offset(0x0457D2C0) };
+													BSService__Detail__TCmd__lambda_265c9c2cc28dea70b44738922c3942bf__BSResource__Server__Commands__Reschedule_{ REL::Offset(0x0457D2C0) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_266ce564967dd752765c46aaaa91fa8f__WorkshopEngine__CommitEvent_{
 			REL::Offset(0x0455BAC0)
 		};
@@ -17663,16 +17663,16 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_2886445c6e0621bc870bb6265c2ce416__void_{ REL::Offset(
 			0x044B21C8) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_289ad4b5191fe06018b2959b6e32aed4__BSTSmartPointer_TESPackage_TESFormPolicy__{ REL::Offset(0x044D1398) };
+													BSService__Detail__TCmd__lambda_289ad4b5191fe06018b2959b6e32aed4__BSTSmartPointer_TESPackage_TESFormPolicy__{ REL::Offset(0x044D1398) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_2905f2e89e326a3d4163970a61220fbc__void_{ REL::Offset(
 			0x04493638) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_2915710df63846f4944ed3d812de9410__WorkshopEngine__BulldozeItemEvent_{ REL::Offset(0x0455B180) };
+													BSService__Detail__TCmd__lambda_2915710df63846f4944ed3d812de9410__WorkshopEngine__BulldozeItemEvent_{ REL::Offset(0x0455B180) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_295d9a486d3ba70ad9e6244a8685b746__NiPointer_TESObjectREFR__{
 			REL::Offset(0x044D15D8)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_29737f9587fa0d1fb489346e0b4204c8__EffectSequence__ChangeShouldProgressCommand_{ REL::Offset(0x04350110) };
+													BSService__Detail__TCmd__lambda_29737f9587fa0d1fb489346e0b4204c8__EffectSequence__ChangeShouldProgressCommand_{ REL::Offset(0x04350110) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_298b4c9ddad8c2c98895d95d86b6f018__void_{ REL::Offset(
 			0x045C0B78) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_29a65105e2f059d5c389bb1106cf31a3__void_{ REL::Offset(
@@ -17690,7 +17690,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			BSService__Detail__TCmd__lambda_2acba6e6f5d8006da23e0e8bda8d73bb__BSResource__Server__Commands__AddDependency_{ REL::Offset(0x04352128) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_2acc797905deef217ba390942468a931__BSResource__Server__Commands__AddDependency_{ REL::Offset(0x045A66C0) };
+													BSService__Detail__TCmd__lambda_2acc797905deef217ba390942468a931__BSResource__Server__Commands__AddDependency_{ REL::Offset(0x045A66C0) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_2ae52c85f260927307882bcc7125f6da__void_{ REL::Offset(
 			0x044885C8) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_2ae9e1380c8ee2a9c82ea83274d83730__void_{ REL::Offset(
@@ -17739,7 +17739,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_2e1b42a1bf4317aaf1a3894ceabf2310__void_{ REL::Offset(
 			0x044A2938) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_2e61532e0d5a01e189b8200de13d5f3d__PathManagerImpl__CloseAttachEvent_{ REL::Offset(0x0459A170) };
+													BSService__Detail__TCmd__lambda_2e61532e0d5a01e189b8200de13d5f3d__PathManagerImpl__CloseAttachEvent_{ REL::Offset(0x0459A170) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_2e6253c69297d1e42e51724b3fdd29fa__{ REL::Offset(0x04769AC0) };
 		inline constexpr std::array<REL::Offset, 1>
 			BSService__Detail__TCmd__lambda_2e7279c14af628ec41691a123af46400__BSTSmartPointer_PathingTaskData_BSTSmartPointerIntrusiveRefCount__{
@@ -17749,8 +17749,8 @@ namespace RE
 			BSService__Detail__TCmd__lambda_2ea6196d4562a590254354bd5feb6c25__Particles__PSM__Commands__ReserveParticleSystem_{ REL::Offset(
 				0x04597A58) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_2eb9065638b09a690be622024b4df0bc__Particles__PNM__Commands__ReleasePreCreatedParticleNode_{ REL::Offset(
-				0x04590BD0) };
+													BSService__Detail__TCmd__lambda_2eb9065638b09a690be622024b4df0bc__Particles__PNM__Commands__ReleasePreCreatedParticleNode_{ REL::Offset(
+                0x04590BD0) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_2eb998c0a5ebbf4566b9cf6264edf070__void_{ REL::Offset(
 			0x0449EDF0) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_2ecc3ed85afbef822c47380b7a9edf28__void_{ REL::Offset(
@@ -17764,8 +17764,8 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_2fb5ea5d7b79125fbb6a681b7df9d0ff__void_{ REL::Offset(
 			0x044B2168) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_2fed147ae65901afc7e288ea0ac5932e__BSService__Detail__PointerWrapper___MaterialAnimator__{ REL::Offset(
-				0x0458B098) };
+													BSService__Detail__TCmd__lambda_2fed147ae65901afc7e288ea0ac5932e__BSService__Detail__PointerWrapper___MaterialAnimator__{ REL::Offset(
+                0x0458B098) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_300e29d97d5d2a5664d5a028a88e6f9c__void_{ REL::Offset(
 			0x0448B930) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_301952c8919bf88550759f6c3d069c6d__void_{ REL::Offset(
@@ -17794,8 +17794,8 @@ namespace RE
 			0x044D97A8) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_31b44e4d05e5e001a2aa280f8bb5c5ff__{ REL::Offset(0x045C5F70) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_31f70d64dc89f3eccdb1d62f9068ce7c__CreationRendererPrivate__Messaging__Window__Minimize_{ REL::Offset(
-				0x045BCA98) };
+													BSService__Detail__TCmd__lambda_31f70d64dc89f3eccdb1d62f9068ce7c__CreationRendererPrivate__Messaging__Window__Minimize_{ REL::Offset(
+                0x045BCA98) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_321ddd8064bb6d74dd3569d28ac1e1f3__TextureDB__QueuedTexture_{
 			REL::Offset(0x045B3288)
 		};
@@ -17810,7 +17810,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_32a3a2fd9114cc2e2bf78225a3600fe6__void_{ REL::Offset(
 			0x0435E150) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_32cb66071ec10a2bf95d6a03382fbef5__PathManagerImpl__ForceFailEvent_{ REL::Offset(0x0459A130) };
+													BSService__Detail__TCmd__lambda_32cb66071ec10a2bf95d6a03382fbef5__PathManagerImpl__ForceFailEvent_{ REL::Offset(0x0459A130) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_32de99af9a1424703afcb351fce4f307__void_{ REL::Offset(
 			0x044AF100) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_32e4b4f19bbe2945e96b834492c572ff__void_{ REL::Offset(
@@ -17820,8 +17820,8 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_332327652b151a6d9640e172c53d7ea2__void_{ REL::Offset(
 			0x04477600) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_335da43bb2b81785b47fbe4d0f319b78__BSResource__Server__Commands__NotifyComplete_{ REL::Offset(
-				0x04351F30) };
+													BSService__Detail__TCmd__lambda_335da43bb2b81785b47fbe4d0f319b78__BSResource__Server__Commands__NotifyComplete_{ REL::Offset(
+                0x04351F30) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_3399867ed2d3e4eb9149cf49ae39f53c__void_{ REL::Offset(
 			0x0447D410) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_33ab77d0429c58d85d6fdb5328fa1582__LOD__Commands__GridCellAction_{
@@ -17842,8 +17842,8 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_347e82067d065c9f474aad9a3dd3703a__void_{ REL::Offset(
 			0x044D15B8) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_3488d9aba936a506cbc187c238afd041__DynamicNavmeshService__RemoveAllModificationsEvent_{ REL::Offset(
-				0x0434E100) };
+													BSService__Detail__TCmd__lambda_3488d9aba936a506cbc187c238afd041__DynamicNavmeshService__RemoveAllModificationsEvent_{ REL::Offset(
+                0x0434E100) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_3495883e95a0abfb4b4bff1fc611f8fd__void_{ REL::Offset(
 			0x044A9DE0) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_349ae4f9982f93b8dbdc97b33a330dcd__void_{ REL::Offset(
@@ -17863,8 +17863,8 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_35975cc4ec102173bf2334a2f99698e6__void_{ REL::Offset(
 			0x04479DD0) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_35bd0e1a582346a47e59752a08263e1d__BSTSmartPointer_BGSBody_BSTSmartPointerIntrusiveRefCount__{ REL::Offset(
-				0x044D1378) };
+													BSService__Detail__TCmd__lambda_35bd0e1a582346a47e59752a08263e1d__BSTSmartPointer_BGSBody_BSTSmartPointerIntrusiveRefCount__{ REL::Offset(
+                0x044D1378) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_35c6f8e7b5065eba3074a4701c8a5f6d__void_{ REL::Offset(
 			0x044A2978) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_35e68aefa21a0d8d2b28a3ca8a61c2b1__void_{ REL::Offset(
@@ -17912,8 +17912,8 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_3a2464f0941ed62090b746e65ca64c5c__void_{ REL::Offset(
 			0x044A5478) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_3a4dc712b93fd10223b77911f1b99733__CreationRendererPrivate__MeshDB__CreateSubMeshParams_{ REL::Offset(
-				0x045BAC60) };
+													BSService__Detail__TCmd__lambda_3a4dc712b93fd10223b77911f1b99733__CreationRendererPrivate__MeshDB__CreateSubMeshParams_{ REL::Offset(
+                0x045BAC60) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_3a57abaf61ad1e6abc321442d83ed546__void_{ REL::Offset(
 			0x044D5EF0) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_3a591bc3d5e9ce38c6a79ce50bb71bc3__void_{ REL::Offset(
@@ -17922,13 +17922,13 @@ namespace RE
 			REL::Offset(0x044D13D8)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_3a8eb28842f7c3b638eecbd27d2766bd__BSResource__Server__Commands__Delete_{ REL::Offset(0x045B1F58) };
+													BSService__Detail__TCmd__lambda_3a8eb28842f7c3b638eecbd27d2766bd__BSResource__Server__Commands__Delete_{ REL::Offset(0x045B1F58) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_3a8fcfe07635d04438a5132752733b81__void_{ REL::Offset(
 			0x0449B2C8) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_3ab7a474183d094d82a832310dd1e3b8__void_{ REL::Offset(
 			0x04479718) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_3aba2adf970db82c095675cef82c2881__WorkshopEngine__ConnectWireEvent_{ REL::Offset(0x0455B1A0) };
+													BSService__Detail__TCmd__lambda_3aba2adf970db82c095675cef82c2881__WorkshopEngine__ConnectWireEvent_{ REL::Offset(0x0455B1A0) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_3acf5e266783d132c177fcc3ef813df5__void_{ REL::Offset(
 			0x0448D478) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_3b32b694f872c1c21c9dfc8218ceb5fb__void_{ REL::Offset(
@@ -17955,8 +17955,8 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_3cae0d050cee0487208e6011be92c7d7__void_{ REL::Offset(
 			0x0448B9D0) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_3cdfd03be93aa1e85642ed42a1f341e3__CreationRendererPrivate__MeshDB__CreateParams_{ REL::Offset(
-				0x045BAEC8) };
+													BSService__Detail__TCmd__lambda_3cdfd03be93aa1e85642ed42a1f341e3__CreationRendererPrivate__MeshDB__CreateParams_{ REL::Offset(
+                0x045BAEC8) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_3ce2a5101292d234e5374806e376da67__void_{ REL::Offset(
 			0x044D54C8) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_3d12aa2819e5d460f17038daa0921c9e__void_{ REL::Offset(
@@ -17965,11 +17965,11 @@ namespace RE
 			0x044B4490) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_3d2344d60d976c67092b025322ffc4f8__{ REL::Offset(0x04386640) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_3d4fbafc5fd90921741e35c987c6c3b1__BSResource__Server__Commands__Cancel_{ REL::Offset(0x04351E90) };
+													BSService__Detail__TCmd__lambda_3d4fbafc5fd90921741e35c987c6c3b1__BSResource__Server__Commands__Cancel_{ REL::Offset(0x04351E90) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_3d510ea8315a91b731b3d8c0ff923f9a__void_{ REL::Offset(
 			0x044D4BB8) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_3d62d9ef8d226a48af329f1219d92cdc__CreationRendererPrivate__SetGlareParams_{ REL::Offset(0x045BA418) };
+													BSService__Detail__TCmd__lambda_3d62d9ef8d226a48af329f1219d92cdc__CreationRendererPrivate__SetGlareParams_{ REL::Offset(0x045BA418) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_3d751a3a5f7a5c3a0cf2260cc4623136__void_{ REL::Offset(
 			0x044BCAA0) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_3da75893818ee5207bdb6901cbfdd1d8__void_{ REL::Offset(
@@ -17977,7 +17977,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_3dda19daacbafd2f7a3f8a789293def6__void_{ REL::Offset(
 			0x0451D530) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_3dde49ac74f9fd3e3193f3e83ce5cb5c__BGSAudio__WwiseService__CloseCmd_{ REL::Offset(0x04457868) };
+													BSService__Detail__TCmd__lambda_3dde49ac74f9fd3e3193f3e83ce5cb5c__BGSAudio__WwiseService__CloseCmd_{ REL::Offset(0x04457868) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_3e1c039ddf7c20b9d0c821402aee78a9__{ REL::Offset(0x045BB168) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_3e1c6fa17f66105a7b10feda004e0cb0__void_{ REL::Offset(
 			0x044C1400) };
@@ -18053,8 +18053,8 @@ namespace RE
 			BSService__Detail__TCmd__lambda_43dea555a4b7f363d485f6a504637bce__BGSPlanetContentManager__PendingPlanetContentRequest_{ REL::Offset(
 				0x044D3AB0) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_4408f2402885ec5a449d735aa70e45bf__DynamicNavmeshService__UpdateNavMeshCellEvent_{ REL::Offset(
-				0x0434E140) };
+													BSService__Detail__TCmd__lambda_4408f2402885ec5a449d735aa70e45bf__DynamicNavmeshService__UpdateNavMeshCellEvent_{ REL::Offset(
+                0x0434E140) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_442365a6bcd228c8e242bffad7645f04__void_{ REL::Offset(
 			0x043B9008) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_4435d41dac228c19b787802376037cf9__void_{ REL::Offset(
@@ -18066,14 +18066,14 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			BSService__Detail__TCmd__lambda_44abd068d2da4873cc884ac3531858ad__BSResource__Server__Commands__AddDependency_{ REL::Offset(0x04377920) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_44ada94071a02a2b474443a2e6e2115e__CreationRendererPrivate__SetStarmapGravityWavesPlanetData_{ REL::Offset(
-				0x045C0310) };
+													BSService__Detail__TCmd__lambda_44ada94071a02a2b474443a2e6e2115e__CreationRendererPrivate__SetStarmapGravityWavesPlanetData_{ REL::Offset(
+                0x045C0310) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_44c2561ca25dce2ff3574caeb9f74dd3__void_{ REL::Offset(
 			0x04487AB0) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_44cb987a575564a069b41f2fb53051a6__void_{ REL::Offset(
 			0x0457AB58) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_4501655eea2d25d05464153c14f354d4__BSResource__Server__Commands__AddDependency_{ REL::Offset(0x043A4DE0) };
+													BSService__Detail__TCmd__lambda_4501655eea2d25d05464153c14f354d4__BSResource__Server__Commands__AddDependency_{ REL::Offset(0x043A4DE0) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_4513bd44a8e7c893dcdb1837f1b52da5__void_{ REL::Offset(
 			0x044A2958) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_45834f7c6c87366496a2659d5dbf9e5e__void_{ REL::Offset(
@@ -18093,7 +18093,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_46b8a6919a1452d24449eda012dc20f9__void_{ REL::Offset(
 			0x044A8B58) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_46c096693b08268f55d86409beff46f7__BGSAudio__WwiseService__CancelCmd_{ REL::Offset(0x04457888) };
+													BSService__Detail__TCmd__lambda_46c096693b08268f55d86409beff46f7__BGSAudio__WwiseService__CancelCmd_{ REL::Offset(0x04457888) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_46d4c7bf7198847e8617c88ed1fec80b__void_{ REL::Offset(
 			0x0459BA48) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_46fe3a6e069cc3ec89fe471170845286__void_{ REL::Offset(
@@ -18101,8 +18101,8 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_4722cd60330f821a776eb90619f24ba0__void_{ REL::Offset(
 			0x0448A7E8) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_476315acb3f625a547472d7af175470a__CreationRendererPrivate__SetStarmapOrbitsThickness_{ REL::Offset(
-				0x045C0190) };
+													BSService__Detail__TCmd__lambda_476315acb3f625a547472d7af175470a__CreationRendererPrivate__SetStarmapOrbitsThickness_{ REL::Offset(
+                0x045C0190) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_47689048ffe9cf6b3839592273900f7a__void_{ REL::Offset(
 			0x04763CC0) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_476abb2bfaab0fc7efc6f5dcb6fcb2ca__void_{ REL::Offset(
@@ -18113,8 +18113,8 @@ namespace RE
 			BSService__Detail__TCmd__lambda_477fdce2aa7e8a35a27ff9ceea46765f__CreationRendererPrivate__SetStarmapGravityWavesInit_{ REL::Offset(
 				0x045C0370) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_47ce1dd467148b48f07cea494666a7d0__CreationRendererPrivate__SetStarmapOrbitsEnabled_{ REL::Offset(
-				0x045C0210) };
+													BSService__Detail__TCmd__lambda_47ce1dd467148b48f07cea494666a7d0__CreationRendererPrivate__SetStarmapOrbitsEnabled_{ REL::Offset(
+                0x045C0210) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_47fe5049ec0d2b059cd4e9c3a8bba9fb__void_{ REL::Offset(
 			0x0448F8F0) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_486f6377972e2f98934044978e5e9c6a__void_{ REL::Offset(
@@ -18128,7 +18128,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_48fe6290260ad9ed2e181d5d8f759f72__void_{ REL::Offset(
 			0x04578E40) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_4915cd91781e3e78d7403df0ce032ca9__WorkshopEngine__RevertBehaviorEvent_{ REL::Offset(0x0455BAE0) };
+													BSService__Detail__TCmd__lambda_4915cd91781e3e78d7403df0ce032ca9__WorkshopEngine__RevertBehaviorEvent_{ REL::Offset(0x0455BAE0) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_4921ed9f68aa1fc2f0f21af2a87dcd6e__void_{ REL::Offset(
 			0x044D4E58) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_4972b39ee93832996f39309f24bafcda__void_{ REL::Offset(
@@ -18146,7 +18146,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_4a5031ba3460282243219aa6d3941499__void_{ REL::Offset(
 			0x044AD8A8) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_4aaabb97a9bb6180d094f12bce28aabf__BSResource__Server__Commands__Resume_{ REL::Offset(0x04368550) };
+													BSService__Detail__TCmd__lambda_4aaabb97a9bb6180d094f12bce28aabf__BSResource__Server__Commands__Resume_{ REL::Offset(0x04368550) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_4af669e4cfffbf317bd05ed76feb17b7__void_{ REL::Offset(
 			0x044A6A88) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_4b537dcf410d388753ccef2b15ba51de__void_{ REL::Offset(
@@ -18154,14 +18154,14 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_4b7154b324ff6a34f4453cf668495d3e__void_{ REL::Offset(
 			0x0449E468) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_4b848804d48c4dc62699b40854c972c8__BSResource__Server__Commands__CloseDependencies_{ REL::Offset(
-				0x04351720) };
+													BSService__Detail__TCmd__lambda_4b848804d48c4dc62699b40854c972c8__BSResource__Server__Commands__CloseDependencies_{ REL::Offset(
+                0x04351720) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_4b8697e272cfab15c388c83563df4d08__void_{ REL::Offset(
 			0x04559120) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_4bc475593d03c33ecbe7f6490ef199c0__void_{ REL::Offset(
 			0x04496820) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_4bd06b7d18d2ee2e814f8a24ea702e9b__BSComponentDB2__ObjectDestroyed_{ REL::Offset(0x045899E8) };
+													BSService__Detail__TCmd__lambda_4bd06b7d18d2ee2e814f8a24ea702e9b__BSComponentDB2__ObjectDestroyed_{ REL::Offset(0x045899E8) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_4c015007cf1a1f2352c3f1cbdd77c6d8__void_{ REL::Offset(
 			0x0448F890) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_4c159415f22427edcf3cb06ea3ed0825__void_{ REL::Offset(
@@ -18237,14 +18237,14 @@ namespace RE
 			REL::Offset(0x044ECA98)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_53abbbca45155c8b23682e9cdb5af07f__CreationRendererPrivate__Messaging__SwapChain__SetVsync_{ REL::Offset(
-				0x045BCA78) };
+													BSService__Detail__TCmd__lambda_53abbbca45155c8b23682e9cdb5af07f__CreationRendererPrivate__Messaging__SwapChain__SetVsync_{ REL::Offset(
+                0x045BCA78) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_53cab3af5b3b29a1236ceb2e4573e1ea__void_{ REL::Offset(
 			0x045A6000) };
 		inline constexpr std::array<REL::Offset, 1>
 			BSService__Detail__TCmd__lambda_54109e62bc0c4ecfada91e93c4f8d1fa__IOManager__SystemTaskService__InstallCmd_{ REL::Offset(0x0457D210) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_54481b0b9fc74bd105b60ccbba81a493__WorkshopEngine__ActivateItemEvent_{ REL::Offset(0x0455B9C0) };
+													BSService__Detail__TCmd__lambda_54481b0b9fc74bd105b60ccbba81a493__WorkshopEngine__ActivateItemEvent_{ REL::Offset(0x0455B9C0) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_5461d569e1413187dbc33645050bb02c__void_{ REL::Offset(
 			0x045A0078) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_54c822b7f04b4d0f24210a1b84f9442f__void_{ REL::Offset(
@@ -18258,7 +18258,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_5527b6c2f611507985ae11854e45db03__void_{ REL::Offset(
 			0x044D5178) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_5528f7974c209d8c12356bceb42e106b__BSResource__Server__Commands__AddDependency_{ REL::Offset(0x0459B9C8) };
+													BSService__Detail__TCmd__lambda_5528f7974c209d8c12356bceb42e106b__BSResource__Server__Commands__AddDependency_{ REL::Offset(0x0459B9C8) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_56007253fb4785317ba6d9cce39d4e7b__void_{ REL::Offset(
 			0x045C0E48) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_56590bc88876c556a9a0ebce0035e809__void_{ REL::Offset(
@@ -18309,7 +18309,7 @@ namespace RE
 			BSService__Detail__TCmd__lambda_59eb06eb8ec46854c83f83ac0a23e663__BSResource__Server__Commands__CloseDependencies_{ REL::Offset(
 				0x04351EF0) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_5a69a2839b3feacc27901b29909683fd__WorkshopEngine__RequestRepairItemEvent_{ REL::Offset(0x0455B980) };
+													BSService__Detail__TCmd__lambda_5a69a2839b3feacc27901b29909683fd__WorkshopEngine__RequestRepairItemEvent_{ REL::Offset(0x0455B980) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_5a8b33f26402fac4c999a77b6c0204f7__void_{ REL::Offset(
 			0x04486690) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_5a8e2724026233f416f857d4a0344b65__void_{ REL::Offset(
@@ -18343,7 +18343,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_5c6c35c15d411f61e4be2bd0a84115ed__void_{ REL::Offset(
 			0x045C60A0) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_5c7614f8a665b04c40ec3b56f2769e4f__WorkshopEngine__StartSnappedEvent_{ REL::Offset(0x0455BB00) };
+													BSService__Detail__TCmd__lambda_5c7614f8a665b04c40ec3b56f2769e4f__WorkshopEngine__StartSnappedEvent_{ REL::Offset(0x0455BB00) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_5cd698063e330a3ed6e1f91aa838596d__void_{ REL::Offset(
 			0x0459B9E8) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_5cd8d4cd190031c9c679013ed7b93ebf__void_{ REL::Offset(
@@ -18352,19 +18352,19 @@ namespace RE
 			BSService__Detail__TCmd__lambda_5d0496d326a3d070261d336cd195f34a__BSStreaming__ErrorCode_BSStreaming__DataHandle_{ REL::Offset(
 				0x045A6178) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_5d2dc311cc68beecf95840e22bc9a1a7____AddMaterialCheckExistingControllersCommand_{ REL::Offset(
-				0x0458ABF8) };
+													BSService__Detail__TCmd__lambda_5d2dc311cc68beecf95840e22bc9a1a7____AddMaterialCheckExistingControllersCommand_{ REL::Offset(
+                0x0458ABF8) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_5d3965b97e4ca7d0cc745372efc2f4d9__void_{ REL::Offset(
 			0x04482668) };
 		inline constexpr std::array<REL::Offset, 1>
 			BSService__Detail__TCmd__lambda_5d43da90aded6b185d0c2ac43c2c66b5__LOD__Commands__GridCellPostLoadAction_{ REL::Offset(0x04451760) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_5d4cf4b95f32699d50555a8a889d93e8__BSResource__Server__Commands__AddDependency_{ REL::Offset(0x0440EA58) };
+													BSService__Detail__TCmd__lambda_5d4cf4b95f32699d50555a8a889d93e8__BSResource__Server__Commands__AddDependency_{ REL::Offset(0x0440EA58) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_5d4e0bb91a60feb7ed2a3cda76c5ae60__void_{ REL::Offset(
 			0x0448C458) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_5d512ec3b8f8b58a3b45cdafb8e59f52__DynamicNavmeshService__DynamicNavMeshTaskStitchCellEvent_{ REL::Offset(
-				0x0434E1E0) };
+													BSService__Detail__TCmd__lambda_5d512ec3b8f8b58a3b45cdafb8e59f52__DynamicNavmeshService__DynamicNavMeshTaskStitchCellEvent_{ REL::Offset(
+                0x0434E1E0) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_5db24543e987e39df9ba065b93317c77__{ REL::Offset(0x047610D0) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_5db8e2e837d027556d6f7c9bf57942c8__void_{ REL::Offset(
 			0x04373958) };
@@ -18388,7 +18388,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_5f5b67ae8656b8c2dd62d9c87a22bf36__void_{ REL::Offset(
 			0x044A6AA8) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_5f811668598f74b55d8da48ccf8d3bc6__BSResource__Server__Commands__AddDependency_{ REL::Offset(0x045B1F38) };
+													BSService__Detail__TCmd__lambda_5f811668598f74b55d8da48ccf8d3bc6__BSResource__Server__Commands__AddDependency_{ REL::Offset(0x045B1F38) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_5fcec49d8393ef2030e8281cae827ad5__void_{ REL::Offset(
 			0x0451B4F0) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_5ff9deb0cc130544db6aa77b12335b29__void_{ REL::Offset(
@@ -18401,18 +18401,18 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_6086aefa1af85f5bf44d762eb798cc6d__void_{ REL::Offset(
 			0x044A0CC0) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_6091bd49f0235c539730330b7bbd05e6__BGSPlanet__Commands__AcquireHandles_{ REL::Offset(0x04380BA0) };
+													BSService__Detail__TCmd__lambda_6091bd49f0235c539730330b7bbd05e6__BGSPlanet__Commands__AcquireHandles_{ REL::Offset(0x04380BA0) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_60953c0dbb757333a370e213f2271760__void_{ REL::Offset(
 			0x045591E8) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_60a2a67e515b8c66bf9223026a83fbd0__void_{ REL::Offset(
 			0x044AA7A8) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_60c5b39cf8477c02cff6f396fb44a7ed__BSResource__Server__Commands__AddDependency_{ REL::Offset(0x043A4DC0) };
+													BSService__Detail__TCmd__lambda_60c5b39cf8477c02cff6f396fb44a7ed__BSResource__Server__Commands__AddDependency_{ REL::Offset(0x043A4DC0) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_60fe0abdac05530fab75b73544af950b__void_{ REL::Offset(
 			0x044C0000) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_61413ac2a55467b678214f2ac86caa3d__DynamicNavmeshService__RemoveNavmeshesForObjectEvent_{ REL::Offset(
-				0x0434E180) };
+													BSService__Detail__TCmd__lambda_61413ac2a55467b678214f2ac86caa3d__DynamicNavmeshService__RemoveNavmeshesForObjectEvent_{ REL::Offset(
+                0x0434E180) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_61a430de65351fca951850123a10f86e__void_{ REL::Offset(
 			0x04574250) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_61e1041efa5ca6e088fd0edd0946d094__void_{ REL::Offset(
@@ -18446,7 +18446,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_6473c7b4257e286fd41ce91b4306fddd__void_{ REL::Offset(
 			0x04488648) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_649071eb220bbd34daaeb46ef043c75f__WorkshopEngine__PlaceOutpostEvent_{ REL::Offset(0x0455B100) };
+													BSService__Detail__TCmd__lambda_649071eb220bbd34daaeb46ef043c75f__WorkshopEngine__PlaceOutpostEvent_{ REL::Offset(0x0455B100) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_6496fe1bbf4fca4b6a25b0a0de8ec059__void_{ REL::Offset(
 			0x04477FB8) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_64a5b1bf4883d08c59b951dfdb37525a__void_{ REL::Offset(
@@ -18456,7 +18456,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_64f7f0d7e815702b37bbfa80088c7b7c__void_{ REL::Offset(
 			0x044B3150) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_64fa87a6d3f82028f8e99a63c828d68c____CloneMaterialAnimationsCommand_{ REL::Offset(0x0458AFB0) };
+													BSService__Detail__TCmd__lambda_64fa87a6d3f82028f8e99a63c828d68c____CloneMaterialAnimationsCommand_{ REL::Offset(0x0458AFB0) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_650437e5a957ffb931aa5270f3a52342__void_{ REL::Offset(
 			0x044AE678) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_651164d697b1ce925d5c2e2886235553__void_{ REL::Offset(
@@ -18466,7 +18466,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_659cef0f91fddcd8853146bafb6b8d29__void_{ REL::Offset(
 			0x045741F0) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_664629f702b7c363dca36fae740aa4d9__BSResource__Server__Commands__AddDependency_{ REL::Offset(0x04368530) };
+													BSService__Detail__TCmd__lambda_664629f702b7c363dca36fae740aa4d9__BSResource__Server__Commands__AddDependency_{ REL::Offset(0x04368530) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_665417a5a61e24970bf904264af2893e__void_{ REL::Offset(
 			0x045C4F38) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_667ad24f71c5080269deec4197b39e5b__void_{ REL::Offset(
@@ -18494,8 +18494,8 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			BSService__Detail__TCmd__lambda_67cf8e584c6283648414e469c0e2930f__BSResource__Server__Commands__Reschedule_{ REL::Offset(0x04351F70) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_67daf640653d609c18b27ed92ec5a574__BSResource__Server__Commands__NotifyComplete_{ REL::Offset(
-				0x04351288) };
+													BSService__Detail__TCmd__lambda_67daf640653d609c18b27ed92ec5a574__BSResource__Server__Commands__NotifyComplete_{ REL::Offset(
+                0x04351288) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_67de57fbe5bdb30ba798c34e8946cc71__void_{ REL::Offset(
 			0x044B8830) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_67e30507f7f4c631543dd3647fe250d9__{ REL::Offset(0x043A5930) };
@@ -18540,7 +18540,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_6a62296ed5a1718405cb326aa3fcf96f__void_{ REL::Offset(
 			0x044B42E0) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_6a90a20a8dd6b9a62dff6af4ab655472__WorkshopEngine__RemoveItemEvent_{ REL::Offset(0x0455B9A0) };
+													BSService__Detail__TCmd__lambda_6a90a20a8dd6b9a62dff6af4ab655472__WorkshopEngine__RemoveItemEvent_{ REL::Offset(0x0455B9A0) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_6a9caad3f633d778228f0d36d4535017__void_{ REL::Offset(
 			0x044C2300) };
 		inline constexpr std::array<REL::Offset, 1>
@@ -18564,7 +18564,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_6b5d63e4732f8d7b09e4d0ff20c6fc58__void_{ REL::Offset(
 			0x04559628) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_6b6158fca648bbf230751bfbbde03728__BSTSmartPointer_TESForm_TESFormPolicy__{ REL::Offset(0x044D13B8) };
+													BSService__Detail__TCmd__lambda_6b6158fca648bbf230751bfbbde03728__BSTSmartPointer_TESForm_TESFormPolicy__{ REL::Offset(0x044D13B8) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_6b8db5dac53a2d7231f327507333b128__void_{ REL::Offset(
 			0x045C5F90) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_6b8ee11832c713630bb75c36f3396169__void_{ REL::Offset(
@@ -18572,11 +18572,11 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_6c2561c9f50eb0bf6b94f3b9ac5cc4b8__void_{ REL::Offset(
 			0x0457AC28) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_6c5cd0ab225627dda6154ef81efa8dd8__BSResource__Server__Commands__AddDependency_{ REL::Offset(0x0457CED0) };
+													BSService__Detail__TCmd__lambda_6c5cd0ab225627dda6154ef81efa8dd8__BSResource__Server__Commands__AddDependency_{ REL::Offset(0x0457CED0) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_6ccd680c8b17011b93a29a70b4d04433__void_{ REL::Offset(
 			0x0448F870) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_6d05a6adfd708bdd2be9be5a597edb9d__BSResource__Server__Commands__AddDependency_{ REL::Offset(0x044545F0) };
+													BSService__Detail__TCmd__lambda_6d05a6adfd708bdd2be9be5a597edb9d__BSResource__Server__Commands__AddDependency_{ REL::Offset(0x044545F0) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_6d1eed5ad99ecaca382f98513fb566b4__void_{ REL::Offset(
 			0x0437E080) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_6d4300f9e2a25912a36e5515e51d862a__void_{ REL::Offset(
@@ -18600,7 +18600,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_6df16e899ef1ecc0a3cd559b5e0a5f0e__void_{ REL::Offset(
 			0x044967C0) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_6e3242ce816216926bf9dd68110edfcf__WorkshopEngine__InspectColorItemsEvent_{ REL::Offset(0x0455BA00) };
+													BSService__Detail__TCmd__lambda_6e3242ce816216926bf9dd68110edfcf__WorkshopEngine__InspectColorItemsEvent_{ REL::Offset(0x0455BA00) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_6e4f3cfef0ac9e43dc3cad388c769225__void_{ REL::Offset(
 			0x044C0120) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_6e575ab26de60bcd59749e363678d512__void_{ REL::Offset(
@@ -18619,7 +18619,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_6f0264a3d4d883e9934d0c65c76fded8__void_{ REL::Offset(
 			0x044AF0C0) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_6f477b7c1e008db7554b20169c9330d8__WorkshopEngine__CycleBehaviorEvent_{ REL::Offset(0x0455BA40) };
+													BSService__Detail__TCmd__lambda_6f477b7c1e008db7554b20169c9330d8__WorkshopEngine__CycleBehaviorEvent_{ REL::Offset(0x0455BA40) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_6f4bb6eee0b881844adfb6f8c5651e4e__{ REL::Offset(0x044C9B18) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_6f76912b040fd59843479bbdcdef2666__void_{ REL::Offset(
 			0x0455ED90) };
@@ -18630,7 +18630,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_7003af1c79c3d095e4c4258522e6a495__void_{ REL::Offset(
 			0x04358FE0) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_700651ea0c79cb4f1feb1d89df54e2fe__LOD__Commands__LodRequestUpdate_{ REL::Offset(0x04451740) };
+													BSService__Detail__TCmd__lambda_700651ea0c79cb4f1feb1d89df54e2fe__LOD__Commands__LodRequestUpdate_{ REL::Offset(0x04451740) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_7025c2df15f4cce26d545f3d17434ba0__void_{ REL::Offset(
 			0x0447D350) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_706146b02bf6c1a3fcbd78ced8cc48a7__void_{ REL::Offset(
@@ -18654,7 +18654,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_71f90f1d00b697dd89f2ca3dfde1f14b__void_{ REL::Offset(
 			0x044B3090) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_7217b0b9db734178f5fd7431284659d3__BSResource__Server__Commands__AddDependency_{ REL::Offset(0x04351740) };
+													BSService__Detail__TCmd__lambda_7217b0b9db734178f5fd7431284659d3__BSResource__Server__Commands__AddDependency_{ REL::Offset(0x04351740) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_722f3d32b4c382cc4e4f9e0a6190fbdd__void_{ REL::Offset(
 			0x0451C8D8) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_723b89e920a1075885b9ce45bfa6e186__void_{ REL::Offset(
@@ -18665,7 +18665,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_72a877ae8e20f0d15528a8c58e4f9a95__void_{ REL::Offset(
 			0x04496350) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_72cde353bc07bdc94ac712b028840489__WorkshopEngine__FinishRepairEvent_{ REL::Offset(0x0455B960) };
+													BSService__Detail__TCmd__lambda_72cde353bc07bdc94ac712b028840489__WorkshopEngine__FinishRepairEvent_{ REL::Offset(0x0455B960) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_72e0b7e6041882311fef01186cb9b2b7__void_{ REL::Offset(
 			0x044823D8) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_72fb3976ffd25c04ba1257de532d9671__void_{ REL::Offset(
@@ -18713,7 +18713,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_74a9e7f9c0a75d1ba0c05a8d9b650ba4__void_{ REL::Offset(
 			0x0448DD10) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_74e46c6b2c8b3ed61daf769b5de2c56a__SaveLoadTester__Service__StartTest_{ REL::Offset(0x044CF998) };
+													BSService__Detail__TCmd__lambda_74e46c6b2c8b3ed61daf769b5de2c56a__SaveLoadTester__Service__StartTest_{ REL::Offset(0x044CF998) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_7527a80dc08ff44cb8e3915faf0c048f__void_{ REL::Offset(
 			0x044D48B8) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_752bcac1bdc7b97b37e7fcbb4983027d__void_{ REL::Offset(
@@ -18733,7 +18733,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_760b3151f41126fa81d21cb432ae066e__void_{ REL::Offset(
 			0x044A69C8) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_7626b9cd584242078396bf4fa4f63a4c__BSResource__Server__Commands__Reschedule_{ REL::Offset(0x04351F50) };
+													BSService__Detail__TCmd__lambda_7626b9cd584242078396bf4fa4f63a4c__BSResource__Server__Commands__Reschedule_{ REL::Offset(0x04351F50) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_76b0414edaf4b7fac3e1008dc131ad3f__void_{ REL::Offset(
 			0x0451EB98) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_76c0f6130f3d6695cb73d406dc63a4ce__{ REL::Offset(0x0459BCB0) };
@@ -18769,8 +18769,8 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_7940647ca3c6dd8e40ea631c4cd16121__void_{ REL::Offset(
 			0x044CEB98) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_7948906fca3decb9e0965a951ce2a12b__Particles__PSM__Commands__RequestLoadResources_{ REL::Offset(
-				0x04597858) };
+													BSService__Detail__TCmd__lambda_7948906fca3decb9e0965a951ce2a12b__Particles__PSM__Commands__RequestLoadResources_{ REL::Offset(
+                0x04597858) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_795394fc1f5cb15b922f6266849c2ef3__void_{ REL::Offset(
 			0x04482688) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_796ba97b60b7154f47db95b6e96e138c__void_{ REL::Offset(
@@ -18781,14 +18781,14 @@ namespace RE
 			0x04575018) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_79f8b30eb5b000e1a002b9e523c389d4__{ REL::Offset(0x04386840) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_79fffd890369d22bc0611924181ac674__BSResource__Server__Commands__AddDependency_{ REL::Offset(0x04351700) };
+													BSService__Detail__TCmd__lambda_79fffd890369d22bc0611924181ac674__BSResource__Server__Commands__AddDependency_{ REL::Offset(0x04351700) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_7aed76a11bbff46f62d19be005be91c3__void_{ REL::Offset(
 			0x044D4C58) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_7af33b357f1679fd41253b5727a44b43__void_{ REL::Offset(
 			0x044BAEE0) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_7af60d460286fefe99c14b5592eded70__CreationRendererPrivate__MeshLODCommands__ModifyLODLevel_{ REL::Offset(
-				0x045BDEA8) };
+													BSService__Detail__TCmd__lambda_7af60d460286fefe99c14b5592eded70__CreationRendererPrivate__MeshLODCommands__ModifyLODLevel_{ REL::Offset(
+                0x045BDEA8) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_7b6e15ff7b0e0fa1ebfecf1cefe361ab__void_{ REL::Offset(
 			0x045C0EA8) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_7b734fa5bb9a16d14bc6250b77dcd415__void_{ REL::Offset(
@@ -18811,12 +18811,12 @@ namespace RE
 			BSService__Detail__TCmd__lambda_7ccc472811db6bb9955c875770a9d47e__BSStreaming__ErrorCode_BSStreaming__DataHandle_{ REL::Offset(
 				0x045B2A00) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_7cdf98cf9f0aa0bcea50ae72668ab568__Particles__PSM__Commands__StopParticleSystem_{ REL::Offset(
-				0x04597918) };
+													BSService__Detail__TCmd__lambda_7cdf98cf9f0aa0bcea50ae72668ab568__Particles__PSM__Commands__StopParticleSystem_{ REL::Offset(
+                0x04597918) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_7d282284f78341eb1d4bb6733f61496d__void_{ REL::Offset(
 			0x045B22A0) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_7d33fdd8e3680d9ed88492edb9a260c6__BSResource__Server__Commands__Reschedule_{ REL::Offset(0x045A6720) };
+													BSService__Detail__TCmd__lambda_7d33fdd8e3680d9ed88492edb9a260c6__BSResource__Server__Commands__Reschedule_{ REL::Offset(0x045A6720) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_7d3e4be89987f50559e6c5b05bd6ee15__void_{ REL::Offset(
 			0x043590A0) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_7d51ce0036ca97aedd867f56006974f7__void_{ REL::Offset(
@@ -18824,7 +18824,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_7d99205ef67f7718d787f609af2c224f__void_{ REL::Offset(
 			0x0447D3D0) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_7da5e8190e0339c13c2f5f06345f229a__Particles__PPM__Commands__RemoveRequest_{ REL::Offset(0x045979B8) };
+													BSService__Detail__TCmd__lambda_7da5e8190e0339c13c2f5f06345f229a__Particles__PPM__Commands__RemoveRequest_{ REL::Offset(0x045979B8) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_7df876f5867e0fa774204ad23b891f43__void_{ REL::Offset(
 			0x045C5DD0) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_7e015de496b0d683013bd52a76a05378__void_{ REL::Offset(
@@ -18868,7 +18868,7 @@ namespace RE
 			0x045C0038) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_820114ba28d307b737e81d49ecdd4875__{ REL::Offset(0x04765F00) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_8231f63b0e30b5c98bd5c1e089518342__WorkshopEngine__PreviewColorsEvent_{ REL::Offset(0x0455B140) };
+													BSService__Detail__TCmd__lambda_8231f63b0e30b5c98bd5c1e089518342__WorkshopEngine__PreviewColorsEvent_{ REL::Offset(0x0455B140) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_82ab382d81fbcc74e2558afb238bf74c__void_{ REL::Offset(
 			0x0448A7C8) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_82bb02a8f21d0fbdfb4458a924026daf__void_{ REL::Offset(
@@ -18883,7 +18883,7 @@ namespace RE
 			BSService__Detail__TCmd__lambda_834d17c7df6db152d538f182cdcf26b5__BSResource__Server__Commands__RescheduleRange_{ REL::Offset(
 				0x0457D2A0) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_836bb3faa1f0c4c04df60788224c354c__BSTSmartPointer_BGSLocation_TESFormPolicy__{ REL::Offset(0x044D1338) };
+													BSService__Detail__TCmd__lambda_836bb3faa1f0c4c04df60788224c354c__BSTSmartPointer_BGSLocation_TESFormPolicy__{ REL::Offset(0x044D1338) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_838a6e828fc01146b1c4f2335c689964__void_{ REL::Offset(
 			0x044B0F68) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_83a3aeee2768e862808780e2378331c8__void_{ REL::Offset(
@@ -18910,7 +18910,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_84969523996d164bdfac61a170d186ad__void_{ REL::Offset(
 			0x044C00E0) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_84c56a0ca6bce59c049f1972b146be4f__SaveLoadTester__Service__IncrementBusy_{ REL::Offset(0x044CF938) };
+													BSService__Detail__TCmd__lambda_84c56a0ca6bce59c049f1972b146be4f__SaveLoadTester__Service__IncrementBusy_{ REL::Offset(0x044CF938) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_84ef32ddb8420908f583ef52410296cc__void_{ REL::Offset(
 			0x044D51F8) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_84f4f35cc463fa19ddfd44ecfe563d91__void_{ REL::Offset(
@@ -18918,14 +18918,14 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_850065b6ee43224a7e4760c4fddba4ef__void_{ REL::Offset(
 			0x044D4EF8) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_855d2b7e2bf580bea5b503753d17fd5b__Particles__PPM__Commands__EnqueueBinding_{ REL::Offset(0x045979F8) };
+													BSService__Detail__TCmd__lambda_855d2b7e2bf580bea5b503753d17fd5b__Particles__PPM__Commands__EnqueueBinding_{ REL::Offset(0x045979F8) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_8567733b8a9289a7153d06d46c26642e__void_{ REL::Offset(
 			0x044A9B00) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_858e93ff4caea2bf34f92d0cc868306f__BSService__Commands__NewFrame_{
 			REL::Offset(0x0434D5C0)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_85cb0dd058f82c4263a779b5e17836e4__BSResource__Server__Commands__Cancel_{ REL::Offset(0x04351760) };
+													BSService__Detail__TCmd__lambda_85cb0dd058f82c4263a779b5e17836e4__BSResource__Server__Commands__Cancel_{ REL::Offset(0x04351760) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_865957f443b9695f384fac324ee2ae73__void_{ REL::Offset(
 			0x044D9AD8) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_86740560175e48cde5e9bd8e4897daf8__{ REL::Offset(0x04388620) };
@@ -18953,11 +18953,11 @@ namespace RE
 				REL::Offset(0x045BDD38)
 			};
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_87e3396ef4bc77fd595901e6ea936fd2__WorkshopEngine__RotateItemEvent_{ REL::Offset(0x0455BA20) };
+													BSService__Detail__TCmd__lambda_87e3396ef4bc77fd595901e6ea936fd2__WorkshopEngine__RotateItemEvent_{ REL::Offset(0x0455BA20) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_88451e83918cdc064e33ddf88142930c__void_{ REL::Offset(
 			0x044D4818) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_887ae619974c457a1092a2857981334a__BSTextureStreamer__Command__ReceiveData_{ REL::Offset(0x04586638) };
+													BSService__Detail__TCmd__lambda_887ae619974c457a1092a2857981334a__BSTextureStreamer__Command__ReceiveData_{ REL::Offset(0x04586638) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_88a20cc64d9201460a81ab471ff6b335__void_{ REL::Offset(
 			0x044D9668) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_88df1696d0bd13684b0fe2bf35f827e2__void_{ REL::Offset(
@@ -19013,7 +19013,7 @@ namespace RE
 				REL::Offset(0x045A67E0)
 			};
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_8c790c4044acde3372da2b6e414e2879__BSResource__Server__Commands__AddDependency_{ REL::Offset(0x04351F10) };
+													BSService__Detail__TCmd__lambda_8c790c4044acde3372da2b6e414e2879__BSResource__Server__Commands__AddDependency_{ REL::Offset(0x04351F10) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_8c7adc16b961ffd1b7620e0eb24e6f3c__void_{ REL::Offset(
 			0x0448F790) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_8c9edfc9f5745e344d220741e4fb6a31__void_{ REL::Offset(
@@ -19028,15 +19028,15 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_8d2e091269e81e098d9bd470098adca4__void_{ REL::Offset(
 			0x0459AD60) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_8d6bd992f0230fb183da85bedf4e0011__BSResource__Server__Commands__CloseDependencies_{ REL::Offset(
-				0x043516E0) };
+													BSService__Detail__TCmd__lambda_8d6bd992f0230fb183da85bedf4e0011__BSResource__Server__Commands__CloseDependencies_{ REL::Offset(
+                0x043516E0) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_8d732710d4e0c133ecd5c4015a8a2f23__void_{ REL::Offset(
 			0x044BCAE0) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_8d7efd53476ebed7713f088a014661a3__void_{ REL::Offset(
 			0x0451EB58) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_8d923ad27c122fead713d241e2ce7eb2__{ REL::Offset(0x043CCD10) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_8d950dd21c4979d93380320597ef9e56__BSResource__Server__Commands__AddDependency_{ REL::Offset(0x04377900) };
+													BSService__Detail__TCmd__lambda_8d950dd21c4979d93380320597ef9e56__BSResource__Server__Commands__AddDependency_{ REL::Offset(0x04377900) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_8d9c3d343ffefa88a5512cf7c43480c5__void_{ REL::Offset(
 			0x044ABF48) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_8dae76ab7a4840bdd293e2e549fdd2cf____UnregisterCommand_{
@@ -19058,8 +19058,8 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_8e849c06eeebb171e890c3c57c96f3ce__void_{ REL::Offset(
 			0x04763AE0) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_8eb5f02a378aeb7430b741a7fedf18b2__Particles__PNM__Commands__ResetParticleEngine_{ REL::Offset(
-				0x04590B70) };
+													BSService__Detail__TCmd__lambda_8eb5f02a378aeb7430b741a7fedf18b2__Particles__PNM__Commands__ResetParticleEngine_{ REL::Offset(
+                0x04590B70) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_8ed8bc5a0d1ce007c48fb68f6dbfc686__void_{ REL::Offset(
 			0x045C0E88) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_8ee4e7f008ac2c028083a0610ed33295__void_{ REL::Offset(
@@ -19073,21 +19073,21 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_8f3cbc4395701e6476460116d81da37c__void_{ REL::Offset(
 			0x044BA260) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_8f56af7817e611170f8b77766816df96__ScalarAnimation__ScalarAnimDestoryCommand_{ REL::Offset(0x045615A0) };
+													BSService__Detail__TCmd__lambda_8f56af7817e611170f8b77766816df96__ScalarAnimation__ScalarAnimDestoryCommand_{ REL::Offset(0x045615A0) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_8f7492eb11689e36a3442560b24e9c79__{ REL::Offset(0x04383A68) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_8f93fedccf024629d0222f638e6fb734__void_{ REL::Offset(
 			0x044A93E0) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_8fcffe61e07066419ae6d13b744d7398__{ REL::Offset(0x04765F80) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_8fe88d7c209038c81546dfd143a2d2cf__BSResource__Server__Commands__AddDependency_{ REL::Offset(0x04580C90) };
+													BSService__Detail__TCmd__lambda_8fe88d7c209038c81546dfd143a2d2cf__BSResource__Server__Commands__AddDependency_{ REL::Offset(0x04580C90) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_8fe8eac6ac1f09479ced61b89bd2e5c7__BSComponentDB2__ObjectLoaded_{
 			REL::Offset(0x045899A8)
 		};
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_8ff97424b32b2707ee1581c3b461353a__void_{ REL::Offset(
 			0x04561F60) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_903d188fbd060a75c2f09ca0d00d69f9__Particles__PNM__Commands__StartParticleSystem_{ REL::Offset(
-				0x04590BB0) };
+													BSService__Detail__TCmd__lambda_903d188fbd060a75c2f09ca0d00d69f9__Particles__PNM__Commands__StartParticleSystem_{ REL::Offset(
+                0x04590BB0) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_90d53f309f339f4a8a0da60c3df7b864__EffectSequence__StartCommand_{
 			REL::Offset(0x04350170)
 		};
@@ -19100,7 +19100,7 @@ namespace RE
 			0x044C6718) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_91b34c154a7e919d20b33ab6c8c1e534__{ REL::Offset(0x043CCEA0) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_9219d7f3c422ec613d3b859b0b0feb8b__BSResource__Server__Commands__Cancel_{ REL::Offset(0x0439E6C8) };
+													BSService__Detail__TCmd__lambda_9219d7f3c422ec613d3b859b0b0feb8b__BSResource__Server__Commands__Cancel_{ REL::Offset(0x0439E6C8) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_924408fe32365430234c7733a8e116b8__void_{ REL::Offset(
 			0x044BA180) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_92742857d210df4cbf8029b8c711e12a__void_{ REL::Offset(
@@ -19119,8 +19119,8 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_937b8bb3063c70de25f14b52d93ff9ae__void_{ REL::Offset(
 			0x0459AE60) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_93810a6b15979c2bee26e22419c3516a__Particles__PSM__Commands__StopParticleSystem_{ REL::Offset(
-				0x04597978) };
+													BSService__Detail__TCmd__lambda_93810a6b15979c2bee26e22419c3516a__Particles__PSM__Commands__StopParticleSystem_{ REL::Offset(
+                0x04597978) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_93a73e90255e6a9dd27b2d7f29ba2535__{ REL::Offset(0x043884E8) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_93b57f169840fc47668da318a75374ef__void_{ REL::Offset(
 			0x044D1498) };
@@ -19131,8 +19131,8 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			BSService__Detail__TCmd__lambda_946acf22b74bb4bf879bd9aefb822eed__LOD__Commands__BlockResetRequest_{ REL::Offset(0x04451780) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_947526432fac90534843552c185fb171__EffectSequence__ChangePauseSequenceProgressCommand_{ REL::Offset(
-				0x043500F0) };
+													BSService__Detail__TCmd__lambda_947526432fac90534843552c185fb171__EffectSequence__ChangePauseSequenceProgressCommand_{ REL::Offset(
+                0x043500F0) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_94b09046f32c59f7c1dd27f683bebfff__void_{ REL::Offset(
 			0x044AF060) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_95781fde0f4622186206c33cd786dcc6__void_{ REL::Offset(
@@ -19145,7 +19145,7 @@ namespace RE
 			0x04489A98) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_9650277ddb4055f0aa79a0e2d523e404__{ REL::Offset(0x04384710) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_9658d063138521bce89a2bf720abc456__std__reference_wrapper_BSService__Site__{ REL::Offset(0x045B9B18) };
+													BSService__Detail__TCmd__lambda_9658d063138521bce89a2bf720abc456__std__reference_wrapper_BSService__Site__{ REL::Offset(0x045B9B18) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_9665d77017698d7203f6ab74066db82e__void_{ REL::Offset(
 			0x0451E6F8) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_969ca3a2148354275e76744b03109dc8__void_{ REL::Offset(
@@ -19153,12 +19153,12 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_96b58f7fa96359327948d1f0993af08a__void_{ REL::Offset(
 			0x0447E360) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_96b592b8e406b79b2ec86b505f69c59c__BGSAudio__WwiseService__WriteCmd_{ REL::Offset(0x04457848) };
+													BSService__Detail__TCmd__lambda_96b592b8e406b79b2ec86b505f69c59c__BGSAudio__WwiseService__WriteCmd_{ REL::Offset(0x04457848) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_96b77f961f63cc7012560a690655603e__void_{ REL::Offset(
 			0x044BCA60) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_96bae4b9fce251a34c01a5907473e85f__BSTSmartPointer_TESBoundObject_TESFormPolicy__{ REL::Offset(
-				0x044D1418) };
+													BSService__Detail__TCmd__lambda_96bae4b9fce251a34c01a5907473e85f__BSTSmartPointer_TESBoundObject_TESFormPolicy__{ REL::Offset(
+                0x044D1418) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_96bde48475a8e2e0146cf273c3bd1ebf__void_{ REL::Offset(
 			0x044AF1E0) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_96d0dd0d3e6fdd75fd27b2921fa840d8__void_{ REL::Offset(
@@ -19175,8 +19175,8 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_97a5caa927e84e55ba95badd3fdd38af__void_{ REL::Offset(
 			0x04520310) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_97e11e3a98be79f5d4bbfff2522fb7b1__DynamicNavmeshService__AddNavMeshForObjectEvent_{ REL::Offset(
-				0x0434E200) };
+													BSService__Detail__TCmd__lambda_97e11e3a98be79f5d4bbfff2522fb7b1__DynamicNavmeshService__AddNavMeshForObjectEvent_{ REL::Offset(
+                0x0434E200) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_9820ef9526bdb062a3551bf5790aa4f8__void_{ REL::Offset(
 			0x043D80F0) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_984dadb04a0be34aa4db7b68c60a675d__void_{ REL::Offset(
@@ -19189,7 +19189,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_98b2bd9c56237ba0d2fbd25b8a480cc7__void_{ REL::Offset(
 			0x0448D4F8) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_98b447ed4a1b9723556c8e9d4fa4de70____ClearAllAnimatedMaterialsCommand_{ REL::Offset(0x0458A820) };
+													BSService__Detail__TCmd__lambda_98b447ed4a1b9723556c8e9d4fa4de70____ClearAllAnimatedMaterialsCommand_{ REL::Offset(0x0458A820) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_98c7898242d19b6bb9b69ce4f2081d8f____PauseUnpauseMaterialUpdates_{
 			REL::Offset(0x0458B008)
 		};
@@ -19225,8 +19225,8 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_9acbf7d3e3e0843a62e993363e38015a__void_{ REL::Offset(
 			0x044D4FB8) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_9b03ec310de67ab5cfbc43cc4f52f9af__BSResource__Server__Commands__DebugIntrospect_{ REL::Offset(
-				0x045A6F50) };
+													BSService__Detail__TCmd__lambda_9b03ec310de67ab5cfbc43cc4f52f9af__BSResource__Server__Commands__DebugIntrospect_{ REL::Offset(
+                0x045A6F50) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_9b2b5a067467a630177c7aca36378a6c__void_{ REL::Offset(
 			0x0455EDB0) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_9b3380dd5772ca2a86fafd327064377b__void_{ REL::Offset(
@@ -19266,7 +19266,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_9dffc157ef59182577d29cea9db316f3__void_{ REL::Offset(
 			0x0457B248) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_9e0474c7f710fc0b2a5d34e188ea9b66__Particles__PPM__Commands__RemoveRequest_{ REL::Offset(0x04597998) };
+													BSService__Detail__TCmd__lambda_9e0474c7f710fc0b2a5d34e188ea9b66__Particles__PPM__Commands__RemoveRequest_{ REL::Offset(0x04597998) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_9e069be17097e784c7965ec9ef3835dc__void_{ REL::Offset(
 			0x045B2A50) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_9e7241b2c61cad9a46bc2ece1e7f07ec__void_{ REL::Offset(
@@ -19274,11 +19274,11 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			BSService__Detail__TCmd__lambda_9eaca6a70e172924a3f92138e9d20e62__PathManagerImpl__OpenAttachEvent_{ REL::Offset(0x0459A150) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_9f38f4676ffc9a33dab33b1f8f9492f8__BSResource__Server__Commands__AddDependency_{ REL::Offset(0x0455F8D0) };
+													BSService__Detail__TCmd__lambda_9f38f4676ffc9a33dab33b1f8f9492f8__BSResource__Server__Commands__AddDependency_{ REL::Offset(0x0455F8D0) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_9f63e7c7b56d3ccccb4b438c0212ec7b__void_{ REL::Offset(
 			0x044A17F8) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_9f6766341b60afecdf54edf41b313e99__BSResource__Server__Commands__Delete_{ REL::Offset(0x0457D280) };
+													BSService__Detail__TCmd__lambda_9f6766341b60afecdf54edf41b313e99__BSResource__Server__Commands__Delete_{ REL::Offset(0x0457D280) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_9f6a5fe2293ea27a75c5f1c914668a77__void_{ REL::Offset(
 			0x044C0180) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_9f7ec8fcc4071113908328677d6879ff__{ REL::Offset(0x04386700) };
@@ -19287,7 +19287,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_9fa2eba5427f12c8a0610b2922f6b176__void_{ REL::Offset(
 			0x044D1518) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_9fb2d3839d77d6af3e7cb415f310a74d__BGSAudio__WwiseService__OpenCmd_{ REL::Offset(0x044578A8) };
+													BSService__Detail__TCmd__lambda_9fb2d3839d77d6af3e7cb415f310a74d__BGSAudio__WwiseService__OpenCmd_{ REL::Offset(0x044578A8) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_9fb860dcf665f28642db3882625656c0__void_{ REL::Offset(
 			0x04489A58) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_9fe37f59062020f99901fd80a3e7aece__void_{ REL::Offset(
@@ -19330,8 +19330,8 @@ namespace RE
 			BSService__Detail__TCmd__lambda_a1cb8ee946088bc62d7f277a2d0db833__CreationRendererPrivate__Messaging__SwapChain__Create_{ REL::Offset(
 				0x045BC998) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_a1e214bac6c5966bc404dc9e174ffbfd__CreationRendererPrivate__Messaging__SwapChain__Resize_{ REL::Offset(
-				0x045BCA58) };
+													BSService__Detail__TCmd__lambda_a1e214bac6c5966bc404dc9e174ffbfd__CreationRendererPrivate__Messaging__SwapChain__Resize_{ REL::Offset(
+                0x045BCA58) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_a20b1e5553f505ca1841aeeab80e1d7c__void_{ REL::Offset(
 			0x044B7868) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_a20f3fa8dd2f4037edd4bfc359f0876a__void_{ REL::Offset(
@@ -19375,7 +19375,7 @@ namespace RE
 			0x045BAE38) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_a54185de4a87d929046c1f967c0f6b65__{ REL::Offset(0x0455F7E0) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_a55e4a72af208719142bfb30cc1f1331__CreationRendererPrivate__LODList_{ REL::Offset(0x04762660) };
+													BSService__Detail__TCmd__lambda_a55e4a72af208719142bfb30cc1f1331__CreationRendererPrivate__LODList_{ REL::Offset(0x04762660) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_a55eb663d1a98aa32f02c7db7d750653__void_{ REL::Offset(
 			0x045B9B38) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_a583650e80194eb105c262f8e04d2054__{ REL::Offset(0x04597DE0) };
@@ -19384,8 +19384,8 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_a63b7ec47e1fc980b9ae37c2ca1f641e__void_{ REL::Offset(
 			0x044D4978) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_a65c5aee7d01813cad9193817d41d420__BSService__Detail__PointerWrapper_BGSPlanet__NavMeshGen__{ REL::Offset(
-				0x0437EE68) };
+													BSService__Detail__TCmd__lambda_a65c5aee7d01813cad9193817d41d420__BSService__Detail__PointerWrapper_BGSPlanet__NavMeshGen__{ REL::Offset(
+                0x0437EE68) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_a65d6df22ec597338e9327ed118548fa__void_{ REL::Offset(
 			0x044A0CA0) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_a6934efa6c3c3c3794dda92a0852d958__void_{ REL::Offset(
@@ -19397,7 +19397,7 @@ namespace RE
 		};
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_a6da57a2fcd57b2a75c40ac9a504279b__{ REL::Offset(0x04386980) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_a6e838b32f971f3fb076cd4127205fa2__Particles__PSM__Commands__InitializeBinding_{ REL::Offset(0x04597958) };
+													BSService__Detail__TCmd__lambda_a6e838b32f971f3fb076cd4127205fa2__Particles__PSM__Commands__InitializeBinding_{ REL::Offset(0x04597958) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_a77c62f82246e6cf85c77a4affb220b4__void_{ REL::Offset(
 			0x0451E1A0) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_a7c34358040756ddae59c95350b53546__void_{ REL::Offset(
@@ -19422,7 +19422,7 @@ namespace RE
 			BSService__Detail__TCmd__lambda_a89c9f5333744947865a77467ce0d907__CreationRendererPrivate__MeshDB__CreateParams_{ REL::Offset(
 				0x045BAD98) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_a8e1382f3a751ff72f5b0fe37b487270__Particles__PNM__Commands__FlushAllSystems_{ REL::Offset(0x04590B90) };
+													BSService__Detail__TCmd__lambda_a8e1382f3a751ff72f5b0fe37b487270__Particles__PNM__Commands__FlushAllSystems_{ REL::Offset(0x04590B90) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_a939e91cff8ae712fcb2bbe64b2f90d4__void_{ REL::Offset(
 			0x0447C888) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_a945ca37afefbc01b3bc1d392e27a087__{ REL::Offset(0x045BDE68) };
@@ -19458,11 +19458,11 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_ab08d67b1205bd2cc6344f9a96b0d33f__void_{ REL::Offset(
 			0x044B2228) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_ab3cdcf9cd8feb2d4db992837a3b7fbc__BSResource__Server__Commands__AddDependency_{ REL::Offset(0x043A5468) };
+													BSService__Detail__TCmd__lambda_ab3cdcf9cd8feb2d4db992837a3b7fbc__BSResource__Server__Commands__AddDependency_{ REL::Offset(0x043A5468) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_ab7c0788d2130c05c5605576aa755bbb__void_{ REL::Offset(
 			0x044D4DB8) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_ab847c2066fa7ebdf20154c971fd5cab__WorkshopEngine__EditColorsEvent_{ REL::Offset(0x0455B1C0) };
+													BSService__Detail__TCmd__lambda_ab847c2066fa7ebdf20154c971fd5cab__WorkshopEngine__EditColorsEvent_{ REL::Offset(0x0455B1C0) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_ab8a5ef426cb1b2a6e81801c9105a5e7__void_{ REL::Offset(
 			0x0451FAB8) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_ab90a413e08d8b022db630b059c68ff1__{ REL::Offset(0x04386860) };
@@ -19488,8 +19488,8 @@ namespace RE
 			BSService__Detail__TCmd__lambda_ad2271246bdfcea9d344b2dbbaaa4133__BSResource__Server__Commands__CloseDependencies_{ REL::Offset(
 				0x04368570) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_ad4861c97a805ea1edf7f61e6863f33a__BSResource__Server__Commands__DebugIntrospect_{ REL::Offset(
-				0x045A6F70) };
+													BSService__Detail__TCmd__lambda_ad4861c97a805ea1edf7f61e6863f33a__BSResource__Server__Commands__DebugIntrospect_{ REL::Offset(
+                0x045A6F70) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_ad59957d90e5e25167143671df1ae5df__void_{ REL::Offset(
 			0x044BCAC0) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_ad5de098e325d92c6467eaab52ea9fa8__WorkshopEngine__ExitEvent_{
@@ -19545,7 +19545,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_b1e362f39b2e2e94ba35193915dae8ae__void_{ REL::Offset(
 			0x044AEE60) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_b1ef23f5f5074cb28b4e60aee11f6daf__BSResource__Server__Commands__CancelAll_{ REL::Offset(0x0457D230) };
+													BSService__Detail__TCmd__lambda_b1ef23f5f5074cb28b4e60aee11f6daf__BSResource__Server__Commands__CancelAll_{ REL::Offset(0x0457D230) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_b20e924e76aace8d274ececf78e02e92__void_{ REL::Offset(
 			0x0447D060) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_b21c0d3ae547c61b8c92a03ae4a505b7__void_{ REL::Offset(
@@ -19559,7 +19559,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_b2a6f46c8401373a03869943f6bc31bf__void_{ REL::Offset(
 			0x04520330) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_b2b41c4fece56b3bf056606a1e11e5f4__BSResource__Server__Commands__AddDependency_{ REL::Offset(0x04351ED0) };
+													BSService__Detail__TCmd__lambda_b2b41c4fece56b3bf056606a1e11e5f4__BSResource__Server__Commands__AddDependency_{ REL::Offset(0x04351ED0) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_b2d965c5572e6c7ab6a49e6da93de7ee__void_{ REL::Offset(
 			0x04496860) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_b318c7acfceb44b773c8b431339f0d1e__void_{ REL::Offset(
@@ -19569,14 +19569,14 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_b33848b17c4f3dfd2eab25900e73373e__void_{ REL::Offset(
 			0x044796E8) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_b338faf177e266903aa45627a114b906__WorkshopEngine__RemoveOutpostEvent_{ REL::Offset(0x0455BA80) };
+													BSService__Detail__TCmd__lambda_b338faf177e266903aa45627a114b906__WorkshopEngine__RemoveOutpostEvent_{ REL::Offset(0x0455BA80) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_b34663de41abdb9e5975a80f8cdfee00__void_{ REL::Offset(
 			0x044B5FE0) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_b3548a164d5719fd81bf1c2f62cfbd82__void_{ REL::Offset(
 			0x0447E380) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_b3764aa8b22156e31b91cae20945a34e__Particles__PSM__Commands__StopParticleSystem_{ REL::Offset(
-				0x045978F8) };
+													BSService__Detail__TCmd__lambda_b3764aa8b22156e31b91cae20945a34e__Particles__PSM__Commands__StopParticleSystem_{ REL::Offset(
+                0x045978F8) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_b39356b496ecfc1532806268ad01e90d__void_{ REL::Offset(
 			0x04574470) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_b3af29a0e8102d578c83f21b8ec19712__void_{ REL::Offset(
@@ -19594,7 +19594,7 @@ namespace RE
 				REL::Offset(0x04761E08)
 			};
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_b45bca3de1c6ab1b40b8b7254a8b7069__Particles__PSM__Commands__InitializeBinding_{ REL::Offset(0x04597898) };
+													BSService__Detail__TCmd__lambda_b45bca3de1c6ab1b40b8b7254a8b7069__Particles__PSM__Commands__InitializeBinding_{ REL::Offset(0x04597898) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_b481c85aa9090bc1a118433409b0df57__void_{ REL::Offset(
 			0x044B88D0) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_b48485809e84d949ae9a626befc2fc89__void_{ REL::Offset(
@@ -19619,7 +19619,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_b57d3fc592d4c225c74783517cf98068__void_{ REL::Offset(
 			0x0451C9C8) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_b58c73139db198be87daf3fa3cd6f4e8__BSResource__Server__Commands__AddDependency_{ REL::Offset(0x0437D650) };
+													BSService__Detail__TCmd__lambda_b58c73139db198be87daf3fa3cd6f4e8__BSResource__Server__Commands__AddDependency_{ REL::Offset(0x0437D650) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_b5ba30e8c7e2e558ec88aa4f9e8f0063____SetMaterialInMenuCommand_{
 			REL::Offset(0x0458AF70)
 		};
@@ -19636,8 +19636,8 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_b65f623759e570984510463da5664adf__void_{ REL::Offset(
 			0x0451C808) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_b66631fff206def073e807e8d68c19e5__CreationRendererPrivate__MeshDB__CreateMorphParams_{ REL::Offset(
-				0x045BAEE8) };
+													BSService__Detail__TCmd__lambda_b66631fff206def073e807e8d68c19e5__CreationRendererPrivate__MeshDB__CreateMorphParams_{ REL::Offset(
+                0x045BAEE8) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_b668eb99a0ed1f83bd23d4502c579b39__void_{ REL::Offset(
 			0x04372980) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_b6cc79c7167f1fa6010a380d3f4091ef__void_{ REL::Offset(
@@ -19727,26 +19727,26 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_bdafcc60843e8758c51888b27c940662__void_{ REL::Offset(
 			0x045C27D0) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_bdc51ae50ce15415e89fcdbe49ab6ae8__SaveLoad__CleanupUnloadedPlanetContentCommand_{ REL::Offset(
-				0x0447BE08) };
+													BSService__Detail__TCmd__lambda_bdc51ae50ce15415e89fcdbe49ab6ae8__SaveLoad__CleanupUnloadedPlanetContentCommand_{ REL::Offset(
+                0x0447BE08) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_bdf81de24cc28580fcc88dbb99a286e4__void_{ REL::Offset(
 			0x045A6B88) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_be27a865861e1645f00d75b8a68bf05e__void_{ REL::Offset(
 			0x04493678) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_be59b9bdfd8637f274c91721b19f7ed6__LOD__Commands__LoadedSceneBlockAttached_{ REL::Offset(0x044517D0) };
+													BSService__Detail__TCmd__lambda_be59b9bdfd8637f274c91721b19f7ed6__LOD__Commands__LoadedSceneBlockAttached_{ REL::Offset(0x044517D0) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_be7fb695c3f0c7b55ac98c8fb8e29b54__void_{ REL::Offset(
 			0x044B7828) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_bebe6c4bbb10bdb5b78479172198e121__void_{ REL::Offset(
 			0x043A5970) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_bec62f5156ea2be3258b018f72b7a600__WorkshopEngine__StartQuickMenuEvent_{ REL::Offset(0x0455AE98) };
+													BSService__Detail__TCmd__lambda_bec62f5156ea2be3258b018f72b7a600__WorkshopEngine__StartQuickMenuEvent_{ REL::Offset(0x0455AE98) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_bee67aa52b8eabb482119a6766c60bc4__void_{ REL::Offset(
 			0x045C0BB8) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_bee9d915ef6c86a781c2a84d5ecef121__void_{ REL::Offset(
 			0x044BE2E8) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_bf4a36381f34ed442b827a3fe387d3fa__LOD__Commands__LodUpdateComplete_{ REL::Offset(0x044517F0) };
+													BSService__Detail__TCmd__lambda_bf4a36381f34ed442b827a3fe387d3fa__LOD__Commands__LodUpdateComplete_{ REL::Offset(0x044517F0) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_bff89ceeae715c2d964c15390070948d__void_{ REL::Offset(
 			0x044966C0) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_c0061012e4d234db08ce3bedac6dbf4f__void_{ REL::Offset(
@@ -19771,8 +19771,8 @@ namespace RE
 			0x044B0EE8) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_c1f37709b7017df3ee6db3c31db140cf__{ REL::Offset(0x04383A88) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_c240919743db5cab929ac732c14e6786__DynamicNavmeshService__ApplyActivePrecutsToNavMeshEvent_{ REL::Offset(
-				0x0434E120) };
+													BSService__Detail__TCmd__lambda_c240919743db5cab929ac732c14e6786__DynamicNavmeshService__ApplyActivePrecutsToNavMeshEvent_{ REL::Offset(
+                0x0434E120) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_c26963d21ad5b012e833afce82518c72__void_{ REL::Offset(
 			0x043A59D0) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_c2839438d33be7997e40baf363da0664__{ REL::Offset(0x043840B8) };
@@ -19793,8 +19793,8 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_c37ee35be50cdef1d5cad0af1633bac8__void_{ REL::Offset(
 			0x044B2960) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_c39c109d508a9f3cdd7a9dd7ae1c7ee7__CreationRendererPrivate__SetStarmapGravityWavesColor_{ REL::Offset(
-				0x045C0350) };
+													BSService__Detail__TCmd__lambda_c39c109d508a9f3cdd7a9dd7ae1c7ee7__CreationRendererPrivate__SetStarmapGravityWavesColor_{ REL::Offset(
+                0x045C0350) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_c3f19ea681601bb83e0611e6f818954e__void_{ REL::Offset(
 			0x04373BC0) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_c4110d2d2642a834d04469cd62433055__{ REL::Offset(0x043CCEE0) };
@@ -19817,13 +19817,13 @@ namespace RE
 		};
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_c5c551e743b8357a85a6f78be052e8af__{ REL::Offset(0x04388508) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_c5ddd03289170821c86a14854d4db691__BGSAudio__WwiseService__ReadCmd_{ REL::Offset(0x04457828) };
+													BSService__Detail__TCmd__lambda_c5ddd03289170821c86a14854d4db691__BGSAudio__WwiseService__ReadCmd_{ REL::Offset(0x04457828) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_c5dedfaaad72253bba4c751c8a44d08b__void_{ REL::Offset(
 			0x0449EE50) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_c5f2fee095cbaef39506c8020c76f976__void_{ REL::Offset(
 			0x044D4518) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_c633a7d21f64fe9fb5c011306be8bf20__Particles__PSM__Commands__InitializeBinding_{ REL::Offset(0x045978D8) };
+													BSService__Detail__TCmd__lambda_c633a7d21f64fe9fb5c011306be8bf20__Particles__PSM__Commands__InitializeBinding_{ REL::Offset(0x045978D8) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_c6360bf782547b1c763642be98ed6ca6__{ REL::Offset(0x04385140) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_c6376500b55e1668d37ffe9b1bcaf535__{ REL::Offset(0x04763E90) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_c637fe0e5c6d32e8133674ea28753abd__{ REL::Offset(0x04386760) };
@@ -19845,8 +19845,8 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_c78492138796f2298b95b7becf82864b__void_{ REL::Offset(
 			0x045B9B88) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_c792a704049764f07f8d192380f1f235__CreationRendererPrivate__SetStarmapOrbitsInstancesData_{ REL::Offset(
-				0x045C0230) };
+													BSService__Detail__TCmd__lambda_c792a704049764f07f8d192380f1f235__CreationRendererPrivate__SetStarmapOrbitsInstancesData_{ REL::Offset(
+                0x045C0230) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_c7e9a1d4d74e13baaf4a71ddc30e8517__void_{ REL::Offset(
 			0x0449B2A8) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_c84c0a6afb00c46258e6b9fc7a636194__void_{ REL::Offset(
@@ -19878,7 +19878,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_c9ef09b048d02350488537fbf507d682__void_{ REL::Offset(
 			0x044D4638) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_c9fc156db8d50b7682fb91b4fe13c978__BSResource__Server__Commands__Cancel_{ REL::Offset(0x0439E728) };
+													BSService__Detail__TCmd__lambda_c9fc156db8d50b7682fb91b4fe13c978__BSResource__Server__Commands__Cancel_{ REL::Offset(0x0439E728) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_ca411397cc7ad1ae896bda064050705e_const_void_{ REL::Offset(
 			0x04763B20) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_ca4b762b3a71115ff84073aaadfa7668__void_{ REL::Offset(
@@ -19896,7 +19896,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_cac58ebf2259db6843c7a8a3dd85759d__void_{ REL::Offset(
 			0x0459BA08) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_cac737c3cf0c9b4e5aae623c943fc3ab__WorkshopEngine__ResetColorsToDefaultEvent_{ REL::Offset(0x0455B120) };
+													BSService__Detail__TCmd__lambda_cac737c3cf0c9b4e5aae623c943fc3ab__WorkshopEngine__ResetColorsToDefaultEvent_{ REL::Offset(0x0455B120) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_cae2ed5fbe75c6326337d8ab2697e353__{ REL::Offset(0x04765FE0) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_cae3e8a5a345dc78ec345a8e1dba70e6__void_{ REL::Offset(
 			0x045C5D30) };
@@ -19926,8 +19926,8 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_cdcda53dd8c13a9a5c98779f2a822de8__void_{ REL::Offset(
 			0x0447A4C0) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_cdce5633408e5b3efb373bef6276ac5f__BSResource__Server__Commands__CloseDependencies_{ REL::Offset(
-				0x04352148) };
+													BSService__Detail__TCmd__lambda_cdce5633408e5b3efb373bef6276ac5f__BSResource__Server__Commands__CloseDependencies_{ REL::Offset(
+                0x04352148) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_cdfec2d8732b7b7b232fd04b0ca946ed__void_{ REL::Offset(
 			0x044D52D8) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_ce4441f275a713458ca3cc4ce8eb3528__void_{ REL::Offset(
@@ -19960,13 +19960,13 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_d00bd4b3cc28a7b52d6c36389f06f2ec__void_{ REL::Offset(
 			0x044C2360) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_d011308b716f95c1ce4fd11edf7fe68e__DynamicNavmeshService__DynamicNavMeshTaskShiftWorldEvent_{ REL::Offset(
-				0x0434E220) };
+													BSService__Detail__TCmd__lambda_d011308b716f95c1ce4fd11edf7fe68e__DynamicNavmeshService__DynamicNavMeshTaskShiftWorldEvent_{ REL::Offset(
+                0x0434E220) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_d05428a0d6eac48bef7969a90a6daebb__void_{ REL::Offset(
 			0x0447FFF0) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_d081f8ec0a28f9f42a07c61629779e33__CreationRendererPrivate__MeshDB__CreateParams_{ REL::Offset(
-				0x045BACC0) };
+													BSService__Detail__TCmd__lambda_d081f8ec0a28f9f42a07c61629779e33__CreationRendererPrivate__MeshDB__CreateParams_{ REL::Offset(
+                0x045BACC0) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_d0a00a1c40fd1c4b827aeb168ec697f0__void_{ REL::Offset(
 			0x044AD7A8) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_d0b38a2b64ea6a83dd8742bc4c09c50e__void_{ REL::Offset(
@@ -19979,8 +19979,8 @@ namespace RE
 			0x044A59E0) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_d1b15e7906fefbf27288e3cf43585812__{ REL::Offset(0x04386820) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_d1e07d92f394208ecac492d6b1b9afa9__CreationRendererPrivate__SetStarmapOrbitsInit_{ REL::Offset(
-				0x045C01D0) };
+													BSService__Detail__TCmd__lambda_d1e07d92f394208ecac492d6b1b9afa9__CreationRendererPrivate__SetStarmapOrbitsInit_{ REL::Offset(
+                0x045C01D0) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_d2034ddf379e73991db9287c19a693e9__void_{ REL::Offset(
 			0x044A0970) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_d2045a6931dbb3c56b0337fe777f8761__void_{ REL::Offset(
@@ -20015,7 +20015,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_d3d8665d970dabc226925b791ad8aa01__void_{ REL::Offset(
 			0x0455EBD8) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_d3e6bebab3e1972beb2690a7aaf4458c__LOD__Details__PropagationPayload_{ REL::Offset(0x0434A220) };
+													BSService__Detail__TCmd__lambda_d3e6bebab3e1972beb2690a7aaf4458c__LOD__Details__PropagationPayload_{ REL::Offset(0x0434A220) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_d442cbed50f9f9fa41b59e5ec65beb76__BSComponentDB2__ObjectModified_{
 			REL::Offset(0x04589958)
 		};
@@ -20024,13 +20024,13 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_d4873959f99d67a8e3041d8a6e25b31f__void_{ REL::Offset(
 			0x044D4578) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_d4a37142b849270c983c966335144925__CreationRenderer__Messaging__Game__EndFrameParams_{ REL::Offset(
-				0x045B9E68) };
+													BSService__Detail__TCmd__lambda_d4a37142b849270c983c966335144925__CreationRenderer__Messaging__Game__EndFrameParams_{ REL::Offset(
+                0x045B9E68) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_d4a90d8b490da9ad87050b9e47e9ce33__void_{ REL::Offset(
 			0x045B3190) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_d4d02e7ac968e24b091f5fc47aa2b87f__ActorValueBindingUpdaterService__GameResetMsg_{ REL::Offset(
-				0x0434D630) };
+													BSService__Detail__TCmd__lambda_d4d02e7ac968e24b091f5fc47aa2b87f__ActorValueBindingUpdaterService__GameResetMsg_{ REL::Offset(
+                0x0434D630) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_d4dff2479a934257ec977ef0a502ecfa__void_{ REL::Offset(
 			0x04496880) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_d50aec74688941c74791c628312cc2c5__void_{ REL::Offset(
@@ -20064,7 +20064,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			BSService__Detail__TCmd__lambda_d785c61586a9e47900d392c3764c7336__BSResource__Server__Commands__AddDependency_{ REL::Offset(0x043516C0) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_d79201925a6445b2cdf3c329eae63194__SaveLoad__CleanupStaleLocationsCommand_{ REL::Offset(0x0447BDC8) };
+													BSService__Detail__TCmd__lambda_d79201925a6445b2cdf3c329eae63194__SaveLoad__CleanupStaleLocationsCommand_{ REL::Offset(0x0447BDC8) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_d7d7379d4565e7ae53a360359e4fff64__void_{ REL::Offset(
 			0x044AEDE0) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_d813ef195076a0d5c5f50cad61ab9551__void_{ REL::Offset(
@@ -20159,7 +20159,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_e0229f3ba421f7d899b6d6be917f456e__void_{ REL::Offset(
 			0x044930C8) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_e037e2941cf8f37594b926f521829f70__WorkshopEngine__RemoveWorkshopItemsEvent_{ REL::Offset(0x0455BA60) };
+													BSService__Detail__TCmd__lambda_e037e2941cf8f37594b926f521829f70__WorkshopEngine__RemoveWorkshopItemsEvent_{ REL::Offset(0x0455BA60) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_e07db663bebd0c420226fcf81b596ebb__void_{ REL::Offset(
 			0x0447FD20) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_e097d6925ad27f35efb82cf07f91fbcf__void_{ REL::Offset(
@@ -20189,8 +20189,8 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_e2e444e47a6b53da789f1849d781c2f3__void_{ REL::Offset(
 			0x0447A520) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_e2ecf1080a70eaf1e1d3e18b753d218f__Particles__PSM__Commands__WaitForResourceLoad_{ REL::Offset(
-				0x04597878) };
+													BSService__Detail__TCmd__lambda_e2ecf1080a70eaf1e1d3e18b753d218f__Particles__PSM__Commands__WaitForResourceLoad_{ REL::Offset(
+                0x04597878) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_e2ed67abc560774352baadf77b4dc47b__void_{ REL::Offset(
 			0x04484C90) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_e320a347142e2824e710b1d012a7742f__void_{ REL::Offset(
@@ -20201,8 +20201,8 @@ namespace RE
 			BSService__Detail__TCmd__lambda_e364147ef3a68f7708e1581fe9051a6f__ActorValueBindingUpdaterService__RefrAVBinding_{ REL::Offset(
 				0x0434D610) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_e382dca790b55ab7ad056ef4323371a3__DynamicNavmeshService__RemoveModificationForCellEvent_{ REL::Offset(
-				0x0434E160) };
+													BSService__Detail__TCmd__lambda_e382dca790b55ab7ad056ef4323371a3__DynamicNavmeshService__RemoveModificationForCellEvent_{ REL::Offset(
+                0x0434E160) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_e38b2559e563263373d108411f4cc654__void_{ REL::Offset(
 			0x045C0F68) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_e3912bd421c8772c43be3b3fdaf94e7a__void_{ REL::Offset(
@@ -20218,10 +20218,10 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_e48dae92fd8f5113a8a0236e0f17adb8__void_{ REL::Offset(
 			0x044D4EB8) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_e4f611c0e624224dcf73c033589c2dc6__BSResource__Server__Commands__AddDependency_{ REL::Offset(0x0447CA78) };
+													BSService__Detail__TCmd__lambda_e4f611c0e624224dcf73c033589c2dc6__BSResource__Server__Commands__AddDependency_{ REL::Offset(0x0447CA78) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_e4fa35474ca2e8f09f7a47da93847b6d__{ REL::Offset(0x04384AE0) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_e510b2dbbc8a9f394dddf7d1670e8d32__BSResource__Server__Commands__AddDependency_{ REL::Offset(0x04580C70) };
+													BSService__Detail__TCmd__lambda_e510b2dbbc8a9f394dddf7d1670e8d32__BSResource__Server__Commands__AddDependency_{ REL::Offset(0x04580C70) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_e516e47a18aa65a63ea044f225347949__void_{ REL::Offset(
 			0x04496270) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_e51a1d0b6e4ebdb1b49d4450ace2b127__void_{ REL::Offset(
@@ -20259,7 +20259,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_e7b4fb1f060f619dbdf0cbeb9094ddb2__void_{ REL::Offset(
 			0x0447D3B0) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_e7bc9474c296428dc18d67bfc3db30b3__Particles__PPM__Commands__AddRequest_{ REL::Offset(0x045979D8) };
+													BSService__Detail__TCmd__lambda_e7bc9474c296428dc18d67bfc3db30b3__Particles__PPM__Commands__AddRequest_{ REL::Offset(0x045979D8) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_e7f26129d4cb2d76425980de73522054__void_{ REL::Offset(
 			0x044D9A78) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_e812238ee68a34428d7ede37d3ec8ded__void_{ REL::Offset(
@@ -20269,8 +20269,8 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_e88649edfd66bfacd2b0b4b1900621ff__void_{ REL::Offset(
 			0x044933E8) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_e88901c12d97bc422da68c1d1d4dfc63__BSResource__Server__Commands__NotifyComplete_{ REL::Offset(
-				0x04352168) };
+													BSService__Detail__TCmd__lambda_e88901c12d97bc422da68c1d1d4dfc63__BSResource__Server__Commands__NotifyComplete_{ REL::Offset(
+                0x04352168) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_e8b0019bf12e8a134f067f6ca6d229a6__void_{ REL::Offset(
 			0x044B0DE8) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_e8b272e924c9d8a5cb8f3ee7df86d940__void_{ REL::Offset(
@@ -20293,8 +20293,8 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_ea956dc4c72d73db6530678bffa4498b__void_{ REL::Offset(
 			0x0449EE30) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_ea95fffe802c1d940c5e1a2a80731690__BSResource__Server__Commands__NotifyComplete_{ REL::Offset(
-				0x04582478) };
+													BSService__Detail__TCmd__lambda_ea95fffe802c1d940c5e1a2a80731690__BSResource__Server__Commands__NotifyComplete_{ REL::Offset(
+                0x04582478) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_ea977bd82f06fcd039e9eb4eda078dd6__void_{ REL::Offset(
 			0x044BE180) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_eae6e7388d362da9c61e98d4b9f951eb__void_{ REL::Offset(
@@ -20310,16 +20310,16 @@ namespace RE
 			0x045C27B0) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_ec43fba6a3e69126f357e79f30a211ec__{ REL::Offset(0x04386780) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_ec4fb9da4d48fcbefaaf8d8fd5dc9454__WorkshopEngine__StartWorkshopEvent_{ REL::Offset(0x0455B0E0) };
+													BSService__Detail__TCmd__lambda_ec4fb9da4d48fcbefaaf8d8fd5dc9454__WorkshopEngine__StartWorkshopEvent_{ REL::Offset(0x0455B0E0) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_eca62b14bf8309ab9a4fdb97810b2726__void_{ REL::Offset(
 			0x044C1340) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_ecbc55471c9a39a14bd2ac92168219d4__BSResource__Server__Commands__AddDependency_{ REL::Offset(0x0439E6E8) };
+													BSService__Detail__TCmd__lambda_ecbc55471c9a39a14bd2ac92168219d4__BSResource__Server__Commands__AddDependency_{ REL::Offset(0x0439E6E8) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_ecc37c7e6356898fd9d16f2b69f1b7c3__NiPointer_BSCloneReserver__{
 			REL::Offset(0x044D13F8)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_ecd1df969ec29674ff5e667ad510e114__BSResource__Server__Commands__Cancel_{ REL::Offset(0x04351EB0) };
+													BSService__Detail__TCmd__lambda_ecd1df969ec29674ff5e667ad510e114__BSResource__Server__Commands__Cancel_{ REL::Offset(0x04351EB0) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_ecdd739ac15984ea616b0d7bf8f77e4d__void_{ REL::Offset(
 			0x04490580) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_ed078e0a8f89f750329a8b3c2c9c961b__void_{ REL::Offset(
@@ -20333,8 +20333,8 @@ namespace RE
 			BSService__Detail__TCmd__lambda_ed7efa32dc10fbbfe7a4bf4d63b61928__BSStreaming__ErrorCode_BSStreaming__DataHandle_{ REL::Offset(
 				0x045A6158) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_ed8f404cc151b68abb2ad2245de66ac4__EffectSequence__StartAutoplaySequencesCommand_{ REL::Offset(
-				0x04350150) };
+													BSService__Detail__TCmd__lambda_ed8f404cc151b68abb2ad2245de66ac4__EffectSequence__StartAutoplaySequencesCommand_{ REL::Offset(
+                0x04350150) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_edb0a476ae3ed39eab67b116bb138171__void_{ REL::Offset(
 			0x04479DB0) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_edbe5b63552b8c67c63e6d42e3f31578__void_{ REL::Offset(
@@ -20347,7 +20347,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_ee8c6c2a4e88c03c97d86b78f287bfff__void_{ REL::Offset(
 			0x044D5378) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_eeb1177804b0038b22cbc999036ffd1b__BSResource__Server__Commands__Cancel_{ REL::Offset(0x0439E708) };
+													BSService__Detail__TCmd__lambda_eeb1177804b0038b22cbc999036ffd1b__BSResource__Server__Commands__Cancel_{ REL::Offset(0x0439E708) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_eedd972189992f09f48591b9fbca4dbb__void_{ REL::Offset(
 			0x0435E370) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_ef9727750d4202a97b5eb3adae503d6f__void_{ REL::Offset(
@@ -20370,7 +20370,7 @@ namespace RE
 			BSService__Detail__TCmd__lambda_f06dd1583b7750cf4d95a53ab9690089__BSStreaming__ErrorCode_BSStreaming__DataHandle_{ REL::Offset(
 				0x04582498) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_f081581138039467807084b06c9095ec___lambda_017d7a24bc0982ce37708250114d75e5__{ REL::Offset(0x044D32C0) };
+													BSService__Detail__TCmd__lambda_f081581138039467807084b06c9095ec___lambda_017d7a24bc0982ce37708250114d75e5__{ REL::Offset(0x044D32C0) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_f09151a5842e5b743648a54e1a902f95__unsigned__int64_{ REL::Offset(
 			0x0434D670) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_f0bd41ca64c9abce9df546ddaea923a5__void_{ REL::Offset(
@@ -20419,7 +20419,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_f3482a1422c149f70a7e798fe06cca96__void_{ REL::Offset(
 			0x044B6248) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_f37535c6467809b5275e2389552e0afe__BSResource__Server__Commands__Cancel_{ REL::Offset(0x0434D7E0) };
+													BSService__Detail__TCmd__lambda_f37535c6467809b5275e2389552e0afe__BSResource__Server__Commands__Cancel_{ REL::Offset(0x0434D7E0) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_f3b3c5bd2369f409c4e2ec4f5a91075d__void_{ REL::Offset(
 			0x0449DC18) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_f3ed1e5878e9627378e6a75ecdd0b812__void_{ REL::Offset(
@@ -20453,7 +20453,7 @@ namespace RE
 			0x044A52E8) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_f63250b05c663ef37a43a16d218f13a4__{ REL::Offset(0x04386420) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_f6337139ddff45faa741582c4fae3b2e__LOD__Commands__LoadedSceneBlockAttached_{ REL::Offset(0x0437EE88) };
+													BSService__Detail__TCmd__lambda_f6337139ddff45faa741582c4fae3b2e__LOD__Commands__LoadedSceneBlockAttached_{ REL::Offset(0x0437EE88) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_f650daaa6ad50b935d60bc9e56904497__void_{ REL::Offset(
 			0x0434A098) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_f65662b6bf3ba72c9baa403b81560088__void_{ REL::Offset(
@@ -20476,20 +20476,20 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_f6e4e8de94149f76546cbb8f369108c5__void_{ REL::Offset(
 			0x0447FE90) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_f6fc3afd2e5a487a8c78ccd15ad62e96__CreationRendererPrivate__SetStarmapOrbitsDrawData_{ REL::Offset(
-				0x045C0250) };
+													BSService__Detail__TCmd__lambda_f6fc3afd2e5a487a8c78ccd15ad62e96__CreationRendererPrivate__SetStarmapOrbitsDrawData_{ REL::Offset(
+                0x045C0250) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_f7125086ed2576178d640742168bb6eb__TESObjectCELL_{ REL::Offset(
 			0x04369E88) };
 		inline constexpr std::array<REL::Offset, 1>
 			BSService__Detail__TCmd__lambda_f75b00c41e9d4979a77ad3a5c1488ee0__SaveLoad__CleanupStaleLocationsCommand_{ REL::Offset(0x0447BDA8) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_f7aaf0ff2349c7b105c08cc7f5ebedb0__BSResource__Server__Commands__Reschedule_{ REL::Offset(0x0440EA78) };
+													BSService__Detail__TCmd__lambda_f7aaf0ff2349c7b105c08cc7f5ebedb0__BSResource__Server__Commands__Reschedule_{ REL::Offset(0x0440EA78) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_f7d76da8fd5a1d8e1a8b27064a679ad3__void_{ REL::Offset(
 			0x044A9E50) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_f831e34ee529acf18df25f870525ad90__void_{ REL::Offset(
 			0x044962D0) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_f83a5e8329320964c66c1e1fbc00113d__BSResource__Server__Commands__AddDependency_{ REL::Offset(0x0440EA98) };
+													BSService__Detail__TCmd__lambda_f83a5e8329320964c66c1e1fbc00113d__BSResource__Server__Commands__AddDependency_{ REL::Offset(0x0440EA98) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_f84a8ebc832877eb6636e3104fc4546c__void_{ REL::Offset(
 			0x044D9628) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_f86a61c425e65b37338ed338920cccba__{ REL::Offset(0x0437E340) };
@@ -20534,8 +20534,8 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_fa21aff32431097a600043ad62aded71__void_{ REL::Offset(
 			0x044B4260) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_fa5c9fb0480b38adfe5fc7295ff79dfd__BSComponentDB__ViewHandleconst_BSComponentDB2__ID_{ REL::Offset(
-				0x0439EAE0) };
+													BSService__Detail__TCmd__lambda_fa5c9fb0480b38adfe5fc7295ff79dfd__BSComponentDB__ViewHandleconst_BSComponentDB2__ID_{ REL::Offset(
+                0x0439EAE0) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_fa7e5638445ad26a2f6edcf9c92924a0__void_{ REL::Offset(
 			0x0447FDB8) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_fae124040a7344b0c697a295313fb6c3__void_{ REL::Offset(
@@ -20543,7 +20543,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_fae8edd8825582fa8c68a2d244dffc82__void_{ REL::Offset(
 			0x044D4D18) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_faf0928f9454f6a4fd04936523bdeb6b__CreationRendererPrivate__SetStarParams_{ REL::Offset(0x045BA438) };
+													BSService__Detail__TCmd__lambda_faf0928f9454f6a4fd04936523bdeb6b__CreationRendererPrivate__SetStarParams_{ REL::Offset(0x045BA438) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_fb3a479eaf54efe04bee35dc8c07c7fe__void_{ REL::Offset(
 			0x044D4938) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_fb6de06a4fb3358148bb5827b64829c0__void_{ REL::Offset(
@@ -20561,8 +20561,8 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_fc4d7464c8f2a9af0e6fa063db84a885__void_{ REL::Offset(
 			0x0448D3F8) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_fc5a7a3d608fbcaaa714726ba2a7771d__BSService__Detail__PointerWrapper_BGSLODManager__{ REL::Offset(
-				0x044519D8) };
+													BSService__Detail__TCmd__lambda_fc5a7a3d608fbcaaa714726ba2a7771d__BSService__Detail__PointerWrapper_BGSLODManager__{ REL::Offset(
+                0x044519D8) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_fca09c0543155e7882b2f46aec0ed67b__void_{ REL::Offset(
 			0x0447A4E0) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_fcaf73e3d8809f1f873fde6825e51f1c__void_{ REL::Offset(
@@ -20572,17 +20572,17 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_fcd73b8f485f78e1c7f0eb96364c8359__void_{ REL::Offset(
 			0x0447B420) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_fd40cfd3b4dc524c6edc92a743cb1bcd__BSStreaming__ErrorCode_BSStreaming__DataHandle_{ REL::Offset(
-				0x045B2A70) };
+													BSService__Detail__TCmd__lambda_fd40cfd3b4dc524c6edc92a743cb1bcd__BSStreaming__ErrorCode_BSStreaming__DataHandle_{ REL::Offset(
+                0x045B2A70) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_fd476c18651b400f5eacbe773bf0df4a__void_{ REL::Offset(
 			0x0440EB98) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_fd5ed2dbfdf3c051d0ee2d98b985beb3__RefrAudioUtils____LoopService__RevertMsg_{ REL::Offset(0x044762B8) };
+													BSService__Detail__TCmd__lambda_fd5ed2dbfdf3c051d0ee2d98b985beb3__RefrAudioUtils____LoopService__RevertMsg_{ REL::Offset(0x044762B8) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_fd798d3a2c10c16ddef287e5325802d3__void_{ REL::Offset(
 			0x0449CB98) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_fd8d082ccc13f06a355f03ff8e4e4593__AutomatedTestUtility__CommandRunner__ConsoleCommand_{ REL::Offset(
-				0x044CF958) };
+													BSService__Detail__TCmd__lambda_fd8d082ccc13f06a355f03ff8e4e4593__AutomatedTestUtility__CommandRunner__ConsoleCommand_{ REL::Offset(
+                0x044CF958) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_fd9116da4e8e9a38d925d4135fe0f597__void_{ REL::Offset(
 			0x044D6010) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_fda6fe9f4ce64c17265fd8a572949e57__void_{ REL::Offset(
@@ -20620,8 +20620,8 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_ffd45a9c67fe3bdbcdceaaa38b6b5eae__void_{ REL::Offset(
 			0x0457AB78) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TCmd__lambda_ffdd182d0bd312e73072d3506118f589__BSStreaming__ErrorCode_BSStreaming__DataHandle_{ REL::Offset(
-				0x043A4D70) };
+													BSService__Detail__TCmd__lambda_ffdd182d0bd312e73072d3506118f589__BSStreaming__ErrorCode_BSStreaming__DataHandle_{ REL::Offset(
+                0x043A4D70) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_fff3bd82c3e582c7056e4ffdb99b463f__void_{ REL::Offset(
 			0x044D4878) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TCmd__lambda_fffa2ab94a55b6ba9747750f085ff9c7__void_{ REL::Offset(
@@ -20674,7 +20674,7 @@ namespace RE
 			0x04582408) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TSubscriberTable_BSService__Commands__NewFrame_{ REL::Offset(0x04585A78) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TSubscriberTable_CreationRendererPrivate__MeshLODCommands__DeferredSlotDestruction_{ REL::Offset(0x045BDEC8) };
+													BSService__Detail__TSubscriberTable_CreationRendererPrivate__MeshLODCommands__DeferredSlotDestruction_{ REL::Offset(0x045BDEC8) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TSubscriberTable_CreationRendererPrivate__MeshLODCommands__ForceDirtyHandle_{
 			REL::Offset(0x045BDD58)
 		};
@@ -20690,12 +20690,12 @@ namespace RE
 			REL::Offset(0x045B9E88)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TSubscriberTable_CreationRenderer__Messaging__PipelineGenerationProgressedEvent_{ REL::Offset(0x045B9EA8) };
+													BSService__Detail__TSubscriberTable_CreationRenderer__Messaging__PipelineGenerationProgressedEvent_{ REL::Offset(0x045B9EA8) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TSubscriberTable_CreationRenderer__Messaging__PipelineGenerationStartedEvent_{
 			REL::Offset(0x045B9E48)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			BSService__Detail__TSubscriberTable_CreationRenderer__Messaging__ReflectionProbesRenderingProgressEvent_{ REL::Offset(0x045B9EF8) };
+													BSService__Detail__TSubscriberTable_CreationRenderer__Messaging__ReflectionProbesRenderingProgressEvent_{ REL::Offset(0x045B9EF8) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TSubscriberTable_CreationRenderer__ResetCullingMemoryRequest_{ REL::Offset(
 			0x045B9F18) };
 		inline constexpr std::array<REL::Offset, 1> BSService__Detail__TSubscriberTable_LOD__Commands__LoadedSceneBlockAttached_{ REL::Offset(
@@ -20717,8 +20717,8 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSSpatialGraphSearchT_BGSSpatialGridSearchPolicies__RandomPositionInsideArea_{ REL::Offset(
 			0x0444BDB0) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSSpatialGraphSearchT_BGSSpatialGridSearchPolicies__StandardSearchPolicy_BSPathingRequestPolicies__EscortRequest__{ REL::Offset(
-				0x04446EE8) };
+													BSSpatialGraphSearchT_BGSSpatialGridSearchPolicies__StandardSearchPolicy_BSPathingRequestPolicies__EscortRequest__{ REL::Offset(
+                0x04446EE8) };
 		inline constexpr std::array<REL::Offset, 1> BSSpatialGraphSearchT_CombatSearchMap3DSearchPolicy_{ REL::Offset(0x0445F728) };
 		inline constexpr std::array<REL::Offset, 1>
 			BSSpatialGraphSearchT_CombatSpatialGraphSearchPolicyAdapter_CombatPathingGoalPolicyAvoidThreat_CombatPathingSearchPolicyStandard__{
@@ -20837,7 +20837,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSTAnimationGraphDataChannel_Actor_float_ActorPitchDeltaChannel_{ REL::Offset(0x044D6250) };
 		inline constexpr std::array<REL::Offset, 1> BSTAnimationGraphDataChannel_Actor_float_ActorRollChannel_{ REL::Offset(0x044D6150) };
 		inline constexpr std::array<REL::Offset, 2> BSTAnimationGraphDataChannel_Actor_float_ActorSpeedSmoothedChannel_{ REL::Offset(0x044D61C8),
-			                                                                                                             REL::Offset(0x044D61F0) };
+			REL::Offset(0x044D61F0) };
 		inline constexpr std::array<REL::Offset, 1> BSTAnimationGraphDataChannel_Actor_float_ActorTimeDeltaChannel_{ REL::Offset(0x044D6318) };
 		inline constexpr std::array<REL::Offset, 2> BSTAnimationGraphDataChannel_Actor_float_ActorTurnDeltaSmoothedChannel_{
 			REL::Offset(0x044D61A0), REL::Offset(0x044D63B8)
@@ -20925,7 +20925,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSTArrayBase__IAllocatorFunctor{ REL::Offset(0x03EF1B10) };
 		inline constexpr std::array<REL::Offset, 1> BSTCaseInsensitiveStringMap_IDLE_ANIM_ROOT_{ REL::Offset(0x04369780) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSTCommonLLMessageQueue_BSTSmartPointer_GameScript__DelayFunctor_BSTSmartPointerIntrusiveRefCount__{ REL::Offset(0x0452DFA8) };
+													BSTCommonLLMessageQueue_BSTSmartPointer_GameScript__DelayFunctor_BSTSmartPointerIntrusiveRefCount__{ REL::Offset(0x0452DFA8) };
 		inline constexpr std::array<REL::Offset, 1> BSTCommonStaticMessageQueue_BGSDecalManager__PendingSkinnedDecal_128_{ REL::Offset(0x0436EAF0) };
 		inline constexpr std::array<REL::Offset, 1> BSTCommonStaticMessageQueue_BGSSaveLoadThread__AsyncRequest_8_{ REL::Offset(0x044CEBF0) };
 		inline constexpr std::array<REL::Offset, 1> BSTCommonStaticMessageQueue_BSFaceGenManager__PendingCustomizationData_128_{ REL::Offset(
@@ -21733,7 +21733,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> BSTMessageQueue_NiPointer_NiAVObject__{ REL::Offset(0x04599FF0) };
 		inline constexpr std::array<REL::Offset, 1> BSTNavmeshSearch_BSNavmeshSearchPolicies__EuclideanDistanceToGoal_{ REL::Offset(0x045A1AE8) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSTNavmeshSearch_BSNavmeshSearchPolicies__MaximumCostToGoal_BSNavmeshSearchPolicies__EuclideanDistanceToGoal__{ REL::Offset(0x04599DD8) };
+													BSTNavmeshSearch_BSNavmeshSearchPolicies__MaximumCostToGoal_BSNavmeshSearchPolicies__EuclideanDistanceToGoal__{ REL::Offset(0x04599DD8) };
 		inline constexpr std::array<REL::Offset, 1> BSTNavmeshSearch_BSNavmeshSearchPolicies__RandomPositionInsideArea_{ REL::Offset(0x0444B848) };
 		inline constexpr std::array<REL::Offset, 1> BSTNavmeshSearch_FleeNavMeshSearchingPolicy_{ REL::Offset(0x04450D70) };
 		inline constexpr std::array<REL::Offset, 2>
@@ -21787,14 +21787,14 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__Edge_1_BGSPackInUtils____ETFixedPackinGroup__{ REL::Offset(0x043B4098) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__Edge_1_BGSPlanetWorldSpace__ActiveWorldSpaceProperty__{ REL::Offset(
-				0x0434D338) };
+													BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__Edge_1_BGSPlanetWorldSpace__ActiveWorldSpaceProperty__{ REL::Offset(
+                0x0434D338) };
 		inline constexpr std::array<REL::Offset, 1> BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__Edge_1_BGSSpacePhysicsFormComponent__{
 			REL::Offset(0x04353E10)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__Edge_1_BGSWorldSpaceOverlay____ActivatedOverlayProperty__{ REL::Offset(
-				0x043CAE70) };
+													BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__Edge_1_BGSWorldSpaceOverlay____ActivatedOverlayProperty__{ REL::Offset(
+                0x043CAE70) };
 		inline constexpr std::array<REL::Offset, 1> BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__Edge_1_BSBind__ControllerComponent__{
 			REL::Offset(0x0457F010)
 		};
@@ -21806,7 +21806,7 @@ namespace RE
 				REL::Offset(0x0457BF98)
 			};
 		inline constexpr std::array<REL::Offset, 1>
-			BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__Edge_1_BSForces__ForceReceiverComponent__{ REL::Offset(0x0457F028) };
+													BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__Edge_1_BSForces__ForceReceiverComponent__{ REL::Offset(0x0457F028) };
 		inline constexpr std::array<REL::Offset, 1> BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__Edge_1_BSGalaxy__CTPerBiomeData__{
 			REL::Offset(0x0437DAC0)
 		};
@@ -21817,7 +21817,7 @@ namespace RE
 			REL::Offset(0x04572AC8)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__Edge_1_BSMaterial__AlphaSettingsComponent__{ REL::Offset(0x0458D148) };
+													BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__Edge_1_BSMaterial__AlphaSettingsComponent__{ REL::Offset(0x0458D148) };
 		inline constexpr std::array<REL::Offset, 1> BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__Edge_1_BSMaterial__BlendModeComponent__{
 			REL::Offset(0x0458DBC8)
 		};
@@ -21833,7 +21833,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__Edge_1_BSMaterial__ColorChannelTypeComponent__{ REL::Offset(0x0458D2F0) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__Edge_1_BSMaterial__ColorRemapSettingsComponent__{ REL::Offset(0x0458D4E8) };
+													BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__Edge_1_BSMaterial__ColorRemapSettingsComponent__{ REL::Offset(0x0458D4E8) };
 		inline constexpr std::array<REL::Offset, 1> BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__Edge_1_BSMaterial__Color__{ REL::Offset(
 			0x0458D1F8) };
 		inline constexpr std::array<REL::Offset, 1>
@@ -21847,7 +21847,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__Edge_1_BSMaterial__EmissiveSettingsComponent__{ REL::Offset(0x0458D698) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__Edge_1_BSMaterial__EyeSettingsComponent__{ REL::Offset(0x0458CDD8) };
+													BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__Edge_1_BSMaterial__EyeSettingsComponent__{ REL::Offset(0x0458CDD8) };
 		inline constexpr std::array<REL::Offset, 1> BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__Edge_1_BSMaterial__FlipbookComponent__{
 			REL::Offset(0x0458D620)
 		};
@@ -21856,7 +21856,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__Edge_1_BSMaterial__GlobalLayerDataComponent__{ REL::Offset(0x0458D3E0) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__Edge_1_BSMaterial__HairSettingsComponent__{ REL::Offset(0x0458D5C8) };
+													BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__Edge_1_BSMaterial__HairSettingsComponent__{ REL::Offset(0x0458D5C8) };
 		inline constexpr std::array<REL::Offset, 1> BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__Edge_1_BSMaterial__LODMaterialID__{
 			REL::Offset(0x04589D00)
 		};
@@ -21865,18 +21865,18 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__Edge_1_BSMaterial__LayeredEmissivityComponent__{ REL::Offset(0x0458D2C0) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__Edge_1_BSMaterial__LevelOfDetailSettings__{ REL::Offset(0x0458DAE0) };
+													BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__Edge_1_BSMaterial__LevelOfDetailSettings__{ REL::Offset(0x0458DAE0) };
 		inline constexpr std::array<REL::Offset, 1> BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__Edge_1_BSMaterial__MRTextureFile__{
 			REL::Offset(0x0458D118)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__Edge_1_BSMaterial__MaterialOverrideColorTypeComponent__{ REL::Offset(
-				0x0458DB38) };
+													BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__Edge_1_BSMaterial__MaterialOverrideColorTypeComponent__{ REL::Offset(
+                0x0458DB38) };
 		inline constexpr std::array<REL::Offset, 1> BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__Edge_1_BSMaterial__MaterialParamFloat__{
 			REL::Offset(0x0458CA00)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__Edge_1_BSMaterial__MouthSettingsComponent__{ REL::Offset(0x0458D938) };
+													BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__Edge_1_BSMaterial__MouthSettingsComponent__{ REL::Offset(0x0458D938) };
 		inline constexpr std::array<REL::Offset, 1> BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__Edge_1_BSMaterial__Offset__{
 			REL::Offset(0x0458CFF0)
 		};
@@ -21887,7 +21887,7 @@ namespace RE
 			REL::Offset(0x0458C990)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__Edge_1_BSMaterial__PhysicsMaterialType__{ REL::Offset(0x0458DBE0) };
+													BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__Edge_1_BSMaterial__PhysicsMaterialType__{ REL::Offset(0x0458DBE0) };
 		inline constexpr std::array<REL::Offset, 1> BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__Edge_1_BSMaterial__PorosityComponent__{
 			REL::Offset(0x0458D130)
 		};
@@ -21919,7 +21919,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__Edge_1_BSMaterial__TerrainTintSettingsComponent__{ REL::Offset(0x0458CA58) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__Edge_1_BSMaterial__TextureAddressModeComponent__{ REL::Offset(0x0458D8B8) };
+													BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__Edge_1_BSMaterial__TextureAddressModeComponent__{ REL::Offset(0x0458D8B8) };
 		inline constexpr std::array<REL::Offset, 1> BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__Edge_1_BSMaterial__TextureFile__{
 			REL::Offset(0x0458D7C0)
 		};
@@ -21931,7 +21931,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__Edge_1_BSMaterial__TextureSetKindComponent__{ REL::Offset(0x0458D6E0) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__Edge_1_BSMaterial__TranslucencySettingsComponent__{ REL::Offset(0x0458CC90) };
+													BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__Edge_1_BSMaterial__TranslucencySettingsComponent__{ REL::Offset(0x0458CC90) };
 		inline constexpr std::array<REL::Offset, 1> BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__Edge_1_BSMaterial__UVStreamParamBool__{
 			REL::Offset(0x0458CD00)
 		};
@@ -21942,7 +21942,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__Edge_1_BSMaterial__WaterGrimeSettingsComponent__{ REL::Offset(0x0458D598) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__Edge_1_BSMaterial__WaterSettingsComponent__{ REL::Offset(0x0458CE90) };
+													BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__Edge_1_BSMaterial__WaterSettingsComponent__{ REL::Offset(0x0458CE90) };
 		inline constexpr std::array<REL::Offset, 1> BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__Edge_1_LensFlareAttachmentComponent__{
 			REL::Offset(0x0434AA20)
 		};
@@ -21965,7 +21965,7 @@ namespace RE
 			REL::Offset(0x045913A0)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__Edge_1_Particles__SystemDefinitionComponent__{ REL::Offset(0x045913D0) };
+													BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__Edge_1_Particles__SystemDefinitionComponent__{ REL::Offset(0x045913D0) };
 		inline constexpr std::array<REL::Offset, 1> BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__Edge_1_ReflectionProbeCellComponent__{
 			REL::Offset(0x0434D590)
 		};
@@ -21978,7 +21978,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_0_BSComponentDB2__DataParentEdge__{ REL::Offset(0x0457F070) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_0_BSComponentDB2__OuterEdge__{ REL::Offset(0x0457F088) };
+													BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_0_BSComponentDB2__OuterEdge__{ REL::Offset(0x0457F088) };
 		inline constexpr std::array<REL::Offset, 1> BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_0_BSGalaxy__BodyChild__{
 			REL::Offset(0x04571B18)
 		};
@@ -21997,7 +21997,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_0___PendingDestructionEvent__{ REL::Offset(0x0455F8B8) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_0___PendingLandingEvent__{ REL::Offset(0x0455F888) };
+													BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_0___PendingLandingEvent__{ REL::Offset(0x0455F888) };
 		inline constexpr std::array<REL::Offset, 1> BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_0___PendingRampEvent__{
 			REL::Offset(0x0455F8A0)
 		};
@@ -22010,7 +22010,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_BGSAnimationGraphComponent__{ REL::Offset(0x04352640) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_BGSAttachParentArray__{ REL::Offset(0x043526D0) };
+													BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_BGSAttachParentArray__{ REL::Offset(0x043526D0) };
 		inline constexpr std::array<REL::Offset, 1> BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_BGSAttackDataForm__{
 			REL::Offset(0x0436C198)
 		};
@@ -22020,7 +22020,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_BGSContactShadowComponent__{ REL::Offset(0x0434A5B8) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_BGSCraftingResourceOwner__{ REL::Offset(0x04352838) };
+													BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_BGSCraftingResourceOwner__{ REL::Offset(0x04352838) };
 		inline constexpr std::array<REL::Offset, 1> BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_BGSCrowdComponent__{
 			REL::Offset(0x043529D0)
 		};
@@ -22036,7 +22036,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_BGSExternalComponentDataSource__{ REL::Offset(0x04352CE8) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_BGSExternalComponentHint__{ REL::Offset(0x04352CB8) };
+													BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_BGSExternalComponentHint__{ REL::Offset(0x04352CB8) };
 		inline constexpr std::array<REL::Offset, 1> BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_BGSForcedLocRefType__{
 			REL::Offset(0x04352DD8)
 		};
@@ -22069,7 +22069,7 @@ namespace RE
 			BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_BGSPackInUtils____ETFixedPackinGroup__{ REL::Offset(
 				0x043B40B0) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_BGSPapyrusScriptsComponent__{ REL::Offset(0x043539D8) };
+													BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_BGSPapyrusScriptsComponent__{ REL::Offset(0x043539D8) };
 		inline constexpr std::array<REL::Offset, 1> BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_BGSPathingData__{
 			REL::Offset(0x04353A10)
 		};
@@ -22083,7 +22083,7 @@ namespace RE
 			BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_BGSPlanetWorldSpace__CTPlanetWorldSpaceData__{ REL::Offset(
 				0x0434D308) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_BGSPrimitiveComponent__{ REL::Offset(0x04353B80) };
+													BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_BGSPrimitiveComponent__{ REL::Offset(0x04353B80) };
 		inline constexpr std::array<REL::Offset, 1> BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_BGSPropertySheet__{
 			REL::Offset(0x04353C30)
 		};
@@ -22091,7 +22091,7 @@ namespace RE
 			REL::Offset(0x04352CD0)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_BGSScannableFormComponent__{ REL::Offset(0x04353820) };
+													BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_BGSScannableFormComponent__{ REL::Offset(0x04353820) };
 		inline constexpr std::array<REL::Offset, 1> BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_BGSShipManagement__{
 			REL::Offset(0x043538C8)
 		};
@@ -22101,7 +22101,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_BGSSoundTagComponent__{ REL::Offset(0x04353D60) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_BGSSpacePhysicsFormComponent__{ REL::Offset(0x04353E28) };
+													BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_BGSSpacePhysicsFormComponent__{ REL::Offset(0x04353E28) };
 		inline constexpr std::array<REL::Offset, 1> BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_BGSSpaceshipAIActor__{
 			REL::Offset(0x04353EF8)
 		};
@@ -22110,7 +22110,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_BGSSpaceshipHullCode__{ REL::Offset(0x043540D0) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_BGSSpaceshipWeaponBinding__{ REL::Offset(0x04354188) };
+													BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_BGSSpaceshipWeaponBinding__{ REL::Offset(0x04354188) };
 		inline constexpr std::array<REL::Offset, 1> BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_BGSSpawnOnDestroy__{
 			REL::Offset(0x043541C0)
 		};
@@ -22213,7 +22213,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_BSGalaxy__PlayerKnowledge__{ REL::Offset(0x0437D820) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_BSGalaxy__SatelliteCSVData__{ REL::Offset(0x04355FF0) };
+													BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_BSGalaxy__SatelliteCSVData__{ REL::Offset(0x04355FF0) };
 		inline constexpr std::array<REL::Offset, 1> BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_BSGalaxy__StarData__{
 			REL::Offset(0x04354298)
 		};
@@ -22227,7 +22227,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_BSMaterial__BlendModeComponent__{ REL::Offset(0x0458D6B0) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_BSMaterial__BlendParamFloat__{ REL::Offset(0x0458D2D8) };
+													BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_BSMaterial__BlendParamFloat__{ REL::Offset(0x0458D2D8) };
 		inline constexpr std::array<REL::Offset, 1> BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_BSMaterial__Channel__{
 			REL::Offset(0x0458D500)
 		};
@@ -22237,8 +22237,8 @@ namespace RE
 			BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_BSMaterial__ColorChannelTypeComponent__{ REL::Offset(
 				0x0458D6C8) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_BSMaterial__ColorRemapSettingsComponent__{ REL::Offset(
-				0x0458A628) };
+													BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_BSMaterial__ColorRemapSettingsComponent__{ REL::Offset(
+                0x0458A628) };
 		inline constexpr std::array<REL::Offset, 1> BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_BSMaterial__Color__{
 			REL::Offset(0x0458CA88)
 		};
@@ -22288,8 +22288,8 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_BSMaterial__MaterialParamFloat__{ REL::Offset(0x0458D7D8) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_BSMaterial__MouthSettingsComponent__{ REL::Offset(
-				0x0458A448) };
+													BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_BSMaterial__MouthSettingsComponent__{ REL::Offset(
+                0x0458A448) };
 		inline constexpr std::array<REL::Offset, 1> BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_BSMaterial__Offset__{
 			REL::Offset(0x0458D9F0)
 		};
@@ -22300,7 +22300,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_BSMaterial__PhysicsMaterialType__{ REL::Offset(0x0458CEC0) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_BSMaterial__PorosityComponent__{ REL::Offset(0x0458A3E0) };
+													BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_BSMaterial__PorosityComponent__{ REL::Offset(0x0458A3E0) };
 		inline constexpr std::array<REL::Offset, 1> BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_BSMaterial__Scale__{
 			REL::Offset(0x0458C9A8)
 		};
@@ -22372,7 +22372,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_Blueprints__Blueprint__{ REL::Offset(0x04354BF0) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_CalculatedPackinData__{ REL::Offset(0x043CCD30) };
+													BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_CalculatedPackinData__{ REL::Offset(0x043CCD30) };
 		inline constexpr std::array<REL::Offset, 1> BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_ClonedRefNeedInit__{
 			REL::Offset(0x043CCD60)
 		};
@@ -22387,7 +22387,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_EffectSequenceComponent__{ REL::Offset(0x04350088) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_LensFlareAttachmentComponent__{ REL::Offset(0x0434AA08) };
+													BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_LensFlareAttachmentComponent__{ REL::Offset(0x0434AA08) };
 		inline constexpr std::array<REL::Offset, 1> BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_LightAnimComponent__{
 			REL::Offset(0x043709E0)
 		};
@@ -22404,7 +22404,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_ObjectAttachmentRuntimeComponent__{ REL::Offset(0x043550D0) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_OnFrameUpdateOperationComponent__{ REL::Offset(0x0434D720) };
+													BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_OnFrameUpdateOperationComponent__{ REL::Offset(0x0434D720) };
 		inline constexpr std::array<REL::Offset, 1> BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_ParticleComponent__{
 			REL::Offset(0x04371050)
 		};
@@ -22457,12 +22457,12 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_SpaceshipEffectsComponent__{ REL::Offset(0x04559910) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_SpaceshipEquipmentComponent__{ REL::Offset(0x04559B80) };
+													BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_SpaceshipEquipmentComponent__{ REL::Offset(0x04559B80) };
 		inline constexpr std::array<REL::Offset, 1> BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_SpaceshipLinkedCell__{
 			REL::Offset(0x0455F870)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_SpaceshipSoundsComponent__{ REL::Offset(0x0455A598) };
+													BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_SpaceshipSoundsComponent__{ REL::Offset(0x0455A598) };
 		inline constexpr std::array<REL::Offset, 1> BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_SpaceshipTemplate__{
 			REL::Offset(0x045590D0)
 		};
@@ -22473,7 +22473,7 @@ namespace RE
 				REL::Offset(0x043CE0F0)
 			};
 		inline constexpr std::array<REL::Offset, 1>
-			BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_StarField__CTReferencedCell__{ REL::Offset(0x0439E848) };
+													BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_StarField__CTReferencedCell__{ REL::Offset(0x0439E848) };
 		inline constexpr std::array<REL::Offset, 1> BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_StreamingLoadData__{
 			REL::Offset(0x043CCD48)
 		};
@@ -22496,7 +22496,7 @@ namespace RE
 			REL::Offset(0x0436D628)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_TESImageSpaceModifiableForm__{ REL::Offset(0x0436D6E0) };
+													BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_TESImageSpaceModifiableForm__{ REL::Offset(0x0436D6E0) };
 		inline constexpr std::array<REL::Offset, 1> BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1_TESMagicTargetForm__{
 			REL::Offset(0x0436E358)
 		};
@@ -22527,7 +22527,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1___BGSVolumeComponent__{ REL::Offset(0x04452568) };
 		inline constexpr std::array<REL::Offset, 1>
-			BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1___CTWorldspaceCloneInfo__{ REL::Offset(0x043D2F60) };
+													BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1___CTWorldspaceCloneInfo__{ REL::Offset(0x043D2F60) };
 		inline constexpr std::array<REL::Offset, 1> BSTVSOTree_detail__TObjectWrapper_BSComponentDB2__Detail__StoredComponent_1___CellProcGenSpawn__{
 			REL::Offset(0x043CCE88)
 		};
@@ -22550,14 +22550,14 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  BSTempEffectWeaponBlood{ REL::Offset(0x0444EA28) };
 		inline constexpr std::array<REL::Offset, 2>  BSTerrainEffect{ REL::Offset(0x0444ECB8), REL::Offset(0x0444EF10) };
 		inline constexpr std::array<REL::Offset, 3>  BSTextureStreamer__ArchiveLayer{ REL::Offset(0x045823C0), REL::Offset(0x045823D8),
-                                                                                     REL::Offset(0x045823F0) };
+            REL::Offset(0x045823F0) };
 		inline constexpr std::array<REL::Offset, 1>  BSTextureStreamer__LoadQueueService{ REL::Offset(0x045826A8) };
 		inline constexpr std::array<REL::Offset, 6>  BSTextureStreamer__Manager{ REL::Offset(0x045825D8), REL::Offset(0x045825F0),
-                                                                                REL::Offset(0x04582610), REL::Offset(0x04582628),
-                                                                                REL::Offset(0x04582640), REL::Offset(0x04582658) };
+            REL::Offset(0x04582610), REL::Offset(0x04582628),
+            REL::Offset(0x04582640), REL::Offset(0x04582658) };
 		inline constexpr std::array<REL::Offset, 6>  BSTextureStreamer__ManagerBase{ REL::Offset(0x045826C0), REL::Offset(0x045826D8),
-                                                                                    REL::Offset(0x045826F8), REL::Offset(0x04582710),
-                                                                                    REL::Offset(0x04582728), REL::Offset(0x04582740) };
+            REL::Offset(0x045826F8), REL::Offset(0x04582710),
+            REL::Offset(0x04582728), REL::Offset(0x04582740) };
 		inline constexpr std::array<REL::Offset, 2>  BSTextureStreamer__ManagerServiceFramework{ REL::Offset(0x04582588), REL::Offset(0x045825A0) };
 		inline constexpr std::array<REL::Offset, 1>  BSTextureStreamer__TextureArchiveIDConverter{ REL::Offset(0x03F2A8E0) };
 		inline constexpr std::array<REL::Offset, 1>  BSTextureStreamer__TextureLoad{ REL::Offset(0x04586688) };
@@ -22585,14 +22585,14 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  BackgroundProcessThread{ REL::Offset(0x04368888) };
 		inline constexpr std::array<REL::Offset, 1>  BanishEffect{ REL::Offset(0x044C70D8) };
 		inline constexpr std::array<REL::Offset, 11> BarrierProjectile{ REL::Offset(0x044E7808), REL::Offset(0x044E7870), REL::Offset(0x044E7890),
-			                                                            REL::Offset(0x044E78A0), REL::Offset(0x044E78B8), REL::Offset(0x044E83B0),
-			                                                            REL::Offset(0x044E83C8), REL::Offset(0x044E83E0), REL::Offset(0x044E83F8),
-			                                                            REL::Offset(0x044E8410), REL::Offset(0x044E84E0) };
+			REL::Offset(0x044E78A0), REL::Offset(0x044E78B8), REL::Offset(0x044E83B0),
+			REL::Offset(0x044E83C8), REL::Offset(0x044E83E0), REL::Offset(0x044E83F8),
+			REL::Offset(0x044E8410), REL::Offset(0x044E84E0) };
 		inline constexpr std::array<REL::Offset, 13> BarterMenu{ REL::Offset(0x044A56B0), REL::Offset(0x044A5790), REL::Offset(0x044A57E8),
-			                                                     REL::Offset(0x044A5800), REL::Offset(0x044A5828), REL::Offset(0x044A5840),
-			                                                     REL::Offset(0x044A5858), REL::Offset(0x044A5870), REL::Offset(0x044A5888),
-			                                                     REL::Offset(0x044A58A0), REL::Offset(0x044A58B8), REL::Offset(0x044A58D0),
-			                                                     REL::Offset(0x044A58E8) };
+			REL::Offset(0x044A5800), REL::Offset(0x044A5828), REL::Offset(0x044A5840),
+			REL::Offset(0x044A5858), REL::Offset(0x044A5870), REL::Offset(0x044A5888),
+			REL::Offset(0x044A58A0), REL::Offset(0x044A58B8), REL::Offset(0x044A58D0),
+			REL::Offset(0x044A58E8) };
 		inline constexpr std::array<REL::Offset, 1>  BarterMenu_BuyItem{ REL::Offset(0x044A5620) };
 		inline constexpr std::array<REL::Offset, 1>  BarterMenu_CloseMenu{ REL::Offset(0x044A5580) };
 		inline constexpr std::array<REL::Offset, 1>  BarterMenu_HideModel{ REL::Offset(0x044A55C0) };
@@ -22605,10 +22605,10 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  BaseFormComponent{ REL::Offset(0x03F2B690) };
 		inline constexpr std::array<REL::Offset, 1>  BaseLightAnimData{ REL::Offset(0x04354D10) };
 		inline constexpr std::array<REL::Offset, 13> BeamProjectile{ REL::Offset(0x044E85E0), REL::Offset(0x044E85F8), REL::Offset(0x044E8610),
-			                                                         REL::Offset(0x044E8628), REL::Offset(0x044E86F8), REL::Offset(0x044E8710),
-			                                                         REL::Offset(0x044E8778), REL::Offset(0x044E8798), REL::Offset(0x044E87A8),
-			                                                         REL::Offset(0x044E87B8), REL::Offset(0x044E87D0), REL::Offset(0x044E92C0),
-			                                                         REL::Offset(0x044E92D8) };
+			REL::Offset(0x044E8628), REL::Offset(0x044E86F8), REL::Offset(0x044E8710),
+			REL::Offset(0x044E8778), REL::Offset(0x044E8798), REL::Offset(0x044E87A8),
+			REL::Offset(0x044E87B8), REL::Offset(0x044E87D0), REL::Offset(0x044E92C0),
+			REL::Offset(0x044E92D8) };
 		inline constexpr std::array<REL::Offset, 1>  BedEnterHandler{ REL::Offset(0x044E2F60) };
 		inline constexpr std::array<REL::Offset, 1>  BedFurnitureExitHandler{ REL::Offset(0x044E3140) };
 		inline constexpr std::array<REL::Offset, 1>  BleedoutCameraState{ REL::Offset(0x0451A658) };
@@ -22629,11 +22629,11 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  BoneModifierExtra{ REL::Offset(0x0438FC78) };
 		inline constexpr std::array<REL::Offset, 1>  BoneModifierInstance{ REL::Offset(0x043901C8) };
 		inline constexpr std::array<REL::Offset, 4>  BookMenu{ REL::Offset(0x0451B2B0), REL::Offset(0x0451B390), REL::Offset(0x0451B3A8),
-                                                              REL::Offset(0x0451B400) };
+            REL::Offset(0x0451B400) };
 		inline constexpr std::array<REL::Offset, 1>  BookMenu__BookData{ REL::Offset(0x0451B510) };
 		inline constexpr std::array<REL::Offset, 1>  BookMenu__BookMenuUIDataEventShuttle{ REL::Offset(0x0451B528) };
 		inline constexpr std::array<REL::Offset, 5>  BoundaryMenu{ REL::Offset(0x04477FD8), REL::Offset(0x04477FF0), REL::Offset(0x04478008),
-                                                                  REL::Offset(0x04478060), REL::Offset(0x04478078) };
+            REL::Offset(0x04478060), REL::Offset(0x04478078) };
 		inline constexpr std::array<REL::Offset, 1>  BoundaryMenu_FastTravel{ REL::Offset(0x04478178) };
 		inline constexpr std::array<REL::Offset, 1>  BoundaryMenu_ShowMap{ REL::Offset(0x04478158) };
 		inline constexpr std::array<REL::Offset, 1>  BowZoomStartHandler{ REL::Offset(0x044E3380) };
@@ -22671,9 +22671,9 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  CellHandleManager{ REL::Offset(0x0434E320) };
 		inline constexpr std::array<REL::Offset, 1>  CellHfCollision{ REL::Offset(0x04357070) };
 		inline constexpr std::array<REL::Offset, 12> ChainExplosion{ REL::Offset(0x044D0498), REL::Offset(0x044D04B8), REL::Offset(0x044D0520),
-			                                                         REL::Offset(0x044D0530), REL::Offset(0x044D0548), REL::Offset(0x044D0F08),
-			                                                         REL::Offset(0x044D0F20), REL::Offset(0x044D0F38), REL::Offset(0x044D0F50),
-			                                                         REL::Offset(0x044D0F68), REL::Offset(0x044D0F80), REL::Offset(0x044D0F98) };
+			REL::Offset(0x044D0530), REL::Offset(0x044D0548), REL::Offset(0x044D0F08),
+			REL::Offset(0x044D0F20), REL::Offset(0x044D0F38), REL::Offset(0x044D0F50),
+			REL::Offset(0x044D0F68), REL::Offset(0x044D0F80), REL::Offset(0x044D0F98) };
 		inline constexpr std::array<REL::Offset, 1>  ChairEnterHandler{ REL::Offset(0x044E3170) };
 		inline constexpr std::array<REL::Offset, 1>  ChairFurnitureExitHandler{ REL::Offset(0x044E3158) };
 		inline constexpr std::array<REL::Offset, 1>  ChangeAnimArchetypeHandler{ REL::Offset(0x044E3998) };
@@ -22748,7 +22748,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> ClientBIMetrics__CombatHitMetricsI{ REL::Offset(0x044C8018) };
 		inline constexpr std::array<REL::Offset, 1> ClientBIMetrics__HeartBeat__EventSink{ REL::Offset(0x04348930) };
 		inline constexpr std::array<REL::Offset, 3> ClientBIMetrics__Performance__EventSink{ REL::Offset(0x043489B0), REL::Offset(0x043489C8),
-			                                                                                 REL::Offset(0x043489E0) };
+			REL::Offset(0x043489E0) };
 		inline constexpr std::array<REL::Offset, 1> ClientBIMetrics__ShipCombatHitMetricsBPSImp{ REL::Offset(0x044C7FF8) };
 		inline constexpr std::array<REL::Offset, 1> ClientBIPrebuiltHTTPSPostPrivate__CurlHTTPSPost{ REL::Offset(0x04348C78) };
 		inline constexpr std::array<REL::Offset, 1> CloakEffect{ REL::Offset(0x044C3050) };
@@ -23147,7 +23147,7 @@ namespace RE
 			REL::Offset(0x0446D670)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			CombatBehaviorTreeNodeObject1_CombatBehaviorImmediateFallbackSelector_WeightedRandomChildSelector__float_{ REL::Offset(0x0446D618) };
+													CombatBehaviorTreeNodeObject1_CombatBehaviorImmediateFallbackSelector_WeightedRandomChildSelector__float_{ REL::Offset(0x0446D618) };
 		inline constexpr std::array<REL::Offset, 1> CombatBehaviorTreeNodeObject1_CombatBehaviorLandNearby_float_{ REL::Offset(0x04505780) };
 		inline constexpr std::array<REL::Offset, 1> CombatBehaviorTreeNodeObject1_CombatBehaviorLand_float_{ REL::Offset(0x045057D8) };
 		inline constexpr std::array<REL::Offset, 1> CombatBehaviorTreeNodeObject1_CombatBehaviorMovementIdle_float_{ REL::Offset(0x044FD000) };
@@ -23222,8 +23222,8 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> CombatBehaviorTreeNodeObjectBase_CombatBehaviorCastConcentrationSpell_{ REL::Offset(0x04506190) };
 		inline constexpr std::array<REL::Offset, 1> CombatBehaviorTreeNodeObjectBase_CombatBehaviorChargePast_{ REL::Offset(0x04464458) };
 		inline constexpr std::array<REL::Offset, 1>
-			CombatBehaviorTreeNodeObjectBase_CombatBehaviorComposite_CombatBehaviorMovementIdle_CombatBehaviorTrackTarget__{ REL::Offset(
-				0x0446F280) };
+													CombatBehaviorTreeNodeObjectBase_CombatBehaviorComposite_CombatBehaviorMovementIdle_CombatBehaviorTrackTarget__{ REL::Offset(
+                0x0446F280) };
 		inline constexpr std::array<REL::Offset, 1> CombatBehaviorTreeNodeObjectBase_CombatBehaviorFindCover_{ REL::Offset(0x04510498) };
 		inline constexpr std::array<REL::Offset, 1> CombatBehaviorTreeNodeObjectBase_CombatBehaviorFlee_{ REL::Offset(0x04503550) };
 		inline constexpr std::array<REL::Offset, 1> CombatBehaviorTreeNodeObjectBase_CombatBehaviorIdle_{ REL::Offset(0x04464D50) };
@@ -23273,7 +23273,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> CombatBehaviorTreeNodeObject_CombatBehaviorCircleDistant_{ REL::Offset(0x044FD0B0) };
 		inline constexpr std::array<REL::Offset, 1> CombatBehaviorTreeNodeObject_CombatBehaviorCircle_{ REL::Offset(0x04464B40) };
 		inline constexpr std::array<REL::Offset, 1>
-			CombatBehaviorTreeNodeObject_CombatBehaviorComposite_CombatBehaviorCrouch_CombatBehaviorCheckRangedTarget__{ REL::Offset(0x0450A1D0) };
+													CombatBehaviorTreeNodeObject_CombatBehaviorComposite_CombatBehaviorCrouch_CombatBehaviorCheckRangedTarget__{ REL::Offset(0x0450A1D0) };
 		inline constexpr std::array<REL::Offset, 1> CombatBehaviorTreeNodeObject_CombatBehaviorCoverAdvance_{ REL::Offset(0x0450F200) };
 		inline constexpr std::array<REL::Offset, 1> CombatBehaviorTreeNodeObject_CombatBehaviorCoverFlank_{ REL::Offset(0x0450F258) };
 		inline constexpr std::array<REL::Offset, 1> CombatBehaviorTreeNodeObject_CombatBehaviorCoverPairedRush_{ REL::Offset(0x0450F150) };
@@ -23584,7 +23584,7 @@ namespace RE
 				REL::Offset(0x0446F0A8)
 			};
 		inline constexpr std::array<REL::Offset, 1>
-			CombatBehaviorTreeValueNodeT_unsignedint_CombatBehaviorPowerAllocationSelector__PowerAllocationStrategy_{ REL::Offset(0x0446F630) };
+													CombatBehaviorTreeValueNodeT_unsignedint_CombatBehaviorPowerAllocationSelector__PowerAllocationStrategy_{ REL::Offset(0x0446F630) };
 		inline constexpr std::array<REL::Offset, 1> CombatBehaviorTreeValueNodeT_unsignedint_CombatInventoryItem__TYPE_{ REL::Offset(0x044682B8) };
 		inline constexpr std::array<REL::Offset, 1> CombatBehaviorTreeValueNodeT_unsignedint_CombatWeaponType_{ REL::Offset(0x04468258) };
 		inline constexpr std::array<REL::Offset, 1> CombatBehaviorTreeValueNodeT_unsignedint_SpaceManeuverTypes_{ REL::Offset(0x04469D20) };
@@ -23636,7 +23636,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> CombatDisableCollisionController{ REL::Offset(0x045093F8) };
 		inline constexpr std::array<REL::Offset, 1> CombatEncounterBIEvents__CombatEnounterMetricsManager{ REL::Offset(0x044C8030) };
 		inline constexpr std::array<REL::Offset, 5> CombatEncounterMetrics{ REL::Offset(0x044C8048), REL::Offset(0x044C8060), REL::Offset(0x044C8078),
-			                                                                REL::Offset(0x044C8090), REL::Offset(0x044C80A8) };
+			REL::Offset(0x044C8090), REL::Offset(0x044C80A8) };
 		inline constexpr std::array<REL::Offset, 1> CombatEnterCoverPathController{ REL::Offset(0x044F1108) };
 		inline constexpr std::array<REL::Offset, 1> CombatFlankingSearchData{ REL::Offset(0x04501CF0) };
 		inline constexpr std::array<REL::Offset, 1> CombatFleeAimController{ REL::Offset(0x045046C8) };
@@ -23836,20 +23836,20 @@ namespace RE
 			REL::Offset(0x044FF020), REL::Offset(0x044FF0E0)
 		};
 		inline constexpr std::array<REL::Offset, 2>
-			CombatNavmeshSearchTunnel_CombatPathingGoalPolicyFindAttackLocation_CombatPathingSearchPolicyStandard_{ REL::Offset(0x044FD2D0),
-			                                                                                                        REL::Offset(0x044FD2E8) };
+													CombatNavmeshSearchTunnel_CombatPathingGoalPolicyFindAttackLocation_CombatPathingSearchPolicyStandard_{ REL::Offset(0x044FD2D0),
+                REL::Offset(0x044FD2E8) };
 		inline constexpr std::array<REL::Offset, 2> CombatNavmeshSearchTunnel_CombatPathingGoalPolicyFindCover_CombatPathingSearchPolicyStandard_{
 			REL::Offset(0x04466EA0), REL::Offset(0x04466F30)
 		};
 		inline constexpr std::array<REL::Offset, 2>
 			CombatNavmeshSearchTunnel_CombatPathingGoalPolicyFindFlankCover_CombatPathingSearchPolicyStandard_{ REL::Offset(0x04510088),
-			                                                                                                    REL::Offset(0x045100A0) };
+				REL::Offset(0x045100A0) };
 		inline constexpr std::array<REL::Offset, 2>
 			CombatNavmeshSearchTunnel_CombatPathingGoalPolicyFindTargetLocation_CombatPathingSearchPolicyStandard_{ REL::Offset(0x044F7D78),
-			                                                                                                        REL::Offset(0x044F8108) };
+				REL::Offset(0x044F8108) };
 		inline constexpr std::array<REL::Offset, 2>
-			CombatNavmeshSearchTunnel_CombatPathingGoalPolicyFindValidLocation_CombatPathingSearchPolicyStandard_{ REL::Offset(0x04508238),
-			                                                                                                       REL::Offset(0x04508810) };
+													CombatNavmeshSearchTunnel_CombatPathingGoalPolicyFindValidLocation_CombatPathingSearchPolicyStandard_{ REL::Offset(0x04508238),
+                REL::Offset(0x04508810) };
 		inline constexpr std::array<REL::Offset, 2> CombatNavmeshSearchTunnel_CombatPathingGoalPolicyFlankDistant_CombatPathingSearchPolicyStandard_{
 			REL::Offset(0x044FED08), REL::Offset(0x044FED20)
 		};
@@ -23857,8 +23857,8 @@ namespace RE
 			REL::Offset(0x044FF428), REL::Offset(0x044FF440)
 		};
 		inline constexpr std::array<REL::Offset, 2>
-			CombatNavmeshSearchTunnel_CombatPathingGoalPolicyFleeUnderground_CombatPathingSearchPolicyStandard_{ REL::Offset(0x04503F48),
-			                                                                                                     REL::Offset(0x04503FD8) };
+													CombatNavmeshSearchTunnel_CombatPathingGoalPolicyFleeUnderground_CombatPathingSearchPolicyStandard_{ REL::Offset(0x04503F48),
+                REL::Offset(0x04503FD8) };
 		inline constexpr std::array<REL::Offset, 2> CombatNavmeshSearchTunnel_CombatPathingGoalPolicyFlee_CombatPathingSearchPolicyStandard_{
 			REL::Offset(0x04503C78), REL::Offset(0x04503D08)
 		};
@@ -23866,8 +23866,8 @@ namespace RE
 			REL::Offset(0x045130E8), REL::Offset(0x04513100)
 		};
 		inline constexpr std::array<REL::Offset, 2>
-			CombatNavmeshSearchTunnel_CombatPathingGoalPolicyInvestigateLocation_CombatPathingSearchPolicyStandard_{ REL::Offset(0x0450CBB0),
-			                                                                                                         REL::Offset(0x0450CDC0) };
+													CombatNavmeshSearchTunnel_CombatPathingGoalPolicyInvestigateLocation_CombatPathingSearchPolicyStandard_{ REL::Offset(0x0450CBB0),
+                REL::Offset(0x0450CDC0) };
 		inline constexpr std::array<REL::Offset, 2> CombatNavmeshSearchTunnel_CombatPathingGoalPolicyMultiGoal_CombatPathingSearchPolicyStandard_{
 			REL::Offset(0x04511C68), REL::Offset(0x04511C80)
 		};
@@ -23875,8 +23875,8 @@ namespace RE
 			REL::Offset(0x044FC428), REL::Offset(0x044FC6B0)
 		};
 		inline constexpr std::array<REL::Offset, 2>
-			CombatNavmeshSearchTunnel_CombatPathingGoalPolicyReturnToCombatArea_CombatPathingSearchPolicyStandard_{ REL::Offset(0x04508618),
-			                                                                                                        REL::Offset(0x045086A8) };
+													CombatNavmeshSearchTunnel_CombatPathingGoalPolicyReturnToCombatArea_CombatPathingSearchPolicyStandard_{ REL::Offset(0x04508618),
+                REL::Offset(0x045086A8) };
 		inline constexpr std::array<REL::Offset, 2> CombatNavmeshSearchTunnel_CombatPathingGoalPolicySearchWander_CombatPathingSearchPolicyStandard_{
 			REL::Offset(0x0450CB08), REL::Offset(0x0450CB98)
 		};
@@ -24098,7 +24098,7 @@ namespace RE
 			};
 		inline constexpr std::array<REL::Offset, 2>
 			CombatPathBuilderT_CombatPathBuilderNavmeshOpen_CombatPathingGoalPolicyFlee_CombatPathingSearchPolicyStandard_{ REL::Offset(0x04504310),
-			                                                                                                                REL::Offset(0x04504378) };
+				REL::Offset(0x04504378) };
 		inline constexpr std::array<REL::Offset, 2>
 			CombatPathBuilderT_CombatPathBuilderNavmeshOpen_CombatPathingGoalPolicyInvestigateLocation_CombatPathingSearchPolicyStandard_{
 				REL::Offset(0x0450D528), REL::Offset(0x0450D590)
@@ -24185,7 +24185,7 @@ namespace RE
 			};
 		inline constexpr std::array<REL::Offset, 2>
 			CombatPathBuilderT_CombatPathBuilderSpaceOpen_CombatPathingGoalPolicyFlee_CombatPathingSearchPolicyStandard_{ REL::Offset(0x04504268),
-			                                                                                                              REL::Offset(0x045042D0) };
+				REL::Offset(0x045042D0) };
 		inline constexpr std::array<REL::Offset, 2>
 			CombatPathBuilderT_CombatPathBuilderSpaceOpen_CombatPathingGoalPolicyInvestigateLocation_CombatPathingSearchPolicyStandard_{
 				REL::Offset(0x0450D748), REL::Offset(0x0450D7B0)
@@ -24208,7 +24208,7 @@ namespace RE
 			};
 		inline constexpr std::array<REL::Offset, 2>
 			CombatPathBuilderT_CombatPathBuilderSpaceOpen_CombatPathingGoalPolicySearch_CombatPathingSearchPolicyStandard_{ REL::Offset(0x0450D858),
-			                                                                                                                REL::Offset(0x0450D8C0) };
+				REL::Offset(0x0450D8C0) };
 		inline constexpr std::array<REL::Offset, 2>
 			CombatPathBuilderT_CombatPathBuilderSpaceOpen_CombatPathingGoalPolicyWithdraw_CombatPathingSearchPolicyWithdraw_{
 				REL::Offset(0x044641D0), REL::Offset(0x04464238)
@@ -24223,7 +24223,7 @@ namespace RE
 			};
 		inline constexpr std::array<REL::Offset, 2>
 			CombatPathBuilderT_CombatPathBuilderSpaceStandard_CombatPathingGoalPolicyFlank_CombatPathingSearchPolicyFlank_{ REL::Offset(0x04501760),
-			                                                                                                                REL::Offset(0x04501780) };
+				REL::Offset(0x04501780) };
 		inline constexpr std::array<REL::Offset, 2>
 			CombatPathBuilderT_CombatPathBuilderSpaceStandard_CombatPathingGoalPolicyFollow_CombatPathingSearchPolicyStandard_{
 				REL::Offset(0x045134B0), REL::Offset(0x045134D0)
@@ -24689,21 +24689,21 @@ namespace RE
 		};
 		inline constexpr std::array<REL::Offset, 2>
 			CombatPathT_CombatSharedPathT_CombatCoveredPath__CombatPathRequestCovered_CombatPathDestinationNone_{ REL::Offset(0x04470288),
-			                                                                                                      REL::Offset(0x044702B0) };
+				REL::Offset(0x044702B0) };
 		inline constexpr std::array<REL::Offset, 3>
 			CombatPathT_CombatSharedPathT_CombatCoveredPath__CombatPathRequestFlight_CombatPathDestinationActor_{ REL::Offset(0x04514458),
-			                                                                                                      REL::Offset(0x04514480),
-			                                                                                                      REL::Offset(0x04514690) };
+				REL::Offset(0x04514480),
+				REL::Offset(0x04514690) };
 		inline constexpr std::array<REL::Offset, 2>
 			CombatPathT_CombatSharedPathT_CombatCoveredPath__CombatPathRequestFlight_CombatPathDestinationLocation_{ REL::Offset(0x04514C58),
-			                                                                                                         REL::Offset(0x04514F70) };
+				REL::Offset(0x04514F70) };
 		inline constexpr std::array<REL::Offset, 3>
 			CombatPathT_CombatSharedPathT_CombatCoveredPath__CombatPathRequestFlight_CombatPathDestinationRef_{ REL::Offset(0x04513F48),
-			                                                                                                    REL::Offset(0x04513F70),
-			                                                                                                    REL::Offset(0x04513F98) };
+				REL::Offset(0x04513F70),
+				REL::Offset(0x04513F98) };
 		inline constexpr std::array<REL::Offset, 2>
 			CombatPathT_CombatSharedPathT_CombatCoveredPath__CombatPathRequestFlyingAttack_CombatPathDestinationNone_{ REL::Offset(0x04515EB8),
-			                                                                                                           REL::Offset(0x04516300) };
+				REL::Offset(0x04516300) };
 		inline constexpr std::array<REL::Offset, 2>
 			CombatPathT_CombatSharedPathT_CombatCoveredPath__CombatPathRequestGeneric_CombatPathingGoalPolicyAvoidThreat_CombatPathingSearchPolicyStandard__CombatPathDestinationNone_{
 				REL::Offset(0x044FA9C0), REL::Offset(0x044FABD0)
@@ -24782,112 +24782,112 @@ namespace RE
 			};
 		inline constexpr std::array<REL::Offset, 2>
 			CombatPathT_CombatSharedPathT_CombatCoveredPath__CombatPathRequestHover_CombatPathDestinationNone_{ REL::Offset(0x04513E18),
-			                                                                                                    REL::Offset(0x04513E40) };
+				REL::Offset(0x04513E40) };
 		inline constexpr std::array<REL::Offset, 2>
 			CombatPathT_CombatSharedPathT_CombatCoveredPath__CombatPathRequestLanding_CombatPathDestinationLocation_{ REL::Offset(0x045138A0),
-			                                                                                                          REL::Offset(0x04513BB8) };
+				REL::Offset(0x04513BB8) };
 		inline constexpr std::array<REL::Offset, 2>
 			CombatPathT_CombatSharedPathT_CombatCoveredPath__CombatPathRequestMultiGoal_CombatPathDestinationLocations_{ REL::Offset(0x04517868),
-			                                                                                                             REL::Offset(0x04517B80) };
+				REL::Offset(0x04517B80) };
 		inline constexpr std::array<REL::Offset, 3>
 			CombatPathT_CombatSharedPathT_CombatCoveredPath__CombatPathRequestMultiGoal_CombatPathDestinationRefs_{ REL::Offset(0x04516B58),
-			                                                                                                        REL::Offset(0x04516B80),
-			                                                                                                        REL::Offset(0x04516BA8) };
+				REL::Offset(0x04516B80),
+				REL::Offset(0x04516BA8) };
 		inline constexpr std::array<REL::Offset, 2>
 			CombatPathT_CombatSharedPathT_CombatCoveredPath__CombatPathRequestOrbit_CombatPathDestinationLocation_{ REL::Offset(0x04513538),
-			                                                                                                        REL::Offset(0x04513560) };
+				REL::Offset(0x04513560) };
 		inline constexpr std::array<REL::Offset, 2>
 			CombatPathT_CombatSharedPathT_CombatCoveredPath__CombatPathRequestRotatePath_CombatPathDestinationLocation_{ REL::Offset(0x045148F0),
-			                                                                                                             REL::Offset(0x04514918) };
+				REL::Offset(0x04514918) };
 		inline constexpr std::array<REL::Offset, 3>
 			CombatPathT_CombatSharedPathT_CombatCoveredPath__CombatPathRequestStandard_CombatBehaviorShipPathDestinationRef_{
 				REL::Offset(0x04469480), REL::Offset(0x044694A8), REL::Offset(0x044697A8)
 			};
 		inline constexpr std::array<REL::Offset, 3>
 			CombatPathT_CombatSharedPathT_CombatCoveredPath__CombatPathRequestStandard_CombatPathDestinationAcquire_{ REL::Offset(0x0446B570),
-			                                                                                                          REL::Offset(0x0446B598),
-			                                                                                                          REL::Offset(0x0446BC28) };
+				REL::Offset(0x0446B598),
+				REL::Offset(0x0446BC28) };
 		inline constexpr std::array<REL::Offset, 3>
 			CombatPathT_CombatSharedPathT_CombatCoveredPath__CombatPathRequestStandard_CombatPathDestinationActor_{ REL::Offset(0x045174D8),
-			                                                                                                        REL::Offset(0x04517500),
-			                                                                                                        REL::Offset(0x04517528) };
+				REL::Offset(0x04517500),
+				REL::Offset(0x04517528) };
 		inline constexpr std::array<REL::Offset, 3>
 			CombatPathT_CombatSharedPathT_CombatCoveredPath__CombatPathRequestStandard_CombatPathDestinationBarrelRoll_{ REL::Offset(0x0446C4F0),
-			                                                                                                             REL::Offset(0x0446C518),
-			                                                                                                             REL::Offset(0x0446CBA8) };
+				REL::Offset(0x0446C518),
+				REL::Offset(0x0446CBA8) };
 		inline constexpr std::array<REL::Offset, 3>
 			CombatPathT_CombatSharedPathT_CombatCoveredPath__CombatPathRequestStandard_CombatPathDestinationBreak_{ REL::Offset(0x044694D0),
-			                                                                                                        REL::Offset(0x044694F8),
-			                                                                                                        REL::Offset(0x04469B88) };
+				REL::Offset(0x044694F8),
+				REL::Offset(0x04469B88) };
 		inline constexpr std::array<REL::Offset, 3>
 			CombatPathT_CombatSharedPathT_CombatCoveredPath__CombatPathRequestStandard_CombatPathDestinationDirectlyToTarget_{
 				REL::Offset(0x0445E8C0), REL::Offset(0x0445EB48), REL::Offset(0x0445EC50)
 			};
 		inline constexpr std::array<REL::Offset, 3>
 			CombatPathT_CombatSharedPathT_CombatCoveredPath__CombatPathRequestStandard_CombatPathDestinationDisengage_{ REL::Offset(0x0446B468),
-			                                                                                                            REL::Offset(0x0446CCB0),
-			                                                                                                            REL::Offset(0x0446CCD8) };
+				REL::Offset(0x0446CCB0),
+				REL::Offset(0x0446CCD8) };
 		inline constexpr std::array<REL::Offset, 3>
 			CombatPathT_CombatSharedPathT_CombatCoveredPath__CombatPathRequestStandard_CombatPathDestinationEvade_{ REL::Offset(0x0446C8D0),
-			                                                                                                        REL::Offset(0x0446C8F8),
-			                                                                                                        REL::Offset(0x0446CF88) };
+				REL::Offset(0x0446C8F8),
+				REL::Offset(0x0446CF88) };
 		inline constexpr std::array<REL::Offset, 3>
 			CombatPathT_CombatSharedPathT_CombatCoveredPath__CombatPathRequestStandard_CombatPathDestinationFlee_{ REL::Offset(0x044686A0),
-			                                                                                                       REL::Offset(0x044687A8),
-			                                                                                                       REL::Offset(0x044687D0) };
+				REL::Offset(0x044687A8),
+				REL::Offset(0x044687D0) };
 		inline constexpr std::array<REL::Offset, 3>
 			CombatPathT_CombatSharedPathT_CombatCoveredPath__CombatPathRequestStandard_CombatPathDestinationLeadTurn_{ REL::Offset(0x044698B0),
-			                                                                                                           REL::Offset(0x044698D8),
-			                                                                                                           REL::Offset(0x0446C3E8) };
+				REL::Offset(0x044698D8),
+				REL::Offset(0x0446C3E8) };
 		inline constexpr std::array<REL::Offset, 2>
 			CombatPathT_CombatSharedPathT_CombatCoveredPath__CombatPathRequestStandard_CombatPathDestinationLocation_{ REL::Offset(0x04517D28),
-			                                                                                                           REL::Offset(0x04517D50) };
+				REL::Offset(0x04517D50) };
 		inline constexpr std::array<REL::Offset, 2>
 			CombatPathT_CombatSharedPathT_CombatCoveredPath__CombatPathRequestStandard_CombatPathDestinationOrbitLocation_{ REL::Offset(0x0446A8F0),
-			                                                                                                                REL::Offset(0x0446A9F8) };
+				REL::Offset(0x0446A9F8) };
 		inline constexpr std::array<REL::Offset, 3>
 			CombatPathT_CombatSharedPathT_CombatCoveredPath__CombatPathRequestStandard_CombatPathDestinationOrbitRef_{ REL::Offset(0x0446A510),
-			                                                                                                           REL::Offset(0x0446A538),
-			                                                                                                           REL::Offset(0x0446ACA8) };
+				REL::Offset(0x0446A538),
+				REL::Offset(0x0446ACA8) };
 		inline constexpr std::array<REL::Offset, 3>
 			CombatPathT_CombatSharedPathT_CombatCoveredPath__CombatPathRequestStandard_CombatPathDestinationPursue_{ REL::Offset(0x0446A408),
-			                                                                                                         REL::Offset(0x0446BD30),
-			                                                                                                         REL::Offset(0x0446BD58) };
+				REL::Offset(0x0446BD30),
+				REL::Offset(0x0446BD58) };
 		inline constexpr std::array<REL::Offset, 3>
 			CombatPathT_CombatSharedPathT_CombatCoveredPath__CombatPathRequestStandard_CombatPathDestinationRef_{ REL::Offset(0x04518210),
-			                                                                                                      REL::Offset(0x04518238),
-			                                                                                                      REL::Offset(0x04518448) };
+				REL::Offset(0x04518238),
+				REL::Offset(0x04518448) };
 		inline constexpr std::array<REL::Offset, 3>
 			CombatPathT_CombatSharedPathT_CombatCoveredPath__CombatPathRequestStandard_CombatPathDestinationRemainNear_{ REL::Offset(0x0446AE00),
-			                                                                                                             REL::Offset(0x0446AF08),
-			                                                                                                             REL::Offset(0x0446AF30) };
+				REL::Offset(0x0446AF08),
+				REL::Offset(0x0446AF30) };
 		inline constexpr std::array<REL::Offset, 3>
 			CombatPathT_CombatSharedPathT_CombatCoveredPath__CombatPathRequestStandard_CombatPathDestinationSlideDodge_{ REL::Offset(0x0446B950),
-			                                                                                                             REL::Offset(0x0446B978),
-			                                                                                                             REL::Offset(0x0446C008) };
+				REL::Offset(0x0446B978),
+				REL::Offset(0x0446C008) };
 		inline constexpr std::array<REL::Offset, 3>
 			CombatPathT_CombatSharedPathT_CombatCoveredPath__CombatPathRequestStandard_CombatPathDestinationSlideTurn_{ REL::Offset(0x0446C110),
-			                                                                                                            REL::Offset(0x0446C138),
-			                                                                                                            REL::Offset(0x0446C7C8) };
+				REL::Offset(0x0446C138),
+				REL::Offset(0x0446C7C8) };
 		inline constexpr std::array<REL::Offset, 3>
 			CombatPathT_CombatSharedPathT_CombatCoveredPath__CombatPathRequestStandard_CombatPathDestinationStrafeTurn_{ REL::Offset(0x0446B190),
-			                                                                                                             REL::Offset(0x0446B1B8),
-			                                                                                                             REL::Offset(0x0446B848) };
+				REL::Offset(0x0446B1B8),
+				REL::Offset(0x0446B848) };
 		inline constexpr std::array<REL::Offset, 3>
 			CombatPathT_CombatSharedPathT_CombatCoveredPath__CombatPathRequestStandard_CombatPathDestinationStrafe_{ REL::Offset(0x0446A130),
-			                                                                                                         REL::Offset(0x0446A158),
-			                                                                                                         REL::Offset(0x0446A7E8) };
+				REL::Offset(0x0446A158),
+				REL::Offset(0x0446A7E8) };
 		inline constexpr std::array<REL::Offset, 2>
 			CombatPathT_CombatSharedPathT_CombatCoveredPath__CombatPathRequestStraightPath_CombatPathDestinationLocation_{ REL::Offset(0x04515708),
-			                                                                                                               REL::Offset(0x04515A20) };
+				REL::Offset(0x04515A20) };
 		inline constexpr std::array<REL::Offset, 2>
 			CombatPathT_CombatSharedPathT_CombatCoveredPath__CombatPathRequestWeightedMultiGoal_CombatPathDestinationLocations_{
 				REL::Offset(0x04516EE8), REL::Offset(0x04517200)
 			};
 		inline constexpr std::array<REL::Offset, 3>
-			CombatPathT_CombatSharedPathT_CombatCoveredPath__CombatPathRequestWeightedMultiGoal_CombatPathDestinationRefs_{ REL::Offset(0x04515378),
-			                                                                                                                REL::Offset(0x045153A0),
-			                                                                                                                REL::Offset(0x045153C8) };
+													CombatPathT_CombatSharedPathT_CombatCoveredPath__CombatPathRequestWeightedMultiGoal_CombatPathDestinationRefs_{ REL::Offset(0x04515378),
+                REL::Offset(0x045153A0),
+                REL::Offset(0x045153C8) };
 		inline constexpr std::array<REL::Offset, 1> CombatPathT_CombatSharedPathT_CombatPath__CombatPathRequestCovered_CombatPathDestinationNone_{
 			REL::Offset(0x044700F0)
 		};
@@ -24985,7 +24985,7 @@ namespace RE
 			REL::Offset(0x045139A8)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			CombatPathT_CombatSharedPathT_CombatPath__CombatPathRequestMultiGoal_CombatPathDestinationLocations_{ REL::Offset(0x04517970) };
+													CombatPathT_CombatSharedPathT_CombatPath__CombatPathRequestMultiGoal_CombatPathDestinationLocations_{ REL::Offset(0x04517970) };
 		inline constexpr std::array<REL::Offset, 2> CombatPathT_CombatSharedPathT_CombatPath__CombatPathRequestMultiGoal_CombatPathDestinationRefs_{
 			REL::Offset(0x04516A28), REL::Offset(0x04516A50)
 		};
@@ -24995,8 +24995,8 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			CombatPathT_CombatSharedPathT_CombatPath__CombatPathRequestRotatePath_CombatPathDestinationLocation_{ REL::Offset(0x04515B78) };
 		inline constexpr std::array<REL::Offset, 2>
-			CombatPathT_CombatSharedPathT_CombatPath__CombatPathRequestStandard_CombatBehaviorShipPathDestinationRef_{ REL::Offset(0x04469520),
-			                                                                                                           REL::Offset(0x04469628) };
+													CombatPathT_CombatSharedPathT_CombatPath__CombatPathRequestStandard_CombatBehaviorShipPathDestinationRef_{ REL::Offset(0x04469520),
+                REL::Offset(0x04469628) };
 		inline constexpr std::array<REL::Offset, 2> CombatPathT_CombatSharedPathT_CombatPath__CombatPathRequestStandard_CombatPathDestinationAcquire_{
 			REL::Offset(0x0446B9A0), REL::Offset(0x0446BAA8)
 		};
@@ -25004,17 +25004,17 @@ namespace RE
 			REL::Offset(0x045173A8), REL::Offset(0x045173D0)
 		};
 		inline constexpr std::array<REL::Offset, 2>
-			CombatPathT_CombatSharedPathT_CombatPath__CombatPathRequestStandard_CombatPathDestinationBarrelRoll_{ REL::Offset(0x0446C920),
-			                                                                                                      REL::Offset(0x0446CA28) };
+													CombatPathT_CombatSharedPathT_CombatPath__CombatPathRequestStandard_CombatPathDestinationBarrelRoll_{ REL::Offset(0x0446C920),
+                REL::Offset(0x0446CA28) };
 		inline constexpr std::array<REL::Offset, 2> CombatPathT_CombatSharedPathT_CombatPath__CombatPathRequestStandard_CombatPathDestinationBreak_{
 			REL::Offset(0x04469900), REL::Offset(0x04469A08)
 		};
 		inline constexpr std::array<REL::Offset, 2>
 			CombatPathT_CombatSharedPathT_CombatPath__CombatPathRequestStandard_CombatPathDestinationDirectlyToTarget_{ REL::Offset(0x0445EA18),
-			                                                                                                            REL::Offset(0x0445EB20) };
+				REL::Offset(0x0445EB20) };
 		inline constexpr std::array<REL::Offset, 2>
-			CombatPathT_CombatSharedPathT_CombatPath__CombatPathRequestStandard_CombatPathDestinationDisengage_{ REL::Offset(0x0446B1E0),
-			                                                                                                     REL::Offset(0x0446B2E8) };
+													CombatPathT_CombatSharedPathT_CombatPath__CombatPathRequestStandard_CombatPathDestinationDisengage_{ REL::Offset(0x0446B1E0),
+                REL::Offset(0x0446B2E8) };
 		inline constexpr std::array<REL::Offset, 2> CombatPathT_CombatSharedPathT_CombatPath__CombatPathRequestStandard_CombatPathDestinationEvade_{
 			REL::Offset(0x0446CD00), REL::Offset(0x0446CE08)
 		};
@@ -25023,14 +25023,14 @@ namespace RE
 		};
 		inline constexpr std::array<REL::Offset, 2>
 			CombatPathT_CombatSharedPathT_CombatPath__CombatPathRequestStandard_CombatPathDestinationLeadTurn_{ REL::Offset(0x0446C160),
-			                                                                                                    REL::Offset(0x0446C268) };
+				REL::Offset(0x0446C268) };
 		inline constexpr std::array<REL::Offset, 1>
 			CombatPathT_CombatSharedPathT_CombatPath__CombatPathRequestStandard_CombatPathDestinationLocation_{ REL::Offset(0x04518828) };
 		inline constexpr std::array<REL::Offset, 1>
 			CombatPathT_CombatSharedPathT_CombatPath__CombatPathRequestStandard_CombatPathDestinationOrbitLocation_{ REL::Offset(0x0446AF58) };
 		inline constexpr std::array<REL::Offset, 2>
-			CombatPathT_CombatSharedPathT_CombatPath__CombatPathRequestStandard_CombatPathDestinationOrbitRef_{ REL::Offset(0x0446AA20),
-			                                                                                                    REL::Offset(0x0446AB28) };
+													CombatPathT_CombatSharedPathT_CombatPath__CombatPathRequestStandard_CombatPathDestinationOrbitRef_{ REL::Offset(0x0446AA20),
+                REL::Offset(0x0446AB28) };
 		inline constexpr std::array<REL::Offset, 2> CombatPathT_CombatSharedPathT_CombatPath__CombatPathRequestStandard_CombatPathDestinationPursue_{
 			REL::Offset(0x0446A180), REL::Offset(0x0446A288)
 		};
@@ -25039,16 +25039,16 @@ namespace RE
 		};
 		inline constexpr std::array<REL::Offset, 2>
 			CombatPathT_CombatSharedPathT_CombatPath__CombatPathRequestStandard_CombatPathDestinationRemainNear_{ REL::Offset(0x04469EF8),
-			                                                                                                      REL::Offset(0x0446A000) };
+				REL::Offset(0x0446A000) };
 		inline constexpr std::array<REL::Offset, 2>
 			CombatPathT_CombatSharedPathT_CombatPath__CombatPathRequestStandard_CombatPathDestinationSlideDodge_{ REL::Offset(0x0446BD80),
-			                                                                                                      REL::Offset(0x0446BE88) };
+				REL::Offset(0x0446BE88) };
 		inline constexpr std::array<REL::Offset, 2>
 			CombatPathT_CombatSharedPathT_CombatPath__CombatPathRequestStandard_CombatPathDestinationSlideTurn_{ REL::Offset(0x0446C540),
-			                                                                                                     REL::Offset(0x0446C648) };
+				REL::Offset(0x0446C648) };
 		inline constexpr std::array<REL::Offset, 2>
-			CombatPathT_CombatSharedPathT_CombatPath__CombatPathRequestStandard_CombatPathDestinationStrafeTurn_{ REL::Offset(0x0446B5C0),
-			                                                                                                      REL::Offset(0x0446B6C8) };
+													CombatPathT_CombatSharedPathT_CombatPath__CombatPathRequestStandard_CombatPathDestinationStrafeTurn_{ REL::Offset(0x0446B5C0),
+                REL::Offset(0x0446B6C8) };
 		inline constexpr std::array<REL::Offset, 2> CombatPathT_CombatSharedPathT_CombatPath__CombatPathRequestStandard_CombatPathDestinationStrafe_{
 			REL::Offset(0x0446A560), REL::Offset(0x0446A668)
 		};
@@ -25057,8 +25057,8 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			CombatPathT_CombatSharedPathT_CombatPath__CombatPathRequestWeightedMultiGoal_CombatPathDestinationLocations_{ REL::Offset(0x04516FF0) };
 		inline constexpr std::array<REL::Offset, 2>
-			CombatPathT_CombatSharedPathT_CombatPath__CombatPathRequestWeightedMultiGoal_CombatPathDestinationRefs_{ REL::Offset(0x04515248),
-			                                                                                                         REL::Offset(0x04515270) };
+													CombatPathT_CombatSharedPathT_CombatPath__CombatPathRequestWeightedMultiGoal_CombatPathDestinationRefs_{ REL::Offset(0x04515248),
+                REL::Offset(0x04515270) };
 		inline constexpr std::array<REL::Offset, 1> CombatPathingDebugData{ REL::Offset(0x04512140) };
 		inline constexpr std::array<REL::Offset, 1> CombatPathingDelayedTweener{ REL::Offset(0x04518968) };
 		inline constexpr std::array<REL::Offset, 1> CombatPathingRequest{ REL::Offset(0x04512098) };
@@ -25075,7 +25075,7 @@ namespace RE
 			REL::Offset(0x045004D8)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			CombatPathingRequestGeneric_CombatPathingGoalPolicyFindAttackLocation_CombatPathingSearchPolicyStandard_{ REL::Offset(0x044FE778) };
+													CombatPathingRequestGeneric_CombatPathingGoalPolicyFindAttackLocation_CombatPathingSearchPolicyStandard_{ REL::Offset(0x044FE778) };
 		inline constexpr std::array<REL::Offset, 1> CombatPathingRequestGeneric_CombatPathingGoalPolicyFindCover_CombatPathingSearchPolicyStandard_{
 			REL::Offset(0x04466B18)
 		};
@@ -25086,12 +25086,12 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			CombatPathingRequestGeneric_CombatPathingGoalPolicyFindValidLocation_CombatPathingSearchPolicyStandard_{ REL::Offset(0x045089C8) };
 		inline constexpr std::array<REL::Offset, 1>
-			CombatPathingRequestGeneric_CombatPathingGoalPolicyFlankDistant_CombatPathingSearchPolicyStandard_{ REL::Offset(0x045010D8) };
+													CombatPathingRequestGeneric_CombatPathingGoalPolicyFlankDistant_CombatPathingSearchPolicyStandard_{ REL::Offset(0x045010D8) };
 		inline constexpr std::array<REL::Offset, 1> CombatPathingRequestGeneric_CombatPathingGoalPolicyFlank_CombatPathingSearchPolicyFlank_{
 			REL::Offset(0x04500DA8)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			CombatPathingRequestGeneric_CombatPathingGoalPolicyFleeUnderground_CombatPathingSearchPolicyStandard_{ REL::Offset(0x04504DC8) };
+													CombatPathingRequestGeneric_CombatPathingGoalPolicyFleeUnderground_CombatPathingSearchPolicyStandard_{ REL::Offset(0x04504DC8) };
 		inline constexpr std::array<REL::Offset, 1> CombatPathingRequestGeneric_CombatPathingGoalPolicyFlee_CombatPathingSearchPolicyStandard_{
 			REL::Offset(0x04504990)
 		};
@@ -25099,14 +25099,14 @@ namespace RE
 			REL::Offset(0x04516600)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			CombatPathingRequestGeneric_CombatPathingGoalPolicyInvestigateLocation_CombatPathingSearchPolicyStandard_{ REL::Offset(0x0450DA68) };
+													CombatPathingRequestGeneric_CombatPathingGoalPolicyInvestigateLocation_CombatPathingSearchPolicyStandard_{ REL::Offset(0x0450DA68) };
 		inline constexpr std::array<REL::Offset, 1> CombatPathingRequestGeneric_CombatPathingGoalPolicyRetreat_CombatPathingSearchPolicyStandard_{
 			REL::Offset(0x044FC840)
 		};
 		inline constexpr std::array<REL::Offset, 1>
 			CombatPathingRequestGeneric_CombatPathingGoalPolicyReturnToCombatArea_CombatPathingSearchPolicyStandard_{ REL::Offset(0x04509118) };
 		inline constexpr std::array<REL::Offset, 1>
-			CombatPathingRequestGeneric_CombatPathingGoalPolicySearchWander_CombatPathingSearchPolicyStandard_{ REL::Offset(0x0450E4C0) };
+													CombatPathingRequestGeneric_CombatPathingGoalPolicySearchWander_CombatPathingSearchPolicyStandard_{ REL::Offset(0x0450E4C0) };
 		inline constexpr std::array<REL::Offset, 1> CombatPathingRequestGeneric_CombatPathingGoalPolicySearch_CombatPathingSearchPolicyStandard_{
 			REL::Offset(0x0450E0B0)
 		};
@@ -25121,13 +25121,13 @@ namespace RE
 			REL::Offset(0x044FAE60)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			CombatPathingSearchT_CombatPathingGoalPolicyAvoidThreat_CombatPathingSearchPolicyTunnel_CombatPathingSearchPolicyStandard__{ REL::Offset(
-				0x044FA380) };
+													CombatPathingSearchT_CombatPathingGoalPolicyAvoidThreat_CombatPathingSearchPolicyTunnel_CombatPathingSearchPolicyStandard__{ REL::Offset(
+                0x044FA380) };
 		inline constexpr std::array<REL::Offset, 1> CombatPathingSearchT_CombatPathingGoalPolicyCharge_CombatPathingSearchPolicyCharge_{ REL::Offset(
 			0x04462ED0) };
 		inline constexpr std::array<REL::Offset, 1>
-			CombatPathingSearchT_CombatPathingGoalPolicyCharge_CombatPathingSearchPolicyTunnel_CombatPathingSearchPolicyCharge__{ REL::Offset(
-				0x04462D80) };
+													CombatPathingSearchT_CombatPathingGoalPolicyCharge_CombatPathingSearchPolicyTunnel_CombatPathingSearchPolicyCharge__{ REL::Offset(
+                0x04462D80) };
 		inline constexpr std::array<REL::Offset, 1> CombatPathingSearchT_CombatPathingGoalPolicyCovered_CombatPathingSearchPolicyCovered_{
 			REL::Offset(0x0446FD98)
 		};
@@ -25135,14 +25135,14 @@ namespace RE
 			REL::Offset(0x044706D0)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			CombatPathingSearchT_CombatPathingGoalPolicyCovered_CombatPathingSearchPolicyTunnel_CombatPathingSearchPolicyStandard__{ REL::Offset(
-				0x04470598) };
+													CombatPathingSearchT_CombatPathingGoalPolicyCovered_CombatPathingSearchPolicyTunnel_CombatPathingSearchPolicyStandard__{ REL::Offset(
+                0x04470598) };
 		inline constexpr std::array<REL::Offset, 1> CombatPathingSearchT_CombatPathingGoalPolicyDistract_CombatPathingSearchPolicyDistract_{
 			REL::Offset(0x044FF248)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			CombatPathingSearchT_CombatPathingGoalPolicyDistract_CombatPathingSearchPolicyTunnel_CombatPathingSearchPolicyDistract__{ REL::Offset(
-				0x044FEAC8) };
+													CombatPathingSearchT_CombatPathingGoalPolicyDistract_CombatPathingSearchPolicyTunnel_CombatPathingSearchPolicyDistract__{ REL::Offset(
+                0x044FEAC8) };
 		inline constexpr std::array<REL::Offset, 1> CombatPathingSearchT_CombatPathingGoalPolicyFindAttackLocation_CombatPathingSearchPolicyStandard_{
 			REL::Offset(0x044FE0D0)
 		};
@@ -25154,8 +25154,8 @@ namespace RE
 			REL::Offset(0x04466C18)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			CombatPathingSearchT_CombatPathingGoalPolicyFindCover_CombatPathingSearchPolicyTunnel_CombatPathingSearchPolicyStandard__{ REL::Offset(
-				0x04466D50) };
+													CombatPathingSearchT_CombatPathingGoalPolicyFindCover_CombatPathingSearchPolicyTunnel_CombatPathingSearchPolicyStandard__{ REL::Offset(
+                0x04466D50) };
 		inline constexpr std::array<REL::Offset, 1> CombatPathingSearchT_CombatPathingGoalPolicyFindFlankCover_CombatPathingSearchPolicyStandard_{
 			REL::Offset(0x045101F0)
 		};
@@ -25181,13 +25181,13 @@ namespace RE
 			REL::Offset(0x044FEF78)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			CombatPathingSearchT_CombatPathingGoalPolicyFlankDistant_CombatPathingSearchPolicyTunnel_CombatPathingSearchPolicyStandard__{ REL::Offset(
-				0x044FF2D8) };
+													CombatPathingSearchT_CombatPathingGoalPolicyFlankDistant_CombatPathingSearchPolicyTunnel_CombatPathingSearchPolicyStandard__{ REL::Offset(
+                0x044FF2D8) };
 		inline constexpr std::array<REL::Offset, 1> CombatPathingSearchT_CombatPathingGoalPolicyFlank_CombatPathingSearchPolicyFlank_{ REL::Offset(
 			0x044FEEE8) };
 		inline constexpr std::array<REL::Offset, 1>
-			CombatPathingSearchT_CombatPathingGoalPolicyFlank_CombatPathingSearchPolicyTunnel_CombatPathingSearchPolicyFlank__{ REL::Offset(
-				0x044FF368) };
+													CombatPathingSearchT_CombatPathingGoalPolicyFlank_CombatPathingSearchPolicyTunnel_CombatPathingSearchPolicyFlank__{ REL::Offset(
+                0x044FF368) };
 		inline constexpr std::array<REL::Offset, 1> CombatPathingSearchT_CombatPathingGoalPolicyFleeUnderground_CombatPathingSearchPolicyStandard_{
 			REL::Offset(0x04504080)
 		};
@@ -25198,8 +25198,8 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> CombatPathingSearchT_CombatPathingGoalPolicyFlee_CombatPathingSearchPolicyStandard_{ REL::Offset(
 			0x04503DE0) };
 		inline constexpr std::array<REL::Offset, 1>
-			CombatPathingSearchT_CombatPathingGoalPolicyFlee_CombatPathingSearchPolicyTunnel_CombatPathingSearchPolicyStandard__{ REL::Offset(
-				0x04503FF0) };
+													CombatPathingSearchT_CombatPathingGoalPolicyFlee_CombatPathingSearchPolicyTunnel_CombatPathingSearchPolicyStandard__{ REL::Offset(
+                0x04503FF0) };
 		inline constexpr std::array<REL::Offset, 1> CombatPathingSearchT_CombatPathingGoalPolicyFollow_CombatPathingSearchPolicyStandard_{
 			REL::Offset(0x04513268)
 		};
@@ -25216,14 +25216,14 @@ namespace RE
 			REL::Offset(0x04511DE8)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			CombatPathingSearchT_CombatPathingGoalPolicyMultiGoal_CombatPathingSearchPolicyTunnel_CombatPathingSearchPolicyStandard__{ REL::Offset(
-				0x04511E90) };
+													CombatPathingSearchT_CombatPathingGoalPolicyMultiGoal_CombatPathingSearchPolicyTunnel_CombatPathingSearchPolicyStandard__{ REL::Offset(
+                0x04511E90) };
 		inline constexpr std::array<REL::Offset, 1> CombatPathingSearchT_CombatPathingGoalPolicyRetreat_CombatPathingSearchPolicyStandard_{
 			REL::Offset(0x044FC6C8)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			CombatPathingSearchT_CombatPathingGoalPolicyRetreat_CombatPathingSearchPolicyTunnel_CombatPathingSearchPolicyStandard__{ REL::Offset(
-				0x044FC758) };
+													CombatPathingSearchT_CombatPathingGoalPolicyRetreat_CombatPathingSearchPolicyTunnel_CombatPathingSearchPolicyStandard__{ REL::Offset(
+                0x044FC758) };
 		inline constexpr std::array<REL::Offset, 1> CombatPathingSearchT_CombatPathingGoalPolicyReturnToCombatArea_CombatPathingSearchPolicyStandard_{
 			REL::Offset(0x04508268)
 		};
@@ -25235,14 +25235,14 @@ namespace RE
 			REL::Offset(0x0450CFA0)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			CombatPathingSearchT_CombatPathingGoalPolicySearchWander_CombatPathingSearchPolicyTunnel_CombatPathingSearchPolicyStandard__{ REL::Offset(
-				0x0450D0D8) };
+													CombatPathingSearchT_CombatPathingGoalPolicySearchWander_CombatPathingSearchPolicyTunnel_CombatPathingSearchPolicyStandard__{ REL::Offset(
+                0x0450D0D8) };
 		inline constexpr std::array<REL::Offset, 1> CombatPathingSearchT_CombatPathingGoalPolicySearch_CombatPathingSearchPolicyStandard_{
 			REL::Offset(0x0450CBE0)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			CombatPathingSearchT_CombatPathingGoalPolicySearch_CombatPathingSearchPolicyTunnel_CombatPathingSearchPolicyStandard__{ REL::Offset(
-				0x0450D168) };
+													CombatPathingSearchT_CombatPathingGoalPolicySearch_CombatPathingSearchPolicyTunnel_CombatPathingSearchPolicyStandard__{ REL::Offset(
+                0x0450D168) };
 		inline constexpr std::array<REL::Offset, 1> CombatPathingSearchT_CombatPathingGoalPolicyStandard_CombatPathingSearchPolicyStandard_{
 			REL::Offset(0x0445D938)
 		};
@@ -25250,8 +25250,8 @@ namespace RE
 			CombatPathingSearchT_CombatPathingGoalPolicyStandard_CombatPathingSearchPolicyTunnel_CombatPathingSearchPolicyStandard__{ REL::Offset(
 				0x0445E548) };
 		inline constexpr std::array<REL::Offset, 1>
-			CombatPathingSearchT_CombatPathingGoalPolicyWithdraw_CombatPathingSearchPolicyTunnel_CombatPathingSearchPolicyWithdraw__{ REL::Offset(
-				0x04462E10) };
+													CombatPathingSearchT_CombatPathingGoalPolicyWithdraw_CombatPathingSearchPolicyTunnel_CombatPathingSearchPolicyWithdraw__{ REL::Offset(
+                0x04462E10) };
 		inline constexpr std::array<REL::Offset, 1> CombatPathingSearchT_CombatPathingGoalPolicyWithdraw_CombatPathingSearchPolicyWithdraw_{
 			REL::Offset(0x04463008)
 		};
@@ -25265,8 +25265,8 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> CombatRangedMovementPathSpeedController{ REL::Offset(0x04467FA8) };
 		inline constexpr std::array<REL::Offset, 1> CombatReservation{ REL::Offset(0x0446EEE0) };
 		inline constexpr std::array<REL::Offset, 1>
-			CombatReservationT_BSTTuple_TESPointerHandleDetail__PointerHandle_TESHandleManagerTag_TESObjectREFR_2097152__BSFixedString__{ REL::Offset(
-				0x04469CF0) };
+													CombatReservationT_BSTTuple_TESPointerHandleDetail__PointerHandle_TESHandleManagerTag_TESObjectREFR_2097152__BSFixedString__{ REL::Offset(
+                0x04469CF0) };
 		inline constexpr std::array<REL::Offset, 1> CombatSearchLockData{ REL::Offset(0x0450D9F0) };
 		inline constexpr std::array<REL::Offset, 1> CombatSearchMap2D{ REL::Offset(0x04460138) };
 		inline constexpr std::array<REL::Offset, 1> CombatSearchMap3D{ REL::Offset(0x044600B8) };
@@ -25289,7 +25289,7 @@ namespace RE
 			REL::Offset(0x044FEDB0)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			CombatSpatialGraphSearch_CombatPathingGoalPolicyFindAttackLocation_CombatPathingSearchPolicyStandard_{ REL::Offset(0x044FD378) };
+													CombatSpatialGraphSearch_CombatPathingGoalPolicyFindAttackLocation_CombatPathingSearchPolicyStandard_{ REL::Offset(0x044FD378) };
 		inline constexpr std::array<REL::Offset, 1> CombatSpatialGraphSearch_CombatPathingGoalPolicyFindCover_CombatPathingSearchPolicyStandard_{
 			REL::Offset(0x04466F80)
 		};
@@ -25299,7 +25299,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			CombatSpatialGraphSearch_CombatPathingGoalPolicyFindTargetLocation_CombatPathingSearchPolicyStandard_{ REL::Offset(0x044F7EB0) };
 		inline constexpr std::array<REL::Offset, 1>
-			CombatSpatialGraphSearch_CombatPathingGoalPolicyFindValidLocation_CombatPathingSearchPolicyStandard_{ REL::Offset(0x045088B8) };
+													CombatSpatialGraphSearch_CombatPathingGoalPolicyFindValidLocation_CombatPathingSearchPolicyStandard_{ REL::Offset(0x045088B8) };
 		inline constexpr std::array<REL::Offset, 1> CombatSpatialGraphSearch_CombatPathingGoalPolicyFlankDistant_CombatPathingSearchPolicyStandard_{
 			REL::Offset(0x044FF6B0)
 		};
@@ -25307,7 +25307,7 @@ namespace RE
 			REL::Offset(0x044FF4D0)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			CombatSpatialGraphSearch_CombatPathingGoalPolicyFleeUnderground_CombatPathingSearchPolicyStandard_{ REL::Offset(0x04503D38) };
+													CombatSpatialGraphSearch_CombatPathingGoalPolicyFleeUnderground_CombatPathingSearchPolicyStandard_{ REL::Offset(0x04503D38) };
 		inline constexpr std::array<REL::Offset, 1> CombatSpatialGraphSearch_CombatPathingGoalPolicyFlee_CombatPathingSearchPolicyStandard_{
 			REL::Offset(0x045044C0)
 		};
@@ -25315,7 +25315,7 @@ namespace RE
 			REL::Offset(0x04513058)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			CombatSpatialGraphSearch_CombatPathingGoalPolicyInvestigateLocation_CombatPathingSearchPolicyStandard_{ REL::Offset(0x0450CA48) };
+													CombatSpatialGraphSearch_CombatPathingGoalPolicyInvestigateLocation_CombatPathingSearchPolicyStandard_{ REL::Offset(0x0450CA48) };
 		inline constexpr std::array<REL::Offset, 1> CombatSpatialGraphSearch_CombatPathingGoalPolicyMultiGoal_CombatPathingSearchPolicyStandard_{
 			REL::Offset(0x04511BD8)
 		};
@@ -25323,7 +25323,7 @@ namespace RE
 			REL::Offset(0x044FC4D0)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			CombatSpatialGraphSearch_CombatPathingGoalPolicyReturnToCombatArea_CombatPathingSearchPolicyStandard_{ REL::Offset(0x04508558) };
+													CombatSpatialGraphSearch_CombatPathingGoalPolicyReturnToCombatArea_CombatPathingSearchPolicyStandard_{ REL::Offset(0x04508558) };
 		inline constexpr std::array<REL::Offset, 1> CombatSpatialGraphSearch_CombatPathingGoalPolicySearchWander_CombatPathingSearchPolicyStandard_{
 			REL::Offset(0x0450D498)
 		};
@@ -25345,399 +25345,399 @@ namespace RE
 			CombatStaticBlackboardMember_CombatBehaviorStaticBlackboardBase_CombatBehaviorContextRangedMovement_CombatBehaviorContextBase__AITimer_{
 				REL::Offset(0x03F21210)
 			};
-		inline constexpr std::array<REL::Offset, 1> CombatSuppressiveFireBehavior{ REL::Offset(0x04471930) };
-		inline constexpr std::array<REL::Offset, 1> CombatTargetLocation{ REL::Offset(0x044F8910) };
-		inline constexpr std::array<REL::Offset, 1> CombatTargetLocationSearch{ REL::Offset(0x044F88E0) };
-		inline constexpr std::array<REL::Offset, 1> CombatTargetLocationSearchResult{ REL::Offset(0x044F8940) };
-		inline constexpr std::array<REL::Offset, 1> CombatTargetSelector{ REL::Offset(0x044F8B68) };
-		inline constexpr std::array<REL::Offset, 1> CombatTargetSelectorFixed{ REL::Offset(0x044F8C08) };
-		inline constexpr std::array<REL::Offset, 1> CombatTargetSelectorPreferred{ REL::Offset(0x044F8AA8) };
-		inline constexpr std::array<REL::Offset, 1> CombatTargetSelectorRandom{ REL::Offset(0x044F8BB8) };
-		inline constexpr std::array<REL::Offset, 1> CombatTargetSelectorSpaceship{ REL::Offset(0x044F8C58) };
-		inline constexpr std::array<REL::Offset, 1> CombatTargetSelectorStandard{ REL::Offset(0x044F8B08) };
-		inline constexpr std::array<REL::Offset, 1> CombatTargetSelectorWorkshopObject{ REL::Offset(0x044F8A58) };
-		inline constexpr std::array<REL::Offset, 1> CombatThreat{ REL::Offset(0x044F8ED0) };
-		inline constexpr std::array<REL::Offset, 1> CombatThreatExplosion{ REL::Offset(0x044F8D30) };
-		inline constexpr std::array<REL::Offset, 1> CombatThreatLOF{ REL::Offset(0x044F8D98) };
-		inline constexpr std::array<REL::Offset, 1> CombatThreatMelee{ REL::Offset(0x044F8E68) };
-		inline constexpr std::array<REL::Offset, 1> CombatThreatProjectile{ REL::Offset(0x044F8E00) };
-		inline constexpr std::array<REL::Offset, 1> CombatTrackTargetAimController{ REL::Offset(0x044F0808) };
-		inline constexpr std::array<REL::Offset, 1> CombatTunnelPathController{ REL::Offset(0x044719F8) };
-		inline constexpr std::array<REL::Offset, 1> CombatTunnelPathingRequestData{ REL::Offset(0x04471A58) };
-		inline constexpr std::array<REL::Offset, 1> CombatViewController{ REL::Offset(0x04471B88) };
-		inline constexpr std::array<REL::Offset, 1> CombatViewControllerGlance{ REL::Offset(0x04471B08) };
-		inline constexpr std::array<REL::Offset, 1> CombatViewControllerPath{ REL::Offset(0x04471BC8) };
-		inline constexpr std::array<REL::Offset, 1> CombatViewControllerStandard{ REL::Offset(0x04471B48) };
-		inline constexpr std::array<REL::Offset, 1> CommandEffect{ REL::Offset(0x044C3160) };
-		inline constexpr std::array<REL::Offset, 1> CommandSummonedEffect{ REL::Offset(0x044C3258) };
-		inline constexpr std::array<REL::Offset, 1> CompactingStore__MoveCallback{ REL::Offset(0x0456C100) };
-		inline constexpr std::array<REL::Offset, 1> CompactingStore__NoopMoveCallback{ REL::Offset(0x0456C118) };
-		inline constexpr std::array<REL::Offset, 1> CompressedArchiveFile{ REL::Offset(0x045B2840) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteBoundObjectFormFactory_TESFlora_46_21_3_{ REL::Offset(0x03EF9BC8) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteBoundObjectFormFactory_TESFurniture_47_22_3_{ REL::Offset(0x03EFAF80) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteBoundObjectFormFactory_TESNPC_50_13_0_{ REL::Offset(0x03F266F0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteBoundObjectFormFactory_TESObjectARMO_34_1_1_{ REL::Offset(0x03F26690) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteBoundObjectFormFactory_TESObjectCONT_36_3_3_{ REL::Offset(0x03F26740) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteBoundObjectFormFactory_TESObjectWEAP_48_12_1_{ REL::Offset(0x03EF92A8) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteExplosionFactory_ChainExplosion_1_{ REL::Offset(0x03F24BD0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteExplosionFactory_Explosion_0_{ REL::Offset(0x03F24BE8) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactoryAcceptsFormID_TESObjectCELL_73_{ REL::Offset(0x03EFAB00) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_ActorValueInfo_109_{ REL::Offset(0x03EF87A0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_AlchemyItem_54_{ REL::Offset(0x03F26B70) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSAVMData_212_{ REL::Offset(0x03EF9088) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSAcousticSpace_20_{ REL::Offset(0x03F299A8) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSAction_7_{ REL::Offset(0x03F28E80) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSAddonNode_108_{ REL::Offset(0x03EF9D18) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSAffinityEvent_14_{ REL::Offset(0x03F27DC0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSAimAssistModel_148_{ REL::Offset(0x03EFA3B0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSAimAssistPoseData_177_{ REL::Offset(0x03F289A8) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSAimDownSightModel_153_{ REL::Offset(0x03EFA620) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSAimModel_147_{ REL::Offset(0x03EFB820) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSAimOpticalSightModel_194_{ REL::Offset(0x03EFB268) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSAmbienceSet_195_{ REL::Offset(0x03F29D30) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSArtObject_139_{ REL::Offset(0x03EF9620) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSAssociationType_137_{ REL::Offset(0x03F28C90) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSAtmosphere_173_{ REL::Offset(0x03EFB020) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSAttractionRule_157_{ REL::Offset(0x03EF8A48) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSAudioOcclusionPrimitive_21_{ REL::Offset(0x03EFBB60) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSBendableSpline_60_{ REL::Offset(0x03EFB640) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSBiomeMarkerObject_56_{ REL::Offset(0x03F26E40) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSBiome_160_{ REL::Offset(0x03F27A18) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSBodyPartData_107_{ REL::Offset(0x03F29268) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSBoneModifier_184_{ REL::Offset(0x03F273C8) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSCameraPath_111_{ REL::Offset(0x03EFAA50) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSCameraShot_110_{ REL::Offset(0x03EFC1B0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSChallengeForm_214_{ REL::Offset(0x03F26AC0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSCloudForm_204_{ REL::Offset(0x03F28FC0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSCollisionLayer_143_{ REL::Offset(0x03F2A350) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSColorForm_144_{ REL::Offset(0x03EFB1A0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSConditionForm_188_{ REL::Offset(0x03EF91E0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSConstructibleObject_151_{ REL::Offset(0x03F29D80) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSCurve3DForm_33_{ REL::Offset(0x03EFAE80) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSCurveForm_32_{ REL::Offset(0x03EFC0B0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSDamageType_11_{ REL::Offset(0x03F27BC8) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSDebris_102_{ REL::Offset(0x03F29868) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSDialogueBranch_129_{ REL::Offset(0x03EF8D00) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSDualCastData_142_{ REL::Offset(0x03F29FE0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSEffectSequenceForm_201_{ REL::Offset(0x03F28AB0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSEquipSlot_134_{ REL::Offset(0x03F28440) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSExplosion_101_{ REL::Offset(0x03EF9E38) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSFogVolumeForm_205_{ REL::Offset(0x03EF8D50) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSFootstepSet_125_{ REL::Offset(0x03F29E40) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSFootstep_124_{ REL::Offset(0x03EFB070) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSForceData_199_{ REL::Offset(0x03F27050) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSFormFolderKeywordList_5_{ REL::Offset(0x03EF94D8) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSGenericBaseFormTemplate_64_{ REL::Offset(0x03F26B20) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSGenericBaseForm_65_{ REL::Offset(0x03EFA898) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSGroundCover_168_{ REL::Offset(0x03EF9400) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSHazard_59_{ REL::Offset(0x03F29118) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSHeadPart_15_{ REL::Offset(0x03F27578) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSIdleMarker_55_{ REL::Offset(0x03F2A2B0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSImpactDataSet_115_{ REL::Offset(0x03F28D80) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSImpactData_114_{ REL::Offset(0x03F27778) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSInstanceNamingRules_154_{ REL::Offset(0x03F27E78) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSKeyword_4_{ REL::Offset(0x03EFBEB0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSLayeredMaterialSwap_198_{ REL::Offset(0x03F27328) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSLegendaryItem_207_{ REL::Offset(0x03F27428) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSLensFlare_162_{ REL::Offset(0x03EFAAB0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSLevGenericBaseForm_66_{ REL::Offset(0x03EFAB50) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSLevPackIn_52_{ REL::Offset(0x03F29958) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSLevSpaceCell_174_{ REL::Offset(0x03F28908) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSLightingTemplate_122_{ REL::Offset(0x03F287B0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSListForm_105_{ REL::Offset(0x03F29728) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSLocationRefType_6_{ REL::Offset(0x03EFA400) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSLocation_117_{ REL::Offset(0x03EF87F0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSMaterialPathForm_203_{ REL::Offset(0x03F292B8) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSMaterialType_113_{ REL::Offset(0x03EFAD78) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSMeleeAimAssistModel_149_{ REL::Offset(0x03EF8618) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSMessage_118_{ REL::Offset(0x03EF9180) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSMod__Attachment__Mod_152_{ REL::Offset(0x03F28958) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSMorphableObject_169_{ REL::Offset(0x03EF8B30) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSMovableStatic_44_{ REL::Offset(0x03F28120) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSMovementType_141_{ REL::Offset(0x03EF9C38) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSMusicTrackFormWrapper_130_{ REL::Offset(0x03F27C28) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSMusicType_123_{ REL::Offset(0x03EFC150) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSNote_57_{ REL::Offset(0x03F29218) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSObjectSwap_172_{ REL::Offset(0x03EFA340) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSOutfit_138_{ REL::Offset(0x03EFB0D0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSPackIn_43_{ REL::Offset(0x03F2A4C8) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSParticleSystemDefineCollection_208_{ REL::Offset(0x03F27178) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSPerk_106_{ REL::Offset(0x03F27CC8) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSPhotoModeFeature_210_{ REL::Offset(0x03F296D8) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSPlanetContentManagerBranchNode_189_{ REL::Offset(0x03EFB2C8) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSPlanetContentManagerContentNode_190_{ REL::Offset(0x03EFB128) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSPlanetContentManagerTree_183_{ REL::Offset(0x03EFB6E8) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSPlanet__PlanetData_186_{ REL::Offset(0x03EF86C0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSProjectedDecal_26_{ REL::Offset(0x03F29448) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSProjectile_58_{ REL::Offset(0x03F26FF0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSReferenceGroup_146_{ REL::Offset(0x03EF9878) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSRelationship_135_{ REL::Offset(0x03EF9F88) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSResearchProjectForm_193_{ REL::Offset(0x03EF90D8) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSResourceGenerationData_171_{ REL::Offset(0x03F28A60) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSResource_159_{ REL::Offset(0x03EFA6D0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSReverbParameters_145_{ REL::Offset(0x03F2A080) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSScene_136_{ REL::Offset(0x03F271C8) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSSecondaryDamageList_202_{ REL::Offset(0x03EFB770) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSShaderParticleGeometryData_70_{ REL::Offset(0x03EF8750) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSSnapBehavior_185_{ REL::Offset(0x03F2A300) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSSnapTemplateNode_166_{ REL::Offset(0x03F27F80) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSSnapTemplate_167_{ REL::Offset(0x03EFBCF0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSSoundEcho_19_{ REL::Offset(0x03F28BA0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSSoundKeywordMapping_155_{ REL::Offset(0x03EFBA40) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSSoundTagSet_158_{ REL::Offset(0x03F27220) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSSpeechChallengeObject_175_{ REL::Offset(0x03EF9B28) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSStaticCollection_42_{ REL::Offset(0x03EF9248) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSStoryManagerBranchNode_126_{ REL::Offset(0x03F283A0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSStoryManagerEventNode_128_{ REL::Offset(0x03F2A3A0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSStoryManagerQuestNode_127_{ REL::Offset(0x03F26C98) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSSurface__Block_179_{ REL::Offset(0x03EF8E68) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSSurface__PatternStyle_197_{ REL::Offset(0x03EF8840) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSSurface__Pattern_181_{ REL::Offset(0x03F28C40) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSSurface__Tree_182_{ REL::Offset(0x03EF8F10) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSTalkingActivator_31_{ REL::Offset(0x03F26DF0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSTerminalMenu_200_{ REL::Offset(0x03F26CE8) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSTerminal_62_{ REL::Offset(0x03EF9320) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSTextureSet_9_{ REL::Offset(0x03F27A70) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSTimeOfDayData_211_{ REL::Offset(0x03EFC010) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSTransform_8_{ REL::Offset(0x03F28020) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSTraversal_170_{ REL::Offset(0x03F29908) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSVoiceType_112_{ REL::Offset(0x03F27618) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSVolumetricLighting_178_{ REL::Offset(0x043B7B30) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSWeaponBarrelModel_196_{ REL::Offset(0x03F2A120) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSWeatherSettingsForm_68_{ REL::Offset(0x03F29070) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSWwiseEventForm_192_{ REL::Offset(0x03F27100) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BGSWwiseKeywordMapping_206_{ REL::Offset(0x03F29CE0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BSGalaxy__BGSStar_191_{ REL::Offset(0x03EF9598) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_BSGalaxy__BGSSunPresetForm_209_{ REL::Offset(0x03EF8B98) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_EffectSetting_23_{ REL::Offset(0x03EF9020) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_EnchantmentItem_27_{ REL::Offset(0x03EFB200) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_IngredientItem_38_{ REL::Offset(0x03EFA7E8) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_NavMesh_87_{ REL::Offset(0x03F286A8) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_Script_24_{ REL::Offset(0x03EFAED0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_ScrollItem_29_{ REL::Offset(0x03EFB9F0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_SpellItem_28_{ REL::Offset(0x03F275C8) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_TESAmmo_49_{ REL::Offset(0x03EFA2F0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_TESClass_12_{ REL::Offset(0x03F272D8) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_TESClimate_69_{ REL::Offset(0x03EF98D0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_TESCombatStyle_94_{ REL::Offset(0x03F28ED0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_TESDataHandlerPersistentCreatedUtil__BGSPersistentIDsForm_213_{ REL::Offset(
-			0x03EFB870) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_TESEffectShader_99_{ REL::Offset(0x03EFBFC0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_TESEyes_16_{ REL::Offset(0x03F28E20) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_TESFaction_13_{ REL::Offset(0x03EFB940) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_TESFlora_46_{ REL::Offset(0x03EFBA90) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_TESFurniture_47_{ REL::Offset(0x03EF9128) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_TESGlobal_10_{ REL::Offset(0x03F29358) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_TESGrass_45_{ REL::Offset(0x03F288B8) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_TESIdleForm_92_{ REL::Offset(0x03EFA088) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_TESImageSpaceModifier_104_{ REL::Offset(0x03EFAD18) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_TESImageSpace_103_{ REL::Offset(0x03F293F8) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_TESKey_53_{ REL::Offset(0x03F2A210) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_TESLandTexture_25_{ REL::Offset(0x03F28760) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_TESLevCharacter_51_{ REL::Offset(0x03F29010) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_TESLevItem_63_{ REL::Offset(0x03EFA5A8) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_TESLevSpell_96_{ REL::Offset(0x03EFAC60) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_TESLoadScreen_95_{ REL::Offset(0x03F27528) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_TESNPC_50_{ REL::Offset(0x03EFB368) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_TESObjectACTI_30_{ REL::Offset(0x03F298B8) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_TESObjectANIO_97_{ REL::Offset(0x03F29178) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_TESObjectARMA_116_{ REL::Offset(0x03F274D8) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_TESObjectARMO_34_{ REL::Offset(0x03EF99D8) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_TESObjectBOOK_35_{ REL::Offset(0x03F297C8) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_TESObjectCELL_73_{ REL::Offset(0x03EFA148) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_TESObjectCONT_36_{ REL::Offset(0x03F28B00) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_TESObjectDOOR_37_{ REL::Offset(0x03EFB580) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_TESObjectLIGH_39_{ REL::Offset(0x03EFBCA0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_TESObjectMISC_40_{ REL::Offset(0x03F27728) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_TESObjectSTAT_41_{ REL::Offset(0x03EF9E88) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_TESObjectWEAP_48_{ REL::Offset(0x03EFAC00) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_TESQuest_91_{ REL::Offset(0x03F29688) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_TESRace_17_{ REL::Offset(0x03EFBBB0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_TESRegion_71_{ REL::Offset(0x03F29630) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_TESShout_133_{ REL::Offset(0x03F2A1C0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_TESSoulGem_61_{ REL::Offset(0x03F270B0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_TESSound_18_{ REL::Offset(0x03F293A8) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_TESTopicInfo_90_{ REL::Offset(0x03F29F90) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_TESTopic_89_{ REL::Offset(0x03F27920) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_TESWaterForm_98_{ REL::Offset(0x03EFBF50) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_TESWeather_67_{ REL::Offset(0x03EF9398) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_TESWordOfPower_132_{ REL::Offset(0x03EF9670) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteFormFactory_TESWorldSpace_86_{ REL::Offset(0x03EF9930) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactoryAcceptsFormID_BGSLocation_117_72_7_{ REL::Offset(0x03EF9A78) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_ActorValueInfo_109_120_4_{ REL::Offset(0x03EFA990) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_AlchemyItem_54_17_2_{ REL::Offset(0x03F27818) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSAcousticSpace_20_65_8_{ REL::Offset(0x03F27878) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSAction_7_77_0_{ REL::Offset(0x03F290C8) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSAddonNode_108_41_6_{ REL::Offset(0x03F28F20) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSAffinityEvent_14_54_5_{ REL::Offset(0x03EFB530) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSAimAssistModel_148_108_1_{ REL::Offset(0x03F2A030) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSAimAssistPoseData_177_144_1_{ REL::Offset(0x03F295D8) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSAimDownSightModel_153_110_1_{ REL::Offset(0x03EFA8E8) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSAimModel_147_107_1_{ REL::Offset(0x03F28818) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSAimOpticalSightModel_194_111_1_{ REL::Offset(0x03F29BD8) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSAmbienceSet_195_162_8_{ REL::Offset(0x03EF9538) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSArtObject_139_85_6_{ REL::Offset(0x03F29C28) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSAssociationType_137_83_5_{ REL::Offset(0x03F286F8) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSAtmosphere_173_136_7_{ REL::Offset(0x03EF8E10) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSAttractionRule_157_121_4_{ REL::Offset(0x03EFA838) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSAudioOcclusionPrimitive_21_180_8_{ REL::Offset(0x03F283F0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSBendableSpline_60_104_4_{ REL::Offset(0x03F27E10) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSBiomeMarkerObject_56_159_3_{ REL::Offset(0x03EFA0F0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSBiome_160_126_7_{ REL::Offset(0x03F28D30) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSBodyPartData_107_40_0_{ REL::Offset(0x03EF8EC0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSBoneModifier_184_151_5_{ REL::Offset(0x03EF8BF0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSCameraShot_110_43_6_{ REL::Offset(0x03F27F18) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSChallengeForm_214_184_4_{ REL::Offset(0x03EF8DB0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSCloudForm_204_172_7_{ REL::Offset(0x03F29818) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSCollisionLayer_143_97_4_{ REL::Offset(0x03EFC060) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSColorForm_144_99_4_{ REL::Offset(0x03F28868) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSConditionForm_188_154_4_{ REL::Offset(0x03F28490) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSConstructibleObject_151_64_1_{ REL::Offset(0x03F28650) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSCurve3DForm_33_143_4_{ REL::Offset(0x03EF9CA8) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSCurveForm_32_142_4_{ REL::Offset(0x03F26EF0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSDamageType_11_119_4_{ REL::Offset(0x03F294E8) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSDebris_102_36_6_{ REL::Offset(0x03EF96D0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSDualCastData_142_95_2_{ REL::Offset(0x03EF9ED8) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSEffectSequenceForm_201_168_6_{ REL::Offset(0x03EF8C90) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSEquipSlot_134_82_5_{ REL::Offset(0x03F28238) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSExplosion_101_34_6_{ REL::Offset(0x03EF9FD8) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSFogVolumeForm_205_173_7_{ REL::Offset(0x03F28CE0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSFootstepSet_125_75_6_{ REL::Offset(0x03EF8F70) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSFootstep_124_74_6_{ REL::Offset(0x03EFB318) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSForceData_199_166_6_{ REL::Offset(0x03F282F0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSFormFolderKeywordList_5_178_4_{ REL::Offset(0x03EF89F8) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSGenericBaseFormTemplate_64_127_9_{ REL::Offset(0x03F29778) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSGenericBaseForm_65_128_9_{ REL::Offset(0x03F278C8) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSGroundCover_168_130_7_{ REL::Offset(0x03F27D20) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSHazard_59_93_6_{ REL::Offset(0x03EF89A0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSHeadPart_15_52_5_{ REL::Offset(0x03EFB8D8) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSIdleMarker_55_30_4_{ REL::Offset(0x03EF9988) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSImpactDataSet_115_45_6_{ REL::Offset(0x03EFA238) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSImpactData_114_44_6_{ REL::Offset(0x03EF9AC8) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSInstanceNamingRules_154_116_4_{ REL::Offset(0x03F284E0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSKeyword_4_71_4_{ REL::Offset(0x03EFAF28) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSLayeredMaterialSwap_198_165_4_{ REL::Offset(0x03EFA4F0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSLegendaryItem_207_175_1_{ REL::Offset(0x03F29B38) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSLensFlare_162_123_6_{ REL::Offset(0x03F29F30) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSLevGenericBaseForm_66_137_9_{ REL::Offset(0x03EFA488) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSLevPackIn_52_102_4_{ REL::Offset(0x03EFB5E0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSLevSpaceCell_174_139_4_{ REL::Offset(0x03F285E8) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSLightingTemplate_122_88_7_{ REL::Offset(0x03F28F70) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSListForm_105_38_4_{ REL::Offset(0x03EF8950) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSLocationRefType_6_73_7_{ REL::Offset(0x03F29498) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSMaterialPathForm_203_170_4_{ REL::Offset(0x03F28080) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSMaterialType_113_76_6_{ REL::Offset(0x03F27AC0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSMeleeAimAssistModel_149_109_1_{ REL::Offset(0x03EFA288) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSMessage_118_63_4_{ REL::Offset(0x03EFACB0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSMod__Attachment__Mod_152_113_1_{ REL::Offset(0x03F27478) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSMorphableObject_169_129_5_{ REL::Offset(0x03F28BF0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSMovableStatic_44_42_3_{ REL::Offset(0x03F26F40) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSMovementType_141_92_5_{ REL::Offset(0x03F277C8) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSMusicTrackFormWrapper_130_78_8_{ REL::Offset(0x03F26EA0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSMusicType_123_69_8_{ REL::Offset(0x03EFBD50) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSNote_57_55_1_{ REL::Offset(0x03EF9828) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSObjectSwap_172_135_7_{ REL::Offset(0x03F299F8) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSOutfit_138_84_1_{ REL::Offset(0x03F27678) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSPackIn_43_101_3_{ REL::Offset(0x03EF85C8) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSParticleSystemDefineCollection_208_177_6_{ REL::Offset(0x03F29E90) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSPerk_106_39_0_{ REL::Offset(0x03F29EE0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSPhotoModeFeature_210_181_4_{ REL::Offset(0x03F28188) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSPlanetContentManagerTree_183_150_7_{ REL::Offset(0x03F26D88) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSPlanet__PlanetData_186_153_7_{ REL::Offset(0x03EFBE00) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSProjectedDecal_26_171_3_{ REL::Offset(0x03EF9DE8) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSProjectile_58_32_6_{ REL::Offset(0x03F29588) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSRelationship_135_81_5_{ REL::Offset(0x03EFABB0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSResearchProjectForm_193_161_1_{ REL::Offset(0x03F28DD0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSResourceGenerationData_171_134_7_{ REL::Offset(0x03EF8FD0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSResource_159_125_7_{ REL::Offset(0x03EFA1E8) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSReverbParameters_145_100_8_{ REL::Offset(0x03F27B60) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSSecondaryDamageList_202_169_4_{ REL::Offset(0x03EFBF00) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSShaderParticleGeometryData_70_89_6_{ REL::Offset(0x03EFBC00) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSSnapBehavior_185_152_4_{ REL::Offset(0x03EF9B78) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSSnapTemplateNode_166_132_4_{ REL::Offset(0x03F29538) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSSnapTemplate_167_133_4_{ REL::Offset(0x03F29A48) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSSoundEcho_19_138_8_{ REL::Offset(0x03EFA770) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSSoundKeywordMapping_155_117_8_{ REL::Offset(0x03EFAE30) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSSoundTagSet_158_122_8_{ REL::Offset(0x03EFB468) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSSpeechChallengeObject_175_140_5_{ REL::Offset(0x03F26FA0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSStaticCollection_42_70_3_{ REL::Offset(0x03EF8890) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSStoryManagerEventNode_128_94_5_{ REL::Offset(0x03F29DD0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSSurface__Block_179_146_7_{ REL::Offset(0x03F28530) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSSurface__PatternStyle_197_164_7_{ REL::Offset(0x03EFBC50) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSSurface__Pattern_181_148_7_{ REL::Offset(0x03EF8668) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSSurface__Tree_182_149_7_{ REL::Offset(0x03EFC100) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSTalkingActivator_31_33_0_{ REL::Offset(0x03F27378) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSTerminalMenu_200_167_7_{ REL::Offset(0x03EFA548) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSTerminal_62_118_3_{ REL::Offset(0x03EFA198) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSTextureSet_9_35_4_{ REL::Offset(0x03EF88F0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSTimeOfDayData_211_182_7_{ REL::Offset(0x03EFBAE0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSTransform_8_115_4_{ REL::Offset(0x03EFA670) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSTraversal_170_131_4_{ REL::Offset(0x03F26BD8) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSVoiceType_112_48_5_{ REL::Offset(0x03F291C8) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSVolumetricLighting_178_145_6_{ REL::Offset(0x043B7B98) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSWeaponBarrelModel_196_163_1_{ REL::Offset(0x03F29C90) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSWeatherSettingsForm_68_176_7_{ REL::Offset(0x03F2A260) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSWwiseEventForm_192_158_8_{ REL::Offset(0x03F26C28) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BGSWwiseKeywordMapping_206_174_8_{ REL::Offset(0x03F28288) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BSGalaxy__BGSStar_191_155_7_{ REL::Offset(0x03F29B88) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_BSGalaxy__BGSSunPresetForm_209_179_7_{ REL::Offset(0x03F27B10) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_EffectSetting_23_68_2_{ REL::Offset(0x03F27970) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_EnchantmentItem_27_16_2_{ REL::Offset(0x03F26D38) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_IngredientItem_38_5_1_{ REL::Offset(0x03F2A170) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_Script_24_67_10_{ REL::Offset(0x03F28580) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_ScrollItem_29_98_10_{ REL::Offset(0x03F276C8) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_SpellItem_28_15_2_{ REL::Offset(0x03F280D0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_TESAmmo_49_20_1_{ REL::Offset(0x03EFADC8) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_TESClass_12_49_5_{ REL::Offset(0x03F29308) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_TESClimate_69_57_7_{ REL::Offset(0x03EFB418) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_TESCombatStyle_94_25_0_{ REL::Offset(0x03EF8AB8) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_TESEffectShader_99_31_6_{ REL::Offset(0x03F29A98) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_TESEyes_16_51_10_{ REL::Offset(0x03EFB698) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_TESFaction_13_53_5_{ REL::Offset(0x03F27D70) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_TESGlobal_10_59_4_{ REL::Offset(0x03EFB998) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_TESGrass_45_9_3_{ REL::Offset(0x03EF9460) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_TESImageSpaceModifier_104_61_6_{ REL::Offset(0x03EFB4D0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_TESImageSpace_103_60_6_{ REL::Offset(0x03EF97D0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_TESKey_53_19_1_{ REL::Offset(0x03F27C78) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_TESLandTexture_25_24_7_{ REL::Offset(0x03EFB3C8) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_TESLevCharacter_51_14_0_{ REL::Offset(0x03F27288) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_TESLevItem_63_18_1_{ REL::Offset(0x03EFBDB0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_TESLevSpell_96_27_2_{ REL::Offset(0x03F28340) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_TESLoadScreen_95_26_4_{ REL::Offset(0x03EF9F28) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_TESObjectACTI_30_0_3_{ REL::Offset(0x03EFA9F0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_TESObjectANIO_97_28_4_{ REL::Offset(0x03F29AE8) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_TESObjectARMA_116_58_1_{ REL::Offset(0x03EFBE50) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_TESObjectBOOK_35_2_1_{ REL::Offset(0x03EF9780) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_TESObjectDOOR_37_4_3_{ REL::Offset(0x03EF9D88) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_TESObjectLIGH_39_6_3_{ REL::Offset(0x03EFA940) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_TESObjectMISC_40_7_1_{ REL::Offset(0x03F281D8) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_TESObjectSTAT_41_8_3_{ REL::Offset(0x03EFAFD0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_TESQuest_91_46_5_{ REL::Offset(0x03F2A0D0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_TESRace_17_50_5_{ REL::Offset(0x03EF9A28) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_TESShout_133_80_10_{ REL::Offset(0x03F279C8) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_TESSoulGem_61_96_10_{ REL::Offset(0x03F27EC8) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_TESSound_18_23_8_{ REL::Offset(0x03EFA028) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_TESWaterForm_98_29_7_{ REL::Offset(0x03F27FD0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_TESWeather_67_56_7_{ REL::Offset(0x03EFB7C0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_TESWordOfPower_132_79_10_{ REL::Offset(0x03F28A10) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteObjectFormFactory_TESWorldSpace_86_183_3_{ REL::Offset(0x03F28B50) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteTempEffectFactory_BSTempEffectGeometryDecal_3_{ REL::Offset(0x03F15390) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteTempEffectFactory_BSTempEffectSPG_6_{ REL::Offset(0x03F15420) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteTempEffectFactory_BSTempEffectScreenSpaceDecal_2_{ REL::Offset(0x03F153F0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteTempEffectFactory_BSTempEffect_1_{ REL::Offset(0x03F15378) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteTempEffectFactory_BSTempEffect_4_{ REL::Offset(0x03F15360) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteTempEffectFactory_BSTempEffect_5_{ REL::Offset(0x03F15348) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteTempEffectFactory_BSTempEffect_7_{ REL::Offset(0x03F15330) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteTempEffectFactory_BSTerrainEffect_0_{ REL::Offset(0x03F15408) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteTempEffectFactory_ModelReferenceEffect_9_{ REL::Offset(0x03F15438) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteTempEffectFactory_ReferenceEffect_8_{ REL::Offset(0x03F153A8) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteTempEffectFactory_ShaderReferenceEffect_10_{ REL::Offset(0x03F153C0) };
-		inline constexpr std::array<REL::Offset, 1> ConcreteTempEffectFactory_SummonPlacementEffect_11_{ REL::Offset(0x03F153D8) };
-		inline constexpr std::array<REL::Offset, 1> ConditionVariable{ REL::Offset(0x045675A8) };
+		inline constexpr std::array<REL::Offset, 1>  CombatSuppressiveFireBehavior{ REL::Offset(0x04471930) };
+		inline constexpr std::array<REL::Offset, 1>  CombatTargetLocation{ REL::Offset(0x044F8910) };
+		inline constexpr std::array<REL::Offset, 1>  CombatTargetLocationSearch{ REL::Offset(0x044F88E0) };
+		inline constexpr std::array<REL::Offset, 1>  CombatTargetLocationSearchResult{ REL::Offset(0x044F8940) };
+		inline constexpr std::array<REL::Offset, 1>  CombatTargetSelector{ REL::Offset(0x044F8B68) };
+		inline constexpr std::array<REL::Offset, 1>  CombatTargetSelectorFixed{ REL::Offset(0x044F8C08) };
+		inline constexpr std::array<REL::Offset, 1>  CombatTargetSelectorPreferred{ REL::Offset(0x044F8AA8) };
+		inline constexpr std::array<REL::Offset, 1>  CombatTargetSelectorRandom{ REL::Offset(0x044F8BB8) };
+		inline constexpr std::array<REL::Offset, 1>  CombatTargetSelectorSpaceship{ REL::Offset(0x044F8C58) };
+		inline constexpr std::array<REL::Offset, 1>  CombatTargetSelectorStandard{ REL::Offset(0x044F8B08) };
+		inline constexpr std::array<REL::Offset, 1>  CombatTargetSelectorWorkshopObject{ REL::Offset(0x044F8A58) };
+		inline constexpr std::array<REL::Offset, 1>  CombatThreat{ REL::Offset(0x044F8ED0) };
+		inline constexpr std::array<REL::Offset, 1>  CombatThreatExplosion{ REL::Offset(0x044F8D30) };
+		inline constexpr std::array<REL::Offset, 1>  CombatThreatLOF{ REL::Offset(0x044F8D98) };
+		inline constexpr std::array<REL::Offset, 1>  CombatThreatMelee{ REL::Offset(0x044F8E68) };
+		inline constexpr std::array<REL::Offset, 1>  CombatThreatProjectile{ REL::Offset(0x044F8E00) };
+		inline constexpr std::array<REL::Offset, 1>  CombatTrackTargetAimController{ REL::Offset(0x044F0808) };
+		inline constexpr std::array<REL::Offset, 1>  CombatTunnelPathController{ REL::Offset(0x044719F8) };
+		inline constexpr std::array<REL::Offset, 1>  CombatTunnelPathingRequestData{ REL::Offset(0x04471A58) };
+		inline constexpr std::array<REL::Offset, 1>  CombatViewController{ REL::Offset(0x04471B88) };
+		inline constexpr std::array<REL::Offset, 1>  CombatViewControllerGlance{ REL::Offset(0x04471B08) };
+		inline constexpr std::array<REL::Offset, 1>  CombatViewControllerPath{ REL::Offset(0x04471BC8) };
+		inline constexpr std::array<REL::Offset, 1>  CombatViewControllerStandard{ REL::Offset(0x04471B48) };
+		inline constexpr std::array<REL::Offset, 1>  CommandEffect{ REL::Offset(0x044C3160) };
+		inline constexpr std::array<REL::Offset, 1>  CommandSummonedEffect{ REL::Offset(0x044C3258) };
+		inline constexpr std::array<REL::Offset, 1>  CompactingStore__MoveCallback{ REL::Offset(0x0456C100) };
+		inline constexpr std::array<REL::Offset, 1>  CompactingStore__NoopMoveCallback{ REL::Offset(0x0456C118) };
+		inline constexpr std::array<REL::Offset, 1>  CompressedArchiveFile{ REL::Offset(0x045B2840) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteBoundObjectFormFactory_TESFlora_46_21_3_{ REL::Offset(0x03EF9BC8) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteBoundObjectFormFactory_TESFurniture_47_22_3_{ REL::Offset(0x03EFAF80) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteBoundObjectFormFactory_TESNPC_50_13_0_{ REL::Offset(0x03F266F0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteBoundObjectFormFactory_TESObjectARMO_34_1_1_{ REL::Offset(0x03F26690) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteBoundObjectFormFactory_TESObjectCONT_36_3_3_{ REL::Offset(0x03F26740) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteBoundObjectFormFactory_TESObjectWEAP_48_12_1_{ REL::Offset(0x03EF92A8) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteExplosionFactory_ChainExplosion_1_{ REL::Offset(0x03F24BD0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteExplosionFactory_Explosion_0_{ REL::Offset(0x03F24BE8) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactoryAcceptsFormID_TESObjectCELL_73_{ REL::Offset(0x03EFAB00) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_ActorValueInfo_109_{ REL::Offset(0x03EF87A0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_AlchemyItem_54_{ REL::Offset(0x03F26B70) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSAVMData_212_{ REL::Offset(0x03EF9088) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSAcousticSpace_20_{ REL::Offset(0x03F299A8) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSAction_7_{ REL::Offset(0x03F28E80) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSAddonNode_108_{ REL::Offset(0x03EF9D18) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSAffinityEvent_14_{ REL::Offset(0x03F27DC0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSAimAssistModel_148_{ REL::Offset(0x03EFA3B0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSAimAssistPoseData_177_{ REL::Offset(0x03F289A8) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSAimDownSightModel_153_{ REL::Offset(0x03EFA620) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSAimModel_147_{ REL::Offset(0x03EFB820) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSAimOpticalSightModel_194_{ REL::Offset(0x03EFB268) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSAmbienceSet_195_{ REL::Offset(0x03F29D30) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSArtObject_139_{ REL::Offset(0x03EF9620) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSAssociationType_137_{ REL::Offset(0x03F28C90) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSAtmosphere_173_{ REL::Offset(0x03EFB020) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSAttractionRule_157_{ REL::Offset(0x03EF8A48) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSAudioOcclusionPrimitive_21_{ REL::Offset(0x03EFBB60) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSBendableSpline_60_{ REL::Offset(0x03EFB640) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSBiomeMarkerObject_56_{ REL::Offset(0x03F26E40) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSBiome_160_{ REL::Offset(0x03F27A18) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSBodyPartData_107_{ REL::Offset(0x03F29268) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSBoneModifier_184_{ REL::Offset(0x03F273C8) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSCameraPath_111_{ REL::Offset(0x03EFAA50) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSCameraShot_110_{ REL::Offset(0x03EFC1B0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSChallengeForm_214_{ REL::Offset(0x03F26AC0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSCloudForm_204_{ REL::Offset(0x03F28FC0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSCollisionLayer_143_{ REL::Offset(0x03F2A350) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSColorForm_144_{ REL::Offset(0x03EFB1A0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSConditionForm_188_{ REL::Offset(0x03EF91E0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSConstructibleObject_151_{ REL::Offset(0x03F29D80) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSCurve3DForm_33_{ REL::Offset(0x03EFAE80) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSCurveForm_32_{ REL::Offset(0x03EFC0B0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSDamageType_11_{ REL::Offset(0x03F27BC8) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSDebris_102_{ REL::Offset(0x03F29868) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSDialogueBranch_129_{ REL::Offset(0x03EF8D00) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSDualCastData_142_{ REL::Offset(0x03F29FE0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSEffectSequenceForm_201_{ REL::Offset(0x03F28AB0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSEquipSlot_134_{ REL::Offset(0x03F28440) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSExplosion_101_{ REL::Offset(0x03EF9E38) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSFogVolumeForm_205_{ REL::Offset(0x03EF8D50) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSFootstepSet_125_{ REL::Offset(0x03F29E40) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSFootstep_124_{ REL::Offset(0x03EFB070) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSForceData_199_{ REL::Offset(0x03F27050) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSFormFolderKeywordList_5_{ REL::Offset(0x03EF94D8) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSGenericBaseFormTemplate_64_{ REL::Offset(0x03F26B20) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSGenericBaseForm_65_{ REL::Offset(0x03EFA898) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSGroundCover_168_{ REL::Offset(0x03EF9400) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSHazard_59_{ REL::Offset(0x03F29118) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSHeadPart_15_{ REL::Offset(0x03F27578) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSIdleMarker_55_{ REL::Offset(0x03F2A2B0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSImpactDataSet_115_{ REL::Offset(0x03F28D80) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSImpactData_114_{ REL::Offset(0x03F27778) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSInstanceNamingRules_154_{ REL::Offset(0x03F27E78) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSKeyword_4_{ REL::Offset(0x03EFBEB0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSLayeredMaterialSwap_198_{ REL::Offset(0x03F27328) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSLegendaryItem_207_{ REL::Offset(0x03F27428) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSLensFlare_162_{ REL::Offset(0x03EFAAB0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSLevGenericBaseForm_66_{ REL::Offset(0x03EFAB50) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSLevPackIn_52_{ REL::Offset(0x03F29958) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSLevSpaceCell_174_{ REL::Offset(0x03F28908) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSLightingTemplate_122_{ REL::Offset(0x03F287B0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSListForm_105_{ REL::Offset(0x03F29728) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSLocationRefType_6_{ REL::Offset(0x03EFA400) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSLocation_117_{ REL::Offset(0x03EF87F0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSMaterialPathForm_203_{ REL::Offset(0x03F292B8) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSMaterialType_113_{ REL::Offset(0x03EFAD78) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSMeleeAimAssistModel_149_{ REL::Offset(0x03EF8618) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSMessage_118_{ REL::Offset(0x03EF9180) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSMod__Attachment__Mod_152_{ REL::Offset(0x03F28958) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSMorphableObject_169_{ REL::Offset(0x03EF8B30) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSMovableStatic_44_{ REL::Offset(0x03F28120) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSMovementType_141_{ REL::Offset(0x03EF9C38) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSMusicTrackFormWrapper_130_{ REL::Offset(0x03F27C28) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSMusicType_123_{ REL::Offset(0x03EFC150) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSNote_57_{ REL::Offset(0x03F29218) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSObjectSwap_172_{ REL::Offset(0x03EFA340) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSOutfit_138_{ REL::Offset(0x03EFB0D0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSPackIn_43_{ REL::Offset(0x03F2A4C8) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSParticleSystemDefineCollection_208_{ REL::Offset(0x03F27178) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSPerk_106_{ REL::Offset(0x03F27CC8) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSPhotoModeFeature_210_{ REL::Offset(0x03F296D8) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSPlanetContentManagerBranchNode_189_{ REL::Offset(0x03EFB2C8) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSPlanetContentManagerContentNode_190_{ REL::Offset(0x03EFB128) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSPlanetContentManagerTree_183_{ REL::Offset(0x03EFB6E8) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSPlanet__PlanetData_186_{ REL::Offset(0x03EF86C0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSProjectedDecal_26_{ REL::Offset(0x03F29448) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSProjectile_58_{ REL::Offset(0x03F26FF0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSReferenceGroup_146_{ REL::Offset(0x03EF9878) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSRelationship_135_{ REL::Offset(0x03EF9F88) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSResearchProjectForm_193_{ REL::Offset(0x03EF90D8) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSResourceGenerationData_171_{ REL::Offset(0x03F28A60) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSResource_159_{ REL::Offset(0x03EFA6D0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSReverbParameters_145_{ REL::Offset(0x03F2A080) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSScene_136_{ REL::Offset(0x03F271C8) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSSecondaryDamageList_202_{ REL::Offset(0x03EFB770) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSShaderParticleGeometryData_70_{ REL::Offset(0x03EF8750) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSSnapBehavior_185_{ REL::Offset(0x03F2A300) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSSnapTemplateNode_166_{ REL::Offset(0x03F27F80) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSSnapTemplate_167_{ REL::Offset(0x03EFBCF0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSSoundEcho_19_{ REL::Offset(0x03F28BA0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSSoundKeywordMapping_155_{ REL::Offset(0x03EFBA40) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSSoundTagSet_158_{ REL::Offset(0x03F27220) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSSpeechChallengeObject_175_{ REL::Offset(0x03EF9B28) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSStaticCollection_42_{ REL::Offset(0x03EF9248) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSStoryManagerBranchNode_126_{ REL::Offset(0x03F283A0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSStoryManagerEventNode_128_{ REL::Offset(0x03F2A3A0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSStoryManagerQuestNode_127_{ REL::Offset(0x03F26C98) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSSurface__Block_179_{ REL::Offset(0x03EF8E68) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSSurface__PatternStyle_197_{ REL::Offset(0x03EF8840) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSSurface__Pattern_181_{ REL::Offset(0x03F28C40) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSSurface__Tree_182_{ REL::Offset(0x03EF8F10) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSTalkingActivator_31_{ REL::Offset(0x03F26DF0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSTerminalMenu_200_{ REL::Offset(0x03F26CE8) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSTerminal_62_{ REL::Offset(0x03EF9320) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSTextureSet_9_{ REL::Offset(0x03F27A70) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSTimeOfDayData_211_{ REL::Offset(0x03EFC010) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSTransform_8_{ REL::Offset(0x03F28020) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSTraversal_170_{ REL::Offset(0x03F29908) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSVoiceType_112_{ REL::Offset(0x03F27618) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSVolumetricLighting_178_{ REL::Offset(0x043B7B30) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSWeaponBarrelModel_196_{ REL::Offset(0x03F2A120) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSWeatherSettingsForm_68_{ REL::Offset(0x03F29070) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSWwiseEventForm_192_{ REL::Offset(0x03F27100) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BGSWwiseKeywordMapping_206_{ REL::Offset(0x03F29CE0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BSGalaxy__BGSStar_191_{ REL::Offset(0x03EF9598) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_BSGalaxy__BGSSunPresetForm_209_{ REL::Offset(0x03EF8B98) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_EffectSetting_23_{ REL::Offset(0x03EF9020) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_EnchantmentItem_27_{ REL::Offset(0x03EFB200) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_IngredientItem_38_{ REL::Offset(0x03EFA7E8) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_NavMesh_87_{ REL::Offset(0x03F286A8) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_Script_24_{ REL::Offset(0x03EFAED0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_ScrollItem_29_{ REL::Offset(0x03EFB9F0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_SpellItem_28_{ REL::Offset(0x03F275C8) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_TESAmmo_49_{ REL::Offset(0x03EFA2F0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_TESClass_12_{ REL::Offset(0x03F272D8) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_TESClimate_69_{ REL::Offset(0x03EF98D0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_TESCombatStyle_94_{ REL::Offset(0x03F28ED0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_TESDataHandlerPersistentCreatedUtil__BGSPersistentIDsForm_213_{ REL::Offset(
+            0x03EFB870) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_TESEffectShader_99_{ REL::Offset(0x03EFBFC0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_TESEyes_16_{ REL::Offset(0x03F28E20) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_TESFaction_13_{ REL::Offset(0x03EFB940) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_TESFlora_46_{ REL::Offset(0x03EFBA90) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_TESFurniture_47_{ REL::Offset(0x03EF9128) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_TESGlobal_10_{ REL::Offset(0x03F29358) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_TESGrass_45_{ REL::Offset(0x03F288B8) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_TESIdleForm_92_{ REL::Offset(0x03EFA088) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_TESImageSpaceModifier_104_{ REL::Offset(0x03EFAD18) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_TESImageSpace_103_{ REL::Offset(0x03F293F8) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_TESKey_53_{ REL::Offset(0x03F2A210) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_TESLandTexture_25_{ REL::Offset(0x03F28760) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_TESLevCharacter_51_{ REL::Offset(0x03F29010) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_TESLevItem_63_{ REL::Offset(0x03EFA5A8) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_TESLevSpell_96_{ REL::Offset(0x03EFAC60) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_TESLoadScreen_95_{ REL::Offset(0x03F27528) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_TESNPC_50_{ REL::Offset(0x03EFB368) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_TESObjectACTI_30_{ REL::Offset(0x03F298B8) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_TESObjectANIO_97_{ REL::Offset(0x03F29178) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_TESObjectARMA_116_{ REL::Offset(0x03F274D8) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_TESObjectARMO_34_{ REL::Offset(0x03EF99D8) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_TESObjectBOOK_35_{ REL::Offset(0x03F297C8) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_TESObjectCELL_73_{ REL::Offset(0x03EFA148) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_TESObjectCONT_36_{ REL::Offset(0x03F28B00) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_TESObjectDOOR_37_{ REL::Offset(0x03EFB580) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_TESObjectLIGH_39_{ REL::Offset(0x03EFBCA0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_TESObjectMISC_40_{ REL::Offset(0x03F27728) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_TESObjectSTAT_41_{ REL::Offset(0x03EF9E88) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_TESObjectWEAP_48_{ REL::Offset(0x03EFAC00) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_TESQuest_91_{ REL::Offset(0x03F29688) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_TESRace_17_{ REL::Offset(0x03EFBBB0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_TESRegion_71_{ REL::Offset(0x03F29630) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_TESShout_133_{ REL::Offset(0x03F2A1C0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_TESSoulGem_61_{ REL::Offset(0x03F270B0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_TESSound_18_{ REL::Offset(0x03F293A8) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_TESTopicInfo_90_{ REL::Offset(0x03F29F90) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_TESTopic_89_{ REL::Offset(0x03F27920) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_TESWaterForm_98_{ REL::Offset(0x03EFBF50) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_TESWeather_67_{ REL::Offset(0x03EF9398) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_TESWordOfPower_132_{ REL::Offset(0x03EF9670) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteFormFactory_TESWorldSpace_86_{ REL::Offset(0x03EF9930) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactoryAcceptsFormID_BGSLocation_117_72_7_{ REL::Offset(0x03EF9A78) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_ActorValueInfo_109_120_4_{ REL::Offset(0x03EFA990) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_AlchemyItem_54_17_2_{ REL::Offset(0x03F27818) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSAcousticSpace_20_65_8_{ REL::Offset(0x03F27878) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSAction_7_77_0_{ REL::Offset(0x03F290C8) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSAddonNode_108_41_6_{ REL::Offset(0x03F28F20) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSAffinityEvent_14_54_5_{ REL::Offset(0x03EFB530) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSAimAssistModel_148_108_1_{ REL::Offset(0x03F2A030) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSAimAssistPoseData_177_144_1_{ REL::Offset(0x03F295D8) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSAimDownSightModel_153_110_1_{ REL::Offset(0x03EFA8E8) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSAimModel_147_107_1_{ REL::Offset(0x03F28818) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSAimOpticalSightModel_194_111_1_{ REL::Offset(0x03F29BD8) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSAmbienceSet_195_162_8_{ REL::Offset(0x03EF9538) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSArtObject_139_85_6_{ REL::Offset(0x03F29C28) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSAssociationType_137_83_5_{ REL::Offset(0x03F286F8) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSAtmosphere_173_136_7_{ REL::Offset(0x03EF8E10) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSAttractionRule_157_121_4_{ REL::Offset(0x03EFA838) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSAudioOcclusionPrimitive_21_180_8_{ REL::Offset(0x03F283F0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSBendableSpline_60_104_4_{ REL::Offset(0x03F27E10) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSBiomeMarkerObject_56_159_3_{ REL::Offset(0x03EFA0F0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSBiome_160_126_7_{ REL::Offset(0x03F28D30) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSBodyPartData_107_40_0_{ REL::Offset(0x03EF8EC0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSBoneModifier_184_151_5_{ REL::Offset(0x03EF8BF0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSCameraShot_110_43_6_{ REL::Offset(0x03F27F18) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSChallengeForm_214_184_4_{ REL::Offset(0x03EF8DB0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSCloudForm_204_172_7_{ REL::Offset(0x03F29818) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSCollisionLayer_143_97_4_{ REL::Offset(0x03EFC060) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSColorForm_144_99_4_{ REL::Offset(0x03F28868) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSConditionForm_188_154_4_{ REL::Offset(0x03F28490) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSConstructibleObject_151_64_1_{ REL::Offset(0x03F28650) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSCurve3DForm_33_143_4_{ REL::Offset(0x03EF9CA8) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSCurveForm_32_142_4_{ REL::Offset(0x03F26EF0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSDamageType_11_119_4_{ REL::Offset(0x03F294E8) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSDebris_102_36_6_{ REL::Offset(0x03EF96D0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSDualCastData_142_95_2_{ REL::Offset(0x03EF9ED8) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSEffectSequenceForm_201_168_6_{ REL::Offset(0x03EF8C90) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSEquipSlot_134_82_5_{ REL::Offset(0x03F28238) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSExplosion_101_34_6_{ REL::Offset(0x03EF9FD8) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSFogVolumeForm_205_173_7_{ REL::Offset(0x03F28CE0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSFootstepSet_125_75_6_{ REL::Offset(0x03EF8F70) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSFootstep_124_74_6_{ REL::Offset(0x03EFB318) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSForceData_199_166_6_{ REL::Offset(0x03F282F0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSFormFolderKeywordList_5_178_4_{ REL::Offset(0x03EF89F8) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSGenericBaseFormTemplate_64_127_9_{ REL::Offset(0x03F29778) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSGenericBaseForm_65_128_9_{ REL::Offset(0x03F278C8) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSGroundCover_168_130_7_{ REL::Offset(0x03F27D20) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSHazard_59_93_6_{ REL::Offset(0x03EF89A0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSHeadPart_15_52_5_{ REL::Offset(0x03EFB8D8) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSIdleMarker_55_30_4_{ REL::Offset(0x03EF9988) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSImpactDataSet_115_45_6_{ REL::Offset(0x03EFA238) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSImpactData_114_44_6_{ REL::Offset(0x03EF9AC8) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSInstanceNamingRules_154_116_4_{ REL::Offset(0x03F284E0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSKeyword_4_71_4_{ REL::Offset(0x03EFAF28) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSLayeredMaterialSwap_198_165_4_{ REL::Offset(0x03EFA4F0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSLegendaryItem_207_175_1_{ REL::Offset(0x03F29B38) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSLensFlare_162_123_6_{ REL::Offset(0x03F29F30) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSLevGenericBaseForm_66_137_9_{ REL::Offset(0x03EFA488) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSLevPackIn_52_102_4_{ REL::Offset(0x03EFB5E0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSLevSpaceCell_174_139_4_{ REL::Offset(0x03F285E8) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSLightingTemplate_122_88_7_{ REL::Offset(0x03F28F70) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSListForm_105_38_4_{ REL::Offset(0x03EF8950) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSLocationRefType_6_73_7_{ REL::Offset(0x03F29498) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSMaterialPathForm_203_170_4_{ REL::Offset(0x03F28080) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSMaterialType_113_76_6_{ REL::Offset(0x03F27AC0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSMeleeAimAssistModel_149_109_1_{ REL::Offset(0x03EFA288) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSMessage_118_63_4_{ REL::Offset(0x03EFACB0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSMod__Attachment__Mod_152_113_1_{ REL::Offset(0x03F27478) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSMorphableObject_169_129_5_{ REL::Offset(0x03F28BF0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSMovableStatic_44_42_3_{ REL::Offset(0x03F26F40) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSMovementType_141_92_5_{ REL::Offset(0x03F277C8) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSMusicTrackFormWrapper_130_78_8_{ REL::Offset(0x03F26EA0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSMusicType_123_69_8_{ REL::Offset(0x03EFBD50) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSNote_57_55_1_{ REL::Offset(0x03EF9828) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSObjectSwap_172_135_7_{ REL::Offset(0x03F299F8) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSOutfit_138_84_1_{ REL::Offset(0x03F27678) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSPackIn_43_101_3_{ REL::Offset(0x03EF85C8) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSParticleSystemDefineCollection_208_177_6_{ REL::Offset(0x03F29E90) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSPerk_106_39_0_{ REL::Offset(0x03F29EE0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSPhotoModeFeature_210_181_4_{ REL::Offset(0x03F28188) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSPlanetContentManagerTree_183_150_7_{ REL::Offset(0x03F26D88) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSPlanet__PlanetData_186_153_7_{ REL::Offset(0x03EFBE00) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSProjectedDecal_26_171_3_{ REL::Offset(0x03EF9DE8) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSProjectile_58_32_6_{ REL::Offset(0x03F29588) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSRelationship_135_81_5_{ REL::Offset(0x03EFABB0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSResearchProjectForm_193_161_1_{ REL::Offset(0x03F28DD0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSResourceGenerationData_171_134_7_{ REL::Offset(0x03EF8FD0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSResource_159_125_7_{ REL::Offset(0x03EFA1E8) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSReverbParameters_145_100_8_{ REL::Offset(0x03F27B60) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSSecondaryDamageList_202_169_4_{ REL::Offset(0x03EFBF00) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSShaderParticleGeometryData_70_89_6_{ REL::Offset(0x03EFBC00) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSSnapBehavior_185_152_4_{ REL::Offset(0x03EF9B78) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSSnapTemplateNode_166_132_4_{ REL::Offset(0x03F29538) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSSnapTemplate_167_133_4_{ REL::Offset(0x03F29A48) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSSoundEcho_19_138_8_{ REL::Offset(0x03EFA770) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSSoundKeywordMapping_155_117_8_{ REL::Offset(0x03EFAE30) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSSoundTagSet_158_122_8_{ REL::Offset(0x03EFB468) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSSpeechChallengeObject_175_140_5_{ REL::Offset(0x03F26FA0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSStaticCollection_42_70_3_{ REL::Offset(0x03EF8890) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSStoryManagerEventNode_128_94_5_{ REL::Offset(0x03F29DD0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSSurface__Block_179_146_7_{ REL::Offset(0x03F28530) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSSurface__PatternStyle_197_164_7_{ REL::Offset(0x03EFBC50) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSSurface__Pattern_181_148_7_{ REL::Offset(0x03EF8668) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSSurface__Tree_182_149_7_{ REL::Offset(0x03EFC100) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSTalkingActivator_31_33_0_{ REL::Offset(0x03F27378) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSTerminalMenu_200_167_7_{ REL::Offset(0x03EFA548) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSTerminal_62_118_3_{ REL::Offset(0x03EFA198) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSTextureSet_9_35_4_{ REL::Offset(0x03EF88F0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSTimeOfDayData_211_182_7_{ REL::Offset(0x03EFBAE0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSTransform_8_115_4_{ REL::Offset(0x03EFA670) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSTraversal_170_131_4_{ REL::Offset(0x03F26BD8) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSVoiceType_112_48_5_{ REL::Offset(0x03F291C8) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSVolumetricLighting_178_145_6_{ REL::Offset(0x043B7B98) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSWeaponBarrelModel_196_163_1_{ REL::Offset(0x03F29C90) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSWeatherSettingsForm_68_176_7_{ REL::Offset(0x03F2A260) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSWwiseEventForm_192_158_8_{ REL::Offset(0x03F26C28) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BGSWwiseKeywordMapping_206_174_8_{ REL::Offset(0x03F28288) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BSGalaxy__BGSStar_191_155_7_{ REL::Offset(0x03F29B88) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_BSGalaxy__BGSSunPresetForm_209_179_7_{ REL::Offset(0x03F27B10) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_EffectSetting_23_68_2_{ REL::Offset(0x03F27970) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_EnchantmentItem_27_16_2_{ REL::Offset(0x03F26D38) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_IngredientItem_38_5_1_{ REL::Offset(0x03F2A170) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_Script_24_67_10_{ REL::Offset(0x03F28580) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_ScrollItem_29_98_10_{ REL::Offset(0x03F276C8) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_SpellItem_28_15_2_{ REL::Offset(0x03F280D0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_TESAmmo_49_20_1_{ REL::Offset(0x03EFADC8) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_TESClass_12_49_5_{ REL::Offset(0x03F29308) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_TESClimate_69_57_7_{ REL::Offset(0x03EFB418) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_TESCombatStyle_94_25_0_{ REL::Offset(0x03EF8AB8) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_TESEffectShader_99_31_6_{ REL::Offset(0x03F29A98) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_TESEyes_16_51_10_{ REL::Offset(0x03EFB698) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_TESFaction_13_53_5_{ REL::Offset(0x03F27D70) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_TESGlobal_10_59_4_{ REL::Offset(0x03EFB998) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_TESGrass_45_9_3_{ REL::Offset(0x03EF9460) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_TESImageSpaceModifier_104_61_6_{ REL::Offset(0x03EFB4D0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_TESImageSpace_103_60_6_{ REL::Offset(0x03EF97D0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_TESKey_53_19_1_{ REL::Offset(0x03F27C78) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_TESLandTexture_25_24_7_{ REL::Offset(0x03EFB3C8) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_TESLevCharacter_51_14_0_{ REL::Offset(0x03F27288) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_TESLevItem_63_18_1_{ REL::Offset(0x03EFBDB0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_TESLevSpell_96_27_2_{ REL::Offset(0x03F28340) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_TESLoadScreen_95_26_4_{ REL::Offset(0x03EF9F28) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_TESObjectACTI_30_0_3_{ REL::Offset(0x03EFA9F0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_TESObjectANIO_97_28_4_{ REL::Offset(0x03F29AE8) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_TESObjectARMA_116_58_1_{ REL::Offset(0x03EFBE50) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_TESObjectBOOK_35_2_1_{ REL::Offset(0x03EF9780) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_TESObjectDOOR_37_4_3_{ REL::Offset(0x03EF9D88) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_TESObjectLIGH_39_6_3_{ REL::Offset(0x03EFA940) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_TESObjectMISC_40_7_1_{ REL::Offset(0x03F281D8) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_TESObjectSTAT_41_8_3_{ REL::Offset(0x03EFAFD0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_TESQuest_91_46_5_{ REL::Offset(0x03F2A0D0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_TESRace_17_50_5_{ REL::Offset(0x03EF9A28) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_TESShout_133_80_10_{ REL::Offset(0x03F279C8) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_TESSoulGem_61_96_10_{ REL::Offset(0x03F27EC8) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_TESSound_18_23_8_{ REL::Offset(0x03EFA028) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_TESWaterForm_98_29_7_{ REL::Offset(0x03F27FD0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_TESWeather_67_56_7_{ REL::Offset(0x03EFB7C0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_TESWordOfPower_132_79_10_{ REL::Offset(0x03F28A10) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteObjectFormFactory_TESWorldSpace_86_183_3_{ REL::Offset(0x03F28B50) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteTempEffectFactory_BSTempEffectGeometryDecal_3_{ REL::Offset(0x03F15390) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteTempEffectFactory_BSTempEffectSPG_6_{ REL::Offset(0x03F15420) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteTempEffectFactory_BSTempEffectScreenSpaceDecal_2_{ REL::Offset(0x03F153F0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteTempEffectFactory_BSTempEffect_1_{ REL::Offset(0x03F15378) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteTempEffectFactory_BSTempEffect_4_{ REL::Offset(0x03F15360) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteTempEffectFactory_BSTempEffect_5_{ REL::Offset(0x03F15348) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteTempEffectFactory_BSTempEffect_7_{ REL::Offset(0x03F15330) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteTempEffectFactory_BSTerrainEffect_0_{ REL::Offset(0x03F15408) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteTempEffectFactory_ModelReferenceEffect_9_{ REL::Offset(0x03F15438) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteTempEffectFactory_ReferenceEffect_8_{ REL::Offset(0x03F153A8) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteTempEffectFactory_ShaderReferenceEffect_10_{ REL::Offset(0x03F153C0) };
+		inline constexpr std::array<REL::Offset, 1>  ConcreteTempEffectFactory_SummonPlacementEffect_11_{ REL::Offset(0x03F153D8) };
+		inline constexpr std::array<REL::Offset, 1>  ConditionVariable{ REL::Offset(0x045675A8) };
 		inline constexpr std::array<REL::Offset, 11> ConeProjectile{ REL::Offset(0x044E92F0), REL::Offset(0x044E9DE0), REL::Offset(0x044E9DF0),
-			                                                         REL::Offset(0x044E9E58), REL::Offset(0x044E9E70), REL::Offset(0x044E9E88),
-			                                                         REL::Offset(0x044E9EA0), REL::Offset(0x044E9EB8), REL::Offset(0x044E9ED0),
-			                                                         REL::Offset(0x044E9EE8), REL::Offset(0x044E9F08) };
+			REL::Offset(0x044E9E58), REL::Offset(0x044E9E70), REL::Offset(0x044E9E88),
+			REL::Offset(0x044E9EA0), REL::Offset(0x044E9EB8), REL::Offset(0x044E9ED0),
+			REL::Offset(0x044E9EE8), REL::Offset(0x044E9F08) };
 		inline constexpr std::array<REL::Offset, 1>  ConfigurableLODData_3_2_{ REL::Offset(0x043919B8) };
 		inline constexpr std::array<REL::Offset, 1>  ConfigurableLODData_3_3_{ REL::Offset(0x043531E0) };
 		inline constexpr std::array<REL::Offset, 1>  ConfigurableLODData_4_2_{ REL::Offset(0x04391988) };
@@ -25747,10 +25747,10 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  ConsoleLog{ REL::Offset(0x0451C3D0) };
 		inline constexpr std::array<REL::Offset, 3>  ConsoleNativeUIMenu{ REL::Offset(0x0451C400), REL::Offset(0x0451C4E0), REL::Offset(0x0451C4F8) };
 		inline constexpr std::array<REL::Offset, 13> ContainerMenu{ REL::Offset(0x0451CB58), REL::Offset(0x0451CBB0), REL::Offset(0x0451CC90),
-			                                                        REL::Offset(0x0451CCA8), REL::Offset(0x0451CCC0), REL::Offset(0x0451CCD8),
-			                                                        REL::Offset(0x0451CCF0), REL::Offset(0x0451CD08), REL::Offset(0x0451CD20),
-			                                                        REL::Offset(0x0451CD38), REL::Offset(0x0451CD50), REL::Offset(0x0451CD68),
-			                                                        REL::Offset(0x0451CD80) };
+			REL::Offset(0x0451CCA8), REL::Offset(0x0451CCC0), REL::Offset(0x0451CCD8),
+			REL::Offset(0x0451CCF0), REL::Offset(0x0451CD08), REL::Offset(0x0451CD20),
+			REL::Offset(0x0451CD38), REL::Offset(0x0451CD50), REL::Offset(0x0451CD68),
+			REL::Offset(0x0451CD80) };
 		inline constexpr std::array<REL::Offset, 2>  ContainerMenuDataModel{ REL::Offset(0x0447DC38), REL::Offset(0x0447DC50) };
 		inline constexpr std::array<REL::Offset, 1>  ContainerMenuDataModel__ContainerMenuEventShuttle{ REL::Offset(0x0447DC78) };
 		inline constexpr std::array<REL::Offset, 1>  ContainerMenu_CloseMenu{ REL::Offset(0x0451CB10) };
@@ -25772,7 +25772,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  CraftingInfoCardDataModel{ REL::Offset(0x04487468) };
 		inline constexpr std::array<REL::Offset, 1>  CraftingInfoCardDataModel__CraftingItemInfoCardEventShuttle{ REL::Offset(0x04487968) };
 		inline constexpr std::array<REL::Offset, 4>  CraftingMenuCommon{ REL::Offset(0x0447EF60), REL::Offset(0x0447EFC8), REL::Offset(0x0447EFE0),
-                                                                        REL::Offset(0x0447EFF8) };
+            REL::Offset(0x0447EFF8) };
 		inline constexpr std::array<REL::Offset, 1>  CraftingMenu_CraftItem{ REL::Offset(0x0447EF00) };
 		inline constexpr std::array<REL::Offset, 1>  CraftingMenu_ExitBench{ REL::Offset(0x0447EDD0) };
 		inline constexpr std::array<REL::Offset, 1>  CraftingMenu_Highlight3D{ REL::Offset(0x044BF990) };
@@ -25799,8 +25799,8 @@ namespace RE
 			CreationRendererPrivate__ApiAbstractionLayer__BindlessArrayT_CreationRendererPrivate__ApiAbstractionLayer__Buffer_{ REL::Offset(
 				0x045C2678) };
 		inline constexpr std::array<REL::Offset, 1>
-			CreationRendererPrivate__ApiAbstractionLayer__BindlessArrayT_CreationRendererPrivate__ApiAbstractionLayer__Texture_{ REL::Offset(
-				0x045C2690) };
+													CreationRendererPrivate__ApiAbstractionLayer__BindlessArrayT_CreationRendererPrivate__ApiAbstractionLayer__Texture_{ REL::Offset(
+                0x045C2690) };
 		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ApiAbstractionLayer__BindlessBufferArrayDx12{ REL::Offset(0x045C4EB0) };
 		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ApiAbstractionLayer__BindlessSubBufferAllocator{ REL::Offset(
 			0x04763B80) };
@@ -26187,329 +26187,329 @@ namespace RE
 			CreationRendererPrivate__Messaging__Dependency__Detail__CreateResourceNode__lambda_e9a38263804fe4e608b99e5a311f29c8__BSResource2__DBHandle_BSResource2__TEntryTraits_0_CreationRendererPrivate__MaterialDB__LayerDB__DBTraits_BSResource2__DBDefaultStreamPolicy___CreationRendererPrivate__MaterialDB__MaterialLayer_CreationRendererPrivate__MaterialDB__MaterialUVStream_{
 				REL::Offset(0x045B3728)
 			};
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__Messaging__Dependency__GeneralDependencyNode{ REL::Offset(0x045B32C8) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__Messaging__Dependency__InternalProcessorType{ REL::Offset(0x045B9E18) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__MomentBasedOITRenderAdditiveTransparencyRenderPass{ REL::Offset(
-			0x04764508) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__MomentBasedOITRenderMomentsRenderPass{ REL::Offset(0x04764598) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__MomentBasedOITRenderPass{ REL::Offset(0x045C2380) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__MomentBasedOITRenderTransparencyRenderPass{ REL::Offset(0x04764550) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__MorphDB{ REL::Offset(0x04764B80) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__MorphRenderPass{ REL::Offset(0x047696F0) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__MorphSystemEndFrameRenderPass{ REL::Offset(0x045C6E20) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__MotionBlurMaxTileVelocityRenderPass{ REL::Offset(0x04776710) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__MotionBlurRenderPass{ REL::Offset(0x0476C430) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__MotionBlurSubGraph{ REL::Offset(0x0476C478) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__MotionVectorCompositeRenderPass{ REL::Offset(0x04769738) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__MultiscatteringIntegrationStepRenderPass{ REL::Offset(0x04763468) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__PartialClearColorBufferRenderPass{ REL::Offset(0x04767728) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ParticleComputeLightingLevel0RenderPass{ REL::Offset(0x045BF578) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ParticleComputeLightingLevel1RenderPass{ REL::Offset(0x045BF528) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ParticleComputeLightingLevel2RenderPass{ REL::Offset(0x045BF4D8) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ParticleComputeLightingLevel3RenderPass{ REL::Offset(0x045BF488) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ParticleDataPreFilterRenderPass{ REL::Offset(0x045BF3A8) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ParticleLightingClearBuffersRenderPass{ REL::Offset(0x045BF360) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ParticleLightingGenerateIndirectBufferRenderPass{ REL::Offset(
-			0x045BF440) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ParticleLightingRenderPass{ REL::Offset(0x045BF300) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ParticlesCopyToDestRenderPass{ REL::Offset(0x04766350) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ParticlesCorrectionRenderPass{ REL::Offset(0x047664B8) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ParticlesMainFullResRenderPass{ REL::Offset(0x04766230) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ParticlesMainHalfResRenderPass{ REL::Offset(0x04766290) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ParticlesMomentBasedOITRenderMomentsRenderPass{ REL::Offset(
-			0x04766518) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ParticlesMomentBasedOITRenderTransparencyRenderPass{ REL::Offset(
-			0x047663F8) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ParticlesRenderPass{ REL::Offset(0x04766458) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__PointCloudCullingRenderPass{ REL::Offset(0x04769780) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__PointCloudDrawRenderPass{ REL::Offset(0x047697C8) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__PointCloudEventHandler{ REL::Offset(0x045C0140) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__PostSharpenRenderPass{ REL::Offset(0x04777048) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__PostUpscaleImageSpaceSubGraph{ REL::Offset(0x04776780) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__PostUpscaleSubGraph{ REL::Offset(0x04776840) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__PreUpscaleImageSpaceSubGraph{ REL::Offset(0x047767E0) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__PrecomputeAtmosphericScatteringDataRenderPass{ REL::Offset(0x04763408) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__PrecomputeAtmosphericScatteringTransmittanceRenderPass{ REL::Offset(
-			0x04762A48) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__PrecomputeNetDensityToAtmTopRenderPass{ REL::Offset(0x047636C0) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__PrecomputePerlinNoise3DRenderPass{ REL::Offset(0x0476C870) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__PrecomputeSingleScatteringRenderPass{ REL::Offset(0x04763678) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__PrefilterCubemapRenderPass{ REL::Offset(0x045BD650) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__PrepareAtmosphericScatteringRenderPass{ REL::Offset(0x045C6E68) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__PrepareFirstPersonSkinningRenderPass{ REL::Offset(0x045C6488) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__PrepareProjectedDecalsRenderPass{ REL::Offset(0x047699C8) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__PrepareReflectionProbeDataRenderPass{ REL::Offset(0x0476A630) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__PrepareShadowSkinningRenderPass{ REL::Offset(0x0476ABA8) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__PrepareSkinningRenderPass{ REL::Offset(0x0476B6E8) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__PrepareSkyCubemapCelestialBodiesRenderPass{ REL::Offset(0x045C7DF0) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__PrepareSkyCubemapRenderPass{ REL::Offset(0x045C6440) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ProbeClassifyRenderPass{ REL::Offset(0x045C1E78) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ProbeCoarseLightCullingCompactionRenderPass{ REL::Offset(0x045C1DE8) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ProbeCoarseLightCullingRenderPass{ REL::Offset(0x045C1DA0) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ProbeFaceSceneSetupRenderPass{ REL::Offset(0x0476A1B0) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ProbeGridGPUCullingRenderPass{ REL::Offset(0x04764040) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ProbeLightCullingRenderPass{ REL::Offset(0x045C1BD8) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ProbeRenderPass{ REL::Offset(0x045C1C20) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ProbeSystemRenderPass{ REL::Offset(0x045C1C80) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ProduceAndClearHeightfieldRenderPass{ REL::Offset(0x04765E70) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ProduceMomentBasedOITForwardHalfResTargetRenderPass{ REL::Offset(
-			0x045C2500) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ProduceMomentBasedOITParticleTargetsHalfResRenderPass{ REL::Offset(
-			0x045C24B8) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ProduceMomentBasedOITTargetsAlwaysFullResRenderPass{ REL::Offset(
-			0x045C2470) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ProduceMomentBasedOITTargetsHalfResRenderPass{ REL::Offset(0x045C2428) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ProduceMomentBasedOITTargetsRenderPass{ REL::Offset(0x045C23E0) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ProduceSceneDebugBuffersSubGraphRenderPass{ REL::Offset(0x045C66F8) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ProduceShadingRateImageRenderPass{ REL::Offset(0x04769858) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ProduceShadowMapCullingResourcesRenderPass{ REL::Offset(0x04769E98) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ProduceShadowMaskFrustumRenderPass{ REL::Offset(0x047765F0) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ProduceThinGBufferResourcesRenderPass{ REL::Offset(0x0476A168) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ProjectedDecalRenderPass{ REL::Offset(0x04769920) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__RadialBlurRenderPass{ REL::Offset(0x04769AE0) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__RayTraceProbeComputeRenderPass{ REL::Offset(0x045C1D10) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__RayTraceProbeNonRandomRaysComputeRenderPass{ REL::Offset(0x045C1D58) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__RaymarchSampleLocationsRenderPass{ REL::Offset(0x04762F98) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__RaymarchShadowedSampleLocationsRenderPass{ REL::Offset(0x04762F50) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__RaymarchUsingMinMaxShadowMapRenderPass{ REL::Offset(0x04762F08) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ReflectionProbeBlendingSubGraphRenderPass{ REL::Offset(0x0476A308) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ReflectionProbeComputeSHRenderPass{ REL::Offset(0x0476A5E8) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ReflectionProbeCopyDepth{ REL::Offset(0x04769F28) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ReflectionProbeCopySky{ REL::Offset(0x04769EE0) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ReflectionProbeFaceSubGraphRenderPass{ REL::Offset(0x0476A500) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ReflectionProbeLightCoarseCullingCompactionRenderPass{ REL::Offset(
-			0x04769FB8) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ReflectionProbeLightCoarseCullingRenderPass{ REL::Offset(0x0476A120) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ReflectionProbeMipChainRenderPass{ REL::Offset(0x0476A260) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ReflectionProbeOcclusionCullingRenderPass{ REL::Offset(0x047765A8) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ReflectionProbePrefilterCubemapRenderPass{ REL::Offset(0x0476A1F8) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ReflectionProbeRenderPass{ REL::Offset(0x0476A458) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ReflectionProbeShadowMapSceneSetupRenderPass{ REL::Offset(0x0476A4B8) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ReflectionProbeTerrainRenderPass{ REL::Offset(0x0476A580) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__RefractionBlurRenderPass{ REL::Offset(0x047673A0) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__RefractionDownsample0RenderPass{ REL::Offset(0x047673E8) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__RefractionDownsampleMipChainRenderPass{ REL::Offset(0x04767358) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__RefractionMaskDilationRenderPass{ REL::Offset(0x04767268) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__RefractionMaskGenRenderPass{ REL::Offset(0x04767220) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__RefractionMaskRenderPass{ REL::Offset(0x04764370) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__RenderCoarseUnshadowedInscatteringRenderPass{ REL::Offset(0x04762FE0) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__RenderGraph{ REL::Offset(0x04761390) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__RenderGraphEventHandler{ REL::Offset(0x045BB870) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__RenderPass{ REL::Offset(0x047611C0) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__RenderSceneSubGraph{ REL::Offset(0x04776940) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__RenderSliceUVDirAndOriginRenderPass{ REL::Offset(0x04762EC0) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__RenderViewSubGraph{ REL::Offset(0x0476C718) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ReprojectShadingRateImageRenderPass{ REL::Offset(0x04769810) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ResetCullingMemoryRequestHandler{ REL::Offset(0x04761E28) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ResourceLifecycleJobSite{ REL::Offset(0x045C8468) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__SAOEmptyRenderPass{ REL::Offset(0x045BEB30) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__SAORenderPass{ REL::Offset(0x045BEAD0) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ScaleformCompositeRenderPass{ REL::Offset(0x0476A678) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ScaleformEventHandler{ REL::Offset(0x045C0500) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ScaleformRenderPass{ REL::Offset(0x047766C8) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ScaleformText2DRenderPass{ REL::Offset(0x045C7588) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ScaleformTextRenderPass{ REL::Offset(0x045C7540) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ScaleformToTextureRenderPass{ REL::Offset(0x04776680) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__SceneSetupRenderPass{ REL::Offset(0x045BAA60) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ScreenSizeBasedLOD____State__BalanceTextureLODs{ REL::Offset(
-			0x04760BB8) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ScreenSizeBasedLOD____State__CheckBudget{ REL::Offset(0x04760DD0) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ScreenSizeBasedLOD____State__DegradeMeshes{ REL::Offset(0x04760C00) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ScreenSizeBasedLOD____State__DegradeTextures{ REL::Offset(0x04760EF0) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ScreenSizeBasedLOD____State__GatherMaterials{ REL::Offset(0x04760F38) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ScreenSizeBasedLOD____State__MergeGPUReadback{ REL::Offset(0x04760D40) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ScreenSizeBasedLOD____State__ReduceMaterialsAndMeshes{ REL::Offset(
-			0x04760C90) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ScreenSizeBasedLOD____State__Reset{ REL::Offset(0x04760C48) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ScreenSizeBasedLOD____State__SortLODs{ REL::Offset(0x04760E18) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ScreenSizeBasedLOD____State__UpdateLODDetail{ REL::Offset(0x04760CD8) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ScreenSizeBasedLOD____State__UpdateTerrainTextureDetail{ REL::Offset(
-			0x04760D88) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ScreenSizeBasedLOD____State__UpgradeMeshes{ REL::Offset(0x04760E60) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ScreenSizeBasedLOD____State__UpgradeTextures{ REL::Offset(0x04760EA8) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__SeparableSSS_HorizontalRenderPass{ REL::Offset(0x0476A728) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__SeparableSSS_RenderPass{ REL::Offset(0x0476A7D8) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__SeparableSSS_VerticalRenderPass{ REL::Offset(0x0476A888) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__SetupAtmosphericScatteringBuffersRenderPass{ REL::Offset(0x04763360) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__SetupDynamicShadowRenderPass{ REL::Offset(0x0476AFF8) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ShadowManagerEventHandler{ REL::Offset(0x045C00F0) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ShadowMapInstanceRenderPass{ REL::Offset(0x0476AAD0) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ShadowMapRenderPass{ REL::Offset(0x0476A998) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ShadowMapSceneSetupRenderPass{ REL::Offset(0x0476AB60) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ShadowMapSubGraphRenderPass{ REL::Offset(0x0476A938) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ShadowMaskRenderPass{ REL::Offset(0x04776638) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ShadowSubGraphRenderPass{ REL::Offset(0x0476A9E0) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__SharedMeshResourcesRegistry{ REL::Offset(0x04763D90) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__SkinnedDecalPrepareRenderPass{ REL::Offset(0x0476B5C8) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__SkinningRenderPass{ REL::Offset(0x0476B658) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__SkinningSystemEndFrameRenderPass{ REL::Offset(0x045C7678) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__SkinningSystemRenderPass{ REL::Offset(0x045C76C0) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__SkyCubemapCelestialBodiesLightingRenderPass{ REL::Offset(0x045C7D28) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__SkyCubemapRenderPass{ REL::Offset(0x045C7D90) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__SkyCubemapSystemRenderPass{ REL::Offset(0x045C63F8) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__SkyLightingRenderPass{ REL::Offset(0x0476B790) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__SkyOcclusionGenerateSHRenderPass{ REL::Offset(0x04761688) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__SkyOcclusionRenderPass{ REL::Offset(0x04761760) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__SkyOcclusionSystemRenderPass{ REL::Offset(0x047617C0) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__SobelSpaceGlareRenderPass{ REL::Offset(0x045C7FD8) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__SpaceGlareApplyRenderPass{ REL::Offset(0x045C8068) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__SpaceGlareRenderPass{ REL::Offset(0x045C7F30) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__SparseGridCell{ REL::Offset(0x045C7398) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__SporadicRenderGraphRenderPass{ REL::Offset(0x0476B7D8) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__StarfieldCoarseCullingRenderPass{ REL::Offset(0x0476B970) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__StarfieldEventHandler{ REL::Offset(0x045BA458) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__StarfieldProcessStarsRenderPass{ REL::Offset(0x0476B9B8) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__StarfieldRenderPass{ REL::Offset(0x0476B8C8) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__StarfieldRenderPassBase{ REL::Offset(0x0476B928) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__StarfieldTiledCullingRenderPass{ REL::Offset(0x0476B880) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__StarfieldTiledRenderRenderPass{ REL::Offset(0x0476B838) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__StarmapGravityWavesEventHandler{ REL::Offset(0x045C03E8) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__StarmapGravityWavesRenderPass{ REL::Offset(0x045C0390) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__StarmapOrbitsEventHandler{ REL::Offset(0x045C02B8) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__StarmapOrbitsRenderPass{ REL::Offset(0x045C0270) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__SubmitAndPresentThread{ REL::Offset(0x045C4F00) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__SwapChainEventHandler{ REL::Offset(0x045BCB00) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__TemporalAA_idTech7RenderPass{ REL::Offset(0x047770D0) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__TerrainClipmapAndMIMRenderPass{ REL::Offset(0x045C64D0) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__TerrainClipmapUpdateRenderPass{ REL::Offset(0x045BBE60) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__TerrainDensityUpdateRenderPass{ REL::Offset(0x045BBCE0) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__TerrainDepthAndShadowsSubGraph{ REL::Offset(0x045BBD70) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__TerrainDepthDrawRenderPass{ REL::Offset(0x045BBD28) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__TerrainHeightFieldRenderPass{ REL::Offset(0x04765D98) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__TerrainMIMUpdateRenderPass{ REL::Offset(0x045BBC98) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__TerrainRenderPass{ REL::Offset(0x045BBC50) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__TerrainShadowsRenderPass{ REL::Offset(0x045BBE18) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__TerrainTileDescriptionUpdateRenderPass{ REL::Offset(0x045BBEA8) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__TextureReadback_CopyRenderTargetSourceRenderPass{ REL::Offset(
-			0x0476BA00) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ThinDeferredExteriorPixelCountRenderPass{ REL::Offset(0x0476A048) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ThinDeferredGBufferRenderPass{ REL::Offset(0x04769F70) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ThinDeferredLightingRenderPass{ REL::Offset(0x0476A000) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__ThinDeferredPrepareRenderPass{ REL::Offset(0x0476A3F0) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__TiledBinning_idTech7BinLightsRenderPass{ REL::Offset(0x04762830) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__TiledBinning_idTech7CacheIndirectLightingRenderPass{ REL::Offset(
-			0x047628C0) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__TiledBinning_idTech7ClipLightsRenderPass{ REL::Offset(0x04762710) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__TiledBinning_idTech7CoarseBinLightsRenderPass{ REL::Offset(0x047627A0) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__TiledBinning_idTech7CoarseIndirectArgsLightsRenderPass{ REL::Offset(
-			0x04762758) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__TiledBinning_idTech7IndirectArgsLightsRenderPass{ REL::Offset(
-			0x047627E8) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__TiledBinning_idTech7InitBuffersRenderPass{ REL::Offset(0x04762680) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__TiledBinning_idTech7RenderPass{ REL::Offset(0x04762950) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__TiledBinning_idTech7ResolveLightBinsRenderPass{ REL::Offset(
-			0x04762908) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__TiledBinning_idTech7SampleIndirectLightingRenderPass{ REL::Offset(
-			0x04762878) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__TiledBinning_idTech7TransformVerticesLightsRenderPass{ REL::Offset(
-			0x047626C8) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__TiledCullingRenderPass{ REL::Offset(0x0476BA90) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__TiledDeferredContactShadowsBlurXRenderPass{ REL::Offset(0x045BDAE0) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__TiledDeferredContactShadowsBlurYRenderPass{ REL::Offset(0x045BDA98) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__TiledDeferredContactShadowsRenderPass{ REL::Offset(0x045BDB28) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__TiledDeferredLightingDebugVisualizationRenderPass{ REL::Offset(
-			0x0476BBF8) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__TiledDeferredLightingPrepareRenderPass{ REL::Offset(0x0476BAD8) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__TiledDeferredLightingProcessLightsRenderPass{ REL::Offset(0x0476BB68) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__TiledDeferredLightingRecordIndirectArgsRenderPass{ REL::Offset(
-			0x0476BBB0) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__TiledDepthRangeRenderPass{ REL::Offset(0x0476BC40) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__TransparencyAwareShadowedScatteringRenderPass{ REL::Offset(0x04763798) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__UIRenderPass{ REL::Offset(0x0476BCC8) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__UnsortedForwardBlendedPostMBOITRenderPass{ REL::Offset(0x047645E0) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__UnsortedForwardBlendedPreMBOITRenderPass{ REL::Offset(0x04764628) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__UnwarpEpipolarSamplingRenderPass{ REL::Offset(0x04763708) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__UpdatePreviousDepthBufferRenderPass{ REL::Offset(0x045C6530) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__UpdateSharedIndexBufferRenderPass{ REL::Offset(0x0476BDB8) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__UpscaleSubGraph{ REL::Offset(0x045BB6E0) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__VignetteRenderPass{ REL::Offset(0x04777118) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__VolumetricLightingApplyRenderPass{ REL::Offset(0x045BFBC0) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__VolumetricLightingCullingRenderPass{ REL::Offset(0x0476BE00) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__VolumetricLightingDistantRaymarchRenderPass{ REL::Offset(0x0476BEA0) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__VolumetricLightingDistantTemporalFilteringRenderPass{ REL::Offset(
-			0x0476BF20) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__VolumetricLightingDownsampleDepthRenderPass{ REL::Offset(0x047648E0) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__VolumetricLightingGenerateMaterialVolumeRenderPass{ REL::Offset(
-			0x04764898) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__VolumetricLightingIntegrateRenderPass{ REL::Offset(0x0476BF68) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__VolumetricLightingNearSpatialFilteringRenderPass{ REL::Offset(
-			0x0476BFB0) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__VolumetricLightingNearTemporalFilteringRenderPass{ REL::Offset(
-			0x0476C028) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__VolumetricLightingProcessLightsRenderPass{ REL::Offset(0x0476C070) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__WaterDisplacementRenderPass{ REL::Offset(0x045BE430) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__WaterDisplacement_ConvertNormalsRenderPass{ REL::Offset(0x045BE3E8) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__WaterDisplacement_InjectionRenderPass{ REL::Offset(0x045BE4D8) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__WaterDisplacement_MainRenderPass{ REL::Offset(0x045BE3A0) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__WaterDisplacement_PlaceRipplesRenderPass{ REL::Offset(0x045BE490) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__WaterMVRenderPass{ REL::Offset(0x0476C338) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__WaterPrepareRenderPass{ REL::Offset(0x0476C380) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__WaterRenderGraphRenderPass{ REL::Offset(0x0476C2D8) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__WaterRenderPass{ REL::Offset(0x0476C3C8) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__WindowEventHandler{ REL::Offset(0x045BCAB8) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate__WorldCell{ REL::Offset(0x045C73D0) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate____BloomEmptyRenderPass{ REL::Offset(0x045C1958) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate____BloomPass{ REL::Offset(0x045C1910) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate____SAOCameraZAndMipsRenderPass{ REL::Offset(0x045BEA88) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate____SAODenoiseGTAORenderPass{ REL::Offset(0x045BE9F8) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate____SAORawAORenderPass{ REL::Offset(0x045BEA40) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate____ScaleformBeginRenderPass{ REL::Offset(0x0476BD70) };
-		inline constexpr std::array<REL::Offset, 1> CreationRendererPrivate____ScaleformEndRenderPass{ REL::Offset(0x0476BD28) };
-		inline constexpr std::array<REL::Offset, 1> CreationRenderer__ImageCaptureExportToFileNode{ REL::Offset(0x045B9D58) };
-		inline constexpr std::array<REL::Offset, 1> CreationRenderer__MaterialInstance__TextureVisitor{ REL::Offset(0x04371340) };
-		inline constexpr std::array<REL::Offset, 1> CreationRenderer__Messaging__MessageProcessor{ REL::Offset(0x045B9E30) };
-		inline constexpr std::array<REL::Offset, 1> CreationRenderer__Messaging__StreamedResourceNode{ REL::Offset(0x045C1090) };
-		inline constexpr std::array<REL::Offset, 1> CreationRenderer__RendererQualityPref{ REL::Offset(0x045BA570) };
-		inline constexpr std::array<REL::Offset, 1> CreationRenderer__RendererQualitySetting{ REL::Offset(0x03EF78F8) };
-		inline constexpr std::array<REL::Offset, 1> CreationRenderer__RendererQualitySettingCollection{ REL::Offset(0x045BA590) };
-		inline constexpr std::array<REL::Offset, 1> CreditsDataModel{ REL::Offset(0x04477A10) };
-		inline constexpr std::array<REL::Offset, 1> CreditsDataModel__CreditsDataModelEventShuttle{ REL::Offset(0x04477A38) };
-		inline constexpr std::array<REL::Offset, 3> CreditsMenu{ REL::Offset(0x0451CEC8), REL::Offset(0x0451CF20), REL::Offset(0x0451D000) };
-		inline constexpr std::array<REL::Offset, 1> CrewExtraData{ REL::Offset(0x04350F48) };
-		inline constexpr std::array<REL::Offset, 1> CriticallyDampenVariable{ REL::Offset(0x04568AA0) };
-		inline constexpr std::array<REL::Offset, 1> CriticallyDampenVariableInstance{ REL::Offset(0x04568A30) };
-		inline constexpr std::array<REL::Offset, 1> CrowdInhibitNullStrategy{ REL::Offset(0x044721E8) };
-		inline constexpr std::array<REL::Offset, 1> CrowdInhibitStrategyDefault{ REL::Offset(0x04472210) };
-		inline constexpr std::array<REL::Offset, 1> CrowdInhibitStrategyDisable{ REL::Offset(0x044721C0) };
-		inline constexpr std::array<REL::Offset, 7> CrowdManager{ REL::Offset(0x04472238), REL::Offset(0x04472250), REL::Offset(0x04472268),
-			                                                      REL::Offset(0x04472280), REL::Offset(0x04472298), REL::Offset(0x044722B0),
-			                                                      REL::Offset(0x044722C8) };
-		inline constexpr std::array<REL::Offset, 1> CrowdWallaBubble{ REL::Offset(0x04476748) };
-		inline constexpr std::array<REL::Offset, 1> CullFurnitureBoneHandler{ REL::Offset(0x044E35C0) };
-		inline constexpr std::array<REL::Offset, 1> CullWeaponsHandler{ REL::Offset(0x044E35F0) };
-		inline constexpr std::array<REL::Offset, 1> CumulativeAnimation{ REL::Offset(0x045688B0) };
-		inline constexpr std::array<REL::Offset, 1> CumulativeAnimationInstance{ REL::Offset(0x04568840) };
-		inline constexpr std::array<REL::Offset, 1> CureEffect{ REL::Offset(0x044C3350) };
-		inline constexpr std::array<REL::Offset, 5> CursorMenu{ REL::Offset(0x0458FC68), REL::Offset(0x0458FD40), REL::Offset(0x0458FD98),
-			                                                    REL::Offset(0x0458FDA8), REL::Offset(0x0458FDC0) };
-		inline constexpr std::array<REL::Offset, 3> CursorMenu__CursorGameEventShuttle{ REL::Offset(0x0458FEB0), REL::Offset(0x0458FEC8),
-			                                                                            REL::Offset(0x0458FEE0) };
-		inline constexpr std::array<REL::Offset, 1> CursorMoveEvent{ REL::Offset(0x0456C640) };
-		inline constexpr std::array<REL::Offset, 1> CurvedPathBlender{ REL::Offset(0x04565EC8) };
-		inline constexpr std::array<REL::Offset, 1> CurvedPathBlenderInstance{ REL::Offset(0x04567FA8) };
-		inline constexpr std::array<REL::Offset, 1> CustomActorPackageData{ REL::Offset(0x044E09E8) };
-		inline constexpr std::array<REL::Offset, 1> CustomUtils__HasForceGreetVisitor{ REL::Offset(0x0444D578) };
-		inline constexpr std::array<REL::Offset, 1> D3D12MA__BlockMetadata{ REL::Offset(0x04766750) };
-		inline constexpr std::array<REL::Offset, 1> D3D12MA__BlockMetadata_Generic{ REL::Offset(0x047667E0) };
-		inline constexpr std::array<REL::Offset, 1> D3D12MA__MemoryBlock{ REL::Offset(0x04766870) };
-		inline constexpr std::array<REL::Offset, 1> D3D12MA__NormalBlock{ REL::Offset(0x047667D0) };
-		inline constexpr std::array<REL::Offset, 1> DamageEffect{ REL::Offset(0x044C3448) };
-		inline constexpr std::array<REL::Offset, 1> DampenVariable{ REL::Offset(0x04569808) };
-		inline constexpr std::array<REL::Offset, 1> DampenVariableInstance{ REL::Offset(0x04569798) };
-		inline constexpr std::array<REL::Offset, 1> DarknessEffect{ REL::Offset(0x044C3580) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__Messaging__Dependency__GeneralDependencyNode{ REL::Offset(0x045B32C8) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__Messaging__Dependency__InternalProcessorType{ REL::Offset(0x045B9E18) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__MomentBasedOITRenderAdditiveTransparencyRenderPass{ REL::Offset(
+            0x04764508) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__MomentBasedOITRenderMomentsRenderPass{ REL::Offset(0x04764598) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__MomentBasedOITRenderPass{ REL::Offset(0x045C2380) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__MomentBasedOITRenderTransparencyRenderPass{ REL::Offset(0x04764550) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__MorphDB{ REL::Offset(0x04764B80) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__MorphRenderPass{ REL::Offset(0x047696F0) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__MorphSystemEndFrameRenderPass{ REL::Offset(0x045C6E20) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__MotionBlurMaxTileVelocityRenderPass{ REL::Offset(0x04776710) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__MotionBlurRenderPass{ REL::Offset(0x0476C430) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__MotionBlurSubGraph{ REL::Offset(0x0476C478) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__MotionVectorCompositeRenderPass{ REL::Offset(0x04769738) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__MultiscatteringIntegrationStepRenderPass{ REL::Offset(0x04763468) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__PartialClearColorBufferRenderPass{ REL::Offset(0x04767728) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ParticleComputeLightingLevel0RenderPass{ REL::Offset(0x045BF578) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ParticleComputeLightingLevel1RenderPass{ REL::Offset(0x045BF528) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ParticleComputeLightingLevel2RenderPass{ REL::Offset(0x045BF4D8) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ParticleComputeLightingLevel3RenderPass{ REL::Offset(0x045BF488) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ParticleDataPreFilterRenderPass{ REL::Offset(0x045BF3A8) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ParticleLightingClearBuffersRenderPass{ REL::Offset(0x045BF360) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ParticleLightingGenerateIndirectBufferRenderPass{ REL::Offset(
+            0x045BF440) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ParticleLightingRenderPass{ REL::Offset(0x045BF300) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ParticlesCopyToDestRenderPass{ REL::Offset(0x04766350) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ParticlesCorrectionRenderPass{ REL::Offset(0x047664B8) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ParticlesMainFullResRenderPass{ REL::Offset(0x04766230) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ParticlesMainHalfResRenderPass{ REL::Offset(0x04766290) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ParticlesMomentBasedOITRenderMomentsRenderPass{ REL::Offset(
+            0x04766518) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ParticlesMomentBasedOITRenderTransparencyRenderPass{ REL::Offset(
+            0x047663F8) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ParticlesRenderPass{ REL::Offset(0x04766458) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__PointCloudCullingRenderPass{ REL::Offset(0x04769780) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__PointCloudDrawRenderPass{ REL::Offset(0x047697C8) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__PointCloudEventHandler{ REL::Offset(0x045C0140) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__PostSharpenRenderPass{ REL::Offset(0x04777048) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__PostUpscaleImageSpaceSubGraph{ REL::Offset(0x04776780) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__PostUpscaleSubGraph{ REL::Offset(0x04776840) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__PreUpscaleImageSpaceSubGraph{ REL::Offset(0x047767E0) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__PrecomputeAtmosphericScatteringDataRenderPass{ REL::Offset(0x04763408) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__PrecomputeAtmosphericScatteringTransmittanceRenderPass{ REL::Offset(
+            0x04762A48) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__PrecomputeNetDensityToAtmTopRenderPass{ REL::Offset(0x047636C0) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__PrecomputePerlinNoise3DRenderPass{ REL::Offset(0x0476C870) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__PrecomputeSingleScatteringRenderPass{ REL::Offset(0x04763678) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__PrefilterCubemapRenderPass{ REL::Offset(0x045BD650) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__PrepareAtmosphericScatteringRenderPass{ REL::Offset(0x045C6E68) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__PrepareFirstPersonSkinningRenderPass{ REL::Offset(0x045C6488) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__PrepareProjectedDecalsRenderPass{ REL::Offset(0x047699C8) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__PrepareReflectionProbeDataRenderPass{ REL::Offset(0x0476A630) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__PrepareShadowSkinningRenderPass{ REL::Offset(0x0476ABA8) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__PrepareSkinningRenderPass{ REL::Offset(0x0476B6E8) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__PrepareSkyCubemapCelestialBodiesRenderPass{ REL::Offset(0x045C7DF0) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__PrepareSkyCubemapRenderPass{ REL::Offset(0x045C6440) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ProbeClassifyRenderPass{ REL::Offset(0x045C1E78) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ProbeCoarseLightCullingCompactionRenderPass{ REL::Offset(0x045C1DE8) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ProbeCoarseLightCullingRenderPass{ REL::Offset(0x045C1DA0) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ProbeFaceSceneSetupRenderPass{ REL::Offset(0x0476A1B0) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ProbeGridGPUCullingRenderPass{ REL::Offset(0x04764040) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ProbeLightCullingRenderPass{ REL::Offset(0x045C1BD8) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ProbeRenderPass{ REL::Offset(0x045C1C20) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ProbeSystemRenderPass{ REL::Offset(0x045C1C80) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ProduceAndClearHeightfieldRenderPass{ REL::Offset(0x04765E70) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ProduceMomentBasedOITForwardHalfResTargetRenderPass{ REL::Offset(
+            0x045C2500) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ProduceMomentBasedOITParticleTargetsHalfResRenderPass{ REL::Offset(
+            0x045C24B8) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ProduceMomentBasedOITTargetsAlwaysFullResRenderPass{ REL::Offset(
+            0x045C2470) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ProduceMomentBasedOITTargetsHalfResRenderPass{ REL::Offset(0x045C2428) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ProduceMomentBasedOITTargetsRenderPass{ REL::Offset(0x045C23E0) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ProduceSceneDebugBuffersSubGraphRenderPass{ REL::Offset(0x045C66F8) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ProduceShadingRateImageRenderPass{ REL::Offset(0x04769858) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ProduceShadowMapCullingResourcesRenderPass{ REL::Offset(0x04769E98) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ProduceShadowMaskFrustumRenderPass{ REL::Offset(0x047765F0) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ProduceThinGBufferResourcesRenderPass{ REL::Offset(0x0476A168) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ProjectedDecalRenderPass{ REL::Offset(0x04769920) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__RadialBlurRenderPass{ REL::Offset(0x04769AE0) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__RayTraceProbeComputeRenderPass{ REL::Offset(0x045C1D10) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__RayTraceProbeNonRandomRaysComputeRenderPass{ REL::Offset(0x045C1D58) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__RaymarchSampleLocationsRenderPass{ REL::Offset(0x04762F98) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__RaymarchShadowedSampleLocationsRenderPass{ REL::Offset(0x04762F50) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__RaymarchUsingMinMaxShadowMapRenderPass{ REL::Offset(0x04762F08) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ReflectionProbeBlendingSubGraphRenderPass{ REL::Offset(0x0476A308) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ReflectionProbeComputeSHRenderPass{ REL::Offset(0x0476A5E8) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ReflectionProbeCopyDepth{ REL::Offset(0x04769F28) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ReflectionProbeCopySky{ REL::Offset(0x04769EE0) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ReflectionProbeFaceSubGraphRenderPass{ REL::Offset(0x0476A500) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ReflectionProbeLightCoarseCullingCompactionRenderPass{ REL::Offset(
+            0x04769FB8) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ReflectionProbeLightCoarseCullingRenderPass{ REL::Offset(0x0476A120) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ReflectionProbeMipChainRenderPass{ REL::Offset(0x0476A260) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ReflectionProbeOcclusionCullingRenderPass{ REL::Offset(0x047765A8) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ReflectionProbePrefilterCubemapRenderPass{ REL::Offset(0x0476A1F8) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ReflectionProbeRenderPass{ REL::Offset(0x0476A458) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ReflectionProbeShadowMapSceneSetupRenderPass{ REL::Offset(0x0476A4B8) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ReflectionProbeTerrainRenderPass{ REL::Offset(0x0476A580) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__RefractionBlurRenderPass{ REL::Offset(0x047673A0) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__RefractionDownsample0RenderPass{ REL::Offset(0x047673E8) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__RefractionDownsampleMipChainRenderPass{ REL::Offset(0x04767358) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__RefractionMaskDilationRenderPass{ REL::Offset(0x04767268) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__RefractionMaskGenRenderPass{ REL::Offset(0x04767220) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__RefractionMaskRenderPass{ REL::Offset(0x04764370) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__RenderCoarseUnshadowedInscatteringRenderPass{ REL::Offset(0x04762FE0) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__RenderGraph{ REL::Offset(0x04761390) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__RenderGraphEventHandler{ REL::Offset(0x045BB870) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__RenderPass{ REL::Offset(0x047611C0) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__RenderSceneSubGraph{ REL::Offset(0x04776940) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__RenderSliceUVDirAndOriginRenderPass{ REL::Offset(0x04762EC0) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__RenderViewSubGraph{ REL::Offset(0x0476C718) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ReprojectShadingRateImageRenderPass{ REL::Offset(0x04769810) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ResetCullingMemoryRequestHandler{ REL::Offset(0x04761E28) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ResourceLifecycleJobSite{ REL::Offset(0x045C8468) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__SAOEmptyRenderPass{ REL::Offset(0x045BEB30) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__SAORenderPass{ REL::Offset(0x045BEAD0) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ScaleformCompositeRenderPass{ REL::Offset(0x0476A678) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ScaleformEventHandler{ REL::Offset(0x045C0500) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ScaleformRenderPass{ REL::Offset(0x047766C8) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ScaleformText2DRenderPass{ REL::Offset(0x045C7588) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ScaleformTextRenderPass{ REL::Offset(0x045C7540) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ScaleformToTextureRenderPass{ REL::Offset(0x04776680) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__SceneSetupRenderPass{ REL::Offset(0x045BAA60) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ScreenSizeBasedLOD____State__BalanceTextureLODs{ REL::Offset(
+            0x04760BB8) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ScreenSizeBasedLOD____State__CheckBudget{ REL::Offset(0x04760DD0) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ScreenSizeBasedLOD____State__DegradeMeshes{ REL::Offset(0x04760C00) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ScreenSizeBasedLOD____State__DegradeTextures{ REL::Offset(0x04760EF0) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ScreenSizeBasedLOD____State__GatherMaterials{ REL::Offset(0x04760F38) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ScreenSizeBasedLOD____State__MergeGPUReadback{ REL::Offset(0x04760D40) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ScreenSizeBasedLOD____State__ReduceMaterialsAndMeshes{ REL::Offset(
+            0x04760C90) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ScreenSizeBasedLOD____State__Reset{ REL::Offset(0x04760C48) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ScreenSizeBasedLOD____State__SortLODs{ REL::Offset(0x04760E18) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ScreenSizeBasedLOD____State__UpdateLODDetail{ REL::Offset(0x04760CD8) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ScreenSizeBasedLOD____State__UpdateTerrainTextureDetail{ REL::Offset(
+            0x04760D88) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ScreenSizeBasedLOD____State__UpgradeMeshes{ REL::Offset(0x04760E60) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ScreenSizeBasedLOD____State__UpgradeTextures{ REL::Offset(0x04760EA8) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__SeparableSSS_HorizontalRenderPass{ REL::Offset(0x0476A728) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__SeparableSSS_RenderPass{ REL::Offset(0x0476A7D8) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__SeparableSSS_VerticalRenderPass{ REL::Offset(0x0476A888) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__SetupAtmosphericScatteringBuffersRenderPass{ REL::Offset(0x04763360) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__SetupDynamicShadowRenderPass{ REL::Offset(0x0476AFF8) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ShadowManagerEventHandler{ REL::Offset(0x045C00F0) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ShadowMapInstanceRenderPass{ REL::Offset(0x0476AAD0) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ShadowMapRenderPass{ REL::Offset(0x0476A998) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ShadowMapSceneSetupRenderPass{ REL::Offset(0x0476AB60) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ShadowMapSubGraphRenderPass{ REL::Offset(0x0476A938) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ShadowMaskRenderPass{ REL::Offset(0x04776638) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ShadowSubGraphRenderPass{ REL::Offset(0x0476A9E0) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__SharedMeshResourcesRegistry{ REL::Offset(0x04763D90) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__SkinnedDecalPrepareRenderPass{ REL::Offset(0x0476B5C8) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__SkinningRenderPass{ REL::Offset(0x0476B658) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__SkinningSystemEndFrameRenderPass{ REL::Offset(0x045C7678) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__SkinningSystemRenderPass{ REL::Offset(0x045C76C0) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__SkyCubemapCelestialBodiesLightingRenderPass{ REL::Offset(0x045C7D28) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__SkyCubemapRenderPass{ REL::Offset(0x045C7D90) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__SkyCubemapSystemRenderPass{ REL::Offset(0x045C63F8) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__SkyLightingRenderPass{ REL::Offset(0x0476B790) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__SkyOcclusionGenerateSHRenderPass{ REL::Offset(0x04761688) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__SkyOcclusionRenderPass{ REL::Offset(0x04761760) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__SkyOcclusionSystemRenderPass{ REL::Offset(0x047617C0) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__SobelSpaceGlareRenderPass{ REL::Offset(0x045C7FD8) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__SpaceGlareApplyRenderPass{ REL::Offset(0x045C8068) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__SpaceGlareRenderPass{ REL::Offset(0x045C7F30) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__SparseGridCell{ REL::Offset(0x045C7398) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__SporadicRenderGraphRenderPass{ REL::Offset(0x0476B7D8) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__StarfieldCoarseCullingRenderPass{ REL::Offset(0x0476B970) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__StarfieldEventHandler{ REL::Offset(0x045BA458) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__StarfieldProcessStarsRenderPass{ REL::Offset(0x0476B9B8) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__StarfieldRenderPass{ REL::Offset(0x0476B8C8) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__StarfieldRenderPassBase{ REL::Offset(0x0476B928) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__StarfieldTiledCullingRenderPass{ REL::Offset(0x0476B880) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__StarfieldTiledRenderRenderPass{ REL::Offset(0x0476B838) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__StarmapGravityWavesEventHandler{ REL::Offset(0x045C03E8) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__StarmapGravityWavesRenderPass{ REL::Offset(0x045C0390) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__StarmapOrbitsEventHandler{ REL::Offset(0x045C02B8) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__StarmapOrbitsRenderPass{ REL::Offset(0x045C0270) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__SubmitAndPresentThread{ REL::Offset(0x045C4F00) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__SwapChainEventHandler{ REL::Offset(0x045BCB00) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__TemporalAA_idTech7RenderPass{ REL::Offset(0x047770D0) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__TerrainClipmapAndMIMRenderPass{ REL::Offset(0x045C64D0) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__TerrainClipmapUpdateRenderPass{ REL::Offset(0x045BBE60) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__TerrainDensityUpdateRenderPass{ REL::Offset(0x045BBCE0) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__TerrainDepthAndShadowsSubGraph{ REL::Offset(0x045BBD70) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__TerrainDepthDrawRenderPass{ REL::Offset(0x045BBD28) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__TerrainHeightFieldRenderPass{ REL::Offset(0x04765D98) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__TerrainMIMUpdateRenderPass{ REL::Offset(0x045BBC98) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__TerrainRenderPass{ REL::Offset(0x045BBC50) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__TerrainShadowsRenderPass{ REL::Offset(0x045BBE18) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__TerrainTileDescriptionUpdateRenderPass{ REL::Offset(0x045BBEA8) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__TextureReadback_CopyRenderTargetSourceRenderPass{ REL::Offset(
+            0x0476BA00) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ThinDeferredExteriorPixelCountRenderPass{ REL::Offset(0x0476A048) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ThinDeferredGBufferRenderPass{ REL::Offset(0x04769F70) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ThinDeferredLightingRenderPass{ REL::Offset(0x0476A000) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__ThinDeferredPrepareRenderPass{ REL::Offset(0x0476A3F0) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__TiledBinning_idTech7BinLightsRenderPass{ REL::Offset(0x04762830) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__TiledBinning_idTech7CacheIndirectLightingRenderPass{ REL::Offset(
+            0x047628C0) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__TiledBinning_idTech7ClipLightsRenderPass{ REL::Offset(0x04762710) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__TiledBinning_idTech7CoarseBinLightsRenderPass{ REL::Offset(0x047627A0) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__TiledBinning_idTech7CoarseIndirectArgsLightsRenderPass{ REL::Offset(
+            0x04762758) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__TiledBinning_idTech7IndirectArgsLightsRenderPass{ REL::Offset(
+            0x047627E8) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__TiledBinning_idTech7InitBuffersRenderPass{ REL::Offset(0x04762680) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__TiledBinning_idTech7RenderPass{ REL::Offset(0x04762950) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__TiledBinning_idTech7ResolveLightBinsRenderPass{ REL::Offset(
+            0x04762908) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__TiledBinning_idTech7SampleIndirectLightingRenderPass{ REL::Offset(
+            0x04762878) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__TiledBinning_idTech7TransformVerticesLightsRenderPass{ REL::Offset(
+            0x047626C8) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__TiledCullingRenderPass{ REL::Offset(0x0476BA90) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__TiledDeferredContactShadowsBlurXRenderPass{ REL::Offset(0x045BDAE0) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__TiledDeferredContactShadowsBlurYRenderPass{ REL::Offset(0x045BDA98) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__TiledDeferredContactShadowsRenderPass{ REL::Offset(0x045BDB28) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__TiledDeferredLightingDebugVisualizationRenderPass{ REL::Offset(
+            0x0476BBF8) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__TiledDeferredLightingPrepareRenderPass{ REL::Offset(0x0476BAD8) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__TiledDeferredLightingProcessLightsRenderPass{ REL::Offset(0x0476BB68) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__TiledDeferredLightingRecordIndirectArgsRenderPass{ REL::Offset(
+            0x0476BBB0) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__TiledDepthRangeRenderPass{ REL::Offset(0x0476BC40) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__TransparencyAwareShadowedScatteringRenderPass{ REL::Offset(0x04763798) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__UIRenderPass{ REL::Offset(0x0476BCC8) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__UnsortedForwardBlendedPostMBOITRenderPass{ REL::Offset(0x047645E0) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__UnsortedForwardBlendedPreMBOITRenderPass{ REL::Offset(0x04764628) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__UnwarpEpipolarSamplingRenderPass{ REL::Offset(0x04763708) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__UpdatePreviousDepthBufferRenderPass{ REL::Offset(0x045C6530) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__UpdateSharedIndexBufferRenderPass{ REL::Offset(0x0476BDB8) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__UpscaleSubGraph{ REL::Offset(0x045BB6E0) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__VignetteRenderPass{ REL::Offset(0x04777118) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__VolumetricLightingApplyRenderPass{ REL::Offset(0x045BFBC0) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__VolumetricLightingCullingRenderPass{ REL::Offset(0x0476BE00) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__VolumetricLightingDistantRaymarchRenderPass{ REL::Offset(0x0476BEA0) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__VolumetricLightingDistantTemporalFilteringRenderPass{ REL::Offset(
+            0x0476BF20) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__VolumetricLightingDownsampleDepthRenderPass{ REL::Offset(0x047648E0) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__VolumetricLightingGenerateMaterialVolumeRenderPass{ REL::Offset(
+            0x04764898) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__VolumetricLightingIntegrateRenderPass{ REL::Offset(0x0476BF68) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__VolumetricLightingNearSpatialFilteringRenderPass{ REL::Offset(
+            0x0476BFB0) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__VolumetricLightingNearTemporalFilteringRenderPass{ REL::Offset(
+            0x0476C028) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__VolumetricLightingProcessLightsRenderPass{ REL::Offset(0x0476C070) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__WaterDisplacementRenderPass{ REL::Offset(0x045BE430) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__WaterDisplacement_ConvertNormalsRenderPass{ REL::Offset(0x045BE3E8) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__WaterDisplacement_InjectionRenderPass{ REL::Offset(0x045BE4D8) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__WaterDisplacement_MainRenderPass{ REL::Offset(0x045BE3A0) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__WaterDisplacement_PlaceRipplesRenderPass{ REL::Offset(0x045BE490) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__WaterMVRenderPass{ REL::Offset(0x0476C338) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__WaterPrepareRenderPass{ REL::Offset(0x0476C380) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__WaterRenderGraphRenderPass{ REL::Offset(0x0476C2D8) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__WaterRenderPass{ REL::Offset(0x0476C3C8) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__WindowEventHandler{ REL::Offset(0x045BCAB8) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate__WorldCell{ REL::Offset(0x045C73D0) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate____BloomEmptyRenderPass{ REL::Offset(0x045C1958) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate____BloomPass{ REL::Offset(0x045C1910) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate____SAOCameraZAndMipsRenderPass{ REL::Offset(0x045BEA88) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate____SAODenoiseGTAORenderPass{ REL::Offset(0x045BE9F8) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate____SAORawAORenderPass{ REL::Offset(0x045BEA40) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate____ScaleformBeginRenderPass{ REL::Offset(0x0476BD70) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRendererPrivate____ScaleformEndRenderPass{ REL::Offset(0x0476BD28) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRenderer__ImageCaptureExportToFileNode{ REL::Offset(0x045B9D58) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRenderer__MaterialInstance__TextureVisitor{ REL::Offset(0x04371340) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRenderer__Messaging__MessageProcessor{ REL::Offset(0x045B9E30) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRenderer__Messaging__StreamedResourceNode{ REL::Offset(0x045C1090) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRenderer__RendererQualityPref{ REL::Offset(0x045BA570) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRenderer__RendererQualitySetting{ REL::Offset(0x03EF78F8) };
+		inline constexpr std::array<REL::Offset, 1>  CreationRenderer__RendererQualitySettingCollection{ REL::Offset(0x045BA590) };
+		inline constexpr std::array<REL::Offset, 1>  CreditsDataModel{ REL::Offset(0x04477A10) };
+		inline constexpr std::array<REL::Offset, 1>  CreditsDataModel__CreditsDataModelEventShuttle{ REL::Offset(0x04477A38) };
+		inline constexpr std::array<REL::Offset, 3>  CreditsMenu{ REL::Offset(0x0451CEC8), REL::Offset(0x0451CF20), REL::Offset(0x0451D000) };
+		inline constexpr std::array<REL::Offset, 1>  CrewExtraData{ REL::Offset(0x04350F48) };
+		inline constexpr std::array<REL::Offset, 1>  CriticallyDampenVariable{ REL::Offset(0x04568AA0) };
+		inline constexpr std::array<REL::Offset, 1>  CriticallyDampenVariableInstance{ REL::Offset(0x04568A30) };
+		inline constexpr std::array<REL::Offset, 1>  CrowdInhibitNullStrategy{ REL::Offset(0x044721E8) };
+		inline constexpr std::array<REL::Offset, 1>  CrowdInhibitStrategyDefault{ REL::Offset(0x04472210) };
+		inline constexpr std::array<REL::Offset, 1>  CrowdInhibitStrategyDisable{ REL::Offset(0x044721C0) };
+		inline constexpr std::array<REL::Offset, 7>  CrowdManager{ REL::Offset(0x04472238), REL::Offset(0x04472250), REL::Offset(0x04472268),
+            REL::Offset(0x04472280), REL::Offset(0x04472298), REL::Offset(0x044722B0),
+            REL::Offset(0x044722C8) };
+		inline constexpr std::array<REL::Offset, 1>  CrowdWallaBubble{ REL::Offset(0x04476748) };
+		inline constexpr std::array<REL::Offset, 1>  CullFurnitureBoneHandler{ REL::Offset(0x044E35C0) };
+		inline constexpr std::array<REL::Offset, 1>  CullWeaponsHandler{ REL::Offset(0x044E35F0) };
+		inline constexpr std::array<REL::Offset, 1>  CumulativeAnimation{ REL::Offset(0x045688B0) };
+		inline constexpr std::array<REL::Offset, 1>  CumulativeAnimationInstance{ REL::Offset(0x04568840) };
+		inline constexpr std::array<REL::Offset, 1>  CureEffect{ REL::Offset(0x044C3350) };
+		inline constexpr std::array<REL::Offset, 5>  CursorMenu{ REL::Offset(0x0458FC68), REL::Offset(0x0458FD40), REL::Offset(0x0458FD98),
+            REL::Offset(0x0458FDA8), REL::Offset(0x0458FDC0) };
+		inline constexpr std::array<REL::Offset, 3>  CursorMenu__CursorGameEventShuttle{ REL::Offset(0x0458FEB0), REL::Offset(0x0458FEC8),
+            REL::Offset(0x0458FEE0) };
+		inline constexpr std::array<REL::Offset, 1>  CursorMoveEvent{ REL::Offset(0x0456C640) };
+		inline constexpr std::array<REL::Offset, 1>  CurvedPathBlender{ REL::Offset(0x04565EC8) };
+		inline constexpr std::array<REL::Offset, 1>  CurvedPathBlenderInstance{ REL::Offset(0x04567FA8) };
+		inline constexpr std::array<REL::Offset, 1>  CustomActorPackageData{ REL::Offset(0x044E09E8) };
+		inline constexpr std::array<REL::Offset, 1>  CustomUtils__HasForceGreetVisitor{ REL::Offset(0x0444D578) };
+		inline constexpr std::array<REL::Offset, 1>  D3D12MA__BlockMetadata{ REL::Offset(0x04766750) };
+		inline constexpr std::array<REL::Offset, 1>  D3D12MA__BlockMetadata_Generic{ REL::Offset(0x047667E0) };
+		inline constexpr std::array<REL::Offset, 1>  D3D12MA__MemoryBlock{ REL::Offset(0x04766870) };
+		inline constexpr std::array<REL::Offset, 1>  D3D12MA__NormalBlock{ REL::Offset(0x047667D0) };
+		inline constexpr std::array<REL::Offset, 1>  DamageEffect{ REL::Offset(0x044C3448) };
+		inline constexpr std::array<REL::Offset, 1>  DampenVariable{ REL::Offset(0x04569808) };
+		inline constexpr std::array<REL::Offset, 1>  DampenVariableInstance{ REL::Offset(0x04569798) };
+		inline constexpr std::array<REL::Offset, 1>  DarknessEffect{ REL::Offset(0x044C3580) };
 		inline constexpr std::array<REL::Offset, 18> DataMenu{ REL::Offset(0x044B1288), REL::Offset(0x044B12A0), REL::Offset(0x044B12B8),
-			                                                   REL::Offset(0x044B12D0), REL::Offset(0x044B12E8), REL::Offset(0x044B1300),
-			                                                   REL::Offset(0x044B1318), REL::Offset(0x044B1330), REL::Offset(0x044B1348),
-			                                                   REL::Offset(0x044B1360), REL::Offset(0x044B1378), REL::Offset(0x044B1390),
-			                                                   REL::Offset(0x044B13A8), REL::Offset(0x044B13C0), REL::Offset(0x044B13D8),
-			                                                   REL::Offset(0x044B13F0), REL::Offset(0x044B14D0), REL::Offset(0x044B14E8) };
+			REL::Offset(0x044B12D0), REL::Offset(0x044B12E8), REL::Offset(0x044B1300),
+			REL::Offset(0x044B1318), REL::Offset(0x044B1330), REL::Offset(0x044B1348),
+			REL::Offset(0x044B1360), REL::Offset(0x044B1378), REL::Offset(0x044B1390),
+			REL::Offset(0x044B13A8), REL::Offset(0x044B13C0), REL::Offset(0x044B13D8),
+			REL::Offset(0x044B13F0), REL::Offset(0x044B14D0), REL::Offset(0x044B14E8) };
 		inline constexpr std::array<REL::Offset, 7>  DataMenuDataModel{ REL::Offset(0x04481150), REL::Offset(0x04481168), REL::Offset(0x04481180),
-                                                                       REL::Offset(0x04481198), REL::Offset(0x044811B0), REL::Offset(0x044811C8),
-                                                                       REL::Offset(0x04481238) };
+            REL::Offset(0x04481198), REL::Offset(0x044811B0), REL::Offset(0x044811C8),
+            REL::Offset(0x04481238) };
 		inline constexpr std::array<REL::Offset, 1>  DataMenuDataModel__DataMenuEventShuttle{ REL::Offset(0x044810C8) };
 		inline constexpr std::array<REL::Offset, 1>  DataMenuInventoryItem{ REL::Offset(0x044800E0) };
 		inline constexpr std::array<REL::Offset, 3>  DataMenuPersistentDataModel{ REL::Offset(0x044811E0), REL::Offset(0x044811F8),
-                                                                                 REL::Offset(0x04481210) };
+            REL::Offset(0x04481210) };
 		inline constexpr std::array<REL::Offset, 1>  DataMenuPersistentDataModel__DataMenuPersistentDataEventShuttle{ REL::Offset(0x044810F0) };
 		inline constexpr std::array<REL::Offset, 1>  DataMenu_CloseMenu{ REL::Offset(0x044B1600) };
 		inline constexpr std::array<REL::Offset, 1>  DataMenu_ClosedForSubMenu{ REL::Offset(0x044B1660) };
@@ -26530,8 +26530,8 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  DataSlateButtons_acceptClicked{ REL::Offset(0x044A6638) };
 		inline constexpr std::array<REL::Offset, 1>  DataSlateButtons_cancelClicked{ REL::Offset(0x044A6658) };
 		inline constexpr std::array<REL::Offset, 8>  DataSlateMenu{ REL::Offset(0x044A6678), REL::Offset(0x044A6758), REL::Offset(0x044A67B0),
-                                                                   REL::Offset(0x044A67C8), REL::Offset(0x044A67F0), REL::Offset(0x044A6808),
-                                                                   REL::Offset(0x044A6820), REL::Offset(0x044A6838) };
+            REL::Offset(0x044A67C8), REL::Offset(0x044A67F0), REL::Offset(0x044A6808),
+            REL::Offset(0x044A6820), REL::Offset(0x044A6838) };
 		inline constexpr std::array<REL::Offset, 1>  DataSlateMenu__DataSlateData{ REL::Offset(0x044A6B90) };
 		inline constexpr std::array<REL::Offset, 1>  DataSlateMenu__DataSlateEventShuttle{ REL::Offset(0x044A6850) };
 		inline constexpr std::array<REL::Offset, 1>  DataSlateMenu_playSFX{ REL::Offset(0x044A6618) };
@@ -26642,13 +26642,13 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 2>  DocAcceptDataModel{ REL::Offset(0x04489BC0), REL::Offset(0x04489BE8) };
 		inline constexpr std::array<REL::Offset, 1>  DocAcceptDataModel__DocAcceptEventShuttle{ REL::Offset(0x0448A610) };
 		inline constexpr std::array<REL::Offset, 4>  DocAcceptMenu{ REL::Offset(0x044783B8), REL::Offset(0x044783D0), REL::Offset(0x04478428),
-                                                                   REL::Offset(0x04478440) };
+            REL::Offset(0x04478440) };
 		inline constexpr std::array<REL::Offset, 1>  DocAcceptMenu_Accept{ REL::Offset(0x04478520) };
 		inline constexpr std::array<REL::Offset, 1>  DoorObstacleAdapter{ REL::Offset(0x044D3688) };
 		inline constexpr std::array<REL::Offset, 1>  DropResourcesEffect{ REL::Offset(0x044C5238) };
 		inline constexpr std::array<REL::Offset, 9>  DrugsCraftingMenu{ REL::Offset(0x044B1708), REL::Offset(0x044B1720), REL::Offset(0x044B1738),
-                                                                       REL::Offset(0x044B1750), REL::Offset(0x044B1768), REL::Offset(0x044B1780),
-                                                                       REL::Offset(0x044B17D8), REL::Offset(0x044B18B8), REL::Offset(0x044B1908) };
+            REL::Offset(0x044B1750), REL::Offset(0x044B1768), REL::Offset(0x044B1780),
+            REL::Offset(0x044B17D8), REL::Offset(0x044B18B8), REL::Offset(0x044B1908) };
 		inline constexpr std::array<REL::Offset, 1>  DualDirectAtNode{ REL::Offset(0x0456A660) };
 		inline constexpr std::array<REL::Offset, 1>  DualDirectAtNodeInstance{ REL::Offset(0x0456A5F0) };
 		inline constexpr std::array<REL::Offset, 1>  DualValueModifierEffect{ REL::Offset(0x044C3AD0) };
@@ -26662,33 +26662,33 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  DynamicNavMeshTaskShiftWorld{ REL::Offset(0x0434CCE8) };
 		inline constexpr std::array<REL::Offset, 1>  DynamicNavMeshTaskStitching{ REL::Offset(0x0434CCB8) };
 		inline constexpr std::array<REL::Offset, 4>  DynamicNavmesh{ REL::Offset(0x04376B80), REL::Offset(0x04376B90), REL::Offset(0x04376BA8),
-                                                                    REL::Offset(0x04376BC0) };
+            REL::Offset(0x04376BC0) };
 		inline constexpr std::array<REL::Offset, 3>  DynamicNavmeshService{ REL::Offset(0x0434E348), REL::Offset(0x0434E358),
-                                                                           REL::Offset(0x0434E378) };
+            REL::Offset(0x0434E378) };
 		inline constexpr std::array<REL::Offset, 1>  EffectArchetypes__MainStatusHandler{ REL::Offset(0x03EFCF98) };
 		inline constexpr std::array<REL::Offset, 1>  EffectSequenceMap{ REL::Offset(0x04350518) };
 		inline constexpr std::array<REL::Offset, 1>  EffectSequenceNode{ REL::Offset(0x04567390) };
 		inline constexpr std::array<REL::Offset, 1>  EffectSequenceNodeInstance{ REL::Offset(0x04568050) };
 		inline constexpr std::array<REL::Offset, 5>  EffectSequence__EffectSequenceManager{ REL::Offset(0x04350368), REL::Offset(0x04350388),
-                                                                                           REL::Offset(0x043503D8), REL::Offset(0x043503F0),
-                                                                                           REL::Offset(0x04350408) };
+            REL::Offset(0x043503D8), REL::Offset(0x043503F0),
+            REL::Offset(0x04350408) };
 		inline constexpr std::array<REL::Offset, 6>  EffectSetting{ REL::Offset(0x04361448), REL::Offset(0x04361468), REL::Offset(0x043614E0),
-                                                                   REL::Offset(0x043614F8), REL::Offset(0x04361560), REL::Offset(0x043615C8) };
+            REL::Offset(0x043614F8), REL::Offset(0x04361560), REL::Offset(0x043615C8) };
 		inline constexpr std::array<REL::Offset, 1>  EjectShellCasingHandler{ REL::Offset(0x044E3860) };
 		inline constexpr std::array<REL::Offset, 1>  EmittanceManagerAgent{ REL::Offset(0x04344F58) };
 		inline constexpr std::array<REL::Offset, 11> EmitterProjectile{ REL::Offset(0x04461278), REL::Offset(0x04461348), REL::Offset(0x04461360),
-			                                                            REL::Offset(0x044613C8), REL::Offset(0x044613E8), REL::Offset(0x044613F8),
-			                                                            REL::Offset(0x04461410), REL::Offset(0x04461F00), REL::Offset(0x04461F18),
-			                                                            REL::Offset(0x04461F30), REL::Offset(0x04461F48) };
+			REL::Offset(0x044613C8), REL::Offset(0x044613E8), REL::Offset(0x044613F8),
+			REL::Offset(0x04461410), REL::Offset(0x04461F00), REL::Offset(0x04461F18),
+			REL::Offset(0x04461F30), REL::Offset(0x04461F48) };
 		inline constexpr std::array<REL::Offset, 1>  EmptyDependencyFormPointerMapValue{ REL::Offset(0x043AC4D8) };
 		inline constexpr std::array<REL::Offset, 1>  EnableCharacterBumperHandler{ REL::Offset(0x044E32D8) };
 		inline constexpr std::array<REL::Offset, 1>  EnableCharacterControllerHandler{ REL::Offset(0x044E5E78) };
 		inline constexpr std::array<REL::Offset, 1>  EnableCharacterPitchHandler{ REL::Offset(0x044E36B0) };
 		inline constexpr std::array<REL::Offset, 1>  EnableCollisionHandler{ REL::Offset(0x044E3308) };
 		inline constexpr std::array<REL::Offset, 5>  EnchantmentItem{ REL::Offset(0x043618E0), REL::Offset(0x04361900), REL::Offset(0x04361968),
-                                                                     REL::Offset(0x04361E68), REL::Offset(0x04361EE0) };
+            REL::Offset(0x04361E68), REL::Offset(0x04361EE0) };
 		inline constexpr std::array<REL::Offset, 4>  EndGameCreditsMenu{ REL::Offset(0x044785F8), REL::Offset(0x04478610), REL::Offset(0x04478628),
-                                                                        REL::Offset(0x04478708) };
+            REL::Offset(0x04478708) };
 		inline constexpr std::array<REL::Offset, 1>  EndSecurityMinigameHandler{ REL::Offset(0x044E5F98) };
 		inline constexpr std::array<REL::Offset, 1>  EndSummonAnimationHandler{ REL::Offset(0x044E34B8) };
 		inline constexpr std::array<REL::Offset, 2>  EnhanceWeaponEffect{ REL::Offset(0x044D1068), REL::Offset(0x044D11B0) };
@@ -26719,9 +26719,9 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  ExecuteOnAliasedRefFunc{ REL::Offset(0x04365388) };
 		inline constexpr std::array<REL::Offset, 1>  ExitChargen_ConfirmCallback{ REL::Offset(0x044B04D8) };
 		inline constexpr std::array<REL::Offset, 11> Explosion{ REL::Offset(0x044EA3A8), REL::Offset(0x044EA3B8), REL::Offset(0x044EA3D0),
-			                                                    REL::Offset(0x044EA3E8), REL::Offset(0x044EA400), REL::Offset(0x044EA418),
-			                                                    REL::Offset(0x044EA4E8), REL::Offset(0x044EA500), REL::Offset(0x044EA568),
-			                                                    REL::Offset(0x044EA5D8), REL::Offset(0x044EA5F0) };
+			REL::Offset(0x044EA3E8), REL::Offset(0x044EA400), REL::Offset(0x044EA418),
+			REL::Offset(0x044EA4E8), REL::Offset(0x044EA500), REL::Offset(0x044EA568),
+			REL::Offset(0x044EA5D8), REL::Offset(0x044EA5F0) };
 		inline constexpr std::array<REL::Offset, 1>  ExplosionClosestHitCollector{ REL::Offset(0x044EA370) };
 		inline constexpr std::array<REL::Offset, 1>  ExplosiveIndicatorDataModel{ REL::Offset(0x04481310) };
 		inline constexpr std::array<REL::Offset, 1>  ExplosiveIndicatorDataModel__ExplosiveIndicatorEventShuttle{ REL::Offset(0x044816D0) };
@@ -26952,10 +26952,10 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  FOCollisionListener{ REL::Offset(0x04411930) };
 		inline constexpr std::array<REL::Offset, 1>  FaceEmotionalIdleHandler{ REL::Offset(0x044E39B0) };
 		inline constexpr std::array<REL::Offset, 4>  FaderMenu{ REL::Offset(0x0451D570), REL::Offset(0x0451D5C8), REL::Offset(0x0451D6A8),
-                                                               REL::Offset(0x0451D6C0) };
+            REL::Offset(0x0451D6C0) };
 		inline constexpr std::array<REL::Offset, 1>  FanfareData{ REL::Offset(0x044789C8) };
 		inline constexpr std::array<REL::Offset, 4>  FanfareMenu{ REL::Offset(0x04478CB8), REL::Offset(0x04478CE0), REL::Offset(0x04478CF8),
-                                                                 REL::Offset(0x04478D50) };
+            REL::Offset(0x04478D50) };
 		inline constexpr std::array<REL::Offset, 1>  FanfareMenu__FanfareEventShuttle{ REL::Offset(0x04478E30) };
 		inline constexpr std::array<REL::Offset, 1>  FarTravel__Arrival{ REL::Offset(0x044C9980) };
 		inline constexpr std::array<REL::Offset, 1>  FarTravel__Cruise{ REL::Offset(0x044C99B8) };
@@ -26964,7 +26964,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  FarTravel__FarTravelUnloadNode{ REL::Offset(0x0439F130) };
 		inline constexpr std::array<REL::Offset, 1>  FarTravel__UpdateGalacticPositions{ REL::Offset(0x044C9948) };
 		inline constexpr std::array<REL::Offset, 6>  FavoritesManager{ REL::Offset(0x0451DD90), REL::Offset(0x0451DDA0), REL::Offset(0x0451DF90),
-                                                                      REL::Offset(0x0451DFA8), REL::Offset(0x0451DFD0), REL::Offset(0x0451DFE8) };
+            REL::Offset(0x0451DFA8), REL::Offset(0x0451DFD0), REL::Offset(0x0451DFE8) };
 		inline constexpr std::array<REL::Offset, 1>  FavoritesManager__FavoritesData{ REL::Offset(0x0451E2D0) };
 		inline constexpr std::array<REL::Offset, 1>  FavoritesManager__FavoritesEntryData{ REL::Offset(0x0451DF78) };
 		inline constexpr std::array<REL::Offset, 1>  FavoritesManager__FavoritesUIDataEventShuttle{ REL::Offset(0x0451E2E8) };
@@ -26982,13 +26982,13 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  FireForgetModel__FireForgetEventShuttle{ REL::Offset(0x04481728) };
 		inline constexpr std::array<REL::Offset, 2>  FireParticlesCollidedWithBodiesCallbackTask{ REL::Offset(0x04069528), REL::Offset(0x04069548) };
 		inline constexpr std::array<REL::Offset, 2>  FireParticlesCollidedWithParticlesCallbackTask{ REL::Offset(0x040694A0),
-                                                                                                    REL::Offset(0x040694C0) };
+            REL::Offset(0x040694C0) };
 		inline constexpr std::array<REL::Offset, 2>  FireParticlesExitedSafeRegionCallbackTask{ REL::Offset(0x040695A8), REL::Offset(0x040695C8) };
 		inline constexpr std::array<REL::Offset, 1>  FirstPersonState{ REL::Offset(0x045195D0) };
 		inline constexpr std::array<REL::Offset, 11> FlameProjectile{ REL::Offset(0x044EAFB0), REL::Offset(0x044EAFC8), REL::Offset(0x044EAFE0),
-			                                                          REL::Offset(0x044EB0B0), REL::Offset(0x044EB0C8), REL::Offset(0x044EB130),
-			                                                          REL::Offset(0x044EB150), REL::Offset(0x044EB160), REL::Offset(0x044EB178),
-			                                                          REL::Offset(0x044EBC68), REL::Offset(0x044EBC80) };
+			REL::Offset(0x044EB0B0), REL::Offset(0x044EB0C8), REL::Offset(0x044EB130),
+			REL::Offset(0x044EB150), REL::Offset(0x044EB160), REL::Offset(0x044EB178),
+			REL::Offset(0x044EBC68), REL::Offset(0x044EBC80) };
 		inline constexpr std::array<REL::Offset, 2>  FleePackage{ REL::Offset(0x044E0A38), REL::Offset(0x044E0A50) };
 		inline constexpr std::array<REL::Offset, 1>  FlightActionEndHandler{ REL::Offset(0x044E2FC0) };
 		inline constexpr std::array<REL::Offset, 1>  FlightActionEntryEndHandler{ REL::Offset(0x044E2FD8) };
@@ -27006,8 +27006,8 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  Float4LightAnimData{ REL::Offset(0x04354D38) };
 		inline constexpr std::array<REL::Offset, 1>  FloatLightAnimData{ REL::Offset(0x04354D60) };
 		inline constexpr std::array<REL::Offset, 9>  FoodCraftingMenu{ REL::Offset(0x044A6BE8), REL::Offset(0x044A6CC8), REL::Offset(0x044A6D20),
-                                                                      REL::Offset(0x044A6D38), REL::Offset(0x044A6D88), REL::Offset(0x044A6DA0),
-                                                                      REL::Offset(0x044A6DB8), REL::Offset(0x044A6DD0), REL::Offset(0x044A6DE8) };
+            REL::Offset(0x044A6D38), REL::Offset(0x044A6D88), REL::Offset(0x044A6DA0),
+            REL::Offset(0x044A6DB8), REL::Offset(0x044A6DD0), REL::Offset(0x044A6DE8) };
 		inline constexpr std::array<REL::Offset, 1>  FootIKNode{ REL::Offset(0x04566D40) };
 		inline constexpr std::array<REL::Offset, 1>  FootIKNodeInstance{ REL::Offset(0x04568268) };
 		inline constexpr std::array<REL::Offset, 1>
@@ -27115,7 +27115,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> GameScript__BuilderEventHandler{ REL::Offset(0x0452A4C0) };
 		inline constexpr std::array<REL::Offset, 1> GameScript__ChallengeEventHandler{ REL::Offset(0x0447C290) };
 		inline constexpr std::array<REL::Offset, 3> GameScript__CombatEventHandler{ REL::Offset(0x0452A8F0), REL::Offset(0x0452A908),
-			                                                                        REL::Offset(0x0452A920) };
+			REL::Offset(0x0452A920) };
 		inline constexpr std::array<REL::Offset, 1> GameScript__ConcreteDelayFunctorFactory_GameScript____AddItemFunctor_19_{ REL::Offset(
 			0x04552A80) };
 		inline constexpr std::array<REL::Offset, 1> GameScript__ConcreteDelayFunctorFactory_GameScript____ApplyHavokImpulseFunctor_16_{ REL::Offset(
@@ -27142,99 +27142,99 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> GameScript__ConcreteDelayFunctorFactory_GameScript____MoveToNearestNavmeshLocFunctor_26_{
 			REL::Offset(0x04552608)
 		};
-		inline constexpr std::array<REL::Offset, 1> GameScript__ConcreteDelayFunctorFactory_GameScript____MoveToOwnEditorLocFunctor_1_{ REL::Offset(
-			0x045528B8) };
-		inline constexpr std::array<REL::Offset, 1> GameScript__ConcreteDelayFunctorFactory_GameScript____MoveToPackLocFunctor_10_{ REL::Offset(
-			0x04532180) };
-		inline constexpr std::array<REL::Offset, 1> GameScript__ConcreteDelayFunctorFactory_GameScript____NonLatentDeleteFunctor_9_{ REL::Offset(
-			0x045525A0) };
-		inline constexpr std::array<REL::Offset, 1> GameScript__ConcreteDelayFunctorFactory_GameScript____PlayBinkFunctor_25_{ REL::Offset(
-			0x0453C7D0) };
-		inline constexpr std::array<REL::Offset, 1> GameScript__ConcreteDelayFunctorFactory_GameScript____PopPlayerToFunctor_31_{ REL::Offset(
-			0x0453C7B0) };
-		inline constexpr std::array<REL::Offset, 1> GameScript__ConcreteDelayFunctorFactory_GameScript____RemoveComponentFunctor_29_{ REL::Offset(
-			0x04552A20) };
-		inline constexpr std::array<REL::Offset, 1> GameScript__ConcreteDelayFunctorFactory_GameScript____RemoveItemFunctor_23_{ REL::Offset(
-			0x045529C0) };
-		inline constexpr std::array<REL::Offset, 1> GameScript__ConcreteDelayFunctorFactory_GameScript____ResetFunctor_17_{ REL::Offset(0x04552728) };
-		inline constexpr std::array<REL::Offset, 1> GameScript__ConcreteDelayFunctorFactory_GameScript____ResurrectFunctor_20_{ REL::Offset(
-			0x045321E0) };
-		inline constexpr std::array<REL::Offset, 1> GameScript__ConcreteDelayFunctorFactory_GameScript____ScrollCastFunctor_22_{ REL::Offset(
-			0x04541108) };
-		inline constexpr std::array<REL::Offset, 1> GameScript__ConcreteDelayFunctorFactory_GameScript____SendPlayerToJailFunctor_18_{ REL::Offset(
-			0x04542340) };
-		inline constexpr std::array<REL::Offset, 1> GameScript__ConcreteDelayFunctorFactory_GameScript____SetAngleFunctor_7_{ REL::Offset(
-			0x045524E0) };
-		inline constexpr std::array<REL::Offset, 1> GameScript__ConcreteDelayFunctorFactory_GameScript____SetMotionTypeFunctor_8_{ REL::Offset(
-			0x0454DC70) };
-		inline constexpr std::array<REL::Offset, 1> GameScript__ConcreteDelayFunctorFactory_GameScript____SetPositionFunctor_6_{ REL::Offset(
-			0x04552478) };
-		inline constexpr std::array<REL::Offset, 1> GameScript__ConcreteDelayFunctorFactory_GameScript____SetScaleFunctor_11_{ REL::Offset(
-			0x0454DC10) };
-		inline constexpr std::array<REL::Offset, 1> GameScript__ConcreteDelayFunctorFactory_GameScript____WaitFor3DFunctor_24_{ REL::Offset(
-			0x04552788) };
-		inline constexpr std::array<REL::Offset, 1> GameScript__CustomEventHandler{ REL::Offset(0x0452B018) };
-		inline constexpr std::array<REL::Offset, 1> GameScript__DataFileHandleReaderWriter{ REL::Offset(0x04529C30) };
-		inline constexpr std::array<REL::Offset, 1> GameScript__DebuggerMessages__ContinueRequest{ REL::Offset(0x04522610) };
-		inline constexpr std::array<REL::Offset, 1> GameScript__DebuggerMessages__DisconnectRequest{ REL::Offset(0x04522670) };
-		inline constexpr std::array<REL::Offset, 1> GameScript__DebuggerMessages__Event{ REL::Offset(0x045224C0) };
-		inline constexpr std::array<REL::Offset, 1> GameScript__DebuggerMessages__NextRequest{ REL::Offset(0x045223C0) };
-		inline constexpr std::array<REL::Offset, 1> GameScript__DebuggerMessages__OutputEvent{ REL::Offset(0x045227C8) };
-		inline constexpr std::array<REL::Offset, 1> GameScript__DebuggerMessages__PauseRequest{ REL::Offset(0x04522640) };
-		inline constexpr std::array<REL::Offset, 1> GameScript__DebuggerMessages__ProtocolMessage{ REL::Offset(0x04522560) };
-		inline constexpr std::array<REL::Offset, 1> GameScript__DebuggerMessages__Request{ REL::Offset(0x04522528) };
-		inline constexpr std::array<REL::Offset, 1> GameScript__DebuggerMessages__Response{ REL::Offset(0x045224F0) };
-		inline constexpr std::array<REL::Offset, 1> GameScript__DebuggerMessages__SetBreakpointsRequest{ REL::Offset(0x04522580) };
-		inline constexpr std::array<REL::Offset, 1> GameScript__DebuggerMessages__SetBreakpointsResponse{ REL::Offset(0x045226F0) };
-		inline constexpr std::array<REL::Offset, 1> GameScript__DebuggerMessages__StackTraceRequest{ REL::Offset(0x045225B0) };
-		inline constexpr std::array<REL::Offset, 1> GameScript__DebuggerMessages__StackTraceResponse{ REL::Offset(0x04522718) };
-		inline constexpr std::array<REL::Offset, 1> GameScript__DebuggerMessages__StepInRequest{ REL::Offset(0x04522390) };
-		inline constexpr std::array<REL::Offset, 1> GameScript__DebuggerMessages__StepOutRequest{ REL::Offset(0x04522360) };
-		inline constexpr std::array<REL::Offset, 1> GameScript__DebuggerMessages__StoppedEvent{ REL::Offset(0x04522798) };
-		inline constexpr std::array<REL::Offset, 1> GameScript__DebuggerMessages__ThreadEvent{ REL::Offset(0x04522768) };
-		inline constexpr std::array<REL::Offset, 1> GameScript__DebuggerMessages__ThreadsRequest{ REL::Offset(0x045225E0) };
-		inline constexpr std::array<REL::Offset, 1> GameScript__DebuggerMessages__ThreadsResponse{ REL::Offset(0x04522740) };
-		inline constexpr std::array<REL::Offset, 1> GameScript__DebuggerMessages__ValueRequest{ REL::Offset(0x045223F0) };
-		inline constexpr std::array<REL::Offset, 1> GameScript__DebuggerMessages__ValueResponse{ REL::Offset(0x045226A0) };
-		inline constexpr std::array<REL::Offset, 1> GameScript__DebuggerMessages__VariablesRequest{ REL::Offset(0x04522420) };
-		inline constexpr std::array<REL::Offset, 1> GameScript__DebuggerMessages__VariablesResponse{ REL::Offset(0x045226C8) };
-		inline constexpr std::array<REL::Offset, 1> GameScript__DebuggerMessages__VersionEvent{ REL::Offset(0x04522490) };
-		inline constexpr std::array<REL::Offset, 1> GameScript__DelayFunctor{ REL::Offset(0x04524428) };
-		inline constexpr std::array<REL::Offset, 1> GameScript__DelayFunctorFactory{ REL::Offset(0x03F2CB68) };
-		inline constexpr std::array<REL::Offset, 1> GameScript__DispatchAndClean_GameScript__Internal__HitRegistrationList_{ REL::Offset(
-			0x0452A8C0) };
-		inline constexpr std::array<REL::Offset, 1> GameScript__DispatchAndClean_GameScript__Internal__MagicEffectApplyRegistrationList_{ REL::Offset(
-			0x0452A8A8) };
-		inline constexpr std::array<REL::Offset, 1> GameScript__DispatchAndClean_GameScript__Internal__RadiationDamageRegistrationList_{ REL::Offset(
-			0x0452A8D8) };
-		inline constexpr std::array<REL::Offset, 1> GameScript__DistanceEventHandler{ REL::Offset(0x045585C0) };
-		inline constexpr std::array<REL::Offset, 8> GameScript__FragmentEventHandler{ REL::Offset(0x0452ADB8), REL::Offset(0x0452ADD0),
-			                                                                          REL::Offset(0x0452ADE8), REL::Offset(0x0452AE00),
-			                                                                          REL::Offset(0x0452AE18), REL::Offset(0x0452AE30),
-			                                                                          REL::Offset(0x0452AE48), REL::Offset(0x0452AE60) };
-		inline constexpr std::array<REL::Offset, 1> GameScript__HandlePolicy{ REL::Offset(0x0452E3A8) };
-		inline constexpr std::array<REL::Offset, 1> GameScript__Internal__AnimationCallbacks{ REL::Offset(0x04529998) };
-		inline constexpr std::array<REL::Offset, 1> GameScript__Internal__LOSDetectionEventData{ REL::Offset(0x0452BD18) };
-		inline constexpr std::array<REL::Offset, 1> GameScript__Internal__LOSDirectEventData{ REL::Offset(0x0452BC88) };
-		inline constexpr std::array<REL::Offset, 1> GameScript__Internal__LOSEventData{ REL::Offset(0x0452BCD0) };
-		inline constexpr std::array<REL::Offset, 3> GameScript__InventoryEventHandler{ REL::Offset(0x0452B928), REL::Offset(0x0452B940),
-			                                                                           REL::Offset(0x0452B958) };
-		inline constexpr std::array<REL::Offset, 1> GameScript__LOSEventHandler{ REL::Offset(0x0452BC78) };
-		inline constexpr std::array<REL::Offset, 1> GameScript__Logger{ REL::Offset(0x0452B108) };
-		inline constexpr std::array<REL::Offset, 4> GameScript__MenuEventHandler{ REL::Offset(0x0452C058), REL::Offset(0x0452C070),
-			                                                                      REL::Offset(0x0452C088), REL::Offset(0x0452C0A0) };
-		inline constexpr std::array<REL::Offset, 1> GameScript__ObjectBindPolicy{ REL::Offset(0x0452E2D8) };
-		inline constexpr std::array<REL::Offset, 1> GameScript__PathingCallbackMgr{ REL::Offset(0x0452C0B8) };
-		inline constexpr std::array<REL::Offset, 1> GameScript__Profiler{ REL::Offset(0x0452C250) };
-		inline constexpr std::array<REL::Offset, 4> GameScript__QuestCallbackMgr{ REL::Offset(0x0452C2F0), REL::Offset(0x0452C308),
-			                                                                      REL::Offset(0x0452C320), REL::Offset(0x0452C338) };
-		inline constexpr std::array<REL::Offset, 1> GameScript__RemoteDebugger{ REL::Offset(0x04522450) };
-		inline constexpr std::array<REL::Offset, 1> GameScript__SaveFileHandleReaderWriter{ REL::Offset(0x04529BF0) };
-		inline constexpr std::array<REL::Offset, 1> GameScript__SavePatcher{ REL::Offset(0x0452C350) };
-		inline constexpr std::array<REL::Offset, 1> GameScript__ScriptSpaceCellCreateComplete{ REL::Offset(0x0452A4D0) };
-		inline constexpr std::array<REL::Offset, 1> GameScript__ScriptSpaceshipCreateComplete{ REL::Offset(0x0452A470) };
-		inline constexpr std::array<REL::Offset, 2> GameScript__SleepEventHandler{ REL::Offset(0x0452C450), REL::Offset(0x0452C468) };
-		inline constexpr std::array<REL::Offset, 1> GameScript__SoundCallbackMgr{ REL::Offset(0x0452C498) };
+		inline constexpr std::array<REL::Offset, 1>  GameScript__ConcreteDelayFunctorFactory_GameScript____MoveToOwnEditorLocFunctor_1_{ REL::Offset(
+            0x045528B8) };
+		inline constexpr std::array<REL::Offset, 1>  GameScript__ConcreteDelayFunctorFactory_GameScript____MoveToPackLocFunctor_10_{ REL::Offset(
+            0x04532180) };
+		inline constexpr std::array<REL::Offset, 1>  GameScript__ConcreteDelayFunctorFactory_GameScript____NonLatentDeleteFunctor_9_{ REL::Offset(
+            0x045525A0) };
+		inline constexpr std::array<REL::Offset, 1>  GameScript__ConcreteDelayFunctorFactory_GameScript____PlayBinkFunctor_25_{ REL::Offset(
+            0x0453C7D0) };
+		inline constexpr std::array<REL::Offset, 1>  GameScript__ConcreteDelayFunctorFactory_GameScript____PopPlayerToFunctor_31_{ REL::Offset(
+            0x0453C7B0) };
+		inline constexpr std::array<REL::Offset, 1>  GameScript__ConcreteDelayFunctorFactory_GameScript____RemoveComponentFunctor_29_{ REL::Offset(
+            0x04552A20) };
+		inline constexpr std::array<REL::Offset, 1>  GameScript__ConcreteDelayFunctorFactory_GameScript____RemoveItemFunctor_23_{ REL::Offset(
+            0x045529C0) };
+		inline constexpr std::array<REL::Offset, 1>  GameScript__ConcreteDelayFunctorFactory_GameScript____ResetFunctor_17_{ REL::Offset(0x04552728) };
+		inline constexpr std::array<REL::Offset, 1>  GameScript__ConcreteDelayFunctorFactory_GameScript____ResurrectFunctor_20_{ REL::Offset(
+            0x045321E0) };
+		inline constexpr std::array<REL::Offset, 1>  GameScript__ConcreteDelayFunctorFactory_GameScript____ScrollCastFunctor_22_{ REL::Offset(
+            0x04541108) };
+		inline constexpr std::array<REL::Offset, 1>  GameScript__ConcreteDelayFunctorFactory_GameScript____SendPlayerToJailFunctor_18_{ REL::Offset(
+            0x04542340) };
+		inline constexpr std::array<REL::Offset, 1>  GameScript__ConcreteDelayFunctorFactory_GameScript____SetAngleFunctor_7_{ REL::Offset(
+            0x045524E0) };
+		inline constexpr std::array<REL::Offset, 1>  GameScript__ConcreteDelayFunctorFactory_GameScript____SetMotionTypeFunctor_8_{ REL::Offset(
+            0x0454DC70) };
+		inline constexpr std::array<REL::Offset, 1>  GameScript__ConcreteDelayFunctorFactory_GameScript____SetPositionFunctor_6_{ REL::Offset(
+            0x04552478) };
+		inline constexpr std::array<REL::Offset, 1>  GameScript__ConcreteDelayFunctorFactory_GameScript____SetScaleFunctor_11_{ REL::Offset(
+            0x0454DC10) };
+		inline constexpr std::array<REL::Offset, 1>  GameScript__ConcreteDelayFunctorFactory_GameScript____WaitFor3DFunctor_24_{ REL::Offset(
+            0x04552788) };
+		inline constexpr std::array<REL::Offset, 1>  GameScript__CustomEventHandler{ REL::Offset(0x0452B018) };
+		inline constexpr std::array<REL::Offset, 1>  GameScript__DataFileHandleReaderWriter{ REL::Offset(0x04529C30) };
+		inline constexpr std::array<REL::Offset, 1>  GameScript__DebuggerMessages__ContinueRequest{ REL::Offset(0x04522610) };
+		inline constexpr std::array<REL::Offset, 1>  GameScript__DebuggerMessages__DisconnectRequest{ REL::Offset(0x04522670) };
+		inline constexpr std::array<REL::Offset, 1>  GameScript__DebuggerMessages__Event{ REL::Offset(0x045224C0) };
+		inline constexpr std::array<REL::Offset, 1>  GameScript__DebuggerMessages__NextRequest{ REL::Offset(0x045223C0) };
+		inline constexpr std::array<REL::Offset, 1>  GameScript__DebuggerMessages__OutputEvent{ REL::Offset(0x045227C8) };
+		inline constexpr std::array<REL::Offset, 1>  GameScript__DebuggerMessages__PauseRequest{ REL::Offset(0x04522640) };
+		inline constexpr std::array<REL::Offset, 1>  GameScript__DebuggerMessages__ProtocolMessage{ REL::Offset(0x04522560) };
+		inline constexpr std::array<REL::Offset, 1>  GameScript__DebuggerMessages__Request{ REL::Offset(0x04522528) };
+		inline constexpr std::array<REL::Offset, 1>  GameScript__DebuggerMessages__Response{ REL::Offset(0x045224F0) };
+		inline constexpr std::array<REL::Offset, 1>  GameScript__DebuggerMessages__SetBreakpointsRequest{ REL::Offset(0x04522580) };
+		inline constexpr std::array<REL::Offset, 1>  GameScript__DebuggerMessages__SetBreakpointsResponse{ REL::Offset(0x045226F0) };
+		inline constexpr std::array<REL::Offset, 1>  GameScript__DebuggerMessages__StackTraceRequest{ REL::Offset(0x045225B0) };
+		inline constexpr std::array<REL::Offset, 1>  GameScript__DebuggerMessages__StackTraceResponse{ REL::Offset(0x04522718) };
+		inline constexpr std::array<REL::Offset, 1>  GameScript__DebuggerMessages__StepInRequest{ REL::Offset(0x04522390) };
+		inline constexpr std::array<REL::Offset, 1>  GameScript__DebuggerMessages__StepOutRequest{ REL::Offset(0x04522360) };
+		inline constexpr std::array<REL::Offset, 1>  GameScript__DebuggerMessages__StoppedEvent{ REL::Offset(0x04522798) };
+		inline constexpr std::array<REL::Offset, 1>  GameScript__DebuggerMessages__ThreadEvent{ REL::Offset(0x04522768) };
+		inline constexpr std::array<REL::Offset, 1>  GameScript__DebuggerMessages__ThreadsRequest{ REL::Offset(0x045225E0) };
+		inline constexpr std::array<REL::Offset, 1>  GameScript__DebuggerMessages__ThreadsResponse{ REL::Offset(0x04522740) };
+		inline constexpr std::array<REL::Offset, 1>  GameScript__DebuggerMessages__ValueRequest{ REL::Offset(0x045223F0) };
+		inline constexpr std::array<REL::Offset, 1>  GameScript__DebuggerMessages__ValueResponse{ REL::Offset(0x045226A0) };
+		inline constexpr std::array<REL::Offset, 1>  GameScript__DebuggerMessages__VariablesRequest{ REL::Offset(0x04522420) };
+		inline constexpr std::array<REL::Offset, 1>  GameScript__DebuggerMessages__VariablesResponse{ REL::Offset(0x045226C8) };
+		inline constexpr std::array<REL::Offset, 1>  GameScript__DebuggerMessages__VersionEvent{ REL::Offset(0x04522490) };
+		inline constexpr std::array<REL::Offset, 1>  GameScript__DelayFunctor{ REL::Offset(0x04524428) };
+		inline constexpr std::array<REL::Offset, 1>  GameScript__DelayFunctorFactory{ REL::Offset(0x03F2CB68) };
+		inline constexpr std::array<REL::Offset, 1>  GameScript__DispatchAndClean_GameScript__Internal__HitRegistrationList_{ REL::Offset(
+            0x0452A8C0) };
+		inline constexpr std::array<REL::Offset, 1>  GameScript__DispatchAndClean_GameScript__Internal__MagicEffectApplyRegistrationList_{ REL::Offset(
+            0x0452A8A8) };
+		inline constexpr std::array<REL::Offset, 1>  GameScript__DispatchAndClean_GameScript__Internal__RadiationDamageRegistrationList_{ REL::Offset(
+            0x0452A8D8) };
+		inline constexpr std::array<REL::Offset, 1>  GameScript__DistanceEventHandler{ REL::Offset(0x045585C0) };
+		inline constexpr std::array<REL::Offset, 8>  GameScript__FragmentEventHandler{ REL::Offset(0x0452ADB8), REL::Offset(0x0452ADD0),
+            REL::Offset(0x0452ADE8), REL::Offset(0x0452AE00),
+            REL::Offset(0x0452AE18), REL::Offset(0x0452AE30),
+            REL::Offset(0x0452AE48), REL::Offset(0x0452AE60) };
+		inline constexpr std::array<REL::Offset, 1>  GameScript__HandlePolicy{ REL::Offset(0x0452E3A8) };
+		inline constexpr std::array<REL::Offset, 1>  GameScript__Internal__AnimationCallbacks{ REL::Offset(0x04529998) };
+		inline constexpr std::array<REL::Offset, 1>  GameScript__Internal__LOSDetectionEventData{ REL::Offset(0x0452BD18) };
+		inline constexpr std::array<REL::Offset, 1>  GameScript__Internal__LOSDirectEventData{ REL::Offset(0x0452BC88) };
+		inline constexpr std::array<REL::Offset, 1>  GameScript__Internal__LOSEventData{ REL::Offset(0x0452BCD0) };
+		inline constexpr std::array<REL::Offset, 3>  GameScript__InventoryEventHandler{ REL::Offset(0x0452B928), REL::Offset(0x0452B940),
+            REL::Offset(0x0452B958) };
+		inline constexpr std::array<REL::Offset, 1>  GameScript__LOSEventHandler{ REL::Offset(0x0452BC78) };
+		inline constexpr std::array<REL::Offset, 1>  GameScript__Logger{ REL::Offset(0x0452B108) };
+		inline constexpr std::array<REL::Offset, 4>  GameScript__MenuEventHandler{ REL::Offset(0x0452C058), REL::Offset(0x0452C070),
+            REL::Offset(0x0452C088), REL::Offset(0x0452C0A0) };
+		inline constexpr std::array<REL::Offset, 1>  GameScript__ObjectBindPolicy{ REL::Offset(0x0452E2D8) };
+		inline constexpr std::array<REL::Offset, 1>  GameScript__PathingCallbackMgr{ REL::Offset(0x0452C0B8) };
+		inline constexpr std::array<REL::Offset, 1>  GameScript__Profiler{ REL::Offset(0x0452C250) };
+		inline constexpr std::array<REL::Offset, 4>  GameScript__QuestCallbackMgr{ REL::Offset(0x0452C2F0), REL::Offset(0x0452C308),
+            REL::Offset(0x0452C320), REL::Offset(0x0452C338) };
+		inline constexpr std::array<REL::Offset, 1>  GameScript__RemoteDebugger{ REL::Offset(0x04522450) };
+		inline constexpr std::array<REL::Offset, 1>  GameScript__SaveFileHandleReaderWriter{ REL::Offset(0x04529BF0) };
+		inline constexpr std::array<REL::Offset, 1>  GameScript__SavePatcher{ REL::Offset(0x0452C350) };
+		inline constexpr std::array<REL::Offset, 1>  GameScript__ScriptSpaceCellCreateComplete{ REL::Offset(0x0452A4D0) };
+		inline constexpr std::array<REL::Offset, 1>  GameScript__ScriptSpaceshipCreateComplete{ REL::Offset(0x0452A470) };
+		inline constexpr std::array<REL::Offset, 2>  GameScript__SleepEventHandler{ REL::Offset(0x0452C450), REL::Offset(0x0452C468) };
+		inline constexpr std::array<REL::Offset, 1>  GameScript__SoundCallbackMgr{ REL::Offset(0x0452C498) };
 		inline constexpr std::array<REL::Offset, 13> GameScript__SpaceshipEventHandler{
 			REL::Offset(0x045578D0), REL::Offset(0x045578E8), REL::Offset(0x04557900), REL::Offset(0x04557918), REL::Offset(0x04557930),
 			REL::Offset(0x04557948), REL::Offset(0x04557960), REL::Offset(0x04557978), REL::Offset(0x04557990), REL::Offset(0x045579A8),
@@ -27292,13 +27292,13 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  GameScript____WaitFor3DFunctor{ REL::Offset(0x04552748) };
 		inline constexpr std::array<REL::Offset, 1>  GameSettingCollection{ REL::Offset(0x043442A0) };
 		inline constexpr std::array<REL::Offset, 5>  GameUIGlobalFunc{ REL::Offset(0x044A0B48), REL::Offset(0x044A0B80), REL::Offset(0x044A0B98),
-                                                                      REL::Offset(0x044A0BB0), REL::Offset(0x044A0BC8) };
+            REL::Offset(0x044A0BB0), REL::Offset(0x044A0BC8) };
 		inline constexpr std::array<REL::Offset, 1>  GameUIModel{ REL::Offset(0x044A0AB8) };
 		inline constexpr std::array<REL::Offset, 13> GameVM{ REL::Offset(0x0452DE98), REL::Offset(0x0452DFE8), REL::Offset(0x0452E000),
-			                                                 REL::Offset(0x0452E018), REL::Offset(0x0452E028), REL::Offset(0x0452E038),
-			                                                 REL::Offset(0x0452E050), REL::Offset(0x0452E068), REL::Offset(0x0452E080),
-			                                                 REL::Offset(0x0452E098), REL::Offset(0x0452E0C0), REL::Offset(0x0452E0E0),
-			                                                 REL::Offset(0x0452E0F8) };
+			REL::Offset(0x0452E018), REL::Offset(0x0452E028), REL::Offset(0x0452E038),
+			REL::Offset(0x0452E050), REL::Offset(0x0452E068), REL::Offset(0x0452E080),
+			REL::Offset(0x0452E098), REL::Offset(0x0452E0C0), REL::Offset(0x0452E0E0),
+			REL::Offset(0x0452E0F8) };
 		inline constexpr std::array<REL::Offset, 1>  GamebryoSequence{ REL::Offset(0x04567328) };
 		inline constexpr std::array<REL::Offset, 1>  GamebryoSequenceInstance{ REL::Offset(0x045682D8) };
 		inline constexpr std::array<REL::Offset, 2>  GenerateMappingToPointsBufferTask{ REL::Offset(0x04069080), REL::Offset(0x040690A0) };
@@ -27324,9 +27324,9 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  GravJumpInitiateCompleteHandler{ REL::Offset(0x044E5FB0) };
 		inline constexpr std::array<REL::Offset, 1>  GravJumpSearch{ REL::Offset(0x04378C80) };
 		inline constexpr std::array<REL::Offset, 11> GrenadeProjectile{ REL::Offset(0x044EBC98), REL::Offset(0x044EBCA8), REL::Offset(0x044EBD10),
-			                                                            REL::Offset(0x044EBD28), REL::Offset(0x044EBD40), REL::Offset(0x044EBD58),
-			                                                            REL::Offset(0x044EBD70), REL::Offset(0x044EBD88), REL::Offset(0x044EBDA0),
-			                                                            REL::Offset(0x044EBDC0), REL::Offset(0x044EBE90) };
+			REL::Offset(0x044EBD28), REL::Offset(0x044EBD40), REL::Offset(0x044EBD58),
+			REL::Offset(0x044EBD70), REL::Offset(0x044EBD88), REL::Offset(0x044EBDA0),
+			REL::Offset(0x044EBDC0), REL::Offset(0x044EBE90) };
 		inline constexpr std::array<REL::Offset, 1>  GridArray{ REL::Offset(0x04372830) };
 		inline constexpr std::array<REL::Offset, 1>  GridCellArray{ REL::Offset(0x04372A20) };
 		inline constexpr std::array<REL::Offset, 1>  GroundPathPathingNodeGenerator{ REL::Offset(0x045A3040) };
@@ -27334,18 +27334,18 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  GuardActorPackageData{ REL::Offset(0x044E0D90) };
 		inline constexpr std::array<REL::Offset, 1>  GuideEffect{ REL::Offset(0x044C3DF8) };
 		inline constexpr std::array<REL::Offset, 4>  HUDAmmoCountModel{ REL::Offset(0x044A0CE0), REL::Offset(0x044A0D08), REL::Offset(0x044A0D20),
-                                                                       REL::Offset(0x044A0D38) };
+            REL::Offset(0x044A0D38) };
 		inline constexpr std::array<REL::Offset, 1>  HUDAmmoCountModel__HUDAmmoCountModelShuttle{ REL::Offset(0x044A0E30) };
 		inline constexpr std::array<REL::Offset, 1>  HUDCommandIconData{ REL::Offset(0x044A1230) };
 		inline constexpr std::array<REL::Offset, 1>  HUDCompassDataModel{ REL::Offset(0x04484600) };
 		inline constexpr std::array<REL::Offset, 2>  HUDCrewBuffDataModel{ REL::Offset(0x0447DA20), REL::Offset(0x0447DA38) };
 		inline constexpr std::array<REL::Offset, 3>  HUDCrosshairDataModel{ REL::Offset(0x04484CB0), REL::Offset(0x04484CC8),
-                                                                           REL::Offset(0x04484CE0) };
+            REL::Offset(0x04484CE0) };
 		inline constexpr std::array<REL::Offset, 1>  HUDCrosshairDataModel__HUDCrosshairEventShuttle{ REL::Offset(0x04484D18) };
 		inline constexpr std::array<REL::Offset, 2>  HUDDataModel{ REL::Offset(0x044A2360), REL::Offset(0x044A2388) };
 		inline constexpr std::array<REL::Offset, 1>  HUDDataModel__HUDDataEventShuttle{ REL::Offset(0x044A23A0) };
 		inline constexpr std::array<REL::Offset, 3>  HUDDirectionalHitIndicatorDataModel{ REL::Offset(0x044A1300), REL::Offset(0x044A1318),
-                                                                                         REL::Offset(0x044A1330) };
+            REL::Offset(0x044A1330) };
 		inline constexpr std::array<REL::Offset, 1>  HUDEnemyDataModel{ REL::Offset(0x04484EC0) };
 		inline constexpr std::array<REL::Offset, 1>  HUDEnemyDataModel__HUDEnemyEventShuttle{ REL::Offset(0x04485280) };
 		inline constexpr std::array<REL::Offset, 9>  HUDExperienceMeterDataModel{
@@ -27356,9 +27356,9 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> HUDJetpackDataModel{ REL::Offset(0x04485390) };
 		inline constexpr std::array<REL::Offset, 3> HUDLocationDataModel{ REL::Offset(0x04485468), REL::Offset(0x04485480), REL::Offset(0x04485498) };
 		inline constexpr std::array<REL::Offset, 5> HUDMenu{ REL::Offset(0x0451E458), REL::Offset(0x0451E538), REL::Offset(0x0451E550),
-			                                                 REL::Offset(0x0451E5A8), REL::Offset(0x0451E5C0) };
+			REL::Offset(0x0451E5A8), REL::Offset(0x0451E5C0) };
 		inline constexpr std::array<REL::Offset, 4> HUDMessageDataModel{ REL::Offset(0x044859F8), REL::Offset(0x04485A10), REL::Offset(0x04485A28),
-			                                                             REL::Offset(0x04485A50) };
+			REL::Offset(0x04485A50) };
 		inline constexpr std::array<REL::Offset, 3> HUDMessagesMenu{ REL::Offset(0x044A6E00), REL::Offset(0x044A6EE0), REL::Offset(0x044A6F38) };
 		inline constexpr std::array<REL::Offset, 1> HUDNotification_MissionActiveWidgetUpdate{ REL::Offset(0x044A31C0) };
 		inline constexpr std::array<REL::Offset, 1> HUDNotification_OpenDataMenu{ REL::Offset(0x044A3200) };
@@ -27378,12 +27378,12 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 2>  HUDRolloverActivationDoorListener{ REL::Offset(0x04483998), REL::Offset(0x04483A08) };
 		inline constexpr std::array<REL::Offset, 1>  HUDRolloverActivationFallbackListener{ REL::Offset(0x04481B70) };
 		inline constexpr std::array<REL::Offset, 3>  HUDRolloverActivationLootListener{ REL::Offset(0x04483A90), REL::Offset(0x04483B00),
-                                                                                       REL::Offset(0x04483B18) };
+            REL::Offset(0x04483B18) };
 		inline constexpr std::array<REL::Offset, 1>  HUDRolloverActivationNPCListener{ REL::Offset(0x04483B58) };
 		inline constexpr std::array<REL::Offset, 2>  HUDRolloverActivationOutpostItemListener{ REL::Offset(0x04481C88), REL::Offset(0x04481CF8) };
 		inline constexpr std::array<REL::Offset, 2>  HUDRolloverActivationOutpostListener{ REL::Offset(0x04481DF0), REL::Offset(0x04481E20) };
 		inline constexpr std::array<REL::Offset, 3>  HUDRolloverActivationOutpostQCListener{ REL::Offset(0x04481EB8), REL::Offset(0x04481F38),
-                                                                                            REL::Offset(0x04481F50) };
+            REL::Offset(0x04481F50) };
 		inline constexpr std::array<REL::Offset, 1>  HUDRolloverActivationQCItemPressEvent{ REL::Offset(0x04483438) };
 		inline constexpr std::array<REL::Offset, 2>  HUDRolloverActivationQuickContainerListener{ REL::Offset(0x04483C18), REL::Offset(0x04483C98) };
 		inline constexpr std::array<REL::Offset, 2>  HUDRolloverActivationShipContainerListener{ REL::Offset(0x04483CB0), REL::Offset(0x04483D30) };
@@ -27394,37 +27394,37 @@ namespace RE
 			REL::Offset(0x04483488), REL::Offset(0x044834A0), REL::Offset(0x044834B8), REL::Offset(0x044834D0), REL::Offset(0x044834E8),
 			REL::Offset(0x04483500), REL::Offset(0x04483518), REL::Offset(0x04483530), REL::Offset(0x04483548), REL::Offset(0x04483560)
 		};
-		inline constexpr std::array<REL::Offset, 1> HUDSocialCommandData{ REL::Offset(0x044A1218) };
-		inline constexpr std::array<REL::Offset, 1> HUDSocialCommandDataModel{ REL::Offset(0x044A1248) };
-		inline constexpr std::array<REL::Offset, 1> HUDSocialCommandDataModel__HUDSocialCommandDataEventShuttle{ REL::Offset(0x044A1270) };
-		inline constexpr std::array<REL::Offset, 3> HUDStarbornPowersDataModel{ REL::Offset(0x04486000), REL::Offset(0x04486018),
-			                                                                    REL::Offset(0x04486030) };
-		inline constexpr std::array<REL::Offset, 1> HUDStarbornPowersDataModel__HUDStarbornPowersEventShuttle{ REL::Offset(0x044861E8) };
-		inline constexpr std::array<REL::Offset, 2> HUDStealthDataModel{ REL::Offset(0x04486358), REL::Offset(0x04486370) };
-		inline constexpr std::array<REL::Offset, 1> HUDStealthDataModel__HUDStealthEventShuttle{ REL::Offset(0x04486460) };
-		inline constexpr std::array<REL::Offset, 3> HUDSubtitleDataModel{ REL::Offset(0x04486520), REL::Offset(0x04486538), REL::Offset(0x04486550) };
-		inline constexpr std::array<REL::Offset, 1> HUDSubtitleDataModel__HUDSubtitleEventShuttle{ REL::Offset(0x044864F8) };
-		inline constexpr std::array<REL::Offset, 4> HUDWatchEffectsModel{ REL::Offset(0x04486D10), REL::Offset(0x04486D28), REL::Offset(0x04486D40),
-			                                                              REL::Offset(0x04486D58) };
-		inline constexpr std::array<REL::Offset, 1> HUDWatchEffectsModel__HUDWatchEffectsModelShuttle{ REL::Offset(0x04487340) };
-		inline constexpr std::array<REL::Offset, 1> HangarShipSelection_ChangeSystemDisplay{ REL::Offset(0x0447B600) };
-		inline constexpr std::array<REL::Offset, 1> HangarShipSelection_RepairShip{ REL::Offset(0x0447B568) };
-		inline constexpr std::array<REL::Offset, 1> HangarShipSelection_UpgradeSystem{ REL::Offset(0x0447B620) };
-		inline constexpr std::array<REL::Offset, 1> HasSpellVisitor{ REL::Offset(0x044D9188) };
-		inline constexpr std::array<REL::Offset, 1> HavokErrorCRTestApp{ REL::Offset(0x03F268B0) };
-		inline constexpr std::array<REL::Offset, 1> HavokFileStreambufWriter{ REL::Offset(0x04411DF0) };
-		inline constexpr std::array<REL::Offset, 1> HavokParticleDef__BaseShape{ REL::Offset(0x0457BD60) };
-		inline constexpr std::array<REL::Offset, 1> HavokParticleDef__BoxShape{ REL::Offset(0x0457BD90) };
-		inline constexpr std::array<REL::Offset, 1> HavokParticleDef__CapsuleShape{ REL::Offset(0x0457BE20) };
-		inline constexpr std::array<REL::Offset, 1> HavokParticleDef__ConvexShape{ REL::Offset(0x0457BE50) };
-		inline constexpr std::array<REL::Offset, 1> HavokParticleDef__CubeShape{ REL::Offset(0x0457BDC0) };
-		inline constexpr std::array<REL::Offset, 1> HavokParticleDef__CylinderShape{ REL::Offset(0x0457BDF0) };
-		inline constexpr std::array<REL::Offset, 1> HavokParticleDef__SphereShape{ REL::Offset(0x0457BD30) };
-		inline constexpr std::array<REL::Offset, 1> HavokStreambufFactory{ REL::Offset(0x04411E48) };
+		inline constexpr std::array<REL::Offset, 1>  HUDSocialCommandData{ REL::Offset(0x044A1218) };
+		inline constexpr std::array<REL::Offset, 1>  HUDSocialCommandDataModel{ REL::Offset(0x044A1248) };
+		inline constexpr std::array<REL::Offset, 1>  HUDSocialCommandDataModel__HUDSocialCommandDataEventShuttle{ REL::Offset(0x044A1270) };
+		inline constexpr std::array<REL::Offset, 3>  HUDStarbornPowersDataModel{ REL::Offset(0x04486000), REL::Offset(0x04486018),
+            REL::Offset(0x04486030) };
+		inline constexpr std::array<REL::Offset, 1>  HUDStarbornPowersDataModel__HUDStarbornPowersEventShuttle{ REL::Offset(0x044861E8) };
+		inline constexpr std::array<REL::Offset, 2>  HUDStealthDataModel{ REL::Offset(0x04486358), REL::Offset(0x04486370) };
+		inline constexpr std::array<REL::Offset, 1>  HUDStealthDataModel__HUDStealthEventShuttle{ REL::Offset(0x04486460) };
+		inline constexpr std::array<REL::Offset, 3>  HUDSubtitleDataModel{ REL::Offset(0x04486520), REL::Offset(0x04486538), REL::Offset(0x04486550) };
+		inline constexpr std::array<REL::Offset, 1>  HUDSubtitleDataModel__HUDSubtitleEventShuttle{ REL::Offset(0x044864F8) };
+		inline constexpr std::array<REL::Offset, 4>  HUDWatchEffectsModel{ REL::Offset(0x04486D10), REL::Offset(0x04486D28), REL::Offset(0x04486D40),
+            REL::Offset(0x04486D58) };
+		inline constexpr std::array<REL::Offset, 1>  HUDWatchEffectsModel__HUDWatchEffectsModelShuttle{ REL::Offset(0x04487340) };
+		inline constexpr std::array<REL::Offset, 1>  HangarShipSelection_ChangeSystemDisplay{ REL::Offset(0x0447B600) };
+		inline constexpr std::array<REL::Offset, 1>  HangarShipSelection_RepairShip{ REL::Offset(0x0447B568) };
+		inline constexpr std::array<REL::Offset, 1>  HangarShipSelection_UpgradeSystem{ REL::Offset(0x0447B620) };
+		inline constexpr std::array<REL::Offset, 1>  HasSpellVisitor{ REL::Offset(0x044D9188) };
+		inline constexpr std::array<REL::Offset, 1>  HavokErrorCRTestApp{ REL::Offset(0x03F268B0) };
+		inline constexpr std::array<REL::Offset, 1>  HavokFileStreambufWriter{ REL::Offset(0x04411DF0) };
+		inline constexpr std::array<REL::Offset, 1>  HavokParticleDef__BaseShape{ REL::Offset(0x0457BD60) };
+		inline constexpr std::array<REL::Offset, 1>  HavokParticleDef__BoxShape{ REL::Offset(0x0457BD90) };
+		inline constexpr std::array<REL::Offset, 1>  HavokParticleDef__CapsuleShape{ REL::Offset(0x0457BE20) };
+		inline constexpr std::array<REL::Offset, 1>  HavokParticleDef__ConvexShape{ REL::Offset(0x0457BE50) };
+		inline constexpr std::array<REL::Offset, 1>  HavokParticleDef__CubeShape{ REL::Offset(0x0457BDC0) };
+		inline constexpr std::array<REL::Offset, 1>  HavokParticleDef__CylinderShape{ REL::Offset(0x0457BDF0) };
+		inline constexpr std::array<REL::Offset, 1>  HavokParticleDef__SphereShape{ REL::Offset(0x0457BD30) };
+		inline constexpr std::array<REL::Offset, 1>  HavokStreambufFactory{ REL::Offset(0x04411E48) };
 		inline constexpr std::array<REL::Offset, 11> Hazard{ REL::Offset(0x044ED1C0), REL::Offset(0x044ED218), REL::Offset(0x044ED230),
-			                                                 REL::Offset(0x044ED248), REL::Offset(0x044ED260), REL::Offset(0x044ED278),
-			                                                 REL::Offset(0x044ED290), REL::Offset(0x044ED360), REL::Offset(0x044ED380),
-			                                                 REL::Offset(0x044ED418), REL::Offset(0x044EDDA0) };
+			REL::Offset(0x044ED248), REL::Offset(0x044ED260), REL::Offset(0x044ED278),
+			REL::Offset(0x044ED290), REL::Offset(0x044ED360), REL::Offset(0x044ED380),
+			REL::Offset(0x044ED418), REL::Offset(0x044EDDA0) };
 		inline constexpr std::array<REL::Offset, 1>  HeadTrackingOffHandler{ REL::Offset(0x044E33F8) };
 		inline constexpr std::array<REL::Offset, 1>  HeadTrackingOnHandler{ REL::Offset(0x044E2FF0) };
 		inline constexpr std::array<REL::Offset, 1>  HeadTrackingRotationOffHandler{ REL::Offset(0x044E3A28) };
@@ -27500,12 +27500,12 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  IMemoryStoreBase{ REL::Offset(0x0456C160) };
 		inline constexpr std::array<REL::Offset, 3>  IMenu{ REL::Offset(0x0458EB10), REL::Offset(0x0458EBE8), REL::Offset(0x0458EC40) };
 		inline constexpr std::array<REL::Offset, 1>  IMessageBoxCallback{ REL::Offset(0x043BA948) };
-		inline constexpr std::array<REL::Offset, 1> IMovementAgentDataTracker_IMovementHandlerAgent_MovementHandlerOutputDataSmallDelta_{ REL::Offset(
-			0x03F2D390) };
-		inline constexpr std::array<REL::Offset, 1> IMovementAgentDataTracker_IMovementHandlerAgent_MovementHandlerUpdateDataSmallDelta_{ REL::Offset(
-			0x03F2CC70) };
+		inline constexpr std::array<REL::Offset, 1>  IMovementAgentDataTracker_IMovementHandlerAgent_MovementHandlerOutputDataSmallDelta_{ REL::Offset(
+            0x03F2D390) };
+		inline constexpr std::array<REL::Offset, 1>  IMovementAgentDataTracker_IMovementHandlerAgent_MovementHandlerUpdateDataSmallDelta_{ REL::Offset(
+            0x03F2CC70) };
 		inline constexpr std::array<REL::Offset, 1>
-			IMovementAgentDataTracker_IMovementPathManagerAgent_MovementPathManagerAgentReturnData__AGENT_RESULT_{ REL::Offset(0x03F2CB50) };
+													IMovementAgentDataTracker_IMovementPathManagerAgent_MovementPathManagerAgentReturnData__AGENT_RESULT_{ REL::Offset(0x03F2CB50) };
 		inline constexpr std::array<REL::Offset, 1> IMovementAgentDataTracker_IMovementPlannerAgent_MovementPlannerAgentReturnDataSmallDelta_{
 			REL::Offset(0x03F2CE10)
 		};
@@ -27591,9 +27591,9 @@ namespace RE
 			REL::Offset(0x044A7108), REL::Offset(0x044A7120), REL::Offset(0x044A7138), REL::Offset(0x044A7150)
 		};
 		inline constexpr std::array<REL::Offset, 11> IngredientItem{ REL::Offset(0x04361F78), REL::Offset(0x04361FD8), REL::Offset(0x04362048),
-			                                                         REL::Offset(0x043620A8), REL::Offset(0x04362108), REL::Offset(0x04362168),
-			                                                         REL::Offset(0x043621D0), REL::Offset(0x04362248), REL::Offset(0x043622C0),
-			                                                         REL::Offset(0x043622E0), REL::Offset(0x043622F8) };
+			REL::Offset(0x043620A8), REL::Offset(0x04362108), REL::Offset(0x04362168),
+			REL::Offset(0x043621D0), REL::Offset(0x04362248), REL::Offset(0x043622C0),
+			REL::Offset(0x043622E0), REL::Offset(0x043622F8) };
 		inline constexpr std::array<REL::Offset, 1>  InitActionI{ REL::Offset(0x04356DE0) };
 		inline constexpr std::array<REL::Offset, 1>  InitializeTraversalSubgraphDataFunctor{ REL::Offset(0x04379DD8) };
 		inline constexpr std::array<REL::Offset, 1>  InputMemoryStreamBuffer{ REL::Offset(0x045B23F0) };
@@ -27610,22 +27610,22 @@ namespace RE
 			REL::Offset(0x044827F0), REL::Offset(0x04482808), REL::Offset(0x04482820), REL::Offset(0x04482838)
 		};
 		inline constexpr std::array<REL::Offset, 4> InventoryDataModel_PickpocketItemData_{ REL::Offset(0x044A9940), REL::Offset(0x044A9958),
-			                                                                                REL::Offset(0x044A9970), REL::Offset(0x044A9988) };
+			REL::Offset(0x044A9970), REL::Offset(0x044A9988) };
 		inline constexpr std::array<REL::Offset, 8> InventoryDataModel_PickpocketItemData___InventoryGameEventShuttle{
 			REL::Offset(0x044A9870), REL::Offset(0x044A9888), REL::Offset(0x044A98A0), REL::Offset(0x044A98B8),
 			REL::Offset(0x044A98D0), REL::Offset(0x044A98E8), REL::Offset(0x044A9900), REL::Offset(0x044A9918)
 		};
 		inline constexpr std::array<REL::Offset, 4> InventoryDataModel_PlayerInventoryItem_{ REL::Offset(0x0448DDD0), REL::Offset(0x0448DE00),
-			                                                                                 REL::Offset(0x0448DE18), REL::Offset(0x0448DE30) };
+			REL::Offset(0x0448DE18), REL::Offset(0x0448DE30) };
 		inline constexpr std::array<REL::Offset, 8> InventoryDataModel_PlayerInventoryItem___InventoryGameEventShuttle{
 			REL::Offset(0x0448DE48), REL::Offset(0x0448DE60), REL::Offset(0x0448DE78), REL::Offset(0x0448DE90),
 			REL::Offset(0x0448DEA8), REL::Offset(0x0448DEC0), REL::Offset(0x0448DEE8), REL::Offset(0x0448DF00)
 		};
 		inline constexpr std::array<REL::Offset, 14> InventoryMenu{ REL::Offset(0x044A76A8), REL::Offset(0x044A7788), REL::Offset(0x044A77E0),
-			                                                        REL::Offset(0x044A77F8), REL::Offset(0x044A7810), REL::Offset(0x044A7828),
-			                                                        REL::Offset(0x044A7840), REL::Offset(0x044A7858), REL::Offset(0x044A7870),
-			                                                        REL::Offset(0x044A7888), REL::Offset(0x044A78A0), REL::Offset(0x044A78B8),
-			                                                        REL::Offset(0x044A78D0), REL::Offset(0x044A78E8) };
+			REL::Offset(0x044A77F8), REL::Offset(0x044A7810), REL::Offset(0x044A7828),
+			REL::Offset(0x044A7840), REL::Offset(0x044A7858), REL::Offset(0x044A7870),
+			REL::Offset(0x044A7888), REL::Offset(0x044A78A0), REL::Offset(0x044A78B8),
+			REL::Offset(0x044A78D0), REL::Offset(0x044A78E8) };
 		inline constexpr std::array<REL::Offset, 1>  InventoryMenu_Change3DView{ REL::Offset(0x044A7A60) };
 		inline constexpr std::array<REL::Offset, 1>  InventoryMenu_DropItem{ REL::Offset(0x044A7980) };
 		inline constexpr std::array<REL::Offset, 1>  InventoryMenu_HideModel{ REL::Offset(0x044A7940) };
@@ -27645,18 +27645,18 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  InvisibilityEffect{ REL::Offset(0x044C4088) };
 		inline constexpr std::array<REL::Offset, 1>  IronSightsState{ REL::Offset(0x04519A40) };
 		inline constexpr std::array<REL::Offset, 6>  ItemCraftingBase{ REL::Offset(0x0447F010), REL::Offset(0x0447F028), REL::Offset(0x0447F040),
-                                                                      REL::Offset(0x0447F108), REL::Offset(0x0447F120), REL::Offset(0x0447F138) };
+            REL::Offset(0x0447F108), REL::Offset(0x0447F120), REL::Offset(0x0447F138) };
 		inline constexpr std::array<REL::Offset, 1>  ItemModInfoCardDataModel{ REL::Offset(0x04487AF8) };
 		inline constexpr std::array<REL::Offset, 1>  ItemModInfoCardDataModel__ItemModInfoCardEventShuttle{ REL::Offset(0x04488498) };
 		inline constexpr std::array<REL::Offset, 11> ItemModdingBase{ REL::Offset(0x0447F058), REL::Offset(0x0447F070), REL::Offset(0x0447F088),
-			                                                          REL::Offset(0x0447F0A0), REL::Offset(0x0447F1B0), REL::Offset(0x0447F1C8),
-			                                                          REL::Offset(0x0447F1E0), REL::Offset(0x0447F1F8), REL::Offset(0x0447F210),
-			                                                          REL::Offset(0x0447F228), REL::Offset(0x0447F240) };
+			REL::Offset(0x0447F0A0), REL::Offset(0x0447F1B0), REL::Offset(0x0447F1C8),
+			REL::Offset(0x0447F1E0), REL::Offset(0x0447F1F8), REL::Offset(0x0447F210),
+			REL::Offset(0x0447F228), REL::Offset(0x0447F240) };
 		inline constexpr std::array<REL::Offset, 1>  ItemModsDataModel{ REL::Offset(0x04487B28) };
 		inline constexpr std::array<REL::Offset, 1>  ItemModsDataModel__ItemModsEventShuttle{ REL::Offset(0x04488470) };
 		inline constexpr std::array<REL::Offset, 8>  JetpackEffect{ REL::Offset(0x044C41E8), REL::Offset(0x044C4200), REL::Offset(0x044C4218),
-                                                                   REL::Offset(0x044C4350), REL::Offset(0x044C4368), REL::Offset(0x044C4380),
-                                                                   REL::Offset(0x044C4398), REL::Offset(0x044C43B0) };
+            REL::Offset(0x044C4350), REL::Offset(0x044C4368), REL::Offset(0x044C4380),
+            REL::Offset(0x044C4398), REL::Offset(0x044C43B0) };
 		inline constexpr std::array<REL::Offset, 1>  JetpackSM__JetpackState_JetpackSM__Active_{ REL::Offset(0x044C4580) };
 		inline constexpr std::array<REL::Offset, 1>  JetpackSM__JetpackState_JetpackSM__Hover_{ REL::Offset(0x044C44B0) };
 		inline constexpr std::array<REL::Offset, 1>  JetpackSM__JetpackState_JetpackSM__Inactive_{ REL::Offset(0x044C4518) };
@@ -27738,7 +27738,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  LoadSavePanelDataModel{ REL::Offset(0x044888C8) };
 		inline constexpr std::array<REL::Offset, 1>  LoadSavePanelDataModel__LoadSavePanelEventShuttle{ REL::Offset(0x04488FF8) };
 		inline constexpr std::array<REL::Offset, 3>  LoadScreenRenderingEventHandler{ REL::Offset(0x0447C9F8), REL::Offset(0x0447CA10),
-                                                                                     REL::Offset(0x0447CA28) };
+            REL::Offset(0x0447CA28) };
 		inline constexpr std::array<REL::Offset, 1>  LoadStorageWrapperBase{ REL::Offset(0x044CFE70) };
 		inline constexpr std::array<REL::Offset, 1>  LoadTraversalSubgraphDataFunctor{ REL::Offset(0x04379DF0) };
 		inline constexpr std::array<REL::Offset, 1>  LoadedAreaBound{ REL::Offset(0x04412108) };
@@ -27747,7 +27747,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  LoadedCellDB__PostProcessCell{ REL::Offset(0x04352008) };
 		inline constexpr std::array<REL::Offset, 1>  LoadedCellDB__SignalDoneTask{ REL::Offset(0x043520F8) };
 		inline constexpr std::array<REL::Offset, 4>  LoadingMenu{ REL::Offset(0x0451E788), REL::Offset(0x0451E7E0), REL::Offset(0x0451E8C0),
-                                                                 REL::Offset(0x0451E8D8) };
+            REL::Offset(0x0451E8D8) };
 		inline constexpr std::array<REL::Offset, 1>  LoadingMenuDataModel{ REL::Offset(0x04488710) };
 		inline constexpr std::array<REL::Offset, 1>  LoadingMenuDataModel__LoadingMenuEventShuttle{ REL::Offset(0x04488800) };
 		inline constexpr std::array<REL::Offset, 1>  LoadingMenu_RefreshText{ REL::Offset(0x0451E768) };
@@ -27766,7 +27766,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  MagicCaster{ REL::Offset(0x044C4808) };
 		inline constexpr std::array<REL::Offset, 1>  MagicCaster__PostCreationCallback{ REL::Offset(0x044C47F0) };
 		inline constexpr std::array<REL::Offset, 5>  MagicItem{ REL::Offset(0x03EF1EE0), REL::Offset(0x03EF23F8), REL::Offset(0x03EF2470),
-                                                               REL::Offset(0x03EF2AD0), REL::Offset(0x03EF2B60) };
+            REL::Offset(0x03EF2AD0), REL::Offset(0x03EF2B60) };
 		inline constexpr std::array<REL::Offset, 1>  MagicItemDataCollector{ REL::Offset(0x044C2D10) };
 		inline constexpr std::array<REL::Offset, 1>  MagicItemFindKeywordFunctor{ REL::Offset(0x04362848) };
 		inline constexpr std::array<REL::Offset, 1>  MagicItemTraversalFunctor{ REL::Offset(0x04362868) };
@@ -27774,10 +27774,10 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  MagicTarget__IPostCreationModification{ REL::Offset(0x044C3148) };
 		inline constexpr std::array<REL::Offset, 1>  Main{ REL::Offset(0x044D3618) };
 		inline constexpr std::array<REL::Offset, 13> MainMenu{ REL::Offset(0x0451EE48), REL::Offset(0x0451EE60), REL::Offset(0x0451EF40),
-			                                                   REL::Offset(0x0451F020), REL::Offset(0x0451F078), REL::Offset(0x0451F090),
-			                                                   REL::Offset(0x0451F0A8), REL::Offset(0x0451F0C0), REL::Offset(0x0451F0D8),
-			                                                   REL::Offset(0x0451F0F0), REL::Offset(0x0451F108), REL::Offset(0x0451F120),
-			                                                   REL::Offset(0x0451F138) };
+			REL::Offset(0x0451F020), REL::Offset(0x0451F078), REL::Offset(0x0451F090),
+			REL::Offset(0x0451F0A8), REL::Offset(0x0451F0C0), REL::Offset(0x0451F0D8),
+			REL::Offset(0x0451F0F0), REL::Offset(0x0451F108), REL::Offset(0x0451F120),
+			REL::Offset(0x0451F138) };
 		inline constexpr std::array<REL::Offset, 1>  MainMenuConfirmationDataModel{ REL::Offset(0x04489B98) };
 		inline constexpr std::array<REL::Offset, 1>  MainMenuConfirmationDataModel__MainMenuConfirmationEventShuttle{ REL::Offset(0x0448A570) };
 		inline constexpr std::array<REL::Offset, 1>  MainMenuGamerInfoDataModel{ REL::Offset(0x04489C00) };
@@ -27826,8 +27826,8 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  MergeNodeInstance{ REL::Offset(0x0456AC00) };
 		inline constexpr std::array<REL::Offset, 1>  MeshLODDistanceOverride{ REL::Offset(0x043530F0) };
 		inline constexpr std::array<REL::Offset, 8>  MessageBoxMenu{ REL::Offset(0x0451FC20), REL::Offset(0x0451FD00), REL::Offset(0x0451FD58),
-                                                                    REL::Offset(0x0451FD70), REL::Offset(0x0451FD98), REL::Offset(0x0451FDB0),
-                                                                    REL::Offset(0x0451FDC8), REL::Offset(0x0451FDE0) };
+            REL::Offset(0x0451FD70), REL::Offset(0x0451FD98), REL::Offset(0x0451FDB0),
+            REL::Offset(0x0451FDC8), REL::Offset(0x0451FDE0) };
 		inline constexpr std::array<REL::Offset, 1>  MessageBoxMenu_OnBackOut{ REL::Offset(0x0451FBE8) };
 		inline constexpr std::array<REL::Offset, 1>  MessageBoxMenu_OnButtonPress{ REL::Offset(0x0451FBC8) };
 		inline constexpr std::array<REL::Offset, 1>  MessageBoxMenu__MessageBoxMenuEventShuttle{ REL::Offset(0x0451FDF8) };
@@ -27839,12 +27839,12 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  MiscStatManager____RevertStatVisitor{ REL::Offset(0x044D39E0) };
 		inline constexpr std::array<REL::Offset, 1>  MiscStatManager____SaveStatVisitor{ REL::Offset(0x044D39F8) };
 		inline constexpr std::array<REL::Offset, 11> MissileProjectile{ REL::Offset(0x044EDE80), REL::Offset(0x044EDE98), REL::Offset(0x044EDEB0),
-			                                                            REL::Offset(0x044EDEC8), REL::Offset(0x044EDEE0), REL::Offset(0x044EDEF8),
-			                                                            REL::Offset(0x044EDF10), REL::Offset(0x044EDFE0), REL::Offset(0x044EE000),
-			                                                            REL::Offset(0x044EEAF8), REL::Offset(0x044EEB60) };
+			REL::Offset(0x044EDEC8), REL::Offset(0x044EDEE0), REL::Offset(0x044EDEF8),
+			REL::Offset(0x044EDF10), REL::Offset(0x044EDFE0), REL::Offset(0x044EE000),
+			REL::Offset(0x044EEAF8), REL::Offset(0x044EEB60) };
 		inline constexpr std::array<REL::Offset, 8>  MissionBoardMenu{ REL::Offset(0x044A8520), REL::Offset(0x044A8538), REL::Offset(0x044A8550),
-                                                                      REL::Offset(0x044A8568), REL::Offset(0x044A8580), REL::Offset(0x044A85A8),
-                                                                      REL::Offset(0x044A85C0), REL::Offset(0x044A8618) };
+            REL::Offset(0x044A8568), REL::Offset(0x044A8580), REL::Offset(0x044A85A8),
+            REL::Offset(0x044A85C0), REL::Offset(0x044A8618) };
 		inline constexpr std::array<REL::Offset, 1>  MissionBoardMenu__MissionBoardMenuEventShuttle{ REL::Offset(0x044A8738) };
 		inline constexpr std::array<REL::Offset, 1>  MissionBoard_MissionEntryChanged{ REL::Offset(0x044A86F8) };
 		inline constexpr std::array<REL::Offset, 1>  MissionBoard_MissionEntryPressed{ REL::Offset(0x044A8718) };
@@ -27858,7 +27858,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  MissionMenu_ToggleTrackingQuest{ REL::Offset(0x044A5DF8) };
 		inline constexpr std::array<REL::Offset, 1>  MobIterOperator{ REL::Offset(0x043E7828) };
 		inline constexpr std::array<REL::Offset, 4>  ModelReferenceEffect{ REL::Offset(0x044C4CA0), REL::Offset(0x044C4CB8), REL::Offset(0x044C4F60),
-                                                                          REL::Offset(0x044C5038) };
+            REL::Offset(0x044C5038) };
 		inline constexpr std::array<REL::Offset, 1>  MomentumAnimation{ REL::Offset(0x045693F0) };
 		inline constexpr std::array<REL::Offset, 1>  MomentumAnimationInstance{ REL::Offset(0x04569458) };
 		inline constexpr std::array<REL::Offset, 1>  MomentumSwitchback{ REL::Offset(0x04569300) };
@@ -27879,8 +27879,8 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  MonocleMenu_ZoomIn{ REL::Offset(0x044A9100) };
 		inline constexpr std::array<REL::Offset, 1>  MonocleMenu_ZoomOut{ REL::Offset(0x044A90E0) };
 		inline constexpr std::array<REL::Offset, 7>  MonocleUIDataModel{ REL::Offset(0x0449F198), REL::Offset(0x0449F1B0), REL::Offset(0x0449F1C8),
-                                                                        REL::Offset(0x0449F1F0), REL::Offset(0x0449F208), REL::Offset(0x0449F220),
-                                                                        REL::Offset(0x0449F238) };
+            REL::Offset(0x0449F1F0), REL::Offset(0x0449F208), REL::Offset(0x0449F220),
+            REL::Offset(0x0449F238) };
 		inline constexpr std::array<REL::Offset, 1>  MonocleUIDataModel__EventData{ REL::Offset(0x0449EFD8) };
 		inline constexpr std::array<REL::Offset, 1>  MonocleUIDataModel__MenuData{ REL::Offset(0x0449F0D0) };
 		inline constexpr std::array<REL::Offset, 1>  MonocleUIDataModel__MenuFreqData{ REL::Offset(0x0449EFF0) };
@@ -27899,16 +27899,16 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  MouseMoveEvent{ REL::Offset(0x0456C580) };
 		inline constexpr std::array<REL::Offset, 1>  MovementAgent{ REL::Offset(0x0459F888) };
 		inline constexpr std::array<REL::Offset, 5>  MovementAgentActorAvoider{ REL::Offset(0x0459E700), REL::Offset(0x0459E728),
-                                                                               REL::Offset(0x0459E770), REL::Offset(0x0459E798),
-                                                                               REL::Offset(0x0459E810) };
+            REL::Offset(0x0459E770), REL::Offset(0x0459E798),
+            REL::Offset(0x0459E810) };
 		inline constexpr std::array<REL::Offset, 4>  MovementAgentActorState{ REL::Offset(0x0459DB48), REL::Offset(0x0459DB68),
-                                                                             REL::Offset(0x0459DB90), REL::Offset(0x0459DBB0) };
+            REL::Offset(0x0459DB90), REL::Offset(0x0459DBB0) };
 		inline constexpr std::array<REL::Offset, 9>  MovementAgentFlightController{
             REL::Offset(0x0459DD38), REL::Offset(0x0459DD60), REL::Offset(0x0459DD80), REL::Offset(0x0459DD98), REL::Offset(0x0459DEB8),
             REL::Offset(0x0459DED8), REL::Offset(0x0459DF00), REL::Offset(0x0459DF48), REL::Offset(0x0459DFC0)
 		};
 		inline constexpr std::array<REL::Offset, 4> MovementAgentFlightControllerDetached{ REL::Offset(0x0459F2A8), REL::Offset(0x0459F2F0),
-			                                                                               REL::Offset(0x0459F410), REL::Offset(0x0459F488) };
+			REL::Offset(0x0459F410), REL::Offset(0x0459F488) };
 		inline constexpr std::array<REL::Offset, 1> MovementAgentNullTracker_IMovementHandlerAgent_MovementHandlerOutputDataSmallDelta_{ REL::Offset(
 			0x0459CB28) };
 		inline constexpr std::array<REL::Offset, 1> MovementAgentNullTracker_IMovementHandlerAgent_MovementHandlerUpdateDataSmallDelta_{ REL::Offset(
@@ -27919,16 +27919,16 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> MovementAgentNullTracker_IMovementTweenerAgent_MovementTweenerAgentOutputData_{ REL::Offset(
 			0x0459CC40) };
 		inline constexpr std::array<REL::Offset, 8> MovementAgentPathFollowerFlight{ REL::Offset(0x045A2A40), REL::Offset(0x045A2A88),
-			                                                                         REL::Offset(0x045A2AB0), REL::Offset(0x045A2BD0),
-			                                                                         REL::Offset(0x045A2BE0), REL::Offset(0x045A2C58),
-			                                                                         REL::Offset(0x045A2C78), REL::Offset(0x045A2C98) };
+			REL::Offset(0x045A2AB0), REL::Offset(0x045A2BD0),
+			REL::Offset(0x045A2BE0), REL::Offset(0x045A2C58),
+			REL::Offset(0x045A2C78), REL::Offset(0x045A2C98) };
 		inline constexpr std::array<REL::Offset, 8> MovementAgentPathFollowerStandard{ REL::Offset(0x0459D778), REL::Offset(0x0459D798),
-			                                                                           REL::Offset(0x0459D7C0), REL::Offset(0x0459D7E8),
-			                                                                           REL::Offset(0x0459D848), REL::Offset(0x0459D968),
-			                                                                           REL::Offset(0x0459D9B0), REL::Offset(0x0459D9D8) };
+			REL::Offset(0x0459D7C0), REL::Offset(0x0459D7E8),
+			REL::Offset(0x0459D848), REL::Offset(0x0459D968),
+			REL::Offset(0x0459D9B0), REL::Offset(0x0459D9D8) };
 		inline constexpr std::array<REL::Offset, 5> MovementAgentPathFollowerVirtual{ REL::Offset(0x0459EFB0), REL::Offset(0x0459F010),
-			                                                                          REL::Offset(0x0459F058), REL::Offset(0x0459F178),
-			                                                                          REL::Offset(0x0459F1F0) };
+			REL::Offset(0x0459F058), REL::Offset(0x0459F178),
+			REL::Offset(0x0459F1F0) };
 		inline constexpr std::array<REL::Offset, 1> MovementArbiter{ REL::Offset(0x045A28D8) };
 		inline constexpr std::array<REL::Offset, 1> MovementArbitrationAverageFloat{ REL::Offset(0x0459F550) };
 		inline constexpr std::array<REL::Offset, 1> MovementArbitrationMaxWeightParameters{ REL::Offset(0x0459F510) };
@@ -27946,11 +27946,11 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> MovementControllerAI{ REL::Offset(0x0459F720) };
 		inline constexpr std::array<REL::Offset, 1> MovementControllerComponent{ REL::Offset(0x04375F58) };
 		inline constexpr std::array<REL::Offset, 5> MovementControllerComponentData{ REL::Offset(0x04375FF0), REL::Offset(0x04376180),
-			                                                                         REL::Offset(0x04376198), REL::Offset(0x043761B8),
-			                                                                         REL::Offset(0x043761E8) };
+			REL::Offset(0x04376198), REL::Offset(0x043761B8),
+			REL::Offset(0x043761E8) };
 		inline constexpr std::array<REL::Offset, 7> MovementControllerNPC{ REL::Offset(0x044DF9A0), REL::Offset(0x044DF9F0), REL::Offset(0x044DFA40),
-			                                                               REL::Offset(0x044DFA58), REL::Offset(0x044DFAF0), REL::Offset(0x044DFB10),
-			                                                               REL::Offset(0x044DFB40) };
+			REL::Offset(0x044DFA58), REL::Offset(0x044DFAF0), REL::Offset(0x044DFB10),
+			REL::Offset(0x044DFB40) };
 		inline constexpr std::array<REL::Offset, 1> MovementControllerNullDataTracker{ REL::Offset(0x0459F708) };
 		inline constexpr std::array<REL::Offset, 1> MovementControllerRegisterInterface{ REL::Offset(0x0459F7B8) };
 		inline constexpr std::array<REL::Offset, 2> MovementHandlerAgent{ REL::Offset(0x0459CA70), REL::Offset(0x0459CA98) };
@@ -27958,23 +27958,23 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 2> MovementHandlerAgentDirectControl{ REL::Offset(0x044DFC18), REL::Offset(0x044DFC40) };
 		inline constexpr std::array<REL::Offset, 2> MovementHandlerAgentDirectionPassThrough{ REL::Offset(0x045A2978), REL::Offset(0x045A29A0) };
 		inline constexpr std::array<REL::Offset, 3> MovementHandlerAgentFlightBoostTrigger{ REL::Offset(0x04376210), REL::Offset(0x04376288),
-			                                                                                REL::Offset(0x043762B0) };
+			REL::Offset(0x043762B0) };
 		inline constexpr std::array<REL::Offset, 2> MovementHandlerAgentGraphDrivenAnimationDriven{ REL::Offset(0x04376370),
-			                                                                                        REL::Offset(0x043763E8) };
+			REL::Offset(0x043763E8) };
 		inline constexpr std::array<REL::Offset, 5> MovementHandlerAgentPlayerControls{ REL::Offset(0x043765F8), REL::Offset(0x04376670),
-			                                                                            REL::Offset(0x04376698), REL::Offset(0x043766B0),
-			                                                                            REL::Offset(0x043766D8) };
+			REL::Offset(0x04376698), REL::Offset(0x043766B0),
+			REL::Offset(0x043766D8) };
 		inline constexpr std::array<REL::Offset, 2> MovementHandlerAgentPlayerControlsActionTrigger{ REL::Offset(0x04376718),
-			                                                                                         REL::Offset(0x04376790) };
+			REL::Offset(0x04376790) };
 		inline constexpr std::array<REL::Offset, 4> MovementHandlerAgentPlayerFlightControls{ REL::Offset(0x04376820), REL::Offset(0x04376838),
-			                                                                                  REL::Offset(0x04376860), REL::Offset(0x043768D8) };
+			REL::Offset(0x04376860), REL::Offset(0x043768D8) };
 		inline constexpr std::array<REL::Offset, 3> MovementHandlerAgentSprintActionTrigger{ REL::Offset(0x044DFD58), REL::Offset(0x044DFDD0),
-			                                                                                 REL::Offset(0x044DFE00) };
+			REL::Offset(0x044DFE00) };
 		inline constexpr std::array<REL::Offset, 2> MovementHandlerAgentStairsHelper{ REL::Offset(0x044DFE58), REL::Offset(0x044DFE80) };
 		inline constexpr std::array<REL::Offset, 3> MovementHandlerAgentStandard{ REL::Offset(0x0459EEF0), REL::Offset(0x0459EF18),
-			                                                                      REL::Offset(0x0459EF38) };
+			REL::Offset(0x0459EF38) };
 		inline constexpr std::array<REL::Offset, 3> MovementHandlerAgentStorePlannerOutput{ REL::Offset(0x0459ECC8), REL::Offset(0x0459ECF0),
-			                                                                                REL::Offset(0x0459ED68) };
+			REL::Offset(0x0459ED68) };
 		inline constexpr std::array<REL::Offset, 1> MovementHandlerArbiter{ REL::Offset(0x0459CB40) };
 		inline constexpr std::array<REL::Offset, 1> MovementLargeDelta__IEnumVisitor{ REL::Offset(0x043E1858) };
 		inline constexpr std::array<REL::Offset, 1> MovementMessage{ REL::Offset(0x04378D18) };
@@ -28055,33 +28055,33 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 2> MovementPathManagerAgentAvoidBox{ REL::Offset(0x0459E980), REL::Offset(0x0459E9C8) };
 		inline constexpr std::array<REL::Offset, 2> MovementPathManagerAgentLoadedAreaMonitor{ REL::Offset(0x0459E000), REL::Offset(0x0459E048) };
 		inline constexpr std::array<REL::Offset, 4> MovementPathManagerAgentStaticAvoider{ REL::Offset(0x0459E3F0), REL::Offset(0x0459E410),
-			                                                                               REL::Offset(0x0459E458), REL::Offset(0x0459E490) };
+			REL::Offset(0x0459E458), REL::Offset(0x0459E490) };
 		inline constexpr std::array<REL::Offset, 3> MovementPathManagerArbiter{ REL::Offset(0x0459C268), REL::Offset(0x0459C2E8),
-			                                                                    REL::Offset(0x0459C330) };
+			REL::Offset(0x0459C330) };
 		inline constexpr std::array<REL::Offset, 1> MovementPathManagerNullTracker{ REL::Offset(0x0459C510) };
 		inline constexpr std::array<REL::Offset, 2> MovementPlannerAgent{ REL::Offset(0x0459C978), REL::Offset(0x0459C9A0) };
 		inline constexpr std::array<REL::Offset, 3> MovementPlannerAgentDirectControl{ REL::Offset(0x044DFF70), REL::Offset(0x044DFF90),
-			                                                                           REL::Offset(0x044DFFB8) };
+			REL::Offset(0x044DFFB8) };
 		inline constexpr std::array<REL::Offset, 3> MovementPlannerAgentNavmeshBounds{ REL::Offset(0x0459E130), REL::Offset(0x0459E178),
-			                                                                           REL::Offset(0x0459E1F0) };
+			REL::Offset(0x0459E1F0) };
 		inline constexpr std::array<REL::Offset, 3> MovementPlannerAgentWarp{ REL::Offset(0x044E0218), REL::Offset(0x044E0268),
-			                                                                  REL::Offset(0x044E0290) };
+			REL::Offset(0x044E0290) };
 		inline constexpr std::array<REL::Offset, 2> MovementPlannerArbiter{ REL::Offset(0x0459C8A0), REL::Offset(0x0459C8D8) };
 		inline constexpr std::array<REL::Offset, 3> MovementPostUpdateArbiter{ REL::Offset(0x0459CED0), REL::Offset(0x0459CEE8),
-			                                                                   REL::Offset(0x0459CF70) };
+			REL::Offset(0x0459CF70) };
 		inline constexpr std::array<REL::Offset, 1> MovementSelectIdleUtils__SelectClosestIdleToMovementSelectionData{ REL::Offset(0x0459FBE0) };
 		inline constexpr std::array<REL::Offset, 1> MovementSelectIdleUtils__SelectClosestIdleToPath{ REL::Offset(0x0459FC00) };
 		inline constexpr std::array<REL::Offset, 2> MovementStateFollowPath{ REL::Offset(0x0459BFF8), REL::Offset(0x0459C188) };
 		inline constexpr std::array<REL::Offset, 2> MovementStateTweener{ REL::Offset(0x0459BDD0), REL::Offset(0x0459BF60) };
 		inline constexpr std::array<REL::Offset, 2> MovementTweenerAgent{ REL::Offset(0x0459CD60), REL::Offset(0x0459CD80) };
 		inline constexpr std::array<REL::Offset, 4> MovementTweenerAgentFixedDelta{ REL::Offset(0x0459EA90), REL::Offset(0x0459EAB0),
-			                                                                        REL::Offset(0x0459EAD0), REL::Offset(0x0459EB08) };
+			REL::Offset(0x0459EAD0), REL::Offset(0x0459EB08) };
 		inline constexpr std::array<REL::Offset, 3> MovementTweenerAgentNodeFollower{ REL::Offset(0x044E0338), REL::Offset(0x044E0350),
-			                                                                          REL::Offset(0x044E0370) };
+			REL::Offset(0x044E0370) };
 		inline constexpr std::array<REL::Offset, 4> MovementTweenerAgentTargetPosAndVel{ REL::Offset(0x0459EBE0), REL::Offset(0x0459EBF8),
-			                                                                             REL::Offset(0x0459EC18), REL::Offset(0x0459EC90) };
+			REL::Offset(0x0459EC18), REL::Offset(0x0459EC90) };
 		inline constexpr std::array<REL::Offset, 3> MovementTweenerArbiter{ REL::Offset(0x0459CC58), REL::Offset(0x0459CC98),
-			                                                                REL::Offset(0x0459CCC0) };
+			REL::Offset(0x0459CCC0) };
 		inline constexpr std::array<REL::Offset, 1> MoviePlayer{ REL::Offset(0x04590090) };
 		inline constexpr std::array<REL::Offset, 1> MultiFootIKNode{ REL::Offset(0x04568DE8) };
 		inline constexpr std::array<REL::Offset, 1> MultiFootIKNodeInstance{ REL::Offset(0x04568E50) };
@@ -28090,7 +28090,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> NPCDetachHandler{ REL::Offset(0x044E3578) };
 		inline constexpr std::array<REL::Offset, 1> NavGenUtil__TunnelTerraintFilter{ REL::Offset(0x043778A0) };
 		inline constexpr std::array<REL::Offset, 4> NavMesh{ REL::Offset(0x0444EF28), REL::Offset(0x0444EF40), REL::Offset(0x0444EF58),
-			                                                 REL::Offset(0x0444EFD8) };
+			REL::Offset(0x0444EFD8) };
 		inline constexpr std::array<REL::Offset, 1> NavMeshGenContext{ REL::Offset(0x0434D0D0) };
 		inline constexpr std::array<REL::Offset, 1> NavMeshGenData{ REL::Offset(0x0434CD18) };
 		inline constexpr std::array<REL::Offset, 1> NavMeshGenFinalizer{ REL::Offset(0x04377BC8) };
@@ -28100,13 +28100,13 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> NavMeshGenSplitter{ REL::Offset(0x04377D20) };
 		inline constexpr std::array<REL::Offset, 1> NavMeshGenStitcher{ REL::Offset(0x04377D68) };
 		inline constexpr std::array<REL::Offset, 5> NavMeshGenerator{ REL::Offset(0x04377980), REL::Offset(0x04377990), REL::Offset(0x043779A0),
-			                                                          REL::Offset(0x043779B0), REL::Offset(0x04377A00) };
+			REL::Offset(0x043779B0), REL::Offset(0x04377A00) };
 		inline constexpr std::array<REL::Offset, 1> NavMeshGenerator__NavMeshGenCellsNode{ REL::Offset(0x04377A30) };
 		inline constexpr std::array<REL::Offset, 1> NavMeshInfo{ REL::Offset(0x0444FA48) };
 		inline constexpr std::array<REL::Offset, 3> NavMeshInfoMap{ REL::Offset(0x0444FAB8), REL::Offset(0x0444FB18), REL::Offset(0x0444FB30) };
 		inline constexpr std::array<REL::Offset, 2> NavMeshObstacleCoverManager{ REL::Offset(0x03F20630), REL::Offset(0x03F20948) };
 		inline constexpr std::array<REL::Offset, 3> NavMeshObstacleManager{ REL::Offset(0x04450010), REL::Offset(0x04450028),
-			                                                                REL::Offset(0x04450038) };
+			REL::Offset(0x04450038) };
 		inline constexpr std::array<REL::Offset, 1> NavMeshSearchClosePoint{ REL::Offset(0x04450CA0) };
 		inline constexpr std::array<REL::Offset, 1> NavMeshSearchFitSphere{ REL::Offset(0x04450CB8) };
 		inline constexpr std::array<REL::Offset, 1> NavMeshSearchFlee{ REL::Offset(0x04450D48) };
@@ -28125,23 +28125,23 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_BuffInfo_{ REL::Offset(0x0448EF68), REL::Offset(0x0448EFB0) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_BuildItemData_{ REL::Offset(0x0449C928), REL::Offset(0x0449C970) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_BuilderRequirementsData__InputRequirement_{ REL::Offset(0x0449C658),
-			                                                                                                  REL::Offset(0x0449C6A0) };
+			REL::Offset(0x0449C6A0) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_CargoLinkData_{ REL::Offset(0x0449D400), REL::Offset(0x0449D448) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_CargoLinkData__CargoLinkResource_{ REL::Offset(0x0449D518),
-			                                                                                         REL::Offset(0x0449D698) };
+			REL::Offset(0x0449D698) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_ComponentFlashEventInfo_{ REL::Offset(0x04497A68), REL::Offset(0x04497AD0) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_ControlBindingsData__InputSetting_{ REL::Offset(0x04494898),
-			                                                                                          REL::Offset(0x044949D0) };
+			REL::Offset(0x044949D0) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_ControlBindingsData__InputSetting__Binding_{ REL::Offset(0x04494CC8),
-			                                                                                                   REL::Offset(0x04494D10) };
+			REL::Offset(0x04494D10) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_ControlConflictsData__ConflictingControl_{ REL::Offset(0x04494428),
-			                                                                                                 REL::Offset(0x04494470) };
+			REL::Offset(0x04494470) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_ControlConflictsData__ControlConflicts_{ REL::Offset(0x04494218),
-			                                                                                               REL::Offset(0x04494260) };
+			REL::Offset(0x04494260) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_ControlMapDataModel__MappedEvent_{ REL::Offset(0x0458F4F8),
-			                                                                                         REL::Offset(0x0458F678) };
+			REL::Offset(0x0458F678) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_CraftingRecipesDataModel__RecipeData_{ REL::Offset(0x044875F0),
-			                                                                                             REL::Offset(0x044876A0) };
+			REL::Offset(0x044876A0) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_CraftingRequirementsDataModel__RequirementsData__AdditionalCondition_{
 			REL::Offset(0x0447EB58), REL::Offset(0x0447EBA0)
 		};
@@ -28149,23 +28149,23 @@ namespace RE
 			REL::Offset(0x0447E9E0), REL::Offset(0x0447EA28)
 		};
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_CreditsDataModel__CreditsSection_{ REL::Offset(0x04477B10),
-			                                                                                         REL::Offset(0x04477B78) };
+			REL::Offset(0x04477B78) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_CrewInfo_{ REL::Offset(0x0447F528), REL::Offset(0x0447F570) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_CrewSkillInfo_{ REL::Offset(0x0447F478), REL::Offset(0x0447F4C0) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_DamageResistanceStats_{ REL::Offset(0x0448F018), REL::Offset(0x0448F060) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_DataMenuInventoryItem_{ REL::Offset(0x04480878), REL::Offset(0x044808E0) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_DialogueUIDataModel__DialogueEntryData_{ REL::Offset(0x0449EBB8),
-			                                                                                               REL::Offset(0x0449EC00) };
+			REL::Offset(0x0449EC00) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_DialogueUIDataModel__PersuasionEntryData_{ REL::Offset(0x0449E8E8),
-			                                                                                                 REL::Offset(0x0449E930) };
+			REL::Offset(0x0449E930) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_DocData_{ REL::Offset(0x04489F18), REL::Offset(0x0448A030) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_EffectData_{ REL::Offset(0x04486858), REL::Offset(0x044868A0) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_EffectGroup_{ REL::Offset(0x0448E9A8), REL::Offset(0x0448EDC0) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_ExplosiveIndicator_{ REL::Offset(0x044814C0), REL::Offset(0x04481640) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_FavoritesManager__FavoritesEntryData_{ REL::Offset(0x0451DC78),
-			                                                                                             REL::Offset(0x0451DD48) };
+			REL::Offset(0x0451DD48) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_FireForgetModel__EventNameShuttle_{ REL::Offset(0x044819B8),
-			                                                                                          REL::Offset(0x04481AD0) };
+			REL::Offset(0x04481AD0) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_HUDCommandIconData_{ REL::Offset(0x044A1008), REL::Offset(0x044A1120) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_HUDDirectionalHitData_{ REL::Offset(0x044A14E0), REL::Offset(0x044A1548) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_HUDEnemyData__EnemyDatum_{ REL::Offset(0x04484F50), REL::Offset(0x04484F98) };
@@ -28178,39 +28178,39 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_IconData_DS_{ REL::Offset(0x044BC008), REL::Offset(0x044BC050) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_ImageFixtureUIData_{ REL::Offset(0x0434C500), REL::Offset(0x0434C568) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_InternalNestedArrayWithChangesUIValue_Key__{ REL::Offset(0x044AB820),
-			                                                                                                   REL::Offset(0x044AB868) };
+			REL::Offset(0x044AB868) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_InternalNestedArrayWithChangesUIValue_Patch__{ REL::Offset(0x044AD2C0),
-			                                                                                                     REL::Offset(0x044AD328) };
+			REL::Offset(0x044AD328) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_InternalNestedArrayWithChangesUIValue_Ring__{ REL::Offset(0x044AB4E8),
-			                                                                                                    REL::Offset(0x044AB530) };
+			REL::Offset(0x044AB530) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_InternalNestedArrayWithChangesUIValue_TargetCombatValues__{
 			REL::Offset(0x044973F8), REL::Offset(0x04497460)
 		};
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_InternalNestedArrayWithChangesUIValue_TargetLowFreq__{ REL::Offset(0x044989D8),
-			                                                                                                             REL::Offset(0x04498C40) };
+			REL::Offset(0x04498C40) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_InternalNestedArrayWithChangesUIValue_TestMenu__TestData__ArcanaData__{
 			REL::Offset(0x044BE868), REL::Offset(0x044BE9E8)
 		};
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_InternalVector3UIValue_{ REL::Offset(0x043A7658), REL::Offset(0x043A7708) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_InventoryDataModelNS__ArmorItemInfo_{ REL::Offset(0x044791D8),
-			                                                                                            REL::Offset(0x04479220) };
+			REL::Offset(0x04479220) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_InventoryDataModelNS__ElementalStatInfo_{ REL::Offset(0x04479128),
-			                                                                                                REL::Offset(0x04479170) };
+			REL::Offset(0x04479170) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_InventoryDataModelNS__InventoryCategoryData_{ REL::Offset(0x044831B0),
-			                                                                                                    REL::Offset(0x04483280) };
+			REL::Offset(0x04483280) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_InventoryDataModelNS__InventoryItem_{ REL::Offset(0x04478E58),
-			                                                                                            REL::Offset(0x04478EA0) };
+			REL::Offset(0x04478EA0) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_InventoryDataModelNS__LootItem_{ REL::Offset(0x04482F38), REL::Offset(0x04482F80) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_InventoryDataModelNS__ModInfo_{ REL::Offset(0x044794C8), REL::Offset(0x04479510) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_InventoryDataModelNS__WeaponItemInfo_{ REL::Offset(0x04479348),
-			                                                                                             REL::Offset(0x04479480) };
+			REL::Offset(0x04479480) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_ItemModsDataModel__ItemModData_{ REL::Offset(0x04488200), REL::Offset(0x04488268) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_ItemModsDataModel__ItemModSlotData_{ REL::Offset(0x044880A0),
-			                                                                                           REL::Offset(0x04488108) };
+			REL::Offset(0x04488108) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_Key_{ REL::Offset(0x044AB938), REL::Offset(0x044AB980) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_LevelUpPerkData_{ REL::Offset(0x044A2018), REL::Offset(0x044A20C8) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_LoadSavePanelData__CharacterData_{ REL::Offset(0x04488A80),
-			                                                                                         REL::Offset(0x04488AE8) };
+			REL::Offset(0x04488AE8) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_LoadSavePanelData__GameData_{ REL::Offset(0x04488CA0), REL::Offset(0x04488D08) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_MainMenuListData__ActionData_{ REL::Offset(0x0448A268), REL::Offset(0x0448A500) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_MessageButton_{ REL::Offset(0x0451F8E8), REL::Offset(0x0451F950) };
@@ -28218,21 +28218,21 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_MissionDetailsEntry_DS_{ REL::Offset(0x044A80A8), REL::Offset(0x044A80F0) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_MissionListEntry_DS_{ REL::Offset(0x044A7E88), REL::Offset(0x044A7ED0) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_MonocleUIDataModel__ResourceData_{ REL::Offset(0x0449FBB0),
-			                                                                                         REL::Offset(0x0449FBF8) };
+			REL::Offset(0x0449FBF8) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_MonocleUIDataModel__ScannableMapMarkerData_{ REL::Offset(0x0449F770),
-			                                                                                                   REL::Offset(0x0449F7B8) };
+			REL::Offset(0x0449F7B8) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_MonocleUIDataModel__SocialSpellData_{ REL::Offset(0x0449FB00),
-			                                                                                            REL::Offset(0x0449FB48) };
+			REL::Offset(0x0449FB48) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_NewCompassMarker_{ REL::Offset(0x04484388), REL::Offset(0x044843D0) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_ObjectiveData_{ REL::Offset(0x044A3060), REL::Offset(0x044A30A8) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_Patch_{ REL::Offset(0x044AD370), REL::Offset(0x044AD488) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_PauseMenuListData__ActionData_{ REL::Offset(0x0448B660), REL::Offset(0x0448B6C8) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_PhotoModeDataModel__PhotoModeOverlayData__ImageData_{ REL::Offset(0x0448CEB0),
-			                                                                                                            REL::Offset(0x0448CEF8) };
+			REL::Offset(0x0448CEF8) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_PhotoModeDataModel__PhotoModeSettingsData__CategoryData_{ REL::Offset(0x0448CD30),
-			                                                                                                                REL::Offset(0x0448CD78) };
+			REL::Offset(0x0448CD78) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_PhotoModeDataModel__PhotoModeSettingsData__SettingData_{ REL::Offset(0x0448CB20),
-			                                                                                                               REL::Offset(0x0448CB68) };
+			REL::Offset(0x0448CB68) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_PhotoModeDataModel__PhotoModeSettingsData__SettingData__SliderData_{
 			REL::Offset(0x0448CC80), REL::Offset(0x0448CCC8)
 		};
@@ -28251,36 +28251,36 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_ResearchCategoryPreview_{ REL::Offset(0x04490CF0), REL::Offset(0x044910F8) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_ResearchPopupInfo__ItemInfo_{ REL::Offset(0x044909C8), REL::Offset(0x04490B70) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_ResearchProjectDetails__LinkedProject_{ REL::Offset(0x04490F30),
-			                                                                                              REL::Offset(0x04491058) };
+			REL::Offset(0x04491058) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_ResearchProjectDetails__MaterialRequirment_{ REL::Offset(0x044911F0),
-			                                                                                                   REL::Offset(0x044912E8) };
+			REL::Offset(0x044912E8) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_ResearchProjectPreview_{ REL::Offset(0x04490DC0), REL::Offset(0x04490EE8) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_Ring_{ REL::Offset(0x044AB600), REL::Offset(0x044AB648) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_RolloverActivationButtonData_{ REL::Offset(0x04482E20), REL::Offset(0x04482E68) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_SettingsCategoriesList__SettingsCategoryHeader_{ REL::Offset(0x04494C18),
-			                                                                                                       REL::Offset(0x04494C60) };
+			REL::Offset(0x04494C60) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_ShipComponent_{ REL::Offset(0x04480E40), REL::Offset(0x04480F48) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_Skill_{ REL::Offset(0x04480D28), REL::Offset(0x04480D90) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_SpaceshipEditor__ColorSelectionData_DS_{ REL::Offset(0x0435B3C8),
-			                                                                                               REL::Offset(0x0435B410) };
+			REL::Offset(0x0435B410) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_SpaceshipEditor__ColorTabData_DS_{ REL::Offset(0x0435B4E0),
-			                                                                                         REL::Offset(0x0435B528) };
+			REL::Offset(0x0435B528) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_SpaceshipEditor__FlightCheckEntry_DS_{ REL::Offset(0x04359B88),
-			                                                                                             REL::Offset(0x04359BF0) };
+			REL::Offset(0x04359BF0) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_SpaceshipEditor__FlightCheckTab_DS_{ REL::Offset(0x04359DA8),
-			                                                                                           REL::Offset(0x04359E10) };
+			REL::Offset(0x04359E10) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_SpaceshipEditor__HelpEntry_DS_{ REL::Offset(0x0435E9D0), REL::Offset(0x0435EA18) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_SpaceshipEditor__ModuleEntry_DS_{ REL::Offset(0x0434C3E8),
-			                                                                                        REL::Offset(0x0434C450) };
+			REL::Offset(0x0434C450) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_SpaceshipEditor__StatEntry_DS_{ REL::Offset(0x0435E650), REL::Offset(0x0435E698) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_SpaceshipEditor__SystemUpgradeEntry_DS_{ REL::Offset(0x0434B9A0),
-			                                                                                               REL::Offset(0x0434BC20) };
+			REL::Offset(0x0434BC20) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_SpaceshipEditor__WeaponAssignEntry_DS_{ REL::Offset(0x04359FC8),
-			                                                                                              REL::Offset(0x0435A030) };
+			REL::Offset(0x0435A030) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_SpaceshipEditor__WeaponAssignGroup_DS_{ REL::Offset(0x0435A2B0),
-			                                                                                              REL::Offset(0x0435A318) };
+			REL::Offset(0x0435A318) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_StarMap__BodyInfoDataFlashObject_{ REL::Offset(0x044976E8),
-			                                                                                         REL::Offset(0x04497750) };
+			REL::Offset(0x04497750) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_StarMap__BodyInfoToUI_{ REL::Offset(0x04480418), REL::Offset(0x04480480) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_StarMap__BodyPOIDef_{ REL::Offset(0x044B4718), REL::Offset(0x044B4878) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_StarMap__BodyPOIMarkersDef_{ REL::Offset(0x044B4B10), REL::Offset(0x044B4CB8) };
@@ -28290,24 +28290,24 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_StarMap__MenuMarkerCoords_{ REL::Offset(0x044B8500), REL::Offset(0x044B8568) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_StarMap__PlanetInfoToUI_{ REL::Offset(0x04480588), REL::Offset(0x044805F0) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_StarMap__ResourceInfoFlashObject_{ REL::Offset(0x04497DA0),
-			                                                                                         REL::Offset(0x04497E08) };
+			REL::Offset(0x04497E08) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_StarMap__StarMapMenuMarkerData_{ REL::Offset(0x044B7A00), REL::Offset(0x044B7C68) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_StarMap__StarMapOffscreenQuestMarkerData_{ REL::Offset(0x044B7950),
-			                                                                                                 REL::Offset(0x044B79B8) };
+			REL::Offset(0x044B79B8) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_StarMap__SurfaceMarkerStaticData_{ REL::Offset(0x044BA590),
-			                                                                                         REL::Offset(0x044BA630) };
+			REL::Offset(0x044BA630) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_StarMap__SystemBodyInfoToUI_{ REL::Offset(0x04480A58), REL::Offset(0x04480AC0) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_StatCategory_{ REL::Offset(0x0448EBE8), REL::Offset(0x0448ED20) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_SubSettingsList__GeneralSetting_{ REL::Offset(0x04494378),
-			                                                                                        REL::Offset(0x044943C0) };
+			REL::Offset(0x044943C0) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_SubSettingsList__GeneralSetting__CheckBoxData_{ REL::Offset(0x04494718),
-			                                                                                                      REL::Offset(0x04494850) };
+			REL::Offset(0x04494850) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_SubSettingsList__GeneralSetting__SliderData_{ REL::Offset(0x04494648),
-			                                                                                                    REL::Offset(0x04494A70) };
+			REL::Offset(0x04494A70) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_SubSettingsList__GeneralSetting__StepperData_{ REL::Offset(0x04494598),
-			                                                                                                     REL::Offset(0x044945E0) };
+			REL::Offset(0x044945E0) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_TESNPCData__ChargenMetadata__FacialBoneRegionMetadata_{ REL::Offset(0x043A6FF8),
-			                                                                                                              REL::Offset(0x043A7060) };
+			REL::Offset(0x043A7060) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_TESNPCData__ChargenMetadata__FacialBoneRegionMetadata__AdditionalSliders_{
 			REL::Offset(0x043A89E0), REL::Offset(0x043A8A48)
 		};
@@ -28315,14 +28315,14 @@ namespace RE
 			REL::Offset(0x043A86B8), REL::Offset(0x043A8720)
 		};
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_TESNPCData__ChargenMetadata__FacialMorphGroupMetadata_{ REL::Offset(0x043A8E20),
-			                                                                                                              REL::Offset(0x043A8E88) };
+			REL::Offset(0x043A8E88) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_TESNPCData__CodeBuiltStepperData_{ REL::Offset(0x043A8C00),
-			                                                                                         REL::Offset(0x043A8C68) };
+			REL::Offset(0x043A8C68) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_TESNPCData__HeadPartMetadata_{ REL::Offset(0x043A7218), REL::Offset(0x043A7280) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_TESNPCData__PostBlendFaceCustomizationData_{ REL::Offset(0x043A7A30),
-			                                                                                                   REL::Offset(0x043A7B38) };
+			REL::Offset(0x043A7B38) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_TESNPCData__PostBlendFaceCustomizationMetaData_{ REL::Offset(0x043A7438),
-			                                                                                                       REL::Offset(0x043A74A0) };
+			REL::Offset(0x043A74A0) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_TESNPCData__PostBlendFaceCustomizationMetaData__LayerMetaData_{
 			REL::Offset(0x043A8338), REL::Offset(0x043A8440)
 		};
@@ -28330,40 +28330,40 @@ namespace RE
 			REL::Offset(0x043A7EF8), REL::Offset(0x043A8000)
 		};
 		inline constexpr std::array<REL::Offset, 2>
-			NestedUIValue_TESNPCData__PostBlendFaceCustomizationMetaData__LayerMetaData__ModulationEntryMetaData_{ REL::Offset(0x043A8118),
-			                                                                                                       REL::Offset(0x043A8220) };
+													NestedUIValue_TESNPCData__PostBlendFaceCustomizationMetaData__LayerMetaData__ModulationEntryMetaData_{ REL::Offset(0x043A8118),
+                REL::Offset(0x043A8220) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_TESNPCData__PostBlendSliderMetadata_{ REL::Offset(0x043A7D30),
-			                                                                                            REL::Offset(0x043A7DE0) };
+			REL::Offset(0x043A7DE0) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_TargetCombatValues_{ REL::Offset(0x044975D0), REL::Offset(0x04497638) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_TargetComponentData_{ REL::Offset(0x04497908), REL::Offset(0x04497970) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_TargetHighFreq_{ REL::Offset(0x04498428), REL::Offset(0x04498490) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_TargetLowFreq_{ REL::Offset(0x04498B28), REL::Offset(0x04498B90) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_TestMenu__TestData__ArcanaData_{ REL::Offset(0x044BE938), REL::Offset(0x044BE980) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_TestMenu__TestResourcesData__ResourceData_{ REL::Offset(0x044BEA30),
-			                                                                                                  REL::Offset(0x044BEA78) };
+			REL::Offset(0x044BEA78) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_TraitDatum_{ REL::Offset(0x044AF530), REL::Offset(0x044AF598) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_TraitInfo_{ REL::Offset(0x0448E680), REL::Offset(0x0448E828) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_UICraftingUtils__ResourceInfo_{ REL::Offset(0x0447ECB8), REL::Offset(0x0447ED00) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_UICraftingUtils__SkillRequirement_{ REL::Offset(0x0435E920),
-			                                                                                          REL::Offset(0x0435E968) };
+			REL::Offset(0x0435E968) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_WeaponGroupAssignment__ShipWeapon_DS_{ REL::Offset(0x04357818),
-			                                                                                             REL::Offset(0x04357930) };
+			REL::Offset(0x04357930) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_WorkshopAreaResourcesData__AreaResource_{ REL::Offset(0x0449C2B8),
-			                                                                                                REL::Offset(0x0449C320) };
+			REL::Offset(0x0449C320) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_WorkshopCategoryBarData__CategoryBarData_{ REL::Offset(0x0449C138),
-			                                                                                                 REL::Offset(0x0449C1A0) };
+			REL::Offset(0x0449C1A0) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_WorkshopCategoryInfoData__PreviewIconData_{ REL::Offset(0x0449B9B0),
-			                                                                                                  REL::Offset(0x0449BC18) };
+			REL::Offset(0x0449BC18) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_WorkshopCategoryInfoData__PreviewIconData__VariantData_{ REL::Offset(0x0449BE50),
-			                                                                                                               REL::Offset(0x0449BEB8) };
+			REL::Offset(0x0449BEB8) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_WorkshopInterfaceShared__ItemRequirement_{ REL::Offset(0x0449B6C8),
-			                                                                                                 REL::Offset(0x0449B948) };
+			REL::Offset(0x0449B948) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_WorkshopInterfaceShared__ResourceProduced_{ REL::Offset(0x0449B458),
-			                                                                                                  REL::Offset(0x0449B4C0) };
+			REL::Offset(0x0449B4C0) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_WorkshopTargetMenu__OutpostData_{ REL::Offset(0x044C0A38),
-			                                                                                        REL::Offset(0x044C0E30) };
+			REL::Offset(0x044C0E30) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_WorkshopTargetMenu__ResourceData_{ REL::Offset(0x044C15A0),
-			                                                                                         REL::Offset(0x044C16B8) };
+			REL::Offset(0x044C16B8) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_WorkshopTargetMenu__TargetData_{ REL::Offset(0x044C0AD8), REL::Offset(0x044C0BE0) };
 		inline constexpr std::array<REL::Offset, 2> NestedUIValue_XPData_{ REL::Offset(0x044A1DB0), REL::Offset(0x044A1F78) };
 		inline constexpr std::array<REL::Offset, 1> NiAVObject{ REL::Offset(0x03F21258) };
@@ -28494,7 +28494,7 @@ namespace RE
 			REL::Offset(0x04783768)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			NiTLargeArray_NiPointer_NiObject__NiTNewInterface_NiPointer_NiObject___ZeroObjectTraits_NiPointer_NiObject___{ REL::Offset(0x047838B8) };
+													NiTLargeArray_NiPointer_NiObject__NiTNewInterface_NiPointer_NiObject___ZeroObjectTraits_NiPointer_NiObject___{ REL::Offset(0x047838B8) };
 		inline constexpr std::array<REL::Offset, 1> NiTLargeArray_TESForm_NiTMallocInterface_TESForm__ZeroObjectTraits_TESForm__{ REL::Offset(
 			0x0440C2A0) };
 		inline constexpr std::array<REL::Offset, 1> NiTLargeArray_unsignedint_NiTMallocInterface_unsignedint__ZeroObjectTraits_unsignedint__{
@@ -28822,12 +28822,12 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  PathFollowerStateWaitForAction{ REL::Offset(0x045A3540) };
 		inline constexpr std::array<REL::Offset, 2>  PathManagerImpl{ REL::Offset(0x04599F60), REL::Offset(0x04599F90) };
 		inline constexpr std::array<REL::Offset, 5>  PathManagerPositionPlayerAdapter{ REL::Offset(0x044D3748), REL::Offset(0x044D3760),
-                                                                                      REL::Offset(0x044D3778), REL::Offset(0x044D3790),
-                                                                                      REL::Offset(0x044D37A8) };
+            REL::Offset(0x044D3778), REL::Offset(0x044D3790),
+            REL::Offset(0x044D37A8) };
 		inline constexpr std::array<REL::Offset, 1>  PathSmootherRayCastUsePreferredTris{ REL::Offset(0x045A1ED0) };
 		inline constexpr std::array<REL::Offset, 1>  PathSmootherRayCastUseTrianglePath{ REL::Offset(0x045A1EF8) };
 		inline constexpr std::array<REL::Offset, 5>  Pathing{ REL::Offset(0x044502B8), REL::Offset(0x044503B0), REL::Offset(0x044503C8),
-                                                             REL::Offset(0x04450448), REL::Offset(0x04450458) };
+            REL::Offset(0x04450448), REL::Offset(0x04450458) };
 		inline constexpr std::array<REL::Offset, 1>  PathingAnimations{ REL::Offset(0x04562310) };
 		inline constexpr std::array<REL::Offset, 1>  PathingAnimationsInstance{ REL::Offset(0x04562378) };
 		inline constexpr std::array<REL::Offset, 1>  PathingCell{ REL::Offset(0x04450838) };
@@ -28864,12 +28864,12 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  PathingTraversalActionStandard{ REL::Offset(0x043790C8) };
 		inline constexpr std::array<REL::Offset, 1>  PathingTraversalData{ REL::Offset(0x04379308) };
 		inline constexpr std::array<REL::Offset, 3>  PathingTraversalManager{ REL::Offset(0x04379E08), REL::Offset(0x04379E20),
-                                                                             REL::Offset(0x04379E38) };
+            REL::Offset(0x04379E38) };
 		inline constexpr std::array<REL::Offset, 14> PauseMenu{ REL::Offset(0x044B2328), REL::Offset(0x044B2340), REL::Offset(0x044B2358),
-			                                                    REL::Offset(0x044B2370), REL::Offset(0x044B2388), REL::Offset(0x044B23A0),
-			                                                    REL::Offset(0x044B23B8), REL::Offset(0x044B23D0), REL::Offset(0x044B23E8),
-			                                                    REL::Offset(0x044B2400), REL::Offset(0x044B2418), REL::Offset(0x044B2470),
-			                                                    REL::Offset(0x044B2550), REL::Offset(0x044B2568) };
+			REL::Offset(0x044B2370), REL::Offset(0x044B2388), REL::Offset(0x044B23A0),
+			REL::Offset(0x044B23B8), REL::Offset(0x044B23D0), REL::Offset(0x044B23E8),
+			REL::Offset(0x044B2400), REL::Offset(0x044B2418), REL::Offset(0x044B2470),
+			REL::Offset(0x044B2550), REL::Offset(0x044B2568) };
 		inline constexpr std::array<REL::Offset, 1>  PauseMenuConfirmationDataModel{ REL::Offset(0x0448B3A0) };
 		inline constexpr std::array<REL::Offset, 1>  PauseMenuConfirmationDataModel__PauseMenuConfirmatioEventShuttle{ REL::Offset(0x0448BA40) };
 		inline constexpr std::array<REL::Offset, 1>  PauseMenuListDataModel{ REL::Offset(0x0448B378) };
@@ -28892,7 +28892,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  PerformActivationHandler{ REL::Offset(0x044E3980) };
 		inline constexpr std::array<REL::Offset, 1>  PerformOpFunc{ REL::Offset(0x047823F8) };
 		inline constexpr std::array<REL::Offset, 5>  PhotoGalleryMenu{ REL::Offset(0x044797E0), REL::Offset(0x044798C0), REL::Offset(0x044798D8),
-                                                                      REL::Offset(0x04479930), REL::Offset(0x04479948) };
+            REL::Offset(0x04479930), REL::Offset(0x04479948) };
 		inline constexpr std::array<REL::Offset, 1>  PhotoGalleryMenu__PhotoGalleryEventShuttle{ REL::Offset(0x04479798) };
 		inline constexpr std::array<REL::Offset, 1>  PhotoGallery_DeletePhoto{ REL::Offset(0x044797C0) };
 		inline constexpr std::array<REL::Offset, 1>  PhotoModeCameraState{ REL::Offset(0x0445C160) };
@@ -28903,9 +28903,9 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  PhotoModeDataModel__PhotoModeSettingsData__SettingData{ REL::Offset(0x0448C5B8) };
 		inline constexpr std::array<REL::Offset, 1>  PhotoModeEffectController{ REL::Offset(0x044147B0) };
 		inline constexpr std::array<REL::Offset, 11> PhotoModeMenu{ REL::Offset(0x044A9530), REL::Offset(0x044A9548), REL::Offset(0x044A9560),
-			                                                        REL::Offset(0x044A9578), REL::Offset(0x044A9590), REL::Offset(0x044A95A8),
-			                                                        REL::Offset(0x044A95C0), REL::Offset(0x044A95D8), REL::Offset(0x044A9630),
-			                                                        REL::Offset(0x044A9840), REL::Offset(0x044A9858) };
+			REL::Offset(0x044A9578), REL::Offset(0x044A9590), REL::Offset(0x044A95A8),
+			REL::Offset(0x044A95C0), REL::Offset(0x044A95D8), REL::Offset(0x044A9630),
+			REL::Offset(0x044A9840), REL::Offset(0x044A9858) };
 		inline constexpr std::array<REL::Offset, 1>  PhotoMode_InitializeCategory{ REL::Offset(0x044A97D0) };
 		inline constexpr std::array<REL::Offset, 1>  PhotoMode_ResetToDefaults{ REL::Offset(0x044A97B0) };
 		inline constexpr std::array<REL::Offset, 1>  PhotoMode_SliderChanged{ REL::Offset(0x044A9790) };
@@ -28918,7 +28918,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  PhysicsContactListenerInstance{ REL::Offset(0x04561FA0) };
 		inline constexpr std::array<REL::Offset, 1>  PickNewIdleHandler{ REL::Offset(0x044E34A0) };
 		inline constexpr std::array<REL::Offset, 4>  PickpocketInventoryModel{ REL::Offset(0x044AA248), REL::Offset(0x044AA260),
-                                                                              REL::Offset(0x044AA278), REL::Offset(0x044AA290) };
+            REL::Offset(0x044AA278), REL::Offset(0x044AA290) };
 		inline constexpr std::array<REL::Offset, 1>  PickpocketItemData{ REL::Offset(0x044A9E90) };
 		inline constexpr std::array<REL::Offset, 3>  PickpocketMenu{ REL::Offset(0x044AA2C0), REL::Offset(0x044AA2D8), REL::Offset(0x044AA330) };
 		inline constexpr std::array<REL::Offset, 1>  PickpocketMenu_OnItemSelect{ REL::Offset(0x044AA430) };
@@ -28928,17 +28928,17 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  PitchOverrideStartHandler{ REL::Offset(0x044E3560) };
 		inline constexpr std::array<REL::Offset, 1>  PlanetSiteSelectEventHelper{ REL::Offset(0x044D3370) };
 		inline constexpr std::array<REL::Offset, 11> PlasmaProjectile{ REL::Offset(0x04460500), REL::Offset(0x04460518), REL::Offset(0x04460530),
-			                                                           REL::Offset(0x04460600), REL::Offset(0x04460618), REL::Offset(0x04460680),
-			                                                           REL::Offset(0x044606A0), REL::Offset(0x044606B0), REL::Offset(0x044606C8),
-			                                                           REL::Offset(0x044611B8), REL::Offset(0x044611D0) };
+			REL::Offset(0x04460600), REL::Offset(0x04460618), REL::Offset(0x04460680),
+			REL::Offset(0x044606A0), REL::Offset(0x044606B0), REL::Offset(0x044606C8),
+			REL::Offset(0x044611B8), REL::Offset(0x044611D0) };
 		inline constexpr std::array<REL::Offset, 1>  PlatformDataModel{ REL::Offset(0x0458F6C0) };
 		inline constexpr std::array<REL::Offset, 5>  PlayBinkMenu{ REL::Offset(0x044B27A0), REL::Offset(0x044B27B8), REL::Offset(0x044B2810),
-                                                                  REL::Offset(0x044B28F0), REL::Offset(0x044B2908) };
+            REL::Offset(0x044B28F0), REL::Offset(0x044B2908) };
 		inline constexpr std::array<REL::Offset, 1>  PlayBink_CloseMenu{ REL::Offset(0x044B2920) };
 		inline constexpr std::array<REL::Offset, 1>  PlayerBedEnterHandler{ REL::Offset(0x044E2F78) };
 		inline constexpr std::array<REL::Offset, 9>  PlayerCamera{ REL::Offset(0x0451A128), REL::Offset(0x0451A140), REL::Offset(0x0451A158),
-                                                                  REL::Offset(0x0451A170), REL::Offset(0x0451A1A0), REL::Offset(0x0451A1B8),
-                                                                  REL::Offset(0x0451A1D0), REL::Offset(0x0451A1E8), REL::Offset(0x0451A200) };
+            REL::Offset(0x0451A170), REL::Offset(0x0451A1A0), REL::Offset(0x0451A1B8),
+            REL::Offset(0x0451A1D0), REL::Offset(0x0451A1E8), REL::Offset(0x0451A200) };
 		inline constexpr std::array<REL::Offset, 1>  PlayerCameraTransitionState{ REL::Offset(0x0451A448) };
 		inline constexpr std::array<REL::Offset, 1>  PlayerChairEnterHandler{ REL::Offset(0x044E3188) };
 		inline constexpr std::array<REL::Offset, 42> PlayerCharacter{
@@ -28965,9 +28965,9 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> PlayerControls__JumpHandler{ REL::Offset(0x04473E20) };
 		inline constexpr std::array<REL::Offset, 1> PlayerControls__LookHandler{ REL::Offset(0x04473F08) };
 		inline constexpr std::array<REL::Offset, 8> PlayerControls__Manager{ REL::Offset(0x04475B38), REL::Offset(0x04475B60),
-			                                                                 REL::Offset(0x04475B78), REL::Offset(0x04475B90),
-			                                                                 REL::Offset(0x04475BA8), REL::Offset(0x04475BC0),
-			                                                                 REL::Offset(0x04475BD8), REL::Offset(0x04475BF0) };
+			REL::Offset(0x04475B78), REL::Offset(0x04475B90),
+			REL::Offset(0x04475BA8), REL::Offset(0x04475BC0),
+			REL::Offset(0x04475BD8), REL::Offset(0x04475BF0) };
 		inline constexpr std::array<REL::Offset, 1> PlayerControls__MonocleHandler{ REL::Offset(0x04473FA8) };
 		inline constexpr std::array<REL::Offset, 1> PlayerControls__MovementHandler{ REL::Offset(0x04474030) };
 		inline constexpr std::array<REL::Offset, 1> PlayerControls__PlayerCameraHandler{ REL::Offset(0x044740E8) };
@@ -29017,28 +29017,28 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  PlayerControls__WeaponSightedActionHandler{ REL::Offset(0x04475470) };
 		inline constexpr std::array<REL::Offset, 1>  PlayerControls__ZKeyHandler{ REL::Offset(0x044733A0) };
 		inline constexpr std::array<REL::Offset, 16> PlayerDataModel{ REL::Offset(0x0448D8B0), REL::Offset(0x0448D8C8), REL::Offset(0x0448D8E0),
-			                                                          REL::Offset(0x0448D8F8), REL::Offset(0x0448D910), REL::Offset(0x0448D938),
-			                                                          REL::Offset(0x0448D950), REL::Offset(0x0448D968), REL::Offset(0x0448D980),
-			                                                          REL::Offset(0x0448D998), REL::Offset(0x0448D9B0), REL::Offset(0x0448D9C8),
-			                                                          REL::Offset(0x0448D9E0), REL::Offset(0x0448DA10), REL::Offset(0x0448DA28),
-			                                                          REL::Offset(0x0448DA40) };
+			REL::Offset(0x0448D8F8), REL::Offset(0x0448D910), REL::Offset(0x0448D938),
+			REL::Offset(0x0448D950), REL::Offset(0x0448D968), REL::Offset(0x0448D980),
+			REL::Offset(0x0448D998), REL::Offset(0x0448D9B0), REL::Offset(0x0448D9C8),
+			REL::Offset(0x0448D9E0), REL::Offset(0x0448DA10), REL::Offset(0x0448DA28),
+			REL::Offset(0x0448DA40) };
 		inline constexpr std::array<REL::Offset, 1>  PlayerDataModel__PlayerDataEventShuttle{ REL::Offset(0x0448DA68) };
 		inline constexpr std::array<REL::Offset, 1>  PlayerFastEquipSoundHandler{ REL::Offset(0x044E3938) };
 		inline constexpr std::array<REL::Offset, 1>  PlayerFurnitureExitHandler{ REL::Offset(0x044E2FA8) };
 		inline constexpr std::array<REL::Offset, 4>  PlayerInventoryDataModel{ REL::Offset(0x0448E020), REL::Offset(0x0448E038),
-                                                                              REL::Offset(0x0448E068), REL::Offset(0x0448E080) };
+            REL::Offset(0x0448E068), REL::Offset(0x0448E080) };
 		inline constexpr std::array<REL::Offset, 1>  PlayerInventoryItem{ REL::Offset(0x0448DFC8) };
 		inline constexpr std::array<REL::Offset, 2>  PlayerRegionState{ REL::Offset(0x044DE968), REL::Offset(0x044DE980) };
 		inline constexpr std::array<REL::Offset, 5>  PlayerSleepWaitMovementControllerAdapter{ REL::Offset(0x044D36B8), REL::Offset(0x044D36D0),
-                                                                                              REL::Offset(0x044D36E8), REL::Offset(0x044D3700),
-                                                                                              REL::Offset(0x044D3718) };
+            REL::Offset(0x044D36E8), REL::Offset(0x044D3700),
+            REL::Offset(0x044D3718) };
 		inline constexpr std::array<REL::Offset, 1>  PlayerSleepWaitMovementControllerAdapter__SwitchToLoadedSetControllerFunctor{ REL::Offset(
             0x044D3810) };
 		inline constexpr std::array<REL::Offset, 1>  PlayerSleepWaitMovementControllerAdapter__SwitchToUnloadedSetControllerFunctor{ REL::Offset(
             0x044D3828) };
 		inline constexpr std::array<REL::Offset, 2>  PlayerSpaceUtils__EventSink{ REL::Offset(0x044CAC18), REL::Offset(0x044CAC30) };
 		inline constexpr std::array<REL::Offset, 2>  PlayerSpaceUtils__PlayerSpaceUtilsEventHandler{ REL::Offset(0x044CAAB0),
-                                                                                                    REL::Offset(0x044CAAC8) };
+            REL::Offset(0x044CAAC8) };
 		inline constexpr std::array<REL::Offset, 1>  PlayerSpaceUtils___unnamedtypeSpaceAsteroidsWorldStepListener_{ REL::Offset(0x03F2C628) };
 		inline constexpr std::array<REL::Offset, 1>  PlayerStatusDataModel{ REL::Offset(0x0448F4B8) };
 		inline constexpr std::array<REL::Offset, 1>  PlayerStatusDataModel__PlayerStatusEventShuttle{ REL::Offset(0x0448F6B8) };
@@ -29050,11 +29050,11 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  PostBoneModifierControlInstance{ REL::Offset(0x04567178) };
 		inline constexpr std::array<REL::Offset, 1>  PostStepTask{ REL::Offset(0x04068308) };
 		inline constexpr std::array<REL::Offset, 3>  PowerArmor__EventHandler{ REL::Offset(0x03F26818), REL::Offset(0x03F26830),
-                                                                              REL::Offset(0x03F26848) };
+            REL::Offset(0x03F26848) };
 		inline constexpr std::array<REL::Offset, 1>  PowerUtils__PowerUtilsReferenceEventSink{ REL::Offset(0x03F2B780) };
 		inline constexpr std::array<REL::Offset, 9>  PowersMenu{ REL::Offset(0x04479E70), REL::Offset(0x04479E88), REL::Offset(0x04479EE0),
-                                                                REL::Offset(0x04479EF8), REL::Offset(0x04479F40), REL::Offset(0x0447A060),
-                                                                REL::Offset(0x0447A078), REL::Offset(0x0447A090), REL::Offset(0x0447A0A8) };
+            REL::Offset(0x04479EF8), REL::Offset(0x04479F40), REL::Offset(0x0447A060),
+            REL::Offset(0x0447A078), REL::Offset(0x0447A090), REL::Offset(0x0447A0A8) };
 		inline constexpr std::array<REL::Offset, 1>  PowersMenu_ActivateEssence{ REL::Offset(0x04479F20) };
 		inline constexpr std::array<REL::Offset, 1>  PowersMenu_EquipPower{ REL::Offset(0x0447A020) };
 		inline constexpr std::array<REL::Offset, 1>  PowersMenu_FavoritePower{ REL::Offset(0x0447A040) };
@@ -29074,14 +29074,14 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  ProcessLists{ REL::Offset(0x044DEFC8) };
 		inline constexpr std::array<REL::Offset, 1>  ProcessLists__GetActorsFilter{ REL::Offset(0x044D0468) };
 		inline constexpr std::array<REL::Offset, 11> Projectile{ REL::Offset(0x044EED70), REL::Offset(0x044EED88), REL::Offset(0x044EEDA0),
-			                                                     REL::Offset(0x044EEDB8), REL::Offset(0x044EEDD0), REL::Offset(0x044EEEA0),
-			                                                     REL::Offset(0x044EEEC0), REL::Offset(0x044EEF28), REL::Offset(0x044EEF70),
-			                                                     REL::Offset(0x044EFA60), REL::Offset(0x044EFA78) };
+			REL::Offset(0x044EEDB8), REL::Offset(0x044EEDD0), REL::Offset(0x044EEEA0),
+			REL::Offset(0x044EEEC0), REL::Offset(0x044EEF28), REL::Offset(0x044EEF70),
+			REL::Offset(0x044EFA60), REL::Offset(0x044EFA78) };
 		inline constexpr std::array<REL::Offset, 1>  ProjectileLOSCollector{ REL::Offset(0x044F8F98) };
 		inline constexpr std::array<REL::Offset, 2>  Projectile__Manager{ REL::Offset(0x044EEF38), REL::Offset(0x044EFA90) };
 		inline constexpr std::array<REL::Offset, 1>  QuestDataModel{ REL::Offset(0x0448F940) };
 		inline constexpr std::array<REL::Offset, 4>  QuestDataModel__QuestGameEventShuttle{ REL::Offset(0x0448FF48), REL::Offset(0x0448FF60),
-                                                                                           REL::Offset(0x04490038), REL::Offset(0x04490050) };
+            REL::Offset(0x04490038), REL::Offset(0x04490050) };
 		inline constexpr std::array<REL::Offset, 1>  QuestPathingRequest{ REL::Offset(0x04379E98) };
 		inline constexpr std::array<REL::Offset, 1>  QueuedCellAttachService{ REL::Offset(0x04371300) };
 		inline constexpr std::array<REL::Offset, 1>  QueuedCharacter{ REL::Offset(0x043688A8) };
@@ -29143,9 +29143,9 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 2>  ResearchDataModel{ REL::Offset(0x044905A0), REL::Offset(0x044905C8) };
 		inline constexpr std::array<REL::Offset, 1>  ResearchDataModel__ResearchDataEventShuttle{ REL::Offset(0x04491730) };
 		inline constexpr std::array<REL::Offset, 11> ResearchMenu{ REL::Offset(0x044AABD8), REL::Offset(0x044AABF0), REL::Offset(0x044AAC08),
-			                                                       REL::Offset(0x044AAC20), REL::Offset(0x044AAC38), REL::Offset(0x044AAC50),
-			                                                       REL::Offset(0x044AAC68), REL::Offset(0x044AAC80), REL::Offset(0x044AAC98),
-			                                                       REL::Offset(0x044AACB0), REL::Offset(0x044AAD08) };
+			REL::Offset(0x044AAC20), REL::Offset(0x044AAC38), REL::Offset(0x044AAC50),
+			REL::Offset(0x044AAC68), REL::Offset(0x044AAC80), REL::Offset(0x044AAC98),
+			REL::Offset(0x044AACB0), REL::Offset(0x044AAD08) };
 		inline constexpr std::array<REL::Offset, 1>  ResearchMenu_AddMaterial{ REL::Offset(0x044AAE68) };
 		inline constexpr std::array<REL::Offset, 1>  ResearchMenu_CategorySelected{ REL::Offset(0x044AAEC8) };
 		inline constexpr std::array<REL::Offset, 1>  ResearchMenu_ExitMenu{ REL::Offset(0x044AAE48) };
@@ -29260,7 +29260,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> SaveGameMagicCasterVisitor{ REL::Offset(0x044D65E0) };
 		inline constexpr std::array<REL::Offset, 1> SaveLoadMagicCasterVisitor{ REL::Offset(0x044D65C8) };
 		inline constexpr std::array<REL::Offset, 3> SaveLoadTester__Service{ REL::Offset(0x044CF9E0), REL::Offset(0x044CF9F8),
-			                                                                 REL::Offset(0x044CFA10) };
+			REL::Offset(0x044CFA10) };
 		inline constexpr std::array<REL::Offset, 1> SaveLoad__BlockingIONode{ REL::Offset(0x0440EF50) };
 		inline constexpr std::array<REL::Offset, 1> SaveLoad__BlockingIOStackLocalNode{ REL::Offset(0x0455FE78) };
 		inline constexpr std::array<REL::Offset, 1> SaveLoad__CleanupService__Impl{ REL::Offset(0x0447BD40) };
@@ -29287,23 +29287,23 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> Scaleform__GFx__AS3__Abc__File{ REL::Offset(0x04087B50) };
 		inline constexpr std::array<REL::Offset, 1> Scaleform__GFx__AS3__ArrayBase{ REL::Offset(0x04099EA0) };
 		inline constexpr std::array<REL::Offset, 3> Scaleform__GFx__AS3__AvmBitmap{ REL::Offset(0x04088D58), REL::Offset(0x04089010),
-			                                                                        REL::Offset(0x04089028) };
+			REL::Offset(0x04089028) };
 		inline constexpr std::array<REL::Offset, 3> Scaleform__GFx__AS3__AvmButton{ REL::Offset(0x0408A4B0), REL::Offset(0x0408A588),
-			                                                                        REL::Offset(0x0408A640) };
+			REL::Offset(0x0408A640) };
 		inline constexpr std::array<REL::Offset, 1> Scaleform__GFx__AS3__AvmDisplayObj{ REL::Offset(0x040888E0) };
 		inline constexpr std::array<REL::Offset, 2> Scaleform__GFx__AS3__AvmInteractiveObj{ REL::Offset(0x040891A8), REL::Offset(0x04089280) };
 		inline constexpr std::array<REL::Offset, 5> Scaleform__GFx__AS3__AvmLoader{ REL::Offset(0x0408A778), REL::Offset(0x0408AB68),
-			                                                                        REL::Offset(0x0408AB80), REL::Offset(0x0408AC78),
-			                                                                        REL::Offset(0x0408AD30) };
+			REL::Offset(0x0408AB80), REL::Offset(0x0408AC78),
+			REL::Offset(0x0408AD30) };
 		inline constexpr std::array<REL::Offset, 4> Scaleform__GFx__AS3__AvmMovieClip{ REL::Offset(0x04089718), REL::Offset(0x04089810),
-			                                                                           REL::Offset(0x040898C8), REL::Offset(0x04089998) };
+			REL::Offset(0x040898C8), REL::Offset(0x04089998) };
 		inline constexpr std::array<REL::Offset, 4> Scaleform__GFx__AS3__AvmSprite{ REL::Offset(0x04089358), REL::Offset(0x04089450),
-			                                                                        REL::Offset(0x04089508), REL::Offset(0x040895D8) };
+			REL::Offset(0x04089508), REL::Offset(0x040895D8) };
 		inline constexpr std::array<REL::Offset, 3> Scaleform__GFx__AS3__AvmStage{ REL::Offset(0x04089EE8), REL::Offset(0x04089FE0),
-			                                                                       REL::Offset(0x0408A098) };
+			REL::Offset(0x0408A098) };
 		inline constexpr std::array<REL::Offset, 1> Scaleform__GFx__AS3__AvmStaticText{ REL::Offset(0x0408B240) };
 		inline constexpr std::array<REL::Offset, 3> Scaleform__GFx__AS3__AvmTextField{ REL::Offset(0x0408B310), REL::Offset(0x0408B3E8),
-			                                                                           REL::Offset(0x0408B4A0) };
+			REL::Offset(0x0408B4A0) };
 		inline constexpr std::array<REL::Offset, 1> Scaleform__GFx__AS3__AvmTextField__CSSHolder{ REL::Offset(0x040C5918) };
 		inline constexpr std::array<REL::Offset, 1> Scaleform__GFx__AS3__BASlotFunctCalc{ REL::Offset(0x040884E8) };
 		inline constexpr std::array<REL::Offset, 1> Scaleform__GFx__AS3__BASlotFunctSrlzFixedName{ REL::Offset(0x04088500) };
@@ -30028,7 +30028,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> Scaleform__GFx__AS3__MemoryContextImpl__HeapLimit{ REL::Offset(0x040D2C30) };
 		inline constexpr std::array<REL::Offset, 1> Scaleform__GFx__AS3__MovieDefRootNode{ REL::Offset(0x0408A1D0) };
 		inline constexpr std::array<REL::Offset, 4> Scaleform__GFx__AS3__MovieRoot{ REL::Offset(0x0408A1F8), REL::Offset(0x0408A3F8),
-			                                                                        REL::Offset(0x0408A420), REL::Offset(0x0408A448) };
+			REL::Offset(0x0408A420), REL::Offset(0x0408A448) };
 		inline constexpr std::array<REL::Offset, 1> Scaleform__GFx__AS3__MovieRoot__StickyVarNode{ REL::Offset(0x0408A1E0) };
 		inline constexpr std::array<REL::Offset, 1> Scaleform__GFx__AS3__MovieRoot__UnloadMovie__37__TextFormatVisitor{ REL::Offset(0x0408C128) };
 		inline constexpr std::array<REL::Offset, 1> Scaleform__GFx__AS3__NamespaceInstanceFactory{ REL::Offset(0x04090940) };
@@ -30043,7 +30043,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> Scaleform__GFx__AS3__SerializeArrDense{ REL::Offset(0x04088558) };
 		inline constexpr std::array<REL::Offset, 1> Scaleform__GFx__AS3__SerializeArrSparse{ REL::Offset(0x04088540) };
 		inline constexpr std::array<REL::Offset, 3> Scaleform__GFx__AS3__ShapeObject{ REL::Offset(0x040889B8), REL::Offset(0x04088C70),
-			                                                                          REL::Offset(0x04088C88) };
+			REL::Offset(0x04088C88) };
 		inline constexpr std::array<REL::Offset, 1> Scaleform__GFx__AS3__Slots__SlotFunct{ REL::Offset(0x04087DF0) };
 		inline constexpr std::array<REL::Offset, 1> Scaleform__GFx__AS3__SocketBuffer{ REL::Offset(0x0408C178) };
 		inline constexpr std::array<REL::Offset, 1> Scaleform__GFx__AS3__SocketThreadMgr{ REL::Offset(0x0408BAB0) };
@@ -30071,7 +30071,7 @@ namespace RE
 			REL::Offset(0x0409ACC0)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			Scaleform__GFx__AS3__VectorBase_Scaleform__Ptr_Scaleform__GFx__ASStringNode____Value2NumberCollector{ REL::Offset(0x0409ACD8) };
+													Scaleform__GFx__AS3__VectorBase_Scaleform__Ptr_Scaleform__GFx__ASStringNode____Value2NumberCollector{ REL::Offset(0x0409ACD8) };
 		inline constexpr std::array<REL::Offset, 1> Scaleform__GFx__AS3__VectorBase_Scaleform__Ptr_Scaleform__GFx__ASStringNode____Value2StrCollector{
 			REL::Offset(0x0409AD98)
 		};
@@ -30171,7 +30171,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> Scaleform__GFx__LoadVarsTask{ REL::Offset(0x0407F9E0) };
 		inline constexpr std::array<REL::Offset, 1> Scaleform__GFx__Loader{ REL::Offset(0x04077348) };
 		inline constexpr std::array<REL::Offset, 3> Scaleform__GFx__LoaderImpl{ REL::Offset(0x0407D590), REL::Offset(0x0407D5A0),
-			                                                                    REL::Offset(0x0407D5D0) };
+			REL::Offset(0x0407D5D0) };
 		inline constexpr std::array<REL::Offset, 1> Scaleform__GFx__LoaderTask{ REL::Offset(0x0407D558) };
 		inline constexpr std::array<REL::Offset, 1> Scaleform__GFx__LogBase_Scaleform__GFx__DisplayObjectBase_{ REL::Offset(0x0407CEC0) };
 		inline constexpr std::array<REL::Offset, 1> Scaleform__GFx__LogBase_Scaleform__GFx__LoadProcess_{ REL::Offset(0x0407E290) };
@@ -30224,7 +30224,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> Scaleform__GFx__State{ REL::Offset(0x04077310) };
 		inline constexpr std::array<REL::Offset, 1> Scaleform__GFx__StateBag{ REL::Offset(0x040768A0) };
 		inline constexpr std::array<REL::Offset, 3> Scaleform__GFx__StateBagImpl{ REL::Offset(0x04076C60), REL::Offset(0x04076C70),
-			                                                                      REL::Offset(0x04076CA0) };
+			REL::Offset(0x04076CA0) };
 		inline constexpr std::array<REL::Offset, 2> Scaleform__GFx__StaticTextCharacter{ REL::Offset(0x04084800), REL::Offset(0x04084AC0) };
 		inline constexpr std::array<REL::Offset, 1> Scaleform__GFx__StaticTextDef{ REL::Offset(0x04084798) };
 		inline constexpr std::array<REL::Offset, 1> Scaleform__GFx__StaticTextSnapshotData__GlyphVisitor{ REL::Offset(0x040C4B38) };
@@ -30308,14 +30308,14 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			Scaleform__Render__CreationRenderer__MeshBufferImpl_Scaleform__Render__CreationRenderer__IndexBuffer_{ REL::Offset(0x0476D1E0) };
 		inline constexpr std::array<REL::Offset, 1>
-			Scaleform__Render__CreationRenderer__MeshBufferImpl_Scaleform__Render__CreationRenderer__VertexBuffer_{ REL::Offset(0x0476D1A8) };
+													Scaleform__Render__CreationRenderer__MeshBufferImpl_Scaleform__Render__CreationRenderer__VertexBuffer_{ REL::Offset(0x0476D1A8) };
 		inline constexpr std::array<REL::Offset, 1> Scaleform__Render__CreationRenderer__MeshBufferSet{ REL::Offset(0x0476D088) };
 		inline constexpr std::array<REL::Offset, 1>
 			Scaleform__Render__CreationRenderer__MeshBufferSetImpl_Scaleform__Render__CreationRenderer__IndexBuffer_{ REL::Offset(0x0476D0A0) };
 		inline constexpr std::array<REL::Offset, 1>
-			Scaleform__Render__CreationRenderer__MeshBufferSetImpl_Scaleform__Render__CreationRenderer__VertexBuffer_{ REL::Offset(0x0476D0B8) };
+													Scaleform__Render__CreationRenderer__MeshBufferSetImpl_Scaleform__Render__CreationRenderer__VertexBuffer_{ REL::Offset(0x0476D0B8) };
 		inline constexpr std::array<REL::Offset, 2> Scaleform__Render__CreationRenderer__MeshCache{ REL::Offset(0x0476D0E0),
-			                                                                                        REL::Offset(0x0476D180) };
+			REL::Offset(0x0476D180) };
 		inline constexpr std::array<REL::Offset, 1> Scaleform__Render__CreationRenderer__MeshCacheItem{ REL::Offset(0x0476D0D0) };
 		inline constexpr std::array<REL::Offset, 1> Scaleform__Render__CreationRenderer__PendingResourceDestroyEntry{ REL::Offset(0x047657D8) };
 		inline constexpr std::array<REL::Offset, 1> Scaleform__Render__CreationRenderer__RenderEvents{ REL::Offset(0x0476CF88) };
@@ -30328,8 +30328,8 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> Scaleform__Render__CreationRenderer__Texture{ REL::Offset(0x04765968) };
 		inline constexpr std::array<REL::Offset, 1> Scaleform__Render__CreationRenderer__TextureFormat{ REL::Offset(0x04765940) };
 		inline constexpr std::array<REL::Offset, 3> Scaleform__Render__CreationRenderer__TextureManager{ REL::Offset(0x04765A28),
-			                                                                                             REL::Offset(0x04765A40),
-			                                                                                             REL::Offset(0x04765A60) };
+			REL::Offset(0x04765A40),
+			REL::Offset(0x04765A60) };
 		inline constexpr std::array<REL::Offset, 1> Scaleform__Render__CreationRenderer__VertexBuffer{ REL::Offset(0x0476D018) };
 		inline constexpr std::array<REL::Offset, 1> Scaleform__Render__DDS__DDSFileImageSource{ REL::Offset(0x04086790) };
 		inline constexpr std::array<REL::Offset, 1> Scaleform__Render__DDS__FileReader{ REL::Offset(0x04086750) };
@@ -30380,7 +30380,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> Scaleform__Render__FontCacheHandleManager{ REL::Offset(0x04085D48) };
 		inline constexpr std::array<REL::Offset, 1> Scaleform__Render__GlowFilter{ REL::Offset(0x04081D20) };
 		inline constexpr std::array<REL::Offset, 3> Scaleform__Render__GlyphCache{ REL::Offset(0x04085CF8), REL::Offset(0x04085D08),
-			                                                                       REL::Offset(0x04085D20) };
+			REL::Offset(0x04085D20) };
 		inline constexpr std::array<REL::Offset, 1> Scaleform__Render__GlyphCacheConfig{ REL::Offset(0x04085B48) };
 		inline constexpr std::array<REL::Offset, 1> Scaleform__Render__GlyphCache__EvictNotifier{ REL::Offset(0x04085CD0) };
 		inline constexpr std::array<REL::Offset, 1> Scaleform__Render__GlyphEvictNotifier{ REL::Offset(0x04085B20) };
@@ -30447,7 +30447,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> Scaleform__Render__ProjectionMatrix3DBundle{ REL::Offset(0x04084740) };
 		inline constexpr std::array<REL::Offset, 1> Scaleform__Render__ProjectionMatrix3DEffect{ REL::Offset(0x04085FB8) };
 		inline constexpr std::array<REL::Offset, 2> Scaleform__Render__ProjectionMatrix3DPrimitive{ REL::Offset(0x040845B8),
-			                                                                                        REL::Offset(0x040845C8) };
+			REL::Offset(0x040845C8) };
 		inline constexpr std::array<REL::Offset, 1> Scaleform__Render__RBGenericImpl__DepthStencilBuffer{ REL::Offset(0x040DFE18) };
 		inline constexpr std::array<REL::Offset, 1> Scaleform__Render__RBGenericImpl__RenderBufferManager{ REL::Offset(0x040DFD80) };
 		inline constexpr std::array<REL::Offset, 1> Scaleform__Render__RBGenericImpl__RenderTarget{ REL::Offset(0x040DFDE0) };
@@ -30485,7 +30485,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> Scaleform__Render__ShapeDataFloat{ REL::Offset(0x04076DC8) };
 		inline constexpr std::array<REL::Offset, 2> Scaleform__Render__ShapeDataFloatMP{ REL::Offset(0x040821E0), REL::Offset(0x040821F0) };
 		inline constexpr std::array<REL::Offset, 1>
-			Scaleform__Render__ShapeDataFloatTempl_Scaleform__ArrayLH_POD_unsignedchar_2_Scaleform__ArrayDefaultPolicy__{ REL::Offset(0x0407ED18) };
+													Scaleform__Render__ShapeDataFloatTempl_Scaleform__ArrayLH_POD_unsignedchar_2_Scaleform__ArrayDefaultPolicy__{ REL::Offset(0x0407ED18) };
 		inline constexpr std::array<REL::Offset, 2> Scaleform__Render__ShapeMeshProvider{ REL::Offset(0x0407ED88), REL::Offset(0x0407ED98) };
 		inline constexpr std::array<REL::Offset, 1> Scaleform__Render__SortKeyInterface{ REL::Offset(0x040842B8) };
 		inline constexpr std::array<REL::Offset, 1> Scaleform__Render__StateData__Interface{ REL::Offset(0x0407BE88) };
@@ -30526,7 +30526,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  Scaleform__Render__TextureGlyph{ REL::Offset(0x04080340) };
 		inline constexpr std::array<REL::Offset, 1>  Scaleform__Render__TextureImage{ REL::Offset(0x0407BBE8) };
 		inline constexpr std::array<REL::Offset, 3>  Scaleform__Render__TextureManager{ REL::Offset(0x0407B918), REL::Offset(0x0407BA00),
-                                                                                       REL::Offset(0x0407BA20) };
+            REL::Offset(0x0407BA20) };
 		inline constexpr std::array<REL::Offset, 1>  Scaleform__Render__TextureManagerLocks{ REL::Offset(0x0407B8B8) };
 		inline constexpr std::array<REL::Offset, 1>  Scaleform__Render__TextureManager__ServiceCommand{ REL::Offset(0x0407B900) };
 		inline constexpr std::array<REL::Offset, 1>  Scaleform__Render__ThreadCommandQueue{ REL::Offset(0x045C0538) };
@@ -30576,7 +30576,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  Scaleform__Waitable{ REL::Offset(0x040771E8) };
 		inline constexpr std::array<REL::Offset, 1>  SceneNextPhaseHandler{ REL::Offset(0x044E5F08) };
 		inline constexpr std::array<REL::Offset, 5>  ScopeMenu{ REL::Offset(0x044B2B40), REL::Offset(0x044B2B58), REL::Offset(0x044B2BB0),
-                                                               REL::Offset(0x044B2C90), REL::Offset(0x044B2CB8) };
+            REL::Offset(0x044B2C90), REL::Offset(0x044B2CB8) };
 		inline constexpr std::array<REL::Offset, 1>  ScopeMenuUtil__FadeCallback{ REL::Offset(0x044B2D68) };
 		inline constexpr std::array<REL::Offset, 1>  ScopeMenu__ScopeMenuDataEventShuttle{ REL::Offset(0x044B2D88) };
 		inline constexpr std::array<REL::Offset, 1>  ScopeMenu__ScopeScalingData{ REL::Offset(0x044B2998) };
@@ -30587,14 +30587,14 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  Script__ResetDialogueFlags__2__MobDialogueFlagResetter{ REL::Offset(0x043E7780) };
 		inline constexpr std::array<REL::Offset, 1>  ScriptedRefEffect{ REL::Offset(0x044C5DA8) };
 		inline constexpr std::array<REL::Offset, 13> ScrollItem{ REL::Offset(0x04363300), REL::Offset(0x04363808), REL::Offset(0x04363868),
-			                                                     REL::Offset(0x043638E0), REL::Offset(0x04363940), REL::Offset(0x043639A0),
-			                                                     REL::Offset(0x04363A08), REL::Offset(0x04363A78), REL::Offset(0x04363AD8),
-			                                                     REL::Offset(0x04363B38), REL::Offset(0x04363BB0), REL::Offset(0x04363BC8),
-			                                                     REL::Offset(0x04363BE8) };
+			REL::Offset(0x043638E0), REL::Offset(0x04363940), REL::Offset(0x043639A0),
+			REL::Offset(0x04363A08), REL::Offset(0x04363A78), REL::Offset(0x04363AD8),
+			REL::Offset(0x04363B38), REL::Offset(0x04363BB0), REL::Offset(0x04363BC8),
+			REL::Offset(0x04363BE8) };
 		inline constexpr std::array<REL::Offset, 11> SecurityMenu{ REL::Offset(0x044AC028), REL::Offset(0x044AC040), REL::Offset(0x044AC058),
-			                                                       REL::Offset(0x044AC070), REL::Offset(0x044AC088), REL::Offset(0x044AC0A0),
-			                                                       REL::Offset(0x044AC0B8), REL::Offset(0x044AC0D0), REL::Offset(0x044AC0F8),
-			                                                       REL::Offset(0x044AC110), REL::Offset(0x044AC168) };
+			REL::Offset(0x044AC070), REL::Offset(0x044AC088), REL::Offset(0x044AC0A0),
+			REL::Offset(0x044AC0B8), REL::Offset(0x044AC0D0), REL::Offset(0x044AC0F8),
+			REL::Offset(0x044AC110), REL::Offset(0x044AC168) };
 		inline constexpr std::array<REL::Offset, 1>  SecurityMenu_BackOutKey{ REL::Offset(0x044AC2F8) };
 		inline constexpr std::array<REL::Offset, 1>  SecurityMenu_CloseMenu{ REL::Offset(0x044AC338) };
 		inline constexpr std::array<REL::Offset, 1>  SecurityMenu_ConfirmExit{ REL::Offset(0x044AC298) };
@@ -30619,10 +30619,10 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  SettingT_RegSettingCollection_{ REL::Offset(0x03F229A0) };
 		inline constexpr std::array<REL::Offset, 1>  SettingT_bhkRandomVelocityGenerator__INISettingCollectionEx_{ REL::Offset(0x03F259A8) };
 		inline constexpr std::array<REL::Offset, 15> SettingsDataModel{ REL::Offset(0x04495040), REL::Offset(0x04495058), REL::Offset(0x04495070),
-			                                                            REL::Offset(0x04495088), REL::Offset(0x044950A0), REL::Offset(0x044950B8),
-			                                                            REL::Offset(0x044950E0), REL::Offset(0x044950F8), REL::Offset(0x04495150),
-			                                                            REL::Offset(0x04495168), REL::Offset(0x04495180), REL::Offset(0x04495198),
-			                                                            REL::Offset(0x044951B0), REL::Offset(0x044951C8), REL::Offset(0x044951E0) };
+			REL::Offset(0x04495088), REL::Offset(0x044950A0), REL::Offset(0x044950B8),
+			REL::Offset(0x044950E0), REL::Offset(0x044950F8), REL::Offset(0x04495150),
+			REL::Offset(0x04495168), REL::Offset(0x04495180), REL::Offset(0x04495198),
+			REL::Offset(0x044951B0), REL::Offset(0x044951C8), REL::Offset(0x044951E0) };
 		inline constexpr std::array<REL::Offset, 1>  SettingsDataModel__SettingsEventShuttle{ REL::Offset(0x04495280) };
 		inline constexpr std::array<REL::Offset, 1>  SettingsPanel_CheckBoxChanged{ REL::Offset(0x04494EF8) };
 		inline constexpr std::array<REL::Offset, 1>  SettingsPanel_ClearBinding{ REL::Offset(0x04494F58) };
@@ -30645,13 +30645,13 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  ShipCrewAssignData{ REL::Offset(0x04495F30) };
 		inline constexpr std::array<REL::Offset, 1>  ShipCrewAssignData__ShipCrewAssignMenuEventShuttle{ REL::Offset(0x04495FE0) };
 		inline constexpr std::array<REL::Offset, 5>  ShipCrewAssignMenu{ REL::Offset(0x044AC500), REL::Offset(0x044AC518), REL::Offset(0x044AC530),
-                                                                        REL::Offset(0x044AC548), REL::Offset(0x044AC628) };
+            REL::Offset(0x044AC548), REL::Offset(0x044AC628) };
 		inline constexpr std::array<REL::Offset, 1>  ShipCrewAssignMenu_Assign{ REL::Offset(0x044AC830) };
 		inline constexpr std::array<REL::Offset, 1>  ShipCrewAssignMenu_Unassign{ REL::Offset(0x044AC810) };
 		inline constexpr std::array<REL::Offset, 3>  ShipCrewData{ REL::Offset(0x04495ED8), REL::Offset(0x04495F00), REL::Offset(0x04495F18) };
 		inline constexpr std::array<REL::Offset, 1>  ShipCrewData__ShipCrewMenuEventShuttle{ REL::Offset(0x04495FB8) };
 		inline constexpr std::array<REL::Offset, 5>  ShipCrewMenu{ REL::Offset(0x044AC690), REL::Offset(0x044AC6A8), REL::Offset(0x044AC6C0),
-                                                                  REL::Offset(0x044AC718), REL::Offset(0x044AC730) };
+            REL::Offset(0x044AC718), REL::Offset(0x044AC730) };
 		inline constexpr std::array<REL::Offset, 1>  ShipCrewMenu_Close{ REL::Offset(0x044AC870) };
 		inline constexpr std::array<REL::Offset, 1>  ShipCrewMenu_OpenAssignMenu{ REL::Offset(0x04495DF0) };
 		inline constexpr std::array<REL::Offset, 1>  ShipCrewMenu_SetSort{ REL::Offset(0x04495D88) };
@@ -30713,7 +30713,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  ShipHud_UpdateComponentPower{ REL::Offset(0x04499118) };
 		inline constexpr std::array<REL::Offset, 1>  ShipHud_UpdateTargetPanelRect{ REL::Offset(0x044B3698) };
 		inline constexpr std::array<REL::Offset, 5>  ShipRefuelMenu{ REL::Offset(0x044AC940), REL::Offset(0x044AC958), REL::Offset(0x044AC970),
-                                                                    REL::Offset(0x044AC988), REL::Offset(0x044ACA68) };
+            REL::Offset(0x044AC988), REL::Offset(0x044ACA68) };
 		inline constexpr std::array<REL::Offset, 1>  ShipRefuelMenuDataModel{ REL::Offset(0x0449A8C0) };
 		inline constexpr std::array<REL::Offset, 1>  ShipRefuelMenuDataModel__ShipRefuelMenuEventShuttle{ REL::Offset(0x0449AAB8) };
 		inline constexpr std::array<REL::Offset, 1>  ShipTargetingCameraState{ REL::Offset(0x0445C720) };
@@ -30722,9 +30722,9 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  SimpleAnimationGraphManagerLoadingTask{ REL::Offset(0x04455640) };
 		inline constexpr std::array<REL::Offset, 3>  SitWaitMenu{ REL::Offset(0x0451FE48), REL::Offset(0x0451FF28), REL::Offset(0x0451FF80) };
 		inline constexpr std::array<REL::Offset, 11> SkillsMenu{ REL::Offset(0x044AD958), REL::Offset(0x044AD970), REL::Offset(0x044AD988),
-			                                                     REL::Offset(0x044AD9A0), REL::Offset(0x044AD9B8), REL::Offset(0x044AD9D0),
-			                                                     REL::Offset(0x044AD9E8), REL::Offset(0x044ADA10), REL::Offset(0x044ADA28),
-			                                                     REL::Offset(0x044ADA80), REL::Offset(0x044ADA98) };
+			REL::Offset(0x044AD9A0), REL::Offset(0x044AD9B8), REL::Offset(0x044AD9D0),
+			REL::Offset(0x044AD9E8), REL::Offset(0x044ADA10), REL::Offset(0x044ADA28),
+			REL::Offset(0x044ADA80), REL::Offset(0x044ADA98) };
 		inline constexpr std::array<REL::Offset, 1>  SkillsMenu_Accept{ REL::Offset(0x044ADBD8) };
 		inline constexpr std::array<REL::Offset, 1>  SkillsMenu_AddPatch{ REL::Offset(0x044ADBB8) };
 		inline constexpr std::array<REL::Offset, 1>  SkillsMenu_Cancel{ REL::Offset(0x044ADBF8) };
@@ -30735,8 +30735,8 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  Sky{ REL::Offset(0x04414760) };
 		inline constexpr std::array<REL::Offset, 1>  SkyEffectController{ REL::Offset(0x04413BA0) };
 		inline constexpr std::array<REL::Offset, 7>  SleepWaitMenu{ REL::Offset(0x04520478), REL::Offset(0x04520558), REL::Offset(0x045205B0),
-                                                                   REL::Offset(0x045205C8), REL::Offset(0x045205F0), REL::Offset(0x04520608),
-                                                                   REL::Offset(0x04520620) };
+            REL::Offset(0x045205C8), REL::Offset(0x045205F0), REL::Offset(0x04520608),
+            REL::Offset(0x04520620) };
 		inline constexpr std::array<REL::Offset, 1>  SleepWaitMenu_InterruptRest{ REL::Offset(0x04520658) };
 		inline constexpr std::array<REL::Offset, 1>  SleepWaitMenu_StartRest{ REL::Offset(0x04520638) };
 		inline constexpr std::array<REL::Offset, 1>  SleepWaitMenu__SleepWaitMenuEventShuttle{ REL::Offset(0x04520680) };
@@ -30747,27 +30747,27 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  SpaceComponentViewAccessWrite{ REL::Offset(0x04397868) };
 		inline constexpr std::array<REL::Offset, 2>  SpaceshipAIComponentEventHandler{ REL::Offset(0x04559660), REL::Offset(0x04559678) };
 		inline constexpr std::array<REL::Offset, 8>  SpaceshipBIEvents__EventSink{ REL::Offset(0x044C7F20), REL::Offset(0x044C7F38),
-                                                                                  REL::Offset(0x044C7F50), REL::Offset(0x044C7F68),
-                                                                                  REL::Offset(0x044C7F80), REL::Offset(0x044C7F98),
-                                                                                  REL::Offset(0x044C7FB0), REL::Offset(0x044C7FC8) };
+            REL::Offset(0x044C7F50), REL::Offset(0x044C7F68),
+            REL::Offset(0x044C7F80), REL::Offset(0x044C7F98),
+            REL::Offset(0x044C7FB0), REL::Offset(0x044C7FC8) };
 		inline constexpr std::array<REL::Offset, 1>  SpaceshipBoostPart{ REL::Offset(0x04559D50) };
 		inline constexpr std::array<REL::Offset, 1>  SpaceshipDockingFinishedHandler{ REL::Offset(0x044E5F38) };
 		inline constexpr std::array<REL::Offset, 1>  SpaceshipEditor__HangarModeState_Null{ REL::Offset(0x0447AB80) };
 		inline constexpr std::array<REL::Offset, 2>  SpaceshipEditor__HangarModeState_ShipInspect{ REL::Offset(0x0447AC80), REL::Offset(0x0447ACD0) };
 		inline constexpr std::array<REL::Offset, 7>  SpaceshipEditor__HangarModeState_ShipSelection{ REL::Offset(0x0447B588), REL::Offset(0x0447B5B0),
-                                                                                                    REL::Offset(0x0447B658), REL::Offset(0x0447B670),
-                                                                                                    REL::Offset(0x0447B688), REL::Offset(0x0447B6A0),
-                                                                                                    REL::Offset(0x0447B6B8) };
+            REL::Offset(0x0447B658), REL::Offset(0x0447B670),
+            REL::Offset(0x0447B688), REL::Offset(0x0447B6A0),
+            REL::Offset(0x0447B6B8) };
 		inline constexpr std::array<REL::Offset, 1>  SpaceshipEditor__HangarModeState_ShipSelection__HangarModeStateShipSelectionEventShuttle{
             REL::Offset(0x0447B6D0)
 		};
 		inline constexpr std::array<REL::Offset, 5> SpaceshipEditor__ModuleModeState_Add{ REL::Offset(0x0435AEE0), REL::Offset(0x0435AEF8),
-			                                                                              REL::Offset(0x0435AF10), REL::Offset(0x0435AF28),
-			                                                                              REL::Offset(0x0435AF50) };
+			REL::Offset(0x0435AF10), REL::Offset(0x0435AF28),
+			REL::Offset(0x0435AF50) };
 		inline constexpr std::array<REL::Offset, 1> SpaceshipEditor__ModuleModeState_Add__ModuleModeStateAddEventShuttle{ REL::Offset(0x0435AFE8) };
 		inline constexpr std::array<REL::Offset, 6> SpaceshipEditor__ModuleModeState_Color{ REL::Offset(0x0435B8F0), REL::Offset(0x0435B908),
-			                                                                                REL::Offset(0x0435B920), REL::Offset(0x0435B948),
-			                                                                                REL::Offset(0x0435BA20), REL::Offset(0x0435BA38) };
+			REL::Offset(0x0435B920), REL::Offset(0x0435B948),
+			REL::Offset(0x0435BA20), REL::Offset(0x0435BA38) };
 		inline constexpr std::array<REL::Offset, 1> SpaceshipEditor__ModuleModeState_Color__ModuleModeState_ColorEventShuttle{ REL::Offset(
 			0x0435BA50) };
 		inline constexpr std::array<REL::Offset, 1> SpaceshipEditor__ModuleModeState_Edit{ REL::Offset(0x0435F7B0) };
@@ -30775,12 +30775,12 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> SpaceshipEditor__ModuleModeState_Null{ REL::Offset(0x0435F808) };
 		inline constexpr std::array<REL::Offset, 1> SpaceshipEditor__ModuleModeState_Selection{ REL::Offset(0x0435F758) };
 		inline constexpr std::array<REL::Offset, 5> SpaceshipEditor__ShipBuilderState_Exiting{ REL::Offset(0x04359218), REL::Offset(0x04359258),
-			                                                                                   REL::Offset(0x04359280), REL::Offset(0x04359298),
-			                                                                                   REL::Offset(0x043592B0) };
+			REL::Offset(0x04359280), REL::Offset(0x04359298),
+			REL::Offset(0x043592B0) };
 		inline constexpr std::array<REL::Offset, 1> SpaceshipEditor__ShipBuilderState_Exiting__ShipBuilderState_ExitingEventShuttle{ REL::Offset(
 			0x043592C8) };
 		inline constexpr std::array<REL::Offset, 4> SpaceshipEditor__ShipBuilderState_FlightCheck{ REL::Offset(0x0435A510), REL::Offset(0x0435A550),
-			                                                                                       REL::Offset(0x0435A578), REL::Offset(0x0435A590) };
+			REL::Offset(0x0435A578), REL::Offset(0x0435A590) };
 		inline constexpr std::array<REL::Offset, 1> SpaceshipEditor__ShipBuilderState_FlightCheck__ShipBuilderState_FlightCheckEventShuttle{
 			REL::Offset(0x0435A658)
 		};
@@ -30791,7 +30791,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> SpaceshipEditor__ShipBuilderState_Null{ REL::Offset(0x0435F208) };
 		inline constexpr std::array<REL::Offset, 1> SpaceshipEditor__ShipBuilderState_Popup{ REL::Offset(0x0435F1C8) };
 		inline constexpr std::array<REL::Offset, 4> SpaceshipEditor__ShipBuilderState_Rename{ REL::Offset(0x0435AB60), REL::Offset(0x0435AB78),
-			                                                                                  REL::Offset(0x0435AB90), REL::Offset(0x0435ABB8) };
+			REL::Offset(0x0435AB90), REL::Offset(0x0435ABB8) };
 		inline constexpr std::array<REL::Offset, 1> SpaceshipEditor__ShipBuilderState_Rename__ShipBuilderState_RenameEventShuttle{ REL::Offset(
 			0x0435AC38) };
 		inline constexpr std::array<REL::Offset, 1> SpaceshipEditor__ShipBuilderState_UpgradeMode{ REL::Offset(0x0434B608) };
@@ -30799,9 +30799,9 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> SpaceshipEditor__Spaceship3DManager__Spaceship3DManagerEventShuttle{ REL::Offset(0x0435D5B8) };
 		inline constexpr std::array<REL::Offset, 1> SpaceshipEditor__SpaceshipEditorGame3DManager{ REL::Offset(0x0435D5E8) };
 		inline constexpr std::array<REL::Offset, 8> SpaceshipEditor__SpaceshipEditorMenu{ REL::Offset(0x0435F248), REL::Offset(0x0435F260),
-			                                                                              REL::Offset(0x0435F278), REL::Offset(0x0435F2A0),
-			                                                                              REL::Offset(0x0435F2B8), REL::Offset(0x0435F528),
-			                                                                              REL::Offset(0x0435F600), REL::Offset(0x0435F618) };
+			REL::Offset(0x0435F278), REL::Offset(0x0435F2A0),
+			REL::Offset(0x0435F2B8), REL::Offset(0x0435F528),
+			REL::Offset(0x0435F600), REL::Offset(0x0435F618) };
 		inline constexpr std::array<REL::Offset, 1> SpaceshipEditor__SpaceshipEditorMenu__ShipBuilderEventShuttle{ REL::Offset(0x0435F8C0) };
 		inline constexpr std::array<REL::Offset, 1>
 			SpaceshipEditor__TwoButtonMessageBox__lambda_3a7cedac80f3cfa35a1d3a7f5dc314b3___lambda_86e0c2c42de2e53ece760a7e21698684__{ REL::Offset(
@@ -30816,15 +30816,15 @@ namespace RE
 			SpaceshipEditor__TwoButtonMessageBox__lambda_e11f166cc8a5f071ffef5453272ab6fd___lambda_29737b93d6d45deaab6c0d7b817b4615__{ REL::Offset(
 				0x0447AC28) };
 		inline constexpr std::array<REL::Offset, 1>
-			SpaceshipEditor__TwoButtonMessageBox__lambda_f7162d15568901a3907864f5d9b4c9e5___lambda_d7b0bc563be69ca0e52d9c030ad87c93__{ REL::Offset(
-				0x0447AC10) };
+													SpaceshipEditor__TwoButtonMessageBox__lambda_f7162d15568901a3907864f5d9b4c9e5___lambda_d7b0bc563be69ca0e52d9c030ad87c93__{ REL::Offset(
+                0x0447AC10) };
 		inline constexpr std::array<REL::Offset, 1> SpaceshipEditor__UpgradeModeState_Null{ REL::Offset(0x0435F670) };
 		inline constexpr std::array<REL::Offset, 4> SpaceshipEditor__UpgradeModeState_Replace{ REL::Offset(0x0434C760), REL::Offset(0x0434C7B0),
-			                                                                                   REL::Offset(0x0434C7D8), REL::Offset(0x0434C7F0) };
+			REL::Offset(0x0434C7D8), REL::Offset(0x0434C7F0) };
 		inline constexpr std::array<REL::Offset, 1> SpaceshipEditor__UpgradeModeState_Replace__UpgradeModeStateRepalceEventShuttle{ REL::Offset(
 			0x0434C828) };
 		inline constexpr std::array<REL::Offset, 3> SpaceshipEditor__UpgradeModeState_SystemSelect{ REL::Offset(0x0434BC88), REL::Offset(0x0434BCD8),
-			                                                                                        REL::Offset(0x0434BD00) };
+			REL::Offset(0x0434BD00) };
 		inline constexpr std::array<REL::Offset, 1> SpaceshipEditor__UpgradeModeState_SystemSelect__UpgradeModeStateEmptyEventShuttle{ REL::Offset(
 			0x0434BD38) };
 		inline constexpr std::array<REL::Offset, 2> SpaceshipEffectsUtil__EventSink{ REL::Offset(0x04559B38), REL::Offset(0x04559B50) };
@@ -30835,9 +30835,9 @@ namespace RE
 		};
 		inline constexpr std::array<REL::Offset, 1>  SpaceshipGravDrivePart{ REL::Offset(0x04559CA8) };
 		inline constexpr std::array<REL::Offset, 11> SpaceshipHudMenu{ REL::Offset(0x044B3488), REL::Offset(0x044B34A0), REL::Offset(0x044B34B8),
-			                                                           REL::Offset(0x044B34D0), REL::Offset(0x044B34E8), REL::Offset(0x044B3500),
-			                                                           REL::Offset(0x044B3518), REL::Offset(0x044B3530), REL::Offset(0x044B3548),
-			                                                           REL::Offset(0x044B3628), REL::Offset(0x044B3640) };
+			REL::Offset(0x044B34D0), REL::Offset(0x044B34E8), REL::Offset(0x044B3500),
+			REL::Offset(0x044B3518), REL::Offset(0x044B3530), REL::Offset(0x044B3548),
+			REL::Offset(0x044B3628), REL::Offset(0x044B3640) };
 		inline constexpr std::array<REL::Offset, 1>  SpaceshipLandingFinishedFailsafeHandler{ REL::Offset(0x044E5F20) };
 		inline constexpr std::array<REL::Offset, 1>  SpaceshipLandingFinishedHandler{ REL::Offset(0x044E5F68) };
 		inline constexpr std::array<REL::Offset, 1>  SpaceshipLinkedCell__ExteriorShipCell{ REL::Offset(0x0455FBD0) };
@@ -30848,8 +30848,8 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 2>  SpaceshipPlayerSounds{ REL::Offset(0x0455A510), REL::Offset(0x0455A528) };
 		inline constexpr std::array<REL::Offset, 1>  SpaceshipShieldPart{ REL::Offset(0x04559C60) };
 		inline constexpr std::array<REL::Offset, 3>  SpaceshipSoundsUtils__SpaceshipSoundsEventHandler{ REL::Offset(0x0455A5B0),
-                                                                                                       REL::Offset(0x0455A5C8),
-                                                                                                       REL::Offset(0x0455A5E0) };
+            REL::Offset(0x0455A5C8),
+            REL::Offset(0x0455A5E0) };
 		inline constexpr std::array<REL::Offset, 1>  SpaceshipTakeOffFinishedHandler{ REL::Offset(0x044E5F50) };
 		inline constexpr std::array<REL::Offset, 1>  SpaceshipUndockingFinishedHandler{ REL::Offset(0x044E6070) };
 		inline constexpr std::array<REL::Offset, 1>  SpaceshipWeapon{ REL::Offset(0x04559BF0) };
@@ -30869,8 +30869,8 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  SpeedScale{ REL::Offset(0x0456A180) };
 		inline constexpr std::array<REL::Offset, 1>  SpeedScaleInstance{ REL::Offset(0x0456A110) };
 		inline constexpr std::array<REL::Offset, 9>  SpellItem{ REL::Offset(0x03EF23D8), REL::Offset(0x03EF24D8), REL::Offset(0x03EF2538),
-                                                               REL::Offset(0x03EF29C0), REL::Offset(0x03EF2A08), REL::Offset(0x03EF2A68),
-                                                               REL::Offset(0x03EF2AE8), REL::Offset(0x03EF2B80), REL::Offset(0x03EF2BE8) };
+            REL::Offset(0x03EF29C0), REL::Offset(0x03EF2A08), REL::Offset(0x03EF2A68),
+            REL::Offset(0x03EF2AE8), REL::Offset(0x03EF2B80), REL::Offset(0x03EF2BE8) };
 		inline constexpr std::array<REL::Offset, 1>  SpringBoneData{ REL::Offset(0x043906C0) };
 		inline constexpr std::array<REL::Offset, 1>  SpringBoneInstance{ REL::Offset(0x04390690) };
 		inline constexpr std::array<REL::Offset, 1>  StaggerEffect{ REL::Offset(0x044C6460) };
@@ -30917,11 +30917,11 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  StarMap__DelayCommand{ REL::Offset(0x044B7398) };
 		inline constexpr std::array<REL::Offset, 1>  StarMap__Galaxy3DScene{ REL::Offset(0x044B38A8) };
 		inline constexpr std::array<REL::Offset, 7>  StarMap__GalaxyState{ REL::Offset(0x044B69E8), REL::Offset(0x044B6A00), REL::Offset(0x044B6A18),
-                                                                          REL::Offset(0x044B6A28), REL::Offset(0x044B6AC8), REL::Offset(0x044B6AD8),
-                                                                          REL::Offset(0x044B6AE8) };
+            REL::Offset(0x044B6A28), REL::Offset(0x044B6AC8), REL::Offset(0x044B6AD8),
+            REL::Offset(0x044B6AE8) };
 		inline constexpr std::array<REL::Offset, 1>  StarMap__GalaxyState__GalaxyStateEventShuttle{ REL::Offset(0x044B6CD8) };
 		inline constexpr std::array<REL::Offset, 3>  StarMap__IStarMapState{ REL::Offset(0x044B52D8), REL::Offset(0x044B52E8),
-                                                                            REL::Offset(0x044B52F8) };
+            REL::Offset(0x044B52F8) };
 		inline constexpr std::array<REL::Offset, 1>  StarMap__LerpCommand_NiPoint3A_{ REL::Offset(0x044B9A58) };
 		inline constexpr std::array<REL::Offset, 1>  StarMap__LerpCommand_float_{ REL::Offset(0x044B9A70) };
 		inline constexpr std::array<REL::Offset, 1>  StarMap__PlanetInfoToUI{ REL::Offset(0x0447FF58) };
@@ -30933,21 +30933,21 @@ namespace RE
 			REL::Offset(0x044B8B28), REL::Offset(0x044B8B40), REL::Offset(0x044B8C20)
 		};
 		inline constexpr std::array<REL::Offset, 5> StarMap__StarMapMenuDataModel{ REL::Offset(0x044B80A8), REL::Offset(0x044B80B8),
-			                                                                       REL::Offset(0x044B80D0), REL::Offset(0x044B80F8),
-			                                                                       REL::Offset(0x044B8150) };
+			REL::Offset(0x044B80D0), REL::Offset(0x044B80F8),
+			REL::Offset(0x044B8150) };
 		inline constexpr std::array<REL::Offset, 1> StarMap__StarMapMenuDataModel__StarMapMenuEventShuttle{ REL::Offset(0x044B8670) };
 		inline constexpr std::array<REL::Offset, 1> StarMap__StarMapMenu__StarMapMenuEventShuttle{ REL::Offset(0x044B8D98) };
 		inline constexpr std::array<REL::Offset, 1> StarMap__StarMapSystemMobile{ REL::Offset(0x044B98F8) };
 		inline constexpr std::array<REL::Offset, 1> StarMap__SurfaceMap3DScene{ REL::Offset(0x0447C7B0) };
 		inline constexpr std::array<REL::Offset, 8> StarMap__SurfaceMapState{ REL::Offset(0x044BA310), REL::Offset(0x044BA328),
-			                                                                  REL::Offset(0x044BA340), REL::Offset(0x044BA358),
-			                                                                  REL::Offset(0x044BA380), REL::Offset(0x044BA398),
-			                                                                  REL::Offset(0x044BA3A8), REL::Offset(0x044BA3B8) };
+			REL::Offset(0x044BA340), REL::Offset(0x044BA358),
+			REL::Offset(0x044BA380), REL::Offset(0x044BA398),
+			REL::Offset(0x044BA3A8), REL::Offset(0x044BA3B8) };
 		inline constexpr std::array<REL::Offset, 1> StarMap__SurfaceMapState__SurfaceMapStateEventShuttle{ REL::Offset(0x044BAA08) };
 		inline constexpr std::array<REL::Offset, 1> StarMap__SystemBodyInfoToUI{ REL::Offset(0x04480278) };
 		inline constexpr std::array<REL::Offset, 7> StarMap__SystemState{ REL::Offset(0x044BB378), REL::Offset(0x044BB390), REL::Offset(0x044BB3A8),
-			                                                              REL::Offset(0x044BB3B8), REL::Offset(0x044BB3E0), REL::Offset(0x044BB3F0),
-			                                                              REL::Offset(0x044BB400) };
+			REL::Offset(0x044BB3B8), REL::Offset(0x044BB3E0), REL::Offset(0x044BB3F0),
+			REL::Offset(0x044BB400) };
 		inline constexpr std::array<REL::Offset, 1> StarMap__SystemState__SystemStateEventShuttle{ REL::Offset(0x044BB560) };
 		inline constexpr std::array<REL::Offset, 1> StarMap__Util__ConfirmFastTravelCallback{ REL::Offset(0x044B52C0) };
 		inline constexpr std::array<REL::Offset, 1> StarMap__Util__ConfirmGravJumpPlotCallback{ REL::Offset(0x044B52A8) };
@@ -31014,7 +31014,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			StorageTable__AsyncTableColumn_StorageTable__BinkMovie__Storage_StorageTable__BinkMovie__UploadBuffers_{ REL::Offset(0x04384498) };
 		inline constexpr std::array<REL::Offset, 1>
-			StorageTable__AsyncTableColumn_StorageTable__CameraView__Storage_CreationRenderer__DirectionalShadowData_{ REL::Offset(0x045B6188) };
+													StorageTable__AsyncTableColumn_StorageTable__CameraView__Storage_CreationRenderer__DirectionalShadowData_{ REL::Offset(0x045B6188) };
 		inline constexpr std::array<REL::Offset, 1> StorageTable__AsyncTableColumn_StorageTable__CameraView__Storage_CreationRenderer__FeatureSetup_{
 			REL::Offset(0x045B5E80)
 		};
@@ -31022,7 +31022,7 @@ namespace RE
 			REL::Offset(0x045B6B38)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			StorageTable__AsyncTableColumn_StorageTable__CameraView__Storage_StorageTable__AverageLuminanceFutureReadback_{ REL::Offset(0x045B6508) };
+													StorageTable__AsyncTableColumn_StorageTable__CameraView__Storage_StorageTable__AverageLuminanceFutureReadback_{ REL::Offset(0x045B6508) };
 		inline constexpr std::array<REL::Offset, 1> StorageTable__AsyncTableColumn_StorageTable__CameraView__Storage_StorageTable__CameraViewData_{
 			REL::Offset(0x045B7DA0)
 		};
@@ -31030,7 +31030,7 @@ namespace RE
 			REL::Offset(0x045B57D0)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			StorageTable__AsyncTableColumn_StorageTable__CameraView__Storage_StorageTable__HeightfieldSettings_{ REL::Offset(0x045B65A8) };
+													StorageTable__AsyncTableColumn_StorageTable__CameraView__Storage_StorageTable__HeightfieldSettings_{ REL::Offset(0x045B65A8) };
 		inline constexpr std::array<REL::Offset, 1> StorageTable__AsyncTableColumn_StorageTable__CameraView__Storage_StorageTable__HighlightSettings_{
 			REL::Offset(0x045B5B90)
 		};
@@ -31078,7 +31078,7 @@ namespace RE
 				REL::Offset(0x045B48D0)
 			};
 		inline constexpr std::array<REL::Offset, 1>
-			StorageTable__AsyncTableColumn_StorageTable__FocusShadow__Storage_CreationRenderer__FocusShadowModel_{ REL::Offset(0x045B4AA0) };
+													StorageTable__AsyncTableColumn_StorageTable__FocusShadow__Storage_CreationRenderer__FocusShadowModel_{ REL::Offset(0x045B4AA0) };
 		inline constexpr std::array<REL::Offset, 1> StorageTable__AsyncTableColumn_StorageTable__FocusShadow__Storage_StorageTable__FocusShadowBias_{
 			REL::Offset(0x045B4910)
 		};
@@ -31086,7 +31086,7 @@ namespace RE
 			StorageTable__AsyncTableColumn_StorageTable__FocusShadow__Storage_StorageTable__StrongKey_StorageTable__Light__Storage__{ REL::Offset(
 				0x045B4128) };
 		inline constexpr std::array<REL::Offset, 1>
-			StorageTable__AsyncTableColumn_StorageTable__FogVolumeMaterialData__Storage_StorageTable__FogVolumeMaterial_{ REL::Offset(0x045B8228) };
+													StorageTable__AsyncTableColumn_StorageTable__FogVolumeMaterialData__Storage_StorageTable__FogVolumeMaterial_{ REL::Offset(0x045B8228) };
 		inline constexpr std::array<REL::Offset, 1> StorageTable__AsyncTableColumn_StorageTable__FogVolume__Storage_CreationRenderer__SceneBinding_{
 			REL::Offset(0x045B7850)
 		};
@@ -31094,7 +31094,7 @@ namespace RE
 			REL::Offset(0x045B8538)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			StorageTable__AsyncTableColumn_StorageTable__FogVolume__Storage_StorageTable__FogVolumeDimensions_{ REL::Offset(0x045B5368) };
+													StorageTable__AsyncTableColumn_StorageTable__FogVolume__Storage_StorageTable__FogVolumeDimensions_{ REL::Offset(0x045B5368) };
 		inline constexpr std::array<REL::Offset, 1> StorageTable__AsyncTableColumn_StorageTable__FogVolume__Storage_StorageTable__StateFlags_{
 			REL::Offset(0x045B7E30)
 		};
@@ -31103,7 +31103,7 @@ namespace RE
 				REL::Offset(0x045B57B0)
 			};
 		inline constexpr std::array<REL::Offset, 1>
-			StorageTable__AsyncTableColumn_StorageTable__GeometryParticleBatch__Storage_CreationRenderer__SceneBinding_{ REL::Offset(0x04388A20) };
+													StorageTable__AsyncTableColumn_StorageTable__GeometryParticleBatch__Storage_CreationRenderer__SceneBinding_{ REL::Offset(0x04388A20) };
 		inline constexpr std::array<REL::Offset, 1> StorageTable__AsyncTableColumn_StorageTable__GeometryParticleBatch__Storage_StorageTable__Bounds_{
 			REL::Offset(0x04382960)
 		};
@@ -31124,7 +31124,7 @@ namespace RE
 			StorageTable__AsyncTableColumn_StorageTable__Geometry__Storage_CreationRenderer__Geometry__MaterialInstancesLODArray_{ REL::Offset(
 				0x045B8C28) };
 		inline constexpr std::array<REL::Offset, 1>
-			StorageTable__AsyncTableColumn_StorageTable__Geometry__Storage_CreationRenderer__ProjectedDecal__DecalLayers_{ REL::Offset(0x045B56F0) };
+													StorageTable__AsyncTableColumn_StorageTable__Geometry__Storage_CreationRenderer__ProjectedDecal__DecalLayers_{ REL::Offset(0x045B56F0) };
 		inline constexpr std::array<REL::Offset, 1> StorageTable__AsyncTableColumn_StorageTable__Geometry__Storage_CreationRenderer__SceneBinding_{
 			REL::Offset(0x045B5388)
 		};
@@ -31132,7 +31132,7 @@ namespace RE
 			REL::Offset(0x045B8B28)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			StorageTable__AsyncTableColumn_StorageTable__Geometry__Storage_StorageTable__BoneTransformsBuffer_{ REL::Offset(0x045B80D0) };
+													StorageTable__AsyncTableColumn_StorageTable__Geometry__Storage_StorageTable__BoneTransformsBuffer_{ REL::Offset(0x045B80D0) };
 		inline constexpr std::array<REL::Offset, 1> StorageTable__AsyncTableColumn_StorageTable__Geometry__Storage_StorageTable__Bounds_{ REL::Offset(
 			0x045B7B30) };
 		inline constexpr std::array<REL::Offset, 1> StorageTable__AsyncTableColumn_StorageTable__Geometry__Storage_StorageTable__ForeignKeys_{
@@ -31151,7 +31151,7 @@ namespace RE
 			StorageTable__AsyncTableColumn_StorageTable__Geometry__Storage_StorageTable__StrongKey_StorageTable__MorphData__Storage__{ REL::Offset(
 				0x045B5E20) };
 		inline constexpr std::array<REL::Offset, 1>
-			StorageTable__AsyncTableColumn_StorageTable__Geometry__Storage_StorageTable__TMP_GeometryBlockDirty_{ REL::Offset(0x045B8860) };
+													StorageTable__AsyncTableColumn_StorageTable__Geometry__Storage_StorageTable__TMP_GeometryBlockDirty_{ REL::Offset(0x045B8860) };
 		inline constexpr std::array<REL::Offset, 1> StorageTable__AsyncTableColumn_StorageTable__Geometry__Storage_StorageTable__Transform_{
 			REL::Offset(0x045B7328)
 		};
@@ -31168,7 +31168,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			StorageTable__AsyncTableColumn_StorageTable__ImageSpaceData__Storage_CreationRenderer__CGen__HDRCompositeData_{ REL::Offset(0x045B5E40) };
 		inline constexpr std::array<REL::Offset, 1>
-			StorageTable__AsyncTableColumn_StorageTable__ImageSpaceData__Storage_StorageTable__ColorEffectData_{ REL::Offset(0x045B5F00) };
+													StorageTable__AsyncTableColumn_StorageTable__ImageSpaceData__Storage_StorageTable__ColorEffectData_{ REL::Offset(0x045B5F00) };
 		inline constexpr std::array<REL::Offset, 1> StorageTable__AsyncTableColumn_StorageTable__ImageSpaceData__Storage_StorageTable__DebugData_{
 			REL::Offset(0x045B68D0)
 		};
@@ -31178,17 +31178,17 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			StorageTable__AsyncTableColumn_StorageTable__ImageSpaceData__Storage_StorageTable__DoubleVisionData_{ REL::Offset(0x045B6568) };
 		inline constexpr std::array<REL::Offset, 1>
-			StorageTable__AsyncTableColumn_StorageTable__ImageSpaceData__Storage_StorageTable__FullScreenBlurData_{ REL::Offset(0x045B3B10) };
+													StorageTable__AsyncTableColumn_StorageTable__ImageSpaceData__Storage_StorageTable__FullScreenBlurData_{ REL::Offset(0x045B3B10) };
 		inline constexpr std::array<REL::Offset, 1> StorageTable__AsyncTableColumn_StorageTable__ImageSpaceData__Storage_StorageTable__HDRData_{
 			REL::Offset(0x045B53C8)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			StorageTable__AsyncTableColumn_StorageTable__ImageSpaceData__Storage_StorageTable__ImageSpaceVolumes_{ REL::Offset(0x045B4148) };
+													StorageTable__AsyncTableColumn_StorageTable__ImageSpaceData__Storage_StorageTable__ImageSpaceVolumes_{ REL::Offset(0x045B4148) };
 		inline constexpr std::array<REL::Offset, 1> StorageTable__AsyncTableColumn_StorageTable__ImageSpaceData__Storage_StorageTable__LUTData_{
 			REL::Offset(0x045B5B50)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			StorageTable__AsyncTableColumn_StorageTable__ImageSpaceData__Storage_StorageTable__RadialBlurData_{ REL::Offset(0x045B3CE0) };
+													StorageTable__AsyncTableColumn_StorageTable__ImageSpaceData__Storage_StorageTable__RadialBlurData_{ REL::Offset(0x045B3CE0) };
 		inline constexpr std::array<REL::Offset, 1> StorageTable__AsyncTableColumn_StorageTable__ImageSpaceData__Storage_StorageTable__VignetteData_{
 			REL::Offset(0x045B4340)
 		};
@@ -31198,7 +31198,7 @@ namespace RE
 			StorageTable__AsyncTableColumn_StorageTable__LensFlareInstance__Storage_StorageTable__LensFlareInstance__InstanceData_{ REL::Offset(
 				0x043887E0) };
 		inline constexpr std::array<REL::Offset, 1>
-			StorageTable__AsyncTableColumn_StorageTable__LensFlare__Storage_StorageTable__LensFlare__LensFlareData_{ REL::Offset(0x045B5E60) };
+													StorageTable__AsyncTableColumn_StorageTable__LensFlare__Storage_StorageTable__LensFlare__LensFlareData_{ REL::Offset(0x045B5E60) };
 		inline constexpr std::array<REL::Offset, 1> StorageTable__AsyncTableColumn_StorageTable__LensFlare__Storage_StorageTable__LensFlare__SunData_{
 			REL::Offset(0x045B58D0)
 		};
@@ -31206,7 +31206,7 @@ namespace RE
 			REL::Offset(0x045B6B98)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			StorageTable__AsyncTableColumn_StorageTable__Light__Storage_CreationRenderer__LightContactShadowData_{ REL::Offset(0x045B3F70) };
+													StorageTable__AsyncTableColumn_StorageTable__Light__Storage_CreationRenderer__LightContactShadowData_{ REL::Offset(0x045B3F70) };
 		inline constexpr std::array<REL::Offset, 1> StorageTable__AsyncTableColumn_StorageTable__Light__Storage_CreationRenderer__SceneBinding_{
 			REL::Offset(0x045B8D08)
 		};
@@ -31297,7 +31297,7 @@ namespace RE
 				REL::Offset(0x04385D68)
 			};
 		inline constexpr std::array<REL::Offset, 1>
-			StorageTable__AsyncTableColumn_StorageTable__MeshInstancePatch__Storage_CreationRenderer__SceneBinding_{ REL::Offset(0x04385180) };
+													StorageTable__AsyncTableColumn_StorageTable__MeshInstancePatch__Storage_CreationRenderer__SceneBinding_{ REL::Offset(0x04385180) };
 		inline constexpr std::array<REL::Offset, 1> StorageTable__AsyncTableColumn_StorageTable__MeshInstancePatch__Storage_StorageTable__Bounds_{
 			REL::Offset(0x04385FA8)
 		};
@@ -31305,8 +31305,8 @@ namespace RE
 			StorageTable__AsyncTableColumn_StorageTable__MeshInstancePatch__Storage_StorageTable__MeshInstancePatchInstanceDataBuffer_{ REL::Offset(
 				0x04385520) };
 		inline constexpr std::array<REL::Offset, 1>
-			StorageTable__AsyncTableColumn_StorageTable__MeshInstancePatch__Storage_StorageTable__MeshInstancePatchProperties_{ REL::Offset(
-				0x04386218) };
+													StorageTable__AsyncTableColumn_StorageTable__MeshInstancePatch__Storage_StorageTable__MeshInstancePatchProperties_{ REL::Offset(
+                0x04386218) };
 		inline constexpr std::array<REL::Offset, 1> StorageTable__AsyncTableColumn_StorageTable__MeshInstancePatch__Storage_StorageTable__StateFlags_{
 			REL::Offset(0x04385A20)
 		};
@@ -31328,7 +31328,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			StorageTable__AsyncTableColumn_StorageTable__MeshInstance__Storage_StorageTable__TexCoordVertexStream_{ REL::Offset(0x04385BE8) };
 		inline constexpr std::array<REL::Offset, 1>
-			StorageTable__AsyncTableColumn_StorageTable__MeshInstance__Storage_StorageTable__VertexStreamDirty_{ REL::Offset(0x04386D48) };
+													StorageTable__AsyncTableColumn_StorageTable__MeshInstance__Storage_StorageTable__VertexStreamDirty_{ REL::Offset(0x04386D48) };
 		inline constexpr std::array<REL::Offset, 1> StorageTable__AsyncTableColumn_StorageTable__Model__Storage_CreationRenderer__ModelDefinition_{
 			REL::Offset(0x04383EA0)
 		};
@@ -31344,7 +31344,7 @@ namespace RE
 			REL::Offset(0x04383730)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			StorageTable__AsyncTableColumn_StorageTable__Model__Storage_StorageTable__Model__GeometryHitGroup_{ REL::Offset(0x04382AC8) };
+													StorageTable__AsyncTableColumn_StorageTable__Model__Storage_StorageTable__Model__GeometryHitGroup_{ REL::Offset(0x04382AC8) };
 		inline constexpr std::array<REL::Offset, 1> StorageTable__AsyncTableColumn_StorageTable__Model__Storage_StorageTable__StateFlags_{
 			REL::Offset(0x043831A8)
 		};
@@ -31363,14 +31363,14 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			StorageTable__AsyncTableColumn_StorageTable__MorphData__Storage_StorageTable__PerformanceMorphWeights_{ REL::Offset(0x045B4420) };
 		inline constexpr std::array<REL::Offset, 1>
-			StorageTable__AsyncTableColumn_StorageTable__NodeExtraVisualData__Storage_CreationRenderer__CGen__NodeExtraVisualDataBlock_{ REL::Offset(
-				0x045B7308) };
+													StorageTable__AsyncTableColumn_StorageTable__NodeExtraVisualData__Storage_CreationRenderer__CGen__NodeExtraVisualDataBlock_{ REL::Offset(
+                0x045B7308) };
 		inline constexpr std::array<REL::Offset, 1> StorageTable__AsyncTableColumn_StorageTable__ParentTransform__Storage_StorageTable__StateFlags_{
 			REL::Offset(0x045B4AC0)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			StorageTable__AsyncTableColumn_StorageTable__ParentTransform__Storage_StorageTable__StrongKey_StorageTable__Scene__Storage__{ REL::Offset(
-				0x045B4108) };
+													StorageTable__AsyncTableColumn_StorageTable__ParentTransform__Storage_StorageTable__StrongKey_StorageTable__Scene__Storage__{ REL::Offset(
+                0x045B4108) };
 		inline constexpr std::array<REL::Offset, 1> StorageTable__AsyncTableColumn_StorageTable__ParentTransform__Storage_StorageTable__Transform_{
 			REL::Offset(0x045B4250)
 		};
@@ -31390,7 +31390,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			StorageTable__AsyncTableColumn_StorageTable__ParticleEmitter__Storage_CreationRenderer__CRParticles__CPUData_{ REL::Offset(0x045B44B0) };
 		inline constexpr std::array<REL::Offset, 1>
-			StorageTable__AsyncTableColumn_StorageTable__ParticleEmitter__Storage_CreationRenderer__SceneBinding_{ REL::Offset(0x045B4778) };
+													StorageTable__AsyncTableColumn_StorageTable__ParticleEmitter__Storage_CreationRenderer__SceneBinding_{ REL::Offset(0x045B4778) };
 		inline constexpr std::array<REL::Offset, 1> StorageTable__AsyncTableColumn_StorageTable__ParticleEmitter__Storage_StorageTable__Bounds_{
 			REL::Offset(0x045B4B08)
 		};
@@ -31428,12 +31428,12 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			StorageTable__AsyncTableColumn_StorageTable__PlanetsData__Storage_StorageTable__DistantAtmosphereMode_{ REL::Offset(0x045B4D18) };
 		inline constexpr std::array<REL::Offset, 1>
-			StorageTable__AsyncTableColumn_StorageTable__PlanetsData__Storage_StorageTable__DistantAtmospheres_{ REL::Offset(0x045B4F08) };
+													StorageTable__AsyncTableColumn_StorageTable__PlanetsData__Storage_StorageTable__DistantAtmospheres_{ REL::Offset(0x045B4F08) };
 		inline constexpr std::array<REL::Offset, 1> StorageTable__AsyncTableColumn_StorageTable__PlanetsData__Storage_StorageTable__PlanetCount_{
 			REL::Offset(0x045B4F48)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			StorageTable__AsyncTableColumn_StorageTable__ProbeVolume__Storage_CreationRenderer__CGen__ProbeVolumeDescData_{ REL::Offset(0x045B5EE0) };
+													StorageTable__AsyncTableColumn_StorageTable__ProbeVolume__Storage_CreationRenderer__CGen__ProbeVolumeDescData_{ REL::Offset(0x045B5EE0) };
 		inline constexpr std::array<REL::Offset, 1> StorageTable__AsyncTableColumn_StorageTable__ProbeVolume__Storage_CreationRenderer__SceneBinding_{
 			REL::Offset(0x045B66A0)
 		};
@@ -31455,7 +31455,7 @@ namespace RE
 			StorageTable__AsyncTableColumn_StorageTable__ProjectedDecal__Storage_CreationRenderer__ProjectedDecal__DecalLayers_{ REL::Offset(
 				0x045B6228) };
 		inline constexpr std::array<REL::Offset, 1>
-			StorageTable__AsyncTableColumn_StorageTable__ProjectedDecal__Storage_CreationRenderer__SceneBinding_{ REL::Offset(0x045B5F20) };
+													StorageTable__AsyncTableColumn_StorageTable__ProjectedDecal__Storage_CreationRenderer__SceneBinding_{ REL::Offset(0x045B5F20) };
 		inline constexpr std::array<REL::Offset, 1> StorageTable__AsyncTableColumn_StorageTable__ProjectedDecal__Storage_StorageTable__Bounds_{
 			REL::Offset(0x045B6B58)
 		};
@@ -31463,8 +31463,8 @@ namespace RE
 			StorageTable__AsyncTableColumn_StorageTable__ProjectedDecal__Storage_StorageTable__ProjectedDecal__RenderLayer_{ REL::Offset(
 				0x045B65C8) };
 		inline constexpr std::array<REL::Offset, 1>
-			StorageTable__AsyncTableColumn_StorageTable__ProjectedDecal__Storage_StorageTable__ProjectedDecal__RotationQuaternion_{ REL::Offset(
-				0x045B3F90) };
+													StorageTable__AsyncTableColumn_StorageTable__ProjectedDecal__Storage_StorageTable__ProjectedDecal__RotationQuaternion_{ REL::Offset(
+                0x045B3F90) };
 		inline constexpr std::array<REL::Offset, 1> StorageTable__AsyncTableColumn_StorageTable__ProjectedDecal__Storage_StorageTable__StateFlags_{
 			REL::Offset(0x045B5B30)
 		};
@@ -31582,7 +31582,7 @@ namespace RE
 			StorageTable__AsyncTableColumn_StorageTable__Scene__Storage_CreationRenderer__CelestialBodies__StarBlendParams_{ REL::Offset(
 				0x04383B60) };
 		inline constexpr std::array<REL::Offset, 1>
-			StorageTable__AsyncTableColumn_StorageTable__Scene__Storage_CreationRenderer__WaterDisplacementData_{ REL::Offset(0x043838C8) };
+													StorageTable__AsyncTableColumn_StorageTable__Scene__Storage_CreationRenderer__WaterDisplacementData_{ REL::Offset(0x043838C8) };
 		inline constexpr std::array<REL::Offset, 1> StorageTable__AsyncTableColumn_StorageTable__Scene__Storage_CreationRenderer__WaterFeatureData_{
 			REL::Offset(0x043831C8)
 		};
@@ -31639,8 +31639,8 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			StorageTable__AsyncTableColumn_StorageTable__SkinnedDecal__Storage_StorageTable__SkinnedDecal__Projection_{ REL::Offset(0x04382940) };
 		inline constexpr std::array<REL::Offset, 1>
-			StorageTable__AsyncTableColumn_StorageTable__SkinnedDecal__Storage_StorageTable__StrongKey_StorageTable__Geometry__Storage__{ REL::Offset(
-				0x043827C8) };
+													StorageTable__AsyncTableColumn_StorageTable__SkinnedDecal__Storage_StorageTable__StrongKey_StorageTable__Geometry__Storage__{ REL::Offset(
+                0x043827C8) };
 		inline constexpr std::array<REL::Offset, 1> StorageTable__AsyncTableColumn_StorageTable__StarfieldData__Storage_StorageTable__StarfieldMode_{
 			REL::Offset(0x045B4DF8)
 		};
@@ -31651,8 +31651,8 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			StorageTable__AsyncTableColumn_StorageTable__StarfieldData__Storage_StorageTable__StarfieldSunDirection_{ REL::Offset(0x045B4C80) };
 		inline constexpr std::array<REL::Offset, 1>
-			StorageTable__AsyncTableColumn_StorageTable__StarfieldData__Storage_StorageTable__StrongKey_StorageTable__Camera__Storage__{ REL::Offset(
-				0x045B4F68) };
+													StorageTable__AsyncTableColumn_StorageTable__StarfieldData__Storage_StorageTable__StrongKey_StorageTable__Camera__Storage__{ REL::Offset(
+                0x045B4F68) };
 		inline constexpr std::array<REL::Offset, 1> StorageTable__AsyncTableColumn_StorageTable__StarfieldData__Storage_StorageTable__TempStarData_{
 			REL::Offset(0x045B4F28)
 		};
@@ -31701,8 +31701,8 @@ namespace RE
 			REL::Offset(0x04383EC0)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			StorageTable__AsyncTableColumn_StorageTable__VolumeInstance__Storage_StorageTable__VolumeInstance__BlendStrength_{ REL::Offset(
-				0x04382F90) };
+													StorageTable__AsyncTableColumn_StorageTable__VolumeInstance__Storage_StorageTable__VolumeInstance__BlendStrength_{ REL::Offset(
+                0x04382F90) };
 		inline constexpr std::array<REL::Offset, 1> StorageTable__AsyncTableColumn_StorageTable__Volume__Storage_StorageTable__Volume__ShapeList_{
 			REL::Offset(0x043836F0)
 		};
@@ -31710,7 +31710,7 @@ namespace RE
 			StorageTable__AsyncTableColumn_StorageTable__Water__Storage_CreationRenderer__CGen__WaterHeightOverridePlaceable_{ REL::Offset(
 				0x045B5080) };
 		inline constexpr std::array<REL::Offset, 1>
-			StorageTable__AsyncTableColumn_StorageTable__Water__Storage_CreationRenderer__CGen__WaterTypeParameters_{ REL::Offset(0x045B4730) };
+													StorageTable__AsyncTableColumn_StorageTable__Water__Storage_CreationRenderer__CGen__WaterTypeParameters_{ REL::Offset(0x045B4730) };
 		inline constexpr std::array<REL::Offset, 1> StorageTable__AsyncTableColumn_StorageTable__Water__Storage_StorageTable__WaterMetaData_{
 			REL::Offset(0x045B5020)
 		};
@@ -32219,12 +32219,12 @@ namespace RE
 				REL::Offset(0x045B8400)
 			};
 		inline constexpr std::array<REL::Offset, 1>
-			StorageTable__HostOnlyMemory_StorageTable__CameraView__Storage_CreationRendererPrivate__TiledCullingData_0_{ REL::Offset(0x045B6078) };
+													StorageTable__HostOnlyMemory_StorageTable__CameraView__Storage_CreationRendererPrivate__TiledCullingData_0_{ REL::Offset(0x045B6078) };
 		inline constexpr std::array<REL::Offset, 1> StorageTable__HostOnlyMemory_StorageTable__CameraView__Storage_CreationRenderer__CGen__HDRData_0_{
 			REL::Offset(0x045B63F8)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			StorageTable__HostOnlyMemory_StorageTable__CameraView__Storage_CreationRenderer__DirectionalShadowData_2_{ REL::Offset(0x045B5F88) };
+													StorageTable__HostOnlyMemory_StorageTable__CameraView__Storage_CreationRenderer__DirectionalShadowData_2_{ REL::Offset(0x045B5F88) };
 		inline constexpr std::array<REL::Offset, 1> StorageTable__HostOnlyMemory_StorageTable__CameraView__Storage_CreationRenderer__FeatureSetup_2_{
 			REL::Offset(0x045B5C28)
 		};
@@ -32232,7 +32232,7 @@ namespace RE
 			REL::Offset(0x045B6910)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			StorageTable__HostOnlyMemory_StorageTable__CameraView__Storage_StorageTable__AverageLuminanceFutureReadback_2_{ REL::Offset(0x045B6358) };
+													StorageTable__HostOnlyMemory_StorageTable__CameraView__Storage_StorageTable__AverageLuminanceFutureReadback_2_{ REL::Offset(0x045B6358) };
 		inline constexpr std::array<REL::Offset, 1> StorageTable__HostOnlyMemory_StorageTable__CameraView__Storage_StorageTable__CameraViewData_2_{
 			REL::Offset(0x045B7EC8)
 		};
@@ -32240,7 +32240,7 @@ namespace RE
 			REL::Offset(0x045B5650)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			StorageTable__HostOnlyMemory_StorageTable__CameraView__Storage_StorageTable__HeightfieldSettings_2_{ REL::Offset(0x045B6610) };
+													StorageTable__HostOnlyMemory_StorageTable__CameraView__Storage_StorageTable__HeightfieldSettings_2_{ REL::Offset(0x045B6610) };
 		inline constexpr std::array<REL::Offset, 1> StorageTable__HostOnlyMemory_StorageTable__CameraView__Storage_StorageTable__HighlightSettings_2_{
 			REL::Offset(0x045B5A28)
 		};
@@ -32303,7 +32303,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			StorageTable__HostOnlyMemory_StorageTable__FocusShadow__Storage_CreationRendererPrivate__GeometryList_0_{ REL::Offset(0x045B8558) };
 		inline constexpr std::array<REL::Offset, 1>
-			StorageTable__HostOnlyMemory_StorageTable__FocusShadow__Storage_CreationRenderer__FocusShadowModel_2_{ REL::Offset(0x045B4BA0) };
+													StorageTable__HostOnlyMemory_StorageTable__FocusShadow__Storage_CreationRenderer__FocusShadowModel_2_{ REL::Offset(0x045B4BA0) };
 		inline constexpr std::array<REL::Offset, 1> StorageTable__HostOnlyMemory_StorageTable__FocusShadow__Storage_StorageTable__FocusShadowBias_2_{
 			REL::Offset(0x045B4A18)
 		};
@@ -32317,7 +32317,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			StorageTable__HostOnlyMemory_StorageTable__FogVolumeMaterialData__Storage_StorageTable__FogVolumeMaterial_2_{ REL::Offset(0x045B8310) };
 		inline constexpr std::array<REL::Offset, 1>
-			StorageTable__HostOnlyMemory_StorageTable__FogVolume__Storage_CreationRendererPrivate__OctreeBinding_0_{ REL::Offset(0x045B6CA8) };
+													StorageTable__HostOnlyMemory_StorageTable__FogVolume__Storage_CreationRendererPrivate__OctreeBinding_0_{ REL::Offset(0x045B6CA8) };
 		inline constexpr std::array<REL::Offset, 1> StorageTable__HostOnlyMemory_StorageTable__FogVolume__Storage_CreationRenderer__SceneBinding_2_{
 			REL::Offset(0x045B7538)
 		};
@@ -32325,7 +32325,7 @@ namespace RE
 			REL::Offset(0x045B8298)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			StorageTable__HostOnlyMemory_StorageTable__FogVolume__Storage_StorageTable__FogVolumeDimensions_2_{ REL::Offset(0x045B50F0) };
+													StorageTable__HostOnlyMemory_StorageTable__FogVolume__Storage_StorageTable__FogVolumeDimensions_2_{ REL::Offset(0x045B50F0) };
 		inline constexpr std::array<REL::Offset, 1> StorageTable__HostOnlyMemory_StorageTable__FogVolume__Storage_StorageTable__StateFlags_2_{
 			REL::Offset(0x045B7E50)
 		};
@@ -32345,7 +32345,7 @@ namespace RE
 			StorageTable__HostOnlyMemory_StorageTable__GeometryParticleBatch__Storage_CreationRendererPrivate__OctreeBinding_0_{ REL::Offset(
 				0x045B6C58) };
 		inline constexpr std::array<REL::Offset, 1>
-			StorageTable__HostOnlyMemory_StorageTable__GeometryParticleBatch__Storage_CreationRenderer__SceneBinding_2_{ REL::Offset(0x043889D0) };
+													StorageTable__HostOnlyMemory_StorageTable__GeometryParticleBatch__Storage_CreationRenderer__SceneBinding_2_{ REL::Offset(0x043889D0) };
 		inline constexpr std::array<REL::Offset, 1> StorageTable__HostOnlyMemory_StorageTable__GeometryParticleBatch__Storage_StorageTable__Bounds_2_{
 			REL::Offset(0x04382A58)
 		};
@@ -32374,7 +32374,7 @@ namespace RE
 			StorageTable__HostOnlyMemory_StorageTable__Geometry__Storage_CreationRenderer__Geometry__MaterialInstancesLODArray_2_{ REL::Offset(
 				0x045B8C70) };
 		inline constexpr std::array<REL::Offset, 1>
-			StorageTable__HostOnlyMemory_StorageTable__Geometry__Storage_CreationRenderer__ProjectedDecal__DecalLayers_2_{ REL::Offset(0x045B54A0) };
+													StorageTable__HostOnlyMemory_StorageTable__Geometry__Storage_CreationRenderer__ProjectedDecal__DecalLayers_2_{ REL::Offset(0x045B54A0) };
 		inline constexpr std::array<REL::Offset, 1> StorageTable__HostOnlyMemory_StorageTable__Geometry__Storage_CreationRenderer__SceneBinding_2_{
 			REL::Offset(0x045B5168)
 		};
@@ -32382,7 +32382,7 @@ namespace RE
 			REL::Offset(0x045B8B90)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			StorageTable__HostOnlyMemory_StorageTable__Geometry__Storage_StorageTable__BoneTransformsBuffer_2_{ REL::Offset(0x045B7F68) };
+													StorageTable__HostOnlyMemory_StorageTable__Geometry__Storage_StorageTable__BoneTransformsBuffer_2_{ REL::Offset(0x045B7F68) };
 		inline constexpr std::array<REL::Offset, 1> StorageTable__HostOnlyMemory_StorageTable__Geometry__Storage_StorageTable__Bounds_2_{ REL::Offset(
 			0x045B7510) };
 		inline constexpr std::array<REL::Offset, 1> StorageTable__HostOnlyMemory_StorageTable__Geometry__Storage_StorageTable__ForeignKeys_2_{
@@ -32394,7 +32394,7 @@ namespace RE
 			StorageTable__HostOnlyMemory_StorageTable__Geometry__Storage_StorageTable__Geometry__RegisteredMaterialInstances_0_{ REL::Offset(
 				0x045B7B70) };
 		inline constexpr std::array<REL::Offset, 1>
-			StorageTable__HostOnlyMemory_StorageTable__Geometry__Storage_StorageTable__Geometry__RegisteredModelKey_0_{ REL::Offset(0x045B8AB0) };
+													StorageTable__HostOnlyMemory_StorageTable__Geometry__Storage_StorageTable__Geometry__RegisteredModelKey_0_{ REL::Offset(0x045B8AB0) };
 		inline constexpr std::array<REL::Offset, 1> StorageTable__HostOnlyMemory_StorageTable__Geometry__Storage_StorageTable__OperationSequence_0_{
 			REL::Offset(0x045B6E38)
 		};
@@ -32421,7 +32421,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			StorageTable__HostOnlyMemory_StorageTable__ImageProcess__Storage_StorageTable__ImageProcess__Data_2_{ REL::Offset(0x04382A08) };
 		inline constexpr std::array<REL::Offset, 1>
-			StorageTable__HostOnlyMemory_StorageTable__ImageSpaceData__Storage_StorageTable__ColorEffectData_2_{ REL::Offset(0x045B5FD8) };
+													StorageTable__HostOnlyMemory_StorageTable__ImageSpaceData__Storage_StorageTable__ColorEffectData_2_{ REL::Offset(0x045B5FD8) };
 		inline constexpr std::array<REL::Offset, 1> StorageTable__HostOnlyMemory_StorageTable__ImageSpaceData__Storage_StorageTable__DebugData_2_{
 			REL::Offset(0x045B6960)
 		};
@@ -32431,17 +32431,17 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			StorageTable__HostOnlyMemory_StorageTable__ImageSpaceData__Storage_StorageTable__DoubleVisionData_2_{ REL::Offset(0x045B3ED0) };
 		inline constexpr std::array<REL::Offset, 1>
-			StorageTable__HostOnlyMemory_StorageTable__ImageSpaceData__Storage_StorageTable__FullScreenBlurData_2_{ REL::Offset(0x045B4488) };
+													StorageTable__HostOnlyMemory_StorageTable__ImageSpaceData__Storage_StorageTable__FullScreenBlurData_2_{ REL::Offset(0x045B4488) };
 		inline constexpr std::array<REL::Offset, 1> StorageTable__HostOnlyMemory_StorageTable__ImageSpaceData__Storage_StorageTable__HDRData_2_{
 			REL::Offset(0x045B5118)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			StorageTable__HostOnlyMemory_StorageTable__ImageSpaceData__Storage_StorageTable__ImageSpaceVolumes_2_{ REL::Offset(0x045B4228) };
+													StorageTable__HostOnlyMemory_StorageTable__ImageSpaceData__Storage_StorageTable__ImageSpaceVolumes_2_{ REL::Offset(0x045B4228) };
 		inline constexpr std::array<REL::Offset, 1> StorageTable__HostOnlyMemory_StorageTable__ImageSpaceData__Storage_StorageTable__LUTData_2_{
 			REL::Offset(0x045B5938)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			StorageTable__HostOnlyMemory_StorageTable__ImageSpaceData__Storage_StorageTable__RadialBlurData_2_{ REL::Offset(0x045B3D48) };
+													StorageTable__HostOnlyMemory_StorageTable__ImageSpaceData__Storage_StorageTable__RadialBlurData_2_{ REL::Offset(0x045B3D48) };
 		inline constexpr std::array<REL::Offset, 1> StorageTable__HostOnlyMemory_StorageTable__ImageSpaceData__Storage_StorageTable__VignetteData_2_{
 			REL::Offset(0x045B4440)
 		};
@@ -32451,7 +32451,7 @@ namespace RE
 			StorageTable__HostOnlyMemory_StorageTable__LensFlareInstance__Storage_StorageTable__LensFlareInstance__InstanceData_2_{ REL::Offset(
 				0x043888F0) };
 		inline constexpr std::array<REL::Offset, 1>
-			StorageTable__HostOnlyMemory_StorageTable__LensFlare__Storage_StorageTable__LensFlare__LensFlareData_2_{ REL::Offset(0x045B5D18) };
+													StorageTable__HostOnlyMemory_StorageTable__LensFlare__Storage_StorageTable__LensFlare__LensFlareData_2_{ REL::Offset(0x045B5D18) };
 		inline constexpr std::array<REL::Offset, 1> StorageTable__HostOnlyMemory_StorageTable__LensFlare__Storage_StorageTable__LensFlare__SunData_2_{
 			REL::Offset(0x045B5910)
 		};
@@ -32481,7 +32481,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			StorageTable__HostOnlyMemory_StorageTable__Light__Storage_CreationRenderer__CGen__CShadowMapRenderingData_0_{ REL::Offset(0x045B5AB8) };
 		inline constexpr std::array<REL::Offset, 1>
-			StorageTable__HostOnlyMemory_StorageTable__Light__Storage_CreationRenderer__LightContactShadowData_2_{ REL::Offset(0x045B3E08) };
+													StorageTable__HostOnlyMemory_StorageTable__Light__Storage_CreationRenderer__LightContactShadowData_2_{ REL::Offset(0x045B3E08) };
 		inline constexpr std::array<REL::Offset, 1> StorageTable__HostOnlyMemory_StorageTable__Light__Storage_CreationRenderer__SceneBinding_2_{
 			REL::Offset(0x045B6FC8)
 		};
@@ -32530,8 +32530,8 @@ namespace RE
 			REL::Offset(0x045B7560)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			StorageTable__HostOnlyMemory_StorageTable__Light__Storage_StorageTable__StrongKey_StorageTable__LensFlare__Storage__2_{ REL::Offset(
-				0x045B7C10) };
+													StorageTable__HostOnlyMemory_StorageTable__Light__Storage_StorageTable__StrongKey_StorageTable__LensFlare__Storage__2_{ REL::Offset(
+                0x045B7C10) };
 		inline constexpr std::array<REL::Offset, 1> StorageTable__HostOnlyMemory_StorageTable__MaterialInstance__Storage_BSResource2__DBHandleBase_0_{
 			REL::Offset(0x045B8A88)
 		};
@@ -32600,7 +32600,7 @@ namespace RE
 				REL::Offset(0x04385E28)
 			};
 		inline constexpr std::array<REL::Offset, 1>
-			StorageTable__HostOnlyMemory_StorageTable__MeshInstancePatch__Storage_CreationRenderer__SceneBinding_2_{ REL::Offset(0x04385298) };
+													StorageTable__HostOnlyMemory_StorageTable__MeshInstancePatch__Storage_CreationRenderer__SceneBinding_2_{ REL::Offset(0x04385298) };
 		inline constexpr std::array<REL::Offset, 1> StorageTable__HostOnlyMemory_StorageTable__MeshInstancePatch__Storage_StorageTable__Bounds_2_{
 			REL::Offset(0x043860B0)
 		};
@@ -32608,8 +32608,8 @@ namespace RE
 			StorageTable__HostOnlyMemory_StorageTable__MeshInstancePatch__Storage_StorageTable__MeshInstancePatchInstanceDataBuffer_2_{ REL::Offset(
 				0x043855E8) };
 		inline constexpr std::array<REL::Offset, 1>
-			StorageTable__HostOnlyMemory_StorageTable__MeshInstancePatch__Storage_StorageTable__MeshInstancePatchProperties_2_{ REL::Offset(
-				0x043862D0) };
+													StorageTable__HostOnlyMemory_StorageTable__MeshInstancePatch__Storage_StorageTable__MeshInstancePatchProperties_2_{ REL::Offset(
+                0x043862D0) };
 		inline constexpr std::array<REL::Offset, 1> StorageTable__HostOnlyMemory_StorageTable__MeshInstancePatch__Storage_StorageTable__StateFlags_2_{
 			REL::Offset(0x04385B08)
 		};
@@ -32633,7 +32633,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			StorageTable__HostOnlyMemory_StorageTable__Model__Storage_CreationRendererPrivate__ModelGeometryList_0_{ REL::Offset(0x045B8478) };
 		inline constexpr std::array<REL::Offset, 1>
-			StorageTable__HostOnlyMemory_StorageTable__Model__Storage_CreationRendererPrivate__OctreeBinding_0_{ REL::Offset(0x045B6ED8) };
+													StorageTable__HostOnlyMemory_StorageTable__Model__Storage_CreationRendererPrivate__OctreeBinding_0_{ REL::Offset(0x045B6ED8) };
 		inline constexpr std::array<REL::Offset, 1> StorageTable__HostOnlyMemory_StorageTable__Model__Storage_CreationRenderer__ModelDefinition_2_{
 			REL::Offset(0x04383FD8)
 		};
@@ -32649,7 +32649,7 @@ namespace RE
 			REL::Offset(0x043836A0)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			StorageTable__HostOnlyMemory_StorageTable__Model__Storage_StorageTable__Model__GeometryHitGroup_2_{ REL::Offset(0x04382BE8) };
+													StorageTable__HostOnlyMemory_StorageTable__Model__Storage_StorageTable__Model__GeometryHitGroup_2_{ REL::Offset(0x04382BE8) };
 		inline constexpr std::array<REL::Offset, 1> StorageTable__HostOnlyMemory_StorageTable__Model__Storage_StorageTable__Model__RaytracingInfo_0_{
 			REL::Offset(0x045B7CD8)
 		};
@@ -32674,8 +32674,8 @@ namespace RE
 			StorageTable__HostOnlyMemory_StorageTable__NodeExtraVisualData__Storage_CreationRenderer__CGen__NodeExtraVisualDataBlock_2_{ REL::Offset(
 				0x045B7BE8) };
 		inline constexpr std::array<REL::Offset, 1>
-			StorageTable__HostOnlyMemory_StorageTable__ParentTransform__Storage_CreationRendererPrivate__DrawableMaskContainer_0_{ REL::Offset(
-				0x045B8428) };
+													StorageTable__HostOnlyMemory_StorageTable__ParentTransform__Storage_CreationRendererPrivate__DrawableMaskContainer_0_{ REL::Offset(
+                0x045B8428) };
 		inline constexpr std::array<REL::Offset, 1> StorageTable__HostOnlyMemory_StorageTable__ParentTransform__Storage_StorageTable__BoundScene_0_{
 			REL::Offset(0x045B79B0)
 		};
@@ -32707,7 +32707,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			StorageTable__HostOnlyMemory_StorageTable__ParticleEmitter__Storage_CreationRenderer__CRParticles__CPUData_2_{ REL::Offset(0x045B4608) };
 		inline constexpr std::array<REL::Offset, 1>
-			StorageTable__HostOnlyMemory_StorageTable__ParticleEmitter__Storage_CreationRenderer__SceneBinding_2_{ REL::Offset(0x045B4858) };
+													StorageTable__HostOnlyMemory_StorageTable__ParticleEmitter__Storage_CreationRenderer__SceneBinding_2_{ REL::Offset(0x045B4858) };
 		inline constexpr std::array<REL::Offset, 1> StorageTable__HostOnlyMemory_StorageTable__ParticleEmitter__Storage_StorageTable__Bounds_2_{
 			REL::Offset(0x045B4BE8)
 		};
@@ -32743,7 +32743,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			StorageTable__HostOnlyMemory_StorageTable__PlanetsData__Storage_StorageTable__DistantAtmosphereMode_2_{ REL::Offset(0x045B4E40) };
 		inline constexpr std::array<REL::Offset, 1>
-			StorageTable__HostOnlyMemory_StorageTable__PlanetsData__Storage_StorageTable__DistantAtmospheres_2_{ REL::Offset(0x045B4EE0) };
+													StorageTable__HostOnlyMemory_StorageTable__PlanetsData__Storage_StorageTable__DistantAtmospheres_2_{ REL::Offset(0x045B4EE0) };
 		inline constexpr std::array<REL::Offset, 1> StorageTable__HostOnlyMemory_StorageTable__PlanetsData__Storage_StorageTable__PlanetCount_2_{
 			REL::Offset(0x045B4D88)
 		};
@@ -32773,7 +32773,7 @@ namespace RE
 			StorageTable__HostOnlyMemory_StorageTable__ProjectedDecal__Storage_CreationRenderer__ProjectedDecal__DecalLayers_2_{ REL::Offset(
 				0x045B6290) };
 		inline constexpr std::array<REL::Offset, 1>
-			StorageTable__HostOnlyMemory_StorageTable__ProjectedDecal__Storage_CreationRenderer__SceneBinding_2_{ REL::Offset(0x045B5F60) };
+													StorageTable__HostOnlyMemory_StorageTable__ProjectedDecal__Storage_CreationRenderer__SceneBinding_2_{ REL::Offset(0x045B5F60) };
 		inline constexpr std::array<REL::Offset, 1> StorageTable__HostOnlyMemory_StorageTable__ProjectedDecal__Storage_StorageTable__Bounds_2_{
 			REL::Offset(0x045B6988)
 		};
@@ -32781,8 +32781,8 @@ namespace RE
 			StorageTable__HostOnlyMemory_StorageTable__ProjectedDecal__Storage_StorageTable__ProjectedDecal__RenderLayer_2_{ REL::Offset(
 				0x045B3EF8) };
 		inline constexpr std::array<REL::Offset, 1>
-			StorageTable__HostOnlyMemory_StorageTable__ProjectedDecal__Storage_StorageTable__ProjectedDecal__RotationQuaternion_2_{ REL::Offset(
-				0x045B3DE0) };
+													StorageTable__HostOnlyMemory_StorageTable__ProjectedDecal__Storage_StorageTable__ProjectedDecal__RotationQuaternion_2_{ REL::Offset(
+                0x045B3DE0) };
 		inline constexpr std::array<REL::Offset, 1> StorageTable__HostOnlyMemory_StorageTable__ProjectedDecal__Storage_StorageTable__StateFlags_2_{
 			REL::Offset(0x045B5A00)
 		};
@@ -32964,7 +32964,7 @@ namespace RE
 			StorageTable__HostOnlyMemory_StorageTable__Scene__Storage_CreationRenderer__CelestialBodies__StarBlendParams_2_{ REL::Offset(
 				0x04383C38) };
 		inline constexpr std::array<REL::Offset, 1>
-			StorageTable__HostOnlyMemory_StorageTable__Scene__Storage_CreationRenderer__WaterDisplacementData_2_{ REL::Offset(0x04382F68) };
+													StorageTable__HostOnlyMemory_StorageTable__Scene__Storage_CreationRenderer__WaterDisplacementData_2_{ REL::Offset(0x04382F68) };
 		inline constexpr std::array<REL::Offset, 1> StorageTable__HostOnlyMemory_StorageTable__Scene__Storage_CreationRenderer__WaterFeatureData_2_{
 			REL::Offset(0x043832E0)
 		};
@@ -33024,8 +33024,8 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			StorageTable__HostOnlyMemory_StorageTable__ShadowMap__Storage_CreationRendererPrivate__ShadowMapAllocation_0_{ REL::Offset(0x045B7D00) };
 		inline constexpr std::array<REL::Offset, 1>
-			StorageTable__HostOnlyMemory_StorageTable__ShadowMap__Storage_CreationRendererPrivate__ShadowMapRenderingMetaData_0_{ REL::Offset(
-				0x045B6DE8) };
+													StorageTable__HostOnlyMemory_StorageTable__ShadowMap__Storage_CreationRendererPrivate__ShadowMapRenderingMetaData_0_{ REL::Offset(
+                0x045B6DE8) };
 		inline constexpr std::array<REL::Offset, 1> StorageTable__HostOnlyMemory_StorageTable__SkinnedDecal__Storage_StorageTable__BSMeshHandle_2_{
 			REL::Offset(0x04382EC8)
 		};
@@ -33034,8 +33034,8 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			StorageTable__HostOnlyMemory_StorageTable__SkinnedDecal__Storage_StorageTable__SkinnedDecal__State_0_{ REL::Offset(0x045B6CD0) };
 		inline constexpr std::array<REL::Offset, 1>
-			StorageTable__HostOnlyMemory_StorageTable__SkinnedDecal__Storage_StorageTable__StrongKey_StorageTable__Geometry__Storage__2_{ REL::Offset(
-				0x04382730) };
+													StorageTable__HostOnlyMemory_StorageTable__SkinnedDecal__Storage_StorageTable__StrongKey_StorageTable__Geometry__Storage__2_{ REL::Offset(
+                0x04382730) };
 		inline constexpr std::array<REL::Offset, 1> StorageTable__HostOnlyMemory_StorageTable__StarfieldData__Storage_StorageTable__StarfieldMode_2_{
 			REL::Offset(0x045B4E18)
 		};
@@ -33101,7 +33101,7 @@ namespace RE
 			REL::Offset(0x04385A90)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			StorageTable__HostOnlyMemory_StorageTable__TerrainTile__Storage_CreationRendererPrivate__TerrainCell_0_{ REL::Offset(0x045B76A0) };
+													StorageTable__HostOnlyMemory_StorageTable__TerrainTile__Storage_CreationRendererPrivate__TerrainCell_0_{ REL::Offset(0x045B76A0) };
 		inline constexpr std::array<REL::Offset, 1> StorageTable__HostOnlyMemory_StorageTable__TerrainTile__Storage_StorageTable__Bounds_0_{
 			REL::Offset(0x045B7D28)
 		};
@@ -33124,7 +33124,7 @@ namespace RE
 			StorageTable__HostOnlyMemory_StorageTable__VolumeInstance__Storage_StorageTable__VolumeInstance__BlendStrength_2_{ REL::Offset(
 				0x04383068) };
 		inline constexpr std::array<REL::Offset, 1>
-			StorageTable__HostOnlyMemory_StorageTable__Volume__Storage_StorageTable__Volume__BoundingShapes_0_{ REL::Offset(0x04386460) };
+													StorageTable__HostOnlyMemory_StorageTable__Volume__Storage_StorageTable__Volume__BoundingShapes_0_{ REL::Offset(0x04386460) };
 		inline constexpr std::array<REL::Offset, 1> StorageTable__HostOnlyMemory_StorageTable__Volume__Storage_StorageTable__Volume__ShapeList_2_{
 			REL::Offset(0x043837A0)
 		};
@@ -33262,8 +33262,8 @@ namespace RE
 			StorageTable__StructuredBufferMemory_StorageTable__AtmosphericScattering__Storage_CreationRenderer__CGen__SunData_3_{ REL::Offset(
 				0x045B49F0) };
 		inline constexpr std::array<REL::Offset, 1>
-			StorageTable__StructuredBufferMemory_StorageTable__AtmosphericScattering__Storage_StorageTable__AtmosphericScatteringPerf_3_{ REL::Offset(
-				0x045B4830) };
+													StorageTable__StructuredBufferMemory_StorageTable__AtmosphericScattering__Storage_StorageTable__AtmosphericScatteringPerf_3_{ REL::Offset(
+                0x045B4830) };
 		inline constexpr std::array<REL::Offset, 1> StorageTable__StructuredBufferMemory_StorageTable__Geometry__Storage_StorageTable__Transform_3_{
 			REL::Offset(0x045B71F8)
 		};
@@ -33286,55 +33286,55 @@ namespace RE
 			StorageTable__StructuredBufferMemory_StorageTable__Water__Storage_CreationRenderer__CGen__WaterHeightOverridePlaceable_3_{ REL::Offset(
 				0x045B4E68) };
 		inline constexpr std::array<REL::Offset, 1>
-			StorageTable__StructuredBufferMemory_StorageTable__Water__Storage_CreationRenderer__CGen__WaterTypeParameters_3_{ REL::Offset(
-				0x045B46C0) };
-		inline constexpr std::array<REL::Offset, 1> StorageTable__WriterDirectStorageData_StorageTable__Camera__Storage_{ REL::Offset(0x04386C78) };
-		inline constexpr std::array<REL::Offset, 1> StorageTable__WriterDirectStorageData_StorageTable__DecalSlot__Storage_{ REL::Offset(
-			0x04386CA0) };
-		inline constexpr std::array<REL::Offset, 1> StorageTable__WriterDirectStorageData_StorageTable__Geometry__Storage_{ REL::Offset(0x045B8D50) };
-		inline constexpr std::array<REL::Offset, 1> StorageTable__WriterDirectStorageData_StorageTable__LensFlare__Storage_{ REL::Offset(
-			0x045B8970) };
-		inline constexpr std::array<REL::Offset, 1> StorageTable__WriterDirectStorageData_StorageTable__Scene__Storage_{ REL::Offset(0x043877B0) };
-		inline constexpr std::array<REL::Offset, 1> StorageTable__WriterDirectStorageData_StorageTable__ShadowMap__Storage_{ REL::Offset(
-			0x045B8998) };
-		inline constexpr std::array<REL::Offset, 1> StorageTable__WriterDirectStorageData_StorageTable__TerrainTile__Storage_{ REL::Offset(
-			0x045B8810) };
-		inline constexpr std::array<REL::Offset, 1> StorageTable__WriterDirectStorageData_StorageTable__Volume__Storage_{ REL::Offset(0x04386C50) };
-		inline constexpr std::array<REL::Offset, 4> StreamingInstallMenu{ REL::Offset(0x044BBCE8), REL::Offset(0x044BBD10), REL::Offset(0x044BBD28),
-			                                                              REL::Offset(0x044BBD80) };
-		inline constexpr std::array<REL::Offset, 1> StreamingInstallMenu__StreamingInstallEventShuttle{ REL::Offset(0x044BBE60) };
-		inline constexpr std::array<REL::Offset, 1> StreamingInstallMenu__StreamingProgressData{ REL::Offset(0x044BBF40) };
-		inline constexpr std::array<REL::Offset, 1> StringUIValue{ REL::Offset(0x0435CF78) };
-		inline constexpr std::array<REL::Offset, 1> SubgraphAndOffsetDBData{ REL::Offset(0x0456B078) };
-		inline constexpr std::array<REL::Offset, 1> SummonCreatureEffect{ REL::Offset(0x044C6738) };
-		inline constexpr std::array<REL::Offset, 1> SummonDuplicateEffect{ REL::Offset(0x044C6850) };
-		inline constexpr std::array<REL::Offset, 3> SummonPlacementEffect{ REL::Offset(0x044C6968), REL::Offset(0x044C6980),
-			                                                               REL::Offset(0x044C6A58) };
-		inline constexpr std::array<REL::Offset, 1> SupportMaterialHandler{ REL::Offset(0x044D33D0) };
-		inline constexpr std::array<REL::Offset, 1> SurfaceMapMenu_EnablePointCloud{ REL::Offset(0x044BA480) };
-		inline constexpr std::array<REL::Offset, 1> SurfaceMapMenu_MarkerClicked{ REL::Offset(0x044BA460) };
-		inline constexpr std::array<REL::Offset, 1> SurfaceMapMenu_TryPlaceCustomMarker{ REL::Offset(0x044BA4A0) };
-		inline constexpr std::array<REL::Offset, 1> SwapGraphNode{ REL::Offset(0x04567650) };
-		inline constexpr std::array<REL::Offset, 1> SwapGraphNodeInstance{ REL::Offset(0x045675E0) };
-		inline constexpr std::array<REL::Offset, 1> SwitchNode{ REL::Offset(0x04567988) };
-		inline constexpr std::array<REL::Offset, 1> SwitchNodeInstance{ REL::Offset(0x045679F0) };
-		inline constexpr std::array<REL::Offset, 1> SyncDeferDeathHandler{ REL::Offset(0x044E3800) };
-		inline constexpr std::array<REL::Offset, 1> SyncEarlyExitHandler{ REL::Offset(0x044E3848) };
-		inline constexpr std::array<REL::Offset, 1> SyncQueueObj{ REL::Offset(0x044DF0D0) };
-		inline constexpr std::array<REL::Offset, 1> TAllocatorAddressSpace_IMemoryHeap_{ REL::Offset(0x0456BF50) };
-		inline constexpr std::array<REL::Offset, 1> TBO_InstanceData{ REL::Offset(0x043BD3D8) };
-		inline constexpr std::array<REL::Offset, 2> TES{ REL::Offset(0x04369858), REL::Offset(0x04369888) };
-		inline constexpr std::array<REL::Offset, 1> TESAIForm{ REL::Offset(0x0436CE60) };
+													 StorageTable__StructuredBufferMemory_StorageTable__Water__Storage_CreationRenderer__CGen__WaterTypeParameters_3_{ REL::Offset(
+                0x045B46C0) };
+		inline constexpr std::array<REL::Offset, 1>  StorageTable__WriterDirectStorageData_StorageTable__Camera__Storage_{ REL::Offset(0x04386C78) };
+		inline constexpr std::array<REL::Offset, 1>  StorageTable__WriterDirectStorageData_StorageTable__DecalSlot__Storage_{ REL::Offset(
+            0x04386CA0) };
+		inline constexpr std::array<REL::Offset, 1>  StorageTable__WriterDirectStorageData_StorageTable__Geometry__Storage_{ REL::Offset(0x045B8D50) };
+		inline constexpr std::array<REL::Offset, 1>  StorageTable__WriterDirectStorageData_StorageTable__LensFlare__Storage_{ REL::Offset(
+            0x045B8970) };
+		inline constexpr std::array<REL::Offset, 1>  StorageTable__WriterDirectStorageData_StorageTable__Scene__Storage_{ REL::Offset(0x043877B0) };
+		inline constexpr std::array<REL::Offset, 1>  StorageTable__WriterDirectStorageData_StorageTable__ShadowMap__Storage_{ REL::Offset(
+            0x045B8998) };
+		inline constexpr std::array<REL::Offset, 1>  StorageTable__WriterDirectStorageData_StorageTable__TerrainTile__Storage_{ REL::Offset(
+            0x045B8810) };
+		inline constexpr std::array<REL::Offset, 1>  StorageTable__WriterDirectStorageData_StorageTable__Volume__Storage_{ REL::Offset(0x04386C50) };
+		inline constexpr std::array<REL::Offset, 4>  StreamingInstallMenu{ REL::Offset(0x044BBCE8), REL::Offset(0x044BBD10), REL::Offset(0x044BBD28),
+            REL::Offset(0x044BBD80) };
+		inline constexpr std::array<REL::Offset, 1>  StreamingInstallMenu__StreamingInstallEventShuttle{ REL::Offset(0x044BBE60) };
+		inline constexpr std::array<REL::Offset, 1>  StreamingInstallMenu__StreamingProgressData{ REL::Offset(0x044BBF40) };
+		inline constexpr std::array<REL::Offset, 1>  StringUIValue{ REL::Offset(0x0435CF78) };
+		inline constexpr std::array<REL::Offset, 1>  SubgraphAndOffsetDBData{ REL::Offset(0x0456B078) };
+		inline constexpr std::array<REL::Offset, 1>  SummonCreatureEffect{ REL::Offset(0x044C6738) };
+		inline constexpr std::array<REL::Offset, 1>  SummonDuplicateEffect{ REL::Offset(0x044C6850) };
+		inline constexpr std::array<REL::Offset, 3>  SummonPlacementEffect{ REL::Offset(0x044C6968), REL::Offset(0x044C6980),
+            REL::Offset(0x044C6A58) };
+		inline constexpr std::array<REL::Offset, 1>  SupportMaterialHandler{ REL::Offset(0x044D33D0) };
+		inline constexpr std::array<REL::Offset, 1>  SurfaceMapMenu_EnablePointCloud{ REL::Offset(0x044BA480) };
+		inline constexpr std::array<REL::Offset, 1>  SurfaceMapMenu_MarkerClicked{ REL::Offset(0x044BA460) };
+		inline constexpr std::array<REL::Offset, 1>  SurfaceMapMenu_TryPlaceCustomMarker{ REL::Offset(0x044BA4A0) };
+		inline constexpr std::array<REL::Offset, 1>  SwapGraphNode{ REL::Offset(0x04567650) };
+		inline constexpr std::array<REL::Offset, 1>  SwapGraphNodeInstance{ REL::Offset(0x045675E0) };
+		inline constexpr std::array<REL::Offset, 1>  SwitchNode{ REL::Offset(0x04567988) };
+		inline constexpr std::array<REL::Offset, 1>  SwitchNodeInstance{ REL::Offset(0x045679F0) };
+		inline constexpr std::array<REL::Offset, 1>  SyncDeferDeathHandler{ REL::Offset(0x044E3800) };
+		inline constexpr std::array<REL::Offset, 1>  SyncEarlyExitHandler{ REL::Offset(0x044E3848) };
+		inline constexpr std::array<REL::Offset, 1>  SyncQueueObj{ REL::Offset(0x044DF0D0) };
+		inline constexpr std::array<REL::Offset, 1>  TAllocatorAddressSpace_IMemoryHeap_{ REL::Offset(0x0456BF50) };
+		inline constexpr std::array<REL::Offset, 1>  TBO_InstanceData{ REL::Offset(0x043BD3D8) };
+		inline constexpr std::array<REL::Offset, 2>  TES{ REL::Offset(0x04369858), REL::Offset(0x04369888) };
+		inline constexpr std::array<REL::Offset, 1>  TESAIForm{ REL::Offset(0x0436CE60) };
 		inline constexpr std::array<REL::Offset, 15> TESActorBase{ REL::Offset(0x0440E0F8), REL::Offset(0x0440E158), REL::Offset(0x0440E1B8),
-			                                                       REL::Offset(0x0440E220), REL::Offset(0x0440E240), REL::Offset(0x0440E2A0),
-			                                                       REL::Offset(0x0440E308), REL::Offset(0x0440E380), REL::Offset(0x0440E3E8),
-			                                                       REL::Offset(0x0440E448), REL::Offset(0x0440E4A8), REL::Offset(0x0440E528),
-			                                                       REL::Offset(0x0440E588), REL::Offset(0x0440E9C0), REL::Offset(0x0440E9D8) };
+			REL::Offset(0x0440E220), REL::Offset(0x0440E240), REL::Offset(0x0440E2A0),
+			REL::Offset(0x0440E308), REL::Offset(0x0440E380), REL::Offset(0x0440E3E8),
+			REL::Offset(0x0440E448), REL::Offset(0x0440E4A8), REL::Offset(0x0440E528),
+			REL::Offset(0x0440E588), REL::Offset(0x0440E9C0), REL::Offset(0x0440E9D8) };
 		inline constexpr std::array<REL::Offset, 1>  TESActorBaseData{ REL::Offset(0x0436CB18) };
 		inline constexpr std::array<REL::Offset, 11> TESAmmo{ REL::Offset(0x043B7C28), REL::Offset(0x043B7C88), REL::Offset(0x043B7CF0),
-			                                                  REL::Offset(0x043B7D50), REL::Offset(0x043B7DB0), REL::Offset(0x043B7DD0),
-			                                                  REL::Offset(0x043B7E30), REL::Offset(0x043B8248), REL::Offset(0x043B82C0),
-			                                                  REL::Offset(0x043B8320), REL::Offset(0x043B8338) };
+			REL::Offset(0x043B7D50), REL::Offset(0x043B7DB0), REL::Offset(0x043B7DD0),
+			REL::Offset(0x043B7E30), REL::Offset(0x043B8248), REL::Offset(0x043B82C0),
+			REL::Offset(0x043B8320), REL::Offset(0x043B8338) };
 		inline constexpr std::array<REL::Offset, 1>  TESAudio__ScriptedMusicState{ REL::Offset(0x044C7C30) };
 		inline constexpr std::array<REL::Offset, 1>  TESBipedModelForm{ REL::Offset(0x0436CF08) };
 		inline constexpr std::array<REL::Offset, 2>  TESBoundAnimObject{ REL::Offset(0x043BD468), REL::Offset(0x043BD480) };
@@ -33343,14 +33343,14 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  TESCameraState{ REL::Offset(0x0445C300) };
 		inline constexpr std::array<REL::Offset, 1>  TESChildCell{ REL::Offset(0x0444F2F0) };
 		inline constexpr std::array<REL::Offset, 6>  TESClass{ REL::Offset(0x0440B548), REL::Offset(0x0440B5A8), REL::Offset(0x0440B618),
-                                                              REL::Offset(0x0440B678), REL::Offset(0x0440B6F0), REL::Offset(0x0440B708) };
+            REL::Offset(0x0440B678), REL::Offset(0x0440B6F0), REL::Offset(0x0440B708) };
 		inline constexpr std::array<REL::Offset, 2>  TESClimate{ REL::Offset(0x043CBDB8), REL::Offset(0x043CC0D0) };
 		inline constexpr std::array<REL::Offset, 2>  TESCombatStyle{ REL::Offset(0x043B9028), REL::Offset(0x043B9340) };
 		inline constexpr std::array<REL::Offset, 1>  TESContainer{ REL::Offset(0x03F25C88) };
 		inline constexpr std::array<REL::Offset, 1>  TESCustomPackageData{ REL::Offset(0x0444D540) };
 		inline constexpr std::array<REL::Offset, 2>  TESDataHandler{ REL::Offset(0x0436A3B8), REL::Offset(0x0436A3D0) };
 		inline constexpr std::array<REL::Offset, 2>  TESDataHandlerPersistentCreatedUtil__BGSPersistentIDsForm{ REL::Offset(0x0436A088),
-                                                                                                               REL::Offset(0x0436A0A0) };
+            REL::Offset(0x0436A0A0) };
 		inline constexpr std::array<REL::Offset, 1>  TESDataHandlerPostBuildFileListSource{ REL::Offset(0x03F26638) };
 		inline constexpr std::array<REL::Offset, 1>  TESDataHandler__ArchiveRegistrationListener{ REL::Offset(0x0436A070) };
 		inline constexpr std::array<REL::Offset, 1>  TESDescription{ REL::Offset(0x0436CFE8) };
@@ -33358,31 +33358,31 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 3>  TESEffectShader{ REL::Offset(0x043B93A0), REL::Offset(0x043B96B8), REL::Offset(0x043B96D0) };
 		inline constexpr std::array<REL::Offset, 1>  TESEnchantableForm{ REL::Offset(0x0436D080) };
 		inline constexpr std::array<REL::Offset, 4>  TESEyes{ REL::Offset(0x0440BA20), REL::Offset(0x0440BA90), REL::Offset(0x0440BB08),
-                                                             REL::Offset(0x0440BB20) };
+            REL::Offset(0x0440BB20) };
 		inline constexpr std::array<REL::Offset, 4>  TESFaction{ REL::Offset(0x0440BE78), REL::Offset(0x0440BED8), REL::Offset(0x0440BF50),
-                                                                REL::Offset(0x0440BF68) };
+            REL::Offset(0x0440BF68) };
 		inline constexpr std::array<REL::Offset, 1>  TESFile{ REL::Offset(0x0436BE28) };
 		inline constexpr std::array<REL::Offset, 13> TESFlora{ REL::Offset(0x043B97C0), REL::Offset(0x043B9820), REL::Offset(0x043B9888),
-			                                                   REL::Offset(0x043B98E8), REL::Offset(0x043B9918), REL::Offset(0x043B9990),
-			                                                   REL::Offset(0x043B99F0), REL::Offset(0x043B9A50), REL::Offset(0x043B9AB0),
-			                                                   REL::Offset(0x043B9B18), REL::Offset(0x043B9B38), REL::Offset(0x043B9B50),
-			                                                   REL::Offset(0x043B9C58) };
+			REL::Offset(0x043B98E8), REL::Offset(0x043B9918), REL::Offset(0x043B9990),
+			REL::Offset(0x043B99F0), REL::Offset(0x043B9A50), REL::Offset(0x043B9AB0),
+			REL::Offset(0x043B9B18), REL::Offset(0x043B9B38), REL::Offset(0x043B9B50),
+			REL::Offset(0x043B9C58) };
 		inline constexpr std::array<REL::Offset, 1>  TESFloraInstanceData{ REL::Offset(0x043B9BC8) };
 		inline constexpr std::array<REL::Offset, 1>  TESFollowPackageData{ REL::Offset(0x0444CCF0) };
 		inline constexpr std::array<REL::Offset, 2>  TESForm{ REL::Offset(0x0436D290), REL::Offset(0x0436D2A8) };
 		inline constexpr std::array<REL::Offset, 6>  TESFormDetail__Fixed_BGSHazard_{ REL::Offset(0x044ECC28), REL::Offset(0x044ED040),
-                                                                                     REL::Offset(0x044ED058), REL::Offset(0x044ED0D0),
-                                                                                     REL::Offset(0x044ED148), REL::Offset(0x044ED160) };
+            REL::Offset(0x044ED058), REL::Offset(0x044ED0D0),
+            REL::Offset(0x044ED148), REL::Offset(0x044ED160) };
 		inline constexpr std::array<REL::Offset, 8>  TESFormDetail__Fixed_BGSPackIn_{ REL::Offset(0x0455A840), REL::Offset(0x0455A8A0),
-                                                                                     REL::Offset(0x0455A900), REL::Offset(0x0455A960),
-                                                                                     REL::Offset(0x0455A9C8), REL::Offset(0x0455A9E0),
-                                                                                     REL::Offset(0x0455AA40), REL::Offset(0x0455AA60) };
+            REL::Offset(0x0455A900), REL::Offset(0x0455A960),
+            REL::Offset(0x0455A9C8), REL::Offset(0x0455A9E0),
+            REL::Offset(0x0455AA40), REL::Offset(0x0455AA60) };
 		inline constexpr std::array<REL::Offset, 4>  TESFormDetail__Fixed_BGSResearchProjectForm_{ REL::Offset(0x044CAF40), REL::Offset(0x044CAF58),
-                                                                                                  REL::Offset(0x044CB278), REL::Offset(0x044CB2F0) };
+            REL::Offset(0x044CB278), REL::Offset(0x044CB2F0) };
 		inline constexpr std::array<REL::Offset, 3>  TESFormDetail__Fixed_BGSSnapTemplate_{ REL::Offset(0x04459BA8), REL::Offset(0x04459C08),
-                                                                                           REL::Offset(0x04459E30) };
+            REL::Offset(0x04459E30) };
 		inline constexpr std::array<REL::Offset, 3>  TESFormDetail__Fixed_BGSTerminalMenu_{ REL::Offset(0x044BC548), REL::Offset(0x044BC5C0),
-                                                                                           REL::Offset(0x044BC5D8) };
+            REL::Offset(0x044BC5D8) };
 		inline constexpr std::array<REL::Offset, 2>  TESFormDetail__Fixed_Script_{ REL::Offset(0x044A6160), REL::Offset(0x044A6478) };
 		inline constexpr std::array<REL::Offset, 2>  TESFormDetail__Fixed_TESForm_{ REL::Offset(0x044AA8A8), REL::Offset(0x044AA8C0) };
 		inline constexpr std::array<REL::Offset, 20> TESFormDetail__Fixed_TESNPC_{
@@ -33392,12 +33392,12 @@ namespace RE
 			REL::Offset(0x044C8A60), REL::Offset(0x044C8AD8), REL::Offset(0x044C8B38), REL::Offset(0x044C8F70), REL::Offset(0x044C8FF0)
 		};
 		inline constexpr std::array<REL::Offset, 3>  TESFormDetail__Fixed_TESQuest_{ REL::Offset(0x0433E3B0), REL::Offset(0x0433E428),
-                                                                                    REL::Offset(0x0433E440) };
+            REL::Offset(0x0433E440) };
 		inline constexpr std::array<REL::Offset, 1>  TESFullName{ REL::Offset(0x0434E7C0) };
 		inline constexpr std::array<REL::Offset, 12> TESFurniture{ REL::Offset(0x043BA170), REL::Offset(0x043BA590), REL::Offset(0x043BA608),
-			                                                       REL::Offset(0x043BA668), REL::Offset(0x043BA680), REL::Offset(0x043BA710),
-			                                                       REL::Offset(0x043BA778), REL::Offset(0x043BA798), REL::Offset(0x043BA7F8),
-			                                                       REL::Offset(0x043BA828), REL::Offset(0x043BA888), REL::Offset(0x043BA8E8) };
+			REL::Offset(0x043BA668), REL::Offset(0x043BA680), REL::Offset(0x043BA710),
+			REL::Offset(0x043BA778), REL::Offset(0x043BA798), REL::Offset(0x043BA7F8),
+			REL::Offset(0x043BA828), REL::Offset(0x043BA888), REL::Offset(0x043BA8E8) };
 		inline constexpr std::array<REL::Offset, 2>  TESGlobal{ REL::Offset(0x043DE840), REL::Offset(0x043DE858) };
 		inline constexpr std::array<REL::Offset, 3>  TESGrass{ REL::Offset(0x043BA978), REL::Offset(0x043BAE50), REL::Offset(0x043BAE68) };
 		inline constexpr std::array<REL::Offset, 2>  TESHandleForm{ REL::Offset(0x043C9B08), REL::Offset(0x043C9B20) };
@@ -33407,17 +33407,17 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 3>  TESImageSpace{ REL::Offset(0x043CC160), REL::Offset(0x043CC178), REL::Offset(0x043CC1B0) };
 		inline constexpr std::array<REL::Offset, 1>  TESImageSpaceModifiableForm{ REL::Offset(0x0436D6F8) };
 		inline constexpr std::array<REL::Offset, 3>  TESImageSpaceModifier{ REL::Offset(0x043CC608), REL::Offset(0x043CC640),
-                                                                           REL::Offset(0x043CC9A8) };
+            REL::Offset(0x043CC9A8) };
 		inline constexpr std::array<REL::Offset, 13> TESKey{ REL::Offset(0x043BAEE0), REL::Offset(0x043BAF48), REL::Offset(0x043BAF68),
-			                                                 REL::Offset(0x043BAFC8), REL::Offset(0x043BB028), REL::Offset(0x043BB088),
-			                                                 REL::Offset(0x043BB0E8), REL::Offset(0x043BB100), REL::Offset(0x043BB178),
-			                                                 REL::Offset(0x043BB598), REL::Offset(0x043BB5F8), REL::Offset(0x043BB658),
-			                                                 REL::Offset(0x043BB6D0) };
+			REL::Offset(0x043BAFC8), REL::Offset(0x043BB028), REL::Offset(0x043BB088),
+			REL::Offset(0x043BB0E8), REL::Offset(0x043BB100), REL::Offset(0x043BB178),
+			REL::Offset(0x043BB598), REL::Offset(0x043BB5F8), REL::Offset(0x043BB658),
+			REL::Offset(0x043BB6D0) };
 		inline constexpr std::array<REL::Offset, 2>  TESLandTexture{ REL::Offset(0x043CC9E0), REL::Offset(0x043CC9F8) };
 		inline constexpr std::array<REL::Offset, 4>  TESLevCharacter{ REL::Offset(0x043BB750), REL::Offset(0x043BB768), REL::Offset(0x043BBB80),
-                                                                     REL::Offset(0x043BBBF8) };
+            REL::Offset(0x043BBBF8) };
 		inline constexpr std::array<REL::Offset, 5>  TESLevItem{ REL::Offset(0x043BBCA8), REL::Offset(0x043BBD38), REL::Offset(0x043BBD50),
-                                                                REL::Offset(0x043BBDB0), REL::Offset(0x043BBE28) };
+            REL::Offset(0x043BBDB0), REL::Offset(0x043BBE28) };
 		inline constexpr std::array<REL::Offset, 3>  TESLevSpell{ REL::Offset(0x043BC240), REL::Offset(0x043BC658), REL::Offset(0x043BC6E8) };
 		inline constexpr std::array<REL::Offset, 1>  TESLeveledList{ REL::Offset(0x0436D890) };
 		inline constexpr std::array<REL::Offset, 2>  TESLoadScreen{ REL::Offset(0x043DEB70), REL::Offset(0x043DEE88) };
@@ -33437,46 +33437,46 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  TESNPC__InstanceData{ REL::Offset(0x0440D390) };
 		inline constexpr std::array<REL::Offset, 2>  TESObject{ REL::Offset(0x03EF29F0), REL::Offset(0x03EF30F0) };
 		inline constexpr std::array<REL::Offset, 12> TESObjectACTI{ REL::Offset(0x043BD9E0), REL::Offset(0x043BDA48), REL::Offset(0x043BDA78),
-			                                                        REL::Offset(0x043BDAD8), REL::Offset(0x043BDAF8), REL::Offset(0x043BDB58),
-			                                                        REL::Offset(0x043BDBB8), REL::Offset(0x043BDBD0), REL::Offset(0x043BDFE8),
-			                                                        REL::Offset(0x043BE060), REL::Offset(0x043BE0D8), REL::Offset(0x043BE138) };
+			REL::Offset(0x043BDAD8), REL::Offset(0x043BDAF8), REL::Offset(0x043BDB58),
+			REL::Offset(0x043BDBB8), REL::Offset(0x043BDBD0), REL::Offset(0x043BDFE8),
+			REL::Offset(0x043BE060), REL::Offset(0x043BE0D8), REL::Offset(0x043BE138) };
 		inline constexpr std::array<REL::Offset, 3>  TESObjectANIO{ REL::Offset(0x043BE198), REL::Offset(0x043BE4B0), REL::Offset(0x043BE528) };
 		inline constexpr std::array<REL::Offset, 4>  TESObjectARMA{ REL::Offset(0x043BE590), REL::Offset(0x043BE5A8), REL::Offset(0x043BE910),
-                                                                   REL::Offset(0x043BE970) };
+            REL::Offset(0x043BE970) };
 		inline constexpr std::array<REL::Offset, 15> TESObjectARMO{ REL::Offset(0x043BED00), REL::Offset(0x043BEDF0), REL::Offset(0x043BEE50),
-			                                                        REL::Offset(0x043BEEB0), REL::Offset(0x043BEF10), REL::Offset(0x043BEF80),
-			                                                        REL::Offset(0x043BEFE8), REL::Offset(0x043BF048), REL::Offset(0x043BF0A8),
-			                                                        REL::Offset(0x043BF0C8), REL::Offset(0x043BF0E0), REL::Offset(0x043BF4F8),
-			                                                        REL::Offset(0x043BF560), REL::Offset(0x043BF5D8), REL::Offset(0x043BF638) };
+			REL::Offset(0x043BEEB0), REL::Offset(0x043BEF10), REL::Offset(0x043BEF80),
+			REL::Offset(0x043BEFE8), REL::Offset(0x043BF048), REL::Offset(0x043BF0A8),
+			REL::Offset(0x043BF0C8), REL::Offset(0x043BF0E0), REL::Offset(0x043BF4F8),
+			REL::Offset(0x043BF560), REL::Offset(0x043BF5D8), REL::Offset(0x043BF638) };
 		inline constexpr std::array<REL::Offset, 1>  TESObjectARMOInstanceData{ REL::Offset(0x043BED60) };
 		inline constexpr std::array<REL::Offset, 12> TESObjectBOOK{ REL::Offset(0x043BF700), REL::Offset(0x043BFB18), REL::Offset(0x043BFB38),
-			                                                        REL::Offset(0x043BFB58), REL::Offset(0x043BFBB8), REL::Offset(0x043BFC30),
-			                                                        REL::Offset(0x043BFCA8), REL::Offset(0x043BFD08), REL::Offset(0x043BFD68),
-			                                                        REL::Offset(0x043BFDC8), REL::Offset(0x043BFE28), REL::Offset(0x043BFE88) };
+			REL::Offset(0x043BFB58), REL::Offset(0x043BFBB8), REL::Offset(0x043BFC30),
+			REL::Offset(0x043BFCA8), REL::Offset(0x043BFD08), REL::Offset(0x043BFD68),
+			REL::Offset(0x043BFDC8), REL::Offset(0x043BFE28), REL::Offset(0x043BFE88) };
 		inline constexpr std::array<REL::Offset, 3>  TESObjectCELL{ REL::Offset(0x043CD408), REL::Offset(0x043CD480), REL::Offset(0x043CD798) };
 		inline constexpr std::array<REL::Offset, 13> TESObjectCONT{ REL::Offset(0x043C0038), REL::Offset(0x043C0450), REL::Offset(0x043C0468),
-			                                                        REL::Offset(0x043C04C8), REL::Offset(0x043C0528), REL::Offset(0x043C0588),
-			                                                        REL::Offset(0x043C0600), REL::Offset(0x043C0678), REL::Offset(0x043C06D8),
-			                                                        REL::Offset(0x043C0738), REL::Offset(0x043C0768), REL::Offset(0x043C07D0),
-			                                                        REL::Offset(0x043C07F0) };
+			REL::Offset(0x043C04C8), REL::Offset(0x043C0528), REL::Offset(0x043C0588),
+			REL::Offset(0x043C0600), REL::Offset(0x043C0678), REL::Offset(0x043C06D8),
+			REL::Offset(0x043C0738), REL::Offset(0x043C0768), REL::Offset(0x043C07D0),
+			REL::Offset(0x043C07F0) };
 		inline constexpr std::array<REL::Offset, 1>  TESObjectCONT__InstanceData{ REL::Offset(0x043BFFA8) };
 		inline constexpr std::array<REL::Offset, 12> TESObjectDOOR{ REL::Offset(0x043C09B8), REL::Offset(0x043C09E8), REL::Offset(0x043C0A50),
-			                                                        REL::Offset(0x043C0A70), REL::Offset(0x043C0AD0), REL::Offset(0x043C0B30),
-			                                                        REL::Offset(0x043C0B90), REL::Offset(0x043C0FA8), REL::Offset(0x043C0FC0),
-			                                                        REL::Offset(0x043C1038), REL::Offset(0x043C10B0), REL::Offset(0x043C1110) };
+			REL::Offset(0x043C0A70), REL::Offset(0x043C0AD0), REL::Offset(0x043C0B30),
+			REL::Offset(0x043C0B90), REL::Offset(0x043C0FA8), REL::Offset(0x043C0FC0),
+			REL::Offset(0x043C1038), REL::Offset(0x043C10B0), REL::Offset(0x043C1110) };
 		inline constexpr std::array<REL::Offset, 11> TESObjectLIGH{ REL::Offset(0x043BCB48), REL::Offset(0x043BCF60), REL::Offset(0x043BCFD8),
-			                                                        REL::Offset(0x043BCFF0), REL::Offset(0x043BD050), REL::Offset(0x043BD0B0),
-			                                                        REL::Offset(0x043BD120), REL::Offset(0x043BD188), REL::Offset(0x043BD1B8),
-			                                                        REL::Offset(0x043BD218), REL::Offset(0x043BD238) };
+			REL::Offset(0x043BCFF0), REL::Offset(0x043BD050), REL::Offset(0x043BD0B0),
+			REL::Offset(0x043BD120), REL::Offset(0x043BD188), REL::Offset(0x043BD1B8),
+			REL::Offset(0x043BD218), REL::Offset(0x043BD238) };
 		inline constexpr std::array<REL::Offset, 13> TESObjectMISC{ REL::Offset(0x043C1418), REL::Offset(0x043C1478), REL::Offset(0x043C14D8),
-			                                                        REL::Offset(0x043C1550), REL::Offset(0x043C15B0), REL::Offset(0x043C1610),
-			                                                        REL::Offset(0x043C1670), REL::Offset(0x043C16D0), REL::Offset(0x043C1730),
-			                                                        REL::Offset(0x043C1798), REL::Offset(0x043C17B8), REL::Offset(0x043C1BD8),
-			                                                        REL::Offset(0x043C1BF0) };
+			REL::Offset(0x043C1550), REL::Offset(0x043C15B0), REL::Offset(0x043C1610),
+			REL::Offset(0x043C1670), REL::Offset(0x043C16D0), REL::Offset(0x043C1730),
+			REL::Offset(0x043C1798), REL::Offset(0x043C17B8), REL::Offset(0x043C1BD8),
+			REL::Offset(0x043C1BF0) };
 		inline constexpr std::array<REL::Offset, 11> TESObjectREFR{ REL::Offset(0x043CE830), REL::Offset(0x043CE850), REL::Offset(0x043CE920),
-			                                                        REL::Offset(0x043CE930), REL::Offset(0x043CE998), REL::Offset(0x043CE9B0),
-			                                                        REL::Offset(0x043CE9C8), REL::Offset(0x043CE9E0), REL::Offset(0x043CEC48),
-			                                                        REL::Offset(0x043CF5D0), REL::Offset(0x043CF5E8) };
+			REL::Offset(0x043CE930), REL::Offset(0x043CE998), REL::Offset(0x043CE9B0),
+			REL::Offset(0x043CE9C8), REL::Offset(0x043CE9E0), REL::Offset(0x043CEC48),
+			REL::Offset(0x043CF5D0), REL::Offset(0x043CF5E8) };
 		inline constexpr std::array<REL::Offset, 1>  TESObjectREFRDef__IAliasFunctor{ REL::Offset(0x043665A0) };
 		inline constexpr std::array<REL::Offset, 1>  TESObjectREFRDef__IAliasLinkedChildFunctor{ REL::Offset(0x043665B8) };
 		inline constexpr std::array<REL::Offset, 1>  TESObjectREFRDef__ILinkedReferenceFunctor{ REL::Offset(0x03F2BC88) };
@@ -33485,12 +33485,12 @@ namespace RE
             0x043CE7C8) };
 		inline constexpr std::array<REL::Offset, 1>  TESObjectREFRSync__REFRSyncController{ REL::Offset(0x043D2120) };
 		inline constexpr std::array<REL::Offset, 5>  TESObjectSTAT{ REL::Offset(0x043C1C80), REL::Offset(0x043C1CE0), REL::Offset(0x043C1D40),
-                                                                   REL::Offset(0x043C2158), REL::Offset(0x043C2170) };
+            REL::Offset(0x043C2158), REL::Offset(0x043C2170) };
 		inline constexpr std::array<REL::Offset, 14> TESObjectWEAP{ REL::Offset(0x043C7500), REL::Offset(0x043C7570), REL::Offset(0x043C7588),
-			                                                        REL::Offset(0x043C75E8), REL::Offset(0x043C7648), REL::Offset(0x043C76B0),
-			                                                        REL::Offset(0x043C76D0), REL::Offset(0x043C7730), REL::Offset(0x043C7790),
-			                                                        REL::Offset(0x043C7BA8), REL::Offset(0x043C7BC0), REL::Offset(0x043C7C38),
-			                                                        REL::Offset(0x043C7CB0), REL::Offset(0x043C7D18) };
+			REL::Offset(0x043C75E8), REL::Offset(0x043C7648), REL::Offset(0x043C76B0),
+			REL::Offset(0x043C76D0), REL::Offset(0x043C7730), REL::Offset(0x043C7790),
+			REL::Offset(0x043C7BA8), REL::Offset(0x043C7BC0), REL::Offset(0x043C7C38),
+			REL::Offset(0x043C7CB0), REL::Offset(0x043C7D18) };
 		inline constexpr std::array<REL::Offset, 1>  TESObjectWEAPInstanceData{ REL::Offset(0x043C7DE0) };
 		inline constexpr std::array<REL::Offset, 2>  TESPackage{ REL::Offset(0x0444CE90), REL::Offset(0x0444D1D0) };
 		inline constexpr std::array<REL::Offset, 1>  TESPackedFile{ REL::Offset(0x0436BF78) };
@@ -33499,9 +33499,9 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 3>  TESQuest{ REL::Offset(0x0440F028), REL::Offset(0x0440F040), REL::Offset(0x0440F0B8) };
 		inline constexpr std::array<REL::Offset, 1>  TESQuest__BlockAndLoadAliasNodes__2__AliasLoadBarrierNode{ REL::Offset(0x0440ECD0) };
 		inline constexpr std::array<REL::Offset, 12> TESRace{ REL::Offset(0x0440F9E8), REL::Offset(0x0440FA00), REL::Offset(0x0440FAD8),
-			                                                  REL::Offset(0x0440FB40), REL::Offset(0x0440FBA0), REL::Offset(0x0440FC00),
-			                                                  REL::Offset(0x0440FC20), REL::Offset(0x0440FC80), REL::Offset(0x0440FCF8),
-			                                                  REL::Offset(0x0440FD60), REL::Offset(0x0440FDC0), REL::Offset(0x0440FDD8) };
+			REL::Offset(0x0440FB40), REL::Offset(0x0440FBA0), REL::Offset(0x0440FC00),
+			REL::Offset(0x0440FC20), REL::Offset(0x0440FC80), REL::Offset(0x0440FCF8),
+			REL::Offset(0x0440FD60), REL::Offset(0x0440FDC0), REL::Offset(0x0440FDD8) };
 		inline constexpr std::array<REL::Offset, 1>  TESRaceForm{ REL::Offset(0x0436DED0) };
 		inline constexpr std::array<REL::Offset, 2>  TESRegion{ REL::Offset(0x04397208), REL::Offset(0x04397528) };
 		inline constexpr std::array<REL::Offset, 1>  TESRegionData{ REL::Offset(0x04397540) };
@@ -33511,14 +33511,14 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  TESRegionDataWeather{ REL::Offset(0x04397698) };
 		inline constexpr std::array<REL::Offset, 1>  TESRegionList{ REL::Offset(0x043976E8) };
 		inline constexpr std::array<REL::Offset, 6>  TESShout{ REL::Offset(0x04403CB8), REL::Offset(0x04403CD0), REL::Offset(0x04403FE8),
-                                                              REL::Offset(0x04404050), REL::Offset(0x044040C8), REL::Offset(0x04404128) };
+            REL::Offset(0x04404050), REL::Offset(0x044040C8), REL::Offset(0x04404128) };
 		inline constexpr std::array<REL::Offset, 13> TESSoulGem{ REL::Offset(0x043C7FA0), REL::Offset(0x043C7FC0), REL::Offset(0x043C8020),
-			                                                     REL::Offset(0x043C8080), REL::Offset(0x043C80F8), REL::Offset(0x043C8170),
-			                                                     REL::Offset(0x043C81D0), REL::Offset(0x043C8230), REL::Offset(0x043C8290),
-			                                                     REL::Offset(0x043C82F0), REL::Offset(0x043C8350), REL::Offset(0x043C83B8),
-			                                                     REL::Offset(0x043C87D8) };
+			REL::Offset(0x043C8080), REL::Offset(0x043C80F8), REL::Offset(0x043C8170),
+			REL::Offset(0x043C81D0), REL::Offset(0x043C8230), REL::Offset(0x043C8290),
+			REL::Offset(0x043C82F0), REL::Offset(0x043C8350), REL::Offset(0x043C83B8),
+			REL::Offset(0x043C87D8) };
 		inline constexpr std::array<REL::Offset, 4>  TESSound{ REL::Offset(0x04404198), REL::Offset(0x044041B8), REL::Offset(0x044045D0),
-                                                              REL::Offset(0x04404638) };
+            REL::Offset(0x04404638) };
 		inline constexpr std::array<REL::Offset, 1>  TESSpellList{ REL::Offset(0x0436E018) };
 		inline constexpr std::array<REL::Offset, 1>  TESTexture{ REL::Offset(0x0436E0E8) };
 		inline constexpr std::array<REL::Offset, 3>  TESTopic{ REL::Offset(0x04410F50), REL::Offset(0x04410F68), REL::Offset(0x04411280) };
@@ -33530,11 +33530,11 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  TESWaterObject{ REL::Offset(0x04453060) };
 		inline constexpr std::array<REL::Offset, 1>  TESWaterSystem{ REL::Offset(0x04453048) };
 		inline constexpr std::array<REL::Offset, 4>  TESWeather{ REL::Offset(0x043D26F8), REL::Offset(0x043D2A10), REL::Offset(0x043D2A28),
-                                                                REL::Offset(0x043D2A90) };
+            REL::Offset(0x043D2A90) };
 		inline constexpr std::array<REL::Offset, 1>  TESWeightForm{ REL::Offset(0x0436E230) };
 		inline constexpr std::array<REL::Offset, 3>  TESWordOfPower{ REL::Offset(0x04404650), REL::Offset(0x044046C8), REL::Offset(0x044046E0) };
 		inline constexpr std::array<REL::Offset, 5>  TESWorldSpace{ REL::Offset(0x043D3158), REL::Offset(0x043D31C8), REL::Offset(0x043D31D8),
-                                                                   REL::Offset(0x043D34F0), REL::Offset(0x043D3508) };
+            REL::Offset(0x043D34F0), REL::Offset(0x043D3508) };
 		inline constexpr std::array<REL::Offset, 1>  TES__FilterRefsByRadius___FilterReferencesForAllKeywordsOfSet___CollectReferences__{ REL::Offset(
             0x04369738) };
 		inline constexpr std::array<REL::Offset, 1>  TES__FilterRefsByRadius___FilterReferencesForAllKeywordsOfSet___FindClosestReference__{
@@ -33581,8 +33581,8 @@ namespace RE
 			TUIDataShuttleContainerArray_NestedUIValue_CraftingRequirementsDataModel__RequirementsData__AdditionalCondition__{ REL::Offset(
 				0x0447E988) };
 		inline constexpr std::array<REL::Offset, 1>
-			TUIDataShuttleContainerArray_NestedUIValue_CraftingRequirementsDataModel__RequirementsData__ComponentRequirement__{ REL::Offset(
-				0x0447E8C8) };
+													TUIDataShuttleContainerArray_NestedUIValue_CraftingRequirementsDataModel__RequirementsData__ComponentRequirement__{ REL::Offset(
+                0x0447E8C8) };
 		inline constexpr std::array<REL::Offset, 1> TUIDataShuttleContainerArray_NestedUIValue_CreditsDataModel__CreditsSection__{ REL::Offset(
 			0x04477C70) };
 		inline constexpr std::array<REL::Offset, 1> TUIDataShuttleContainerArray_NestedUIValue_CrewInfo__{ REL::Offset(0x04495BD0) };
@@ -33650,7 +33650,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			TUIDataShuttleContainerArray_NestedUIValue_PhotoModeDataModel__PhotoModeSettingsData__CategoryData__{ REL::Offset(0x0448C968) };
 		inline constexpr std::array<REL::Offset, 1>
-			TUIDataShuttleContainerArray_NestedUIValue_PhotoModeDataModel__PhotoModeSettingsData__SettingData__{ REL::Offset(0x0448C718) };
+													TUIDataShuttleContainerArray_NestedUIValue_PhotoModeDataModel__PhotoModeSettingsData__SettingData__{ REL::Offset(0x0448C718) };
 		inline constexpr std::array<REL::Offset, 1> TUIDataShuttleContainerArray_NestedUIValue_PickpocketItemData__{ REL::Offset(0x044AA128) };
 		inline constexpr std::array<REL::Offset, 1> TUIDataShuttleContainerArray_NestedUIValue_PlayerInventoryItem__{ REL::Offset(0x0448E100) };
 		inline constexpr std::array<REL::Offset, 1> TUIDataShuttleContainerArray_NestedUIValue_Powers__{ REL::Offset(0x0447A2A8) };
@@ -33730,7 +33730,7 @@ namespace RE
 			TUIDataShuttleContainerArray_NestedUIValue_TESNPCData__ChargenMetadata__FacialBoneRegionMetadata__SliderMetadata__{ REL::Offset(
 				0x043A8818) };
 		inline constexpr std::array<REL::Offset, 1>
-			TUIDataShuttleContainerArray_NestedUIValue_TESNPCData__ChargenMetadata__FacialMorphGroupMetadata__{ REL::Offset(0x043A8F80) };
+													TUIDataShuttleContainerArray_NestedUIValue_TESNPCData__ChargenMetadata__FacialMorphGroupMetadata__{ REL::Offset(0x043A8F80) };
 		inline constexpr std::array<REL::Offset, 1> TUIDataShuttleContainerArray_NestedUIValue_TESNPCData__CodeBuiltSliderMetadata__{ REL::Offset(
 			0x043A8920) };
 		inline constexpr std::array<REL::Offset, 1> TUIDataShuttleContainerArray_NestedUIValue_TESNPCData__CodeBuiltStepperData__{ REL::Offset(
@@ -33776,7 +33776,7 @@ namespace RE
 			REL::Offset(0x0449B7D8)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			TUIDataShuttleContainerArray_NestedUIValue_WorkshopCategoryInfoData__PreviewIconData__VariantData__{ REL::Offset(0x0449B9F8) };
+													TUIDataShuttleContainerArray_NestedUIValue_WorkshopCategoryInfoData__PreviewIconData__VariantData__{ REL::Offset(0x0449B9F8) };
 		inline constexpr std::array<REL::Offset, 1> TUIDataShuttleContainerArray_NestedUIValue_WorkshopInterfaceShared__ItemRequirement__{
 			REL::Offset(0x0449B508)
 		};
@@ -33925,7 +33925,7 @@ namespace RE
 			0x04483218) };
 		inline constexpr std::array<REL::Offset, 1> TUIDataShuttleContainerMap_InventoryDataModelNS__InventoryItem_{ REL::Offset(0x04478BF0) };
 		inline constexpr std::array<REL::Offset, 1>
-			TUIDataShuttleContainerMap_InventoryDataModelNS__InventoryItemsData_InventoryDataModelNS__InventoryItem__{ REL::Offset(0x04482A10) };
+													TUIDataShuttleContainerMap_InventoryDataModelNS__InventoryItemsData_InventoryDataModelNS__InventoryItem__{ REL::Offset(0x04482A10) };
 		inline constexpr std::array<REL::Offset, 1> TUIDataShuttleContainerMap_InventoryDataModelNS__InventoryItemsData_PickpocketItemData__{
 			REL::Offset(0x044A9A30)
 		};
@@ -34147,7 +34147,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> TUIDataShuttleContainerMap_TESNPCData__ChargenMetadata__FacialBoneRegionMetadata_{ REL::Offset(
 			0x043A70F0) };
 		inline constexpr std::array<REL::Offset, 1>
-			TUIDataShuttleContainerMap_TESNPCData__ChargenMetadata__FacialBoneRegionMetadata__AdditionalSliders_{ REL::Offset(0x043A8AD8) };
+													TUIDataShuttleContainerMap_TESNPCData__ChargenMetadata__FacialBoneRegionMetadata__AdditionalSliders_{ REL::Offset(0x043A8AD8) };
 		inline constexpr std::array<REL::Offset, 1> TUIDataShuttleContainerMap_TESNPCData__ChargenMetadata__FacialBoneRegionMetadata__SliderMetadata_{
 			REL::Offset(0x043A87B0)
 		};
@@ -34164,8 +34164,8 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			TUIDataShuttleContainerMap_TESNPCData__PostBlendFaceCustomizationMetaData__LayerMetaData__EntryMetaData_{ REL::Offset(0x043A7F98) };
 		inline constexpr std::array<REL::Offset, 1>
-			TUIDataShuttleContainerMap_TESNPCData__PostBlendFaceCustomizationMetaData__LayerMetaData__ModulationEntryMetaData_{ REL::Offset(
-				0x043A81B8) };
+													TUIDataShuttleContainerMap_TESNPCData__PostBlendFaceCustomizationMetaData__LayerMetaData__ModulationEntryMetaData_{ REL::Offset(
+                0x043A81B8) };
 		inline constexpr std::array<REL::Offset, 1> TUIDataShuttleContainerMap_TESNPCData__PostBlendSliderMetadata_{ REL::Offset(0x043A7D78) };
 		inline constexpr std::array<REL::Offset, 1> TUIDataShuttleContainerMap_TakeoffInfo_{ REL::Offset(0x0449AB68) };
 		inline constexpr std::array<REL::Offset, 1> TUIDataShuttleContainerMap_TargetCombatValuesData_{ REL::Offset(0x044982F8) };
@@ -34451,8 +34451,8 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  TagPropagationNodeInstance{ REL::Offset(0x045687B8) };
 		inline constexpr std::array<REL::Offset, 1>  TakeOffInitiateCompleteHandler{ REL::Offset(0x044E5FC8) };
 		inline constexpr std::array<REL::Offset, 8>  TakeoffMenu{ REL::Offset(0x044B3240), REL::Offset(0x044B3258), REL::Offset(0x044B3270),
-                                                                 REL::Offset(0x044B3288), REL::Offset(0x044B32A0), REL::Offset(0x044B32B8),
-                                                                 REL::Offset(0x044B32F0), REL::Offset(0x044B3348) };
+            REL::Offset(0x044B3288), REL::Offset(0x044B32A0), REL::Offset(0x044B32B8),
+            REL::Offset(0x044B32F0), REL::Offset(0x044B3348) };
 		inline constexpr std::array<REL::Offset, 2>  TakeoffMenuDataModel{ REL::Offset(0x0449AB28), REL::Offset(0x0449AB50) };
 		inline constexpr std::array<REL::Offset, 1>  TakeoffMenuDataModel__TakeoffMenuEventShuttle{ REL::Offset(0x0449AC70) };
 		inline constexpr std::array<REL::Offset, 1>  TakeoffMenu_CloseMenu{ REL::Offset(0x044B32D0) };
@@ -34483,8 +34483,8 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  TerrainDB__TerrainBarrierNode{ REL::Offset(0x043A4E50) };
 		inline constexpr std::array<REL::Offset, 1>  TerrainDB__TerrainGraphProcessor{ REL::Offset(0x043A4E38) };
 		inline constexpr std::array<REL::Offset, 9>  TestMenu{ REL::Offset(0x044BE398), REL::Offset(0x044BE3B0), REL::Offset(0x044BE3D8),
-                                                              REL::Offset(0x044BE3F0), REL::Offset(0x044BE448), REL::Offset(0x044BE460),
-                                                              REL::Offset(0x044BE478), REL::Offset(0x044BE490), REL::Offset(0x044BE4E8) };
+            REL::Offset(0x044BE3F0), REL::Offset(0x044BE448), REL::Offset(0x044BE460),
+            REL::Offset(0x044BE478), REL::Offset(0x044BE490), REL::Offset(0x044BE4E8) };
 		inline constexpr std::array<REL::Offset, 1>  TestMenu_DoAction{ REL::Offset(0x044BE4C8) };
 		inline constexpr std::array<REL::Offset, 1>  TestMenu_ExitMenu{ REL::Offset(0x044BE5C8) };
 		inline constexpr std::array<REL::Offset, 1>  TestMenu_ShowImages{ REL::Offset(0x044BE5F8) };
@@ -34493,8 +34493,8 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  TestMenu__TestMenuEventShuttle{ REL::Offset(0x044BF128) };
 		inline constexpr std::array<REL::Offset, 1>  TestReferencedObject{ REL::Offset(0x0403AA48) };
 		inline constexpr std::array<REL::Offset, 7>  TextInputMenu{ REL::Offset(0x044BF3C8), REL::Offset(0x044BF3E0), REL::Offset(0x044BF3F8),
-                                                                   REL::Offset(0x044BF450), REL::Offset(0x044BF478), REL::Offset(0x044BF490),
-                                                                   REL::Offset(0x044BF4E8) };
+            REL::Offset(0x044BF450), REL::Offset(0x044BF478), REL::Offset(0x044BF490),
+            REL::Offset(0x044BF4E8) };
 		inline constexpr std::array<REL::Offset, 1>  TextInputMenu_EndEditText{ REL::Offset(0x044BF410) };
 		inline constexpr std::array<REL::Offset, 1>  TextInputMenu_InputCanceled{ REL::Offset(0x044BF5C8) };
 		inline constexpr std::array<REL::Offset, 1>  TextInputMenu_StartEditText{ REL::Offset(0x044BF430) };
@@ -34512,7 +34512,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  TimerEvent{ REL::Offset(0x0456A918) };
 		inline constexpr std::array<REL::Offset, 1>  TimerEventInstance{ REL::Offset(0x0456A8A8) };
 		inline constexpr std::array<REL::Offset, 4>  TitleSequenceMenu{ REL::Offset(0x04520910), REL::Offset(0x045209F0), REL::Offset(0x04520A48),
-                                                                       REL::Offset(0x04520A60) };
+            REL::Offset(0x04520A60) };
 		inline constexpr std::array<REL::Offset, 1>  TitleSequenceMenu_StartMusic{ REL::Offset(0x045208F0) };
 		inline constexpr std::array<REL::Offset, 1>  TranslationAdjustment{ REL::Offset(0x045671E8) };
 		inline constexpr std::array<REL::Offset, 1>  TranslationAdjustmentInstance{ REL::Offset(0x045685E8) };
@@ -34527,7 +34527,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  TrianglePathWaterLedgeTraversalSplitter{ REL::Offset(0x04599DA0) };
 		inline constexpr std::array<REL::Offset, 1>  TurnUndeadEffect{ REL::Offset(0x044C6F98) };
 		inline constexpr std::array<REL::Offset, 3>  TutorialMessageManager{ REL::Offset(0x044A07A8), REL::Offset(0x044A07C0),
-                                                                            REL::Offset(0x044A07E8) };
+            REL::Offset(0x044A07E8) };
 		inline constexpr std::array<REL::Offset, 1>  TutorialMessageManager__TutorialMessageEventShuttle{ REL::Offset(0x0447D080) };
 		inline constexpr std::array<REL::Offset, 1>  TweenMenuCameraState{ REL::Offset(0x0451AF18) };
 		inline constexpr std::array<REL::Offset, 1>  TwoBoneIKNode{ REL::Offset(0x045665C0) };
@@ -34535,9 +34535,9 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  TypeRegistryTest__Ref{ REL::Offset(0x03FFED20) };
 		inline constexpr std::array<REL::Offset, 1>  TypeRegistryTest__TypedefChild{ REL::Offset(0x04007910) };
 		inline constexpr std::array<REL::Offset, 10> UI{ REL::Offset(0x0458E5E8), REL::Offset(0x0458E600), REL::Offset(0x0458E610),
-			                                             REL::Offset(0x0458E620), REL::Offset(0x0458E630), REL::Offset(0x0458E640),
-			                                             REL::Offset(0x0458E650), REL::Offset(0x0458E660), REL::Offset(0x0458E670),
-			                                             REL::Offset(0x0458E680) };
+			REL::Offset(0x0458E620), REL::Offset(0x0458E630), REL::Offset(0x0458E640),
+			REL::Offset(0x0458E650), REL::Offset(0x0458E660), REL::Offset(0x0458E670),
+			REL::Offset(0x0458E680) };
 		inline constexpr std::array<REL::Offset, 2>  UIBlurManager{ REL::Offset(0x04520A98), REL::Offset(0x04520AB0) };
 		inline constexpr std::array<REL::Offset, 1>  UICellRenderer{ REL::Offset(0x04358DB8) };
 		inline constexpr std::array<REL::Offset, 1>  UICellRenderer_InventoryItem{ REL::Offset(0x04358FB0) };
@@ -34608,7 +34608,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> UpdateSceneRectEvent{ REL::Offset(0x0458EAF0) };
 		inline constexpr std::array<REL::Offset, 1> UseStimpakHandler{ REL::Offset(0x044E3AB8) };
 		inline constexpr std::array<REL::Offset, 4> VATS{ REL::Offset(0x044F05D8), REL::Offset(0x044F05F0), REL::Offset(0x044F0608),
-			                                              REL::Offset(0x044F0620) };
+			REL::Offset(0x044F0620) };
 		inline constexpr std::array<REL::Offset, 1> VATSCameraState{ REL::Offset(0x0451B010) };
 		inline constexpr std::array<REL::Offset, 1> VATSUtils__ValidateStrangerLineOfSightGoalToOriginFunctor{ REL::Offset(0x044F05C0) };
 		inline constexpr std::array<REL::Offset, 1> ValueModifierEffect{ REL::Offset(0x044C75E0) };
@@ -34618,8 +34618,8 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> VelocityObstacle__Utilities__BuildOpenEdgeListsVisitor{ REL::Offset(0x045A36B0) };
 		inline constexpr std::array<REL::Offset, 1> VirtualPathingDoor{ REL::Offset(0x04370B40) };
 		inline constexpr std::array<REL::Offset, 1>
-			VisitReturnData_BSTSmartPointer_IMovementParameters_BSTSmartPointerIntrusiveRefCount__BSTAlignedScrapArrayAllocator_16__{ REL::Offset(
-				0x0459C800) };
+													VisitReturnData_BSTSmartPointer_IMovementParameters_BSTSmartPointerIntrusiveRefCount__BSTAlignedScrapArrayAllocator_16__{ REL::Offset(
+                0x0459C800) };
 		inline constexpr std::array<REL::Offset, 1> VisitReturnData_MovementVector_BSTAlignedScrapArrayAllocator_16__{ REL::Offset(0x0459C840) };
 		inline constexpr std::array<REL::Offset, 1> VisitReturnData_NiPoint3_BSTAlignedScrapArrayAllocator_16__{ REL::Offset(0x0459C880) };
 		inline constexpr std::array<REL::Offset, 1> WaterPathPathingNodeGenerator{ REL::Offset(0x045A2FB0) };
@@ -34647,11 +34647,11 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  WeaponSwingHandler{ REL::Offset(0x044E4BC8) };
 		inline constexpr std::array<REL::Offset, 1>  WeaponUtils____CollectCalculationIdentifiers{ REL::Offset(0x043C74E8) };
 		inline constexpr std::array<REL::Offset, 16> WeaponsCraftingMenu{ REL::Offset(0x044BF798), REL::Offset(0x044BF7B0), REL::Offset(0x044BF7C8),
-			                                                              REL::Offset(0x044BF7E0), REL::Offset(0x044BF7F8), REL::Offset(0x044BF810),
-			                                                              REL::Offset(0x044BF828), REL::Offset(0x044BF840), REL::Offset(0x044BF8A8),
-			                                                              REL::Offset(0x044BF8C0), REL::Offset(0x044BF918), REL::Offset(0x044BF930),
-			                                                              REL::Offset(0x044BF948), REL::Offset(0x044BF960), REL::Offset(0x044BF978),
-			                                                              REL::Offset(0x044BF9B8) };
+			REL::Offset(0x044BF7E0), REL::Offset(0x044BF7F8), REL::Offset(0x044BF810),
+			REL::Offset(0x044BF828), REL::Offset(0x044BF840), REL::Offset(0x044BF8A8),
+			REL::Offset(0x044BF8C0), REL::Offset(0x044BF918), REL::Offset(0x044BF930),
+			REL::Offset(0x044BF948), REL::Offset(0x044BF960), REL::Offset(0x044BF978),
+			REL::Offset(0x044BF9B8) };
 		inline constexpr std::array<REL::Offset, 1>  WeightedModifierVisitor_BSTSmartPointer_IMovementParameters_BSTSmartPointerIntrusiveRefCount__{
             REL::Offset(0x0459C7E0)
 		};
@@ -34666,7 +34666,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  WorkshopBuilderDataModel{ REL::Offset(0x0449CBF8) };
 		inline constexpr std::array<REL::Offset, 1>  WorkshopBuilderDataModel__WorkshopBuilderEventShuttle{ REL::Offset(0x0449CF50) };
 		inline constexpr std::array<REL::Offset, 6>  WorkshopBuilderMenu{ REL::Offset(0x044BFBF8), REL::Offset(0x044BFC10), REL::Offset(0x044BFD10),
-                                                                         REL::Offset(0x044BFD28), REL::Offset(0x044BFD40), REL::Offset(0x044BFD98) };
+            REL::Offset(0x044BFD28), REL::Offset(0x044BFD40), REL::Offset(0x044BFD98) };
 		inline constexpr std::array<REL::Offset, 1>  WorkshopBuilderMenu_ChangeBuildItem{ REL::Offset(0x044BFDD0) };
 		inline constexpr std::array<REL::Offset, 1>  WorkshopBuilderMenu_SelectedItem{ REL::Offset(0x044BFDB0) };
 		inline constexpr std::array<REL::Offset, 1>  WorkshopBuilderMenu_ToggleTracking{ REL::Offset(0x044BFCF0) };
@@ -34677,8 +34677,8 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  WorkshopCategoryInfoDataModel{ REL::Offset(0x0449C400) };
 		inline constexpr std::array<REL::Offset, 1>  WorkshopCategoryInfoDataModel__WorkshopCategoryInfoEventShuttle{ REL::Offset(0x0449C550) };
 		inline constexpr std::array<REL::Offset, 5>  WorkshopColorModeDataModel{ REL::Offset(0x0447D6C8), REL::Offset(0x0447D6E0),
-                                                                                REL::Offset(0x0447D740), REL::Offset(0x0447D758),
-                                                                                REL::Offset(0x0447D770) };
+            REL::Offset(0x0447D740), REL::Offset(0x0447D758),
+            REL::Offset(0x0447D770) };
 		inline constexpr std::array<REL::Offset, 1>  WorkshopColorModeDataModel__WorkshopColorModeEventShuttle{ REL::Offset(0x0447D7F8) };
 		inline constexpr std::array<REL::Offset, 1>  WorkshopColorMode_ApplyColors{ REL::Offset(0x0447D788) };
 		inline constexpr std::array<REL::Offset, 1>  WorkshopColorMode_SelectedTab{ REL::Offset(0x0447D7D8) };
@@ -34753,13 +34753,13 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  WorkshopIsoCameraState{ REL::Offset(0x0451A730) };
 		inline constexpr std::array<REL::Offset, 1>  WorkshopLOD__WorkshopLODManager{ REL::Offset(0x0455A7B8) };
 		inline constexpr std::array<REL::Offset, 16> WorkshopMenu{ REL::Offset(0x044C02E8), REL::Offset(0x044C0300), REL::Offset(0x044C0318),
-			                                                       REL::Offset(0x044C0330), REL::Offset(0x044C0348), REL::Offset(0x044C0360),
-			                                                       REL::Offset(0x044C0378), REL::Offset(0x044C0390), REL::Offset(0x044C03A8),
-			                                                       REL::Offset(0x044C03C0), REL::Offset(0x044C03D8), REL::Offset(0x044C04B8),
-			                                                       REL::Offset(0x044C0530), REL::Offset(0x044C0548), REL::Offset(0x044C0560),
-			                                                       REL::Offset(0x044C0578) };
+			REL::Offset(0x044C0330), REL::Offset(0x044C0348), REL::Offset(0x044C0360),
+			REL::Offset(0x044C0378), REL::Offset(0x044C0390), REL::Offset(0x044C03A8),
+			REL::Offset(0x044C03C0), REL::Offset(0x044C03D8), REL::Offset(0x044C04B8),
+			REL::Offset(0x044C0530), REL::Offset(0x044C0548), REL::Offset(0x044C0560),
+			REL::Offset(0x044C0578) };
 		inline constexpr std::array<REL::Offset, 4>  WorkshopMenuShared{ REL::Offset(0x044C23B0), REL::Offset(0x044C2408), REL::Offset(0x044C2420),
-                                                                        REL::Offset(0x044C2438) };
+            REL::Offset(0x044C2438) };
 		inline constexpr std::array<REL::Offset, 1>  WorkshopMenu_AttemptBuild{ REL::Offset(0x044C06B0) };
 		inline constexpr std::array<REL::Offset, 1>  WorkshopMenu_CancelAction{ REL::Offset(0x044C0630) };
 		inline constexpr std::array<REL::Offset, 1>  WorkshopMenu_ChangeVariant{ REL::Offset(0x044C06D0) };
@@ -34781,7 +34781,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  WorkshopPickRefDataModel{ REL::Offset(0x0449D7D8) };
 		inline constexpr std::array<REL::Offset, 1>  WorkshopPickRefDataModel__WorkshopPickRefEventShuttle{ REL::Offset(0x0449D8C8) };
 		inline constexpr std::array<REL::Offset, 5>  WorkshopQuickMenu{ REL::Offset(0x044C07C8), REL::Offset(0x044C07E0), REL::Offset(0x044C0838),
-                                                                       REL::Offset(0x044C0890), REL::Offset(0x044C08A8) };
+            REL::Offset(0x044C0890), REL::Offset(0x044C08A8) };
 		inline constexpr std::array<REL::Offset, 1>  WorkshopQuickMenuDataModel{ REL::Offset(0x0449D990) };
 		inline constexpr std::array<REL::Offset, 1>  WorkshopQuickMenuDataModel__WorkshopQuickMenuEventShuttle{ REL::Offset(0x0449D968) };
 		inline constexpr std::array<REL::Offset, 1>  WorkshopQuickMenu_ConfirmAction{ REL::Offset(0x044C0818) };
@@ -34794,7 +34794,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 2>  WorkshopStatusDataModel{ REL::Offset(0x0447D8A8), REL::Offset(0x0447D8C0) };
 		inline constexpr std::array<REL::Offset, 1>  WorkshopStatusDataModel__WorkshopStatusEventShuttle{ REL::Offset(0x0447D9B8) };
 		inline constexpr std::array<REL::Offset, 6>  WorkshopTargetMenu{ REL::Offset(0x044C10F0), REL::Offset(0x044C1108), REL::Offset(0x044C11C8),
-                                                                        REL::Offset(0x044C11E0), REL::Offset(0x044C1208), REL::Offset(0x044C12E8) };
+            REL::Offset(0x044C11E0), REL::Offset(0x044C1208), REL::Offset(0x044C12E8) };
 		inline constexpr std::array<REL::Offset, 1>  WorkshopTargetMenu_TargetHovered{ REL::Offset(0x044C1188) };
 		inline constexpr std::array<REL::Offset, 1>  WorkshopTargetMenu_TargetPicked{ REL::Offset(0x044C11A8) };
 		inline constexpr std::array<REL::Offset, 1>  WorkshopTargetMenu__OutpostData{ REL::Offset(0x044C10A8) };
@@ -34816,9 +34816,9 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>  WorkshopUI__StateUpdateTransferLinkPlacement{ REL::Offset(0x0455F050) };
 		inline constexpr std::array<REL::Offset, 1>  WorkshopUI__StateUpdateWirePlacement{ REL::Offset(0x0455F348) };
 		inline constexpr std::array<REL::Offset, 4>  WorkshopUI__UIStateMachine{ REL::Offset(0x03F26068), REL::Offset(0x03F26080),
-                                                                                REL::Offset(0x03F26098), REL::Offset(0x03F260B0) };
+            REL::Offset(0x03F26098), REL::Offset(0x03F260B0) };
 		inline constexpr std::array<REL::Offset, 3>  Workshop_BlueprintMenu{ REL::Offset(0x044C1A28), REL::Offset(0x044C1A40),
-                                                                            REL::Offset(0x044C1B20) };
+            REL::Offset(0x044C1B20) };
 		inline constexpr std::array<REL::Offset, 1>  Workshop__BulldozeOnlyWorkshopItem{ REL::Offset(0x0455AED8) };
 		inline constexpr std::array<REL::Offset, 1>  Workshop__DecoratedHabWorkshopItem{ REL::Offset(0x04459C20) };
 		inline constexpr std::array<REL::Offset, 1>  Workshop__ExtraData{ REL::Offset(0x04364698) };
@@ -34866,7 +34866,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 2> __ArrestedToMiscStatHandler{ REL::Offset(0x044D59C8), REL::Offset(0x044D59E0) };
 		inline constexpr std::array<REL::Offset, 1> __AsyncThreadPoolCriticalSection{ REL::Offset(0x04012C28) };
 		inline constexpr std::array<REL::Offset, 4> __AtmosphereListener{ REL::Offset(0x044C7CF8), REL::Offset(0x044C7D10), REL::Offset(0x044C7D28),
-			                                                              REL::Offset(0x044C7D40) };
+			REL::Offset(0x044C7D40) };
 		inline constexpr std::array<REL::Offset, 1> __AtmosphericScatteringVolumeProcessor{ REL::Offset(0x044526B0) };
 		inline constexpr std::array<REL::Offset, 1> __AttachLightHitEffectVisitor{ REL::Offset(0x044C45E8) };
 		inline constexpr std::array<REL::Offset, 1> __AutoDoorFadeCallback{ REL::Offset(0x043C0978) };
@@ -34997,7 +34997,7 @@ namespace RE
 			REL::Offset(0x045A50F8)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			__BinaryStreamReaderWithTypeCompendium_BSReflection__ByteBuffer_BSTArray_unsignedchar_BSTArrayHeapAllocator___{ REL::Offset(0x045A5260) };
+													__BinaryStreamReaderWithTypeCompendium_BSReflection__ByteBuffer_BSTArray_unsignedchar_BSTArrayHeapAllocator___{ REL::Offset(0x045A5260) };
 		inline constexpr std::array<REL::Offset, 1> __BinaryStreamReader_BSReflection__ByteBuffer_BSScrapArray_unsignedchar___{ REL::Offset(
 			0x045A5140) };
 		inline constexpr std::array<REL::Offset, 1> __BinaryStreamReader_BSReflection__ByteBuffer_BSScrapArray_unsignedchar_____ChunkReader{
@@ -35007,23 +35007,23 @@ namespace RE
 			REL::Offset(0x045A51D0)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			__BinaryStreamReader_BSReflection__ByteBuffer_BSTArray_unsignedchar_BSTArrayHeapAllocator_____ChunkReader{ REL::Offset(0x045A5218) };
+													__BinaryStreamReader_BSReflection__ByteBuffer_BSTArray_unsignedchar_BSTArrayHeapAllocator_____ChunkReader{ REL::Offset(0x045A5218) };
 		inline constexpr std::array<REL::Offset, 1> __BlockingCriticalSection{ REL::Offset(0x04012BE8) };
 		inline constexpr std::array<REL::Offset, 1> __BlockingPromoteReferencesNode{ REL::Offset(0x0436F720) };
 		inline constexpr std::array<REL::Offset, 1> __BookReadToMiscStatHandler{ REL::Offset(0x044D5950) };
 		inline constexpr std::array<REL::Offset, 1> __BountyToMiscHandler{ REL::Offset(0x044D59B0) };
 		inline constexpr std::array<REL::Offset, 1> __CastAliasSpellVisitor{ REL::Offset(0x044D91B0) };
 		inline constexpr std::array<REL::Offset, 3> __CellAcousticSpaceListener{ REL::Offset(0x044C7C80), REL::Offset(0x044C7C98),
-			                                                                     REL::Offset(0x044C7CB0) };
+			REL::Offset(0x044C7CB0) };
 		inline constexpr std::array<REL::Offset, 1> __CellLoadNode{ REL::Offset(0x0455F978) };
 		inline constexpr std::array<REL::Offset, 1> __CellPostProcessNode{ REL::Offset(0x0455F9E0) };
 		inline constexpr std::array<REL::Offset, 1> __CellSpawnPostProcessNode{ REL::Offset(0x0455FA30) };
 		inline constexpr std::array<REL::Offset, 1> __CellStateControl{ REL::Offset(0x0455FAC8) };
 		inline constexpr std::array<REL::Offset, 2> __CharProxyBeforeWholePhysicsUpdateTask{ REL::Offset(0x0457AB18), REL::Offset(0x0457ABB8) };
 		inline constexpr std::array<REL::Offset, 2> __CharProxyBeforeWholePhysicsUpdateTriggerSeenTask{ REL::Offset(0x0457AB98),
-			                                                                                            REL::Offset(0x0457ABF0) };
+			REL::Offset(0x0457ABF0) };
 		inline constexpr std::array<REL::Offset, 2> __CharRigidBodyAfterNoSimulationPhysicsUpdateTask{ REL::Offset(0x0457A8C0),
-			                                                                                           REL::Offset(0x0457A8F8) };
+			REL::Offset(0x0457A8F8) };
 		inline constexpr std::array<REL::Offset, 2> __CharRigidBodyAfterWholePhysicsUpdateTask{ REL::Offset(0x0457A970), REL::Offset(0x0457A9A8) };
 		inline constexpr std::array<REL::Offset, 2> __CharRigidBodyBetweenCollideAndSolveTask{ REL::Offset(0x0457A918), REL::Offset(0x0457A950) };
 		inline constexpr std::array<REL::Offset, 1> __CheckEndReachedFunctorMapper{ REL::Offset(0x0459DAC8) };
@@ -35198,7 +35198,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> __MiscStatIncrementer_Spaceship__SoldEvent_{ REL::Offset(0x044D5620) };
 		inline constexpr std::array<REL::Offset, 1> __MiscStatIncrementer_Workshop__CargoLinkAddedEvent_{ REL::Offset(0x044D5A10) };
 		inline constexpr std::array<REL::Offset, 3> __MostContrabandCarriedToMiscHandler{ REL::Offset(0x044D5968), REL::Offset(0x044D5980),
-			                                                                              REL::Offset(0x044D5998) };
+			REL::Offset(0x044D5998) };
 		inline constexpr std::array<REL::Offset, 1> __MovePlayerRelevantSpaceComponentsOnViewChange{ REL::Offset(0x044DAF28) };
 		inline constexpr std::array<REL::Offset, 1> __MovementControllerAIAdapter{ REL::Offset(0x044DEFB0) };
 		inline constexpr std::array<REL::Offset, 1> __MovementHandlerAgentAngleControllerLoadScrapper{ REL::Offset(0x045A2568) };
@@ -35257,9 +35257,9 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> __RequestContrabandItemsNode{ REL::Offset(0x044CAC48) };
 		inline constexpr std::array<REL::Offset, 1> __RobotSelectionCallback{ REL::Offset(0x044C1E30) };
 		inline constexpr std::array<REL::Offset, 8> __RuntimeComponentDBFactoryHelper{ REL::Offset(0x04373D00), REL::Offset(0x04373D18),
-			                                                                           REL::Offset(0x04373D30), REL::Offset(0x04373D48),
-			                                                                           REL::Offset(0x04373D60), REL::Offset(0x04373D78),
-			                                                                           REL::Offset(0x04373D90), REL::Offset(0x04373DA8) };
+			REL::Offset(0x04373D30), REL::Offset(0x04373D48),
+			REL::Offset(0x04373D60), REL::Offset(0x04373D78),
+			REL::Offset(0x04373D90), REL::Offset(0x04373DA8) };
 		inline constexpr std::array<REL::Offset, 1> __ScannedToMiscStatHandler{ REL::Offset(0x044D55D8) };
 		inline constexpr std::array<REL::Offset, 1> __SceneActionResultsCallBack{ REL::Offset(0x0440AF10) };
 		inline constexpr std::array<REL::Offset, 1> __ScenePhaseResultsCallBack{ REL::Offset(0x0440B0A8) };
@@ -35269,7 +35269,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> __SecurityMenu_UseDigipickCallback{ REL::Offset(0x044AC248) };
 		inline constexpr std::array<REL::Offset, 1> __ServeJailTimeCallback{ REL::Offset(0x043BA6F8) };
 		inline constexpr std::array<REL::Offset, 5> __Service{ REL::Offset(0x044ED1D0), REL::Offset(0x044ED1E8), REL::Offset(0x044ED200),
-			                                                   REL::Offset(0x044ED3E8), REL::Offset(0x044ED400) };
+			REL::Offset(0x044ED3E8), REL::Offset(0x044ED400) };
 		inline constexpr std::array<REL::Offset, 1> __SettleEventSink{ REL::Offset(0x044D6558) };
 		inline constexpr std::array<REL::Offset, 2> __ShiftBroadphaseTask{ REL::Offset(0x04068130), REL::Offset(0x04068150) };
 		inline constexpr std::array<REL::Offset, 2> __ShiftWorldTask{ REL::Offset(0x040680A8), REL::Offset(0x040680C8) };
@@ -35333,17 +35333,17 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> bhkBlockStreamAllocator_2048_{ REL::Offset(0x04574290) };
 		inline constexpr std::array<REL::Offset, 1> bhkBlockStreamAllocator_2_{ REL::Offset(0x04574A40) };
 		inline constexpr std::array<REL::Offset, 5> bhkCharProxyController{ REL::Offset(0x045785B8), REL::Offset(0x045788C8), REL::Offset(0x04578920),
-			                                                                REL::Offset(0x04578988), REL::Offset(0x04578998) };
+			REL::Offset(0x04578988), REL::Offset(0x04578998) };
 		inline constexpr std::array<REL::Offset, 1> bhkCharProxyControllerCinfo{ REL::Offset(0x045788D8) };
 		inline constexpr std::array<REL::Offset, 1> bhkCharProxyManager{ REL::Offset(0x04574AB0) };
 		inline constexpr std::array<REL::Offset, 5> bhkCharRigidBodyController{ REL::Offset(0x045794A0), REL::Offset(0x04579520),
-			                                                                    REL::Offset(0x04579530), REL::Offset(0x04579840),
-			                                                                    REL::Offset(0x04579850) };
+			REL::Offset(0x04579530), REL::Offset(0x04579840),
+			REL::Offset(0x04579850) };
 		inline constexpr std::array<REL::Offset, 1> bhkCharRigidBodyControllerCinfo{ REL::Offset(0x045794D8) };
 		inline constexpr std::array<REL::Offset, 1> bhkCharRigidBodyManager{ REL::Offset(0x04574E90) };
 		inline constexpr std::array<REL::Offset, 1> bhkCharacterCollisionHandler{ REL::Offset(0x044DF178) };
 		inline constexpr std::array<REL::Offset, 4> bhkCharacterController{ REL::Offset(0x04577DB8), REL::Offset(0x04577FA8), REL::Offset(0x04577FB8),
-			                                                                REL::Offset(0x04577FC8) };
+			REL::Offset(0x04577FC8) };
 		inline constexpr std::array<REL::Offset, 1> bhkCharacterControllerCinfo{ REL::Offset(0x04577BD8) };
 		inline constexpr std::array<REL::Offset, 1> bhkCharacterControllerShapeManager__hknpConvexShapeEx{ REL::Offset(0x04577C20) };
 		inline constexpr std::array<REL::Offset, 1> bhkCharacterPointCollector{ REL::Offset(0x0457B9F8) };
@@ -35363,7 +35363,7 @@ namespace RE
 			REL::Offset(0x0457A390)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			bhkCommandQueue__Handler__lambda_0d58bf82d324a15a6d6f14f8c2bdfa4c____bhkDestroyConstraintGroupCmd_{ REL::Offset(0x0457A130) };
+													bhkCommandQueue__Handler__lambda_0d58bf82d324a15a6d6f14f8c2bdfa4c____bhkDestroyConstraintGroupCmd_{ REL::Offset(0x0457A130) };
 		inline constexpr std::array<REL::Offset, 1> bhkCommandQueue__Handler__lambda_14c3ddd8a7b502fd4208007a6ae830e8____bhkSetBodyMassCmd_{
 			REL::Offset(0x0457A4B0)
 		};
@@ -35374,14 +35374,14 @@ namespace RE
 			REL::Offset(0x0457A230)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			bhkCommandQueue__Handler__lambda_24947a0ceb2f89e4c9f9f25fad16fe57____bhkSetCompoundBodyTransformCmd_{ REL::Offset(0x0457A350) };
+													bhkCommandQueue__Handler__lambda_24947a0ceb2f89e4c9f9f25fad16fe57____bhkSetCompoundBodyTransformCmd_{ REL::Offset(0x0457A350) };
 		inline constexpr std::array<REL::Offset, 1> bhkCommandQueue__Handler__lambda_2a71fee199b091a46fed23391c3ca502____bhkSetBodyPropertyCmd_{
 			REL::Offset(0x0457A210)
 		};
 		inline constexpr std::array<REL::Offset, 1>
 			bhkCommandQueue__Handler__lambda_2f37aecb92ecff92b8a2311756eb9947____bhkSetGravityForMotionLibraryCmd_{ REL::Offset(0x0457A5D0) };
 		inline constexpr std::array<REL::Offset, 1>
-			bhkCommandQueue__Handler__lambda_33f10031136e16c06e609eea0c8f15c9____bhkSetBodyMassDistributionCmd_{ REL::Offset(0x0457A4D0) };
+													bhkCommandQueue__Handler__lambda_33f10031136e16c06e609eea0c8f15c9____bhkSetBodyMassDistributionCmd_{ REL::Offset(0x0457A4D0) };
 		inline constexpr std::array<REL::Offset, 1> bhkCommandQueue__Handler__lambda_33fdddc2d14d9f052c47eaa16871812e____bhkAttachBodyCommand_{
 			REL::Offset(0x0457A5F0)
 		};
@@ -35397,7 +35397,7 @@ namespace RE
 			REL::Offset(0x0457A530)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			bhkCommandQueue__Handler__lambda_4f15b2a546d20f40f673dc5aad8a7ff8____bhkRebuildMotionMassPropBodyCmd_{ REL::Offset(0x0457A6B0) };
+													bhkCommandQueue__Handler__lambda_4f15b2a546d20f40f673dc5aad8a7ff8____bhkRebuildMotionMassPropBodyCmd_{ REL::Offset(0x0457A6B0) };
 		inline constexpr std::array<REL::Offset, 1> bhkCommandQueue__Handler__lambda_53d41f69dd986d44e6888c5b2b230248____bhkDetachBodyCommand_{
 			REL::Offset(0x0457A610)
 		};
@@ -35418,7 +35418,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			bhkCommandQueue__Handler__lambda_6c69f730c1913716fa38768121ca5352____bhkSetBodyMotionPropertyFlagsCmd_{ REL::Offset(0x0457A490) };
 		inline constexpr std::array<REL::Offset, 1>
-			bhkCommandQueue__Handler__lambda_6c9f9636d952ceefc1061ad4cb910f4e____bhkSetMinBodyCollisionLookAheadCmd_{ REL::Offset(0x0457A2B0) };
+													bhkCommandQueue__Handler__lambda_6c9f9636d952ceefc1061ad4cb910f4e____bhkSetMinBodyCollisionLookAheadCmd_{ REL::Offset(0x0457A2B0) };
 		inline constexpr std::array<REL::Offset, 1> bhkCommandQueue__Handler__lambda_6e813d1e111da58a82920c6db45f5f69____bhkSetBody2Vec4fCmd_{
 			REL::Offset(0x0457A590)
 		};
@@ -35426,7 +35426,7 @@ namespace RE
 			REL::Offset(0x0457A370)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			bhkCommandQueue__Handler__lambda_83371d7b9cb36996acdd52f718466017____bhkReleasePhysicsSystemCommand_{ REL::Offset(0x0457A250) };
+													bhkCommandQueue__Handler__lambda_83371d7b9cb36996acdd52f718466017____bhkReleasePhysicsSystemCommand_{ REL::Offset(0x0457A250) };
 		inline constexpr std::array<REL::Offset, 1> bhkCommandQueue__Handler__lambda_89d4b7d647c09f661993e3dfe9eae162____bhkSetBodyMotionTypeCmd_{
 			REL::Offset(0x0457A4F0)
 		};
@@ -35473,7 +35473,7 @@ namespace RE
 			REL::Offset(0x0457A6D0)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			bhkCommandQueue__Handler__lambda_b3d5d48152cc08b0237b865c661b744b____bhkSetBodySurfaceVelocityCmd_{ REL::Offset(0x0457A0F0) };
+													bhkCommandQueue__Handler__lambda_b3d5d48152cc08b0237b865c661b744b____bhkSetBodySurfaceVelocityCmd_{ REL::Offset(0x0457A0F0) };
 		inline constexpr std::array<REL::Offset, 1> bhkCommandQueue__Handler__lambda_bc2c4beaeee0d868fc5da01371048385____bhkApplyHardKeyframe_{
 			REL::Offset(0x0457A650)
 		};
@@ -35553,7 +35553,7 @@ namespace RE
 			REL::Offset(0x0478EDC8)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			bnet__detail__CallbackImpl_1_bnet__UniquePtr_bnet__Account__AuthResult__bnet__Account__AuthenticationStatus_{ REL::Offset(0x0478EC50) };
+													bnet__detail__CallbackImpl_1_bnet__UniquePtr_bnet__Account__AuthResult__bnet__Account__AuthenticationStatus_{ REL::Offset(0x0478EC50) };
 		inline constexpr std::array<REL::Offset, 1> bnet__detail__CallbackImpl_1_bnet__UniquePtr_bnet__Account__InfoResult__bnet__HttpResponseInfo_{
 			REL::Offset(0x0478EBF0)
 		};
@@ -35683,8 +35683,8 @@ namespace RE
 				REL::Offset(0x0478EED8)
 			};
 		inline constexpr std::array<REL::Offset, 1>
-			bnet_std__detail__FunctionImpl_bnet_std__detail__attrib__Copyable_void___CopyableCallable_void___bnet__LogParamsconst__{ REL::Offset(
-				0x0478E118) };
+													bnet_std__detail__FunctionImpl_bnet_std__detail__attrib__Copyable_void___CopyableCallable_void___bnet__LogParamsconst__{ REL::Offset(
+                0x0478E118) };
 		inline constexpr std::array<REL::Offset, 1> bps__client__BIEventClient__BulkEventsResult{ REL::Offset(0x043459E0) };
 		inline constexpr std::array<REL::Offset, 1> bps__client__BIEventClient__CreateSessionResult{ REL::Offset(0x04560538) };
 		inline constexpr std::array<REL::Offset, 1> bps__client__BaseRequestImpl{ REL::Offset(0x045604C8) };
@@ -35708,7 +35708,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			bps__shared__PlatformResult_bps__client__BIGatewayErrorCode_0_bps__client__BIEventClient__kResultNameBulkSend_{ REL::Offset(0x04345A10) };
 		inline constexpr std::array<REL::Offset, 1>
-			bps__shared__PlatformResult_bps__client__BIGatewayErrorCode_0_bps__client__BIEventClient__kResultNameCreate_{ REL::Offset(0x04560520) };
+													bps__shared__PlatformResult_bps__client__BIGatewayErrorCode_0_bps__client__BIEventClient__kResultNameCreate_{ REL::Offset(0x04560520) };
 		inline constexpr std::array<REL::Offset, 2> castTest__Interface0{ REL::Offset(0x04002F90), REL::Offset(0x04002FC0) };
 		inline constexpr std::array<REL::Offset, 1> castTest__Interface1{ REL::Offset(0x04003258) };
 		inline constexpr std::array<REL::Offset, 1> castTest__Interface2{ REL::Offset(0x04003340) };
@@ -35718,8 +35718,8 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> castTest__OtherLeaf{ REL::Offset(0x04002C48) };
 		inline constexpr std::array<REL::Offset, 1> castTest__Root{ REL::Offset(0x04002A50) };
 		inline constexpr std::array<REL::Offset, 5> castTest__WithInterfaces{ REL::Offset(0x040033F8), REL::Offset(0x04003438),
-			                                                                  REL::Offset(0x04003478), REL::Offset(0x040034B0),
-			                                                                  REL::Offset(0x040034E8) };
+			REL::Offset(0x04003478), REL::Offset(0x040034B0),
+			REL::Offset(0x040034E8) };
 		inline constexpr std::array<REL::Offset, 1> hclAction{ REL::Offset(0x04030340) };
 		inline constexpr std::array<REL::Offset, 1> hclAntiPinchConstraintInstanceData{ REL::Offset(0x040392B0) };
 		inline constexpr std::array<REL::Offset, 1> hclAntiPinchConstraintSet{ REL::Offset(0x04035400) };
@@ -36202,12 +36202,12 @@ namespace RE
 				REL::Offset(0x0437B950)
 			};
 		inline constexpr std::array<REL::Offset, 1>
-			hkSignal2_hknpWorld_hknpBodyId___MemberSlot_hclPhysicsClothWorld_void_hclPhysicsClothWorld____hknpWorld_hknpBodyId__{ REL::Offset(
-				0x04338600) };
+													hkSignal2_hknpWorld_hknpBodyId___MemberSlot_hclPhysicsClothWorld_void_hclPhysicsClothWorld____hknpWorld_hknpBodyId__{ REL::Offset(
+                0x04338600) };
 		inline constexpr std::array<REL::Offset, 1> hkSignal2_hknpWorld_hknpBodyManager___GlobalSlot_void___hknpWorld_hknpBodyManager__{ REL::Offset(
 			0x04574300) };
 		inline constexpr std::array<REL::Offset, 1>
-			hkSignal2_hknpWorld_hknpBodyManager___MemberSlot_hknpWorldEx_void_hknpWorldEx____hknpWorld_hknpBodyManager__{ REL::Offset(0x04062F20) };
+													hkSignal2_hknpWorld_hknpBodyManager___MemberSlot_hknpWorldEx_void_hknpWorldEx____hknpWorld_hknpBodyManager__{ REL::Offset(0x04062F20) };
 		inline constexpr std::array<REL::Offset, 1> hkSignal2_hknpWorld_hknpConstraintManager___GlobalSlot_void___hknpWorld_hknpConstraintManager__{
 			REL::Offset(0x04574510)
 		};
@@ -36373,29 +36373,29 @@ namespace RE
 			0x04330640) };
 		inline constexpr std::array<REL::Offset, 1> hkcdSimdTreeUtils__Build__Task{ REL::Offset(0x04330628) };
 		inline constexpr std::array<REL::Offset, 2>
-			hkcdSimdTreeUtils__Build__hkcdBaseBuildTask_hkcdSimdTreeUtils__Build__hkcdRefitWithAabbFloat3Wrapper_{ REL::Offset(0x043309F0),
-			                                                                                                       REL::Offset(0x04330A10) };
+													hkcdSimdTreeUtils__Build__hkcdBaseBuildTask_hkcdSimdTreeUtils__Build__hkcdRefitWithAabbFloat3Wrapper_{ REL::Offset(0x043309F0),
+                REL::Offset(0x04330A10) };
 		inline constexpr std::array<REL::Offset, 2> hkcdSimdTreeUtils__Build__hkcdBaseBuildTask_hkcdSimdTreeUtils__Build__hkcdRefitWithAabbWrapper_{
 			REL::Offset(0x04330890), REL::Offset(0x043308B0)
 		};
 		inline constexpr std::array<REL::Offset, 2>
 			hkcdSimdTreeUtils__Build__hkcdBuildFirstNLevels_hkcdSimdTreeUtils__Build__hkcdRefitWithAabbFloat3Wrapper_{ REL::Offset(0x04330A48),
-			                                                                                                           REL::Offset(0x04330A68) };
+				REL::Offset(0x04330A68) };
 		inline constexpr std::array<REL::Offset, 2>
 			hkcdSimdTreeUtils__Build__hkcdBuildFirstNLevels_hkcdSimdTreeUtils__Build__hkcdRefitWithAabbWrapper_{ REL::Offset(0x043308E8),
-			                                                                                                     REL::Offset(0x04330908) };
+				REL::Offset(0x04330908) };
 		inline constexpr std::array<REL::Offset, 2>
-			hkcdSimdTreeUtils__Build__hkcdBuildRangesTask_hkcdSimdTreeUtils__Build__hkcdRefitWithAabbFloat3Wrapper_{ REL::Offset(0x04330AA0),
-			                                                                                                         REL::Offset(0x04330AC0) };
+													hkcdSimdTreeUtils__Build__hkcdBuildRangesTask_hkcdSimdTreeUtils__Build__hkcdRefitWithAabbFloat3Wrapper_{ REL::Offset(0x04330AA0),
+                REL::Offset(0x04330AC0) };
 		inline constexpr std::array<REL::Offset, 2> hkcdSimdTreeUtils__Build__hkcdBuildRangesTask_hkcdSimdTreeUtils__Build__hkcdRefitWithAabbWrapper_{
 			REL::Offset(0x04330940), REL::Offset(0x04330960)
 		};
 		inline constexpr std::array<REL::Offset, 2>
 			hkcdSimdTreeUtils__Build__hkcdFinalizeTreeTask_hkcdSimdTreeUtils__Build__hkcdRefitWithAabbFloat3Wrapper_{ REL::Offset(0x04330AF8),
-			                                                                                                          REL::Offset(0x04330B18) };
+				REL::Offset(0x04330B18) };
 		inline constexpr std::array<REL::Offset, 2>
-			hkcdSimdTreeUtils__Build__hkcdFinalizeTreeTask_hkcdSimdTreeUtils__Build__hkcdRefitWithAabbWrapper_{ REL::Offset(0x04330998),
-			                                                                                                    REL::Offset(0x043309B8) };
+													hkcdSimdTreeUtils__Build__hkcdFinalizeTreeTask_hkcdSimdTreeUtils__Build__hkcdRefitWithAabbWrapper_{ REL::Offset(0x04330998),
+                REL::Offset(0x043309B8) };
 		inline constexpr std::array<REL::Offset, 1> hkcdSimdTreeUtils__Build__hkcdRefitWithAabbFloat3Wrapper{ REL::Offset(0x043306B0) };
 		inline constexpr std::array<REL::Offset, 1> hkcdSimdTreeUtils__Build__hkcdRefitWithAabbWrapper{ REL::Offset(0x04330668) };
 		inline constexpr std::array<REL::Offset, 1> hkcdSimdTree__BuildContext{ REL::Offset(0x04068E18) };
@@ -36413,8 +36413,8 @@ namespace RE
 			REL::Offset(0x0433BEA8)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			hkgpAbstractMesh_hkgpConvexHullImpl__Edge_hkgpConvexHullImpl__Vertex_hkgpConvexHullImpl__Triangle_hkContainerHeapAllocator_{ REL::Offset(
-				0x04018A58) };
+													hkgpAbstractMesh_hkgpConvexHullImpl__Edge_hkgpConvexHullImpl__Vertex_hkgpConvexHullImpl__Triangle_hkContainerHeapAllocator_{ REL::Offset(
+                0x04018A58) };
 		inline constexpr std::array<REL::Offset, 1> hkgpCgo__Config{ REL::Offset(0x04018A38) };
 		inline constexpr std::array<REL::Offset, 1> hkgpConvexHull{ REL::Offset(0x04018A18) };
 		inline constexpr std::array<REL::Offset, 1> hkgpDeprecatedConvexDecompositionImpl__DefaultProgress{ REL::Offset(0x043301E8) };
@@ -36651,10 +36651,10 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> hknpSimdTreeBroadPhase{ REL::Offset(0x0433CBF0) };
 		inline constexpr std::array<REL::Offset, 2> hknpSimdTreeBroadPhaseTasks__CollideTrees{ REL::Offset(0x0433CDD8), REL::Offset(0x0433CDF8) };
 		inline constexpr std::array<REL::Offset, 2> hknpSimdTreeBroadPhaseTasks__CopyAabbsAndMarkActiveBodiesDirty{ REL::Offset(0x0433CCC0),
-			                                                                                                        REL::Offset(0x0433CCE0) };
+			REL::Offset(0x0433CCE0) };
 		inline constexpr std::array<REL::Offset, 2> hknpSimdTreeBroadPhaseTasks__Finalize{ REL::Offset(0x0433CE58), REL::Offset(0x0433CE78) };
 		inline constexpr std::array<REL::Offset, 2> hknpSimdTreeBroadPhaseTasks__PrepareTreeBuildData{ REL::Offset(0x0433CD48),
-			                                                                                           REL::Offset(0x0433CD68) };
+			REL::Offset(0x0433CD68) };
 		inline constexpr std::array<REL::Offset, 1> hknpSimulation{ REL::Offset(0x04062788) };
 		inline constexpr std::array<REL::Offset, 1> hknpSingleCellSpaceSplitter{ REL::Offset(0x04066908) };
 		inline constexpr std::array<REL::Offset, 1> hknpSingleThreadedSimulation{ REL::Offset(0x040627B8) };
@@ -36798,15 +36798,15 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> nlohmann__detail__input_stream_adapter{ REL::Offset(0x044CFA28) };
 		inline constexpr std::array<REL::Offset, 1> nlohmann__detail__out_of_range{ REL::Offset(0x044BF0F8) };
 		inline constexpr std::array<REL::Offset, 1>
-			nlohmann__detail__output_string_adapter_char_std__basic_string_char_std__char_traits_char__std__allocator_char___{ REL::Offset(
-				0x043459C0) };
+													 nlohmann__detail__output_string_adapter_char_std__basic_string_char_std__char_traits_char__std__allocator_char___{ REL::Offset(
+                0x043459C0) };
 		inline constexpr std::array<REL::Offset, 1>  nlohmann__detail__parse_error{ REL::Offset(0x044BF0E0) };
 		inline constexpr std::array<REL::Offset, 1>  nsContainerMenu__ConfirmTakeAllTheThingsCallback{ REL::Offset(0x0451CAD8) };
 		inline constexpr std::array<REL::Offset, 1>  nsControlMappingData__RemapHandler{ REL::Offset(0x03F0E488) };
 		inline constexpr std::array<REL::Offset, 1>  nsDataMenuData__GameLoadListener{ REL::Offset(0x03F260C8) };
 		inline constexpr std::array<REL::Offset, 6>  nsDialogueMenu__MenuEventCatcher{ REL::Offset(0x0451D238), REL::Offset(0x0451D250),
-                                                                                      REL::Offset(0x0451D268), REL::Offset(0x0451D280),
-                                                                                      REL::Offset(0x0451D298), REL::Offset(0x0451D2B0) };
+            REL::Offset(0x0451D268), REL::Offset(0x0451D280),
+            REL::Offset(0x0451D298), REL::Offset(0x0451D2B0) };
 		inline constexpr std::array<REL::Offset, 1>  nsMainMenu__InvalidUserCallback{ REL::Offset(0x0451EF28) };
 		inline constexpr std::array<REL::Offset, 15> nsMonocle__MenuEventCatcher{
 			REL::Offset(0x03F25780), REL::Offset(0x03F25798), REL::Offset(0x03F257B0), REL::Offset(0x03F257C8), REL::Offset(0x03F257E0),
@@ -37500,8 +37500,8 @@ namespace RE
 			std___Func_impl_no_alloc__lambda_079a8aa660e61b088f96148680d36dd1__unsignedint_CreationRendererPrivate__VariableBlockconst_{ REL::Offset(
 				0x03F2B040) };
 		inline constexpr std::array<REL::Offset, 1>
-			std___Func_impl_no_alloc__lambda_0c3f1a43f1da6558563a23e48bb1195f__unsignedint_CreationRendererPrivate__VariableBlockconst_{ REL::Offset(
-				0x03F2D620) };
+													std___Func_impl_no_alloc__lambda_0c3f1a43f1da6558563a23e48bb1195f__unsignedint_CreationRendererPrivate__VariableBlockconst_{ REL::Offset(
+                0x03F2D620) };
 		inline constexpr std::array<REL::Offset, 1> std___Func_impl_no_alloc__lambda_0cb21591d64d9d5a933a0c452d3e1b37__void_{ REL::Offset(
 			0x0447FDD8) };
 		inline constexpr std::array<REL::Offset, 1>
@@ -37511,8 +37511,8 @@ namespace RE
 			std___Func_impl_no_alloc__lambda_0e89c8d2d6392b5c24f6e22ccbfe44f3__unsignedint_CreationRendererPrivate__VariableBlockconst_{ REL::Offset(
 				0x03F2B100) };
 		inline constexpr std::array<REL::Offset, 1>
-			std___Func_impl_no_alloc__lambda_101dda04a59aa879dbf7dd0dbcbb50f4__unsignedint_CreationRendererPrivate__VariableBlockconst_{ REL::Offset(
-				0x03F2D508) };
+													std___Func_impl_no_alloc__lambda_101dda04a59aa879dbf7dd0dbcbb50f4__unsignedint_CreationRendererPrivate__VariableBlockconst_{ REL::Offset(
+                0x03F2D508) };
 		inline constexpr std::array<REL::Offset, 1> std___Func_impl_no_alloc__lambda_12cf7000a08c0229e16393f09561ca7d__void_{ REL::Offset(
 			0x044AE158) };
 		inline constexpr std::array<REL::Offset, 1>
@@ -37552,8 +37552,8 @@ namespace RE
 			std___Func_impl_no_alloc__lambda_28dc3789d661118750451f000e1a828d__unsignedint_CreationRendererPrivate__VariableBlockconst_{ REL::Offset(
 				0x03F2AF28) };
 		inline constexpr std::array<REL::Offset, 1>
-			std___Func_impl_no_alloc__lambda_2cc92a8a40a80bd38c78b736cc225140__void_BSPlatform__BNetResult_unsigned__int64_bool_{ REL::Offset(
-				0x04488F60) };
+													std___Func_impl_no_alloc__lambda_2cc92a8a40a80bd38c78b736cc225140__void_BSPlatform__BNetResult_unsigned__int64_bool_{ REL::Offset(
+                0x04488F60) };
 		inline constexpr std::array<REL::Offset, 1> std___Func_impl_no_alloc__lambda_2db861672ef3222e622fc6e45a100761__void_Actor_unsignedint_{
 			REL::Offset(0x043D1F28)
 		};
@@ -37570,14 +37570,14 @@ namespace RE
 			std___Func_impl_no_alloc__lambda_39a899ccd47d79c0e880239f437c5605__unsignedint_CreationRendererPrivate__VariableBlockconst_{ REL::Offset(
 				0x03F2B078) };
 		inline constexpr std::array<REL::Offset, 1>
-			std___Func_impl_no_alloc__lambda_39d9004daaead13d1142bd21c3889fd4__void_bps__client__BIEventClient__BulkEventsResult_{ REL::Offset(
-				0x04345A98) };
+													std___Func_impl_no_alloc__lambda_39d9004daaead13d1142bd21c3889fd4__void_bps__client__BIEventClient__BulkEventsResult_{ REL::Offset(
+                0x04345A98) };
 		inline constexpr std::array<REL::Offset, 1> std___Func_impl_no_alloc__lambda_3a065f65e612987ef75503bb93352629__void_BSScript__Stackconst_{
 			REL::Offset(0x04522018)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			std___Func_impl_no_alloc__lambda_3d1206d68bd154fbb45c4f583492a37b__unsignedint_CreationRendererPrivate__VariableBlockconst_{ REL::Offset(
-				0x03F2B598) };
+													std___Func_impl_no_alloc__lambda_3d1206d68bd154fbb45c4f583492a37b__unsignedint_CreationRendererPrivate__VariableBlockconst_{ REL::Offset(
+                0x03F2B598) };
 		inline constexpr std::array<REL::Offset, 1> std___Func_impl_no_alloc__lambda_3d1eb35d9e985f7f48c7b78dd0f5dc4a__void_{ REL::Offset(
 			0x044ADE80) };
 		inline constexpr std::array<REL::Offset, 1>
@@ -37598,8 +37598,8 @@ namespace RE
 			std___Func_impl_no_alloc__lambda_429d91f21c20955e61a60d88028db1c7__unsignedint_CreationRendererPrivate__VariableBlockconst_{ REL::Offset(
 				0x03F2D6C8) };
 		inline constexpr std::array<REL::Offset, 1>
-			std___Func_impl_no_alloc__lambda_42c94d42aab591076c4f701b6a4ddf5c__unsignedint_CreationRendererPrivate__VariableBlockconst_{ REL::Offset(
-				0x03F2B218) };
+													std___Func_impl_no_alloc__lambda_42c94d42aab591076c4f701b6a4ddf5c__unsignedint_CreationRendererPrivate__VariableBlockconst_{ REL::Offset(
+                0x03F2B218) };
 		inline constexpr std::array<REL::Offset, 1> std___Func_impl_no_alloc__lambda_43e878a7f549f13e6eb351cff7c4bfd8__void_{ REL::Offset(
 			0x044AE040) };
 		inline constexpr std::array<REL::Offset, 1> std___Func_impl_no_alloc__lambda_4dccea91ce7a8c84901e03d8daeebdf1__void_{ REL::Offset(
@@ -37611,8 +37611,8 @@ namespace RE
 			std___Func_impl_no_alloc__lambda_542f1bbb43e6c28f5ce82f130dbb7998__unsignedint_CreationRendererPrivate__VariableBlockconst_{ REL::Offset(
 				0x03F2B2C0) };
 		inline constexpr std::array<REL::Offset, 1>
-			std___Func_impl_no_alloc__lambda_5b9dc8dc260e8e699de8a340ce375773__unsignedint_CreationRendererPrivate__VariableBlockconst_{ REL::Offset(
-				0x03F2B288) };
+													std___Func_impl_no_alloc__lambda_5b9dc8dc260e8e699de8a340ce375773__unsignedint_CreationRendererPrivate__VariableBlockconst_{ REL::Offset(
+                0x03F2B288) };
 		inline constexpr std::array<REL::Offset, 1> std___Func_impl_no_alloc__lambda_5f90e84e4769be26f1d2fa6feefac45e__void_{ REL::Offset(
 			0x044AE270) };
 		inline constexpr std::array<REL::Offset, 1>
@@ -37638,13 +37638,13 @@ namespace RE
 			std___Func_impl_no_alloc__lambda_6910601695f3dd7a3b6b918d3be3a895__unsignedint_CreationRendererPrivate__VariableBlockconst_{ REL::Offset(
 				0x03F2D8C0) };
 		inline constexpr std::array<REL::Offset, 1>
-			std___Func_impl_no_alloc__lambda_697c0a91b66ab3f6c7a782bea49b1331__unsignedint_CreationRendererPrivate__VariableBlockconst_{ REL::Offset(
-				0x03F2B5D0) };
+													std___Func_impl_no_alloc__lambda_697c0a91b66ab3f6c7a782bea49b1331__unsignedint_CreationRendererPrivate__VariableBlockconst_{ REL::Offset(
+                0x03F2B5D0) };
 		inline constexpr std::array<REL::Offset, 1> std___Func_impl_no_alloc__lambda_69faf50df0058a7a957d676816e44d1d__void_{ REL::Offset(
 			0x044ADEB8) };
 		inline constexpr std::array<REL::Offset, 1>
-			std___Func_impl_no_alloc__lambda_6b6802b990080eb1f972ed3fdfb349be__unsignedint_CreationRendererPrivate__VariableBlockconst_{ REL::Offset(
-				0x03F2D460) };
+													std___Func_impl_no_alloc__lambda_6b6802b990080eb1f972ed3fdfb349be__unsignedint_CreationRendererPrivate__VariableBlockconst_{ REL::Offset(
+                0x03F2D460) };
 		inline constexpr std::array<REL::Offset, 1> std___Func_impl_no_alloc__lambda_6d1081504a31f0237eeec490f4089cbe__void_void_{ REL::Offset(
 			0x04074418) };
 		inline constexpr std::array<REL::Offset, 1>
@@ -37663,8 +37663,8 @@ namespace RE
 			std___Func_impl_no_alloc__lambda_77392527259adccb8a2255e05849c42d__unsignedint_CreationRendererPrivate__VariableBlockconst_{ REL::Offset(
 				0x03F2D578) };
 		inline constexpr std::array<REL::Offset, 1>
-			std___Func_impl_no_alloc__lambda_78104d6457cc7c72b7b70dedbd4c7729__unsignedint_CreationRendererPrivate__VariableBlockconst_{ REL::Offset(
-				0x03F2B3D8) };
+													std___Func_impl_no_alloc__lambda_78104d6457cc7c72b7b70dedbd4c7729__unsignedint_CreationRendererPrivate__VariableBlockconst_{ REL::Offset(
+                0x03F2B3D8) };
 		inline constexpr std::array<REL::Offset, 1> std___Func_impl_no_alloc__lambda_7a8458241d5d25022323237c491d8ecf__void_{ REL::Offset(
 			0x044AE0B0) };
 		inline constexpr std::array<REL::Offset, 1>
@@ -37686,8 +37686,8 @@ namespace RE
 			std___Func_impl_no_alloc__lambda_7f409a04a56b9fd44455212d87c431ae__unsignedint_CreationRendererPrivate__VariableBlockconst_{ REL::Offset(
 				0x03F2B138) };
 		inline constexpr std::array<REL::Offset, 1>
-			std___Func_impl_no_alloc__lambda_80ccd6ef81c90a908ae7b9dc423ede29__unsignedint_CreationRendererPrivate__VariableBlockconst_{ REL::Offset(
-				0x03F2ADD8) };
+													std___Func_impl_no_alloc__lambda_80ccd6ef81c90a908ae7b9dc423ede29__unsignedint_CreationRendererPrivate__VariableBlockconst_{ REL::Offset(
+                0x03F2ADD8) };
 		inline constexpr std::array<REL::Offset, 1> std___Func_impl_no_alloc__lambda_811ffd3359415b814ad419ff4a6f7b6c__void_{ REL::Offset(
 			0x044ADE10) };
 		inline constexpr std::array<REL::Offset, 1>
@@ -37703,8 +37703,8 @@ namespace RE
 			std___Func_impl_no_alloc__lambda_84cb86a16ff0b9443451d13f3a11f731__unsignedint_CreationRendererPrivate__VariableBlockconst_{ REL::Offset(
 				0x03F2AF60) };
 		inline constexpr std::array<REL::Offset, 1>
-			std___Func_impl_no_alloc__lambda_850f684f539da753d4c4cafdf641fe49__void_BSPlatform__BNetResult_unsigned__int64_{ REL::Offset(
-				0x04478380) };
+													std___Func_impl_no_alloc__lambda_850f684f539da753d4c4cafdf641fe49__void_BSPlatform__BNetResult_unsigned__int64_{ REL::Offset(
+                0x04478380) };
 		inline constexpr std::array<REL::Offset, 1> std___Func_impl_no_alloc__lambda_8537d24bed03eba165d0ffdc179250fb__void_BSScript__Stackconst_{
 			REL::Offset(0x045222F0)
 		};
@@ -37713,8 +37713,8 @@ namespace RE
 				REL::Offset(0x045C4B08)
 			};
 		inline constexpr std::array<REL::Offset, 1>
-			std___Func_impl_no_alloc__lambda_86c0ac20e1dbb3512a09e5045908b2c5__void_bps__client__BIEventClient__BulkEventsResult_{ REL::Offset(
-				0x04345A28) };
+													std___Func_impl_no_alloc__lambda_86c0ac20e1dbb3512a09e5045908b2c5__void_bps__client__BIEventClient__BulkEventsResult_{ REL::Offset(
+                0x04345A28) };
 		inline constexpr std::array<REL::Offset, 1> std___Func_impl_no_alloc__lambda_89a805409404f6f4936c6202133cf01b__void_{ REL::Offset(
 			0x044ADF60) };
 		inline constexpr std::array<REL::Offset, 1>
@@ -37732,8 +37732,8 @@ namespace RE
 			std___Func_impl_no_alloc__lambda_90d8b86f0c99746f95e0b4ca1a49d2c0__unsignedint_CreationRendererPrivate__VariableBlockconst_{ REL::Offset(
 				0x03F2AD68) };
 		inline constexpr std::array<REL::Offset, 1>
-			std___Func_impl_no_alloc__lambda_91251eb0ccb3ea9b423b4f677c265616__void_BSPlatform__BNetResult_unsigned__int64_bool_{ REL::Offset(
-				0x044CEB00) };
+													std___Func_impl_no_alloc__lambda_91251eb0ccb3ea9b423b4f677c265616__void_BSPlatform__BNetResult_unsigned__int64_bool_{ REL::Offset(
+                0x044CEB00) };
 		inline constexpr std::array<REL::Offset, 1> std___Func_impl_no_alloc__lambda_959037408af959a47613d3263db08c86__void_{ REL::Offset(
 			0x044AE078) };
 		inline constexpr std::array<REL::Offset, 1>
@@ -37769,22 +37769,22 @@ namespace RE
 			std___Func_impl_no_alloc__lambda_a960ccc15d0834cd19d9a46ff87790ac__unsignedint_CreationRendererPrivate__VariableBlockconst_{ REL::Offset(
 				0x03F2ADA0) };
 		inline constexpr std::array<REL::Offset, 1>
-			std___Func_impl_no_alloc__lambda_aad890f75e4062f7c55f96628ae4106f__unsignedint_CreationRendererPrivate__VariableBlockconst_{ REL::Offset(
-				0x03F2D7A8) };
+													std___Func_impl_no_alloc__lambda_aad890f75e4062f7c55f96628ae4106f__unsignedint_CreationRendererPrivate__VariableBlockconst_{ REL::Offset(
+                0x03F2D7A8) };
 		inline constexpr std::array<REL::Offset, 1> std___Func_impl_no_alloc__lambda_ad85a4ab556638f1507b57127ea06ce0__void_BSScript__Stackconst_{
 			REL::Offset(0x045222B8)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			std___Func_impl_no_alloc__lambda_adada3c624f9eca7e904af6dc451ca52__unsignedint_CreationRendererPrivate__VariableBlockconst_{ REL::Offset(
-				0x03F2D818) };
+													std___Func_impl_no_alloc__lambda_adada3c624f9eca7e904af6dc451ca52__unsignedint_CreationRendererPrivate__VariableBlockconst_{ REL::Offset(
+                0x03F2D818) };
 		inline constexpr std::array<REL::Offset, 1> std___Func_impl_no_alloc__lambda_ae34904a58a0c39380143f422d973695__void_{ REL::Offset(
 			0x044AE190) };
 		inline constexpr std::array<REL::Offset, 1>
 			std___Func_impl_no_alloc__lambda_af62d3ddb61e2c16f7fc06a107aede70__unsignedint_CreationRendererPrivate__VariableBlockconst_{ REL::Offset(
 				0x03F2AE48) };
 		inline constexpr std::array<REL::Offset, 1>
-			std___Func_impl_no_alloc__lambda_b3b4d542f0127c892ab403b185e84e5f__BSContainer__ForEachResult_GROUP_REACTION_bool_{ REL::Offset(
-				0x0436DFC8) };
+													std___Func_impl_no_alloc__lambda_b3b4d542f0127c892ab403b185e84e5f__BSContainer__ForEachResult_GROUP_REACTION_bool_{ REL::Offset(
+                0x0436DFC8) };
 		inline constexpr std::array<REL::Offset, 1> std___Func_impl_no_alloc__lambda_b78658f725809cc9dd249a08003323aa__bool_BGSKeywordconst_{
 			REL::Offset(0x044C9D40)
 		};
@@ -37799,15 +37799,15 @@ namespace RE
 			std___Func_impl_no_alloc__lambda_bbb177cd5f2ab74893d49615821de162__unsignedint_CreationRendererPrivate__VariableBlockconst_{ REL::Offset(
 				0x03F2D658) };
 		inline constexpr std::array<REL::Offset, 1>
-			std___Func_impl_no_alloc__lambda_be876bc5186bff2513ff405e850f4e26__unsignedint_CreationRendererPrivate__VariableBlockconst_{ REL::Offset(
-				0x03F2B560) };
+													std___Func_impl_no_alloc__lambda_be876bc5186bff2513ff405e850f4e26__unsignedint_CreationRendererPrivate__VariableBlockconst_{ REL::Offset(
+                0x03F2B560) };
 		inline constexpr std::array<REL::Offset, 1> std___Func_impl_no_alloc__lambda_c0358fe6cc6cac72bc6034a1c670b93e__void_{ REL::Offset(
 			0x044ADF98) };
 		inline constexpr std::array<REL::Offset, 1> std___Func_impl_no_alloc__lambda_c4800958f6f82d41dc7cbb1717f39ca8__void_{ REL::Offset(
 			0x044AE120) };
 		inline constexpr std::array<REL::Offset, 1>
-			std___Func_impl_no_alloc__lambda_c6efd732f69a7634ffbc6652dd87f951__unsignedint_CreationRendererPrivate__VariableBlockconst_{ REL::Offset(
-				0x03F2D7E0) };
+													std___Func_impl_no_alloc__lambda_c6efd732f69a7634ffbc6652dd87f951__unsignedint_CreationRendererPrivate__VariableBlockconst_{ REL::Offset(
+                0x03F2D7E0) };
 		inline constexpr std::array<REL::Offset, 1> std___Func_impl_no_alloc__lambda_c84baf99ce6ed36961e2a863528ae6c4__void_Actor_unsignedint_{
 			REL::Offset(0x043D2068)
 		};
@@ -37819,8 +37819,8 @@ namespace RE
 			std___Func_impl_no_alloc__lambda_cb2fcafcfeb79c7d26906b8fd4636ffc__unsignedint_CreationRendererPrivate__VariableBlockconst_{ REL::Offset(
 				0x03F2AD30) };
 		inline constexpr std::array<REL::Offset, 1>
-			std___Func_impl_no_alloc__lambda_ccb70cc432f37ab029f06ab27c328d81__unsignedint_CreationRendererPrivate__VariableBlockconst_{ REL::Offset(
-				0x03F2AEF0) };
+													std___Func_impl_no_alloc__lambda_ccb70cc432f37ab029f06ab27c328d81__unsignedint_CreationRendererPrivate__VariableBlockconst_{ REL::Offset(
+                0x03F2AEF0) };
 		inline constexpr std::array<REL::Offset, 1> std___Func_impl_no_alloc__lambda_cd1989fe22907f3fcc0eb0c2b41e761c__void_AnimGraphconst_{
 			REL::Offset(0x04560C30)
 		};
@@ -37836,8 +37836,8 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> std___Func_impl_no_alloc__lambda_d5eb0fcfb1f75702023297a060e3d5e6__void_{ REL::Offset(
 			0x044ADDD8) };
 		inline constexpr std::array<REL::Offset, 1>
-			std___Func_impl_no_alloc__lambda_d63799d362ac3db4a9c9d0e7433ec812__unsignedint_CreationRendererPrivate__VariableBlockconst_{ REL::Offset(
-				0x03F2D9A0) };
+													std___Func_impl_no_alloc__lambda_d63799d362ac3db4a9c9d0e7433ec812__unsignedint_CreationRendererPrivate__VariableBlockconst_{ REL::Offset(
+                0x03F2D9A0) };
 		inline constexpr std::array<REL::Offset, 1> std___Func_impl_no_alloc__lambda_d6b1db4285e75a5294c6de830762ef47__void_Actor_unsignedint_{
 			REL::Offset(0x043D1EF0)
 		};
@@ -37874,16 +37874,16 @@ namespace RE
 				REL::Offset(0x0478ED10)
 			};
 		inline constexpr std::array<REL::Offset, 1>
-			std___Func_impl_no_alloc__lambda_e378063695a321b4b2acf80caf341be2__unsignedint_CreationRendererPrivate__VariableBlockconst_{ REL::Offset(
-				0x03F2AE10) };
+													std___Func_impl_no_alloc__lambda_e378063695a321b4b2acf80caf341be2__unsignedint_CreationRendererPrivate__VariableBlockconst_{ REL::Offset(
+                0x03F2AE10) };
 		inline constexpr std::array<REL::Offset, 1> std___Func_impl_no_alloc__lambda_e503aa7f15d4f88322c521738e9706a4__void_{ REL::Offset(
 			0x044ADDA0) };
 		inline constexpr std::array<REL::Offset, 1>
 			std___Func_impl_no_alloc__lambda_e7631ce55b316914c1d2ae323e980e52__unsignedint_CreationRendererPrivate__VariableBlockconst_{ REL::Offset(
 				0x03F2B250) };
 		inline constexpr std::array<REL::Offset, 1>
-			std___Func_impl_no_alloc__lambda_f341899e72b3f390184c8afaa45b8f40__unsignedint_CreationRendererPrivate__VariableBlockconst_{ REL::Offset(
-				0x03F2DA10) };
+													std___Func_impl_no_alloc__lambda_f341899e72b3f390184c8afaa45b8f40__unsignedint_CreationRendererPrivate__VariableBlockconst_{ REL::Offset(
+                0x03F2DA10) };
 		inline constexpr std::array<REL::Offset, 1> std___Func_impl_no_alloc__lambda_f62ad8f2020d229c56fb36f626d1e603__void_{ REL::Offset(
 			0x044AE238) };
 		inline constexpr std::array<REL::Offset, 1>
@@ -37893,8 +37893,8 @@ namespace RE
 			std___Func_impl_no_alloc__lambda_f67bd8b1575a9567e8027e8330c2f249__unsignedint_CreationRendererPrivate__VariableBlockconst_{ REL::Offset(
 				0x03F2D540) };
 		inline constexpr std::array<REL::Offset, 1>
-			std___Func_impl_no_alloc__lambda_f859861f5c36dce485d0d6709c81dc49__unsignedint_CreationRendererPrivate__VariableBlockconst_{ REL::Offset(
-				0x03F2B330) };
+													std___Func_impl_no_alloc__lambda_f859861f5c36dce485d0d6709c81dc49__unsignedint_CreationRendererPrivate__VariableBlockconst_{ REL::Offset(
+                0x03F2B330) };
 		inline constexpr std::array<REL::Offset, 1> std___Func_impl_no_alloc__lambda_f8994df1e8cbcd7696e7a20a6f1ea094__void_{ REL::Offset(
 			0x044AE008) };
 		inline constexpr std::array<REL::Offset, 1> std___Func_impl_no_alloc__lambda_f8c535b0014544bb8393cece85acfa2a__void_charconst_{ REL::Offset(
@@ -37925,7 +37925,7 @@ namespace RE
 			std___Func_impl_no_alloc_float___ActorValueOwnerconst_ActorValueInfoconst__float_ActorValueOwnerconst_ActorValueInfoconst_{ REL::Offset(
 				0x044436A0) };
 		inline constexpr std::array<REL::Offset, 1>
-			std___Func_impl_no_alloc_float___CombatFormulas__WeaponDamageconst__float_CombatFormulas__WeaponDamageconst_{ REL::Offset(0x0446F540) };
+													std___Func_impl_no_alloc_float___CombatFormulas__WeaponDamageconst__float_CombatFormulas__WeaponDamageconst_{ REL::Offset(0x0446F540) };
 		inline constexpr std::array<REL::Offset, 1> std___Func_impl_no_alloc_float___NiPoint3const_float__float_NiPoint3const_float_{ REL::Offset(
 			0x044D3070) };
 		inline constexpr std::array<REL::Offset, 1>
@@ -37977,7 +37977,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			std___Ref_count_BSTArray_BSTSmartPointer_BGSLocation_TESFormExternalPolicy__BSTArrayHeapAllocator__{ REL::Offset(0x043C9590) };
 		inline constexpr std::array<REL::Offset, 1>
-			std___Ref_count_BSTArray_Particles__ListParticleCollisionInfo__ParticleCollisionInfo_BSTArrayHeapAllocator__{ REL::Offset(0x04591308) };
+													std___Ref_count_BSTArray_Particles__ListParticleCollisionInfo__ParticleCollisionInfo_BSTArrayHeapAllocator__{ REL::Offset(0x04591308) };
 		inline constexpr std::array<REL::Offset, 1> std___Ref_count_HavokParticleDef__BaseShape_{ REL::Offset(0x0457BE80) };
 		inline constexpr std::array<REL::Offset, 1> std___Ref_count_Particles__BaseCustomParameter_{ REL::Offset(0x045912E0) };
 		inline constexpr std::array<REL::Offset, 1> std___Ref_count_Particles__Intrinsics__SharedAsset_{ REL::Offset(0x045912B8) };
@@ -38027,8 +38027,8 @@ namespace RE
 				REL::Offset(0x044CEAA8)
 			};
 		inline constexpr std::array<REL::Offset, 1>
-			std___Ref_count_obj_alloc3_BSChargenAPI__CustomizationData_BSTHeapSTLAllocator_BSChargenAPI__CustomizationData_2__{ REL::Offset(
-				0x044C9008) };
+													std___Ref_count_obj_alloc3_BSChargenAPI__CustomizationData_BSTHeapSTLAllocator_BSChargenAPI__CustomizationData_2__{ REL::Offset(
+                0x044C9008) };
 		inline constexpr std::array<REL::Offset, 1> std___Ref_count_obj_alloc3_BSFloatCurve_BSTHeapSTLAllocator_BSFloatCurve_2__{ REL::Offset(
 			0x04452540) };
 		inline constexpr std::array<REL::Offset, 1> std___Ref_count_obj_alloc3_BSGFxObject_BSTHeapSTLAllocator_BSGFxObject_2__{ REL::Offset(
@@ -38055,8 +38055,8 @@ namespace RE
 				REL::Offset(0x044D3B80)
 			};
 		inline constexpr std::array<REL::Offset, 1>
-			std___Ref_count_obj_alloc3_LOD__Details__LODWorldSpaceData_BSTHeapSTLAllocator_LOD__Details__LODWorldSpaceData_2__{ REL::Offset(
-				0x04451920) };
+													std___Ref_count_obj_alloc3_LOD__Details__LODWorldSpaceData_BSTHeapSTLAllocator_LOD__Details__LODWorldSpaceData_2__{ REL::Offset(
+                0x04451920) };
 		inline constexpr std::array<REL::Offset, 1> std___Ref_count_obj_alloc3_MissionData_BSTHeapSTLAllocator_MissionData_2__{ REL::Offset(
 			0x0440EC80) };
 		inline constexpr std::array<REL::Offset, 1>
@@ -38138,12 +38138,12 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			std___Ref_count_obj_alloc3_SaveLoad__BlockingIOWaiter_BSTHeapSTLAllocator_SaveLoad__BlockingIOWaiter_2__{ REL::Offset(0x0440ECA8) };
 		inline constexpr std::array<REL::Offset, 1>
-			std___Ref_count_obj_alloc3_SnapData__BuildingLevel_BSTHeapSTLAllocator_SnapData__BuildingLevel_2__{ REL::Offset(0x04397748) };
+													std___Ref_count_obj_alloc3_SnapData__BuildingLevel_BSTHeapSTLAllocator_SnapData__BuildingLevel_2__{ REL::Offset(0x04397748) };
 		inline constexpr std::array<REL::Offset, 1> std___Ref_count_obj_alloc3_SnapData__Stairway_BSTHeapSTLAllocator_SnapData__Stairway_2__{
 			REL::Offset(0x04397770)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			std___Ref_count_obj_alloc3_SnapData__StartingFoundation_BSTHeapSTLAllocator_SnapData__StartingFoundation_2__{ REL::Offset(0x04397720) };
+													std___Ref_count_obj_alloc3_SnapData__StartingFoundation_BSTHeapSTLAllocator_SnapData__StartingFoundation_2__{ REL::Offset(0x04397720) };
 		inline constexpr std::array<REL::Offset, 1> std___Ref_count_obj_alloc3_SnapData__Workshop_BSTHeapSTLAllocator_SnapData__Workshop_2__{
 			REL::Offset(0x043976F8)
 		};
@@ -38166,7 +38166,7 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1>
 			std___Ref_count_obj_alloc3_Workshop__SingleWorkshopItem_BSTHeapSTLAllocator_Workshop__SingleWorkshopItem_2__{ REL::Offset(0x04459728) };
 		inline constexpr std::array<REL::Offset, 1>
-			std___Ref_count_obj_alloc3_Workshop__WireWorkshopItem_BSTHeapSTLAllocator_Workshop__WireWorkshopItem_2__{ REL::Offset(0x0455E640) };
+													std___Ref_count_obj_alloc3_Workshop__WireWorkshopItem_BSTHeapSTLAllocator_Workshop__WireWorkshopItem_2__{ REL::Offset(0x0455E640) };
 		inline constexpr std::array<REL::Offset, 1> std___Ref_count_obj_alloc3___BiomePlacement_BSTHeapSTLAllocator___BiomePlacement_2__{ REL::Offset(
 			0x044D3B30) };
 		inline constexpr std::array<REL::Offset, 1>
@@ -38191,12 +38191,12 @@ namespace RE
 			REL::Offset(0x043710A8)
 		};
 		inline constexpr std::array<REL::Offset, 1>
-			std___Ref_count_resource_BGSTerrainBlock__HeightMapBezier_std__default_delete_BGSTerrainBlock__HeightMapBezier__{ REL::Offset(
-				0x043A0400) };
+													std___Ref_count_resource_BGSTerrainBlock__HeightMapBezier_std__default_delete_BGSTerrainBlock__HeightMapBezier__{ REL::Offset(
+                0x043A0400) };
 		inline constexpr std::array<REL::Offset, 1> std___Ref_count_resource_BSBind__Snapshot__lambda_23104a4f4bc9e99a333407e5532b9c2e__{ REL::Offset(
 			0x045986D8) };
 		inline constexpr std::array<REL::Offset, 1>
-			std___Ref_count_resource_BSChargenAPI__RestorePoint_std__default_delete_BSChargenAPI__RestorePoint__{ REL::Offset(0x044AEDB8) };
+													std___Ref_count_resource_BSChargenAPI__RestorePoint_std__default_delete_BSChargenAPI__RestorePoint__{ REL::Offset(0x044AEDB8) };
 		inline constexpr std::array<REL::Offset, 1> std___Ref_count_resource_BSMenu3D__Scene_stl__detail__AlignedDelete_BSMenu3D__Scene__{
 			REL::Offset(0x044B87C0)
 		};
@@ -38226,8 +38226,8 @@ namespace RE
 			std___Ref_count_resource_Workshop__PowerLinkWorkshopItem_stl__detail__AlignedDelete_Workshop__PowerLinkWorkshopItem__{ REL::Offset(
 				0x0455BBA0) };
 		inline constexpr std::array<REL::Offset, 1>
-			std___Ref_count_resource_Workshop__TransferLinkWorkshopItem_stl__detail__AlignedDelete_Workshop__TransferLinkWorkshopItem__{ REL::Offset(
-				0x0455D428) };
+													std___Ref_count_resource_Workshop__TransferLinkWorkshopItem_stl__detail__AlignedDelete_Workshop__TransferLinkWorkshopItem__{ REL::Offset(
+                0x0455D428) };
 		inline constexpr std::array<REL::Offset, 1> std___Root_node{ REL::Offset(0x03F29060) };
 		inline constexpr std::array<REL::Offset, 1> std__bad_alloc{ REL::Offset(0x040743B8) };
 		inline constexpr std::array<REL::Offset, 1> std__bad_array_new_length{ REL::Offset(0x040743D0) };
@@ -38263,8 +38263,8 @@ namespace RE
 		inline constexpr std::array<REL::Offset, 1> std__runtime_error{ REL::Offset(0x04074520) };
 		inline constexpr std::array<REL::Offset, 1> std__underflow_error{ REL::Offset(0x04074550) };
 		inline constexpr std::array<REL::Offset, 1>
-			std__wstring_convert_std__codecvt_utf8_utf16_wchar_t_1114111_0__wchar_t_std__allocator_wchar_t__std__allocator_char__{ REL::Offset(
-				0x040DE000) };
+													std__wstring_convert_std__codecvt_utf8_utf16_wchar_t_1114111_0__wchar_t_std__allocator_wchar_t__std__allocator_char__{ REL::Offset(
+                0x040DE000) };
 		inline constexpr std::array<REL::Offset, 1> stl____DefaultThreadPool{ REL::Offset(0x0478DD08) };
 		inline constexpr std::array<REL::Offset, 1> stl__local_function_detail__ILocalFunction_BSEventNotifyControl_BSTEventDetail__SinkBase_{
 			REL::Offset(0x0433E258)
@@ -40540,7 +40540,7 @@ namespace RE
 				REL::Offset(0x044AD7C8)
 			};
 		inline constexpr std::array<REL::Offset, 1>
-			stl__local_function_detail__LocalFunctionImpl__lambda_758e7edb6b69f583c668890aba95f6b6__void_unsignedint_{ REL::Offset(0x04384730) };
+													stl__local_function_detail__LocalFunctionImpl__lambda_758e7edb6b69f583c668890aba95f6b6__void_unsignedint_{ REL::Offset(0x04384730) };
 		inline constexpr std::array<REL::Offset, 1> stl__local_function_detail__LocalFunctionImpl__lambda_75bf11828930bc2b607da2f9a15749eb__void_{
 			REL::Offset(0x0457D4D8)
 		};
@@ -41452,8 +41452,8 @@ namespace RE
 			stl__local_function_detail__LocalFunctionImpl__lambda_a7e7117ae0fd17fd78bdbbd6b5cace48__BSVisit__BSVisitControl_NiAVObject_{ REL::Offset(
 				0x0457CA28) };
 		inline constexpr std::array<REL::Offset, 1>
-			stl__local_function_detail__LocalFunctionImpl__lambda_a81636dd4df516079a7e9bad06f7e97c__BSVisit__BSVisitControl_NiAVObject_{ REL::Offset(
-				0x04475F38) };
+													stl__local_function_detail__LocalFunctionImpl__lambda_a81636dd4df516079a7e9bad06f7e97c__BSVisit__BSVisitControl_NiAVObject_{ REL::Offset(
+                0x04475F38) };
 		inline constexpr std::array<REL::Offset, 1> stl__local_function_detail__LocalFunctionImpl__lambda_a8167dab7e874a7716e1205804804a1a__bool_{
 			REL::Offset(0x043CD3E8)
 		};
@@ -46447,5 +46447,5 @@ namespace RE
 				REL::Offset(0x0456F9F8)
 			};
 		inline constexpr std::array<REL::Offset, 1> winrt__impl__make_marshaler__2__marshaler{ REL::Offset(0x0456FA50) };
-	} // namespace VTABLE
-} // namespace RE
+	}  // namespace VTABLE
+}  // namespace RE
