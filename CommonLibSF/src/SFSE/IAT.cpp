@@ -48,20 +48,11 @@
 
 namespace SFSE
 {
-	std::uintptr_t GetIATAddr(std::string_view a_dll, std::string_view a_function)
-	{
-		return reinterpret_cast<std::uintptr_t>(GetIATPtr(std::move(a_dll), std::move(a_function)));
-	}
+	std::uintptr_t GetIATAddr(std::string_view a_dll, std::string_view a_function) { return reinterpret_cast<std::uintptr_t>(GetIATPtr(std::move(a_dll), std::move(a_function))); }
 
-	std::uintptr_t GetIATAddr(void* a_module, std::string_view a_dll, std::string_view a_function)
-	{
-		return reinterpret_cast<std::uintptr_t>(GetIATPtr(a_module, std::move(a_dll), std::move(a_function)));
-	}
+	std::uintptr_t GetIATAddr(void* a_module, std::string_view a_dll, std::string_view a_function) { return reinterpret_cast<std::uintptr_t>(GetIATPtr(a_module, std::move(a_dll), std::move(a_function))); }
 
-	void* GetIATPtr(std::string_view a_dll, std::string_view a_function)
-	{
-		return GetIATPtr(REL::Module::get().pointer(), std::move(a_dll), std::move(a_function));
-	}
+	void* GetIATPtr(std::string_view a_dll, std::string_view a_function) { return GetIATPtr(REL::Module::get().pointer(), std::move(a_dll), std::move(a_function)); }
 
 	// https://guidedhacking.com/attachments/pe_imptbl_headers-jpg.2241/
 	void* GetIATPtr(void* a_module, std::string_view a_dll, std::string_view a_function)

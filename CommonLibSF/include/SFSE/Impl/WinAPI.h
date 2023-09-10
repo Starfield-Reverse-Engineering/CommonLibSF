@@ -421,11 +421,9 @@ namespace SFSE::WinAPI
 
 	[[nodiscard]] HMODULE GetModuleHandle(const wchar_t* a_moduleName) noexcept;
 
-	[[nodiscard]] std::uint32_t GetPrivateProfileString(const char* a_appName, const char* a_keyName, const char* a_default, char* a_outString,
-		std::uint32_t a_size, const char* a_fileName) noexcept;
+	[[nodiscard]] std::uint32_t GetPrivateProfileString(const char* a_appName, const char* a_keyName, const char* a_default, char* a_outString, std::uint32_t a_size, const char* a_fileName) noexcept;
 
-	[[nodiscard]] std::uint32_t GetPrivateProfileString(const wchar_t* a_appName, const wchar_t* a_keyName, const wchar_t* a_default,
-		wchar_t* a_outString, std::uint32_t a_size, const wchar_t* a_fileName) noexcept;
+	[[nodiscard]] std::uint32_t GetPrivateProfileString(const wchar_t* a_appName, const wchar_t* a_keyName, const wchar_t* a_default, wchar_t* a_outString, std::uint32_t a_size, const wchar_t* a_fileName) noexcept;
 
 	[[nodiscard]] void* GetProcAddress(void* a_module, const char* a_procName) noexcept;
 
@@ -441,8 +439,7 @@ namespace SFSE::WinAPI
 
 	std::int32_t MessageBox(void* a_wnd, const wchar_t* a_text, const wchar_t* a_caption, unsigned int a_type) noexcept;
 
-	[[nodiscard]] int MultiByteToWideChar(unsigned int a_codePage, std::uint32_t a_flags, const char* a_multiByteStr, int a_multiByte,
-		wchar_t* a_wideCharStr, int a_wideChar);
+	[[nodiscard]] int MultiByteToWideChar(unsigned int a_codePage, std::uint32_t a_flags, const char* a_multiByteStr, int a_multiByte, wchar_t* a_wideCharStr, int a_wideChar);
 
 	void OutputDebugString(const char* a_outputString) noexcept;
 
@@ -450,8 +447,7 @@ namespace SFSE::WinAPI
 
 	long RegGetValueW(HKEY hkey, const char* subKey, const char* value, unsigned long flags, unsigned long* type, void* data, unsigned long* length);
 
-	long RegGetValueW(HKEY hkey, const wchar_t* subKey, const wchar_t* value, unsigned long flags, unsigned long* type, void* data,
-		unsigned long* length);
+	long RegGetValueW(HKEY hkey, const wchar_t* subKey, const wchar_t* value, unsigned long flags, unsigned long* type, void* data, unsigned long* length);
 
 	[[nodiscard]] int ShowCursor(bool bShow) noexcept;
 
@@ -469,8 +465,7 @@ namespace SFSE::WinAPI
 
 	[[nodiscard]] bool VirtualProtect(void* a_address, std::size_t a_size, std::uint32_t a_newProtect, std::uint32_t* a_oldProtect) noexcept;
 
-	[[nodiscard]] int WideCharToMultiByte(unsigned int a_codePage, std::uint32_t a_flags, const wchar_t* a_wideCharStr, int a_wideChar,
-		char* a_multiByteStr, int a_multiByte, const char* a_defaultChar, int* a_usedDefaultChar);
+	[[nodiscard]] int WideCharToMultiByte(unsigned int a_codePage, std::uint32_t a_flags, const wchar_t* a_wideCharStr, int a_wideChar, char* a_multiByteStr, int a_multiByte, const char* a_defaultChar, int* a_usedDefaultChar);
 }  // namespace SFSE::WinAPI
 
 namespace RE::DirectX

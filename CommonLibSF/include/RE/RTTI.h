@@ -13,10 +13,7 @@ namespace RE
 		public:
 			virtual ~type_info();  // 00
 
-			[[nodiscard]] const char* mangled_name() const noexcept
-			{
-				return _name;
-			}
+			[[nodiscard]] const char* mangled_name() const noexcept { return _name; }
 
 		private:
 			// members
@@ -39,40 +36,20 @@ namespace RE
 
 			constexpr RVA() noexcept = default;
 
-			constexpr RVA(std::uint32_t a_rva) noexcept :
-				_rva(a_rva)
-			{}
+			constexpr RVA(std::uint32_t a_rva) noexcept : _rva(a_rva) {}
 
-			[[nodiscard]] pointer get() const
-			{
-				return is_good() ? REL::Relocation<T*>{ REL::Offset(_rva) }.get() : nullptr;
-			}
+			[[nodiscard]] pointer get() const { return is_good() ? REL::Relocation<T*>{ REL::Offset(_rva) }.get() : nullptr; }
 
-			[[nodiscard]] std::uint32_t offset() const noexcept
-			{
-				return _rva;
-			}
+			[[nodiscard]] std::uint32_t offset() const noexcept { return _rva; }
 
-			[[nodiscard]] reference operator*() const
-			{
-				return *get();
-			}
+			[[nodiscard]] reference operator*() const { return *get(); }
 
-			[[nodiscard]] pointer operator->() const
-			{
-				return get();
-			}
+			[[nodiscard]] pointer operator->() const { return get(); }
 
-			[[nodiscard]] explicit constexpr operator bool() const noexcept
-			{
-				return is_good();
-			}
+			[[nodiscard]] explicit constexpr operator bool() const noexcept { return is_good(); }
 
 		protected:
-			[[nodiscard]] constexpr bool is_good() const noexcept
-			{
-				return _rva != 0;
-			}
+			[[nodiscard]] constexpr bool is_good() const noexcept { return _rva != 0; }
 
 			// members
 			std::uint32_t _rva{ 0 };  // 00
