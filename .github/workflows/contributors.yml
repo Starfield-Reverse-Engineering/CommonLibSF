@@ -1,8 +1,8 @@
 name: Contributors
 
 on:
-  push:
-    branches: main
+  schedule:
+    - cron: "0 12 * * 1" # Every Monday at noon
   workflow_dispatch:
 
 jobs:
@@ -22,6 +22,7 @@ jobs:
         uses: jaywcjlove/github-action-modify-file-content@main
         with:
           path: README.md
+          message: "chore: update contributors"
           openDelimiter: "<!--CONTRIBUTORS_BEGIN-->"
           closeDelimiter: "<!--CONTRIBUTORS_END-->"
           body: "${{steps.contributors.outputs.htmlTable}}"
