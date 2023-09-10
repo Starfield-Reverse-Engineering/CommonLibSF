@@ -64,12 +64,11 @@ static_assert(std::is_integral_v<std::time_t> && sizeof(std::time_t) == sizeof(s
 #include "SFSE/Impl/WinAPI.h"
 #include "SFSE/Impl/XInputAPI.h"
 
-#define AsAddress(ptr)  std::bit_cast<std::uintptr_t>(ptr)
+#define AsAddress(ptr) std::bit_cast<std::uintptr_t>(ptr)
 #define AsPointer(addr) std::bit_cast<void*>(addr)
 #define stl_assert(cond, ...)                                     \
 	{                                                             \
-		if (!((cond)))                                            \
-		{                                                         \
+		if (!((cond))) {                                          \
 			SFSE::stl::report_and_fail(fmt::format(__VA_ARGS__)); \
 		}                                                         \
 	}
@@ -83,7 +82,7 @@ namespace SFSE
 		template <class CharT>
 		using basic_zstring = std::basic_string_view<CharT>;
 
-		using zstring  = basic_zstring<char>;
+		using zstring = basic_zstring<char>;
 		using zwstring = basic_zstring<wchar_t>;
 
 		// owning pointer
@@ -103,19 +102,18 @@ namespace SFSE
 			template <class CharT, std::size_t N>
 			struct string
 			{
-				using char_type       = CharT;
-				using pointer         = char_type*;
-				using const_pointer   = const char_type*;
-				using reference       = char_type&;
+				using char_type = CharT;
+				using pointer = char_type*;
+				using const_pointer = const char_type*;
+				using reference = char_type&;
 				using const_reference = const char_type&;
-				using size_type       = std::size_t;
+				using size_type = std::size_t;
 
 				static constexpr auto npos = static_cast<std::size_t>(-1);
 
 				consteval string(const_pointer a_string) noexcept
 				{
-					for (size_type i = 0; i < N; ++i)
-					{
+					for (size_type i = 0; i < N; ++i) {
 						c[i] = a_string[i];
 					}
 				}
@@ -132,35 +130,17 @@ namespace SFSE
 					return c[a_pos];
 				}
 
-				[[nodiscard]] consteval const_reference back() const noexcept
-				{
-					return (*this)[size() - 1];
-				}
+				[[nodiscard]] consteval const_reference back() const noexcept { return (*this)[size() - 1]; }
 
-				[[nodiscard]] consteval const_pointer data() const noexcept
-				{
-					return c;
-				}
+				[[nodiscard]] consteval const_pointer data() const noexcept { return c; }
 
-				[[nodiscard]] consteval bool empty() const noexcept
-				{
-					return this->size() == 0;
-				}
+				[[nodiscard]] consteval bool empty() const noexcept { return this->size() == 0; }
 
-				[[nodiscard]] consteval const_reference front() const noexcept
-				{
-					return (*this)[0];
-				}
+				[[nodiscard]] consteval const_reference front() const noexcept { return (*this)[0]; }
 
-				[[nodiscard]] consteval size_type length() const noexcept
-				{
-					return N;
-				}
+				[[nodiscard]] consteval size_type length() const noexcept { return N; }
 
-				[[nodiscard]] consteval size_type size() const noexcept
-				{
-					return length();
-				}
+				[[nodiscard]] consteval size_type size() const noexcept { return length(); }
 
 				template <std::size_t POS = 0, std::size_t COUNT = npos>
 				[[nodiscard]] consteval auto substr() const noexcept
@@ -173,47 +153,40 @@ namespace SFSE
 
 			template <class CharT, std::size_t N>
 			string(const CharT (&)[N]) -> string<CharT, N - 1>;
-		} // namespace nttp
+		}  // namespace nttp
 
-		template <class EF>                                       //
-			requires(std::invocable<std::remove_reference_t<EF>>) //
+		template <class EF>                                        //
+			requires(std::invocable<std::remove_reference_t<EF>>)  //
 		class scope_exit
 		{
 		public:
 			// 1)
 			template <class Fn>
-			explicit scope_exit(Fn&& a_fn)                                                                    //
-				noexcept(std::is_nothrow_constructible_v<EF, Fn> || std::is_nothrow_constructible_v<EF, Fn&>) //
+			explicit scope_exit(Fn&& a_fn)                                                                     //
+				noexcept(std::is_nothrow_constructible_v<EF, Fn> || std::is_nothrow_constructible_v<EF, Fn&>)  //
 				requires(!std::is_same_v<std::remove_cvref_t<Fn>, scope_exit> && std::is_constructible_v<EF, Fn>)
 			{
 				static_assert(std::invocable<Fn>);
 
-				if constexpr (!std::is_lvalue_reference_v<Fn> && std::is_nothrow_constructible_v<EF, Fn>)
-				{
+				if constexpr (!std::is_lvalue_reference_v<Fn> && std::is_nothrow_constructible_v<EF, Fn>) {
 					_fn.emplace(std::forward<Fn>(a_fn));
-				}
-				else
-				{
+				} else {
 					_fn.emplace(a_fn);
 				}
 			}
 
 			// 2)
-			scope_exit(scope_exit&& a_rhs)                                                                     //
-				noexcept(std::is_nothrow_move_constructible_v<EF> || std::is_nothrow_copy_constructible_v<EF>) //
+			scope_exit(scope_exit&& a_rhs)                                                                      //
+				noexcept(std::is_nothrow_move_constructible_v<EF> || std::is_nothrow_copy_constructible_v<EF>)  //
 				requires(std::is_nothrow_move_constructible_v<EF> || std::is_copy_constructible_v<EF>)
 			{
 				static_assert(!(std::is_nothrow_move_constructible_v<EF> && !std::is_move_constructible_v<EF>));
 				static_assert(!(!std::is_nothrow_move_constructible_v<EF> && !std::is_copy_constructible_v<EF>));
 
-				if (a_rhs.active())
-				{
-					if constexpr (std::is_nothrow_move_constructible_v<EF>)
-					{
+				if (a_rhs.active()) {
+					if constexpr (std::is_nothrow_move_constructible_v<EF>) {
 						_fn.emplace(std::forward<EF>(*a_rhs._fn));
-					}
-					else
-					{
+					} else {
 						_fn.emplace(a_rhs._fn);
 					}
 					a_rhs.release();
@@ -225,22 +198,15 @@ namespace SFSE
 
 			~scope_exit() noexcept
 			{
-				if (_fn.has_value())
-				{
+				if (_fn.has_value()) {
 					(*_fn)();
 				}
 			}
 
-			void release() noexcept
-			{
-				_fn.reset();
-			}
+			void release() noexcept { _fn.reset(); }
 
 		private:
-			[[nodiscard]] bool active() const noexcept
-			{
-				return _fn.has_value();
-			}
+			[[nodiscard]] bool active() const noexcept { return _fn.has_value(); }
 
 			std::optional<std::remove_reference_t<EF>> _fn;
 		};
@@ -252,7 +218,7 @@ namespace SFSE
 		class enumeration
 		{
 		public:
-			using enum_type       = Enum;
+			using enum_type = Enum;
 			using underlying_type = Underlying;
 
 			static_assert(std::is_enum_v<enum_type>, "enum_type must be an enum");
@@ -264,20 +230,22 @@ namespace SFSE
 
 			constexpr enumeration(enumeration&&) noexcept = default;
 
-			template <class U2> // NOLINTNEXTLINE(google-explicit-constructor)
-			constexpr enumeration(enumeration<Enum, U2> a_rhs) noexcept : _impl(static_cast<underlying_type>(a_rhs.get()))
+			template <class U2>  // NOLINTNEXTLINE(google-explicit-constructor)
+			constexpr enumeration(enumeration<Enum, U2> a_rhs) noexcept :
+				_impl(static_cast<underlying_type>(a_rhs.get()))
 			{}
 
 			template <class... Args>
-			constexpr enumeration(Args... a_values) noexcept //
+			constexpr enumeration(Args... a_values) noexcept  //
 				requires(std::same_as<Args, enum_type> && ...)
-				: _impl((static_cast<underlying_type>(a_values) | ...))
+				:
+				_impl((static_cast<underlying_type>(a_values) | ...))
 			{}
 
 			~enumeration() noexcept = default;
 
 			constexpr enumeration& operator=(const enumeration&) noexcept = default;
-			constexpr enumeration& operator=(enumeration&&) noexcept      = default;
+			constexpr enumeration& operator=(enumeration&&) noexcept = default;
 
 			template <class U2>
 			constexpr enumeration& operator=(enumeration<Enum, U2> a_rhs) noexcept
@@ -291,28 +259,16 @@ namespace SFSE
 				return *this;
 			}
 
-			[[nodiscard]] explicit constexpr operator bool() const noexcept
-			{
-				return _impl != static_cast<underlying_type>(0);
-			}
+			[[nodiscard]] explicit constexpr operator bool() const noexcept { return _impl != static_cast<underlying_type>(0); }
 
-			[[nodiscard]] constexpr enum_type operator*() const noexcept
-			{
-				return get();
-			}
+			[[nodiscard]] constexpr enum_type operator*() const noexcept { return get(); }
 
-			[[nodiscard]] constexpr enum_type get() const noexcept
-			{
-				return static_cast<enum_type>(_impl);
-			}
+			[[nodiscard]] constexpr enum_type get() const noexcept { return static_cast<enum_type>(_impl); }
 
-			[[nodiscard]] constexpr underlying_type underlying() const noexcept
-			{
-				return _impl;
-			}
+			[[nodiscard]] constexpr underlying_type underlying() const noexcept { return _impl; }
 
 			template <class... Args>
-			constexpr enumeration& set(Args... a_args) noexcept //
+			constexpr enumeration& set(Args... a_args) noexcept  //
 				requires(std::same_as<Args, enum_type> && ...)
 			{
 				_impl |= (static_cast<underlying_type>(a_args) | ...);
@@ -320,7 +276,7 @@ namespace SFSE
 			}
 
 			template <class... Args>
-			constexpr enumeration& reset(Args... a_args) noexcept //
+			constexpr enumeration& reset(Args... a_args) noexcept  //
 				requires(std::same_as<Args, enum_type> && ...)
 			{
 				_impl &= ~(static_cast<underlying_type>(a_args) | ...);
@@ -328,21 +284,21 @@ namespace SFSE
 			}
 
 			template <class... Args>
-			[[nodiscard]] constexpr bool any(Args... a_args) const noexcept //
+			[[nodiscard]] constexpr bool any(Args... a_args) const noexcept  //
 				requires(std::same_as<Args, enum_type> && ...)
 			{
 				return (_impl & (static_cast<underlying_type>(a_args) | ...)) != static_cast<underlying_type>(0);
 			}
 
 			template <class... Args>
-			[[nodiscard]] constexpr bool all(Args... a_args) const noexcept //
+			[[nodiscard]] constexpr bool all(Args... a_args) const noexcept  //
 				requires(std::same_as<Args, enum_type> && ...)
 			{
 				return (_impl & (static_cast<underlying_type>(a_args) | ...)) == (static_cast<underlying_type>(a_args) | ...);
 			}
 
 			template <class... Args>
-			[[nodiscard]] constexpr bool none(Args... a_args) const noexcept //
+			[[nodiscard]] constexpr bool none(Args... a_args) const noexcept  //
 				requires(std::same_as<Args, enum_type> && ...)
 			{
 				return (_impl & (static_cast<underlying_type>(a_args) | ...)) == static_cast<underlying_type>(0);
@@ -354,8 +310,8 @@ namespace SFSE
 
 		template <class... Args>
 		enumeration(Args...) -> enumeration<std::common_type_t<Args...>, std::underlying_type_t<std::common_type_t<Args...>>>;
-	} // namespace stl
-} // namespace SFSE
+	}  // namespace stl
+}  // namespace SFSE
 
 #define SFSE_MAKE_LOGICAL_OP(a_op, a_result)                                                                    \
 	template <class E, class U1, class U2>                                                                      \
@@ -383,42 +339,41 @@ namespace SFSE
 		return a_enum = a_enum a_op a_shift;                                                                      \
 	}
 
-#define SFSE_MAKE_ENUMERATION_OP(a_op)                                                                                   \
-	template <class E, class U1, class U2>                                                                               \
-	[[nodiscard]] constexpr auto operator a_op(enumeration<E, U1> a_lhs, enumeration<E, U2> a_rhs) noexcept              \
-		-> enumeration<E, std::common_type_t<U1, U2>>                                                                    \
-	{                                                                                                                    \
-		return static_cast<E>(static_cast<U1>(a_lhs.get()) a_op static_cast<U2>(a_rhs.get()));                           \
-	}                                                                                                                    \
-                                                                                                                         \
-	template <class E, class U>                                                                                          \
-	[[nodiscard]] constexpr auto operator a_op(enumeration<E, U> a_lhs, E a_rhs) noexcept -> enumeration<E, U>           \
-	{                                                                                                                    \
-		return static_cast<E>(static_cast<U>(a_lhs.get()) a_op static_cast<U>(a_rhs));                                   \
-	}                                                                                                                    \
-                                                                                                                         \
-	template <class E, class U>                                                                                          \
-	[[nodiscard]] constexpr auto operator a_op(E a_lhs, enumeration<E, U> a_rhs) noexcept -> enumeration<E, U>           \
-	{                                                                                                                    \
-		return static_cast<E>(static_cast<U>(a_lhs) a_op static_cast<U>(a_rhs.get()));                                   \
-	}                                                                                                                    \
-                                                                                                                         \
-	template <class E, class U1, class U2>                                                                               \
-	constexpr auto operator a_op##=(enumeration<E, U1>& a_lhs, enumeration<E, U2> a_rhs) noexcept -> enumeration<E, U1>& \
-	{                                                                                                                    \
-		return a_lhs = a_lhs a_op a_rhs;                                                                                 \
-	}                                                                                                                    \
-                                                                                                                         \
-	template <class E, class U>                                                                                          \
-	constexpr auto operator a_op##=(enumeration<E, U>& a_lhs, E a_rhs) noexcept -> enumeration<E, U>&                    \
-	{                                                                                                                    \
-		return a_lhs = a_lhs a_op a_rhs;                                                                                 \
-	}                                                                                                                    \
-                                                                                                                         \
-	template <class E, class U>                                                                                          \
-	constexpr auto operator a_op##=(E& a_lhs, enumeration<E, U> a_rhs) noexcept -> E&                                    \
-	{                                                                                                                    \
-		return a_lhs = *(a_lhs a_op a_rhs);                                                                              \
+#define SFSE_MAKE_ENUMERATION_OP(a_op)                                                                                                                    \
+	template <class E, class U1, class U2>                                                                                                                \
+	[[nodiscard]] constexpr auto operator a_op(enumeration<E, U1> a_lhs, enumeration<E, U2> a_rhs) noexcept -> enumeration<E, std::common_type_t<U1, U2>> \
+	{                                                                                                                                                     \
+		return static_cast<E>(static_cast<U1>(a_lhs.get()) a_op static_cast<U2>(a_rhs.get()));                                                            \
+	}                                                                                                                                                     \
+                                                                                                                                                          \
+	template <class E, class U>                                                                                                                           \
+	[[nodiscard]] constexpr auto operator a_op(enumeration<E, U> a_lhs, E a_rhs) noexcept -> enumeration<E, U>                                            \
+	{                                                                                                                                                     \
+		return static_cast<E>(static_cast<U>(a_lhs.get()) a_op static_cast<U>(a_rhs));                                                                    \
+	}                                                                                                                                                     \
+                                                                                                                                                          \
+	template <class E, class U>                                                                                                                           \
+	[[nodiscard]] constexpr auto operator a_op(E a_lhs, enumeration<E, U> a_rhs) noexcept -> enumeration<E, U>                                            \
+	{                                                                                                                                                     \
+		return static_cast<E>(static_cast<U>(a_lhs) a_op static_cast<U>(a_rhs.get()));                                                                    \
+	}                                                                                                                                                     \
+                                                                                                                                                          \
+	template <class E, class U1, class U2>                                                                                                                \
+	constexpr auto operator a_op##=(enumeration<E, U1>& a_lhs, enumeration<E, U2> a_rhs) noexcept -> enumeration<E, U1>&                                  \
+	{                                                                                                                                                     \
+		return a_lhs = a_lhs a_op a_rhs;                                                                                                                  \
+	}                                                                                                                                                     \
+                                                                                                                                                          \
+	template <class E, class U>                                                                                                                           \
+	constexpr auto operator a_op##=(enumeration<E, U>& a_lhs, E a_rhs) noexcept -> enumeration<E, U>&                                                     \
+	{                                                                                                                                                     \
+		return a_lhs = a_lhs a_op a_rhs;                                                                                                                  \
+	}                                                                                                                                                     \
+                                                                                                                                                          \
+	template <class E, class U>                                                                                                                           \
+	constexpr auto operator a_op##=(E& a_lhs, enumeration<E, U> a_rhs) noexcept -> E&                                                                     \
+	{                                                                                                                                                     \
+		return a_lhs = *(a_lhs a_op a_rhs);                                                                                                               \
 	}
 
 #define SFSE_MAKE_INCREMENTER_OP(a_op)                                                                            \
@@ -461,8 +416,8 @@ namespace SFSE
 		SFSE_MAKE_ENUMERATION_OP(+);
 		SFSE_MAKE_ENUMERATION_OP(-);
 
-		SFSE_MAKE_INCREMENTER_OP(+); // ++
-		SFSE_MAKE_INCREMENTER_OP(-); // --
+		SFSE_MAKE_INCREMENTER_OP(+);  // ++
+		SFSE_MAKE_INCREMENTER_OP(-);  // --
 
 		template <class T>
 		class atomic_ref : public std::atomic_ref<T>
@@ -473,9 +428,8 @@ namespace SFSE
 		public:
 			using value_type = typename super::value_type;
 
-			explicit atomic_ref(volatile T& a_obj) noexcept(std::is_nothrow_constructible_v<super, value_type&>)
-				: super(const_cast<value_type&>(a_obj))
-			{}
+			explicit atomic_ref(volatile T& a_obj) noexcept(std::is_nothrow_constructible_v<super, value_type&>) :
+				super(const_cast<value_type&>(a_obj)) {}
 
 			using super::super;
 			using super::operator=;
@@ -505,15 +459,9 @@ namespace SFSE
 		template <class T>
 		struct ssizeof
 		{
-			[[nodiscard]] constexpr operator std::ptrdiff_t() const noexcept
-			{
-				return value;
-			}
+			[[nodiscard]] constexpr operator std::ptrdiff_t() const noexcept { return value; }
 
-			[[nodiscard]] constexpr std::ptrdiff_t operator()() const noexcept
-			{
-				return value;
-			}
+			[[nodiscard]] constexpr std::ptrdiff_t operator()() const noexcept { return value; }
 
 			static constexpr auto value = static_cast<std::ptrdiff_t>(sizeof(T));
 		};
@@ -525,20 +473,13 @@ namespace SFSE
 		[[nodiscard]] auto adjust_pointer(U* a_ptr, std::ptrdiff_t a_adjust) noexcept
 		{
 			auto addr = a_ptr ? reinterpret_cast<std::uintptr_t>(a_ptr) + a_adjust : 0;
-			if constexpr (std::is_const_v<U> && std::is_volatile_v<U>)
-			{
+			if constexpr (std::is_const_v<U> && std::is_volatile_v<U>) {
 				return reinterpret_cast<std::add_cv_t<T>*>(addr);
-			}
-			else if constexpr (std::is_const_v<U>)
-			{
+			} else if constexpr (std::is_const_v<U>) {
 				return reinterpret_cast<std::add_const_t<T>*>(addr);
-			}
-			else if constexpr (std::is_volatile_v<U>)
-			{
+			} else if constexpr (std::is_volatile_v<U>) {
 				return reinterpret_cast<std::add_volatile_t<T>*>(addr);
-			}
-			else
-			{
+			} else {
 				return reinterpret_cast<T*>(addr);
 			}
 		}
@@ -547,8 +488,7 @@ namespace SFSE
 		bool emplace_vtable(T* a_ptr)
 		{
 			auto address = T::VTABLE[0].address();
-			if (!address)
-			{
+			if (!address) {
 				return false;
 			}
 			reinterpret_cast<std::uintptr_t*>(a_ptr)[0] = address;
@@ -564,7 +504,7 @@ namespace SFSE
 		}
 
 		template <class... Args>
-		[[nodiscard]] inline auto pun_bits(Args... a_args) //
+		[[nodiscard]] inline auto pun_bits(Args... a_args)  //
 			requires(std::same_as<std::remove_cv_t<Args>, bool> && ...)
 		{
 			constexpr auto ARGC = sizeof...(Args);
@@ -573,35 +513,26 @@ namespace SFSE
 			std::size_t       i = 0;
 			((bits[i++] = a_args), ...);
 
-			if constexpr (ARGC <= std::numeric_limits<unsigned long>::digits)
-			{
+			if constexpr (ARGC <= std::numeric_limits<unsigned long>::digits) {
 				return bits.to_ulong();
-			}
-			else if constexpr (ARGC <= std::numeric_limits<unsigned long long>::digits)
-			{
+			} else if constexpr (ARGC <= std::numeric_limits<unsigned long long>::digits) {
 				return bits.to_ullong();
-			}
-			else
-			{
+			} else {
 				static_assert(false && sizeof...(Args));
 			}
 		}
 
 		[[nodiscard]] inline auto utf8_to_utf16(std::string_view a_in) noexcept -> std::optional<std::wstring>
 		{
-			const auto cvt = [&](wchar_t* a_dst, std::size_t a_length) {
-				return WinAPI::MultiByteToWideChar(CP_UTF8, 0, a_in.data(), static_cast<int>(a_in.length()), a_dst, static_cast<int>(a_length));
-			};
+			const auto cvt = [&](wchar_t* a_dst, std::size_t a_length) { return WinAPI::MultiByteToWideChar(CP_UTF8, 0, a_in.data(), static_cast<int>(a_in.length()), a_dst, static_cast<int>(a_length)); };
 
 			const auto len = cvt(nullptr, 0);
-			if (len == 0)
-			{
+			if (len == 0) {
 				return std::nullopt;
 			}
 
 			std::wstring out(len, '\0');
-			if (cvt(out.data(), out.length()) == 0)
-			{
+			if (cvt(out.data(), out.length()) == 0) {
 				return std::nullopt;
 			}
 
@@ -610,20 +541,15 @@ namespace SFSE
 
 		[[nodiscard]] inline auto utf16_to_utf8(std::wstring_view a_in) noexcept -> std::optional<std::string>
 		{
-			const auto cvt = [&](char* a_dst, std::size_t a_length) {
-				return WinAPI::WideCharToMultiByte(CP_UTF8, 0, a_in.data(), static_cast<int>(a_in.length()), a_dst, static_cast<int>(a_length),
-				                                   nullptr, nullptr);
-			};
+			const auto cvt = [&](char* a_dst, std::size_t a_length) { return WinAPI::WideCharToMultiByte(CP_UTF8, 0, a_in.data(), static_cast<int>(a_in.length()), a_dst, static_cast<int>(a_length), nullptr, nullptr); };
 
 			const auto len = cvt(nullptr, 0);
-			if (len == 0)
-			{
+			if (len == 0) {
 				return std::nullopt;
 			}
 
 			std::string out(len, '\0');
-			if (cvt(out.data(), out.length()) == 0)
-			{
+			if (cvt(out.data(), out.length()) == 0) {
 				return std::nullopt;
 			}
 
@@ -633,13 +559,12 @@ namespace SFSE
 		inline bool report_and_error(std::string_view a_msg, bool a_fail = true, std::source_location a_loc = std::source_location::current())
 		{
 			const auto body = [&]() -> std::wstring {
-				const std::filesystem::path p        = a_loc.file_name();
+				const std::filesystem::path p = a_loc.file_name();
 				auto                        filename = p.lexically_normal().generic_string();
 
 				const std::regex r{ R"((?:^|[\\\/])(?:include|src)[\\\/](.*)$)" };
 				std::smatch      matches;
-				if (std::regex_search(filename, matches, r))
-				{
+				if (std::regex_search(filename, matches, r)) {
 					filename = matches[1].str();
 				}
 
@@ -652,28 +577,22 @@ namespace SFSE
 				buf.reserve(maxPath);
 				buf.resize(maxPath / 2);
 				std::uint32_t result = 0;
-				do
-				{
+				do {
 					buf.resize(buf.size() * 2);
 					result = GetModuleFileName(WinAPI::GetCurrentModule(), buf.data(), static_cast<std::uint32_t>(buf.size()));
 				} while (result && result == buf.size() && buf.size() <= (std::numeric_limits<std::uint32_t>::max)());
 
-				if (result && result != buf.size())
-				{
+				if (result && result != buf.size()) {
 					std::filesystem::path p(buf.begin(), buf.begin() + result);
 					return p.filename().native();
-				}
-				else
-				{
+				} else {
 					return L""s;
 				}
 			}();
 
-			spdlog::log(spdlog::source_loc{ a_loc.file_name(), static_cast<int>(a_loc.line()), a_loc.function_name() }, spdlog::level::critical,
-			            a_msg);
+			spdlog::log(spdlog::source_loc{ a_loc.file_name(), static_cast<int>(a_loc.line()), a_loc.function_name() }, spdlog::level::critical, a_msg);
 
-			if (a_fail)
-			{
+			if (a_fail) {
 				MessageBox(nullptr, body.c_str(), (caption.empty() ? nullptr : caption.c_str()), 0);
 				WinAPI::TerminateProcess(WinAPI::GetCurrentProcess(), EXIT_FAILURE);
 			}
@@ -687,7 +606,7 @@ namespace SFSE
 		}
 
 		template <class Enum>
-		[[nodiscard]] constexpr auto to_underlying(Enum a_val) noexcept //
+		[[nodiscard]] constexpr auto to_underlying(Enum a_val) noexcept  //
 			requires(std::is_enum_v<Enum>)
 		{
 			return static_cast<std::underlying_type_t<Enum>>(a_val);
@@ -696,35 +615,25 @@ namespace SFSE
 		template <class To, class From>
 		[[nodiscard]] To unrestricted_cast(From a_from) noexcept
 		{
-			if constexpr (std::is_same_v<std::remove_cv_t<From>, std::remove_cv_t<To>>)
-			{
+			if constexpr (std::is_same_v<std::remove_cv_t<From>, std::remove_cv_t<To>>) {
 				return To{ a_from };
 
 				// From != To
-			}
-			else if constexpr (std::is_reference_v<From>)
-			{
+			} else if constexpr (std::is_reference_v<From>) {
 				return stl::unrestricted_cast<To>(std::addressof(a_from));
 
 				// From: NOT reference
-			}
-			else if constexpr (std::is_reference_v<To>)
-			{
+			} else if constexpr (std::is_reference_v<To>) {
 				return *stl::unrestricted_cast<std::add_pointer_t<std::remove_reference_t<To>>>(a_from);
 
 				// To: NOT reference
-			}
-			else if constexpr (std::is_pointer_v<From> && std::is_pointer_v<To>)
-			{
+			} else if constexpr (std::is_pointer_v<From> && std::is_pointer_v<To>) {
 				return static_cast<To>(const_cast<void*>(static_cast<const volatile void*>(a_from)));
-			}
-			else if constexpr ((std::is_pointer_v<From> && std::is_integral_v<To>) || (std::is_integral_v<From> && std::is_pointer_v<To>))
-			{
+			} else if constexpr ((std::is_pointer_v<From> && std::is_integral_v<To>) || (std::is_integral_v<From> && std::is_pointer_v<To>)) {
 				return reinterpret_cast<To>(a_from);
-			}
-			else
-			{
-				union {
+			} else {
+				union
+				{
 					std::remove_cv_t<std::remove_reference_t<From>> from;
 					std::remove_cv_t<std::remove_reference_t<To>>   to;
 				};
@@ -733,8 +642,8 @@ namespace SFSE
 				return to;
 			}
 		}
-	} // namespace stl
-} // namespace SFSE
+	}  // namespace stl
+}  // namespace SFSE
 
 #undef SFSE_MAKE_INCREMENTER_OP
 #undef SFSE_MAKE_ENUMERATION_OP
@@ -744,16 +653,16 @@ namespace SFSE
 namespace RE
 {
 	using namespace std::literals;
-	namespace stl    = SFSE::stl;
+	namespace stl = SFSE::stl;
 	namespace WinAPI = SFSE::WinAPI;
-} // namespace RE
+}  // namespace RE
 
 namespace REL
 {
 	using namespace std::literals;
-	namespace stl    = SFSE::stl;
+	namespace stl = SFSE::stl;
 	namespace WinAPI = SFSE::WinAPI;
-} // namespace REL
+}  // namespace REL
 
 #include "REL/Relocation.h"
 
@@ -762,4 +671,4 @@ namespace REL
 #include "RE/Offsets_RTTI.h"
 #include "RE/Offsets_VTABLE.h"
 
-#undef cdecl // Workaround for Clang.
+#undef cdecl  // Workaround for Clang.

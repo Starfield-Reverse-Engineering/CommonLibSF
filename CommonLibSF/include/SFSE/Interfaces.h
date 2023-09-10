@@ -105,79 +105,45 @@ namespace SFSE
 			kVersion = 1,
 		};
 
-		constexpr void PluginVersion(std::uint32_t a_version) noexcept
-		{
-			pluginVersion = a_version;
-		}
+		constexpr void PluginVersion(std::uint32_t a_version) noexcept { pluginVersion = a_version; }
 
-		[[nodiscard]] constexpr std::uint32_t GetPluginVersion() const noexcept
-		{
-			return pluginVersion;
-		}
+		[[nodiscard]] constexpr std::uint32_t GetPluginVersion() const noexcept { return pluginVersion; }
 
-		constexpr void PluginName(std::string_view a_plugin) noexcept
-		{
-			SetCharBuffer(a_plugin, std::span{ pluginName });
-		}
+		constexpr void PluginName(std::string_view a_plugin) noexcept { SetCharBuffer(a_plugin, std::span{ pluginName }); }
 
-		[[nodiscard]] constexpr std::string_view GetPluginName() const noexcept
-		{
-			return std::string_view{ pluginName };
-		}
+		[[nodiscard]] constexpr std::string_view GetPluginName() const noexcept { return std::string_view{ pluginName }; }
 
-		constexpr void AuthorName(std::string_view a_name) noexcept
-		{
-			SetCharBuffer(a_name, std::span{ author });
-		}
+		constexpr void AuthorName(std::string_view a_name) noexcept { SetCharBuffer(a_name, std::span{ author }); }
 
-		[[nodiscard]] constexpr std::string_view GetAuthorName() const noexcept
-		{
-			return std::string_view{ author };
-		}
+		[[nodiscard]] constexpr std::string_view GetAuthorName() const noexcept { return std::string_view{ author }; }
 
-		constexpr void UsesSigScanning(bool a_value) noexcept
-		{
-			addressIndependence = !a_value;
-		}
+		constexpr void UsesSigScanning(bool a_value) noexcept { addressIndependence = !a_value; }
 
-		constexpr void UsesAddressLibrary(bool a_value) noexcept
-		{
-			addressIndependence = a_value;
-		}
+		constexpr void UsesAddressLibrary(bool a_value) noexcept { addressIndependence = a_value; }
 
-		constexpr void HasNoStructUse(bool a_value) noexcept
-		{
-			structureCompatibility = !a_value;
-		}
+		constexpr void HasNoStructUse(bool a_value) noexcept { structureCompatibility = !a_value; }
 
-		constexpr void IsLayoutDependent(bool a_value) noexcept
-		{
-			structureCompatibility = a_value;
-		}
+		constexpr void IsLayoutDependent(bool a_value) noexcept { structureCompatibility = a_value; }
 
 		constexpr void CompatibleVersions(std::initializer_list<REL::Version> a_versions) noexcept
 		{
 			// must be zero-terminated
 			assert(a_versions.size() < std::size(compatibleVersions) - 1);
-			std::ranges::transform(a_versions, std::begin(compatibleVersions),
-			                       [](const REL::Version& a_version) noexcept { return a_version.pack(); });
+			std::ranges::transform(a_versions, std::begin(compatibleVersions), [](const REL::Version& a_version) noexcept { return a_version.pack(); });
 		}
 
-		constexpr void MinimumRequiredXSEVersion(REL::Version a_version) noexcept
-		{
-			xseMinimum = a_version.pack();
-		}
+		constexpr void MinimumRequiredXSEVersion(REL::Version a_version) noexcept { xseMinimum = a_version.pack(); }
 
 		const std::uint32_t dataVersion{ kVersion };
-		std::uint32_t       pluginVersion   = 0;
+		std::uint32_t       pluginVersion = 0;
 		char                pluginName[256] = {};
-		char                author[256]     = {};
+		char                author[256] = {};
 		std::uint32_t       addressIndependence;
 		std::uint32_t       structureCompatibility;
 		std::uint32_t       compatibleVersions[16] = {};
-		std::uint32_t       xseMinimum             = 0;
-		const std::uint32_t reservedNonBreaking    = 0;
-		const std::uint32_t reservedBreaking       = 0;
+		std::uint32_t       xseMinimum = 0;
+		const std::uint32_t reservedNonBreaking = 0;
+		const std::uint32_t reservedBreaking = 0;
 
 	private:
 		static constexpr void SetCharBuffer(std::string_view a_src, std::span<char> a_dst) noexcept
@@ -199,6 +165,6 @@ namespace SFSE
 	static_assert(offsetof(PluginVersionData, reservedNonBreaking) == 0x254);
 	static_assert(offsetof(PluginVersionData, reservedBreaking) == 0x258);
 	static_assert(sizeof(PluginVersionData) == 0x25C);
-} // namespace SFSE
+}  // namespace SFSE
 
 #define SFSEPluginLoad(...) extern "C" [[maybe_unused]] __declspec(dllexport) bool SFSEPlugin_Load(__VA_ARGS__)

@@ -11,21 +11,18 @@ namespace RE
 		class __declspec(novtable) type_info
 		{
 		public:
-			virtual ~type_info(); // 00
+			virtual ~type_info();  // 00
 
-			[[nodiscard]] const char* mangled_name() const noexcept
-			{
-				return _name;
-			}
+			[[nodiscard]] const char* mangled_name() const noexcept { return _name; }
 
 		private:
 			// members
-			void* _data;    // 08
-			char  _name[1]; // 10
+			void* _data;     // 08
+			char  _name[1];  // 10
 		};
 
 		static_assert(sizeof(type_info) == 0x18);
-	} // namespace msvc
+	}  // namespace msvc
 
 	namespace RTTI
 	{
@@ -34,47 +31,29 @@ namespace RE
 		{
 		public:
 			using value_type = T;
-			using pointer    = value_type*;
-			using reference  = value_type&;
+			using pointer = value_type*;
+			using reference = value_type&;
 
 			constexpr RVA() noexcept = default;
 
-			constexpr RVA(std::uint32_t a_rva) noexcept : _rva(a_rva)
-			{}
+			constexpr RVA(std::uint32_t a_rva) noexcept :
+				_rva(a_rva) {}
 
-			[[nodiscard]] pointer get() const
-			{
-				return is_good() ? REL::Relocation<T*>{ REL::Offset(_rva) }.get() : nullptr;
-			}
+			[[nodiscard]] pointer get() const { return is_good() ? REL::Relocation<T*>{ REL::Offset(_rva) }.get() : nullptr; }
 
-			[[nodiscard]] std::uint32_t offset() const noexcept
-			{
-				return _rva;
-			}
+			[[nodiscard]] std::uint32_t offset() const noexcept { return _rva; }
 
-			[[nodiscard]] reference operator*() const
-			{
-				return *get();
-			}
+			[[nodiscard]] reference operator*() const { return *get(); }
 
-			[[nodiscard]] pointer operator->() const
-			{
-				return get();
-			}
+			[[nodiscard]] pointer operator->() const { return get(); }
 
-			[[nodiscard]] explicit constexpr operator bool() const noexcept
-			{
-				return is_good();
-			}
+			[[nodiscard]] explicit constexpr operator bool() const noexcept { return is_good(); }
 
 		protected:
-			[[nodiscard]] constexpr bool is_good() const noexcept
-			{
-				return _rva != 0;
-			}
+			[[nodiscard]] constexpr bool is_good() const noexcept { return _rva != 0; }
 
 			// members
-			std::uint32_t _rva{ 0 }; // 00
+			std::uint32_t _rva{ 0 };  // 00
 		};
 
 		static_assert(sizeof(RVA<void*>) == 0x4);
@@ -85,9 +64,9 @@ namespace RE
 		{
 		public:
 			// members
-			std::int32_t mDisp; // 0
-			std::int32_t pDisp; // 4
-			std::int32_t vDisp; // 8
+			std::int32_t mDisp;  // 0
+			std::int32_t pDisp;  // 4
+			std::int32_t vDisp;  // 8
 		};
 
 		static_assert(sizeof(PMD) == 0xC);
@@ -97,21 +76,21 @@ namespace RE
 		public:
 			enum class Attribute : std::uint32_t
 			{
-				kNone                   = 0,
-				kNotVisible             = 1 << 0,
-				kAmbiguous              = 1 << 1,
-				kPrivate                = 1 << 2,
+				kNone = 0,
+				kNotVisible = 1 << 0,
+				kAmbiguous = 1 << 1,
+				kPrivate = 1 << 2,
 				kPrivateOrProtectedBase = 1 << 3,
-				kVirtual                = 1 << 4,
-				kNonPolymorphic         = 1 << 5,
+				kVirtual = 1 << 4,
+				kNonPolymorphic = 1 << 5,
 				kHasHierarchyDescriptor = 1 << 6
 			};
 
 			// members
-			RVA<TypeDescriptor>                        typeDescriptor;    // 00
-			std::uint32_t                              numContainedBases; // 04
-			PMD                                        pmd;               // 08
-			stl::enumeration<Attribute, std::uint32_t> attributes;        // 14
+			RVA<TypeDescriptor>                        typeDescriptor;     // 00
+			std::uint32_t                              numContainedBases;  // 04
+			PMD                                        pmd;                // 08
+			stl::enumeration<Attribute, std::uint32_t> attributes;         // 14
 		};
 
 		static_assert(sizeof(BaseClassDescriptor) == 0x18);
@@ -121,17 +100,17 @@ namespace RE
 		public:
 			enum class Attribute
 			{
-				kNoInheritance        = 0,
-				kMultipleInheritance  = 1 << 0,
-				kVirtualInheritance   = 1 << 1,
+				kNoInheritance = 0,
+				kMultipleInheritance = 1 << 0,
+				kVirtualInheritance = 1 << 1,
 				kAmbiguousInheritance = 1 << 2
 			};
 
 			// members
-			std::uint32_t                              signature;      // 00
-			stl::enumeration<Attribute, std::uint32_t> attributes;     // 04
-			std::uint32_t                              numBaseClasses; // 08
-			RVA<BaseClassDescriptor>                   baseClassArray; // 0C
+			std::uint32_t                              signature;       // 00
+			stl::enumeration<Attribute, std::uint32_t> attributes;      // 04
+			std::uint32_t                              numBaseClasses;  // 08
+			RVA<BaseClassDescriptor>                   baseClassArray;  // 0C
 		};
 
 		static_assert(sizeof(ClassHierarchyDescriptor) == 0x10);
@@ -146,15 +125,15 @@ namespace RE
 			};
 
 			// members
-			stl::enumeration<Signature, std::uint32_t> signature;       // 00
-			std::uint32_t                              offset;          // 04
-			std::uint32_t                              ctorDispOffset;  // 08
-			RVA<TypeDescriptor>                        typeDescriptor;  // 0C
-			RVA<ClassHierarchyDescriptor>              classDescriptor; // 10
+			stl::enumeration<Signature, std::uint32_t> signature;        // 00
+			std::uint32_t                              offset;           // 04
+			std::uint32_t                              ctorDispOffset;   // 08
+			RVA<TypeDescriptor>                        typeDescriptor;   // 0C
+			RVA<ClassHierarchyDescriptor>              classDescriptor;  // 10
 		};
 
 		static_assert(sizeof(CompleteObjectLocator) == 0x14);
-	} // namespace RTTI
+	}  // namespace RTTI
 
 	inline void* RTDynamicCast(void* a_inptr, std::int32_t a_vfDelta, void* a_srcType, void* a_targetType, std::int32_t a_isReference)
 	{
@@ -189,8 +168,7 @@ namespace RE
 		{};
 
 		template <class To, class From>
-		struct types_are_compat<To, const volatile From*>
-			: std::conjunction<std::is_pointer<To>, std::is_const<std::remove_pointer_t<To>>, std::is_volatile<std::remove_pointer_t<To>>>
+		struct types_are_compat<To, const volatile From*> : std::conjunction<std::is_pointer<To>, std::is_const<std::remove_pointer_t<To>>, std::is_volatile<std::remove_pointer_t<To>>>
 		{};
 
 		template <class, class = void>
@@ -207,8 +185,8 @@ namespace RE
 
 		template <class To, class From>
 		inline constexpr bool cast_is_valid_v = cast_is_valid<To, From>::value;
-	} // namespace detail
-} // namespace RE
+	}  // namespace detail
+}  // namespace RE
 
 template <class To, class From, std::enable_if_t<RE::detail::cast_is_valid_v<To, From*>, int> = 0>
 To starfield_cast(From* a_from)
@@ -216,8 +194,7 @@ To starfield_cast(From* a_from)
 	REL::Relocation<void*> from{ RE::detail::remove_cvpr_t<From>::RTTI };
 	REL::Relocation<void*> to{ RE::detail::remove_cvpr_t<To>::RTTI };
 
-	if (!from.get() || !to.get())
-	{
+	if (!from.get() || !to.get()) {
 		return nullptr;
 	}
 

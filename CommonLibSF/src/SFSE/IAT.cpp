@@ -48,55 +48,40 @@
 
 namespace SFSE
 {
-	std::uintptr_t GetIATAddr(std::string_view a_dll, std::string_view a_function)
-	{
-		return reinterpret_cast<std::uintptr_t>(GetIATPtr(std::move(a_dll), std::move(a_function)));
-	}
+	std::uintptr_t GetIATAddr(std::string_view a_dll, std::string_view a_function) { return reinterpret_cast<std::uintptr_t>(GetIATPtr(std::move(a_dll), std::move(a_function))); }
 
-	std::uintptr_t GetIATAddr(void* a_module, std::string_view a_dll, std::string_view a_function)
-	{
-		return reinterpret_cast<std::uintptr_t>(GetIATPtr(a_module, std::move(a_dll), std::move(a_function)));
-	}
+	std::uintptr_t GetIATAddr(void* a_module, std::string_view a_dll, std::string_view a_function) { return reinterpret_cast<std::uintptr_t>(GetIATPtr(a_module, std::move(a_dll), std::move(a_function))); }
 
-	void* GetIATPtr(std::string_view a_dll, std::string_view a_function)
-	{
-		return GetIATPtr(REL::Module::get().pointer(), std::move(a_dll), std::move(a_function));
-	}
+	void* GetIATPtr(std::string_view a_dll, std::string_view a_function) { return GetIATPtr(REL::Module::get().pointer(), std::move(a_dll), std::move(a_function)); }
 
 	// https://guidedhacking.com/attachments/pe_imptbl_headers-jpg.2241/
 	void* GetIATPtr(void* a_module, std::string_view a_dll, std::string_view a_function)
 	{
 		assert(a_module);
 		auto dosHeader = static_cast<::IMAGE_DOS_HEADER*>(a_module);
-		if (dosHeader->e_magic != IMAGE_DOS_SIGNATURE)
-		{
+		if (dosHeader->e_magic != IMAGE_DOS_SIGNATURE) {
 			log::error("Invalid DOS header");
 			return nullptr;
 		}
 
-		auto  ntHeader   = stl::adjust_pointer<::IMAGE_NT_HEADERS>(dosHeader, dosHeader->e_lfanew);
-		auto& dataDir    = ntHeader->OptionalHeader.DataDirectory[IMAGE_DIRECTORY_ENTRY_IMPORT];
+		auto  ntHeader = stl::adjust_pointer<::IMAGE_NT_HEADERS>(dosHeader, dosHeader->e_lfanew);
+		auto& dataDir = ntHeader->OptionalHeader.DataDirectory[IMAGE_DIRECTORY_ENTRY_IMPORT];
 		auto  importDesc = stl::adjust_pointer<::IMAGE_IMPORT_DESCRIPTOR>(dosHeader, dataDir.VirtualAddress);
 
-		for (auto import = importDesc; import->Characteristics != 0; ++import)
-		{
+		for (auto import = importDesc; import->Characteristics != 0; ++import) {
 			auto name = stl::adjust_pointer<const char>(dosHeader, import->Name);
-			if (a_dll.size() == strlen(name) && _strnicmp(a_dll.data(), name, a_dll.size()) != 0)
-			{
+			if (a_dll.size() == strlen(name) && _strnicmp(a_dll.data(), name, a_dll.size()) != 0) {
 				continue;
 			}
 
 			auto thunk = stl::adjust_pointer<::IMAGE_THUNK_DATA>(dosHeader, import->OriginalFirstThunk);
-			for (std::size_t i = 0; thunk[i].u1.Ordinal; ++i)
-			{
-				if (IMAGE_SNAP_BY_ORDINAL(thunk[i].u1.Ordinal))
-				{
+			for (std::size_t i = 0; thunk[i].u1.Ordinal; ++i) {
+				if (IMAGE_SNAP_BY_ORDINAL(thunk[i].u1.Ordinal)) {
 					continue;
 				}
 
 				auto importByName = stl::adjust_pointer<IMAGE_IMPORT_BY_NAME>(dosHeader, thunk[i].u1.AddressOfData);
-				if (a_function.size() == strlen(importByName->Name) && _strnicmp(a_function.data(), importByName->Name, a_function.size()) == 0)
-				{
+				if (a_function.size() == strlen(importByName->Name) && _strnicmp(a_function.data(), importByName->Name, a_function.size()) == 0) {
 					return stl::adjust_pointer<::IMAGE_THUNK_DATA>(dosHeader, import->FirstThunk) + i;
 				}
 			}
@@ -111,16 +96,13 @@ namespace SFSE
 		std::uintptr_t origAddr = 0;
 
 		auto oldFunc = GetIATAddr(a_dll, a_function);
-		if (oldFunc)
-		{
+		if (oldFunc) {
 			origAddr = *reinterpret_cast<std::uintptr_t*>(oldFunc);
 			REL::safe_write(oldFunc, a_newFunc);
-		}
-		else
-		{
+		} else {
 			log::warn("Failed to patch {} ({})", a_dll, a_function);
 		}
 
 		return origAddr;
 	}
-} // namespace SFSE
+}  // namespace SFSE
