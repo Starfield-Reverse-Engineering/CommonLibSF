@@ -66,8 +66,28 @@ For additional information on GPL licenses, see the [FSF FAQ](https://www.gnu.or
 
 ## Contributors
 
-<!--CONTRIBUTORS_BEGIN-->
-<!--CONTRIBUTORS_END-->
+<!--CONTRIBUTORS_BEGIN--><table><tr>
+  <td align="center">
+    <a href="https://github.com/ThirdEyeSqueegee" title="Angad">
+      <img src="https://avatars.githubusercontent.com/u/66992519?v=4" width="50;" alt="Angad"/>
+    </a>
+  </td>
+  <td align="center">
+    <a href="https://github.com/gottyduke" title="DK">
+      <img src="https://avatars.githubusercontent.com/u/35783662?v=4" width="50;" alt="DK"/>
+    </a>
+  </td>
+  <td align="center">
+    <a href="https://github.com/alandtse" title="Alan Tse">
+      <img src="https://avatars.githubusercontent.com/u/7086117?v=4" width="50;" alt="Alan Tse"/>
+    </a>
+  </td>
+  <td align="center">
+    <a href="https://github.com/FlayaN" title="FlayaN">
+      <img src="https://avatars.githubusercontent.com/u/964655?v=4" width="50;" alt="FlayaN"/>
+    </a>
+  </td>
+</tr></table><!--CONTRIBUTORS_END-->
 
 ## Credits
 
