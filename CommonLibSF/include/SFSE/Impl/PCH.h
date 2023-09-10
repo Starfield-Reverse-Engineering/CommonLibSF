@@ -231,13 +231,15 @@ namespace SFSE
 			constexpr enumeration(enumeration&&) noexcept = default;
 
 			template <class U2>  // NOLINTNEXTLINE(google-explicit-constructor)
-			constexpr enumeration(enumeration<Enum, U2> a_rhs) noexcept : _impl(static_cast<underlying_type>(a_rhs.get()))
+			constexpr enumeration(enumeration<Enum, U2> a_rhs) noexcept :
+				_impl(static_cast<underlying_type>(a_rhs.get()))
 			{}
 
 			template <class... Args>
 			constexpr enumeration(Args... a_values) noexcept  //
 				requires(std::same_as<Args, enum_type> && ...)
-				: _impl((static_cast<underlying_type>(a_values) | ...))
+				:
+				_impl((static_cast<underlying_type>(a_values) | ...))
 			{}
 
 			~enumeration() noexcept = default;
@@ -426,7 +428,8 @@ namespace SFSE
 		public:
 			using value_type = typename super::value_type;
 
-			explicit atomic_ref(volatile T& a_obj) noexcept(std::is_nothrow_constructible_v<super, value_type&>) : super(const_cast<value_type&>(a_obj)) {}
+			explicit atomic_ref(volatile T& a_obj) noexcept(std::is_nothrow_constructible_v<super, value_type&>) :
+				super(const_cast<value_type&>(a_obj)) {}
 
 			using super::super;
 			using super::operator=;

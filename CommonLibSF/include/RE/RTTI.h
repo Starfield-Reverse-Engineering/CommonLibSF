@@ -36,7 +36,8 @@ namespace RE
 
 			constexpr RVA() noexcept = default;
 
-			constexpr RVA(std::uint32_t a_rva) noexcept : _rva(a_rva) {}
+			constexpr RVA(std::uint32_t a_rva) noexcept :
+				_rva(a_rva) {}
 
 			[[nodiscard]] pointer get() const { return is_good() ? REL::Relocation<T*>{ REL::Offset(_rva) }.get() : nullptr; }
 

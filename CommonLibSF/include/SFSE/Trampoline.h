@@ -42,7 +42,8 @@ namespace SFSE
 
 		Trampoline(Trampoline&& a_rhs) { move_from(std::move(a_rhs)); }
 
-		explicit Trampoline(std::string_view a_name) : _name(a_name) {}
+		explicit Trampoline(std::string_view a_name) :
+			_name(a_name) {}
 
 		~Trampoline() { release(); }
 

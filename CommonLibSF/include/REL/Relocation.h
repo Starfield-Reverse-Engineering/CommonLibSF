@@ -191,9 +191,11 @@ namespace REL
 
 		constexpr Version() noexcept = default;
 
-		explicit constexpr Version(std::array<value_type, 4> a_version) noexcept : _impl(a_version) {}
+		explicit constexpr Version(std::array<value_type, 4> a_version) noexcept :
+			_impl(a_version) {}
 
-		constexpr Version(value_type a_v1, value_type a_v2 = 0, value_type a_v3 = 0, value_type a_v4 = 0) noexcept : _impl{ a_v1, a_v2, a_v3, a_v4 } {}
+		constexpr Version(value_type a_v1, value_type a_v2 = 0, value_type a_v3 = 0, value_type a_v4 = 0) noexcept :
+			_impl{ a_v1, a_v2, a_v3, a_v4 } {}
 
 		explicit constexpr Version(std::string_view a_version)
 		{
@@ -372,7 +374,8 @@ namespace REL
 
 		Segment() noexcept = default;
 
-		Segment(std::uintptr_t a_proxyBase, std::uintptr_t a_address, std::uintptr_t a_size) noexcept : _proxyBase(a_proxyBase), _address(a_address), _size(a_size) {}
+		Segment(std::uintptr_t a_proxyBase, std::uintptr_t a_address, std::uintptr_t a_size) noexcept :
+			_proxyBase(a_proxyBase), _address(a_address), _size(a_size) {}
 
 		[[nodiscard]] std::uintptr_t address() const noexcept { return _address; }
 
@@ -443,7 +446,8 @@ namespace REL
 	public:
 		constexpr Offset() = default;
 
-		constexpr Offset(std::ptrdiff_t a_offset) : _offset(a_offset) {}
+		constexpr Offset(std::ptrdiff_t a_offset) :
+			_offset(a_offset) {}
 
 		[[nodiscard]] constexpr std::uintptr_t offset() const noexcept { return _offset; }
 
@@ -461,11 +465,14 @@ namespace REL
 
 		constexpr Relocation() noexcept = default;
 
-		constexpr Relocation(const std::uintptr_t a_addr) noexcept : _address(a_addr) {}
+		constexpr Relocation(const std::uintptr_t a_addr) noexcept :
+			_address(a_addr) {}
 
-		constexpr Relocation(Offset a_rva) noexcept : _address(a_rva.address()) {}
+		constexpr Relocation(Offset a_rva) noexcept :
+			_address(a_rva.address()) {}
 
-		constexpr Relocation(Offset a_rva, std::ptrdiff_t a_offset) noexcept : _address(a_rva.address() + a_offset) {}
+		constexpr Relocation(Offset a_rva, std::ptrdiff_t a_offset) noexcept :
+			_address(a_rva.address() + a_offset) {}
 
 		template <typename U = value_type>
 		[[nodiscard]] constexpr U get() const noexcept(std::is_nothrow_copy_constructible_v<U>)
