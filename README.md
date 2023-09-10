@@ -82,11 +82,6 @@ For additional information on GPL licenses, see the [FSF FAQ](https://www.gnu.or
       <img src="https://avatars.githubusercontent.com/u/7086117?v=4" width="50;" alt="Alan Tse"/>
     </a>
   </td>
-  <td align="center">
-    <a href="https://github.com/FlayaN" title="FlayaN">
-      <img src="https://avatars.githubusercontent.com/u/964655?v=4" width="50;" alt="FlayaN"/>
-    </a>
-  </td>
 </tr></table><!--CONTRIBUTORS_END-->
 
 ## Credits
