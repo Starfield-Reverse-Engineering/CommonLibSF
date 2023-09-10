@@ -37,6 +37,7 @@ jobs:
         if: ${{ steps.versioning.outputs.VCPKG_SUCCESS == 'false' }}
 
       - name: Check for Commit
+        id: registry
         uses: EndBug/add-and-commit@v9
         with:
           committer_name: maintenance
@@ -49,4 +50,4 @@ jobs:
           token: ${{ secrets.VCPKG_HELPER_TOKEN }}
           repository: ${{ github.repository_owner }}/Starfield-RE-vcpkg
           event-type: update-event
-          client-payload: '{"sha": "${{ github.sha }}", "vcpkg-version": "${{ steps.versioning.outputs.VCPKG_VERSION }}"}'
+          client-payload: '{"sha": "${{ steps.registry.outputs.commit_sha }}", "vcpkg-version": "${{ steps.versioning.outputs.VCPKG_VERSION }}"}'
