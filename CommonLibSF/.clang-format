@@ -48,7 +48,7 @@ BreakBeforeTernaryOperators: 'false'
 BreakConstructorInitializers: AfterColon
 BreakInheritanceList: AfterColon
 BreakStringLiterals: 'true'
-ColumnLimit: 0
+ColumnLimit: 1000
 CompactNamespaces: 'false'
 ConstructorInitializerAllOnOneLineOrOnePerLine: 'false'
 ConstructorInitializerIndentWidth: 4
