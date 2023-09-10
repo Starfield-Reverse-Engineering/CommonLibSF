@@ -20,17 +20,19 @@
 
 ## Developing with CommonLibSF
 
+### Using the CommonLibSF plugin template
+
+A plugin template is provided at https://github.com/Starfield-Reverse-Engineering/CLibSFPluginTemplate. Clone the repo and run the project setup script to get started developing your plugin without having to worry about setting things up.
+
 ### Including CommonLibSF in your project
 
 #### vcpkg
 
-[See how to use CommonLibSF with vcpkg in your project.](https://github.com/Starfield-Reverse-Engineering/Starfield-RE-vcpkg)
-
----
+[Instructions for consuming CommonLibSF using vcpkg are provided at our vcpkg registry repo.](https://github.com/Starfield-Reverse-Engineering/Starfield-RE-vcpkg)
 
 #### git submodule
 
-`cd` into your project directory and run:
+To consume CommonLibSF as a submodule, `cd` into your project directory and run:
 
 ```ps
 git submodule add https://github.com/Starfield-Reverse-Engineering/CommonLibSF extern/CommonLibSF
