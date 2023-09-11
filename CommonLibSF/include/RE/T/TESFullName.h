@@ -14,4 +14,3 @@ namespace RE
 	};
 	static_assert(sizeof(TESFullName) == 0x10);
 }
-

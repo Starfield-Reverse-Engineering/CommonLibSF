@@ -10,8 +10,7 @@ namespace RE
 			TES_RTTI_VTABLE(BSReflection__IObject);
 
 			virtual void Unk_00();  // 00
-			virtual ~IObject();  // 01
+			virtual ~IObject();     // 01
 		};
 	}
 }
-

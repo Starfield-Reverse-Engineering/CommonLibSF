@@ -5,7 +5,7 @@
 namespace RE
 {
 	class TESObject :
-		public TESForm // 00
+		public TESForm  // 00
 	{
 	public:
 		TES_RTTI_VTABLE(TESObject);
@@ -23,4 +23,3 @@ namespace RE
 		virtual void Unk_6B();  // 6B
 	};
 }
-

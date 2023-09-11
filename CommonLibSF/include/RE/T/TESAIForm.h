@@ -22,12 +22,12 @@ namespace RE
 	struct alignas(0x4) AIDATA_GAME
 	{
 		// members
-		std::uint16_t unk00;             // 00
-		std::uint8_t  unk02;             // 02
-		std::uint8_t  pad03;             // 03
-		std::uint16_t aggroRadius[4];    // 04
-		std::uint16_t pad0A;             // 0A
-		std::uint8_t  unk0C;             // 0C
+		std::uint16_t unk00;           // 00
+		std::uint8_t  unk02;           // 02
+		std::uint8_t  pad03;           // 03
+		std::uint16_t aggroRadius[4];  // 04
+		std::uint16_t pad0A;           // 0A
+		std::uint8_t  unk0C;           // 0C
 	};
 	static_assert(sizeof(AIDATA_GAME) == 0x10);
 
@@ -39,4 +39,3 @@ namespace RE
 	};
 	static_assert(sizeof(TESAIForm) == 0x40);
 }
-

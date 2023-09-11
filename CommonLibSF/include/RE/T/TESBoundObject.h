@@ -1,7 +1,7 @@
 #pragma once
 
-#include "RE/B/BGSObjectPlacementDefaults.h"
 #include "RE/B/BGSMod.h"
+#include "RE/B/BGSObjectPlacementDefaults.h"
 #include "RE/B/BGSPreviewTransform.h"
 #include "RE/B/BGSSnapTemplateComponent.h"
 #include "RE/T/TESObject.h"
@@ -9,7 +9,7 @@
 namespace RE
 {
 	class TESBoundObject :
-		public TESObject // 00
+		public TESObject  // 00
 	{
 	public:
 		TES_RTTI_VTABLE(TESBoundObject);
@@ -51,4 +51,3 @@ namespace RE
 	static_assert(offsetof(TESBoundObject, placementDefaults) == 0xD0);
 	static_assert(sizeof(TESBoundObject) == 0xF0);
 }
-

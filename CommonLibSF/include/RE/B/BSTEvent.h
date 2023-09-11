@@ -1,6 +1,5 @@
 #pragma once
 
-
 namespace RE
 {
 	namespace detail
@@ -26,7 +25,7 @@ namespace RE
 	class BSTEventSink : public detail::SinkBase
 	{
 	public:
-		virtual ~BSTEventSink() {};
+		virtual ~BSTEventSink(){};
 		virtual BSEventNotifyControl ProcessEvent(const Event& a_event, [[maybe_unused]] BSTEventSource<Event>* a_source) { return EventResult::kContinue; };  // pure
 	};
 
@@ -37,4 +36,3 @@ namespace RE
 		// Sinks go here
 	};
 }
-

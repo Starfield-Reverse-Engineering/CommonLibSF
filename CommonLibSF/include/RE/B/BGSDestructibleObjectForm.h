@@ -18,4 +18,3 @@ namespace RE
 	};
 	static_assert(sizeof(BGSDestructibleObjectForm) == 0x10);
 }
-

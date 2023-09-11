@@ -19,4 +19,3 @@ namespace RE
 	};
 	static_assert(sizeof(INIPrefSettingCollection) == 0x160);
 }
-

@@ -23,11 +23,10 @@ namespace RE
 
 		// Clib helper version with fmt syntax
 		template <typename... Args>
-		void FMT_Print(const char* a_fmt, Args&&... a_args) 
+		void FMT_Print(const char* a_fmt, Args&&... a_args)
 		{
 			static std::string buf = fmt::format(a_fmt, std::forward<Args>(a_args));
 			Print(buf.data());
 		}
 	};
 }
-

@@ -15,4 +15,3 @@ namespace RE
 	};
 	extern template class SettingCollectionList<Setting>;
 }
-

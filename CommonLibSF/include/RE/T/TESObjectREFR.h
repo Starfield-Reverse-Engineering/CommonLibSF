@@ -2,13 +2,11 @@
 
 #include "RE/B/BGSLocation.h"
 #include "RE/B/BGSScene.h"
-#include "RE/T/TESForm.h"
-#include "RE/T/TESTopicInfo.h"
-#include "RE/T/TESRace.h"
-#include "RE/T/TESObjectCELL.h"
 #include "RE/N/NiPoint3.h"
-
-
+#include "RE/T/TESForm.h"
+#include "RE/T/TESObjectCELL.h"
+#include "RE/T/TESRace.h"
+#include "RE/T/TESTopicInfo.h"
 
 namespace RE
 {
@@ -202,7 +200,7 @@ namespace RE
 		virtual void         Unk_10B();                                                                                                                         // 10B
 		virtual void         Unk_10C();                                                                                                                         // 10C
 		virtual bool         IsDead(bool a_notEssential) const;                                                                                                 // 10D
-		virtual bool         ProcessInWater(std::uint32_t a_bodyID, float a_waterHeight, float a_deltaTime);                                                              // 10E
+		virtual bool         ProcessInWater(std::uint32_t a_bodyID, float a_waterHeight, float a_deltaTime);                                                    // 10E
 		virtual void         Unk_10F();                                                                                                                         // 10F
 		virtual void         Unk_110();                                                                                                                         // 110
 		virtual void         Unk_111();                                                                                                                         // 111
@@ -249,7 +247,8 @@ namespace RE
 		void* ActorValueChangedEvent;              // 78
 
 		//
-		[[nodiscard]] bool IsInSpaceship() {
+		[[nodiscard]] bool IsInSpaceship()
+		{
 			using func_t = decltype(&TESObjectREFR::IsInSpaceship);
 			REL::Relocation<func_t> func{ REL::Offset(0x02B3A8D4) };
 			return func(this);
@@ -290,4 +289,3 @@ namespace RE
 	};
 	static_assert(sizeof(TESObjectREFR) == 0x110);
 }
-

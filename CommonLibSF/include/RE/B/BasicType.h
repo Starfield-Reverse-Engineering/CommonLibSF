@@ -25,4 +25,3 @@ namespace RE
 		static_assert(sizeof(BasicType) == 0x20);
 	}
 }
-

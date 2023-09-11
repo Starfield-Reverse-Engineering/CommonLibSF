@@ -14,4 +14,3 @@ namespace RE
 	};
 	static_assert(sizeof(BGSAttackDataForm) == 0x10);
 }
-

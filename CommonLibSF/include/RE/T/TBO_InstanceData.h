@@ -5,7 +5,7 @@
 namespace RE
 {
 	class TBO_InstanceData :
-		public BSIntrusiveRefCounted // 08
+		public BSIntrusiveRefCounted  // 08
 	{
 	public:
 		TES_RTTI_VTABLE(TBO_InstanceData);
@@ -13,4 +13,3 @@ namespace RE
 		virtual ~TBO_InstanceData() = default;  // 00
 	};
 }
-

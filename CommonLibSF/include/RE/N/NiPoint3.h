@@ -49,8 +49,7 @@ namespace RE
 		public NiPoint3
 	{
 	public:
-		std::array<std::byte, 0x4> padding; // 0xC
+		std::array<std::byte, 0x4> padding;  // 0xC
 	};
 	static_assert(sizeof(NiPoint3Aligned) == 0x10);
 }
-

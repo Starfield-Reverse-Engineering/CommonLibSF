@@ -10,4 +10,3 @@ namespace RE
 		TES_RTTI_VTABLE(BGSKeyword);
 	};
 }
-

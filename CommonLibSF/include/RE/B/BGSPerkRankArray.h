@@ -25,4 +25,3 @@ namespace RE
 	};
 	static_assert(sizeof(BGSPerkRankArray) == 0x18);
 }
-

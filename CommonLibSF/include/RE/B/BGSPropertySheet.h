@@ -14,4 +14,3 @@ namespace RE
 	};
 	static_assert(sizeof(BGSPropertySheet) == 0x10);
 }
-

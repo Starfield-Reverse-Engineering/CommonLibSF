@@ -1,7 +1,7 @@
 #pragma once
 
-#include "RE/B/BaseFormComponent.h"
 #include "RE/B/BGSListForm.h"
+#include "RE/B/BaseFormComponent.h"
 
 namespace RE
 {
@@ -22,4 +22,3 @@ namespace RE
 	};
 	static_assert(sizeof(BGSOverridePackCollection) == 0x48);
 }
-

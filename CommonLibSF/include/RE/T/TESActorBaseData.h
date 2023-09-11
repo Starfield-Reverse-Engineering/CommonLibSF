@@ -28,9 +28,8 @@ namespace RE
 	};
 	static_assert(sizeof(ACTOR_BASE_DATA) == 0x14);
 
-
 	class TESActorBaseData :
-		public BaseFormComponent // ACBS
+		public BaseFormComponent  // ACBS
 	{
 	public:
 		TES_RTTI_VTABLE(TESActorBaseData);
@@ -45,18 +44,18 @@ namespace RE
 		virtual void Unk_13();  // 13
 
 		// members
-		ACTOR_BASE_DATA actorData;  // 18
-		std::int32_t    changeFlags;// 1C
-		std::uint64_t   unk20;      // 20
-		std::uint64_t   unk28;      // 28
-		std::uint64_t   unk30;      // 30
-		std::uint64_t   unk38;      // 38
-		std::uint64_t   unk40;      // 40
-		std::uint64_t   unk48;      // 48
-		std::uint64_t   unk50;      // 50
-		std::uint64_t   unk58;      // 58
-		std::uint64_t   unk60;      // 60
-		std::uint64_t   unk68;      // 68
+		ACTOR_BASE_DATA actorData;    // 18
+		std::int32_t    changeFlags;  // 1C
+		std::uint64_t   unk20;        // 20
+		std::uint64_t   unk28;        // 28
+		std::uint64_t   unk30;        // 30
+		std::uint64_t   unk38;        // 38
+		std::uint64_t   unk40;        // 40
+		std::uint64_t   unk48;        // 48
+		std::uint64_t   unk50;        // 50
+		std::uint64_t   unk58;        // 58
+		std::uint64_t   unk60;        // 60
+		std::uint64_t   unk68;        // 68
 	};
 	static_assert(sizeof(TESActorBaseData) == 0x70);
 }

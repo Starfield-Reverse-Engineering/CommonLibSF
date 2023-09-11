@@ -4,7 +4,7 @@
 
 namespace RE
 {
-	class BGSObjectPlacementDefaults : 
+	class BGSObjectPlacementDefaults :
 		public BaseFormComponent
 	{
 	public:
@@ -21,4 +21,3 @@ namespace RE
 	};
 	static_assert(sizeof(BGSObjectPlacementDefaults) == 0x20);
 }
-

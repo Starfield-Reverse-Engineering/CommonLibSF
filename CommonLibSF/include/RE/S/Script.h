@@ -1,9 +1,9 @@
 #pragma once
 
+#include "RE/B/BSStringT.h"
+#include "RE/B/BSTList.h"
 #include "RE/T/TESForm.h"
 #include "RE/T/TESQuest.h"
-#include "RE/B/BSTList.h"
-#include "RE/B/BSStringT.h"
 
 namespace RE
 {
@@ -181,4 +181,3 @@ namespace RE
 	};
 	static_assert(sizeof(Script) == 0x60);
 }
-
