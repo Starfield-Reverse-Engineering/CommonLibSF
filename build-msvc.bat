@@ -1,4 +1,4 @@
 echo off
 rd /s /q "build"
-cmake -B "%cd%/build" -S "%cd%/CommonLibSF" --preset=build-release-msvc-ninja
-cmake --build "%cd%/build" --config Release
+cmake -B "%~dp0/build" -S "%~dp0/CommonLibSF" --preset=build-release-msvc-ninja
+cmake --build "%~dp0/build" --config Release
