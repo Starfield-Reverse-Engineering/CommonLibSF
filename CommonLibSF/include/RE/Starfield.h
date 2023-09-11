@@ -18,6 +18,7 @@
 #include "RE/B/BGSObjectPlacementDefaults.h"
 #include "RE/B/BGSOverridePackCollection.h"
 #include "RE/B/BGSPerkRankArray.h"
+#include "RE/B/BGSPreviewTransform.h"
 #include "RE/B/BGSPropertySheet.h"
 #include "RE/B/BGSScene.h"
 #include "RE/B/BGSSkinForm.h"

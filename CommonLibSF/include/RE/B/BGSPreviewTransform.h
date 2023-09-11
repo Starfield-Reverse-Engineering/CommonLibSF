@@ -26,4 +26,3 @@ namespace RE
 	};
 	static_assert(sizeof(BGSPreviewTransform) == 0x48);
 }
-
