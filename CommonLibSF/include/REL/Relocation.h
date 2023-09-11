@@ -482,10 +482,10 @@ namespace REL
 		constexpr Relocation(Offset a_rva, std::ptrdiff_t a_offset) noexcept :
 			_address(a_rva.address() + a_offset) {}
 
-		template <typename U = value_type>
-		[[nodiscard]] constexpr U get() const noexcept(std::is_nothrow_copy_constructible_v<U>)
+		[[nodiscard]] constexpr value_type get() const  //
+			noexcept(std::is_nothrow_copy_constructible_v<value_type>)
 		{
-			return std::bit_cast<U>(_address);
+			return stl::unrestricted_cast<value_type> (_address);
 		}
 
 		[[nodiscard]] constexpr decltype(auto) address() const noexcept { return _address; }
