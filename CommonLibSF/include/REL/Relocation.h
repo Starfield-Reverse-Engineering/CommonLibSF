@@ -44,6 +44,14 @@
 	REL_MAKE_MEMBER_FUNCTION_NON_POD_TYPE_HELPER(&, ##__VA_ARGS__) \
 	REL_MAKE_MEMBER_FUNCTION_NON_POD_TYPE_HELPER(&&, ##__VA_ARGS__)
 
+#define TES_RTTI(TYPE) \
+	inline static constexpr auto RTTI = RTTI::TYPE
+#define TES_VTABLE(VTBL) \
+	inline static constexpr auto VTABLE = VTABLE::VTBL
+#define TES_RTTI_VTABLE(ENTRY) \
+	TES_RTTI(ENTRY);          \
+	TES_VTABLE(ENTRY)
+
 namespace REL
 {
 	namespace detail
