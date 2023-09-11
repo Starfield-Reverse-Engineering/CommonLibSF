@@ -2,6 +2,7 @@
 
 #include "RE/B/BSIntrusiveRefCounted.h"
 #include "RE/B/BGSKeyword.h"
+#include "RE/T/TBO_InstanceData.h"
 
 namespace RE
 {
