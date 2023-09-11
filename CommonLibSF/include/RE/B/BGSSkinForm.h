@@ -8,7 +8,7 @@ namespace RE
 	class BGSSkinForm : public BaseFormComponent
 	{
 	public:
-		TES_RTTI_VTABLE(BGSSkinForm);
+		SF_RTTI_VTABLE(BGSSkinForm);
 
 		// members
 		TESObjectARMO* formSkin;  // 08

@@ -8,7 +8,7 @@ namespace RE
 	class ActorValueOwner
 	{
 	public:
-		TES_RTTI_VTABLE(ActorValueOwner);
+		SF_RTTI_VTABLE(ActorValueOwner);
 
 		// add
 		virtual float GetActorValue(const ActorValueInfo& a_info);

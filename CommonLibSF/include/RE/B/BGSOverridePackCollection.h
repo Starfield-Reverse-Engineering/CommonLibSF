@@ -8,7 +8,7 @@ namespace RE
 	class BGSOverridePackCollection : public BaseFormComponent
 	{
 	public:
-		TES_RTTI_VTABLE(BGSOverridePackCollection);
+		SF_RTTI_VTABLE(BGSOverridePackCollection);
 
 		// members
 		BGSListForm* unk08;

@@ -8,6 +8,6 @@ namespace RE
 		public TESForm  // 00
 	{
 	public:
-		TES_RTTI_VTABLE(TESRace);
+		SF_RTTI_VTABLE(TESRace);
 	};
 }

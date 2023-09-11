@@ -8,6 +8,6 @@ namespace RE
 		public TESBoundObject
 	{
 	public:
-		TES_RTTI_VTABLE(TESObjectARMO);
+		SF_RTTI_VTABLE(TESObjectARMO);
 	};
 }

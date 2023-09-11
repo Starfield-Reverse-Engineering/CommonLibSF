@@ -7,7 +7,7 @@ namespace RE
 	class PackageList
 	{
 	public:
-		TES_RTTI_VTABLE(PackageList);
+		SF_RTTI_VTABLE(PackageList);
 
 		virtual void Unk_00();
 

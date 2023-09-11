@@ -7,7 +7,7 @@ namespace RE
 	class TESBoundAnimObject : public TESBoundObject
 	{
 	public:
-		TES_RTTI_VTABLE(TESBoundAnimObject);
+		SF_RTTI_VTABLE(TESBoundAnimObject);
 
 		virtual ~TESBoundAnimObject();
 

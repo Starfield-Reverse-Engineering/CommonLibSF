@@ -9,6 +9,6 @@ namespace RE
 						// ...
 	{
 	public:
-		TES_RTTI_VTABLE(BGSLocation);
+		SF_RTTI_VTABLE(BGSLocation);
 	};
 }

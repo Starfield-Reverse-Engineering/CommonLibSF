@@ -7,7 +7,7 @@ namespace RE
 	class TESSpellList : public BaseFormComponent
 	{
 	public:
-		TES_RTTI_VTABLE(TESSpellList);
+		SF_RTTI_VTABLE(TESSpellList);
 
 		// members
 		std::uint32_t unk08;  // 08

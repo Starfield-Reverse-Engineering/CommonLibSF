@@ -7,7 +7,7 @@ namespace RE
 	class TESFullName : public BaseFormComponent
 	{
 	public:
-		TES_RTTI_VTABLE(TESFullName);
+		SF_RTTI_VTABLE(TESFullName);
 
 		// members
 		void* fullName;  // 08 BSFixedString - FULL

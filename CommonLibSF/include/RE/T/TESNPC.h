@@ -16,7 +16,7 @@ namespace RE
 		public BGSNativeTerminalForm       // 308
 	{
 	public:
-		TES_RTTI_VTABLE(TESNPC);
+		SF_RTTI_VTABLE(TESNPC);
 
 		// members
 		/*

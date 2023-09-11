@@ -7,6 +7,6 @@ namespace RE
 	class BGSKeyword : public TESForm
 	{
 	public:
-		TES_RTTI_VTABLE(BGSKeyword);
+		SF_RTTI_VTABLE(BGSKeyword);
 	};
 }

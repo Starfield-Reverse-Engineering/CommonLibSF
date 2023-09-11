@@ -7,7 +7,7 @@ namespace RE
 	class BGSPropertySheet : public BaseFormComponent
 	{
 	public:
-		TES_RTTI_VTABLE(BGSPropertySheet);
+		SF_RTTI_VTABLE(BGSPropertySheet);
 
 		// members
 		std::uint64_t /* BSTArray<BSTTuple<TESForm*, BGSTypedFormValuePair::SharedVal>>* */ unk08;

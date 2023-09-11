@@ -8,7 +8,7 @@ namespace RE
 		public BSIntrusiveRefCounted  // 08
 	{
 	public:
-		TES_RTTI_VTABLE(TBO_InstanceData);
+		SF_RTTI_VTABLE(TBO_InstanceData);
 
 		virtual ~TBO_InstanceData() = default;  // 00
 	};

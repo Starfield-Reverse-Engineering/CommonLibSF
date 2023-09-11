@@ -9,7 +9,7 @@ namespace RE
 	class TESContainer : public BaseFormComponent
 	{
 	public:
-		TES_RTTI_VTABLE(TESContainer);
+		SF_RTTI_VTABLE(TESContainer);
 
 		// add
 		virtual void Unk_08();  // 08

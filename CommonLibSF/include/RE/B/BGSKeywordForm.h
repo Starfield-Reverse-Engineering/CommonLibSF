@@ -10,7 +10,7 @@ namespace RE
 		public IKeywordFormBase    // 08
 	{
 	public:
-		TES_RTTI_VTABLE(BGSKeywordForm);
+		SF_RTTI_VTABLE(BGSKeywordForm);
 
 		// members
 		std::uint32_t unk10;

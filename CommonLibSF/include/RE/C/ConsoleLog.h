@@ -5,7 +5,7 @@ namespace RE
 	class ConsoleLog
 	{
 	public:
-		TES_RTTI_VTABLE(ConsoleLog);
+		SF_RTTI_VTABLE(ConsoleLog);
 
 		// BSTSDM
 		[[nodiscard]] static ConsoleLog* GetSingleton()

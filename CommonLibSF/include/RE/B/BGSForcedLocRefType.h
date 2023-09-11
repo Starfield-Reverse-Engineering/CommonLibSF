@@ -7,7 +7,7 @@ namespace RE
 	class BGSForcedLocRefType : public BaseFormComponent
 	{
 	public:
-		TES_RTTI_VTABLE(BGSForcedLocRefType);
+		SF_RTTI_VTABLE(BGSForcedLocRefType);
 
 		// members
 		std::uint64_t unk08;  // 08

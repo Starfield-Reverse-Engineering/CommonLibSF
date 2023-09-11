@@ -11,7 +11,7 @@ namespace RE
 	class BGSDestructibleObjectForm : public BaseFormComponent
 	{
 	public:
-		TES_RTTI_VTABLE(BGSDestructibleObjectForm);
+		SF_RTTI_VTABLE(BGSDestructibleObjectForm);
 
 		// members
 		DestructibleObjectData* data;  // 08
