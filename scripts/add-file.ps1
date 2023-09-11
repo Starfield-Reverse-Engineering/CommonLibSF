@@ -89,7 +89,6 @@ while ($true) {
         }
         default {
             $files = $cmd.Split(' ')
-            $files = $files[1..$($files.Length - 1)]
             $files | % { Modify-File $_ $true }
             $script:lastFile = $files
             $script:lastAction = $true
