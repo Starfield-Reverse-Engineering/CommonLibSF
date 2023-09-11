@@ -41,5 +41,25 @@ namespace RE
 		char* name;         // 18
 	};
 	static_assert(sizeof(Setting) == 0x20);
+
+	template <typename T>
+	class SettingT :
+		public Setting
+	{
+	public:
+		virtual ~SettingT();
+
+		static REL::Relocation<T*> collection;
+	};
+
+	class GameSettingCollection;
+	class INIPrefSettingCollection;
+	class INISettingCollection;
+	class RegSettingCollection;
+
+	extern template class SettingT<GameSettingCollection>;
+	extern template class SettingT<INIPrefSettingCollection>;
+	extern template class SettingT<INISettingCollection>;
+	extern template class SettingT<RegSettingCollection>;
 }
 
