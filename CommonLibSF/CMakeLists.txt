@@ -28,7 +28,6 @@ if(${PROJECT_SOURCE_DIR} STREQUAL ${PROJECT_BINARY_DIR})
 endif()
 
 # dependencies
-find_package(fmt CONFIG REQUIRED)
 find_package(spdlog CONFIG REQUIRED)
 find_package(xbyak CONFIG REQUIRED)
 
@@ -113,7 +112,6 @@ target_include_directories(
 target_link_libraries(
 	${PROJECT_NAME}
 	PUBLIC
-		fmt::fmt-header-only
 		spdlog::spdlog
 		xbyak::xbyak
 		Version.lib
