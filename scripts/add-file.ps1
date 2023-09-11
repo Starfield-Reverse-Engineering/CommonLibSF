@@ -1,4 +1,27 @@
+<#
+.SYNOPSIS
+this script is for adding/modifying/commiting RE files alongside the CLib development.
+
+.EXAMPLE
+to add new RE file (.h and .cpp), just input the file name, multiple files are separated by space
+: TESNewUndefinedClass BGSInferiorStructure NiPoint200
+
+to del RE file, prepend -d
+: -d TESNewUndefinedClass BGSInferiorStructure NiPoint200
+
+to undo last action, use -u
+: -u
+*can only revert last commit, cannot undo-revert last commit
+
+to bring RE file changes into a current ongoing visual studio project, use -r and do a build inside visual studio
+: -r
+
+use ctrl ^ c to exit
+#>
+
+
 $workspace = Resolve-Path "$PSScriptRoot/../"
+Push-Location $workspace
 $include = "$workspace/CommonLibSF/include/RE"
 $src = "$workspace/CommonLibSF/src/RE"
 
@@ -25,7 +48,12 @@ function Modify-File {
 
 
 $lastFile = ""
-$lastAction = $true
+# 0 del
+# 1 add
+# 2 revert
+# 3 commit
+$lastAction = 0
+
 while ($true) {
     $cmd = Read-Host " "
 
