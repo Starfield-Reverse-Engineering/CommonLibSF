@@ -5,7 +5,7 @@ namespace RE
 	class Setting
 	{
 	public:
-		TES_RTTI_VTABLE(Setting);
+		SF_RTTI_VTABLE(Setting);
 
 		enum class Type
 		{

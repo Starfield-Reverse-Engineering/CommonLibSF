@@ -7,7 +7,7 @@ namespace RE
 	class INIPrefSettingCollection : public INISettingCollection
 	{
 	public:
-		TES_RTTI_VTABLE(INIPrefSettingCollection);
+		SF_RTTI_VTABLE(INIPrefSettingCollection);
 
 		[[nodiscard]] static INIPrefSettingCollection* GetSingleton()
 		{

@@ -8,7 +8,7 @@ namespace RE
 		public TESForm  // 00
 	{
 	public:
-		TES_RTTI_VTABLE(TESObject);
+		SF_RTTI_VTABLE(TESObject);
 
 		// add
 		virtual void Unk_62();  // 62

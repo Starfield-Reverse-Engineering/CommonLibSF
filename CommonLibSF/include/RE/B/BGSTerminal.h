@@ -5,6 +5,6 @@ namespace RE
 	class BGSTerminal
 	{
 	public:
-		TES_RTTI_VTABLE(BGSTerminal);
+		SF_RTTI_VTABLE(BGSTerminal);
 	};
 }

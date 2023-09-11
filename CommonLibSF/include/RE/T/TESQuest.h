@@ -5,6 +5,6 @@ namespace RE
 	class TESQuest
 	{
 	public:
-		TES_RTTI_VTABLE(TESQuest);
+		SF_RTTI_VTABLE(TESQuest);
 	};
 }

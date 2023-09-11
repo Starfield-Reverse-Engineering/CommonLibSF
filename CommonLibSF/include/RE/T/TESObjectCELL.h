@@ -10,7 +10,7 @@ namespace RE
 		public TESFullName  // 20
 	{
 	public:
-		TES_RTTI_VTABLE(TESObjectCELL);
+		SF_RTTI_VTABLE(TESObjectCELL);
 
 		//
 	};

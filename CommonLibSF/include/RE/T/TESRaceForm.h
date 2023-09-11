@@ -8,7 +8,7 @@ namespace RE
 	class TESRaceForm : public BaseFormComponent
 	{
 	public:
-		TES_RTTI_VTABLE(TESRaceForm);
+		SF_RTTI_VTABLE(TESRaceForm);
 
 		// members
 		TESRace* formRace;  // 08

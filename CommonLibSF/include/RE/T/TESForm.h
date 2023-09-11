@@ -14,7 +14,7 @@ namespace RE
 		public BSReflection::IObject  // 10
 	{
 	public:
-		TES_RTTI_VTABLE(TESForm);
+		SF_RTTI_VTABLE(TESForm);
 
 		virtual ~TESForm();  // 00
 

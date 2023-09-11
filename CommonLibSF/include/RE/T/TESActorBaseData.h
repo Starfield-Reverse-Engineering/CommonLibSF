@@ -32,7 +32,7 @@ namespace RE
 		public BaseFormComponent  // ACBS
 	{
 	public:
-		TES_RTTI_VTABLE(TESActorBaseData);
+		SF_RTTI_VTABLE(TESActorBaseData);
 
 		// add
 		virtual void Unk_08();  // 08

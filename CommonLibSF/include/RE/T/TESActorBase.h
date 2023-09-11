@@ -32,7 +32,7 @@ namespace RE
 		public BGSPropertySheet            // 288
 	{
 	public:
-		TES_RTTI_VTABLE(TESActorBase);
+		SF_RTTI_VTABLE(TESActorBase);
 
 		// add
 		virtual void Unk_82();  // 82

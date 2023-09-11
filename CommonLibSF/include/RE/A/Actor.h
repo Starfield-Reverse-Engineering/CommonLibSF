@@ -8,7 +8,7 @@ namespace RE
 	class Actor : public TESObjectREFR
 	{
 	public:
-		TES_RTTI_VTABLE(Actor);
+		SF_RTTI_VTABLE(Actor);
 
 		~Actor() override;  // 00
 

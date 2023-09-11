@@ -17,7 +17,7 @@ namespace RE
 	class BGSPerkRankArray : public BaseFormComponent
 	{
 	public:
-		TES_RTTI(BGSPerkRankArray);
+		SF_RTTI(BGSPerkRankArray);
 
 		// members
 		PerkRankData* perks;      // 08

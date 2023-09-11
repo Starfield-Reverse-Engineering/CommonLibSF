@@ -9,7 +9,7 @@ namespace RE
 	class IKeywordFormBase
 	{
 	public:
-		TES_RTTI(IKeywordFormBase);
+		SF_RTTI(IKeywordFormBase);
 
 		virtual ~IKeywordFormBase();
 

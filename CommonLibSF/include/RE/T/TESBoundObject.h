@@ -12,7 +12,7 @@ namespace RE
 		public TESObject  // 00
 	{
 	public:
-		TES_RTTI_VTABLE(TESBoundObject);
+		SF_RTTI_VTABLE(TESBoundObject);
 
 		// add
 		virtual void Unk_6C();  // 6C

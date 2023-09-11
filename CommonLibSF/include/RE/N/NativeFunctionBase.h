@@ -19,7 +19,7 @@ namespace RE
 			class NativeFunctionBase : public IFunction
 			{
 			public:
-				TES_RTTI_VTABLE(BSScript__NF_util__NativeFunctionBase);
+				SF_RTTI_VTABLE(BSScript__NF_util__NativeFunctionBase);
 
 				NativeFunctionBase() {}
 				virtual ~NativeFunctionBase() {}

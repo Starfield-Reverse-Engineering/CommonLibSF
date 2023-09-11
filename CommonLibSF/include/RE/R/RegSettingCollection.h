@@ -7,7 +7,7 @@ namespace RE
 	class RegSettingCollection : public SettingCollectionList<Setting>
 	{
 	public:
-		TES_RTTI_VTABLE(RegSettingCollection);
+		SF_RTTI_VTABLE(RegSettingCollection);
 
 		virtual ~RegSettingCollection();
 	};

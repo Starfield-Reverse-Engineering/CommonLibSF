@@ -5,6 +5,6 @@ namespace RE
 	class TESFile
 	{
 	public:
-		TES_RTTI_VTABLE(TESFile);
+		SF_RTTI_VTABLE(TESFile);
 	};
 }

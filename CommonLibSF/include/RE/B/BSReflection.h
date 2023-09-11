@@ -7,7 +7,7 @@ namespace RE
 		class IObject
 		{
 		public:
-			TES_RTTI_VTABLE(BSReflection__IObject);
+			SF_RTTI_VTABLE(BSReflection__IObject);
 
 			virtual void Unk_00();  // 00
 			virtual ~IObject();     // 01
@@ -18,7 +18,7 @@ namespace RE
 		class IType
 		{
 		public:
-			TES_RTTI(BSReflection__IType);
+			SF_RTTI(BSReflection__IType);
 
 			// add
 			virtual TypedData*  GetZeroed(TypedData* a_dst, void* a_buf) = 0;
@@ -32,7 +32,7 @@ namespace RE
 		class BasicType : public IType
 		{
 		public:
-			TES_RTTI_VTABLE(BSReflection__BasicType);
+			SF_RTTI_VTABLE(BSReflection__BasicType);
 
 			// members
 			std::uint32_t size;      // 08

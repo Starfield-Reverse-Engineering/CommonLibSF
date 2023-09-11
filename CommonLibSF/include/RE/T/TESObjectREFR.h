@@ -23,7 +23,7 @@ namespace RE
 	class TESObjectREFR : public TESForm
 	{
 	public:
-		TES_RTTI_VTABLE(TESObjectREFR);
+		SF_RTTI_VTABLE(TESObjectREFR);
 
 		~TESObjectREFR() override;  // 00
 

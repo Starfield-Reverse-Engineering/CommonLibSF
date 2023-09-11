@@ -12,7 +12,7 @@ namespace RE
 				public BaseFormComponent  // 00
 			{
 			public:
-				TES_RTTI_VTABLE(BGSMod__Template__Items);
+				SF_RTTI_VTABLE(BGSMod__Template__Items);
 
 				virtual ~Items();
 

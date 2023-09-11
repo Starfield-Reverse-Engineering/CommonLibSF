@@ -7,6 +7,6 @@ namespace RE
 	class ActorValueInfo
 	{
 	public:
-		TES_RTTI_VTABLE(ActorValueInfo);
+		SF_RTTI_VTABLE(ActorValueInfo);
 	};
 }

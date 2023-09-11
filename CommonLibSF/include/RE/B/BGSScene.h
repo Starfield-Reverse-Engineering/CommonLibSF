@@ -10,7 +10,7 @@ namespace RE
 		public IKeywordFormBase  // 20
 	{
 	public:
-		TES_RTTI_VTABLE(BGSScene);
+		SF_RTTI_VTABLE(BGSScene);
 
 		//
 	};

@@ -116,7 +116,7 @@ namespace RE
 	class Script
 	{
 	public:
-		TES_RTTI_VTABLE(Script);
+		SF_RTTI_VTABLE(Script);
 
 		struct SCRIPT_FUNCTION
 		{
