@@ -20,13 +20,5 @@ namespace RE
 			REL::Relocation<func_t> func{ REL::Offset(0x02883B48) };
 			func(this, a_fmt, a_args);
 		}
-
-		// Clib helper version with fmt syntax
-		template <typename... Args>
-		void FMT_Print(const char* a_fmt, Args&&... a_args)
-		{
-			static std::string buf = fmt::format(a_fmt, std::forward<Args>(a_args)...);
-			Print(buf.data());
-		}
 	};
 }
