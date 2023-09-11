@@ -4,6 +4,7 @@ namespace RE
 {
 	class NiPoint3
 	{
+	public:
 		constexpr NiPoint3() noexcept = default;
 
 		constexpr NiPoint3(float a_x, float a_y, float a_z) noexcept :
