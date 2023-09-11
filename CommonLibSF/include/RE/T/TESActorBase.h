@@ -54,9 +54,9 @@ namespace RE
 		BGSAttackDataForm         attackData;          // 260
 		BGSPerkRankArray          perkRankArray;       // 270
 		BGSPropertySheet          propertySheet;       // 288
-		/**/
+		*/
 	};
-	/**
+	/*
 	static_assert(offsetof(TESActorBase, actorBaseData) == 0x118);
 	static_assert(offsetof(TESActorBase, container) == 0x188);
 	static_assert(offsetof(TESActorBase, spellList) == 0x1A0);
@@ -69,5 +69,5 @@ namespace RE
 	static_assert(offsetof(TESActorBase, attackData) == 0x260);
 	static_assert(offsetof(TESActorBase, perkRankArray) == 0x270);
 	static_assert(offsetof(TESActorBase, propertySheet) == 0x288);
-	/**/
+	*/
 }

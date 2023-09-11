@@ -5,7 +5,7 @@ namespace RE
 	class CombatGroup
 	{
 	public:
-		/**
+		/*
 		// members
 		std::uint32_t                  groupID;                      // 000
 		std::uint32_t                  groupIndex;                   // 004
@@ -43,7 +43,7 @@ namespace RE
 		std::uint8_t                   unk15E;                       // 15E
 		std::uint8_t                   unk15F;                       // 15F
 		mutable BSReadWriteLock        lock;                         // 160
-		/**/
+		*/
 	};
 	//static_assert(sizeof(CombatGroup) == 0x168);
 }
