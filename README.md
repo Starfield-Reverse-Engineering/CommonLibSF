@@ -84,6 +84,16 @@ For additional information on GPL licenses, see the [FSF FAQ](https://www.gnu.or
       <img src="https://avatars.githubusercontent.com/u/7086117?v=4" width="50;" alt="Alan Tse"/>
     </a>
   </td>
+  <td align="center">
+    <a href="https://github.com/FlayaN" title="FlayaN">
+      <img src="https://avatars.githubusercontent.com/u/964655?v=4" width="50;" alt="FlayaN"/>
+    </a>
+  </td>
+  <td align="center">
+    <a href="https://github.com/powerof3" title="powerof3">
+      <img src="https://avatars.githubusercontent.com/u/32599957?v=4" width="50;" alt="powerof3"/>
+    </a>
+  </td>
 </tr></table><!--CONTRIBUTORS_END-->
 
 ## Credits
