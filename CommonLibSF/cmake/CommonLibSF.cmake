@@ -111,7 +111,6 @@ function(target_commonlibsf_properties TARGET)
             "    data.PluginVersion(${commonlibsf_plugin_version});\n"
             "    data.PluginName(${commonlibsf_plugin_name});\n"
             "    data.AuthorName(${ADD_COMMONLIBSF_PLUGIN_AUTHOR});\n"
-            "    data.SupportEmail(${ADD_COMMONLIBSF_PLUGIN_EMAIL});\n"
             "    data.UsesAddressLibrary(${commonlibsf_plugin_compatibility});\n"
             "    data.IsLayoutDependent(${commonlibsf_plugin_struct_compatibility});\n"
             "    data.MinimumRequiredXSEVersion(${commonlibsf_min_sfse_version});\n"
@@ -125,7 +124,7 @@ endfunction()
 
 function(add_commonlibsf_plugin TARGET)
     set(options OPTIONAL USE_ADDRESS_LIBRARY USE_SIGNATURE_SCANNING STRUCT_DEPENDENT EXCLUDE_FROM_ALL)
-    set(oneValueArgs NAME AUTHOR EMAIL VERSION MINIMUM_SFSE_VERSION)
+    set(oneValueArgs NAME AUTHOR VERSION MINIMUM_SFSE_VERSION)
     set(multiValueArgs COMPATIBLE_RUNTIMES SOURCES)
     cmake_parse_arguments(PARSE_ARGV 1 ADD_COMMONLIBSF_PLUGIN "${options}" "${oneValueArgs}"
             "${multiValueArgs}")

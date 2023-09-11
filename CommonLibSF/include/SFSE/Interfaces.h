@@ -107,11 +107,11 @@ namespace SFSE
 
 		constexpr void PluginVersion(std::uint32_t a_version) noexcept { pluginVersion = a_version; }
 
+		constexpr void PluginVersion(REL::Version a_version) noexcept { pluginVersion = a_version.pack(); }
+
 		constexpr void PluginName(std::string_view a_plugin) noexcept { SetCharBuffer(a_plugin, std::span{ pluginName }); }
 
 		constexpr void AuthorName(std::string_view a_name) noexcept { SetCharBuffer(a_name, std::span{ author }); }
-
-		constexpr void SupportEmail(std::string_view a_email) noexcept { SetCharBuffer(a_email, std::span{ email }); }
 
 		constexpr void UsesSigScanning(bool a_value) noexcept { addressIndependence = !a_value; }
 
@@ -134,7 +134,6 @@ namespace SFSE
 		std::uint32_t       pluginVersion = 0;
 		char                pluginName[256] = {};
 		char                author[256] = {};
-		char                email[252] = {};
 		std::uint32_t       addressIndependence;
 		std::uint32_t       structureCompatibility;
 		std::uint32_t       compatibleVersions[16] = {};
@@ -155,14 +154,13 @@ namespace SFSE
 	static_assert(offsetof(PluginVersionData, pluginVersion) == 0x004);
 	static_assert(offsetof(PluginVersionData, pluginName) == 0x008);
 	static_assert(offsetof(PluginVersionData, author) == 0x108);
-	static_assert(offsetof(PluginVersionData, email) == 0x208);
-	static_assert(offsetof(PluginVersionData, addressIndependence) == 0x304);
-	static_assert(offsetof(PluginVersionData, structureCompatibility) == 0x308);
-	static_assert(offsetof(PluginVersionData, compatibleVersions) == 0x30C);
-	static_assert(offsetof(PluginVersionData, xseMinimum) == 0x34C);
-	static_assert(offsetof(PluginVersionData, reservedNonBreaking) == 0x350);
-	static_assert(offsetof(PluginVersionData, reservedBreaking) == 0x354);
-	static_assert(sizeof(PluginVersionData) == 0x358);
+	static_assert(offsetof(PluginVersionData, addressIndependence) == 0x208);
+	static_assert(offsetof(PluginVersionData, structureCompatibility) == 0x20C);
+	static_assert(offsetof(PluginVersionData, compatibleVersions) == 0x210);
+	static_assert(offsetof(PluginVersionData, xseMinimum) == 0x250);
+	static_assert(offsetof(PluginVersionData, reservedNonBreaking) == 0x254);
+	static_assert(offsetof(PluginVersionData, reservedBreaking) == 0x258);
+	static_assert(sizeof(PluginVersionData) == 0x25C);
 }  // namespace SFSE
 
 #define SFSEPluginVersion extern "C" [[maybe_unused]] __declspec(dllexport) constinit SFSE::PluginVersionData SFSEPlugin_Version
