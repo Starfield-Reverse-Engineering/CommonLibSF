@@ -7,6 +7,8 @@ namespace RE
 	class BGSSnapTemplateComponent : public BaseFormComponent
 	{
 	public:
+		TES_RTTI_VTABLE(BGSSnapTemplateComponent);
+
 		virtual ~BGSSnapTemplateComponent();
 
 		// add
