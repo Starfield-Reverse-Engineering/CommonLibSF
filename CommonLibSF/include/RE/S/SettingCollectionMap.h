@@ -6,7 +6,7 @@ namespace RE
 {
 	namespace detail
 	{
-		/**
+		/*
 		struct SettingCollectionMapCompare
 		{
 			[[nodiscard]] bool operator()(const RE::BSFixedString& a_lhs, const RE::BSFixedString& a_rhs) const noexcept
@@ -14,7 +14,7 @@ namespace RE
 				return a_lhs.c_str() < a_rhs.c_str();
 			}
 		};
-		/**/
+		*/
 	}
 
 	template <typename T>
