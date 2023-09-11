@@ -6,8 +6,8 @@
 namespace RE
 {
 	class BGSKeywordForm :
-		public BaseFormComponent, // 00
-		public IKeywordFormBase   // 08
+		public BaseFormComponent,  // 00
+		public IKeywordFormBase    // 08
 	{
 	public:
 		TES_RTTI_VTABLE(BGSKeywordForm);
@@ -22,4 +22,3 @@ namespace RE
 	};
 	static_assert(sizeof(BGSKeywordForm) == 0x30);
 }
-

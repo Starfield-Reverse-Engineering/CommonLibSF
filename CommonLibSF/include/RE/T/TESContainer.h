@@ -17,9 +17,8 @@ namespace RE
 		virtual void Unk_0A();  // 0A
 
 		// members
-		ContainerObject** containerObjects; // 08
-		std::uint32_t     numContainerObjects; // 10
+		ContainerObject** containerObjects;     // 08
+		std::uint32_t     numContainerObjects;  // 10
 	};
 	static_assert(sizeof(TESContainer) == 0x18);
 }
-

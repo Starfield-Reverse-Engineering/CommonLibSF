@@ -119,4 +119,3 @@ namespace RE
 		size_type _capacity{ 0 };    // ??
 	};
 }
-

@@ -1,7 +1,7 @@
 #pragma once
 
-#include "RE/B/BaseFormComponent.h"
 #include "RE/B/BGSTerminal.h"
+#include "RE/B/BaseFormComponent.h"
 
 namespace RE
 {
@@ -12,4 +12,3 @@ namespace RE
 	};
 	static_assert(sizeof(BGSNativeTerminalForm) == 0x10);
 }
-

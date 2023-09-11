@@ -21,4 +21,3 @@ namespace RE
 		static_assert(sizeof(IType) == 0x08);
 	}
 }
-

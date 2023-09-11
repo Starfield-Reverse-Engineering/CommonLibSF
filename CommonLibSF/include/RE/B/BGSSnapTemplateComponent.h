@@ -22,4 +22,3 @@ namespace RE
 	};
 	static_assert(sizeof(BGSSnapTemplateComponent) == 0x18);
 }
-

@@ -15,4 +15,3 @@ namespace RE
 	};
 	static_assert(sizeof(BGSSkinForm) == 0x10);
 }
-

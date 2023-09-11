@@ -13,4 +13,3 @@ namespace RE
 	};
 	static_assert(sizeof(RegSettingCollection) == 0x160);
 }
-

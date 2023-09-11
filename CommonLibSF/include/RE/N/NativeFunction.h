@@ -33,4 +33,3 @@ namespace RE
 		static_assert(sizeof(NativeFunction) == 0x60);
 	}
 }
-

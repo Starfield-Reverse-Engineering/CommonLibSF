@@ -5,12 +5,9 @@
 namespace RE
 {
 	class TESRace :
-		public TESForm // 00
+		public TESForm  // 00
 	{
 	public:
 		TES_RTTI_VTABLE(TESRace);
-
-
 	};
 }
-

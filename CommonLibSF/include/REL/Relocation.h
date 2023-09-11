@@ -49,7 +49,7 @@
 #define TES_VTABLE(VTBL) \
 	inline static constexpr auto VTABLE = VTABLE::VTBL
 #define TES_RTTI_VTABLE(ENTRY) \
-	TES_RTTI(ENTRY);          \
+	TES_RTTI(ENTRY);           \
 	TES_VTABLE(ENTRY)
 
 namespace REL
@@ -485,7 +485,7 @@ namespace REL
 		[[nodiscard]] constexpr value_type get() const  //
 			noexcept(std::is_nothrow_copy_constructible_v<value_type>)
 		{
-			return stl::unrestricted_cast<value_type> (_address);
+			return stl::unrestricted_cast<value_type>(_address);
 		}
 
 		[[nodiscard]] constexpr decltype(auto) address() const noexcept { return _address; }

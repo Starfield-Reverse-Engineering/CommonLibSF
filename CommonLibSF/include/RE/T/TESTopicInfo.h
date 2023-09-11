@@ -10,7 +10,6 @@ namespace RE
 		TES_RTTI_VTABLE(TESTopicInfo);
 
 		// members
-		std::uint64_t unk38; // 38
+		std::uint64_t unk38;  // 38
 	};
 }
-

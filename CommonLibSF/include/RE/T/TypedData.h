@@ -15,4 +15,3 @@ namespace RE
 		static_assert(sizeof(TypedData) == 0x10);
 	}
 }
-

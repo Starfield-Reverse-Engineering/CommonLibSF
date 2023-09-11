@@ -11,4 +11,3 @@ namespace RE
 		kTotal = 3
 	};
 }
-

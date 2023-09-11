@@ -24,4 +24,3 @@ namespace RE
 	};
 	static_assert(sizeof(TESBoundAnimObject) == 0x118);
 }
-

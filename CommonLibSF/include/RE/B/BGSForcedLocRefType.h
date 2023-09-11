@@ -15,4 +15,3 @@ namespace RE
 	};
 	static_assert(sizeof(BGSForcedLocRefType) == 0x18);
 }
-

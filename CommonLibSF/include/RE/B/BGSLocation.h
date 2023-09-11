@@ -5,12 +5,10 @@
 namespace RE
 {
 	class BGSLocation :
-		public TESForm // 00
-		// ...
+		public TESForm  // 00
+						// ...
 	{
 	public:
 		TES_RTTI_VTABLE(BGSLocation);
-
 	};
 }
-

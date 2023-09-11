@@ -1,7 +1,7 @@
 #pragma once
 
-#include "RE/B/BSIntrusiveRefCounted.h"
 #include "RE/B/BGSKeyword.h"
+#include "RE/B/BSIntrusiveRefCounted.h"
 #include "RE/T/TBO_InstanceData.h"
 
 namespace RE
@@ -18,4 +18,3 @@ namespace RE
 		virtual void CollectAllKeywords(void* /* BSScrapArray<const BGSKeyword> */ a_refOutKeywordA, const TBO_InstanceData* a_data);
 	};
 }
-

@@ -12,4 +12,3 @@ namespace RE
 	};
 	static_assert(sizeof(TESFormRefCount) == 0x08);
 }
-

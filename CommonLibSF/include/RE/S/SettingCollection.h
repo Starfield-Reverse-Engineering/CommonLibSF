@@ -34,4 +34,3 @@ namespace RE
 	};
 	extern template class SettingCollection<Setting>;
 }
-

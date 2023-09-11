@@ -12,4 +12,3 @@ namespace RE
 	};
 	static_assert(sizeof(BSIntrusiveRefCounted) == 0x08);
 }
-

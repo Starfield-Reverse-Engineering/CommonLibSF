@@ -6,7 +6,5 @@ namespace RE
 	{
 	public:
 		TES_RTTI_VTABLE(BGSTerminal);
-
 	};
 }
-
