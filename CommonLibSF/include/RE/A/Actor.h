@@ -9,6 +9,7 @@ namespace RE
 	{
 	public:
 		SF_RTTI_VTABLE(Actor);
+		SF_FORMTYPE(ACHR);
 
 		~Actor() override;  // 00
 

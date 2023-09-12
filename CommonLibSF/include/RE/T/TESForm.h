@@ -119,16 +119,18 @@ namespace RE
 		virtual void          Unk_60();                                                         // 60
 		virtual void          Unk_61();                                                         // 61
 
+		[[nodiscard]] FormType GetFormType() const noexcept { return *formType; }
+
 		// members
-		std::uint64_t sourceFiles;  // 18 - TESFileContainer
-		std::uint32_t unk20;        // 20
-		std::uint32_t unk24;        // 24
-		std::uint32_t formFlags;    // 28
-		std::uint32_t unk2C;        // 2C
-		std::uint32_t formID;       // 30
-		std::uint8_t  unk34;        // 34 - also flag
-		std::uint8_t  unk35;        // 35
-		std::uint8_t  formType;     // 36
+		std::uint64_t                            sourceFiles;  // 18 - TESFileContainer
+		std::uint32_t                            unk20;        // 20
+		std::uint32_t                            unk24;        // 24
+		std::uint32_t                            formFlags;    // 28
+		std::uint32_t                            unk2C;        // 2C
+		std::uint32_t                            formID;       // 30
+		std::uint8_t                             unk34;        // 34 - also flag
+		std::uint8_t                             unk35;        // 35
+		stl::enumeration<FormType, std::uint8_t> formType;     // 36
 	};
 	static_assert(sizeof(TESForm) == 0x38);
 }

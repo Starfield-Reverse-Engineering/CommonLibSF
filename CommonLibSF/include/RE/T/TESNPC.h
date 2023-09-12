@@ -17,6 +17,7 @@ namespace RE
 	{
 	public:
 		SF_RTTI_VTABLE(TESNPC);
+		SF_FORMTYPE(NPC_);
 
 		// members
 		/*

@@ -671,4 +671,6 @@ namespace REL
 #include "RE/Offsets_RTTI.h"
 #include "RE/Offsets_VTABLE.h"
 
+#include "RE/F/FormTypes.h"
+
 #undef cdecl  // Workaround for Clang.

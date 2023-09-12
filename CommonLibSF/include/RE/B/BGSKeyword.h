@@ -8,5 +8,6 @@ namespace RE
 	{
 	public:
 		SF_RTTI_VTABLE(BGSKeyword);
+		SF_FORMTYPE(KYWD);
 	};
 }

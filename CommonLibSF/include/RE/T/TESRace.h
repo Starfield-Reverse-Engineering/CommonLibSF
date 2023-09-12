@@ -9,5 +9,6 @@ namespace RE
 	{
 	public:
 		SF_RTTI_VTABLE(TESRace);
+		SF_FORMTYPE(RACE);
 	};
 }
