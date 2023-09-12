@@ -8,6 +8,7 @@ namespace RE
 	{
 	public:
 		SF_RTTI_VTABLE(TESTopicInfo);
+		SF_FORMTYPE(INFO);
 
 		// members
 		std::uint64_t unk38;  // 38

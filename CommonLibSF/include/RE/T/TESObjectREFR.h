@@ -24,6 +24,7 @@ namespace RE
 	{
 	public:
 		SF_RTTI_VTABLE(TESObjectREFR);
+		SF_FORMTYPE(REFR);
 
 		~TESObjectREFR() override;  // 00
 

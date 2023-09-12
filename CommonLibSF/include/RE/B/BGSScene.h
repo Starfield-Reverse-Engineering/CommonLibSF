@@ -11,6 +11,7 @@ namespace RE
 	{
 	public:
 		SF_RTTI_VTABLE(BGSScene);
+		SF_FORMTYPE(SCEN);
 
 		//
 	};

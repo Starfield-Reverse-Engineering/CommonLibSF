@@ -9,5 +9,6 @@ namespace RE
 	{
 	public:
 		SF_RTTI_VTABLE(TESObjectARMO);
+		SF_FORMTYPE(ARMO);
 	};
 }

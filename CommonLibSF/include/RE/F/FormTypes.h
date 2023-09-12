@@ -224,7 +224,7 @@ namespace RE
 	};
 
 	[[nodiscard]] const char* FormTypeToString(FormType a_formType);
-	[[nodiscard]] FormType         StringToFormType(std::string_view a_formType);
+	[[nodiscard]] FormType    StringToFormType(std::string_view a_formType);
 }
 
 namespace std
@@ -268,3 +268,6 @@ namespace std
 	};
 }
 #endif
+
+#define SF_FORMTYPE(TYPE) \
+	inline static constexpr auto FORMTYPE = RE::FormType::k##TYPE

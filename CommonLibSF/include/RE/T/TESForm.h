@@ -2,7 +2,6 @@
 
 #include "RE/B/BSReflection.h"
 #include "RE/B/BaseFormComponent.h"
-#include "RE/F/FormTypes.h"
 #include "RE/T/TESFile.h"
 
 namespace RE
