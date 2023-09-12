@@ -35,6 +35,8 @@
 #include "RE/B/BaseFormComponent.h"
 #include "RE/C/CombatGroup.h"
 #include "RE/C/ConsoleLog.h"
+#include "RE/F/FORM_ENUM_STRING.h"
+#include "RE/F/FormTypes.h"
 #include "RE/I/IFunction.h"
 #include "RE/I/IKeywordFormBase.h"
 #include "RE/I/INIPrefSettingCollection.h"
