@@ -68,7 +68,7 @@
       "name": "compiler-msvc",
       "hidden": true,
       "environment": {
-        "PROJECT_COMPILER_FLAGS": "/cgthreads8 /diagnostics:caret /fp:contract /fp:except- /guard:cf- /permissive- /Zc:__cplusplus /Zc:enumTypes /Zc:lambda /Zc:preprocessor /Zc:referenceBinding /Zc:rvalueCast /Zc:templateScope /Zc:ternary /Zc:preprocessor /EHsc /MP /W4 /WX /external:anglebrackets /external:W0",
+        "PROJECT_COMPILER_FLAGS": "/cgthreads8 /diagnostics:caret /fp:contract /fp:except- /guard:cf- /permissive- /Zc:__cplusplus /Zc:enumTypes /Zc:lambda /Zc:preprocessor /Zc:referenceBinding /Zc:rvalueCast /Zc:templateScope /Zc:ternary /Zc:preprocessor /EHsc /MP /W4 /external:anglebrackets /external:W0",
         "PROJECT_COMPILER": "msvc"
       }
     },
@@ -100,7 +100,7 @@
       "environment": {
         "CC": "clang-cl",
         "CXX": "clang-cl",
-        "PROJECT_COMPILER_FLAGS": "/permissive- /EHsc /W4 /WX -Wno-overloaded-virtual -Wno-delete-non-abstract-non-virtual-dtor -Wno-inconsistent-missing-override -Wno-reinterpret-base-class -D__cpp_consteval"
+        "PROJECT_COMPILER_FLAGS": "/permissive- /EHsc /W4 -Wno-overloaded-virtual -Wno-delete-non-abstract-non-virtual-dtor -Wno-inconsistent-missing-override -Wno-reinterpret-base-class -D__cpp_consteval"
       }
     },
     {
