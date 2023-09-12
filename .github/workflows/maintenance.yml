@@ -40,8 +40,8 @@ jobs:
         id: registry
         uses: EndBug/add-and-commit@v9
         with:
-          committer_name: maintenance
-          committer_email: 41898282+github-actions[bot]@users.noreply.github.com
+          author_name: maintenance
+          author_email: 41898282+github-actions[bot]@users.noreply.github.com
           message: "ci: maintenance `${{ steps.versioning.outputs.VCPKG_VERSION }}`"
 
       - name: Repository Dispatch
