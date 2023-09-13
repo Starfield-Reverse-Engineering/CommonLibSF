@@ -3,14 +3,16 @@ CMakeUserPresets.json
 CMakeFiles
 CMakeCache.txt
 *.cmake
-/out*
 /.vs*
 /.vscode*
 /.idea
+/.xmake
 conan.lock
 conanbuildinfo.*
 conaninfo.txt
 graph_info.json
 
+/out*
 /CommonLibSF/.vs
 /CommonLibSF/out
+/vsxmake*
