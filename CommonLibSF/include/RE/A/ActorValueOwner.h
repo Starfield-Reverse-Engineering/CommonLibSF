@@ -10,9 +10,9 @@ namespace RE
 	public:
 		SF_RTTI_VTABLE(ActorValueOwner);
 
-		virtual ~ActorValueOwner();	
+		virtual ~ActorValueOwner();
 
-	    // add
+		// add
 		virtual float GetActorValue(const ActorValueInfo& a_info);
 		virtual float GetPermanentActorValue(const ActorValueInfo& a_info);
 		virtual float GetBaseActorValue(const ActorValueInfo& a_info);
