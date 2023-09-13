@@ -20,9 +20,16 @@
 
 ## Developing with CommonLibSF
 
-### Using the CommonLibSF plugin template
+### Using the CommonLibSF plugin templates
 
-A plugin template is provided at https://github.com/Starfield-Reverse-Engineering/CLibSFPluginTemplate. Clone the repo and run the project setup script to get started developing your plugin without having to worry about setting things up.
+You can choose from the following community plugin templates to speed up the setup process:
+
++ [CLibSFPluginTemplate](https://github.com/Starfield-Reverse-Engineering/CLibSFPluginTemplate)
+  + Using **CMake**. Consumes CommonLibSF as [vcpkg port package](https://github.com/Starfield-Reverse-Engineering/Starfield-RE-vcpkg).
++ [SF_PluginTemplate](https://github.com/gottyduke/SF_PluginTemplate)
+  + Using **CMake**. Consumes CommonLibSF as git submodule or local fork.
++ [template-commonlibsf-xmake](https://github.com/Starfield-Reverse-Engineering/commonlibsf-template-xmake)
+  + Using **Xmake**. Consumes CommonLibSF as custom [xmake-repo](https://github.com/Starfield-Reverse-Engineering/starfield-re-xrepo).
 
 ### Including CommonLibSF in your project
 
@@ -48,6 +55,21 @@ target_link_libraries(
   PRIVATE
   CommonLibSF::CommonLibSF
 )
+```
+
+#### xmake package
+
+> Thanks to Qudix for maintaining the custom xmake repo!
+
+```lua
+-- add starfield-re-xrepo repository
+add_repositories("re https://github.com/Starfield-Reverse-Engineering/starfield-re-xrepo")
+
+-- require packages
+add_requires("commonlibsf")
+
+-- add packages for the target
+add_packages("commonlibsf")
 ```
 
 ## End-User Dependencies
