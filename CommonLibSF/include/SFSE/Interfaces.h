@@ -134,6 +134,8 @@ namespace SFSE
 
 		constexpr void MinimumRequiredXSEVersion(REL::Version a_version) noexcept { xseMinimum = a_version.pack(); }
 
+		[[nodiscard]] static const PluginVersionData* GetSingleton() noexcept;
+
 		const std::uint32_t dataVersion{ kVersion };
 		std::uint32_t       pluginVersion = 0;
 		char                pluginName[256] = {};
