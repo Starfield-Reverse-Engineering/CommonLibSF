@@ -15,111 +15,175 @@ namespace RE
 	{
 	public:
 		SF_RTTI_VTABLE(TESForm);
+		SF_FORMTYPE(NONE);
 
-		virtual ~TESForm();  // 00
-
-		struct ACTIVATE_DATA
+		struct ActivateData
 		{
-			TESObjectREFR* activatedRef;
-			TESObjectREFR* actionRef;
-			TESForm*       objectToGet;
-			std::int32_t   count;
-			bool           unk1C;
+			TESObjectREFR* activatedRef;  // 00
+			TESObjectREFR* actionRef;     // 08
+			TESForm*       objectToGet;   // 10
+			std::int32_t   count;         // 18
+			bool           unk1C;         // 1C
+			bool           unk1D;         // 1D
+			bool           unk1E;         // 1E
+			bool           unk1F;         // 1F
 		};
+		static_assert(sizeof(ActivateData) == 0x20);
+
+		~TESForm() override;  // 00
 
 		// add
-		virtual void          Unk_08();                                                         // 08
-		virtual void          Unk_09();                                                         // 09
-		virtual void          Unk_0A();                                                         // 0A
-		virtual void          Unk_0B();                                                         // 0B
-		virtual void          Unk_0C();                                                         // 0C
-		virtual void          Unk_0D();                                                         // 0D
-		virtual void          Unk_0E();                                                         // 0E
-		virtual void          Unk_0F();                                                         // 0F
-		virtual void          Unk_10();                                                         // 10
-		virtual void          Unk_11();                                                         // 11
-		virtual void          Unk_12();                                                         // 12
-		virtual void          Unk_13();                                                         // 13
-		virtual void          Unk_14();                                                         // 14
-		virtual void          Unk_15();                                                         // 15
-		virtual void          Unk_16();                                                         // 16
-		virtual bool          AddChange(std::uint32_t a_changeFlags);                           // 17
-		virtual void          RemoveChange(std::uint32_t a_changeFlags);                        // 18
-		virtual void          Unk_19();                                                         // 19
-		virtual void          Unk_1A();                                                         // 1A
-		virtual void          Unk_1B();                                                         // 1B
-		virtual void          Unk_1C();                                                         // 1C
-		virtual void          Unk_1D();                                                         // 1D
-		virtual void          Unk_1E();                                                         // 1E
-		virtual void          InitItemImpl();                                                   // 1F
-		virtual TESFile*      GetRevertFile() const;                                            // 20
-		virtual TESFile*      GetDescriptionOwnerFile() const;                                  // 21
-		virtual std::uint8_t  GetSavedFormType();                                               // 22
-		virtual void          GetFormDetailedString(char* a_dest, std::uint32_t a_size) const;  // 23
-		virtual bool          GetKnown() const;                                                 // 24
-		virtual bool          GetRandomAnim() const;                                            // 25
-		virtual bool          GetPlayable() const;                                              // 26
-		virtual void          SetPlayable(bool a_set);                                          // 27
-		virtual void          Unk_28();                                                         // 28
-		virtual void          Unk_29();                                                         // 29
-		virtual bool          GetDangerous() const;                                             // 2A
-		virtual bool          QHasCurrents() const;                                             // 2B
-		virtual bool          GetObstacle() const;                                              // 2C
-		virtual void          Unk_2D();                                                         // 2D
-		virtual bool          GetOnLocalMap() const;                                            // 2E
-		virtual bool          GetMustUpdate() const;                                            // 2F
-		virtual void          SetOnLocalMap(bool a_val);                                        // 30
-		virtual void          Unk_31();                                                         // 31 - new?
-		virtual void          Unk_32();                                                         // 32 - GetIgnoredBySandbox()?
-		virtual void          SetDelete(bool a_deleted);                                        // 33
-		virtual void          SetAltered(bool a_altered);                                       // 34
-		virtual void          Unk_35();                                                         // 35
-		virtual void          Unk_36();                                                         // 36
-		virtual void          Unk_37();                                                         // 37
-		virtual void          Unk_38();                                                         // 38
-		virtual void          Unk_39();                                                         // 39
-		virtual void          Unk_3A();                                                         // 3A
-		virtual void          Unk_3B();                                                         // 3B
-		virtual void          Unk_3C();                                                         // 3C
-		virtual void          Unk_3D();                                                         // 3D
-		virtual void          Unk_3E();                                                         // 3E
-		virtual void          Unk_3F();                                                         // 3F
-		virtual bool          IsFurniture();                                                    // 40 - new
-		virtual void          Unk_41();                                                         // 41
-		virtual void          Unk_42();                                                         // 42
-		virtual void          Unk_43();                                                         // 43
-		virtual void          Unk_44();                                                         // 44
-		virtual void          Unk_45();                                                         // 45
-		virtual void          Unk_46();                                                         // 46
-		virtual void          Unk_47();                                                         // 47
-		virtual void          Unk_48();                                                         // 48
-		virtual void          Unk_49();                                                         // 49
-		virtual void          Unk_4A();                                                         // 4A
-		virtual void          Unk_4B();                                                         // 4B
-		virtual std::uint32_t GetFullNameLength() const;                                        // 4C - new
-		virtual const char*   GetFullName() const;                                              // 4D - new
-		virtual void          Unk_4E();                                                         // 4E
-		virtual void          Unk_4F();                                                         // 4F
-		virtual void          Unk_50();                                                         // 50
-		virtual void          Unk_51();                                                         // 51
-		virtual void          Unk_52();                                                         // 52
-		virtual void          Unk_53();                                                         // 53
-		virtual bool          Activate(const ACTIVATE_DATA& a_activateData);                    // 54
-		virtual void          Unk_55();                                                         // 55
-		virtual void          Unk_56();                                                         // 56
-		virtual void          Unk_57();                                                         // 57
-		virtual void          Unk_58();                                                         // 58
-		virtual void          Unk_59();                                                         // 59
-		virtual void          Unk_5A();                                                         // 5A
-		virtual void          Unk_5B();                                                         // 5B
-		virtual void          Unk_5C();                                                         // 5C
-		virtual std::uint32_t GetFilledSlots() const;                                           // 5D
-		virtual std::uint32_t GetFilledSlotsImpl() const;                                       // 5E
-		virtual float         GetDesirability() const;                                          // 5F
-		virtual void          Unk_60();                                                         // 60
-		virtual void          Unk_61();                                                         // 61
+		virtual void                               Unk_08();                                                         // 08
+		virtual void                               Unk_09();                                                         // 09
+		virtual void                               Unk_0A();                                                         // 0A
+		virtual void                               Unk_0B();                                                         // 0B
+		virtual void                               Unk_0C();                                                         // 0C
+		virtual void                               Unk_0D();                                                         // 0D
+		virtual void                               Unk_0E();                                                         // 0E
+		virtual void                               Unk_0F();                                                         // 0F
+		virtual void                               Unk_10();                                                         // 10
+		virtual void                               Unk_11();                                                         // 11
+		virtual void                               Unk_12();                                                         // 12
+		virtual void                               Unk_13();                                                         // 13
+		virtual void                               Unk_14();                                                         // 14
+		virtual void                               Unk_15();                                                         // 15
+		virtual void                               Unk_16();                                                         // 16
+		virtual bool                               AddChange(std::uint32_t a_changeFlags);                           // 17
+		virtual void                               RemoveChange(std::uint32_t a_changeFlags);                        // 18
+		virtual void                               Unk_19();                                                         // 19
+		virtual void                               Unk_1A();                                                         // 1A
+		virtual void                               Unk_1B();                                                         // 1B
+		virtual void                               Unk_1C();                                                         // 1C
+		virtual void                               Unk_1D();                                                         // 1D
+		virtual void                               Unk_1E();                                                         // 1E
+		virtual void                               InitItemImpl();                                                   // 1F
+		virtual TESFile*                           GetRevertFile() const;                                            // 20
+		virtual TESFile*                           GetDescriptionOwnerFile() const;                                  // 21
+		virtual std::uint8_t                       GetSavedFormType();                                               // 22
+		virtual void                               GetFormDetailedString(char* a_dest, std::uint32_t a_size) const;  // 23
+		virtual bool                               GetKnown() const;                                                 // 24
+		virtual bool                               GetRandomAnim() const;                                            // 25
+		virtual bool                               GetPlayable() const;                                              // 26
+		virtual void                               SetPlayable(bool a_set);                                          // 27
+		virtual void                               Unk_28();                                                         // 28
+		virtual void                               Unk_29();                                                         // 29
+		virtual bool                               GetDangerous() const;                                             // 2A
+		virtual bool                               QHasCurrents() const;                                             // 2B
+		virtual bool                               GetObstacle() const;                                              // 2C
+		virtual void                               Unk_2D();                                                         // 2D
+		virtual bool                               GetOnLocalMap() const;                                            // 2E
+		virtual bool                               GetMustUpdate() const;                                            // 2F
+		virtual void                               SetOnLocalMap(bool a_val);                                        // 30
+		virtual void                               Unk_31();                                                         // 31 - new?
+		virtual void                               Unk_32();                                                         // 32 - GetIgnoredBySandbox()?
+		virtual void                               SetDelete(bool a_deleted);                                        // 33
+		virtual void                               SetAltered(bool a_altered);                                       // 34
+		virtual void                               Unk_35();                                                         // 35
+		virtual void                               Unk_36();                                                         // 36
+		virtual void                               Unk_37();                                                         // 37
+		virtual void                               Unk_38();                                                         // 38
+		virtual void                               Unk_39();                                                         // 39
+		virtual void                               Unk_3A();                                                         // 3A
+		virtual void                               Unk_3B();                                                         // 3B
+		virtual void                               Unk_3C();                                                         // 3C
+		virtual void                               Unk_3D();                                                         // 3D
+		virtual void                               Unk_3E();                                                         // 3E
+		virtual void                               Unk_3F();                                                         // 3F
+		virtual bool                               IsFurniture();                                                    // 40 - new
+		virtual void                               Unk_41();                                                         // 41
+		virtual void                               Unk_42();                                                         // 42
+		virtual void                               Unk_43();                                                         // 43
+		virtual void                               Unk_44();                                                         // 44
+		virtual TESObjectREFR*                     AsReference1();                                                   // 45
+		[[nodiscard]] virtual const TESObjectREFR* AsReference2() const;                                             // 46
+		virtual void                               Unk_47();                                                         // 47
+		virtual void                               Unk_48();                                                         // 48
+		virtual void                               Unk_49();                                                         // 49
+		virtual void                               Unk_4A();                                                         // 4A
+		virtual void                               Unk_4B();                                                         // 4B
+		virtual std::uint32_t                      GetFormEditorIDLength() const;                                    // 4C
+		virtual const char*                        GetFormEditorID() const;                                          // 4D
+		virtual bool                               SetFormEditorID(const char* a_editorID);                          // 4E
+		virtual void                               Unk_4F();                                                         // 4F
+		virtual void                               Unk_50();                                                         // 50
+		virtual void                               Unk_51();                                                         // 51
+		virtual void                               Unk_52();                                                         // 52
+		virtual void                               Unk_53();                                                         // 53
+		virtual bool                               Activate(const ActivateData& a_activateData);                     // 54
+		virtual void                               Unk_55();                                                         // 55
+		virtual void                               Unk_56();                                                         // 56
+		virtual void                               Unk_57();                                                         // 57
+		virtual void                               Unk_58();                                                         // 58
+		virtual void                               Unk_59();                                                         // 59
+		virtual void                               Unk_5A();                                                         // 5A
+		virtual void                               Unk_5B();                                                         // 5B
+		virtual void                               Unk_5C();                                                         // 5C
+		virtual std::uint32_t                      GetFilledSlots() const;                                           // 5D
+		virtual std::uint32_t                      GetFilledSlotsImpl() const;                                       // 5E
+		virtual float                              GetDesirability() const;                                          // 5F
+		virtual void                               Unk_60();                                                         // 60
+		virtual void                               Unk_61();                                                         // 61
 
-		[[nodiscard]] FormType GetFormType() const noexcept { return *formType; }
+		[[nodiscard]] static TESForm* LookupByID(std::uint32_t a_formID)
+		{
+			using func_t = decltype(&TESForm::LookupByID);
+			REL::Relocation<func_t> func{ REL::Offset(0x014D7F7C) };
+			return func(a_formID);
+		}
+
+		[[nodiscard]] static TESForm* LookupByEditorID(const char* a_editorID)
+		{
+			using func_t = decltype(&TESForm::LookupByEditorID);
+			REL::Relocation<func_t> func{ REL::Offset(0x014D7F7C) };
+			return func(a_editorID);
+		}
+
+		[[nodiscard]] TESObjectREFR*       AsReference() { return AsReference1(); }
+		[[nodiscard]] const TESObjectREFR* AsReference() const { return AsReference2(); }
+
+		[[nodiscard]] std::uint32_t GetFormFlags() const noexcept { return formFlags; }
+		[[nodiscard]] std::uint32_t GetFormID() const noexcept { return formID; }
+		[[nodiscard]] FormType      GetFormType() const noexcept { return *formType; }
+
+		[[nodiscard]] bool Is(FormType a_type) const noexcept { return GetFormType() == a_type; }
+
+		template <class... Args>
+		[[nodiscard]] bool Is(Args... a_args) const noexcept  //
+			requires(std::same_as<Args, FormType> && ...)
+		{
+			return (Is(a_args) || ...);
+		}
+
+		template <class T>
+		[[nodiscard]] bool Is() const noexcept  //
+			requires(std::derived_from<T, TESForm> &&
+					 !std::is_pointer_v<T> &&
+					 !std::is_reference_v<T>)
+		{
+			return Is(T::FORMTYPE);
+		}
+
+		[[nodiscard]] bool IsActor() const noexcept { return Is(FormType::kACHR); }
+		[[nodiscard]] bool IsAmmo() const noexcept { return Is(FormType::kAMMO); }
+		[[nodiscard]] bool IsArmor() const noexcept { return Is(FormType::kARMO); }
+		[[nodiscard]] bool IsBook() const noexcept { return Is(FormType::kBOOK); }
+		[[nodiscard]] bool IsCreated() const noexcept { return (GetFormID() + 0x1000000) <= 0xFFFFFE; }
+		[[nodiscard]] bool IsCredits() const noexcept { return GetFormID() == 0x0000000F; }
+		[[nodiscard]] bool IsDeleted() const noexcept { return (GetFormFlags() & 0x20) != 0; }
+		[[nodiscard]] bool IsDigiPick() const noexcept { return GetFormID() == 0x0000000A; }
+
+		[[nodiscard]] bool IsNot(FormType a_type) const noexcept { return !Is(a_type); }
+
+		template <class... Args>
+		[[nodiscard]] bool IsNot(Args... a_args) const noexcept  //
+			requires(std::same_as<Args, FormType> && ...)
+		{
+			return (IsNot(a_args) && ...);
+		}
+
+		[[nodiscard]] bool IsPlayer() const noexcept { return GetFormID() == 0x00000007; }
+		[[nodiscard]] bool IsPlayerRef() const noexcept { return GetFormID() == 0x00000014; }
+		[[nodiscard]] bool IsWeapon() const noexcept { return Is(FormType::kWEAP); }
 
 		// members
 		std::uint64_t                            sourceFiles;  // 18 - TESFileContainer
