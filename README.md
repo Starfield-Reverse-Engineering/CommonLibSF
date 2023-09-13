@@ -4,7 +4,7 @@
 
 [![C++23](https://img.shields.io/static/v1?label=standard&message=c%2B%2B23&color=blue&logo=c%2B%2B&&logoColor=red&style=flat)](https://en.cppreference.com/w/cpp/compiler_support)
 ![Platform](https://img.shields.io/static/v1?label=platform&message=windows&color=dimgray&style=flat&logo=windows)
-[![Game version](https://img.shields.io/badge/game%20version-1.7.23-orange)](#Developing-with-CommonLibSF)
+[![Game version](https://img.shields.io/badge/game%20version-1.7.29-orange)](#Developing-with-CommonLibSF)
 [![VCPKG_VER](https://img.shields.io/static/v1?label=vcpkg%20registry&message=2023-09-13.4&color=green&style=flat)](https://github.com/Starfield-Reverse-Engineering/Starfield-RE-vcpkg)
 [![Main CI](https://img.shields.io/github/actions/workflow/status/Starfield-Reverse-Engineering/CommonLibSF/main_ci.yml)](https://github.com/Starfield-Reverse-Engineering/CommonLibSF/actions/workflows/main_ci.yml)
 
@@ -24,12 +24,12 @@
 
 You can choose from the following community plugin templates to speed up the setup process:
 
-+ [CLibSFPluginTemplate](https://github.com/Starfield-Reverse-Engineering/CLibSFPluginTemplate)
-  + Using **CMake**. Consumes CommonLibSF as [vcpkg port package](https://github.com/Starfield-Reverse-Engineering/Starfield-RE-vcpkg).
-+ [SF_PluginTemplate](https://github.com/gottyduke/SF_PluginTemplate)
-  + Using **CMake**. Consumes CommonLibSF as git submodule or local fork.
-+ [template-commonlibsf-xmake](https://github.com/Starfield-Reverse-Engineering/commonlibsf-template-xmake)
-  + Using **Xmake**. Consumes CommonLibSF as custom [xmake-repo](https://github.com/Starfield-Reverse-Engineering/starfield-re-xrepo).
+- [CLibSFPluginTemplate](https://github.com/Starfield-Reverse-Engineering/CLibSFPluginTemplate)
+  - Uses **CMake**. Consumes CommonLibSF as a [vcpkg port package](https://github.com/Starfield-Reverse-Engineering/Starfield-RE-vcpkg).
+- [SF_PluginTemplate](https://github.com/gottyduke/SF_PluginTemplate)
+  - Uses **CMake**. Consumes CommonLibSF as a git submodule or local fork.
+- [template-commonlibsf-xmake](https://github.com/Starfield-Reverse-Engineering/commonlibsf-template-xmake)
+  - Uses **Xmake**. Consumes CommonLibSF as a custom [xmake-repo](https://github.com/Starfield-Reverse-Engineering/starfield-re-xrepo).
 
 ### Including CommonLibSF in your project
 
@@ -60,6 +60,8 @@ target_link_libraries(
 #### xmake package
 
 > Thanks to Qudix for maintaining the custom xmake repo!
+
+Add the following to your `xmake.lua`:
 
 ```lua
 -- add starfield-re-xrepo repository
