@@ -45,11 +45,11 @@ namespace RE
 	};
 	static_assert(sizeof(NiPoint3) == 0xC);
 
-	class alignas(0x10) NiPoint3Aligned :
+	class alignas(0x10) NiPoint3A :
 		public NiPoint3
 	{
 	public:
 		std::array<std::byte, 0x4> padding;  // 0xC
 	};
-	static_assert(sizeof(NiPoint3Aligned) == 0x10);
+	static_assert(sizeof(NiPoint3A) == 0x10);
 }
