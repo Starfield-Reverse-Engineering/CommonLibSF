@@ -2,37 +2,45 @@
 
 namespace RE
 {
-	namespace detail
-	{
-		class SinkBase
-		{
-			virtual ~SinkBase() = 0;
-		};
-	}
-
-	enum class BSEventNotifyControl : std::int32_t
+	enum class BSEventNotifyControl : std::uint32_t
 	{
 		kContinue,
 		kStop
 	};
 	using EventResult = BSEventNotifyControl;
 
+	namespace BSTEventDetail
+	{
+		class SinkBase
+		{
+		public:
+			virtual ~SinkBase() = 0;
+		};
+
+		class SourceBase
+		{
+		public:
+			virtual ~SourceBase() = 0;
+		};
+	}
+
 	template <class>
 	class BSTEventSource;
 
-	// 08
-	template <typename Event>
-	class BSTEventSink : public detail::SinkBase
+	template <class Event>
+	class BSTEventSink : public BSTEventDetail::SinkBase
 	{
 	public:
-		virtual ~BSTEventSink(){};
-		virtual BSEventNotifyControl ProcessEvent(const Event& a_event, [[maybe_unused]] BSTEventSource<Event>* a_source) { return EventResult::kContinue; };  // pure
+		~BSTEventSink() override = default;  // 00
+
+		// add
+		virtual BSEventNotifyControl ProcessEvent(const Event& a_event, BSTEventSource<Event>* a_source) = 0;  // 01
 	};
 
-	template <typename T>
-	class BSTEventSource
+	template <class Event>
+	class BSTEventSource : public BSTEventDetail::SourceBase
 	{
 	public:
-		// Sinks go here
+		~BSTEventSource() override = default;  // 00
 	};
 }

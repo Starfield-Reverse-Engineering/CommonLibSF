@@ -1,26 +1,67 @@
 #pragma once
 
-#include "RE/B/BGSLocation.h"
-#include "RE/B/BGSScene.h"
+#include "RE/A/ActorValueOwner.h"
+#include "RE/B/BSTEvent.h"
+#include "RE/I/IAnimationGraphManagerHolder.h"
+#include "RE/I/IKeywordFormBase.h"
+#include "RE/I/IMovementInterface.h"
+#include "RE/I/IPostAnimationChannelUpdateFunctor.h"
 #include "RE/N/NiPoint3.h"
-#include "RE/T/TESForm.h"
-#include "RE/T/TESObjectCELL.h"
-#include "RE/T/TESRace.h"
-#include "RE/T/TESTopicInfo.h"
+#include "RE/T/TESHandleForm.h"
 
 namespace RE
 {
+	class BGSLocation;
+	class BGSScene;
+	class BSAnimationGraphEvent;
+	class BSTransformDeltaEvent;
+	class TESBoundObject;
+	class TESObjectCELL;
+	class TESRace;
+	class TESTopicInfo;
+
+	namespace ActorValueEvents
+	{
+		struct ActorValueChangedEvent;
+	}
+
+	namespace BGSInventoryListEvent
+	{
+		struct Event;
+	}
+
+	class IMovementProcessMessageInterface :
+		public IMovementInterface  // 00
+	{
+	public:
+		~IMovementProcessMessageInterface() override;
+
+		// add
+		virtual void Unk_01();  // 01
+	};
+	static_assert(sizeof(IMovementProcessMessageInterface) == 0x8);
+
 	struct OBJ_REFR
 	{
 	public:
 		// members
-		NiPoint3Aligned angle;            // 00
-		NiPoint3Aligned location;         // 10
-		TESForm*        objectReference;  // 20 - TESBoundObject
+		NiPoint3A       angle;            // 00
+		NiPoint3A       location;         // 10
+		TESBoundObject* objectReference;  // 20
 	};
 	static_assert(sizeof(OBJ_REFR) == 0x30);
 
-	class TESObjectREFR : public TESForm
+	class TESObjectREFR :
+		public TESHandleForm,                                            // 00
+		public BSTEventSink<BSTransformDeltaEvent>,                      // 38
+		public IMovementProcessMessageInterface,                         // 40
+		public IPostAnimationChannelUpdateFunctor,                       // 48
+		public BSTEventSink<BSAnimationGraphEvent>,                      // 50
+		public BSTEventSink<BGSInventoryListEvent::Event>,               // 58
+		public IAnimationGraphManagerHolder,                             // 60
+		public IKeywordFormBase,                                         // 68
+		public ActorValueOwner,                                          // 70
+		public BSTEventSource<ActorValueEvents::ActorValueChangedEvent>  // 78
 	{
 	public:
 		SF_RTTI_VTABLE(TESObjectREFR);
@@ -28,7 +69,7 @@ namespace RE
 
 		~TESObjectREFR() override;  // 00
 
-		// add
+		// override (TESForm)
 		virtual void         Predestroy();                                                                                                                      // 062
 		virtual bool         Unk_63();                                                                                                                          // 063 - { return extraList.HasExtraData(14);};
 		virtual bool         GetEditorLocation(NiPoint3& a_originalLocation, NiPoint3& a_originalAngle, TESForm*& a_locationFormOut);                           // 064 - new
@@ -173,7 +214,7 @@ namespace RE
 		virtual void         Unk_EF();                                                                                                                          // 0EF
 		virtual void         Unk_F0();                                                                                                                          // 0F0
 		virtual void         Unk_F1();                                                                                                                          // 0F1
-		virtual void         Unk_F2();                                                                                                                          // 0F2
+		virtual const char*  GetDisplayFullName();                                                                                                              // 0F2
 		virtual void         Unk_F3();                                                                                                                          // 0F3
 		virtual void         Unk_F4();                                                                                                                          // 0F4
 		virtual void         Unk_F5();                                                                                                                          // 0F5
@@ -236,38 +277,23 @@ namespace RE
 		virtual void         Unk_12E();                                                                                                                         // 12E
 		virtual void         Unk_12F();                                                                                                                         // 12F
 
-		// the following should be inherited when decoded properly
-		void* BSTransformDeltaEvent;               // 38
-		void* IMovementProcessMessageInterface;    // 40
-		void* IPostAnimationChannelUpdateFunctor;  // 48
-		void* BSAnimationGraphEvent;               // 50
-		void* BGSInventoryListEvent;               // 58
-		void* IAnimationGraphManagerHolder;        // 60
-		void* IKeywordFormBase;                    // 68
-		void* ActorValueOwner;                     // 70
-		void* ActorValueChangedEvent;              // 78
+		[[nodiscard]] constexpr NiPoint3A GetAngle() const { return data.angle; }
+		[[nodiscard]] constexpr float     GetAngleX() const { return data.angle.x; }
+		[[nodiscard]] constexpr float     GetAngleY() const { return data.angle.y; }
+		[[nodiscard]] constexpr float     GetAngleZ() const { return data.angle.z; }
 
-		//
-		[[nodiscard]] bool IsInSpaceship()
-		{
-			using func_t = decltype(&TESObjectREFR::IsInSpaceship);
-			REL::Relocation<func_t> func{ REL::Offset(0x02B3A8D4) };
-			return func(this);
-		}
+		// NiPointer<TESObjectREFR>
+		[[nodiscard]] TESObjectREFR* GetAttachedSpaceship();
 
-		[[nodiscard]] bool IsInSpace()
-		{
-			using func_t = decltype(&TESObjectREFR::IsInSpace);
-			REL::Relocation<func_t> func{ REL::Offset(0x01A0E208) };
-			return func(this);
-		}
-
-		[[nodiscard]] bool HasKeyword(BGSKeyword* a_keyword)
-		{
-			using func_t = decltype(&TESObjectREFR::HasKeyword);
-			REL::Relocation<func_t> func{ REL::Offset(0x0139EE28) };
-			return func(this, a_keyword);
-		}
+		[[nodiscard]] TESBoundObject*       GetBaseObject() { return data.objectReference; }
+		[[nodiscard]] const TESBoundObject* GetBaseObject() const { return data.objectReference; };
+		[[nodiscard]] constexpr NiPoint3A   GetPosition() const noexcept { return data.location; }
+		[[nodiscard]] constexpr float       GetPositionX() const noexcept { return data.location.x; }
+		[[nodiscard]] constexpr float       GetPositionY() const noexcept { return data.location.y; }
+		[[nodiscard]] constexpr float       GetPositionZ() const noexcept { return data.location.z; }
+		[[nodiscard]] bool                  HasKeyword(BGSKeyword* a_keyword);
+		[[nodiscard]] bool                  IsCrimeToActivate();
+		[[nodiscard]] bool                  IsInSpace();
 
 		// members
 		std::uint32_t  unk80;          // 80
