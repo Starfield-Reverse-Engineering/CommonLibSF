@@ -48,7 +48,7 @@ namespace SFSE
 			logger->flush_on(spdlog::level::info);
 #endif
 			spdlog::set_default_logger(std::move(logger));
-			spdlog::set_pattern("[%^%L%$] %v");
+			spdlog::set_pattern("[%T.%e] [%=5t] [%L] %v");
 		}
 	}  // namespace log
 }  // namespace SFSE
