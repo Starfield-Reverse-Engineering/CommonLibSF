@@ -5,6 +5,9 @@ if(TARGET CommonLibSF)
 	return()
 endif()
 
+# options if not defined
+option(SFSE_SUPPORT_XBYAK "Enables trampoline support for Xbyak." OFF)
+
 # standards & flags
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -29,7 +32,6 @@ endif()
 
 # dependencies
 find_package(spdlog CONFIG REQUIRED)
-find_package(xbyak CONFIG REQUIRED)
 
 # source files
 execute_process(COMMAND powershell -ExecutionPolicy Bypass -File "${CMAKE_CURRENT_SOURCE_DIR}/cmake/make-sourcelist.ps1" "${CMAKE_CURRENT_SOURCE_DIR}" "${CMAKE_CURRENT_BINARY_DIR}")
@@ -113,9 +115,18 @@ target_link_libraries(
 	${PROJECT_NAME}
 	PUBLIC
 		spdlog::spdlog
-		xbyak::xbyak
 		Version.lib
 )
+
+if (SFSE_SUPPORT_XBYAK)
+find_package(xbyak CONFIG REQUIRED)
+
+target_link_libraries(
+	${PROJECT_NAME}
+	PUBLIC
+		xbyak::xbyak
+)
+endif()
 
 target_precompile_headers(
 	${PROJECT_NAME}
