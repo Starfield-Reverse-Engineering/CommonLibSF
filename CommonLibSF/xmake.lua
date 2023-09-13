@@ -4,7 +4,7 @@ option("sfse_xbyak", function()
     add_defines("SFSE_SUPPORT_XBYAK=1")
 end)
 
-target("CommonLibSF")
+target("commonlibsf")
     set_kind("static")
 
     -- add packages
