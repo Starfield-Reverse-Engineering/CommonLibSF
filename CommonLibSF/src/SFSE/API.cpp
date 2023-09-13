@@ -47,7 +47,7 @@ namespace SFSE
 		}
 	}  // namespace detail
 
-	void Init(const LoadInterface* a_intfc, bool a_log = true) noexcept
+	void Init(const LoadInterface* a_intfc, bool a_log) noexcept
 	{
 		stl_assert(a_intfc, "interface is null"sv);
 
