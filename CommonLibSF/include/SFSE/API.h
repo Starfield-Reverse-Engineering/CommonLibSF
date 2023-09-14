@@ -9,7 +9,7 @@
 
 namespace SFSE
 {
-	void Init(const LoadInterface* a_intfc) noexcept;
+	void Init(const LoadInterface* a_intfc, bool a_log = true) noexcept;
 	void RegisterForAPIInitEvent(std::function<void()> a_fn);
 
 	PluginHandle GetPluginHandle() noexcept;

@@ -2,10 +2,6 @@
 #include "SFSE/API.h"
 #include "SFSE/Logger.h"
 
-#include <Windows.h>
-
-EXTERN_C IMAGE_DOS_HEADER __ImageBase;
-
 namespace SFSE
 {
 	REL::Version QueryInterface::RuntimeVersion() const
@@ -70,5 +66,10 @@ namespace SFSE
 	{
 		assert(this);
 		return reinterpret_cast<const detail::SFSETrampolineInterface*>(this);
+	}
+
+	const PluginVersionData* PluginVersionData::GetSingleton() noexcept
+	{
+		return reinterpret_cast<const PluginVersionData*>(WinAPI::GetProcAddress(WinAPI::GetCurrentModule(), "SFSEPlugin_Version"));
 	}
 }  // namespace SFSE
