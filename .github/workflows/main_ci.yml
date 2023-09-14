@@ -8,7 +8,8 @@ on:
   workflow_dispatch:
 
 env:
-  VCPKG_COMMIT_ID: 095ee8757ec933b22d445738d2dbb1ce89bb8021
+  VCPKG_COMMIT_ID: e44d60e6bf0964064bf69667cd9f3e91dc383c7c
+  GITHUB_WORKSPACE: ${{ github.workspace }}
 
 jobs:
   build:
@@ -23,21 +24,19 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup MSVC Environment
-        uses: ilammy/msvc-dev-cmd@v1.12.1
+      - name: Get CMake
+        uses: lukka/get-cmake@latest
 
       - name: Setup vcpkg
-        uses: lukka/run-vcpkg@v11
+        uses: lukka/run-vcpkg@v11.1
         with:
           vcpkgGitCommitId: ${{ env.VCPKG_COMMIT_ID }}
 
-      - name: Setup cmake
-        uses: jwlawson/actions-setup-cmake@v1.14
+      - name: Run CMake
+        uses: lukka/run-cmake@v10.6
         with:
-          cmake-version: "3.26"
-
-      - name: Generate
-        run: cmake -B "${{ github.workspace }}/build" -S "${{ github.workspace }}/CommonLibSF" --preset=build-release-${{ matrix.compiler }}-ninja
-
-      - name: Build
-        run: cmake --build "${{ github.workspace }}/build"
+          cmakeListsTxtPath: "${{ github.workspace }}/CommonLibSF/CMakeLists.txt"
+          configurePreset: build-release-${{ matrix.compiler }}-ninja
+          configurePresetCmdString: "[`-B`, `$[env.GITHUB_WORKSPACE]/build`, `-S`, `$[env.GITHUB_WORKSPACE]/CommonLibSF`, `--preset`, `$[env.CONFIGURE_PRESET_NAME]`]"
+          buildPreset: release-${{ matrix.compiler }}-ninja
+          buildPresetCmdString: "[`--build`, `$[env.GITHUB_WORKSPACE]/build`, `--preset`, `$[env.BUILD_PRESET_NAME]`]"
