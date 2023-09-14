@@ -39,7 +39,7 @@ namespace SFSE
 				std::make_shared<spdlog::sinks::msvc_sink_mt>()
 			};
 
-			auto logger = std::make_shared<spdlog::logger>("global", sinks.begin(), sinks.end());
+			auto logger = std::make_shared<spdlog::logger>("Global", sinks.begin(), sinks.end());
 #ifndef NDEBUG
 			logger->set_level(spdlog::level::debug);
 			logger->flush_on(spdlog::level::debug);
