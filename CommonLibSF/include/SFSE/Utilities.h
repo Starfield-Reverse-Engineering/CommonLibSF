@@ -7,12 +7,12 @@ namespace SFSE
 {
 	namespace stl
 	{
-		template <class T, unsigned TSize = 5>
+		template <class T, std::size_t Size = 5>
 		constexpr void write_thunk_call() noexcept
 		{
 			SFSE::AllocTrampoline(14);
 			auto& trampoline{ SFSE::GetTrampoline() };
-			T::func = trampoline.write_call<TSize>(T::address, T::Thunk);
+			T::func = trampoline.write_call<Size>(T::address, T::Thunk);
 		}
 
 		template <class TDest, class TSource>
@@ -23,7 +23,7 @@ namespace SFSE
 		}
 
 		template <class TDest, class TSource>
-		constexpr void write_vfunc(const unsigned a_vtable_idx) noexcept
+		constexpr void write_vfunc(const std::size_t a_vtable_idx) noexcept
 		{
 			REL::Relocation vtbl{ TDest::VTABLE[a_vtable_idx] };
 			TSource::func = vtbl.write_vfunc(TSource::idx, TSource::Thunk);
