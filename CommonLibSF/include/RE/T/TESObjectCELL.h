@@ -2,6 +2,7 @@
 
 #include "RE/T/TESForm.h"
 #include "RE/T/TESFullName.h"
+#include "RE/T/TESWorldSpace.h"
 
 namespace RE
 {
@@ -12,7 +13,8 @@ namespace RE
 	public:
 		SF_RTTI_VTABLE(TESObjectCELL);
 		SF_FORMTYPE(CELL);
-
-		//
+    	UInt16					flags;				// 48
+    	bool pad[22];
+    	TESWorldSpace* CellWorldspace; // 60
 	};
 }
