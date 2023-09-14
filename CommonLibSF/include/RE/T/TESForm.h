@@ -127,14 +127,14 @@ namespace RE
 		[[nodiscard]] static TESForm* LookupByID(std::uint32_t a_formID)
 		{
 			using func_t = decltype(&TESForm::LookupByID);
-			REL::Relocation<func_t> func{ REL::Offset(0x014D7F7C) };
+			REL::Relocation<func_t> func{ REL::Offset(0x014D7DB0) };
 			return func(a_formID);
 		}
 
 		[[nodiscard]] static TESForm* LookupByEditorID(const char* a_editorID)
 		{
 			using func_t = decltype(&TESForm::LookupByEditorID);
-			REL::Relocation<func_t> func{ REL::Offset(0x014D7F7C) };
+			REL::Relocation<func_t> func{ REL::Offset(0x014D7F0C) };
 			return func(a_editorID);
 		}
 

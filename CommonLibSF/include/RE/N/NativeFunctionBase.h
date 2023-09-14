@@ -59,7 +59,7 @@ namespace RE
 				virtual std::uint64_t* GetParam(std::uint32_t a_idx, BSFixedString* a_nameOut, std::uint64_t* a_typeOut)
 				{
 					using func_t = std::add_pointer_t<std::uint64_t*(ParameterInfo*, std::uint32_t, BSFixedString*, std::uint64_t*)>;
-					REL::Relocation<func_t> func{ REL::Offset(0x030775DC) };
+					REL::Relocation<func_t> func{ REL::Offset(0x0307728C) };
 					return func(&_params, a_idx, a_nameOut, a_typeOut);
 				}
 				virtual std::uint64_t  GetNumParams2(void) override { return _params.unk0A; }
@@ -73,13 +73,13 @@ namespace RE
 				virtual std::uint32_t  Invoke(std::uint64_t a_unk0, std::uint64_t a_unk1, VMClassRegistry* a_registry, VMState* a_unk3) override
 				{
 					using func_t = decltype(&NativeFunctionBase::Invoke);
-					REL::Relocation<func_t> func{ REL::Offset(0x030772B4) };
+					REL::Relocation<func_t> func{ REL::Offset(0x03076F64) };
 					return func(this, a_unk0, a_unk1, a_registry, a_unk3);
 				}
 				virtual BSFixedString* Unk_10(void) override
 				{
 					using func_t = decltype(&NativeFunctionBase::Unk_10);
-					REL::Relocation<func_t> func{ REL::Offset(0x03077644) };
+					REL::Relocation<func_t> func{ REL::Offset(0x030772F4) };
 					return func(this);
 				}
 				virtual bool Unk_11(std::uint32_t a_unk0, std::uint32_t* a_unk1) override
@@ -104,13 +104,13 @@ namespace RE
 				virtual bool GetParamInfo(std::uint32_t a_idx, void* a_out) override
 				{
 					using func_t = decltype(&NativeFunctionBase::GetParamInfo);
-					REL::Relocation<func_t> func{ REL::Offset(0x030776E0) };
+					REL::Relocation<func_t> func{ REL::Offset(0x03077390) };
 					return func(this, a_idx, a_out);
 				}
 				virtual void* Unk_15(std::uint64_t a_arg0, std::uint64_t a_arg1)
 				{
 					using func_t = decltype(&NativeFunctionBase::Unk_15);
-					REL::Relocation<func_t> func{ REL::Offset(0x0307764C) };
+					REL::Relocation<func_t> func{ REL::Offset(0x030772FC) };
 					return func(this, a_arg0, a_arg1);
 				}
 				virtual bool GetUnk41(void) override { return _isCallableFromTasklet; }
