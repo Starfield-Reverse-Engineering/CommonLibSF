@@ -30,12 +30,12 @@ namespace SFSE
 			auto path = log_directory();
 			if (!path)
 				return;
-			
+
 			const auto data = PluginVersionData::GetSingleton();
 			*path /= std::format("{}.log", data->GetPluginName());
 
 			std::vector<spdlog::sink_ptr> sinks{
-				std::make_shared<spdlog::sinks::basic_file_sink_mt>(path->string(), true), 
+				std::make_shared<spdlog::sinks::basic_file_sink_mt>(path->string(), true),
 				std::make_shared<spdlog::sinks::msvc_sink_mt>()
 			};
 
