@@ -35,5 +35,5 @@ namespace SFSE
 			REL::Relocation<std::uintptr_t> vtbl{ a_offset };
 			T::func = vtbl.write_vfunc(T::idx, T::Thunk);
 		}
-	} // namespace stl
-} // namespace SFSE
+	}  // namespace stl
+}  // namespace SFSE
