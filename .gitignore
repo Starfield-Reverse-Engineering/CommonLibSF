@@ -2,7 +2,6 @@
 CMakeUserPresets.json
 CMakeFiles
 CMakeCache.txt
-*.cmake
 /.vs*
 /.vscode*
 /.idea
