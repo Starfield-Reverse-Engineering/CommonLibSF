@@ -15,7 +15,7 @@ namespace RE
 
 		inline static Actor* PlayerCharacter()
 		{
-			static REL::Relocation<Actor**> singleton{ REL::Offset(0x05594D28) };
+			static REL::Relocation<Actor**> singleton{ REL::Offset(0x05595BA8) };
 			return *singleton;
 		}
 

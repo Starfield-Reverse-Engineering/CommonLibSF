@@ -11,7 +11,7 @@ namespace RE
 
 		[[nodiscard]] static INIPrefSettingCollection* GetSingleton()
 		{
-			REL::Relocation<INIPrefSettingCollection**> singleton{ REL::Offset(0x0) };
+			REL::Relocation<INIPrefSettingCollection**> singleton{ REL::Offset(0x05913BB8) };
 			return *singleton;
 		}
 
