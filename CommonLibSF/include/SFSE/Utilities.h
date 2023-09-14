@@ -15,18 +15,18 @@ namespace SFSE
 			T::func = trampoline.write_call<Size>(T::address, T::Thunk);
 		}
 
-		template <class TDest, class TSource>
+		template <class To, class From>
 		constexpr void write_vfunc() noexcept
 		{
-			REL::Relocation<std::uintptr_t> vtbl{ TDest::VTABLE[0] };
-			TSource::func = vtbl.write_vfunc(TSource::idx, TSource::Thunk);
+			REL::Relocation<std::uintptr_t> vtbl{ To::VTABLE[0] };
+			From::func = vtbl.write_vfunc(From::idx, From::Thunk);
 		}
 
-		template <class TDest, class TSource>
+		template <class To, class From>
 		constexpr void write_vfunc(const std::size_t a_vtable_idx) noexcept
 		{
-			REL::Relocation<std::uintptr_t> vtbl{ TDest::VTABLE[a_vtable_idx] };
-			TSource::func = vtbl.write_vfunc(TSource::idx, TSource::Thunk);
+			REL::Relocation<std::uintptr_t> vtbl{ To::VTABLE[a_vtable_idx] };
+			From::func = vtbl.write_vfunc(From::idx, From::Thunk);
 		}
 
 		template <class T>
