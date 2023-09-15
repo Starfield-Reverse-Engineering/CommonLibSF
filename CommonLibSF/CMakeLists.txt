@@ -116,6 +116,7 @@ target_link_libraries(
 	PUBLIC
 		spdlog::spdlog
 		Version.lib
+		Dbghelp.lib
 )
 
 if (SFSE_SUPPORT_XBYAK)

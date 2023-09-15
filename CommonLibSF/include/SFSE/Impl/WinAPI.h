@@ -1,7 +1,7 @@
 #pragma once
 
 #ifdef _INC_WINAPIFAMILY
-#	error Windows API detected. Please move any Windows API includes after CommonLibF4, or remove them.
+#	error Windows API detected. Please move any Windows API includes after CommonLibSF, or remove them.
 #else
 
 namespace SFSE::WinAPI
