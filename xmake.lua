@@ -12,8 +12,8 @@ set_encodings("utf-8")
 add_rules("mode.debug", "mode.release")
 
 -- require packages
-add_requires("fmt", "xbyak")
-add_requires("spdlog", { configs = { header_only = false, fmt_external = true } })
+add_requires("xbyak")
+add_requires("spdlog", { configs = { header_only = false, std_format = true } })
 
 -- include subprojects
 includes("CommonLibSF")

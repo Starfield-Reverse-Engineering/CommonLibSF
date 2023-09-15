@@ -8,7 +8,7 @@ target("commonlibsf")
     set_kind("static")
 
     -- add packages
-    add_packages("fmt", "spdlog", { public = true })
+    add_packages("spdlog", { public = true })
 
     if has_config("sfse_xbyak") then
         add_packages("xbyak")
