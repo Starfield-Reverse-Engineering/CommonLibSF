@@ -29,7 +29,7 @@ You can choose from the following community plugin templates to speed up the set
 - [SF_PluginTemplate](https://github.com/gottyduke/SF_PluginTemplate)
   - Uses **CMake**. Consumes CommonLibSF as a git submodule or local fork.
 - [commonlibsf-template-xmake](https://github.com/Starfield-Reverse-Engineering/commonlibsf-template-xmake)
-  - Uses **XMake**. Consumes CommonLibSF as a [xrepo package](https://github.com/Starfield-Reverse-Engineering/commonlibsf-xrepo).
+  - Uses **XMake**. Consumes CommonLibSF as an [xrepo package](https://github.com/Starfield-Reverse-Engineering/commonlibsf-xrepo).
 
 ### Including CommonLibSF in your project
 
