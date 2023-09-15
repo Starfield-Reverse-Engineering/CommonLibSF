@@ -366,7 +366,7 @@ namespace SFSE::WinAPI
 			std::uint64_t forwarderString;  // PBYTE
 			std::uint64_t function;         // PDWORD
 			std::uint64_t ordinal;
-			std::uint64_t address;          // PIMAGE_IMPORT_BY_NAME
+			std::uint64_t address;  // PIMAGE_IMPORT_BY_NAME
 		};
 	};
 	static_assert(sizeof(IMAGE_THUNK_DATA64) == 0x8);
@@ -809,10 +809,10 @@ namespace SFSE::WinAPI
 		void*                a_process,
 		SECURITY_ATTRIBUTES* a_threadAttr,
 		std::size_t          a_stackSize,
-		std::uint32_t      (*a_startAddr)(void*),
-		void*                a_param,
-		std::uint32_t        a_flags,
-		std::uint32_t*       a_threadId) noexcept;
+		std::uint32_t (*a_startAddr)(void*),
+		void*          a_param,
+		std::uint32_t  a_flags,
+		std::uint32_t* a_threadId) noexcept;
 
 	std::uint32_t ExpandEnvironmentStrings(
 		const char*   a_src,
@@ -824,27 +824,22 @@ namespace SFSE::WinAPI
 		wchar_t*       a_dst,
 		std::uint32_t  a_dstLen) noexcept;
 
-	[[nodiscard]]
-	bool FindClose(
+	[[nodiscard]] bool FindClose(
 		void* a_file) noexcept;
 
-	[[nodiscard]]
-	void* FindFirstFile(
+	[[nodiscard]] void* FindFirstFile(
 		const char*       a_name,
 		WIN32_FIND_DATAA* a_data) noexcept;
 
-	[[nodiscard]]
-	void* FindFirstFile(
+	[[nodiscard]] void* FindFirstFile(
 		const wchar_t*    a_name,
 		WIN32_FIND_DATAW* a_data) noexcept;
 
-	[[nodiscard]]
-	bool FindNextFile(
+	[[nodiscard]] bool FindNextFile(
 		void*             a_file,
 		WIN32_FIND_DATAA* a_data) noexcept;
 
-	[[nodiscard]]
-	bool FindNextFile(
+	[[nodiscard]] bool FindNextFile(
 		void*             a_file,
 		WIN32_FIND_DATAW* a_data) noexcept;
 
@@ -856,95 +851,76 @@ namespace SFSE::WinAPI
 	bool FreeLibrary(
 		HMODULE a_module) noexcept;
 
-	[[nodiscard]]
-	void* GetCurrentModule() noexcept;
+	[[nodiscard]] void* GetCurrentModule() noexcept;
 
-	[[nodiscard]]
-	void* GetCurrentProcess() noexcept;
+	[[nodiscard]] void* GetCurrentProcess() noexcept;
 
-	[[nodiscard]]
-	std::uint32_t GetCurrentThreadID() noexcept;
+	[[nodiscard]] std::uint32_t GetCurrentThreadID() noexcept;
 
-	[[nodiscard]]
-	std::uint32_t GetEnvironmentVariable(
-		const char*   a_name, 
-		char*         a_buffer, 
+	[[nodiscard]] std::uint32_t GetEnvironmentVariable(
+		const char*   a_name,
+		char*         a_buffer,
 		std::uint32_t a_size) noexcept;
 
-	[[nodiscard]]
-	std::uint32_t GetEnvironmentVariable(
+	[[nodiscard]] std::uint32_t GetEnvironmentVariable(
 		const wchar_t* a_name,
 		wchar_t*       a_buffer,
 		std::uint32_t  a_size) noexcept;
 
-	[[nodiscard]]
-	bool GetFileVersionInfo(
+	[[nodiscard]] bool GetFileVersionInfo(
 		const char*   a_name,
 		std::uint32_t a_handle,
 		std::uint32_t a_dataLen,
 		void*         a_data) noexcept;
 
-	[[nodiscard]]
-	bool GetFileVersionInfo(
+	[[nodiscard]] bool GetFileVersionInfo(
 		const wchar_t* a_name,
 		std::uint32_t  a_handle,
 		std::uint32_t  a_dataLen,
 		void*          a_data) noexcept;
 
-	[[nodiscard]]
-	std::uint32_t GetFileVersionInfoSize(
+	[[nodiscard]] std::uint32_t GetFileVersionInfoSize(
 		const char*    a_name,
 		std::uint32_t* a_handle) noexcept;
 
-	[[nodiscard]]
-	std::uint32_t GetFileVersionInfoSize(
+	[[nodiscard]] std::uint32_t GetFileVersionInfoSize(
 		const wchar_t* a_name,
 		std::uint32_t* a_handle) noexcept;
 
-	[[nodiscard]]
-	std::int32_t GetKeyNameText(
+	[[nodiscard]] std::int32_t GetKeyNameText(
 		std::int32_t a_param,
 		char*        a_buffer,
 		std::int32_t a_bufferLen) noexcept;
 
-	[[nodiscard]]
-	std::int32_t GetKeyNameText(
+	[[nodiscard]] std::int32_t GetKeyNameText(
 		std::int32_t a_param,
 		wchar_t*     a_buffer,
 		std::int32_t a_bufferLen) noexcept;
 
-	[[nodiscard]]
-	std::int16_t GetKeyState(
+	[[nodiscard]] std::int16_t GetKeyState(
 		std::int32_t a_key) noexcept;
 
-	[[nodiscard]]
-	std::uint32_t GetLastError() noexcept;
+	[[nodiscard]] std::uint32_t GetLastError() noexcept;
 
-	[[nodiscard]]
-	std::size_t GetMaxPath() noexcept;
+	[[nodiscard]] std::size_t GetMaxPath() noexcept;
 
-	[[nodiscard]]
-	std::uint32_t GetModuleFileName(
+	[[nodiscard]] std::uint32_t GetModuleFileName(
 		void*         a_module,
 		char*         a_name,
 		std::uint32_t a_nameLen) noexcept;
 
-	[[nodiscard]]
-	std::uint32_t GetModuleFileName(
+	[[nodiscard]] std::uint32_t GetModuleFileName(
 		void*         a_module,
 		wchar_t*      a_name,
 		std::uint32_t a_nameLen) noexcept;
 
-	[[nodiscard]]
-	HMODULE GetModuleHandle(
+	[[nodiscard]] HMODULE GetModuleHandle(
 		const char* a_name) noexcept;
 
-	[[nodiscard]]
-	HMODULE GetModuleHandle(
+	[[nodiscard]] HMODULE GetModuleHandle(
 		const wchar_t* a_name) noexcept;
 
-	[[nodiscard]]
-	std::uint32_t GetPrivateProfileString(
+	[[nodiscard]] std::uint32_t GetPrivateProfileString(
 		const char*   a_app,
 		const char*   a_key,
 		const char*   a_default,
@@ -952,8 +928,7 @@ namespace SFSE::WinAPI
 		std::uint32_t a_outLen,
 		const char*   a_name) noexcept;
 
-	[[nodiscard]]
-	std::uint32_t GetPrivateProfileString(
+	[[nodiscard]] std::uint32_t GetPrivateProfileString(
 		const wchar_t* a_app,
 		const wchar_t* a_key,
 		const wchar_t* a_default,
@@ -961,28 +936,23 @@ namespace SFSE::WinAPI
 		std::uint32_t  a_outLen,
 		const wchar_t* a_name) noexcept;
 
-	[[nodiscard]]
-	void* GetProcAddress(
+	[[nodiscard]] void* GetProcAddress(
 		void*       a_module,
 		const char* a_name) noexcept;
 
-	[[nodiscard]]
-	std::string_view GetProcPath(
+	[[nodiscard]] std::string_view GetProcPath(
 		HMODULE a_handle) noexcept;
 
 	void GetSystemInfo(
 		SYSTEM_INFO* a_info) noexcept;
 
-	[[nodiscard]]
-	bool IMAGE_SNAP_BY_ORDINAL64(
+	[[nodiscard]] bool IMAGE_SNAP_BY_ORDINAL64(
 		std::uint64_t a_ordinal) noexcept;
 
-	[[nodiscard]]
-	IMAGE_SECTION_HEADER* IMAGE_FIRST_SECTION(
+	[[nodiscard]] IMAGE_SECTION_HEADER* IMAGE_FIRST_SECTION(
 		const IMAGE_NT_HEADERS64* a_header) noexcept;
 
-	[[nodiscard]]
-	bool IsDebuggerPresent() noexcept;
+	[[nodiscard]] bool IsDebuggerPresent() noexcept;
 
 	std::int32_t LCMapStringEx(
 		const wchar_t*  a_locale,
@@ -995,24 +965,20 @@ namespace SFSE::WinAPI
 		void*           a_reserved,
 		std::intptr_t   a_sortHandle) noexcept;
 
-	[[nodiscard]]
-	HMODULE LoadLibrary(
+	[[nodiscard]] HMODULE LoadLibrary(
 		const char* a_name) noexcept;
 
-	[[nodiscard]]
-	HMODULE LoadLibrary(
+	[[nodiscard]] HMODULE LoadLibrary(
 		const wchar_t* a_name) noexcept;
 
-	[[nodiscard]]
-	void* MapViewOfFile(
+	[[nodiscard]] void* MapViewOfFile(
 		void*         a_object,
 		std::uint32_t a_desiredAccess,
 		std::uint32_t a_fileOffsetHigh,
 		std::uint32_t a_fileOffsetLow,
 		std::size_t   a_numBytesToMap) noexcept;
 
-	[[nodiscard]]
-	void* MapViewOfFileEx(
+	[[nodiscard]] void* MapViewOfFileEx(
 		void*         a_object,
 		std::uint32_t a_desiredAccess,
 		std::uint32_t a_fileOffsetHigh,
@@ -1032,8 +998,7 @@ namespace SFSE::WinAPI
 		const wchar_t* a_caption,
 		std::uint32_t  a_type) noexcept;
 
-	[[nodiscard]]
-	std::int32_t MultiByteToWideChar(
+	[[nodiscard]] std::int32_t MultiByteToWideChar(
 		std::uint32_t a_codePage,
 		std::uint32_t a_flags,
 		const char*   a_str,
@@ -1041,22 +1006,19 @@ namespace SFSE::WinAPI
 		wchar_t*      a_wstr,
 		std::int32_t  a_wstrLen);
 
-	[[nodiscard]]
-	std::int32_t NormalizeString(
+	[[nodiscard]] std::int32_t NormalizeString(
 		std::int32_t   a_normForm,
 		const wchar_t* a_src,
 		std::int32_t   a_srcLen,
 		wchar_t*       a_dest,
 		std::int32_t   a_destLen);
 
-	[[nodiscard]]
-	void* OpenFileMapping(
+	[[nodiscard]] void* OpenFileMapping(
 		std::uint32_t a_desiredAccess,
 		bool          a_inheritHandle,
 		const char*   a_name) noexcept;
 
-	[[nodiscard]]
-	void* OpenFileMapping(
+	[[nodiscard]] void* OpenFileMapping(
 		std::uint32_t  a_desiredAccess,
 		bool           a_inheritHandle,
 		const wchar_t* a_name) noexcept;
@@ -1096,56 +1058,48 @@ namespace SFSE::WinAPI
 		const wchar_t* a_name,
 		const wchar_t* a_value) noexcept;
 
-	[[nodiscard]]
-	std::int32_t SHGetKnownFolderPath(
+	[[nodiscard]] std::int32_t SHGetKnownFolderPath(
 		const GUID&   a_id,
 		std::uint32_t a_flags,
 		void*         a_token,
 		wchar_t**     a_path) noexcept;
 
-	[[nodiscard]]
-	std::int32_t ShowCursor(
+	[[nodiscard]] std::int32_t ShowCursor(
 		bool a_show) noexcept;
 
 	bool TerminateProcess(
 		void*         a_process,
 		std::uint32_t a_exitCode) noexcept;
 
-	[[nodiscard]]
-	void* TlsGetValue(
+	[[nodiscard]] void* TlsGetValue(
 		std::uint32_t a_index) noexcept;
 
 	bool TlsSetValue(
 		std::uint32_t a_index,
 		void*         a_value) noexcept;
 
-	[[nodiscard]]
-	std::uint32_t UnDecorateSymbolName(
+	[[nodiscard]] std::uint32_t UnDecorateSymbolName(
 		const char*   a_name,
 		char*         a_out,
 		std::uint32_t a_outLenMax,
 		std::uint32_t a_flags) noexcept;
 
-	[[nodiscard]]
-	std::uint32_t UnDecorateSymbolName(
+	[[nodiscard]] std::uint32_t UnDecorateSymbolName(
 		const wchar_t* a_name,
 		wchar_t*       a_out,
 		std::uint32_t  a_outLenMax,
 		std::uint32_t  a_flags) noexcept;
 
-	[[nodiscard]]
-	bool UnmapViewOfFile(
+	[[nodiscard]] bool UnmapViewOfFile(
 		const void* a_baseAddress) noexcept;
 
-	[[nodiscard]]
-	bool VerQueryValue(
+	[[nodiscard]] bool VerQueryValue(
 		const void*    a_block,
 		const char*    a_subBlock,
 		void**         a_buffer,
 		std::uint32_t* a_bufferLen) noexcept;
 
-	[[nodiscard]]
-	bool VerQueryValue(
+	[[nodiscard]] bool VerQueryValue(
 		const void*    a_block,
 		const wchar_t* a_subBlock,
 		void**         a_buffer,
@@ -1175,47 +1129,40 @@ namespace SFSE::WinAPI
 		std::size_t   a_size,
 		std::uint32_t a_type) noexcept;
 
-	[[nodiscard]]
-	bool VirtualProtect(
+	[[nodiscard]] bool VirtualProtect(
 		void*          a_address,
 		std::size_t    a_size,
 		std::uint32_t  a_newProtect,
 		std::uint32_t* a_oldProtect) noexcept;
 
-	[[nodiscard]]
-	bool VirtualProtectEx(
+	[[nodiscard]] bool VirtualProtectEx(
 		void*          a_process,
 		void*          a_address,
 		std::size_t    a_size,
 		std::uint32_t  a_newProtect,
 		std::uint32_t* a_oldProtect) noexcept;
 
-	[[nodiscard]]
-	std::size_t VirtualQuery(
+	[[nodiscard]] std::size_t VirtualQuery(
 		const void*               a_address,
 		MEMORY_BASIC_INFORMATION* a_buffer,
 		std::size_t               a_bufferLen) noexcept;
 
-	[[nodiscard]]
-	std::size_t VirtualQueryEx(
+	[[nodiscard]] std::size_t VirtualQueryEx(
 		void*                     a_process,
 		const void*               a_address,
 		MEMORY_BASIC_INFORMATION* a_buffer,
 		std::size_t               a_bufferLen) noexcept;
 
-	[[nodiscard]]
-	std::uint32_t WaitForSingleObject(
+	[[nodiscard]] std::uint32_t WaitForSingleObject(
 		void*         a_handle,
 		std::uint32_t a_milliseconds) noexcept;
 
-	[[nodiscard]]
-	std::uint32_t WaitForSingleObjectEx(
+	[[nodiscard]] std::uint32_t WaitForSingleObjectEx(
 		void*         a_handle,
 		std::uint32_t a_milliseconds,
 		bool          a_alertable) noexcept;
 
-	[[nodiscard]]
-	std::int32_t WideCharToMultiByte(
+	[[nodiscard]] std::int32_t WideCharToMultiByte(
 		std::uint32_t  a_codePage,
 		std::uint32_t  a_flags,
 		const wchar_t* a_wstr,
@@ -1225,8 +1172,7 @@ namespace SFSE::WinAPI
 		const char*    a_default,
 		std::int32_t*  a_defaultLen);
 
-	[[nodiscard]]
-	bool WriteProcessMemory(
+	[[nodiscard]] bool WriteProcessMemory(
 		void*        a_process,
 		void*        a_address,
 		const void*  a_buffer,

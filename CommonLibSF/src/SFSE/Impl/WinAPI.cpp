@@ -143,10 +143,10 @@ namespace SFSE::WinAPI
 		void*                a_process,
 		SECURITY_ATTRIBUTES* a_threadAttr,
 		std::size_t          a_stackSize,
-		std::uint32_t      (*a_startAddr)(void*),
-		void*                a_param,
-		std::uint32_t        a_flags,
-		std::uint32_t*       a_threadId) noexcept
+		std::uint32_t (*a_startAddr)(void*),
+		void*          a_param,
+		std::uint32_t  a_flags,
+		std::uint32_t* a_threadId) noexcept
 	{
 		return static_cast<void*>(
 			::CreateRemoteThread(

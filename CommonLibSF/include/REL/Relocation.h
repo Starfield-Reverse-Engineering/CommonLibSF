@@ -443,7 +443,7 @@ namespace REL
 		}
 
 	private:
-		static constexpr std::array SEGMENTS{ 
+		static constexpr std::array SEGMENTS{
 			std::make_pair(".text"sv, WinAPI::IMAGE_SCN_MEM_EXECUTE),
 			std::make_pair(".idata"sv, static_cast<std::uint32_t>(0)),
 			std::make_pair(".rdata"sv, static_cast<std::uint32_t>(0)),
