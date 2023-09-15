@@ -10,7 +10,7 @@
 
 ## Build Dependencies
 
-- [CMake v3.26+](https://cmake.org/) or [Xmake v2.8.2+](https://github.com/xmake-io/xmake/releases)
+- [CMake v3.26+](https://cmake.org/) or [XMake v2.8.2+](https://github.com/xmake-io/xmake/releases)
   - Add this to your PATH
 - [vcpkg](https://github.com/microsoft/vcpkg)
   - Add the environment variable `VCPKG_ROOT` with the value as the path to the folder containing vcpkg
@@ -28,14 +28,33 @@ You can choose from the following community plugin templates to speed up the set
   - Uses **CMake**. Consumes CommonLibSF as a [vcpkg port package](https://github.com/Starfield-Reverse-Engineering/Starfield-RE-vcpkg).
 - [SF_PluginTemplate](https://github.com/gottyduke/SF_PluginTemplate)
   - Uses **CMake**. Consumes CommonLibSF as a git submodule or local fork.
-- [template-commonlibsf-xmake](https://github.com/Starfield-Reverse-Engineering/commonlibsf-template-xmake)
-  - Uses **Xmake**. Consumes CommonLibSF as a custom [xmake-repo](https://github.com/Starfield-Reverse-Engineering/starfield-re-xrepo).
+- [commonlibsf-template-xmake](https://github.com/Starfield-Reverse-Engineering/commonlibsf-template-xmake)
+  - Uses **XMake**. Consumes CommonLibSF as a [xrepo package](https://github.com/Starfield-Reverse-Engineering/commonlibsf-xrepo).
 
 ### Including CommonLibSF in your project
 
 #### vcpkg
 
 [Instructions for consuming CommonLibSF using vcpkg are provided at our vcpkg registry repo.](https://github.com/Starfield-Reverse-Engineering/Starfield-RE-vcpkg)
+
+#### xrepo
+
+> Thanks to Qudix for maintaining the custom xmake repo!
+
+Add the following to your `xmake.lua`:
+
+```lua
+-- add commonlibsf-xrepo repository
+add_repositories("re https://github.com/Starfield-Reverse-Engineering/commonlibsf-xrepo")
+
+-- require package dependencies
+add_requires("commonlibsf")
+
+target("name")
+...
+    -- bind packages to the target
+    add_packages("commonlibsf")
+```
 
 #### git submodule
 
@@ -55,23 +74,6 @@ add_commonlibsf_plugin(
   AUTHOR AuthorName
   SOURCES ${headers} ${sources}
 )
-```
-
-#### xmake package
-
-> Thanks to Qudix for maintaining the custom xmake repo!
-
-Add the following to your `xmake.lua`:
-
-```lua
--- add starfield-re-xrepo repository
-add_repositories("re https://github.com/Starfield-Reverse-Engineering/starfield-re-xrepo")
-
--- require packages
-add_requires("commonlibsf")
-
--- add packages for the target
-add_packages("commonlibsf")
 ```
 
 ## End-User Dependencies
