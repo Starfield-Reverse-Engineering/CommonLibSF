@@ -16,7 +16,6 @@
       "name": "vcpkg-cmake-config",
       "host": true
     },
-    "fmt",
     "spdlog",
     "xbyak"
   ]
