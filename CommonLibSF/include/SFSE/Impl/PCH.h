@@ -57,7 +57,7 @@ static_assert(std::is_integral_v<std::time_t> && sizeof(std::time_t) == sizeof(s
 
 #pragma warning(push)
 #ifndef SPDLOG_USE_STD_FORMAT
-	#define SPDLOG_USE_STD_FORMAT
+#	define SPDLOG_USE_STD_FORMAT
 #endif
 #include <spdlog/spdlog.h>
 #pragma warning(pop)
