@@ -7,11 +7,11 @@
 	{                                                                                                                                                                                                                                                                                                                    \
 		a_func() = delete;                                                                                                                                                                                                                                                                                               \
                                                                                                                                                                                                                                                                                                                          \
-		explicit a_func(std::format_string<Args...> a_fmt, Args&&... a_args, std::source_location a_loc = std::source_location::current()) { spdlog::log(spdlog::source_loc{ a_loc.file_name(), static_cast<int>(a_loc.line()), a_loc.function_name() }, spdlog::level::a_type, a_fmt, std::forward<Args>(a_args)...); } \
+		explicit a_func(spdlog::format_string_t<Args...> a_fmt, Args&&... a_args, std::source_location a_loc = std::source_location::current()) { spdlog::log(spdlog::source_loc{ a_loc.file_name(), static_cast<int>(a_loc.line()), a_loc.function_name() }, spdlog::level::a_type, a_fmt, std::forward<Args>(a_args)...); } \
 	};                                                                                                                                                                                                                                                                                                                   \
                                                                                                                                                                                                                                                                                                                          \
 	template <class... Args>                                                                                                                                                                                                                                                                                             \
-	a_func(std::format_string<Args...>, Args&&...) -> a_func<Args...>;
+	a_func(spdlog::format_string_t<Args...>, Args&&...) -> a_func<Args...>;
 
 namespace SFSE::log
 {
