@@ -56,7 +56,9 @@
 static_assert(std::is_integral_v<std::time_t> && sizeof(std::time_t) == sizeof(std::size_t), "wrap std::time_t instead");
 
 #pragma warning(push)
-#include <fmt/format.h>
+#ifndef SPDLOG_USE_STD_FORMAT
+	#define SPDLOG_USE_STD_FORMAT
+#endif
 #include <spdlog/spdlog.h>
 #pragma warning(pop)
 
@@ -69,7 +71,7 @@ static_assert(std::is_integral_v<std::time_t> && sizeof(std::time_t) == sizeof(s
 #define stl_assert(cond, ...)                                     \
 	{                                                             \
 		if (!((cond))) {                                          \
-			SFSE::stl::report_and_fail(fmt::format(__VA_ARGS__)); \
+			SFSE::stl::report_and_fail(std::format(__VA_ARGS__)); \
 		}                                                         \
 	}
 
@@ -574,7 +576,7 @@ namespace SFSE
 					filename = matches[1].str();
 				}
 
-				return utf8_to_utf16(fmt::format("{}({}): {}"sv, filename, a_loc.line(), a_msg)).value_or(L"<character encoding error>"s);
+				return utf8_to_utf16(std::format("{}({}): {}"sv, filename, a_loc.line(), a_msg)).value_or(L"<character encoding error>"s);
 			}();
 
 			const auto caption = []() {
