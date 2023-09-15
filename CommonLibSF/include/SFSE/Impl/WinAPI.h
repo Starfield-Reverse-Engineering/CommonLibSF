@@ -970,6 +970,13 @@ namespace SFSE::WinAPI
 	std::string_view GetProcPath(
 		HMODULE a_handle) noexcept;
 
+	void GetSystemInfo(
+		SYSTEM_INFO* a_info) noexcept;
+
+	[[nodiscard]]
+	bool IMAGE_SNAP_BY_ORDINAL64(
+		std::uint64_t a_ordinal) noexcept;
+
 	[[nodiscard]]
 	IMAGE_SECTION_HEADER* IMAGE_FIRST_SECTION(
 		const IMAGE_NT_HEADERS64* a_header) noexcept;

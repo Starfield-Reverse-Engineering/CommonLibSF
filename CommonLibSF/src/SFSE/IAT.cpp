@@ -2,87 +2,52 @@
 
 #include "SFSE/Logger.h"
 
-#define WIN32_LEAN_AND_MEAN
-
-#define NOGDICAPMASKS
-#define NOVIRTUALKEYCODES
-// #define NOWINMESSAGES
-#define NOWINSTYLES
-#define NOSYSMETRICS
-#define NOMENUS
-#define NOICONS
-#define NOKEYSTATES
-#define NOSYSCOMMANDS
-#define NORASTEROPS
-#define NOSHOWWINDOW
-#define OEMRESOURCE
-#define NOATOM
-#define NOCLIPBOARD
-#define NOCOLOR
-// #define NOCTLMGR
-#define NODRAWTEXT
-#define NOGDI
-#define NOKERNEL
-// #define NOUSER
-#define NONLS
-// #define NOMB
-#define NOMEMMGR
-#define NOMETAFILE
-#define NOMINMAX
-// #define NOMSG
-#define NOOPENFILE
-#define NOSCROLL
-#define NOSERVICE
-#define NOSOUND
-#define NOTEXTMETRIC
-#define NOWH
-#define NOWINOFFSETS
-#define NOCOMM
-#define NOKANJI
-#define NOHELP
-#define NOPROFILER
-#define NODEFERWINDOWPOS
-#define NOMCX
-
-#include <Windows.h>
-
 namespace SFSE
 {
-	std::uintptr_t GetIATAddr(std::string_view a_dll, std::string_view a_function) { return reinterpret_cast<std::uintptr_t>(GetIATPtr(std::move(a_dll), std::move(a_function))); }
+	std::uintptr_t GetIATAddr(std::string_view a_dll, std::string_view a_function)
+	{
+		return reinterpret_cast<std::uintptr_t>(GetIATPtr(std::move(a_dll), std::move(a_function)));
+	}
 
-	std::uintptr_t GetIATAddr(void* a_module, std::string_view a_dll, std::string_view a_function) { return reinterpret_cast<std::uintptr_t>(GetIATPtr(a_module, std::move(a_dll), std::move(a_function))); }
+	std::uintptr_t GetIATAddr(void* a_module, std::string_view a_dll, std::string_view a_function)
+	{
+		return reinterpret_cast<std::uintptr_t>(GetIATPtr(a_module, std::move(a_dll), std::move(a_function)));
+	}
 
-	void* GetIATPtr(std::string_view a_dll, std::string_view a_function) { return GetIATPtr(REL::Module::get().pointer(), std::move(a_dll), std::move(a_function)); }
+	void* GetIATPtr(std::string_view a_dll, std::string_view a_function)
+	{
+		return GetIATPtr(REL::Module::get().pointer(), std::move(a_dll), std::move(a_function));
+	}
 
 	// https://guidedhacking.com/attachments/pe_imptbl_headers-jpg.2241/
 	void* GetIATPtr(void* a_module, std::string_view a_dll, std::string_view a_function)
 	{
 		assert(a_module);
-		auto dosHeader = static_cast<::IMAGE_DOS_HEADER*>(a_module);
-		if (dosHeader->e_magic != IMAGE_DOS_SIGNATURE) {
+		auto dosHeader = static_cast<WinAPI::IMAGE_DOS_HEADER*>(a_module);
+		if (dosHeader->magic != WinAPI::IMAGE_DOS_SIGNATURE) {
 			log::error("Invalid DOS header");
 			return nullptr;
 		}
 
-		auto  ntHeader = stl::adjust_pointer<::IMAGE_NT_HEADERS>(dosHeader, dosHeader->e_lfanew);
-		auto& dataDir = ntHeader->OptionalHeader.DataDirectory[IMAGE_DIRECTORY_ENTRY_IMPORT];
-		auto  importDesc = stl::adjust_pointer<::IMAGE_IMPORT_DESCRIPTOR>(dosHeader, dataDir.VirtualAddress);
+		auto  ntHeader = stl::adjust_pointer<WinAPI::IMAGE_NT_HEADERS64>(dosHeader, dosHeader->lfanew);
+		auto& dataDir = ntHeader->optionalHeader.dataDirectory[WinAPI::IMAGE_DIRECTORY_ENTRY_IMPORT];
+		auto  importDesc = stl::adjust_pointer<WinAPI::IMAGE_IMPORT_DESCRIPTOR>(dosHeader, dataDir.virtualAddress);
 
-		for (auto import = importDesc; import->Characteristics != 0; ++import) {
-			auto name = stl::adjust_pointer<const char>(dosHeader, import->Name);
+		for (auto import = importDesc; import->characteristics != 0; ++import) {
+			auto name = stl::adjust_pointer<const char>(dosHeader, import->name);
 			if (a_dll.size() == strlen(name) && _strnicmp(a_dll.data(), name, a_dll.size()) != 0) {
 				continue;
 			}
 
-			auto thunk = stl::adjust_pointer<::IMAGE_THUNK_DATA>(dosHeader, import->OriginalFirstThunk);
-			for (std::size_t i = 0; thunk[i].u1.Ordinal; ++i) {
-				if (IMAGE_SNAP_BY_ORDINAL(thunk[i].u1.Ordinal)) {
+			auto thunk = stl::adjust_pointer<WinAPI::IMAGE_THUNK_DATA64>(dosHeader, import->firstThunkOriginal);
+			for (std::size_t i = 0; thunk[i].ordinal; ++i) {
+				if (WinAPI::IMAGE_SNAP_BY_ORDINAL64(thunk[i].ordinal)) {
 					continue;
 				}
 
-				auto importByName = stl::adjust_pointer<IMAGE_IMPORT_BY_NAME>(dosHeader, thunk[i].u1.AddressOfData);
-				if (a_function.size() == strlen(importByName->Name) && _strnicmp(a_function.data(), importByName->Name, a_function.size()) == 0) {
-					return stl::adjust_pointer<::IMAGE_THUNK_DATA>(dosHeader, import->FirstThunk) + i;
+				auto importByName = stl::adjust_pointer<WinAPI::IMAGE_IMPORT_BY_NAME>(dosHeader, thunk[i].address);
+				if (a_function.size() == strlen(importByName->name) && _strnicmp(a_function.data(), importByName->name, a_function.size()) == 0) {
+					return stl::adjust_pointer<WinAPI::IMAGE_THUNK_DATA64>(dosHeader, import->firstThunk) + i;
 				}
 			}
 		}

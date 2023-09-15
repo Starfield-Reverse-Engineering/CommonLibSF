@@ -4,18 +4,16 @@
 #include <spdlog/sinks/basic_file_sink.h>
 #include <spdlog/sinks/msvc_sink.h>
 
-#include <ShlObj.h>
-
 namespace SFSE
 {
 	namespace log
 	{
 		std::optional<std::filesystem::path> log_directory()
 		{
-			wchar_t*                                               buffer{ nullptr };
-			const auto                                             result = ::SHGetKnownFolderPath(::FOLDERID_Documents, ::KNOWN_FOLDER_FLAG::KF_FLAG_DEFAULT, nullptr, std::addressof(buffer));
-			std::unique_ptr<wchar_t[], decltype(&::CoTaskMemFree)> knownPath(buffer, ::CoTaskMemFree);
-			if (!knownPath || result != S_OK) {
+			wchar_t* buffer{ nullptr };
+			const auto result = WinAPI::SHGetKnownFolderPath(WinAPI::FOLDERID_DOCUMENTS, WinAPI::KF_FLAG_DEFAULT, nullptr, std::addressof(buffer));
+			std::unique_ptr<wchar_t[], decltype(&WinAPI::CoTaskMemFree)> knownPath(buffer, WinAPI::CoTaskMemFree);
+			if (!knownPath || result != 0) {
 				error("failed to get known folder path"sv);
 				return std::nullopt;
 			}

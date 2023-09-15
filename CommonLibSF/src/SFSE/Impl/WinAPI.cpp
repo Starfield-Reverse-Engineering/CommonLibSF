@@ -22,6 +22,7 @@
 #undef GetModuleHandle
 #undef GetPrivateProfileString
 #undef IMAGE_FIRST_SECTION
+#undef IMAGE_SNAP_BY_ORDINAL64
 #undef LoadLibrary
 #undef MessageBox
 #undef OpenFileMapping
@@ -475,6 +476,19 @@ namespace SFSE::WinAPI
 		}
 
 		return { fileName.c_str(), res };
+	}
+
+	void GetSystemInfo(
+		SYSTEM_INFO* a_info) noexcept
+	{
+		::GetSystemInfo(
+			reinterpret_cast<::LPSYSTEM_INFO>(a_info));
+	}
+
+	bool IMAGE_SNAP_BY_ORDINAL64(
+		std::uint64_t a_ordinal) noexcept
+	{
+		return (a_ordinal & IMAGE_ORDINAL_FLAG64) != 0;
 	}
 
 	IMAGE_SECTION_HEADER* IMAGE_FIRST_SECTION(
