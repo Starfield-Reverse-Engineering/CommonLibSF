@@ -4,12 +4,12 @@
 
 // xbyak brings in <Windows.h>
 #ifdef SFSE_SUPPORT_XBYAK
-	#define NOMINMAX
-	#include <xbyak/xbyak.h>
-	#undef MEM_COMMIT
-	#undef MEM_FREE
-	#undef MEM_RESERVE
-	#undef PAGE_EXECUTE_READWRITE
+#	define NOMINMAX
+#	include <xbyak/xbyak.h>
+#	undef MEM_COMMIT
+#	undef MEM_FREE
+#	undef MEM_RESERVE
+#	undef PAGE_EXECUTE_READWRITE
 #endif
 
 namespace SFSE
