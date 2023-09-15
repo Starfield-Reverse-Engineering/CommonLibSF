@@ -117,6 +117,7 @@ function(target_commonlibsf_properties TARGET)
             "#define SFSEPluginVersion extern \"C\" __declspec(dllexport) constinit SFSE::PluginVersionData SFSEPlugin_Version\n\n"
             "namespace Plugin\n"
             "{\n"
+            "    using namespace std::string_view_literals;\n\n"
             "    static constexpr auto Name{ \"${commonlibsf_plugin_name}\"sv };\n"
             "    static constexpr auto Author{ \"${ADD_COMMONLIBSF_PLUGIN_AUTHOR}\"sv };\n"
             "    static constexpr auto Version{\n"
