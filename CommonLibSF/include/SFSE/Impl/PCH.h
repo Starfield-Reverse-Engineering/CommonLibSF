@@ -524,7 +524,10 @@ namespace SFSE
 
 		[[nodiscard]] inline auto utf8_to_utf16(std::string_view a_in) noexcept -> std::optional<std::wstring>
 		{
-			const auto cvt = [&](wchar_t* a_dst, std::size_t a_length) { return WinAPI::MultiByteToWideChar(CP_UTF8, 0, a_in.data(), static_cast<int>(a_in.length()), a_dst, static_cast<int>(a_length)); };
+			const auto cvt = [&](wchar_t* a_dst, std::size_t a_length) {
+				return WinAPI::MultiByteToWideChar(
+					WinAPI::CP_UTF8, 0, a_in.data(), static_cast<int>(a_in.length()), a_dst, static_cast<int>(a_length));
+			};
 
 			const auto len = cvt(nullptr, 0);
 			if (len == 0) {
@@ -541,7 +544,10 @@ namespace SFSE
 
 		[[nodiscard]] inline auto utf16_to_utf8(std::wstring_view a_in) noexcept -> std::optional<std::string>
 		{
-			const auto cvt = [&](char* a_dst, std::size_t a_length) { return WinAPI::WideCharToMultiByte(CP_UTF8, 0, a_in.data(), static_cast<int>(a_in.length()), a_dst, static_cast<int>(a_length), nullptr, nullptr); };
+			const auto cvt = [&](char* a_dst, std::size_t a_length) {
+				return WinAPI::WideCharToMultiByte(
+					WinAPI::CP_UTF8, 0, a_in.data(), static_cast<int>(a_in.length()), a_dst, static_cast<int>(a_length), nullptr, nullptr);
+			};
 
 			const auto len = cvt(nullptr, 0);
 			if (len == 0) {
@@ -579,7 +585,7 @@ namespace SFSE
 				std::uint32_t result = 0;
 				do {
 					buf.resize(buf.size() * 2);
-					result = GetModuleFileName(WinAPI::GetCurrentModule(), buf.data(), static_cast<std::uint32_t>(buf.size()));
+					result = WinAPI::GetModuleFileName(WinAPI::GetCurrentModule(), buf.data(), static_cast<std::uint32_t>(buf.size()));
 				} while (result && result == buf.size() && buf.size() <= (std::numeric_limits<std::uint32_t>::max)());
 
 				if (result && result != buf.size()) {
@@ -593,7 +599,7 @@ namespace SFSE
 			spdlog::log(spdlog::source_loc{ a_loc.file_name(), static_cast<int>(a_loc.line()), a_loc.function_name() }, spdlog::level::critical, a_msg);
 
 			if (a_fail) {
-				MessageBox(nullptr, body.c_str(), (caption.empty() ? nullptr : caption.c_str()), 0);
+				WinAPI::MessageBox(nullptr, body.c_str(), (caption.empty() ? nullptr : caption.c_str()), 0);
 				WinAPI::TerminateProcess(WinAPI::GetCurrentProcess(), EXIT_FAILURE);
 			}
 			return true;
