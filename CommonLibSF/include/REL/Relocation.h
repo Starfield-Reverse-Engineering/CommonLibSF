@@ -157,7 +157,7 @@ namespace REL
 	inline void safe_write(std::uintptr_t a_dst, const void* a_src, std::size_t a_count)
 	{
 		std::uint32_t old{ 0 };
-		auto          success = WinAPI::VirtualProtect(reinterpret_cast<void*>(a_dst), a_count, (PAGE_EXECUTE_READWRITE), std::addressof(old));
+		auto          success = WinAPI::VirtualProtect(reinterpret_cast<void*>(a_dst), a_count, WinAPI::PAGE_EXECUTE_READWRITE, std::addressof(old));
 		if (success != 0) {
 			std::memcpy(reinterpret_cast<void*>(a_dst), a_src, a_count);
 			success = WinAPI::VirtualProtect(reinterpret_cast<void*>(a_dst), a_count, old, std::addressof(old));
@@ -181,7 +181,7 @@ namespace REL
 	inline void safe_fill(std::uintptr_t a_dst, std::uint8_t a_value, std::size_t a_count)
 	{
 		std::uint32_t old{ 0 };
-		auto          success = WinAPI::VirtualProtect(reinterpret_cast<void*>(a_dst), a_count, (PAGE_EXECUTE_READWRITE), std::addressof(old));
+		auto          success = WinAPI::VirtualProtect(reinterpret_cast<void*>(a_dst), a_count, WinAPI::PAGE_EXECUTE_READWRITE, std::addressof(old));
 		if (success != 0) {
 			std::fill_n(reinterpret_cast<std::uint8_t*>(a_dst), a_count, a_value);
 			success = WinAPI::VirtualProtect(reinterpret_cast<void*>(a_dst), a_count, old, std::addressof(old));
@@ -339,18 +339,18 @@ namespace REL
 	[[nodiscard]] inline std::optional<Version> get_file_version(stl::zwstring a_filename)
 	{
 		std::uint32_t     dummy{ 0 };
-		std::vector<char> buf(GetFileVersionInfoSize(a_filename.data(), std::addressof(dummy)));
+		std::vector<char> buf(WinAPI::GetFileVersionInfoSize(a_filename.data(), std::addressof(dummy)));
 		if (buf.empty()) {
 			return std::nullopt;
 		}
 
-		if (!GetFileVersionInfo(a_filename.data(), 0, static_cast<std::uint32_t>(buf.size()), buf.data())) {
+		if (!WinAPI::GetFileVersionInfo(a_filename.data(), 0, static_cast<std::uint32_t>(buf.size()), buf.data())) {
 			return std::nullopt;
 		}
 
 		void*         verBuf{ nullptr };
 		std::uint32_t verLen{ 0 };
-		if (!VerQueryValue(buf.data(), L"\\StringFileInfo\\040904B0\\ProductVersion", std::addressof(verBuf), std::addressof(verLen))) {
+		if (!WinAPI::VerQueryValue(buf.data(), L"\\StringFileInfo\\040904B0\\ProductVersion", std::addressof(verBuf), std::addressof(verLen))) {
 			return std::nullopt;
 		}
 
@@ -438,12 +438,21 @@ namespace REL
 
 		[[nodiscard]] static Module& get(std::string_view a_filePath = {}) noexcept
 		{
-			const auto base = AsAddress(GetModuleHandle(a_filePath.empty() ? WinAPI::GetProcPath().data() : a_filePath.data()));
+			const auto base = AsAddress(WinAPI::GetModuleHandle(a_filePath.empty() ? WinAPI::GetProcPath(nullptr).data() : a_filePath.data()));
 			return get(base);
 		}
 
 	private:
-		static constexpr std::array SEGMENTS{ std::make_pair(".text"sv, IMAGE_SCN_MEM_EXECUTE), std::make_pair(".idata"sv, static_cast<std::uint32_t>(0)), std::make_pair(".rdata"sv, static_cast<std::uint32_t>(0)), std::make_pair(".data"sv, static_cast<std::uint32_t>(0)), std::make_pair(".pdata"sv, static_cast<std::uint32_t>(0)), std::make_pair(".tls"sv, static_cast<std::uint32_t>(0)), std::make_pair(".text"sv, IMAGE_SCN_MEM_WRITE), std::make_pair(".gfids"sv, static_cast<std::uint32_t>(0)) };
+		static constexpr std::array SEGMENTS{ 
+			std::make_pair(".text"sv, WinAPI::IMAGE_SCN_MEM_EXECUTE),
+			std::make_pair(".idata"sv, static_cast<std::uint32_t>(0)),
+			std::make_pair(".rdata"sv, static_cast<std::uint32_t>(0)),
+			std::make_pair(".data"sv, static_cast<std::uint32_t>(0)),
+			std::make_pair(".pdata"sv, static_cast<std::uint32_t>(0)),
+			std::make_pair(".tls"sv, static_cast<std::uint32_t>(0)),
+			std::make_pair(".text"sv, WinAPI::IMAGE_SCN_MEM_WRITE),
+			std::make_pair(".gfids"sv, static_cast<std::uint32_t>(0))
+		};
 
 		std::uintptr_t                      _base;
 		std::array<Segment, Segment::total> _segments;
