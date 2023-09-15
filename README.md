@@ -69,12 +69,14 @@ Then add the following to your `CMakeLists.txt`:
 
 ```cmake
 add_subdirectory(extern/CommonLibSF)
-add_commonlibsf_plugin(
+target_link_libraries(
   ${PROJECT_NAME}
-  AUTHOR AuthorName
-  SOURCES ${headers} ${sources}
+  PRIVATE
+  CommonLibSF::CommonLibSF
 )
 ```
+
+**NOTE**: You may also use the [custom `add_commonlibsf_plugin` command](https://github.com/Starfield-Reverse-Engineering/CommonLibSF/wiki/Miscellanous-Explanatory-Stuff#custom-cmake-command) instead of `target_link_libraries`.
 
 ## End-User Dependencies
 
