@@ -64,6 +64,7 @@
     },
     {
       "name": "generator-msvc",
+      "inherits": "x64",
       "hidden": true,
       "generator": "Visual Studio 17 2022"
     },
