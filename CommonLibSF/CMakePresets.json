@@ -37,7 +37,7 @@
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Release",
         "CMAKE_CXX_FLAGS_RELEASE": "/fp:fast /GR- /Gw /O2 /Ob3 /Qpar",
-        "CMAKE_SHARED_LINKER_FLAGS_RELEASE": "/CGTHREADS:8 /OPT:REF,ICF=4"
+        "CMAKE_SHARED_LINKER_FLAGS_RELEASE": "/CGTHREADS:8 /OPT:ICF=4"
       }
     },
     {
@@ -54,7 +54,7 @@
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Release",
         "CMAKE_CXX_FLAGS_RELEASE": "/fp:fast /GR- /Gw /O2",
-        "CMAKE_SHARED_LINKER_FLAGS_RELEASE": "/OPT:REF,ICF=4"
+        "CMAKE_SHARED_LINKER_FLAGS_RELEASE": "/OPT:ICF=4"
       }
     },
     {
