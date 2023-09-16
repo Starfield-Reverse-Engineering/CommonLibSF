@@ -62,7 +62,7 @@ namespace RE
 			{
 				const auto entry = leaf();
 				if (entry) {
-					return reinterpret_cast<const char*>(entry->_data);
+					return reinterpret_cast<const char*>(entry + 1);
 				} else {
 					return nullptr;
 				}
@@ -72,7 +72,7 @@ namespace RE
 			{
 				const auto entry = leaf();
 				if (entry) {
-					return reinterpret_cast<const wchar_t*>(entry->_data);
+					return reinterpret_cast<const wchar_t*>(entry + 1);
 				} else {
 					return nullptr;
 				}
@@ -87,8 +87,6 @@ namespace RE
 			};                                  // 08
 			volatile std::uint32_t _refCount;   // 10
 			std::uint8_t           _flags;      // 14
-			std::uint8_t           padding[3];  // 15
-			char                   _data[];     // 18
 		};
 		static_assert(sizeof(Entry) == 0x18);
 	};
