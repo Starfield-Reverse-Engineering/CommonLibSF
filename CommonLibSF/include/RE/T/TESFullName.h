@@ -1,5 +1,6 @@
 #pragma once
 
+#include "RE/B/BSFixedString.h"
 #include "RE/B/BaseFormComponent.h"
 
 namespace RE
@@ -10,7 +11,7 @@ namespace RE
 		SF_RTTI_VTABLE(TESFullName);
 
 		// members
-		void* fullName;  // 08 BSFixedString - FULL
+		BSFixedString fullName;  // 08 - FULL
 	};
 	static_assert(sizeof(TESFullName) == 0x10);
 }
