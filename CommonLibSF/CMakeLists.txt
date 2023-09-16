@@ -1,4 +1,5 @@
 cmake_minimum_required(VERSION 3.26)
+message("Using toolchain file ${CMAKE_TOOLCHAIN_FILE}.")
 
 # singleton target across multiple projects
 if(TARGET CommonLibSF)
@@ -14,7 +15,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_INTERPROCEDURAL_OPTIMIZATION ON)
 set(CMAKE_INTERPROCEDURAL_OPTIMIZATION_DEBUG OFF)
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
-set(CMAKE_TOOLCHAIN_FILE "$ENV{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake" CACHE FILEPATH "")
 
 # info
 project(
@@ -95,6 +95,7 @@ if (MSVC)
 			/wd4710 # 'function' : function not inlined
 			/wd4711 # function 'function' selected for inline expansion
 			/wd4820 # 'bytes' bytes padding added after construct 'member_name'
+			/wd4996
 			/wd5026 # 'type': move constructor was implicitly defined as deleted
 			/wd5027 # 'type': move assignment operator was implicitly defined as deleted
 			/wd5045 # Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
