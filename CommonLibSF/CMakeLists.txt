@@ -1,4 +1,5 @@
 cmake_minimum_required(VERSION 3.26)
+message("Using toolchain file ${CMAKE_TOOLCHAIN_FILE}.")
 
 # singleton target across multiple projects
 if(TARGET CommonLibSF)
@@ -14,7 +15,16 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_INTERPROCEDURAL_OPTIMIZATION ON)
 set(CMAKE_INTERPROCEDURAL_OPTIMIZATION_DEBUG OFF)
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
-set(CMAKE_TOOLCHAIN_FILE "$ENV{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake" CACHE FILEPATH "")
+
+message("\nCMAKE_BUILD_TYPE: ${CMAKE_BUILD_TYPE}")
+message("\nCMAKE_CXX_FLAGS: ${CMAKE_CXX_FLAGS}")
+message("CMAKE_SHARED_LINKER_FLAGS: ${CMAKE_SHARED_LINKER_FLAGS}")
+
+message("\nCMAKE_CXX_FLAGS_RELEASE: ${CMAKE_CXX_FLAGS_RELEASE}")
+message("CMAKE_SHARED_LINKER_FLAGS_RELEASE: ${CMAKE_SHARED_LINKER_FLAGS_RELEASE}")
+
+message("\nCMAKE_CXX_FLAGS_DEBUG: ${CMAKE_CXX_FLAGS_DEBUG}")
+message("CMAKE_SHARED_LINKER_FLAGS_DEBUG: ${CMAKE_SHARED_LINKER_FLAGS_DEBUG}")
 
 # info
 project(
@@ -95,6 +105,7 @@ if (MSVC)
 			/wd4710 # 'function' : function not inlined
 			/wd4711 # function 'function' selected for inline expansion
 			/wd4820 # 'bytes' bytes padding added after construct 'member_name'
+			/wd4996
 			/wd5026 # 'type': move constructor was implicitly defined as deleted
 			/wd5027 # 'type': move assignment operator was implicitly defined as deleted
 			/wd5045 # Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified

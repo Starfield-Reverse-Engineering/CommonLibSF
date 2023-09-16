@@ -10,53 +10,61 @@
       "name": "common",
       "hidden": true,
       "cacheVariables": {
-        "CMAKE_CXX_FLAGS": "$env{PROJECT_PLATFORM_FLAGS} $env{PROJECT_TEXT_FLAGS} $env{PROJECT_COMPILER_FLAGS} $penv{CXXFLAGS}"
-      },
-      "vendor": {
-        "microsoft.com/VisualStudioSettings/CMake/1.0": {
-          "intelliSenseMode": "windows-msvc-x64",
-          "enableMicrosoftCodeAnalysis": true,
-          "enableClangTidyCodeAnalysis": true
-        }
+        "CMAKE_CXX_FLAGS": "$env{PROJECT_PLATFORM_FLAGS} $env{PROJECT_TEXT_FLAGS} $env{PROJECT_COMPILER_FLAGS} $penv{CXXFLAGS}",
+        "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreaded$<$<CONFIG:Debug>:Debug>DLL"
       }
     },
     {
       "name": "packaging-vcpkg",
       "hidden": true,
       "cacheVariables": {
-        "CMAKE_TOOLCHAIN_FILE": {
-          "type": "STRING",
-          "value": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake"
-        },
-        "VCPKG_TARGET_TRIPLET": "x64-windows-static-md"
+        "CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
+        "VCPKG_TARGET_TRIPLET": "x64-windows-static-md",
+        "VCPKG_HOST_TRIPLET": "x64-windows-static-md"
       }
     },
     {
-      "name": "buildtype-debug",
+      "name": "buildtype-debug-msvc",
       "hidden": true,
       "cacheVariables": {
-        "CMAKE_BUILD_TYPE": "Debug"
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_SHARED_LINKER_FLAGS_DEBUG": "/CGTHREADS:8 /DEBUG:FULL /DEBUGTYPE:FIXUP"
       }
     },
     {
-      "name": "buildtype-release",
+      "name": "buildtype-release-msvc",
       "hidden": true,
       "cacheVariables": {
-        "CMAKE_BUILD_TYPE": "Release"
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_CXX_FLAGS_RELEASE": "/fp:fast /GR- /Gw /O2 /Ob3 /Qpar",
+        "CMAKE_SHARED_LINKER_FLAGS_RELEASE": "/CGTHREADS:8 /OPT:REF,ICF=4"
+      }
+    },
+    {
+      "name": "buildtype-debug-clang-cl",
+      "hidden": true,
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_SHARED_LINKER_FLAGS_DEBUG": "/DEBUG:FULL /DEBUGTYPE:FIXUP"
+      }
+    },
+    {
+      "name": "buildtype-release-clang-cl",
+      "hidden": true,
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_CXX_FLAGS_RELEASE": "/fp:fast /GR- /Gw /O2",
+        "CMAKE_SHARED_LINKER_FLAGS_RELEASE": "/OPT:REF,ICF=4"
       }
     },
     {
       "name": "x64",
       "hidden": true,
-      "architecture": "x64",
-      "cacheVariables": {
-        "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreaded$<$<CONFIG:Debug>:Debug>DLL"
-      }
+      "architecture": "x64"
     },
     {
       "name": "generator-msvc",
       "hidden": true,
-      "inherits": "x64",
       "generator": "Visual Studio 17 2022"
     },
     {
@@ -68,39 +76,31 @@
       "name": "compiler-msvc",
       "hidden": true,
       "environment": {
-        "PROJECT_COMPILER_FLAGS": "/cgthreads8 /diagnostics:caret /fp:contract /fp:except- /guard:cf- /permissive- /Zc:__cplusplus /Zc:enumTypes /Zc:lambda /Zc:preprocessor /Zc:referenceBinding /Zc:rvalueCast /Zc:templateScope /Zc:ternary /Zc:preprocessor /EHsc /MP /W4 /external:anglebrackets /external:W0",
-        "PROJECT_COMPILER": "msvc"
-      }
-    },
-    {
-      "name": "compiler-clang",
-      "hidden": true,
-      "cacheVariables": {
-        "CMAKE_C_COMPILER": "clang",
-        "CMAKE_CXX_COMPILER": "clang++"
-      },
-      "environment": {
-        "PROJECT_COMPILER": "clang",
-        "PROJECT_COMPILER_FLAGS": "-Wno-overloaded-virtual -Wno-delete-non-abstract-non-virtual-dtor -Wno-inconsistent-missing-override -Wno-reinterpret-base-class"
+        "PROJECT_COMPILER_FLAGS": "/cgthreads8 /diagnostics:caret /EHsc /fp:contract /fp:except- /guard:cf- /MP /permissive- /W4 /Zc:__cplusplus /Zc:enumTypes /Zc:lambda /Zc:preprocessor /Zc:referenceBinding /Zc:rvalueCast /Zc:templateScope /Zc:ternary /external:anglebrackets /external:W0"
       },
       "vendor": {
         "microsoft.com/VisualStudioSettings/CMake/1.0": {
-          "intelliSenseMode": "windows-clang-x64"
+          "intelliSenseMode": "windows-msvc-x64",
+          "enableMicrosoftCodeAnalysis": true,
+          "enableClangTidyCodeAnalysis": true
         }
       }
     },
     {
       "name": "compiler-clang-cl",
       "hidden": true,
-      "inherits": "compiler-clang",
       "cacheVariables": {
-        "CMAKE_C_COMPILER": "clang-cl",
         "CMAKE_CXX_COMPILER": "clang-cl"
       },
       "environment": {
-        "CC": "clang-cl",
-        "CXX": "clang-cl",
-        "PROJECT_COMPILER_FLAGS": "/permissive- /EHsc /W4 -Wno-overloaded-virtual -Wno-delete-non-abstract-non-virtual-dtor -Wno-inconsistent-missing-override -Wno-reinterpret-base-class -D__cpp_consteval"
+        "PROJECT_COMPILER_FLAGS": "/cgthreads8 /diagnostics:caret /EHsc /fp:contract /fp:except- /guard:cf- /permissive- /Zc:__cplusplus /Zc:rvalueCast /Zc:ternary /external:W0 -Wno-overloaded-virtual -Wno-delete-non-abstract-non-virtual-dtor -Wno-inconsistent-missing-override -Wno-reinterpret-base-class -Wno-return-type"
+      },
+      "vendor": {
+        "microsoft.com/VisualStudioSettings/CMake/1.0": {
+          "intelliSenseMode": "windows-clang-x64",
+          "enableMicrosoftCodeAnalysis": true,
+          "enableClangTidyCodeAnalysis": true
+        }
       }
     },
     {
@@ -108,7 +108,7 @@
       "inherits": [
         "common",
         "packaging-vcpkg",
-        "buildtype-debug",
+        "buildtype-debug-msvc",
         "generator-msvc",
         "compiler-msvc"
       ]
@@ -118,7 +118,7 @@
       "inherits": [
         "common",
         "packaging-vcpkg",
-        "buildtype-debug",
+        "buildtype-debug-msvc",
         "generator-ninja",
         "compiler-msvc"
       ]
@@ -129,7 +129,7 @@
       "inherits": [
         "common",
         "packaging-vcpkg",
-        "buildtype-debug",
+        "buildtype-debug-clang-cl",
         "generator-msvc",
         "compiler-clang-cl"
       ]
@@ -139,7 +139,7 @@
       "inherits": [
         "common",
         "packaging-vcpkg",
-        "buildtype-debug",
+        "buildtype-debug-clang-cl",
         "generator-ninja",
         "compiler-clang-cl"
       ]
@@ -149,7 +149,7 @@
       "inherits": [
         "common",
         "packaging-vcpkg",
-        "buildtype-release",
+        "buildtype-release-msvc",
         "generator-msvc",
         "compiler-msvc"
       ]
@@ -159,7 +159,7 @@
       "inherits": [
         "common",
         "packaging-vcpkg",
-        "buildtype-release",
+        "buildtype-release-msvc",
         "generator-ninja",
         "compiler-msvc"
       ]
@@ -170,7 +170,7 @@
       "inherits": [
         "common",
         "packaging-vcpkg",
-        "buildtype-release",
+        "buildtype-release-clang-cl",
         "generator-msvc",
         "compiler-clang-cl"
       ]
@@ -180,7 +180,7 @@
       "inherits": [
         "common",
         "packaging-vcpkg",
-        "buildtype-release",
+        "buildtype-release-clang-cl",
         "generator-ninja",
         "compiler-clang-cl"
       ]
