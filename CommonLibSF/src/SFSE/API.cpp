@@ -81,21 +81,21 @@ namespace SFSE
 
 	const MessagingInterface* GetMessagingInterface() noexcept { return detail::APIStorage::GetSingleton()->messagingInterface; }
 
-	Trampoline* GetTrampoline()
+	Trampoline& GetTrampoline()
 	{
 		static Trampoline trampoline;
-		return std::addressof(trampoline);
+		return trampoline;
 	}
 
 	void AllocTrampoline(const std::size_t a_size, const bool a_trySFSEReserve)
 	{
-		const auto trampoline = GetTrampoline();
+		auto& trampoline = GetTrampoline();
 		if (const auto intfc = GetTrampolineInterface(); intfc && a_trySFSEReserve) {
 			if (const auto memory = intfc->AllocateFromBranchPool(a_size)) {
-				trampoline->set_trampoline(memory, a_size);
+				trampoline.set_trampoline(memory, a_size);
 				return;
 			}
 		}
-		trampoline->create(a_size);
+		trampoline.create(a_size);
 	}
 }  // namespace SFSE

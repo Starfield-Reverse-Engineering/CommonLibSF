@@ -11,13 +11,14 @@ namespace SFSE
 	void Init(const LoadInterface* a_intfc, bool a_log = true) noexcept;
 	void RegisterForAPIInitEvent(std::function<void()> a_fn);
 
-	[[nodiscard]] PluginHandle  GetPluginHandle() noexcept;
-	[[nodiscard]] std::uint32_t GetReleaseIndex() noexcept;
+	[[nodiscard]] PluginHandle GetPluginHandle() noexcept;
+	// NOTE: SFSE does not include GetReleaseIndex() yet, declaration and definition are preserved for future-proofing
+	// [[nodiscard]] std::uint32_t GetReleaseIndex() noexcept;
 
 	[[nodiscard]] const TrampolineInterface* GetTrampolineInterface() noexcept;
 	[[nodiscard]] const MessagingInterface*  GetMessagingInterface() noexcept;
 
-	[[nodiscard]] Trampoline* GetTrampoline();
+	[[nodiscard]] Trampoline& GetTrampoline();
 	void                      AllocTrampoline(std::size_t a_size, bool a_trySFSEReserve = true);
 
 	namespace stl  // this was put here to avoid #include hell
@@ -26,8 +27,8 @@ namespace SFSE
 		constexpr void write_thunk_call() noexcept
 		{
 			AllocTrampoline(14);
-			const auto trampoline = GetTrampoline();
-			T::func = trampoline->write_call<Size>(T::address, T::Thunk);
+			auto& trampoline = GetTrampoline();
+			T::func = trampoline.write_call<Size>(T::address, T::Thunk);
 		}
 
 		template <class To, class From>
