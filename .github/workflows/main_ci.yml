@@ -36,7 +36,7 @@ jobs:
         uses: lukka/run-cmake@v10.6
         with:
           cmakeListsTxtPath: "${{ github.workspace }}/CommonLibSF/CMakeLists.txt"
-          configurePreset: build-release-${{ matrix.compiler }}-ninja
+          configurePreset: build-release-${{ matrix.compiler }}-ninja-vcpkg
           configurePresetCmdString: "[`-B`, `$[env.GITHUB_WORKSPACE]/build`, `-S`, `$[env.GITHUB_WORKSPACE]/CommonLibSF`, `--preset`, `$[env.CONFIGURE_PRESET_NAME]`]"
-          buildPreset: release-${{ matrix.compiler }}-ninja
+          buildPreset: release-${{ matrix.compiler }}-ninja-vcpkg
           buildPresetCmdString: "[`--build`, `$[env.GITHUB_WORKSPACE]/build`, `--preset`, `$[env.BUILD_PRESET_NAME]`]"
