@@ -105,17 +105,7 @@
       }
     },
     {
-      "name": "build-debug-msvc-msvc",
-      "inherits": [
-        "common",
-        "packaging-vcpkg",
-        "buildtype-debug-msvc",
-        "generator-msvc",
-        "compiler-msvc"
-      ]
-    },
-    {
-      "name": "build-debug-msvc-ninja",
+      "name": "build-debug-msvc-ninja-vcpkg",
       "inherits": [
         "common",
         "packaging-vcpkg",
@@ -125,7 +115,54 @@
       ]
     },
     {
-      "name": "build-debug-clang-cl-msvc",
+      "name": "build-debug-msvc-ninja-conan",
+      "inherits": [
+        "common",
+        "buildtype-debug-msvc",
+        "generator-ninja",
+        "compiler-msvc"
+      ]
+    },
+    {
+      "name": "build-debug-msvc-msvc-vcpkg",
+      "inherits": [
+        "common",
+        "packaging-vcpkg",
+        "buildtype-debug-msvc",
+        "generator-msvc",
+        "compiler-msvc"
+      ]
+    },
+    {
+      "name": "build-debug-msvc-msvc-conan",
+      "inherits": [
+        "common",
+        "buildtype-debug-msvc",
+        "generator-msvc",
+        "compiler-msvc"
+      ]
+    },
+    {
+      "name": "build-debug-clang-cl-ninja-vcpkg",
+      "inherits": [
+        "common",
+        "packaging-vcpkg",
+        "buildtype-debug-clang-cl",
+        "generator-ninja",
+        "compiler-clang-cl"
+      ]
+    },
+    {
+      "name": "build-debug-clang-cl-ninja-conan",
+      "inherits": [
+        "common",
+        "buildtype-debug-clang-cl",
+        "generator-ninja",
+        "compiler-clang-cl"
+      ]
+    },
+    {
+      "name": "build-debug-clang-cl-msvc-vcpkg",
       "toolset": "ClangCL",
       "inherits": [
         "common",
@@ -136,17 +173,36 @@
       ]
     },
     {
-      "name": "build-debug-clang-cl-ninja",
+      "name": "build-debug-clang-cl-msvc-conan",
+      "toolset": "ClangCL",
       "inherits": [
         "common",
-        "packaging-vcpkg",
         "buildtype-debug-clang-cl",
-        "generator-ninja",
+        "generator-msvc",
         "compiler-clang-cl"
       ]
     },
     {
-      "name": "build-release-msvc-msvc",
+      "name": "build-release-msvc-ninja-vcpkg",
+      "inherits": [
+        "common",
+        "packaging-vcpkg",
+        "buildtype-release-msvc",
+        "generator-ninja",
+        "compiler-msvc"
+      ]
+    },
+    {
+      "name": "build-release-msvc-ninja-conan",
+      "inherits": [
+        "common",
+        "buildtype-release-msvc",
+        "generator-ninja",
+        "compiler-msvc"
+      ]
+    },
+    {
+      "name": "build-release-msvc-msvc-vcpkg",
       "inherits": [
         "common",
         "packaging-vcpkg",
@@ -156,17 +212,35 @@
       ]
     },
     {
-      "name": "build-release-msvc-ninja",
+      "name": "build-release-msvc-msvc-conan",
       "inherits": [
         "common",
-        "packaging-vcpkg",
         "buildtype-release-msvc",
-        "generator-ninja",
+        "generator-msvc",
         "compiler-msvc"
       ]
     },
     {
-      "name": "build-release-clang-cl-msvc",
+      "name": "build-release-clang-cl-ninja-vcpkg",
+      "inherits": [
+        "common",
+        "packaging-vcpkg",
+        "buildtype-release-clang-cl",
+        "generator-ninja",
+        "compiler-clang-cl"
+      ]
+    },
+    {
+      "name": "build-release-clang-cl-ninja-conan",
+      "inherits": [
+        "common",
+        "buildtype-release-clang-cl",
+        "generator-ninja",
+        "compiler-clang-cl"
+      ]
+    },
+    {
+      "name": "build-release-clang-cl-msvc-vcpkg",
       "toolset": "ClangCL",
       "inherits": [
         "common",
@@ -177,56 +251,96 @@
       ]
     },
     {
-      "name": "build-release-clang-cl-ninja",
+      "name": "build-release-clang-cl-msvc-conan",
+      "toolset": "ClangCL",
       "inherits": [
         "common",
-        "packaging-vcpkg",
         "buildtype-release-clang-cl",
-        "generator-ninja",
+        "generator-msvc",
         "compiler-clang-cl"
       ]
     }
   ],
   "buildPresets": [
     {
-      "name": "debug-msvc-ninja",
-      "configurePreset": "build-debug-msvc-ninja",
-      "displayName": "1. (Debug) MSVC - Ninja"
+      "name": "debug-msvc-ninja-vcpkg",
+      "configurePreset": "build-debug-msvc-ninja-vcpkg",
+      "displayName": "1. (Debug) MSVC - Ninja - vcpkg"
     },
     {
-      "name": "release-msvc-ninja",
-      "configurePreset": "build-release-msvc-ninja",
-      "displayName": "2. (Release) MSVC - Ninja"
+      "name": "debug-msvc-ninja-conan",
+      "configurePreset": "build-debug-msvc-ninja-conan",
+      "displayName": "2. (Debug) MSVC - Ninja - Conan"
     },
     {
-      "name": "debug-msvc-msvc",
-      "configurePreset": "build-debug-msvc-msvc",
-      "displayName": "3. (Debug) MSVC - MSVC"
+      "name": "release-msvc-ninja-vcpkg",
+      "configurePreset": "build-release-msvc-ninja-vcpkg",
+      "displayName": "3. (Release) MSVC - Ninja - vcpkg"
     },
     {
-      "name": "release-msvc-msvc",
-      "configurePreset": "build-release-msvc-msvc",
-      "displayName": "4. (Release) MSVC - MSVC"
+      "name": "release-msvc-ninja-conan",
+      "configurePreset": "build-release-msvc-ninja-conan",
+      "displayName": "4. (Release) MSVC - Ninja - Conan"
     },
     {
-      "name": "debug-clang-cl-ninja",
-      "configurePreset": "build-debug-clang-cl-ninja",
-      "displayName": "5. (Debug) Clang - Ninja"
+      "name": "debug-msvc-msvc-vcpkg",
+      "configurePreset": "build-debug-msvc-msvc-vcpkg",
+      "displayName": "5. (Debug) MSVC - MSVC - vcpkg"
     },
     {
-      "name": "release-clang-cl-ninja",
-      "configurePreset": "build-release-clang-cl-ninja",
-      "displayName": "6. (Release) Clang - Ninja"
+      "name": "debug-msvc-msvc-conan",
+      "configurePreset": "build-debug-msvc-msvc-conan",
+      "displayName": "6. (Debug) MSVC - MSVC - Conan"
     },
     {
-      "name": "debug-clang-cl-msvc",
-      "configurePreset": "build-debug-clang-cl-msvc",
-      "displayName": "7. (Debug) Clang - MSVC"
+      "name": "release-msvc-msvc-vcpkg",
+      "configurePreset": "build-release-msvc-msvc-vcpkg",
+      "displayName": "7. (Release) MSVC - MSVC - vcpkg"
     },
     {
-      "name": "release-clang-cl-msvc",
-      "configurePreset": "build-release-clang-cl-msvc",
-      "displayName": "8. (Release) Clang - MSVC"
+      "name": "release-msvc-msvc-conan",
+      "configurePreset": "build-release-msvc-msvc-conan",
+      "displayName": "8. (Release) MSVC - MSVC - Conan"
+    },
+    {
+      "name": "debug-clang-cl-ninja-vcpkg",
+      "configurePreset": "build-debug-clang-cl-ninja-vcpkg",
+      "displayName": "9. (Debug) Clang - Ninja - vcpkg"
+    },
+    {
+      "name": "debug-clang-cl-ninja-conan",
+      "configurePreset": "build-debug-clang-cl-ninja-conan",
+      "displayName": "10. (Debug) Clang - Ninja - Conan"
+    },
+    {
+      "name": "release-clang-cl-ninja-vcpkg",
+      "configurePreset": "build-release-clang-cl-ninja-vcpkg",
+      "displayName": "11. (Release) Clang - Ninja - vcpkg"
+    },
+    {
+      "name": "release-clang-cl-ninja-conan",
+      "configurePreset": "build-release-clang-cl-ninja-conan",
+      "displayName": "12. (Release) Clang - Ninja - Conan"
+    },
+    {
+      "name": "debug-clang-cl-msvc-vcpkg",
+      "configurePreset": "build-debug-clang-cl-msvc-vcpkg",
+      "displayName": "13. (Debug) Clang - MSVC - vcpkg"
+    },
+    {
+      "name": "debug-clang-cl-msvc-conan",
+      "configurePreset": "build-debug-clang-cl-msvc-conan",
+      "displayName": "14. (Debug) Clang - MSVC - Conan"
+    },
+    {
+      "name": "release-clang-cl-msvc-vcpkg",
+      "configurePreset": "build-release-clang-cl-msvc-vcpkg",
+      "displayName": "15. (Release) Clang - MSVC - vcpkg"
+    },
+    {
+      "name": "release-clang-cl-msvc-conan",
+      "configurePreset": "build-release-clang-cl-msvc-conan",
+      "displayName": "16. (Release) Clang - MSVC - Conan"
     }
   ]
 }
