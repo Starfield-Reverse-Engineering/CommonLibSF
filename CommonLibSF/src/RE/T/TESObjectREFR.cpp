@@ -9,16 +9,16 @@ namespace RE
 		return func(this);
 	}
 
-	bool GetItemCount_Int(TESObjectREFR** TargetREF, TESForm* MyForm, std::uint64_t pad, float* result);
+	bool GetItemCount_Int(TESObjectREFR** this_ref, TESForm* a_Form, std::uint64_t pad, float* item_count);
 
-	float TESObjectREFR::GetItemCount(TESForm* MyForm)
+	float TESObjectREFR::GetItemCount(TESForm* a_Form)
 	{
 		using func_t = decltype(&GetItemCount_Int);
 		REL::Relocation<func_t> func{ REL::Offset(0x01A7A6DC) };
-		TESObjectREFR* MyRef = this;
-		float result = 0;
-		func((&MyRef), MyForm, 0, &result);
-		return result;
+		TESObjectREFR* this_ref = this;
+		float item_count = 0;
+		func((&this_ref), a_Form, 0, &item_count);
+		return item_count;
 	}
 
 	bool TESObjectREFR::HasKeyword(BGSKeyword* a_keyword)
