@@ -24,6 +24,13 @@
       }
     },
     {
+      "name": "packaging-conan",
+      "hidden": true,
+      "cacheVariables": {
+        "CMAKE_PROJECT_TOP_LEVEL_INCLUDES": "${sourceDir}/cmake/conan_provider.cmake"
+      }
+    },
+    {
       "name": "buildtype-debug-msvc",
       "hidden": true,
       "cacheVariables": {
@@ -118,6 +125,7 @@
       "name": "build-debug-msvc-ninja-conan",
       "inherits": [
         "common",
+        "packaging-conan",
         "buildtype-debug-msvc",
         "generator-ninja",
         "compiler-msvc"
@@ -137,6 +145,7 @@
       "name": "build-debug-msvc-msvc-conan",
       "inherits": [
         "common",
+        "packaging-conan",
         "buildtype-debug-msvc",
         "generator-msvc",
         "compiler-msvc"
@@ -156,6 +165,7 @@
       "name": "build-debug-clang-cl-ninja-conan",
       "inherits": [
         "common",
+        "packaging-conan",
         "buildtype-debug-clang-cl",
         "generator-ninja",
         "compiler-clang-cl"
@@ -177,6 +187,7 @@
       "toolset": "ClangCL",
       "inherits": [
         "common",
+        "packaging-conan",
         "buildtype-debug-clang-cl",
         "generator-msvc",
         "compiler-clang-cl"
@@ -196,6 +207,7 @@
       "name": "build-release-msvc-ninja-conan",
       "inherits": [
         "common",
+        "packaging-conan",
         "buildtype-release-msvc",
         "generator-ninja",
         "compiler-msvc"
@@ -215,6 +227,7 @@
       "name": "build-release-msvc-msvc-conan",
       "inherits": [
         "common",
+        "packaging-conan",
         "buildtype-release-msvc",
         "generator-msvc",
         "compiler-msvc"
@@ -234,6 +247,7 @@
       "name": "build-release-clang-cl-ninja-conan",
       "inherits": [
         "common",
+        "packaging-conan",
         "buildtype-release-clang-cl",
         "generator-ninja",
         "compiler-clang-cl"
@@ -255,6 +269,7 @@
       "toolset": "ClangCL",
       "inherits": [
         "common",
+        "packaging-conan",
         "buildtype-release-clang-cl",
         "generator-msvc",
         "compiler-clang-cl"
