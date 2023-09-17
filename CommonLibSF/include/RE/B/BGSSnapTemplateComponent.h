@@ -11,11 +11,6 @@ namespace RE
 
 		virtual ~BGSSnapTemplateComponent();
 
-		// add
-		virtual void Unk_08();  // 08
-		virtual void Unk_09();  // 09
-		virtual void Unk_0A();  // 0A
-
 		// members
 		std::uint64_t unk08;  // 08
 		std::uint64_t unk10;  // 10
