@@ -284,7 +284,7 @@ namespace RE
 
 		// NiPointer<TESObjectREFR>
 		[[nodiscard]] TESObjectREFR* GetAttachedSpaceship();
-		[[nodiscard]] float	GetItemCount(TESForm* MyForm);
+		[[nodiscard]] float	GetItemCount(TESForm* a_Form);
 
 		[[nodiscard]] TESBoundObject*       GetBaseObject() { return data.objectReference; }
 		[[nodiscard]] const TESBoundObject* GetBaseObject() const { return data.objectReference; };
