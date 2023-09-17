@@ -30,6 +30,7 @@
 #include "RE/B/BSInputEventReceiver.h"
 #include "RE/B/BSIntrusiveRefCounted.h"
 #include "RE/B/BSReflection.h"
+#include "RE/B/BSStringPool.h"
 #include "RE/B/BSStringT.h"
 #include "RE/B/BSTEvent.h"
 #include "RE/B/BSTList.h"

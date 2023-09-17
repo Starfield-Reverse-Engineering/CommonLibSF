@@ -84,9 +84,9 @@ namespace RE
 			{
 				std::uint32_t _length;
 				Entry*        _right;
-			};                                  // 08
-			volatile std::uint32_t _refCount;   // 10
-			std::uint8_t           _flags;      // 14
+			};                                 // 08
+			volatile std::uint32_t _refCount;  // 10
+			std::uint8_t           _flags;     // 14
 		};
 		static_assert(sizeof(Entry) == 0x18);
 	};
