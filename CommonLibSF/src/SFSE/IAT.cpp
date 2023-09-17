@@ -34,17 +34,20 @@ namespace SFSE
 
 		for (auto import = importDesc; import->characteristics != 0; ++import) {
 			if (const auto name = stl::adjust_pointer<const char>(dosHeader, import->name);
-				a_dll.size() == strlen(name) && _strnicmp(a_dll.data(), name, a_dll.size()) != 0)
+				a_dll.size() == strlen(name) && _strnicmp(a_dll.data(), name, a_dll.size()) != 0) {
 				continue;
+			}
 
 			const auto thunk = stl::adjust_pointer<WinAPI::IMAGE_THUNK_DATA64>(dosHeader, import->firstThunkOriginal);
 			for (std::size_t i = 0; thunk[i].ordinal; ++i) {
-				if (WinAPI::IMAGE_SNAP_BY_ORDINAL64(thunk[i].ordinal))
+				if (WinAPI::IMAGE_SNAP_BY_ORDINAL64(thunk[i].ordinal)) {
 					continue;
+				}
 
 				const auto importByName = stl::adjust_pointer<WinAPI::IMAGE_IMPORT_BY_NAME>(dosHeader, thunk[i].address);
-				if (a_function.size() == strlen(importByName->name) && _strnicmp(a_function.data(), importByName->name, a_function.size()) == 0)
+				if (a_function.size() == strlen(importByName->name) && _strnicmp(a_function.data(), importByName->name, a_function.size()) == 0) {
 					return stl::adjust_pointer<WinAPI::IMAGE_THUNK_DATA64>(dosHeader, import->firstThunk) + i;
+				}
 			}
 		}
 		log::warn("Failed to find {} ({})", a_dll, a_function);
@@ -58,8 +61,9 @@ namespace SFSE
 		if (const auto oldFunc = GetIATAddr(a_dll, a_function)) {
 			origAddr = *reinterpret_cast<std::uintptr_t*>(oldFunc);
 			REL::safe_write(oldFunc, a_newFunc);
-		} else
+		} else {
 			log::warn("Failed to patch {} ({})", a_dll, a_function);
+		}
 
 		return origAddr;
 	}

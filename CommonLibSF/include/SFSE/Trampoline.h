@@ -13,8 +13,9 @@ namespace SFSE
 	{
 		[[nodiscard]] constexpr std::size_t roundup(const std::size_t a_number, const std::size_t a_multiple) noexcept
 		{
-			if (a_multiple == 0)
+			if (a_multiple == 0) {
 				return 0;
+			}
 
 			const auto remainder = a_number % a_multiple;
 
@@ -23,8 +24,9 @@ namespace SFSE
 
 		[[nodiscard]] constexpr std::size_t rounddown(const std::size_t a_number, const std::size_t a_multiple) noexcept
 		{
-			if (a_multiple == 0)
+			if (a_multiple == 0) {
 				return 0;
+			}
 
 			const auto remainder = a_number % a_multiple;
 
@@ -48,8 +50,9 @@ namespace SFSE
 
 		Trampoline& operator=(Trampoline&& a_rhs) noexcept
 		{
-			if (this != std::addressof(a_rhs))
+			if (this != std::addressof(a_rhs)) {
 				move_from(std::move(a_rhs));
+			}
 
 			return *this;
 		}
@@ -58,8 +61,9 @@ namespace SFSE
 
 		void create(const std::size_t a_size, void* a_module)
 		{
-			if (a_size == 0)
+			if (a_size == 0) {
 				stl::report_and_fail("cannot create a trampoline with a zero size"sv);
+			}
 
 			if (!a_module) {
 				const auto text = REL::Module::get().segment(REL::Segment::textx);
@@ -67,8 +71,9 @@ namespace SFSE
 			}
 
 			const auto mem = do_create(a_size, reinterpret_cast<std::uintptr_t>(a_module));
-			if (!mem)
+			if (!mem) {
 				stl::report_and_fail("failed to create trampoline"sv);
+			}
 
 			set_trampoline(mem, a_size, [](void* a_mem, std::size_t) { WinAPI::VirtualFree(a_mem, 0, WinAPI::MEM_RELEASE); });
 		}
@@ -157,8 +162,9 @@ namespace SFSE
 				// FF /2
 				// CALL r/m64
 				data = 0x15;
-			} else
+			} else {
 				static_assert(false && N, "invalid call size");
+			}
 
 			return write_branch<N>(a_src, a_dst, data);
 		}
@@ -174,8 +180,9 @@ namespace SFSE
 
 		[[nodiscard]] void* do_allocate(const std::size_t a_size)
 		{
-			if (a_size > free_size())
+			if (a_size > free_size()) {
 				stl::report_and_fail("Failed to handle allocation request"sv);
+			}
 
 			const auto mem = _data + _size;
 			_size += a_size;
@@ -217,16 +224,18 @@ namespace SFSE
 #pragma pack(pop)
 
 			TrampolineAssembly* mem{};
-			if (const auto it = _5branches.find(a_dst); it != _5branches.end())
+			if (const auto it = _5branches.find(a_dst); it != _5branches.end()) {
 				mem = reinterpret_cast<TrampolineAssembly*>(it->second);
-			else {
+			} else {
 				mem = allocate<TrampolineAssembly>();
 				_5branches.emplace(a_dst, reinterpret_cast<std::byte*>(mem));
 			}
 
 			const auto disp = reinterpret_cast<const std::byte*>(mem) - reinterpret_cast<const std::byte*>(a_src + sizeof(SrcAssembly));
 			if (!in_range(disp))  // the trampoline should already be in range, so this should never happen
+			{
 				stl::report_and_fail("displacement is out of range"sv);
+			}
 
 			SrcAssembly assembly;
 			assembly.opcode = a_opcode;
@@ -258,16 +267,18 @@ namespace SFSE
 #pragma pack(pop)
 
 			std::uintptr_t* mem{};
-			if (const auto it = _6branches.find(a_dst); it != _6branches.end())
+			if (const auto it = _6branches.find(a_dst); it != _6branches.end()) {
 				mem = reinterpret_cast<std::uintptr_t*>(it->second);
-			else {
+			} else {
 				mem = allocate<std::uintptr_t>();
 				_6branches.emplace(a_dst, reinterpret_cast<std::byte*>(mem));
 			}
 
 			const auto disp = reinterpret_cast<const std::byte*>(mem) - reinterpret_cast<const std::byte*>(a_src + sizeof(Assembly));
 			if (!in_range(disp))  // the trampoline should already be in range, so this should never happen
+			{
 				stl::report_and_fail("displacement is out of range"sv);
+			}
 
 			Assembly assembly;
 			assembly.opcode = static_cast<std::uint8_t>(0xFF);
@@ -285,12 +296,13 @@ namespace SFSE
 			const auto nextOp = a_src + N;
 			const auto func = nextOp + *disp;
 
-			if constexpr (N == 5)
+			if constexpr (N == 5) {
 				write_5branch(a_src, a_dst, a_data);
-			else if constexpr (N == 6)
+			} else if constexpr (N == 6) {
 				write_6branch(a_src, a_dst, a_data);
-			else
+			} else {
 				static_assert(false && N, "invalid branch size");
+			}
 
 			return func;
 		}

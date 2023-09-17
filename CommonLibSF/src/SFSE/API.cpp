@@ -21,8 +21,9 @@ namespace SFSE
 		T* QueryInterface(const LoadInterface* a_intfc, const std::uint32_t a_id)
 		{
 			auto result = static_cast<T*>(a_intfc->QueryInterface(a_id));
-			if (result && result->Version() > T::kVersion)
+			if (result && result->Version() > T::kVersion) {
 				log::warn("{} interface definition is out of date"sv, typeid(T).name());
+			}
 
 			return result;
 		}
@@ -32,8 +33,9 @@ namespace SFSE
 	{
 		stl_assert(a_intfc, "interface is null"sv);
 
-		if (a_log)
+		if (a_log) {
 			log::init();
+		}
 
 		(void)REL::Module::get();
 
@@ -49,8 +51,9 @@ namespace SFSE
 
 			storage->apiInit = true;
 			auto& regs = storage->apiInitRegs;
-			for (const auto& reg : regs)
+			for (const auto& reg : regs) {
 				reg();
+			}
 
 			regs.clear();
 			regs.shrink_to_fit();

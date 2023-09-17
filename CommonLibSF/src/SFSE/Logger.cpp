@@ -27,8 +27,9 @@ namespace SFSE
 		void init()
 		{
 			auto path = log_directory();
-			if (!path)
+			if (!path) {
 				return;
+			}
 
 			const auto data = PluginVersionData::GetSingleton();
 			*path /= std::format("{}.log", data->GetPluginName());

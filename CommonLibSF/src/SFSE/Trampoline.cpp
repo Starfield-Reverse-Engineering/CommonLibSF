@@ -51,8 +51,9 @@ namespace SFSE
 			if (mbi.state == WinAPI::MEM_FREE) {
 				// if rounding didn't advance us into the next region and the region is the required size
 				if (const auto addr = detail::roundup(baseAddr, granularity); addr < min && (min - addr) >= a_size) {
-					if (const auto mem = WinAPI::VirtualAlloc(reinterpret_cast<void*>(addr), a_size, WinAPI::MEM_COMMIT | WinAPI::MEM_RESERVE, WinAPI::PAGE_EXECUTE_READWRITE))
+					if (const auto mem = WinAPI::VirtualAlloc(reinterpret_cast<void*>(addr), a_size, WinAPI::MEM_COMMIT | WinAPI::MEM_RESERVE, WinAPI::PAGE_EXECUTE_READWRITE)) {
 						return mem;
+					}
 					log::warn("VirtualAlloc failed with code: 0x{:08X}"sv, WinAPI::GetLastError());
 				}
 			}

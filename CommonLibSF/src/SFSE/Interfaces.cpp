@@ -34,8 +34,9 @@ namespace SFSE
 	bool MessagingInterface::Dispatch(const std::uint32_t a_messageType, void* a_data, const std::uint32_t a_dataLen, const char* a_receiver) const
 	{
 		const auto result = GetProxy()->Dispatch(GetPluginHandle(), a_messageType, a_data, a_dataLen, a_receiver);
-		if (!result)
+		if (!result) {
 			log::error("Failed to dispatch message to {}", (a_receiver ? a_receiver : "all listeners"));
+		}
 
 		return result;
 	}
@@ -45,8 +46,9 @@ namespace SFSE
 	bool MessagingInterface::RegisterListener(const char* a_sender, const EventCallback a_callback) const
 	{
 		const auto result = GetProxy()->RegisterListener(GetPluginHandle(), a_sender, std::bit_cast<void*>(a_callback));
-		if (!result)
+		if (!result) {
 			log::error("Failed to register messaging listener for {}", a_sender);
+		}
 
 		return result;
 	}

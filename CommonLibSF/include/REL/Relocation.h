@@ -144,10 +144,12 @@ namespace REL
 				using func_t = detail::member_function_pod_type_t<std::decay_t<F>>;
 				auto func = stl::unrestricted_cast<func_t*>(std::forward<F>(a_func));
 				return func(std::forward<Args>(a_args)...);
-			} else  // shift args to insert result
+			} else {  // shift args to insert result
 				return detail::invoke_member_function_non_pod(std::forward<F>(a_func), std::forward<Args>(a_args)...);
-		} else
+			}
+		} else {
 			return std::forward<F>(a_func)(std::forward<Args>(a_args)...);
+		}
 	}
 
 	inline void safe_write(const std::uintptr_t a_dst, const void* a_src, const std::size_t a_count)
@@ -205,18 +207,20 @@ namespace REL
 			std::size_t               position{};
 			for (std::size_t i = 0; i < a_version.size(); ++i) {
 				if (a_version[i] == '.') {
-					if (++position == powers.size())
+					if (++position == powers.size()) {
 						throw std::invalid_argument("Too many parts in version number.");
-				} else
+					}
+				} else {
 					powers[position] *= 10;
+				}
 			}
 			position = 0;
 			for (std::size_t i = 0; i < a_version.size(); ++i) {
-				if (a_version[i] == '.')
+				if (a_version[i] == '.') {
 					++position;
-				else if (a_version[i] < '0' || a_version[i] > '9')
+				} else if (a_version[i] < '0' || a_version[i] > '9') {
 					throw std::invalid_argument("Invalid character in version number.");
-				else {
+				} else {
 					powers[position] /= 10;
 					_impl[position] += static_cast<value_type>((a_version[i] - '0') * powers[position]);
 				}
@@ -238,8 +242,9 @@ namespace REL
 		[[nodiscard]] std::strong_ordering constexpr compare(const Version& a_rhs) const noexcept
 		{
 			for (std::size_t i = 0; i < _impl.size(); ++i) {
-				if ((*this)[i] != a_rhs[i])
+				if ((*this)[i] != a_rhs[i]) {
 					return (*this)[i] < a_rhs[i] ? std::strong_ordering::less : std::strong_ordering::greater;
+				}
 			}
 			return std::strong_ordering::equal;
 		}
@@ -331,22 +336,26 @@ namespace REL
 	{
 		std::uint32_t     dummy{};
 		std::vector<char> buf(WinAPI::GetFileVersionInfoSize(a_filename.data(), std::addressof(dummy)));
-		if (buf.empty())
+		if (buf.empty()) {
 			return std::nullopt;
+		}
 
-		if (!WinAPI::GetFileVersionInfo(a_filename.data(), 0, static_cast<std::uint32_t>(buf.size()), buf.data()))
+		if (!WinAPI::GetFileVersionInfo(a_filename.data(), 0, static_cast<std::uint32_t>(buf.size()), buf.data())) {
 			return std::nullopt;
+		}
 
 		void*         verBuf{};
 		std::uint32_t verLen{};
-		if (!WinAPI::VerQueryValue(buf.data(), L"\\StringFileInfo\\040904B0\\ProductVersion", std::addressof(verBuf), std::addressof(verLen)))
+		if (!WinAPI::VerQueryValue(buf.data(), L"\\StringFileInfo\\040904B0\\ProductVersion", std::addressof(verBuf), std::addressof(verLen))) {
 			return std::nullopt;
+		}
 
 		Version             version;
 		std::wistringstream ss{ std::wstring(static_cast<const wchar_t*>(verBuf), verLen) };
 		std::wstring        token;
-		for (std::size_t i = 0; i < 4 && std::getline(ss, token, L'.'); ++i)
+		for (std::size_t i = 0; i < 4 && std::getline(ss, token, L'.'); ++i) {
 			version[i] = static_cast<std::uint16_t>(std::stoi(token));
+		}
 
 		return version;
 	}
@@ -416,8 +425,9 @@ namespace REL
 			static std::unordered_map<std::uintptr_t, Module> managed;
 
 			const auto base = AsAddress(a_address) & ~3;
-			if (!managed.contains(base))
+			if (!managed.contains(base)) {
 				managed.try_emplace(base, base);
+			}
 
 			return managed.at(base);
 		}

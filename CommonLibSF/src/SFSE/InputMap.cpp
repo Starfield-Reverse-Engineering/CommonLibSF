@@ -89,10 +89,12 @@ namespace SFSE
 
 	std::string InputMap::GetKeyName(const std::uint32_t a_keyCode)
 	{
-		if (a_keyCode >= kMacro_MouseButtonOffset && a_keyCode < kMacro_GamepadOffset)
+		if (a_keyCode >= kMacro_MouseButtonOffset && a_keyCode < kMacro_GamepadOffset) {
 			return GetMouseButtonName(a_keyCode);
-		if (a_keyCode >= kMacro_GamepadOffset && a_keyCode < kMaxMacros)
+		}
+		if (a_keyCode >= kMacro_GamepadOffset && a_keyCode < kMaxMacros) {
 			return GetGamepadButtonName(a_keyCode);
+		}
 
 		return GetKeyboardKeyName(a_keyCode);
 	}
@@ -152,8 +154,9 @@ namespace SFSE
 
 		auto lParam = scancode << 16;
 
-		if (scancode == 0x45)
+		if (scancode == 0x45) {
 			lParam |= (0x1 << 24);
+		}
 
 		wchar_t            buffer[WinAPI::MAX_PATH];
 		const auto         length = WinAPI::GetKeyNameText(lParam, buffer, WinAPI::MAX_PATH);
