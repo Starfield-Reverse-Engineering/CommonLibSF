@@ -195,7 +195,7 @@ namespace SFSE
 
 				static constexpr auto npos = static_cast<std::size_t>(-1);
 
-				consteval string(const_pointer a_string) noexcept
+				explicit consteval string(const_pointer a_string) noexcept
 				{
 					for (size_type i = 0; i < N; ++i) {
 						c[i] = a_string[i];
@@ -208,7 +208,7 @@ namespace SFSE
 					return c[a_pos];
 				}
 
-				[[nodiscard]] consteval char_type value_at(size_type a_pos) const noexcept
+				[[nodiscard]] consteval auto value_at(size_type a_pos) const noexcept
 				{
 					assert(a_pos < N);
 					return c[a_pos];
@@ -218,13 +218,13 @@ namespace SFSE
 
 				[[nodiscard]] consteval const_pointer data() const noexcept { return c; }
 
-				[[nodiscard]] consteval bool empty() const noexcept { return this->size() == 0; }
+				[[nodiscard]] consteval auto empty() const noexcept { return this->size() == 0; }
 
 				[[nodiscard]] consteval const_reference front() const noexcept { return (*this)[0]; }
 
-				[[nodiscard]] consteval size_type length() const noexcept { return N; }
+				[[nodiscard]] static consteval auto length() noexcept { return N; }
 
-				[[nodiscard]] consteval size_type size() const noexcept { return length(); }
+				[[nodiscard]] static consteval auto size() noexcept { return length(); }
 
 				template <std::size_t POS = 0, std::size_t COUNT = npos>
 				[[nodiscard]] consteval auto substr() const noexcept
@@ -239,15 +239,15 @@ namespace SFSE
 			string(const CharT (&)[N]) -> string<CharT, N - 1>;
 		}  // namespace nttp
 
-		template <class EF>                                        //
-			requires(std::invocable<std::remove_reference_t<EF>>)  //
+		template <class EF>
+			requires(std::invocable<std::remove_reference_t<EF>>)
 		class scope_exit
 		{
 		public:
 			// 1)
 			template <class Fn>
-			explicit scope_exit(Fn&& a_fn)                                                                     //
-				noexcept(std::is_nothrow_constructible_v<EF, Fn> || std::is_nothrow_constructible_v<EF, Fn&>)  //
+			explicit scope_exit(Fn&& a_fn)  //
+				noexcept(std::is_nothrow_constructible_v<EF, Fn> || std::is_nothrow_constructible_v<EF, Fn&>)
 				requires(!std::is_same_v<std::remove_cvref_t<Fn>, scope_exit> && std::is_constructible_v<EF, Fn>)
 			{
 				static_assert(std::invocable<Fn>);
@@ -260,8 +260,8 @@ namespace SFSE
 			}
 
 			// 2)
-			scope_exit(scope_exit&& a_rhs)                                                                      //
-				noexcept(std::is_nothrow_move_constructible_v<EF> || std::is_nothrow_copy_constructible_v<EF>)  //
+			scope_exit(scope_exit&& a_rhs)  //
+				noexcept(std::is_nothrow_move_constructible_v<EF> || std::is_nothrow_copy_constructible_v<EF>)
 				requires(std::is_nothrow_move_constructible_v<EF> || std::is_copy_constructible_v<EF>)
 			{
 				static_assert(!(std::is_nothrow_move_constructible_v<EF> && !std::is_move_constructible_v<EF>));
@@ -290,7 +290,7 @@ namespace SFSE
 			void release() noexcept { _fn.reset(); }
 
 		private:
-			[[nodiscard]] bool active() const noexcept { return _fn.has_value(); }
+			[[nodiscard]] auto active() const noexcept { return _fn.has_value(); }
 
 			std::optional<std::remove_reference_t<EF>> _fn;
 		};
@@ -311,7 +311,6 @@ namespace SFSE
 			constexpr enumeration() noexcept = default;
 
 			constexpr enumeration(const enumeration&) noexcept = default;
-
 			constexpr enumeration(enumeration&&) noexcept = default;
 
 			template <class U2>  // NOLINTNEXTLINE(google-explicit-constructor)
@@ -320,7 +319,7 @@ namespace SFSE
 			{}
 
 			template <class... Args>
-			constexpr enumeration(Args... a_values) noexcept  //
+			explicit constexpr enumeration(Args... a_values) noexcept
 				requires(std::same_as<Args, enum_type> && ...)
 				:
 				_impl((static_cast<underlying_type>(a_values) | ...))
@@ -335,6 +334,7 @@ namespace SFSE
 			constexpr enumeration& operator=(enumeration<Enum, U2> a_rhs) noexcept
 			{
 				_impl = static_cast<underlying_type>(a_rhs.get());
+				return *this;
 			}
 
 			constexpr enumeration& operator=(enum_type a_value) noexcept
@@ -345,14 +345,14 @@ namespace SFSE
 
 			[[nodiscard]] explicit constexpr operator bool() const noexcept { return _impl != static_cast<underlying_type>(0); }
 
-			[[nodiscard]] constexpr enum_type operator*() const noexcept { return get(); }
+			[[nodiscard]] constexpr auto operator*() const noexcept { return get(); }
 
-			[[nodiscard]] constexpr enum_type get() const noexcept { return static_cast<enum_type>(_impl); }
+			[[nodiscard]] constexpr auto get() const noexcept { return static_cast<enum_type>(_impl); }
 
-			[[nodiscard]] constexpr underlying_type underlying() const noexcept { return _impl; }
+			[[nodiscard]] constexpr auto underlying() const noexcept { return _impl; }
 
 			template <class... Args>
-			constexpr enumeration& set(Args... a_args) noexcept  //
+			constexpr enumeration& set(Args... a_args) noexcept
 				requires(std::same_as<Args, enum_type> && ...)
 			{
 				_impl |= (static_cast<underlying_type>(a_args) | ...);
@@ -360,7 +360,7 @@ namespace SFSE
 			}
 
 			template <class... Args>
-			constexpr enumeration& reset(Args... a_args) noexcept  //
+			constexpr enumeration& reset(Args... a_args) noexcept
 				requires(std::same_as<Args, enum_type> && ...)
 			{
 				_impl &= ~(static_cast<underlying_type>(a_args) | ...);
@@ -368,21 +368,21 @@ namespace SFSE
 			}
 
 			template <class... Args>
-			[[nodiscard]] constexpr bool any(Args... a_args) const noexcept  //
+			[[nodiscard]] constexpr bool any(Args... a_args) const noexcept
 				requires(std::same_as<Args, enum_type> && ...)
 			{
 				return (_impl & (static_cast<underlying_type>(a_args) | ...)) != static_cast<underlying_type>(0);
 			}
 
 			template <class... Args>
-			[[nodiscard]] constexpr bool all(Args... a_args) const noexcept  //
+			[[nodiscard]] constexpr bool all(Args... a_args) const noexcept
 				requires(std::same_as<Args, enum_type> && ...)
 			{
 				return (_impl & (static_cast<underlying_type>(a_args) | ...)) == (static_cast<underlying_type>(a_args) | ...);
 			}
 
 			template <class... Args>
-			[[nodiscard]] constexpr bool none(Args... a_args) const noexcept  //
+			[[nodiscard]] constexpr bool none(Args... a_args) const noexcept
 				requires(std::same_as<Args, enum_type> && ...)
 			{
 				return (_impl & (static_cast<underlying_type>(a_args) | ...)) == static_cast<underlying_type>(0);
@@ -395,6 +395,26 @@ namespace SFSE
 		template <class... Args>
 		enumeration(Args...) -> enumeration<std::common_type_t<Args...>, std::underlying_type_t<std::common_type_t<Args...>>>;
 	}  // namespace stl
+
+	template <class T>
+	class Singleton
+	{
+	protected:
+		constexpr Singleton() noexcept = default;
+		constexpr ~Singleton() noexcept = default;
+
+	public:
+		constexpr Singleton(const Singleton&) = delete;
+		constexpr Singleton(Singleton&&) = delete;
+		constexpr auto operator=(const Singleton&) = delete;
+		constexpr auto operator=(Singleton&&) = delete;
+
+		[[nodiscard]] static constexpr T* GetSingleton() noexcept
+		{
+			static T singleton;
+			return std::addressof(singleton);
+		}
+	};
 }  // namespace SFSE
 
 #define SFSE_MAKE_LOGICAL_OP(a_op, a_result)                                                                    \
@@ -543,9 +563,9 @@ namespace SFSE
 		template <class T>
 		struct ssizeof
 		{
-			[[nodiscard]] constexpr operator std::ptrdiff_t() const noexcept { return value; }
+			[[nodiscard]] explicit constexpr operator std::ptrdiff_t() const noexcept { return value; }
 
-			[[nodiscard]] constexpr std::ptrdiff_t operator()() const noexcept { return value; }
+			[[nodiscard]] constexpr auto operator()() const noexcept { return value; }
 
 			static constexpr auto value = static_cast<std::ptrdiff_t>(sizeof(T));
 		};
@@ -554,7 +574,7 @@ namespace SFSE
 		inline constexpr auto ssizeof_v = ssizeof<T>::value;
 
 		template <class T, class U>
-		[[nodiscard]] auto adjust_pointer(U* a_ptr, std::ptrdiff_t a_adjust) noexcept
+		[[nodiscard]] constexpr auto adjust_pointer(U* a_ptr, const std::ptrdiff_t a_adjust) noexcept
 		{
 			auto addr = a_ptr ? reinterpret_cast<std::uintptr_t>(a_ptr) + a_adjust : 0;
 			if constexpr (std::is_const_v<U> && std::is_volatile_v<U>) {
@@ -569,7 +589,7 @@ namespace SFSE
 		}
 
 		template <class T>
-		bool emplace_vtable(T* a_ptr)
+		constexpr auto emplace_vtable(T* a_ptr)
 		{
 			auto address = T::VTABLE[0].address();
 			if (!address) {
@@ -580,15 +600,15 @@ namespace SFSE
 		}
 
 		template <class T>
-		void memzero(volatile T* a_ptr, std::size_t a_size = sizeof(T))
+		constexpr auto memzero(volatile T* a_ptr, const std::size_t a_size = sizeof(T))
 		{
 			const auto     begin = reinterpret_cast<volatile char*>(a_ptr);
-			constexpr char val{ 0 };
+			constexpr char val{};
 			std::fill_n(begin, a_size, val);
 		}
 
 		template <class... Args>
-		[[nodiscard]] inline auto pun_bits(Args... a_args)  //
+		[[nodiscard]] constexpr auto pun_bits(Args... a_args)
 			requires(std::same_as<std::remove_cv_t<Args>, bool> && ...)
 		{
 			constexpr auto ARGC = sizeof...(Args);
@@ -606,9 +626,9 @@ namespace SFSE
 			}
 		}
 
-		[[nodiscard]] inline auto utf8_to_utf16(std::string_view a_in) noexcept -> std::optional<std::wstring>
+		[[nodiscard]] inline auto utf8_to_utf16(const std::string_view a_in) noexcept -> std::optional<std::wstring>
 		{
-			const auto cvt = [&](wchar_t* a_dst, std::size_t a_length) {
+			const auto cvt = [&](wchar_t* a_dst, const std::size_t a_length) {
 				return WinAPI::MultiByteToWideChar(
 					WinAPI::CP_UTF8, 0, a_in.data(), static_cast<int>(a_in.length()), a_dst, static_cast<int>(a_length));
 			};
@@ -626,9 +646,9 @@ namespace SFSE
 			return out;
 		}
 
-		[[nodiscard]] inline auto utf16_to_utf8(std::wstring_view a_in) noexcept -> std::optional<std::string>
+		[[nodiscard]] inline auto utf16_to_utf8(const std::wstring_view a_in) noexcept -> std::optional<std::string>
 		{
-			const auto cvt = [&](char* a_dst, std::size_t a_length) {
+			const auto cvt = [&](char* a_dst, const std::size_t a_length) {
 				return WinAPI::WideCharToMultiByte(
 					WinAPI::CP_UTF8, 0, a_in.data(), static_cast<int>(a_in.length()), a_dst, static_cast<int>(a_length), nullptr, nullptr);
 			};
@@ -646,7 +666,7 @@ namespace SFSE
 			return out;
 		}
 
-		inline bool report_and_error(std::string_view a_msg, bool a_fail = true, std::source_location a_loc = std::source_location::current())
+		inline auto report_and_error(const std::string_view a_msg, const bool a_fail = true, const std::source_location a_loc = std::source_location::current())
 		{
 			const auto body = [&]() -> std::wstring {
 				const std::filesystem::path p = a_loc.file_name();
@@ -661,12 +681,12 @@ namespace SFSE
 				return utf8_to_utf16(std::format("{}({}): {}"sv, filename, a_loc.line(), a_msg)).value_or(L"<character encoding error>"s);
 			}();
 
-			const auto caption = []() {
+			const auto caption = [] {
 				const auto           maxPath = WinAPI::GetMaxPath();
 				std::vector<wchar_t> buf;
 				buf.reserve(maxPath);
 				buf.resize(maxPath / 2);
-				std::uint32_t result = 0;
+				std::uint32_t result{};
 				do {
 					buf.resize(buf.size() * 2);
 					result = WinAPI::GetModuleFileName(WinAPI::GetCurrentModule(), buf.data(), static_cast<std::uint32_t>(buf.size()));
@@ -675,9 +695,8 @@ namespace SFSE
 				if (result && result != buf.size()) {
 					std::filesystem::path p(buf.begin(), buf.begin() + result);
 					return p.filename().native();
-				} else {
-					return L""s;
 				}
+				return L""s;
 			}();
 
 			spdlog::log(spdlog::source_loc{ a_loc.file_name(), static_cast<int>(a_loc.line()), a_loc.function_name() }, spdlog::level::critical, a_msg);
@@ -689,21 +708,21 @@ namespace SFSE
 			return true;
 		}
 
-		[[noreturn]] inline void report_and_fail(std::string_view a_msg, std::source_location a_loc = std::source_location::current())
+		[[noreturn]] inline auto report_and_fail(const std::string_view a_msg, const std::source_location a_loc = std::source_location::current())
 		{
 			report_and_error(a_msg, true, a_loc);
 			std::unreachable();
 		}
 
 		template <class Enum>
-		[[nodiscard]] constexpr auto to_underlying(Enum a_val) noexcept  //
+		[[nodiscard]] constexpr auto to_underlying(Enum a_val) noexcept
 			requires(std::is_enum_v<Enum>)
 		{
 			return static_cast<std::underlying_type_t<Enum>>(a_val);
 		}
 
 		template <class To, class From>
-		[[nodiscard]] To unrestricted_cast(From a_from) noexcept
+		[[nodiscard]] constexpr To unrestricted_cast(From a_from) noexcept
 		{
 			if constexpr (std::is_same_v<std::remove_cv_t<From>, std::remove_cv_t<To>>) {
 				return To{ a_from };
@@ -764,23 +783,3 @@ namespace REL
 #include "RE/F/FormTypes.h"
 
 #undef cdecl  // Workaround for Clang.
-
-template <class T>
-class Singleton
-{
-protected:
-	constexpr Singleton() noexcept = default;
-	constexpr ~Singleton() noexcept = default;
-
-public:
-	constexpr Singleton(const Singleton&) = delete;
-	constexpr Singleton(Singleton&&) = delete;
-	constexpr auto operator=(const Singleton&) = delete;
-	constexpr auto operator=(Singleton&&) = delete;
-
-    [[nodiscard]] static constexpr T* GetSingleton() noexcept
-	{
-		static T singleton;
-		return std::addressof(singleton);
-	}
-};
