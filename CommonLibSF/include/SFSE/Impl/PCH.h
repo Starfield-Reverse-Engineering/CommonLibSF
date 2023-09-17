@@ -1,57 +1,142 @@
 #pragma once
 
-#include <algorithm>
-#include <array>
-#include <bit>
-#include <bitset>
-#include <cassert>
-#include <cmath>
+/* +++++++++++++++++++++++++ C++23 Standard Library +++++++++++++++++++++++++ */
+
+// Concepts library
 #include <concepts>
+
+// Utilities library
+#include <any>
+#include <bitset>
+#include <chrono>
+#include <compare>
+#include <csetjmp>
+#include <csignal>
 #include <cstdarg>
 #include <cstddef>
-#include <cstdint>
-#include <cstdio>
 #include <cstdlib>
-#include <cstring>
 #include <ctime>
-#include <cwchar>
-#include <cwctype>
-#include <exception>
-#include <execution>
-#include <filesystem>
-#include <format>
-#include <fstream>
+#include <expected>
 #include <functional>
-#include <iomanip>
-#include <ios>
-#include <istream>
-#include <iterator>
-#include <limits>
-#include <locale>
-#include <map>
-#include <memory>
-#include <mutex>
-#include <new>
-#include <numeric>
+#include <initializer_list>
 #include <optional>
-#include <random>
-#include <regex>
-#include <set>
 #include <source_location>
-#include <span>
-#include <sstream>
-#include <stack>
-#include <stdexcept>
-#include <string>
-#include <string_view>
-#include <system_error>
-#include <thread>
 #include <tuple>
 #include <type_traits>
+#include <typeindex>
 #include <typeinfo>
 #include <utility>
 #include <variant>
+#include <version>
+
+// Dynamic memory management
+#include <memory>
+#include <memory_resource>
+#include <new>
+#include <scoped_allocator>
+
+// Numeric limits
+#include <cfloat>
+#include <cinttypes>
+#include <climits>
+#include <cstdint>
+#include <limits>
+#include <stdfloat>
+
+// Error handling
+#include <cassert>
+#include <cerrno>
+#include <exception>
+#include <stacktrace>
+#include <stdexcept>
+#include <system_error>
+
+// Strings library
+#include <cctype>
+#include <charconv>
+#include <cstring>
+#include <cuchar>
+#include <cwchar>
+#include <cwctype>
+#include <string>
+#include <string_view>
+
+// Containers library
+#include <array>
+#include <deque>
+#include <forward_list>
+#include <list>
+#include <map>
+#include <queue>
+#include <set>
+#include <span>
+#include <stack>
+#include <unordered_map>
+#include <unordered_set>
 #include <vector>
+
+// Iterators library
+#include <iterator>
+
+// Ranges library
+#include <ranges>
+
+// Algorithms library
+#include <algorithm>
+#include <execution>
+
+// Numerics library
+#include <bit>
+#include <cfenv>
+#include <cmath>
+#include <complex>
+#include <numbers>
+#include <numeric>
+#include <random>
+#include <ratio>
+#include <valarray>
+
+// Localization library
+#include <clocale>
+#include <locale>
+
+// Input/output library
+#include <cstdio>
+#include <fstream>
+#include <iomanip>
+#include <ios>
+#include <iosfwd>
+#include <iostream>
+#include <istream>
+#include <ostream>
+#include <print>
+#include <spanstream>
+#include <sstream>
+#include <streambuf>
+#include <strstream>
+#include <syncstream>
+
+// Filesystem library
+#include <filesystem>
+
+// Regular Expressions library
+#include <regex>
+
+// Atomic Operations library
+#include <atomic>
+
+// Thread support library
+#include <barrier>
+#include <condition_variable>
+#include <future>
+#include <latch>
+#include <mutex>
+#include <semaphore>
+#include <shared_mutex>
+#include <stop_token>
+#include <thread>
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 static_assert(std::is_integral_v<std::time_t> && sizeof(std::time_t) == sizeof(std::size_t), "wrap std::time_t instead");
 
@@ -679,3 +764,23 @@ namespace REL
 #include "RE/F/FormTypes.h"
 
 #undef cdecl  // Workaround for Clang.
+
+template <class T>
+class Singleton
+{
+protected:
+	constexpr Singleton() noexcept = default;
+	constexpr ~Singleton() noexcept = default;
+
+public:
+	constexpr Singleton(const Singleton&) = delete;
+	constexpr Singleton(Singleton&&) = delete;
+	constexpr auto operator=(const Singleton&) = delete;
+	constexpr auto operator=(Singleton&&) = delete;
+
+    [[nodiscard]] static constexpr T* GetSingleton() noexcept
+	{
+		static T singleton;
+		return std::addressof(singleton);
+	}
+};

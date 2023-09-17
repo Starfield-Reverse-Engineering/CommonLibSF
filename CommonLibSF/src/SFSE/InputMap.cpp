@@ -4,10 +4,10 @@
 
 namespace SFSE
 {
-	std::uint32_t InputMap::GamepadMaskToKeycode(std::uint32_t keyMask)
+	std::uint32_t InputMap::GamepadMaskToKeycode(const std::uint32_t a_keyMask)
 	{
 		using XInputButton = RE::XInput::XInputButton;
-		switch (keyMask) {
+		switch (a_keyMask) {
 		case XInputButton::XINPUT_GAMEPAD_DPAD_UP:
 			return kGamepadButtonOffset_DPAD_UP;
 		case XInputButton::XINPUT_GAMEPAD_DPAD_DOWN:
@@ -45,11 +45,11 @@ namespace SFSE
 		}
 	}
 
-	std::uint32_t InputMap::GamepadKeycodeToMask(std::uint32_t keyCode)
+	std::uint32_t InputMap::GamepadKeycodeToMask(const std::uint32_t a_keyCode)
 	{
 		using XInputButton = RE::XInput::XInputButton;
 
-		switch (keyCode) {
+		switch (a_keyCode) {
 		case kGamepadButtonOffset_DPAD_UP:
 			return XInputButton::XINPUT_GAMEPAD_DPAD_UP;
 		case kGamepadButtonOffset_DPAD_DOWN:
@@ -87,20 +87,19 @@ namespace SFSE
 		}
 	}
 
-	std::string InputMap::GetKeyName(std::uint32_t a_keyCode)
+	std::string InputMap::GetKeyName(const std::uint32_t a_keyCode)
 	{
-		if (a_keyCode >= kMacro_MouseButtonOffset && a_keyCode < kMacro_GamepadOffset) {
+		if (a_keyCode >= kMacro_MouseButtonOffset && a_keyCode < kMacro_GamepadOffset)
 			return GetMouseButtonName(a_keyCode);
-		} else if (a_keyCode >= kMacro_GamepadOffset && a_keyCode < kMaxMacros) {
+		if (a_keyCode >= kMacro_GamepadOffset && a_keyCode < kMaxMacros)
 			return GetGamepadButtonName(a_keyCode);
-		} else {
-			return GetKeyboardKeyName(a_keyCode);
-		}
+
+		return GetKeyboardKeyName(a_keyCode);
 	}
 
-	std::string InputMap::GetKeyboardKeyName(std::uint32_t a_keyCode)
+	std::string InputMap::GetKeyboardKeyName(const std::uint32_t a_keyCode)
 	{
-		std::int32_t scancode = static_cast<std::int32_t>(a_keyCode & 0xFF);
+		auto scancode = static_cast<std::int32_t>(a_keyCode & 0xFF);
 
 		using DIKey = RE::DirectInput8::DIKey;
 
@@ -147,22 +146,23 @@ namespace SFSE
 		case DIKey::DIK_DELETE:  // Delete
 			scancode = 0x153;
 			break;
+		default:
+			break;
 		}
 
-		std::int32_t lParam = scancode << 16;
+		auto lParam = scancode << 16;
 
-		if (scancode == 0x45) {
+		if (scancode == 0x45)
 			lParam |= (0x1 << 24);
-		}
 
-		wchar_t      buffer[WinAPI::MAX_PATH];
-		auto         length = WinAPI::GetKeyNameText(lParam, buffer, WinAPI::MAX_PATH);
-		std::wstring keyNameW{ buffer, static_cast<std::size_t>(length) };
+		wchar_t            buffer[WinAPI::MAX_PATH];
+		const auto         length = WinAPI::GetKeyNameText(lParam, buffer, WinAPI::MAX_PATH);
+		const std::wstring keyNameW{ buffer, static_cast<std::size_t>(length) };
 
 		return stl::utf16_to_utf8(keyNameW).value_or(""s);
 	}
 
-	std::string InputMap::GetMouseButtonName(std::uint32_t a_keyCode)
+	std::string InputMap::GetMouseButtonName(const std::uint32_t a_keyCode)
 	{
 		switch (a_keyCode) {
 		case 256:
@@ -190,7 +190,7 @@ namespace SFSE
 		}
 	}
 
-	std::string InputMap::GetGamepadButtonName(std::uint32_t a_keyCode)
+	std::string InputMap::GetGamepadButtonName(const std::uint32_t a_keyCode)
 	{
 		switch (a_keyCode) {
 		case kGamepadButtonOffset_DPAD_UP:

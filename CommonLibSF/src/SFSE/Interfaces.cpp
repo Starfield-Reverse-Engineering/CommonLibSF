@@ -11,7 +11,8 @@ namespace SFSE
 		const auto minor = static_cast<std::uint16_t>((packed & 0x00FF0000) >> 16);
 		const auto revision = static_cast<std::uint16_t>((packed & 0x0000FFF0) >> 4);
 		const auto build = static_cast<std::uint16_t>((packed & 0x0000000F) >> 0);
-		return { major, minor, revision, build };
+
+		return REL::Version{ major, minor, revision, build };
 	}
 
 	std::uint32_t QueryInterface::SFSEVersion() const { return GetProxy()->sfseVersion; }
@@ -26,27 +27,27 @@ namespace SFSE
 
 	const PluginInfo* LoadInterface::GetPluginInfo(const char* a_name) const { return static_cast<const PluginInfo*>(GetProxy()->GetPluginInfo(a_name)); }
 
-	void* LoadInterface::QueryInterface(std::uint32_t a_id) const { return GetProxy()->QueryInterface(a_id); }
+	void* LoadInterface::QueryInterface(const std::uint32_t a_id) const { return GetProxy()->QueryInterface(a_id); }
 
 	std::uint32_t MessagingInterface::Version() const { return GetProxy()->interfaceVersion; }
 
-	bool MessagingInterface::Dispatch(std::uint32_t a_messageType, void* a_data, std::uint32_t a_dataLen, const char* a_receiver) const
+	bool MessagingInterface::Dispatch(const std::uint32_t a_messageType, void* a_data, const std::uint32_t a_dataLen, const char* a_receiver) const
 	{
-		auto result = GetProxy()->Dispatch(GetPluginHandle(), a_messageType, a_data, a_dataLen, a_receiver);
-		if (!result) {
+		const auto result = GetProxy()->Dispatch(GetPluginHandle(), a_messageType, a_data, a_dataLen, a_receiver);
+		if (!result)
 			log::error("Failed to dispatch message to {}", (a_receiver ? a_receiver : "all listeners"));
-		}
+
 		return result;
 	}
 
-	bool MessagingInterface::RegisterListener(EventCallback a_callback) const { return RegisterListener("SFSE", a_callback); }
+	bool MessagingInterface::RegisterListener(const EventCallback a_callback) const { return RegisterListener("SFSE", a_callback); }
 
-	bool MessagingInterface::RegisterListener(const char* a_sender, EventCallback a_callback) const
+	bool MessagingInterface::RegisterListener(const char* a_sender, const EventCallback a_callback) const
 	{
-		auto result = GetProxy()->RegisterListener(GetPluginHandle(), a_sender, std::bit_cast<void*>(a_callback));
-		if (!result) {
+		const auto result = GetProxy()->RegisterListener(GetPluginHandle(), a_sender, std::bit_cast<void*>(a_callback));
+		if (!result)
 			log::error("Failed to register messaging listener for {}", a_sender);
-		}
+
 		return result;
 	}
 
@@ -58,9 +59,9 @@ namespace SFSE
 
 	std::uint32_t TrampolineInterface::Version() const { return GetProxy()->interfaceVersion; }
 
-	void* TrampolineInterface::AllocateFromBranchPool(std::size_t a_size) const { return GetProxy()->AllocateFromBranchPool(GetPluginHandle(), a_size); }
+	void* TrampolineInterface::AllocateFromBranchPool(const std::size_t a_size) const { return GetProxy()->AllocateFromBranchPool(GetPluginHandle(), a_size); }
 
-	void* TrampolineInterface::AllocateFromLocalPool(std::size_t a_size) const { return GetProxy()->AllocateFromLocalPool(GetPluginHandle(), a_size); }
+	void* TrampolineInterface::AllocateFromLocalPool(const std::size_t a_size) const { return GetProxy()->AllocateFromLocalPool(GetPluginHandle(), a_size); }
 
 	const detail::SFSETrampolineInterface* TrampolineInterface::GetProxy() const
 	{

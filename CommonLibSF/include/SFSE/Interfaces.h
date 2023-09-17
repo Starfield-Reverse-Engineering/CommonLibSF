@@ -1,7 +1,6 @@
 #pragma once
 
 #include "SFSE/Impl/Stubs.h"
-#include "SFSE/Version.h"
 
 namespace SFSE
 {
@@ -29,9 +28,9 @@ namespace SFSE
 			kTotal
 		};
 
-		[[nodiscard]] PluginHandle GetPluginHandle() const;
-		const PluginInfo*          GetPluginInfo(const char* a_name) const;
-		[[nodiscard]] void*        QueryInterface(std::uint32_t a_id) const;
+		[[nodiscard]] PluginHandle      GetPluginHandle() const;
+		[[nodiscard]] const PluginInfo* GetPluginInfo(const char* a_name) const;
+		[[nodiscard]] void*             QueryInterface(std::uint32_t a_id) const;
 	};
 
 	class MessagingInterface
@@ -97,7 +96,7 @@ namespace SFSE
 		std::uint32_t version;
 	};
 
-	struct PluginVersionData
+	class PluginVersionData
 	{
 	public:
 		enum
@@ -105,25 +104,25 @@ namespace SFSE
 			kVersion = 1,
 		};
 
-		constexpr void PluginVersion(std::uint32_t a_version) noexcept { pluginVersion = a_version; }
+		constexpr void PluginVersion(const std::uint32_t a_version) noexcept { pluginVersion = a_version; }
 
 		[[nodiscard]] constexpr std::uint32_t GetPluginVersion() const noexcept { return pluginVersion; }
 
-		constexpr void PluginName(std::string_view a_plugin) noexcept { SetCharBuffer(a_plugin, std::span{ pluginName }); }
+		constexpr void PluginName(const std::string_view a_plugin) noexcept { SetCharBuffer(a_plugin, std::span{ pluginName }); }
 
 		[[nodiscard]] constexpr std::string_view GetPluginName() const noexcept { return std::string_view{ pluginName }; }
 
-		constexpr void AuthorName(std::string_view a_name) noexcept { SetCharBuffer(a_name, std::span{ author }); }
+		constexpr void AuthorName(const std::string_view a_name) noexcept { SetCharBuffer(a_name, std::span{ author }); }
 
 		[[nodiscard]] constexpr std::string_view GetAuthorName() const noexcept { return std::string_view{ author }; }
 
-		constexpr void UsesSigScanning(bool a_value) noexcept { addressIndependence = !a_value; }
+		constexpr void UsesSigScanning(const bool a_value) noexcept { addressIndependence = !a_value; }
 
-		constexpr void UsesAddressLibrary(bool a_value) noexcept { addressIndependence = a_value; }
+		constexpr void UsesAddressLibrary(const bool a_value) noexcept { addressIndependence = a_value; }
 
-		constexpr void HasNoStructUse(bool a_value) noexcept { structureCompatibility = !a_value; }
+		constexpr void HasNoStructUse(const bool a_value) noexcept { structureCompatibility = !a_value; }
 
-		constexpr void IsLayoutDependent(bool a_value) noexcept { structureCompatibility = a_value; }
+		constexpr void IsLayoutDependent(const bool a_value) noexcept { structureCompatibility = a_value; }
 
 		constexpr void CompatibleVersions(std::initializer_list<REL::Version> a_versions) noexcept
 		{
@@ -132,23 +131,23 @@ namespace SFSE
 			std::ranges::transform(a_versions, std::begin(compatibleVersions), [](const REL::Version& a_version) noexcept { return a_version.pack(); });
 		}
 
-		constexpr void MinimumRequiredXSEVersion(REL::Version a_version) noexcept { xseMinimum = a_version.pack(); }
+		constexpr void MinimumRequiredXSEVersion(const REL::Version a_version) noexcept { xseMinimum = a_version.pack(); }
 
 		[[nodiscard]] static const PluginVersionData* GetSingleton() noexcept;
 
 		const std::uint32_t dataVersion{ kVersion };
-		std::uint32_t       pluginVersion = 0;
+		std::uint32_t       pluginVersion{};
 		char                pluginName[256] = {};
 		char                author[256] = {};
 		std::uint32_t       addressIndependence;
 		std::uint32_t       structureCompatibility;
 		std::uint32_t       compatibleVersions[16] = {};
-		std::uint32_t       xseMinimum = 0;
-		const std::uint32_t reservedNonBreaking = 0;
-		const std::uint32_t reservedBreaking = 0;
+		std::uint32_t       xseMinimum{};
+		const std::uint32_t reservedNonBreaking{};
+		const std::uint32_t reservedBreaking{};
 
 	private:
-		static constexpr void SetCharBuffer(std::string_view a_src, std::span<char> a_dst) noexcept
+		static constexpr void SetCharBuffer(const std::string_view a_src, std::span<char> a_dst) noexcept
 		{
 			assert(a_src.size() < a_dst.size());
 			std::ranges::fill(a_dst, '\0');
@@ -170,3 +169,4 @@ namespace SFSE
 }  // namespace SFSE
 
 #define SFSEPluginLoad(...) extern "C" [[maybe_unused]] __declspec(dllexport) bool SFSEPlugin_Load(__VA_ARGS__)
+#define SFSEPluginVersion extern "C" [[maybe_unused]] __declspec(dllexport) constinit SFSE::PluginVersionData SFSEPlugin_Version
