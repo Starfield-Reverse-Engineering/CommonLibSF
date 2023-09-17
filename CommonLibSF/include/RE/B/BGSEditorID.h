@@ -5,7 +5,7 @@
 namespace RE
 {
 	class TESForm;
-	
+
 	class BGSEditorID
 	{
 	public:
