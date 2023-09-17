@@ -35,9 +35,6 @@ namespace RE
 		SF_RTTI_VTABLE(TESActorBaseData);
 
 		// add
-		virtual void Unk_08();  // 08
-		virtual void Unk_09();  // 09
-		virtual void Unk_0A();  // 0A
 		virtual void Unk_10();  // 10
 		virtual void Unk_11();  // 11
 		virtual void Unk_12();  // 12

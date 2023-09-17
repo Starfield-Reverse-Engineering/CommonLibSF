@@ -32,9 +32,6 @@ namespace RE
 		~TESForm() override;  // 00
 
 		// add
-		virtual void                               Unk_08();                                                         // 08
-		virtual void                               Unk_09();                                                         // 09
-		virtual void                               Unk_0A();                                                         // 0A
 		virtual void                               Unk_0B();                                                         // 0B
 		virtual void                               Unk_0C();                                                         // 0C
 		virtual void                               Unk_0D();                                                         // 0D

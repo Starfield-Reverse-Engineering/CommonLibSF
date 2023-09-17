@@ -11,11 +11,6 @@ namespace RE
 	public:
 		SF_RTTI_VTABLE(TESContainer);
 
-		// add
-		virtual void Unk_08();  // 08
-		virtual void Unk_09();  // 09
-		virtual void Unk_0A();  // 0A
-
 		// members
 		ContainerObject** containerObjects;     // 08
 		std::uint32_t     numContainerObjects;  // 10
