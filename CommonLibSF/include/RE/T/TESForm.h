@@ -1,16 +1,15 @@
 #pragma once
 
 #include "RE/B/BSReflection.h"
-#include "RE/B/BaseFormComponent.h"
 #include "RE/T/TESFile.h"
+#include "RE/T/TESFormRefCount.h"
 
 namespace RE
 {
 	class TESObjectREFR;
 
 	class TESForm :
-		public BaseFormComponent,     // 00
-		public TESFormRefCount,       // 08
+		public TESFormRefCount,       // 00
 		public BSReflection::IObject  // 10
 	{
 	public:
