@@ -36,6 +36,7 @@
 #include "RE/B/BSStringT.h"
 #include "RE/B/BSTEvent.h"
 #include "RE/B/BSTList.h"
+#include "RE/B/BSTSingleton.h"
 #include "RE/B/BaseFormComponent.h"
 #include "RE/C/CombatGroup.h"
 #include "RE/C/ConsoleLog.h"
