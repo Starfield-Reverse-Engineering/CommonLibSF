@@ -100,13 +100,23 @@ The main requirement of this license is: if you link your mod against CommonLibS
 
 <!--CONTRIBUTORS_BEGIN--><table><tr>
   <td align="center">
+    <a href="https://github.com/gottyduke" title="DK">
+      <img src="https://avatars.githubusercontent.com/u/35783662?v=4" width="50;" alt="DK"/>
+    </a>
+  </td>
+  <td align="center">
     <a href="https://github.com/ThirdEyeSqueegee" title="Angad">
       <img src="https://avatars.githubusercontent.com/u/66992519?v=4" width="50;" alt="Angad"/>
     </a>
   </td>
   <td align="center">
-    <a href="https://github.com/gottyduke" title="DK">
-      <img src="https://avatars.githubusercontent.com/u/35783662?v=4" width="50;" alt="DK"/>
+    <a href="https://github.com/powerof3" title="powerof3">
+      <img src="https://avatars.githubusercontent.com/u/32599957?v=4" width="50;" alt="powerof3"/>
+    </a>
+  </td>
+  <td align="center">
+    <a href="https://github.com/Qudix" title="Qudix">
+      <img src="https://avatars.githubusercontent.com/u/17361645?v=4" width="50;" alt="Qudix"/>
     </a>
   </td>
   <td align="center">
@@ -120,8 +130,8 @@ The main requirement of this license is: if you link your mod against CommonLibS
     </a>
   </td>
   <td align="center">
-    <a href="https://github.com/powerof3" title="powerof3">
-      <img src="https://avatars.githubusercontent.com/u/32599957?v=4" width="50;" alt="powerof3"/>
+    <a href="https://github.com/nikitalita" title="nikitalita">
+      <img src="https://avatars.githubusercontent.com/u/69168929?v=4" width="50;" alt="nikitalita"/>
     </a>
   </td>
 </tr></table><!--CONTRIBUTORS_END-->
