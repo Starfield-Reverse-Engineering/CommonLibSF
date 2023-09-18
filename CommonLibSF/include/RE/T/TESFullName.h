@@ -1,6 +1,6 @@
 #pragma once
 
-#include "RE/B/BSFixedString.h"
+#include "RE/B/BGSLocalizedString.h"
 #include "RE/B/BaseFormComponent.h"
 
 namespace RE
@@ -10,8 +10,15 @@ namespace RE
 	public:
 		SF_RTTI_VTABLE(TESFullName);
 
+		~TESFullName() override;
+
+		// add
+		virtual std::uint32_t             GetFullNameLength() const;     // 11
+		virtual const char*               GetFullName() const;           // 12
+		virtual const BGSLocalizedString& GetFullNameLocalized() const;  // 13
+
 		// members
-		BSFixedString fullName;  // 08 - FULL
+		BGSLocalizedString fullName;  // 08 - FULL
 	};
 	static_assert(sizeof(TESFullName) == 0x10);
 }
