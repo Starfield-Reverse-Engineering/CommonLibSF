@@ -88,5 +88,6 @@
 #include "RE/T/TESQuest.h"
 #include "RE/T/TESRace.h"
 #include "RE/T/TESRaceForm.h"
+#include "RE/T/TESResponse.h"
 #include "RE/T/TESSpellList.h"
 #include "RE/T/TESTopicInfo.h"
