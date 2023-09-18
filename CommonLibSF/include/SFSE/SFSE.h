@@ -8,5 +8,4 @@
 #include "SFSE/Interfaces.h"
 #include "SFSE/Logger.h"
 #include "SFSE/Trampoline.h"
-#include "SFSE/Utilities.h"
 #include "SFSE/Version.h"
