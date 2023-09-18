@@ -18,7 +18,7 @@ namespace SFSE
 		};
 
 		template <class T>
-		T* QueryInterface(const LoadInterface* a_intfc, const std::uint32_t a_id)
+		auto QueryInterface(const LoadInterface* a_intfc, const std::uint32_t a_id)
 		{
 			auto result = static_cast<T*>(a_intfc->QueryInterface(a_id));
 			if (result && result->Version() > T::kVersion) {

@@ -39,6 +39,37 @@ namespace SFSE
 	public:
 		using deleter_type = std::function<void(void* a_mem, std::size_t a_size)>;
 
+		auto move_from(Trampoline&& a_rhs)
+		{
+			_5branches = std::move(a_rhs._5branches);
+			_6branches = std::move(a_rhs._6branches);
+			_name = std::move(a_rhs._name);
+
+			_deleter = std::move(a_rhs._deleter);
+
+			_data = a_rhs._data;
+			a_rhs._data = nullptr;
+
+			_capacity = a_rhs._capacity;
+			a_rhs._capacity = 0;
+
+			_size = a_rhs._size;
+			a_rhs._size = 0;
+		}
+
+		auto release()
+		{
+			if (_data && _deleter) {
+				_deleter(_data, _capacity);
+			}
+
+			_5branches.clear();
+			_6branches.clear();
+			_data = nullptr;
+			_capacity = 0;
+			_size = 0;
+		}
+
 		Trampoline() = default;
 
 		Trampoline(Trampoline&& a_rhs) noexcept { move_from(std::move(a_rhs)); }
@@ -48,7 +79,7 @@ namespace SFSE
 
 		~Trampoline() { release(); }
 
-		Trampoline& operator=(Trampoline&& a_rhs) noexcept
+		auto& operator=(Trampoline&& a_rhs) noexcept
 		{
 			if (this != std::addressof(a_rhs)) {
 				move_from(std::move(a_rhs));
@@ -57,9 +88,27 @@ namespace SFSE
 			return *this;
 		}
 
-		void create(const std::size_t a_size) { return create(a_size, nullptr); }
+		auto set_trampoline(void* a_trampoline, const std::size_t a_size, deleter_type a_deleter)
+		{
+			const auto trampoline = static_cast<std::byte*>(a_trampoline);
+			if (trampoline) {
+				constexpr auto INT3 = static_cast<int>(0xCC);
+				std::memset(trampoline, INT3, a_size);
+			}
 
-		void create(const std::size_t a_size, void* a_module)
+			release();
+
+			_deleter = std::move(a_deleter);
+			_data = trampoline;
+			_capacity = a_size;
+			_size = 0;
+
+			log_stats();
+		}
+
+		auto set_trampoline(void* a_trampoline, const std::size_t a_size) { set_trampoline(a_trampoline, a_size, {}); }
+
+		auto create(const std::size_t a_size, void* a_module)
 		{
 			if (a_size == 0) {
 				stl::report_and_fail("cannot create a trampoline with a zero size"sv);
@@ -78,27 +127,9 @@ namespace SFSE
 			set_trampoline(mem, a_size, [](void* a_mem, std::size_t) { WinAPI::VirtualFree(a_mem, 0, WinAPI::MEM_RELEASE); });
 		}
 
-		void set_trampoline(void* a_trampoline, const std::size_t a_size) { set_trampoline(a_trampoline, a_size, {}); }
+		auto create(const std::size_t a_size) { return create(a_size, nullptr); }
 
-		void set_trampoline(void* a_trampoline, const std::size_t a_size, deleter_type a_deleter)
-		{
-			const auto trampoline = static_cast<std::byte*>(a_trampoline);
-			if (trampoline) {
-				constexpr auto INT3 = static_cast<int>(0xCC);
-				std::memset(trampoline, INT3, a_size);
-			}
-
-			release();
-
-			_deleter = std::move(a_deleter);
-			_data = trampoline;
-			_capacity = a_size;
-			_size = 0;
-
-			log_stats();
-		}
-
-		[[nodiscard]] void* allocate(const std::size_t a_size)
+		[[nodiscard]] auto allocate(const std::size_t a_size)
 		{
 			const auto result = do_allocate(a_size);
 
@@ -117,16 +148,16 @@ namespace SFSE
 			return static_cast<T*>(allocate(sizeof(T)));
 		}
 
-		[[nodiscard]] constexpr std::size_t empty() const noexcept { return _capacity == 0; }
+		[[nodiscard]] constexpr auto empty() const noexcept { return _capacity == 0; }
 
-		[[nodiscard]] constexpr std::size_t capacity() const noexcept { return _capacity; }
+		[[nodiscard]] constexpr auto capacity() const noexcept { return _capacity; }
 
-		[[nodiscard]] constexpr std::size_t allocated_size() const noexcept { return _size; }
+		[[nodiscard]] constexpr auto allocated_size() const noexcept { return _size; }
 
 		[[nodiscard]] constexpr std::size_t free_size() const noexcept { return _capacity - _size; }
 
 		template <std::size_t N>
-		std::uintptr_t write_branch(const std::uintptr_t a_src, const std::uintptr_t a_dst)
+		auto write_branch(const std::uintptr_t a_src, const std::uintptr_t a_dst)
 		{
 			std::uint8_t data = 0;
 			if constexpr (N == 5) {
@@ -145,13 +176,13 @@ namespace SFSE
 		}
 
 		template <std::size_t N, class F>
-		std::uintptr_t write_branch(const std::uintptr_t a_src, const F a_dst)
+		auto write_branch(const std::uintptr_t a_src, const F a_dst)
 		{
 			return write_branch<N>(a_src, stl::unrestricted_cast<std::uintptr_t>(a_dst));
 		}
 
 		template <std::size_t N>
-		std::uintptr_t write_call(const std::uintptr_t a_src, const std::uintptr_t a_dst)
+		auto write_call(const std::uintptr_t a_src, const std::uintptr_t a_dst)
 		{
 			std::uint8_t data = 0;
 			if constexpr (N == 5) {
@@ -170,7 +201,7 @@ namespace SFSE
 		}
 
 		template <std::size_t N, class F>
-		std::uintptr_t write_call(const std::uintptr_t a_src, const F a_dst)
+		auto write_call(const std::uintptr_t a_src, const F a_dst)
 		{
 			return write_call<N>(a_src, stl::unrestricted_cast<std::uintptr_t>(a_dst));
 		}
@@ -190,7 +221,15 @@ namespace SFSE
 			return mem;
 		}
 
-		void write_5branch(const std::uintptr_t a_src, const std::uintptr_t a_dst, const std::uint8_t a_opcode)
+		[[nodiscard]] static constexpr auto in_range(const std::ptrdiff_t a_disp)
+		{
+			constexpr auto min = (std::numeric_limits<std::int32_t>::min)();
+			constexpr auto max = (std::numeric_limits<std::int32_t>::max)();
+
+			return min <= a_disp && a_disp <= max;
+		}
+
+		auto write_5branch(const std::uintptr_t a_src, const std::uintptr_t a_dst, const std::uint8_t a_opcode)
 		{
 #pragma pack(push, 1)
 
@@ -248,7 +287,7 @@ namespace SFSE
 			mem->addr = static_cast<std::uint64_t>(a_dst);
 		}
 
-		void write_6branch(const std::uintptr_t a_src, const std::uintptr_t a_dst, const std::uint8_t a_modrm)
+		auto write_6branch(const std::uintptr_t a_src, const std::uintptr_t a_dst, const std::uint8_t a_modrm)
 		{
 #pragma pack(push, 1)
 
@@ -307,46 +346,7 @@ namespace SFSE
 			return func;
 		}
 
-		void move_from(Trampoline&& a_rhs)
-		{
-			_5branches = std::move(a_rhs._5branches);
-			_6branches = std::move(a_rhs._6branches);
-			_name = std::move(a_rhs._name);
-
-			_deleter = std::move(a_rhs._deleter);
-
-			_data = a_rhs._data;
-			a_rhs._data = nullptr;
-
-			_capacity = a_rhs._capacity;
-			a_rhs._capacity = 0;
-
-			_size = a_rhs._size;
-			a_rhs._size = 0;
-		}
-
 		void log_stats() const;
-
-		[[nodiscard]] constexpr bool in_range(const std::ptrdiff_t a_disp) const
-		{
-			constexpr auto min = (std::numeric_limits<std::int32_t>::min)();
-			constexpr auto max = (std::numeric_limits<std::int32_t>::max)();
-
-			return min <= a_disp && a_disp <= max;
-		}
-
-		void release()
-		{
-			if (_data && _deleter) {
-				_deleter(_data, _capacity);
-			}
-
-			_5branches.clear();
-			_6branches.clear();
-			_data = nullptr;
-			_capacity = 0;
-			_size = 0;
-		}
 
 		std::map<std::uintptr_t, std::byte*> _5branches;
 		std::map<std::uintptr_t, std::byte*> _6branches;

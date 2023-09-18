@@ -104,34 +104,36 @@ namespace SFSE
 			kVersion = 1,
 		};
 
-		constexpr void PluginVersion(const std::uint32_t a_version) noexcept { pluginVersion = a_version; }
+		constexpr auto PluginVersion(const std::uint32_t a_version) noexcept { pluginVersion = a_version; }
 
-		[[nodiscard]] constexpr std::uint32_t GetPluginVersion() const noexcept { return pluginVersion; }
+		constexpr auto PluginVersion(const REL::Version a_version) noexcept { pluginVersion = a_version.pack(); }
 
-		constexpr void PluginName(const std::string_view a_plugin) noexcept { SetCharBuffer(a_plugin, std::span{ pluginName }); }
+		[[nodiscard]] constexpr auto GetPluginVersion() const noexcept { return pluginVersion; }
 
-		[[nodiscard]] constexpr std::string_view GetPluginName() const noexcept { return std::string_view{ pluginName }; }
+		constexpr auto PluginName(const std::string_view a_plugin) noexcept { SetCharBuffer(a_plugin, std::span{ pluginName }); }
 
-		constexpr void AuthorName(const std::string_view a_name) noexcept { SetCharBuffer(a_name, std::span{ author }); }
+		[[nodiscard]] constexpr auto GetPluginName() const noexcept { return std::string_view{ pluginName }; }
 
-		[[nodiscard]] constexpr std::string_view GetAuthorName() const noexcept { return std::string_view{ author }; }
+		constexpr auto AuthorName(const std::string_view a_name) noexcept { SetCharBuffer(a_name, std::span{ author }); }
 
-		constexpr void UsesSigScanning(const bool a_value) noexcept { addressIndependence = !a_value; }
+		[[nodiscard]] constexpr auto GetAuthorName() const noexcept { return std::string_view{ author }; }
 
-		constexpr void UsesAddressLibrary(const bool a_value) noexcept { addressIndependence = a_value; }
+		constexpr auto UsesSigScanning(const bool a_value) noexcept { addressIndependence = !a_value; }
 
-		constexpr void HasNoStructUse(const bool a_value) noexcept { structureCompatibility = !a_value; }
+		constexpr auto UsesAddressLibrary(const bool a_value) noexcept { addressIndependence = a_value; }
 
-		constexpr void IsLayoutDependent(const bool a_value) noexcept { structureCompatibility = a_value; }
+		constexpr auto HasNoStructUse(const bool a_value) noexcept { structureCompatibility = !a_value; }
 
-		constexpr void CompatibleVersions(std::initializer_list<REL::Version> a_versions) noexcept
+		constexpr auto IsLayoutDependent(const bool a_value) noexcept { structureCompatibility = a_value; }
+
+		constexpr auto CompatibleVersions(std::initializer_list<REL::Version> a_versions) noexcept
 		{
 			// must be zero-terminated
 			assert(a_versions.size() < std::size(compatibleVersions) - 1);
 			std::ranges::transform(a_versions, std::begin(compatibleVersions), [](const REL::Version& a_version) noexcept { return a_version.pack(); });
 		}
 
-		constexpr void MinimumRequiredXSEVersion(const REL::Version a_version) noexcept { xseMinimum = a_version.pack(); }
+		constexpr auto MinimumRequiredXSEVersion(const REL::Version a_version) noexcept { xseMinimum = a_version.pack(); }
 
 		[[nodiscard]] static const PluginVersionData* GetSingleton() noexcept;
 
@@ -169,4 +171,5 @@ namespace SFSE
 }  // namespace SFSE
 
 #define SFSEPluginLoad(...) extern "C" [[maybe_unused]] __declspec(dllexport) bool SFSEPlugin_Load(__VA_ARGS__)
+#define SFSEPluginPreload(...) extern "C" [[maybe_unused]] __declspec(dllexport) bool SFSEPlugin_Preload(__VA_ARGS__)
 #define SFSEPluginVersion extern "C" [[maybe_unused]] __declspec(dllexport) constinit SFSE::PluginVersionData SFSEPlugin_Version

@@ -239,7 +239,7 @@ namespace REL
 
 		[[nodiscard]] constexpr decltype(auto) cend() const noexcept { return _impl.cend(); }
 
-		[[nodiscard]] std::strong_ordering constexpr compare(const Version& a_rhs) const noexcept
+		[[nodiscard]] constexpr auto compare(const Version& a_rhs) const noexcept
 		{
 			for (std::size_t i = 0; i < _impl.size(); ++i) {
 				if ((*this)[i] != a_rhs[i]) {
@@ -249,17 +249,17 @@ namespace REL
 			return std::strong_ordering::equal;
 		}
 
-		[[nodiscard]] constexpr std::uint32_t pack() const noexcept { return static_cast<std::uint32_t>((_impl[0] & 0x0FF) << 24u | (_impl[1] & 0x0FF) << 16u | (_impl[2] & 0xFFF) << 4u | (_impl[3] & 0x00F) << 0u); }
+		[[nodiscard]] constexpr auto pack() const noexcept { return static_cast<std::uint32_t>((_impl[0] & 0x0FF) << 24u | (_impl[1] & 0x0FF) << 16u | (_impl[2] & 0xFFF) << 4u | (_impl[3] & 0x00F) << 0u); }
 
-		[[nodiscard]] constexpr value_type major() const noexcept { return _impl[0]; }
+		[[nodiscard]] constexpr auto major() const noexcept { return _impl[0]; }
 
-		[[nodiscard]] constexpr value_type minor() const noexcept { return _impl[1]; }
+		[[nodiscard]] constexpr auto minor() const noexcept { return _impl[1]; }
 
-		[[nodiscard]] constexpr value_type patch() const noexcept { return _impl[2]; }
+		[[nodiscard]] constexpr auto patch() const noexcept { return _impl[2]; }
 
-		[[nodiscard]] constexpr value_type build() const noexcept { return _impl[3]; }
+		[[nodiscard]] constexpr auto build() const noexcept { return _impl[3]; }
 
-		[[nodiscard]] std::string string(const std::string_view a_separator = "-"sv) const
+		[[nodiscard]] auto string(const std::string_view a_separator = "-"sv) const
 		{
 			std::string result;
 			for (auto&& ver : _impl) {
@@ -270,7 +270,7 @@ namespace REL
 			return result;
 		}
 
-		[[nodiscard]] std::wstring wstring(const std::wstring_view a_separator = L"-"sv) const
+		[[nodiscard]] auto wstring(const std::wstring_view a_separator = L"-"sv) const
 		{
 			std::wstring result;
 			for (auto&& ver : _impl) {
@@ -281,15 +281,15 @@ namespace REL
 			return result;
 		}
 
-		[[nodiscard]] static constexpr Version unpack(const std::uint32_t a_packedVersion) noexcept { return REL::Version{ static_cast<value_type>((a_packedVersion >> 24) & 0x0FF), static_cast<value_type>((a_packedVersion >> 16) & 0x0FF), static_cast<value_type>((a_packedVersion >> 4) & 0xFFF), static_cast<value_type>(a_packedVersion & 0x0F) }; }
+		[[nodiscard]] static constexpr auto unpack(const std::uint32_t a_packedVersion) noexcept { return REL::Version{ static_cast<value_type>((a_packedVersion >> 24) & 0x0FF), static_cast<value_type>((a_packedVersion >> 16) & 0x0FF), static_cast<value_type>((a_packedVersion >> 4) & 0xFFF), static_cast<value_type>(a_packedVersion & 0x0F) }; }
 
 	private:
 		std::array<value_type, 4> _impl{ 0, 0, 0, 0 };
 	};
 
-	[[nodiscard]] constexpr bool operator==(const Version& a_lhs, const Version& a_rhs) noexcept { return a_lhs.compare(a_rhs) == std::strong_ordering::equal; }
+	[[nodiscard]] constexpr auto operator==(const Version& a_lhs, const Version& a_rhs) noexcept { return a_lhs.compare(a_rhs) == std::strong_ordering::equal; }
 
-	[[nodiscard]] constexpr std::strong_ordering operator<=>(const Version& a_lhs, const Version& a_rhs) noexcept { return a_lhs.compare(a_rhs); }
+	[[nodiscard]] constexpr auto operator<=>(const Version& a_lhs, const Version& a_rhs) noexcept { return a_lhs.compare(a_rhs); }
 
 	namespace literals
 	{
@@ -322,14 +322,14 @@ namespace REL
 		}  // namespace detail
 
 		template <char... C>
-		[[nodiscard]] constexpr Version operator""_v() noexcept
+		[[nodiscard]] constexpr auto operator""_v() noexcept
 		{
 			std::array<Version::value_type, 4> result{ 0, 0, 0, 0 };
 			detail::read_version<0, C...>(result);
 			return Version(result);
 		}
 
-		[[nodiscard]] constexpr Version operator""_v(const char* str, const std::size_t len) { return Version(std::string_view(str, len)); }
+		[[nodiscard]] constexpr auto operator""_v(const char* str, const std::size_t len) { return Version(std::string_view(str, len)); }
 	}  // namespace literals
 
 	[[nodiscard]] inline std::optional<Version> get_file_version(const stl::zwstring a_filename)
@@ -381,16 +381,16 @@ namespace REL
 		Segment(const std::uintptr_t a_proxyBase, const std::uintptr_t a_address, const std::uintptr_t a_size) noexcept :
 			_proxyBase(a_proxyBase), _address(a_address), _size(a_size) {}
 
-		[[nodiscard]] std::uintptr_t address() const noexcept { return _address; }
+		[[nodiscard]] auto address() const noexcept { return _address; }
 
 		[[nodiscard]] std::size_t offset() const noexcept { return address() - _proxyBase; }
 
-		[[nodiscard]] std::size_t size() const noexcept { return _size; }
+		[[nodiscard]] auto size() const noexcept { return _size; }
 
-		[[nodiscard]] void* pointer() const noexcept { return reinterpret_cast<void*>(address()); }
+		[[nodiscard]] auto pointer() const noexcept { return reinterpret_cast<void*>(address()); }
 
 		template <class T>
-		[[nodiscard]] T* pointer() const noexcept
+		[[nodiscard]] auto pointer() const noexcept
 		{
 			return static_cast<T*>(pointer());
 		}
@@ -420,7 +420,7 @@ namespace REL
 
 		[[nodiscard]] constexpr auto segment(const Segment::Name a_segment) const noexcept { return _segments[a_segment]; }
 
-		[[nodiscard]] static Module& get(const std::uintptr_t a_address) noexcept
+		[[nodiscard]] static auto& get(const std::uintptr_t a_address) noexcept
 		{
 			static std::unordered_map<std::uintptr_t, Module> managed;
 
@@ -432,7 +432,7 @@ namespace REL
 			return managed.at(base);
 		}
 
-		[[nodiscard]] static Module& get(const std::string_view a_filePath = ""sv) noexcept
+		[[nodiscard]] static auto& get(const std::string_view a_filePath = ""sv) noexcept
 		{
 			const auto base = AsAddress(WinAPI::GetModuleHandle(a_filePath.empty() ? WinAPI::GetProcPath(nullptr).data() : a_filePath.data()));
 			return get(base);
@@ -462,7 +462,7 @@ namespace REL
 		explicit constexpr Offset(const std::ptrdiff_t a_offset) :
 			_offset(a_offset) {}
 
-		[[nodiscard]] constexpr std::uintptr_t offset() const noexcept { return _offset; }
+		[[nodiscard]] constexpr auto offset() const noexcept { return _offset; }
 
 		[[nodiscard]] constexpr std::uintptr_t address() const noexcept { return Module::get().base() + _offset; }
 
@@ -534,7 +534,7 @@ namespace REL
 		}
 
 	private:
-		[[nodiscard]] static std::uintptr_t base() { return Module::get().base(); }
+		[[nodiscard]] static auto base() { return Module::get().base(); }
 
 		std::uintptr_t _address{};
 	};
