@@ -82,7 +82,7 @@ namespace RE
 			Entry* _left;  // 00
 			union
 			{
-				std::uint32_t _length;		   // Number of bytes (even for wchar_t).
+				std::uint32_t _length;  // Number of bytes (even for wchar_t).
 				Entry*        _right;
 			};                                 // 08
 			volatile std::uint32_t _refCount;  // 10
