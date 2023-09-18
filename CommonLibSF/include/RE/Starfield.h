@@ -9,6 +9,7 @@
 #include "RE/B/BGSAttackDataForm.h"
 #include "RE/B/BGSDestructibleObjectForm.h"
 #include "RE/B/BGSEditorID.h"
+#include "RE/B/BGSEntryPoint.h"
 #include "RE/B/BGSForcedLocRefType.h"
 #include "RE/B/BGSKeyword.h"
 #include "RE/B/BGSKeywordForm.h"
