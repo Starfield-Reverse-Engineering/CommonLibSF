@@ -9,7 +9,6 @@ namespace RE
 		return func(this);
 	}
 
-
 	bool TESObjectREFR::HasKeyword(BGSKeyword* a_keyword)
 	{
 		using func_t = decltype(&TESObjectREFR::HasKeyword);
