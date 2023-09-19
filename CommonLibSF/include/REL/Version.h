@@ -126,4 +126,4 @@ namespace REL
 	}  // namespace literals
 
 	[[nodiscard]] std::optional<Version> get_file_version(stl::zwstring a_filename);
-} // namespace REL
+}  // namespace REL

@@ -25,7 +25,7 @@ namespace REL
 				_segments[idx] = Segment{ _base, _base + section.virtualAddress, section.virtualSize };
 			}
 		}
-		
+
 		_file = stl::utf8_to_utf16(WinAPI::GetProcPath(nullptr)).value();
 		_version = get_file_version(_file).value();
 	}
@@ -33,8 +33,8 @@ namespace REL
 	Module::Module(std::string_view a_filePath)
 	{
 		const auto base = AsAddress(WinAPI::GetModuleHandle(a_filePath.data())) & ~3;
-		stl_assert(base, 
-			"failed to initializing module info with file {}", 
+		stl_assert(base,
+			"failed to initializing module info with file {}",
 			a_filePath);
 
 		*this = Module(base);

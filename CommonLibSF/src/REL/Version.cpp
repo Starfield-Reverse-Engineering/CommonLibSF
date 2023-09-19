@@ -55,4 +55,4 @@ namespace REL
 
 		return version;
 	}
-} // namespace REL
+}  // namespace REL
