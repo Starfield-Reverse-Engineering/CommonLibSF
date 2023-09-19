@@ -117,13 +117,13 @@ namespace SFSE
 
 		[[nodiscard]] constexpr std::string_view GetAuthorName() const noexcept { return std::string_view{ author }; }
 
-		constexpr void UsesSigScanning(bool a_value) noexcept { addressIndependence = !a_value; }
+		constexpr void UsesSigScanning(bool a_value) noexcept { addressIndependence = 1 << static_cast<std::uint32_t>(!a_value); }
 
-		constexpr void UsesAddressLibrary(bool a_value) noexcept { addressIndependence = a_value; }
+		constexpr void UsesAddressLibrary(bool a_value) noexcept {addressIndependence = 1 << static_cast<std::uint32_t>(a_value); }
 
-		constexpr void HasNoStructUse(bool a_value) noexcept { structureCompatibility = !a_value; }
+		constexpr void HasNoStructUse(bool a_value) noexcept {structureCompatibility = 1 << static_cast<std::uint32_t>(!a_value); }
 
-		constexpr void IsLayoutDependent(bool a_value) noexcept { structureCompatibility = a_value; }
+		constexpr void IsLayoutDependent(bool a_value) noexcept {structureCompatibility = 1 << static_cast<std::uint32_t>(a_value); }
 
 		constexpr void CompatibleVersions(std::initializer_list<REL::Version> a_versions) noexcept
 		{
