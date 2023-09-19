@@ -7,7 +7,9 @@ on:
       - "CommonLibSF/**"
   workflow_dispatch:
 
-concurrency: maintenance
+concurrency:
+  group: maintenance
+  cancel-in-progress: true
 
 jobs:
   maintenance:
