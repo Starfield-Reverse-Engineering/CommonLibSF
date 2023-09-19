@@ -4,7 +4,6 @@
 
 namespace REL
 {
-
 	class Segment
 	{
 	public:
@@ -24,15 +23,17 @@ namespace REL
 		Segment() noexcept = default;
 
 		Segment(std::uintptr_t a_proxyBase, std::uintptr_t a_address, std::uintptr_t a_size) noexcept :
-			_proxyBase(a_proxyBase), _address(a_address), _size(a_size) {}
+			_proxyBase(a_proxyBase), _address(a_address), _size(a_size)
+		{}
 
 		[[nodiscard]] std::uintptr_t address() const noexcept { return _address; }
-
 		[[nodiscard]] std::size_t offset() const noexcept { return address() - _proxyBase; }
-
 		[[nodiscard]] std::size_t size() const noexcept { return _size; }
 
-		[[nodiscard]] void* pointer() const noexcept { return std::bit_cast<void*>(address()); }
+		[[nodiscard]] void* pointer() const noexcept
+		{
+			return std::bit_cast<void*>(address());
+		}
 
 		template <class T>
 		[[nodiscard]] T* pointer() const noexcept

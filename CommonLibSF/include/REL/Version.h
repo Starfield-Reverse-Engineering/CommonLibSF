@@ -2,7 +2,6 @@
 
 namespace REL
 {
-
 	class Version
 	{
 	public:
@@ -42,14 +41,18 @@ namespace REL
 			return std::strong_ordering::equal;
 		}
 
-		[[nodiscard]] constexpr std::uint32_t pack() const noexcept { return static_cast<std::uint32_t>((_impl[0] & 0x0FF) << 24u | (_impl[1] & 0x0FF) << 16u | (_impl[2] & 0xFFF) << 4u | (_impl[3] & 0x00F) << 0u); }
+		[[nodiscard]] constexpr std::uint32_t pack() const noexcept
+		{
+			return static_cast<std::uint32_t>(
+				(_impl[0] & 0x0FF) << 24u |
+				(_impl[1] & 0x0FF) << 16u |
+				(_impl[2] & 0xFFF) << 4u |
+				(_impl[3] & 0x00F) << 0u);
+		}
 
 		[[nodiscard]] constexpr value_type major() const noexcept { return _impl[0]; }
-
 		[[nodiscard]] constexpr value_type minor() const noexcept { return _impl[1]; }
-
 		[[nodiscard]] constexpr value_type patch() const noexcept { return _impl[2]; }
-
 		[[nodiscard]] constexpr value_type build() const noexcept { return _impl[3]; }
 
 		[[nodiscard]] std::string string(std::string_view a_separator = "-"sv) const
@@ -74,15 +77,29 @@ namespace REL
 			return result;
 		}
 
-		[[nodiscard]] static constexpr Version unpack(std::uint32_t a_packedVersion) noexcept { return REL::Version{ static_cast<value_type>((a_packedVersion >> 24) & 0x0FF), static_cast<value_type>((a_packedVersion >> 16) & 0x0FF), static_cast<value_type>((a_packedVersion >> 4) & 0xFFF), static_cast<value_type>(a_packedVersion & 0x0F) }; }
+		[[nodiscard]] static constexpr Version unpack(std::uint32_t a_packedVersion) noexcept
+		{
+			return REL::Version{ 
+				static_cast<value_type>((a_packedVersion >> 24) & 0x0FF),
+				static_cast<value_type>((a_packedVersion >> 16) & 0x0FF),
+				static_cast<value_type>((a_packedVersion >> 4) & 0xFFF),
+				static_cast<value_type>(a_packedVersion & 0x0F)
+			};
+		}
 
 	private:
 		std::array<value_type, 4> _impl{ 0, 0, 0, 0 };
 	};
 
-	[[nodiscard]] constexpr bool operator==(const Version& a_lhs, const Version& a_rhs) noexcept { return a_lhs.compare(a_rhs) == std::strong_ordering::equal; }
+	[[nodiscard]] constexpr bool operator==(const Version& a_lhs, const Version& a_rhs) noexcept
+	{
+		return a_lhs.compare(a_rhs) == std::strong_ordering::equal;
+	}
 
-	[[nodiscard]] constexpr std::strong_ordering operator<=>(const Version& a_lhs, const Version& a_rhs) noexcept { return a_lhs.compare(a_rhs); }
+	[[nodiscard]] constexpr std::strong_ordering operator<=>(const Version& a_lhs, const Version& a_rhs) noexcept
+	{
+		return a_lhs.compare(a_rhs);
+	}
 
 	namespace literals
 	{
@@ -122,7 +139,10 @@ namespace REL
 			return REL::Version(result);
 		}
 
-		[[nodiscard]] constexpr REL::Version operator""_v(const char* str, std::size_t len) { return Version(std::string_view(str, len)); }
+		[[nodiscard]] constexpr REL::Version operator""_v(const char* str, std::size_t len)
+		{
+			return Version(std::string_view(str, len));
+		}
 	}  // namespace literals
 
 	[[nodiscard]] std::optional<Version> get_file_version(stl::zwstring a_filename);
