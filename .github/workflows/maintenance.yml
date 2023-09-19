@@ -7,6 +7,8 @@ on:
       - "CommonLibSF/**"
   workflow_dispatch:
 
+concurrency: main-ci
+
 jobs:
   maintenance:
     runs-on: ubuntu-latest
