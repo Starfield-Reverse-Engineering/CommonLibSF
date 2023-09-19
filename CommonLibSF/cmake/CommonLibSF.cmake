@@ -114,7 +114,6 @@ function(target_commonlibsf_properties TARGET)
 
     file(WRITE "${commonlibsf_plugin_file}"
             "#pragma once\n\n"
-            "#define SFSEPluginVersion extern \"C\" __declspec(dllexport) constinit SFSE::PluginVersionData SFSEPlugin_Version\n\n"
             "namespace Plugin\n"
             "{\n"
             "    using namespace std::string_view_literals;\n\n"
