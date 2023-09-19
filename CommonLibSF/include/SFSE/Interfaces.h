@@ -107,6 +107,8 @@ namespace SFSE
 
 		constexpr void PluginVersion(std::uint32_t a_version) noexcept { pluginVersion = a_version; }
 
+		constexpr void PluginVersion(REL::Version a_version) noexcept { pluginVersion = a_version.pack(); }
+
 		[[nodiscard]] constexpr std::uint32_t GetPluginVersion() const noexcept { return pluginVersion; }
 
 		constexpr void PluginName(std::string_view a_plugin) noexcept { SetCharBuffer(a_plugin, std::span{ pluginName }); }
