@@ -2,6 +2,7 @@
 
 #include "REL/ID.h"
 #include "REL/Module.h"
+#include "REL/Offset.h"
 #include "REL/Version.h"
 
 #define REL_MAKE_MEMBER_FUNCTION_POD_TYPE_HELPER_IMPL(a_nopropQual, a_propQual, ...)              \
@@ -192,22 +193,6 @@ namespace REL
 		}
 
 		assert(success != 0);
-	};
-
-	class Offset
-	{
-	public:
-		constexpr Offset() = default;
-
-		constexpr Offset(std::ptrdiff_t a_offset) :
-			_offset(a_offset) {}
-
-		[[nodiscard]] constexpr std::uintptr_t offset() const noexcept { return _offset; }
-
-		[[nodiscard]] constexpr std::uintptr_t address() const noexcept { return Module::get().base() + _offset; }
-
-	private:
-		std::ptrdiff_t _offset{ 0 };
 	};
 
 	template <typename T = std::uintptr_t>
