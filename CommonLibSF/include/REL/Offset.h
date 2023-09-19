@@ -9,7 +9,7 @@ namespace REL
 	public:
 		constexpr Offset() = default;
 
-		constexpr Offset(const std::ptrdiff_t a_offset) :
+		explicit constexpr Offset(const std::ptrdiff_t a_offset) :
 			_offset(a_offset)
 		{}
 
