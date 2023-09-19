@@ -25,7 +25,7 @@
 You can choose from the following community plugin templates to speed up the setup process:
 
 - [CLibSFPluginTemplate](https://github.com/Starfield-Reverse-Engineering/CLibSFPluginTemplate)
-  - Uses **CMake**. Consumes CommonLibSF as a [vcpkg port package](https://github.com/Starfield-Reverse-Engineering/Starfield-RE-vcpkg).
+  - Uses **CMake**. Consumes CommonLibSF as a [vcpkg port package](https://github.com/Starfield-Reverse-Engineering/Starfield-RE-vcpkg) or git submodule.
 - [SF_PluginTemplate](https://github.com/gottyduke/SF_PluginTemplate)
   - Uses **CMake**. Consumes CommonLibSF as a git submodule or local fork.
 - [commonlibsf-template-xmake](https://github.com/Starfield-Reverse-Engineering/commonlibsf-template-xmake)
