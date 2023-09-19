@@ -19,11 +19,11 @@ namespace RE
 			return *singleton;
 		}
 
-        inline static bool IsPlayerCharacterInChargen()
-        {
-            auto PC = PlayerCharacter();
-            return *(stl::adjust_pointer<bool>(PC, 0xF24));
-        }
+		inline static bool IsPlayerCharacterInChargen()
+		{
+			auto PC = PlayerCharacter();
+			return *(stl::adjust_pointer<bool>(PC, 0xF24));
+		}
 
 		// add
 		virtual void         Unk_130();                                     // 130
