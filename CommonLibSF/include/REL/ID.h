@@ -75,7 +75,8 @@ namespace REL
 				requires(std::is_execution_policy_v<std::decay_t<ExecutionPolicy>>);
 
 			Offset2ID() :
-				Offset2ID(std::execution::sequenced_policy{}) {}
+				Offset2ID(std::execution::sequenced_policy{})
+			{}
 
 			[[nodiscard]] std::uint64_t operator()(std::size_t a_offset) const;
 
@@ -119,7 +120,10 @@ namespace REL
 				_stream.exceptions(std::ios::badbit | std::ios::failbit | std::ios::eofbit);
 			}
 
-			void ignore(std::streamsize a_count) { _stream.ignore(a_count); }
+			void ignore(std::streamsize a_count) 
+			{
+				_stream.ignore(a_count);
+			}
 
 			template <class T>
 			void readin(T& a_val)
@@ -145,13 +149,25 @@ namespace REL
 		public:
 			void read(istream_t& a_in);
 
-			[[nodiscard]] std::size_t address_count() const noexcept { return static_cast<std::size_t>(_addressCount); }
+			[[nodiscard]] std::size_t address_count() const noexcept
+			{
+				return static_cast<std::size_t>(_addressCount);
+			}
 
-			[[nodiscard]] std::uint64_t pointer_size() const noexcept { return static_cast<std::uint64_t>(_pointerSize); }
+			[[nodiscard]] std::uint64_t pointer_size() const noexcept
+			{
+				return static_cast<std::uint64_t>(_pointerSize);
+			}
 
-			[[nodiscard]] std::string_view name() const noexcept { return _name; }
+			[[nodiscard]] std::string_view name() const noexcept
+			{
+				return _name;
+			}
 
-			[[nodiscard]] Version version() const noexcept { return _version; }
+			[[nodiscard]] Version version() const noexcept
+			{
+				return _version;
+			}
 
 		private:
 			char          _name[20]{};
@@ -229,7 +245,8 @@ namespace REL
 		constexpr ID() noexcept = default;
 
 		explicit constexpr ID(std::uint64_t a_id) noexcept :
-			_id(a_id) {}
+			_id(a_id)
+		{}
 
 		constexpr ID& operator=(std::uint64_t a_id) noexcept
 		{
@@ -237,14 +254,26 @@ namespace REL
 			return *this;
 		}
 
-		[[nodiscard]] std::uintptr_t address() const { return base() + offset(); }
+		[[nodiscard]] std::uintptr_t address() const
+		{
+			return base() + offset();
+		}
 
-		[[nodiscard]] constexpr std::uint64_t id() const noexcept { return _id; }
+		[[nodiscard]] constexpr std::uint64_t id() const noexcept
+		{
+			return _id;
+		}
 
-		[[nodiscard]] std::size_t offset() const { return IDDatabase::get().id2offset(_id); }
+		[[nodiscard]] std::size_t offset() const
+		{
+			return IDDatabase::get().id2offset(_id);
+		}
 
 	private:
-		[[nodiscard]] static std::uintptr_t base() { return Module::get().base(); }
+		[[nodiscard]] static std::uintptr_t base()
+		{
+			return Module::get().base();
+		}
 
 		std::uint64_t _id{ 0 };
 	};
