@@ -203,20 +203,25 @@ namespace REL
 
 		constexpr Relocation() noexcept = default;
 
-		constexpr Relocation(const std::uintptr_t a_addr) noexcept :
-			_address(a_addr) {}
+		explicit constexpr Relocation(const std::uintptr_t a_addr) noexcept :
+			_address(a_addr)
+		{}
 
-		constexpr Relocation(Offset a_rva) noexcept :
-			_address(a_rva.address()) {}
+		explicit constexpr Relocation(const Offset a_rva) noexcept :
+			_address(a_rva.address())
+		{}
 
-		constexpr Relocation(Offset a_rva, std::ptrdiff_t a_offset) noexcept :
-			_address(a_rva.address() + a_offset) {}
+		explicit constexpr Relocation(const Offset a_rva, const std::ptrdiff_t a_offset) noexcept :
+			_address(a_rva.address() + a_offset)
+		{}
 
-		constexpr Relocation(ID a_id) noexcept :
-			_address(a_id.address()) {}
+		explicit constexpr Relocation(const ID a_id) noexcept :
+			_address(a_id.address())
+		{}
 
-		constexpr Relocation(ID a_id, std::ptrdiff_t a_offset) noexcept :
-			_address(a_id.address() + a_offset) {}
+		explicit constexpr Relocation(const ID a_id, const std::ptrdiff_t a_offset) noexcept :
+			_address(a_id.address() + a_offset)
+		{}
 
 		[[nodiscard]] constexpr value_type get() const  //
 			noexcept(std::is_nothrow_copy_constructible_v<value_type>)
