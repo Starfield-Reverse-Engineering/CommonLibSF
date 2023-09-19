@@ -169,4 +169,6 @@ namespace SFSE
 	static_assert(sizeof(PluginVersionData) == 0x25C);
 }  // namespace SFSE
 
+#define SFSEPluginPreload(...) extern "C" [[maybe_unused]] __declspec(dllexport) bool SFSEPlugin_Preload(__VA_ARGS__)
 #define SFSEPluginLoad(...) extern "C" [[maybe_unused]] __declspec(dllexport) bool SFSEPlugin_Load(__VA_ARGS__)
+#define SFSEPluginVersion extern "C" [[maybe_unused]] __declspec(dllexport) constinit SFSE::PluginVersionData SFSEPlugin_Version
