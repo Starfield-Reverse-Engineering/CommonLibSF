@@ -1,4 +1,4 @@
-#include "REL/Relocation.h"
+#include "REL/Module.h"
 
 namespace REL
 {
@@ -25,13 +25,36 @@ namespace REL
 				_segments[idx] = Segment{ _base, _base + section.virtualAddress, section.virtualSize };
 			}
 		}
+		
+		_file = stl::utf8_to_utf16(WinAPI::GetProcPath(nullptr)).value();
+		_version = get_file_version(_file).value();
 	}
 
 	Module::Module(std::string_view a_filePath)
 	{
 		const auto base = AsAddress(WinAPI::GetModuleHandle(a_filePath.data())) & ~3;
-		stl_assert(base, "failed to initializing module info with file {}", a_filePath);
+		stl_assert(base, 
+			"failed to initializing module info with file {}", 
+			a_filePath);
 
 		*this = Module(base);
+	}
+
+	[[nodiscard]] Module& Module::get(const std::uintptr_t a_address) noexcept
+	{
+		static std::unordered_map<std::uintptr_t, Module> managed;
+
+		const auto base = AsAddress(a_address) & ~3;
+		if (!managed.contains(base)) {
+			managed.try_emplace(base, base);
+		}
+
+		return managed.at(base);
+	}
+
+	[[nodiscard]] Module& Module::get(std::string_view a_filePath) noexcept
+	{
+		const auto base = AsAddress(WinAPI::GetModuleHandle(a_filePath.empty() ? WinAPI::GetProcPath(nullptr).data() : a_filePath.data()));
+		return get(base);
 	}
 }  // namespace REL
