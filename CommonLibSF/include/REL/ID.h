@@ -120,7 +120,7 @@ namespace REL
 				_stream.exceptions(std::ios::badbit | std::ios::failbit | std::ios::eofbit);
 			}
 
-			void ignore(std::streamsize a_count) 
+			void ignore(std::streamsize a_count)
 			{
 				_stream.ignore(a_count);
 			}
