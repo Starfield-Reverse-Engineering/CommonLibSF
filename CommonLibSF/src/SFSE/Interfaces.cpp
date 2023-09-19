@@ -11,7 +11,7 @@ namespace SFSE
 		const auto minor = static_cast<std::uint16_t>((packed & 0x00FF0000) >> 16);
 		const auto revision = static_cast<std::uint16_t>((packed & 0x0000FFF0) >> 4);
 		const auto build = static_cast<std::uint16_t>((packed & 0x0000000F) >> 0);
-		return { major, minor, revision, build };
+		return REL::Version{ major, minor, revision, build };
 	}
 
 	std::uint32_t QueryInterface::SFSEVersion() const { return GetProxy()->sfseVersion; }
