@@ -277,4 +277,20 @@ namespace REL
 
 		std::uint64_t _id{ 0 };
 	};
+
+	template <class ExecutionPolicy>
+	database::Offset2ID::Offset2ID(ExecutionPolicy&& a_policy)  //
+		requires(std::is_execution_policy_v<std::decay_t<ExecutionPolicy>>)
+	{
+		const std::span<const mapping_t> id2offset = IDDatabase::get()._id2offset;
+		_offset2id.reserve(id2offset.size());
+		_offset2id.insert(_offset2id.begin(), id2offset.begin(), id2offset.end());
+		std::sort(
+			a_policy,
+			_offset2id.begin(),
+			_offset2id.end(),
+			[](auto&& a_lhs, auto&& a_rhs) {
+				return a_lhs.offset < a_rhs.offset;
+			});
+	}
 }  // namespace REL
