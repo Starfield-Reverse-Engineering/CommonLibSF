@@ -223,6 +223,12 @@ namespace REL
 			_address(a_id.address() + a_offset)
 		{}
 
+		constexpr auto& operator=(const std::uintptr_t a_addr)
+		{
+			_address = a_addr;
+			return *this;
+		}
+
 		[[nodiscard]] constexpr value_type get() const  //
 			noexcept(std::is_nothrow_copy_constructible_v<value_type>)
 		{
