@@ -14,7 +14,7 @@ namespace SFSE
 			auto& trampoline = SFSE::GetTrampoline();
 			T::func = trampoline.write_call<Size>(a_address, T::Thunk);
 		}
-		
+
 		template <class T, std::size_t Size = 5>
 		constexpr void write_thunk_call() noexcept
 		{
