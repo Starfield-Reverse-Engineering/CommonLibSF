@@ -9,7 +9,7 @@ namespace RE
 		return func(this);
 	}
 
-    std::int32_t TESObjectREFR::GetValue()
+	std::int32_t TESObjectREFR::GetValue()
 	{
 		using func_t = decltype(&TESObjectREFR::GetValue);
 		REL::Relocation<func_t> func{ REL::Offset(0x01A38790) };
