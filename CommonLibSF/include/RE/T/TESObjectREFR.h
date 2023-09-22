@@ -291,6 +291,7 @@ namespace RE
 		[[nodiscard]] constexpr float       GetPositionX() const noexcept { return data.location.x; }
 		[[nodiscard]] constexpr float       GetPositionY() const noexcept { return data.location.y; }
 		[[nodiscard]] constexpr float       GetPositionZ() const noexcept { return data.location.z; }
+		[[nodiscard]] std::int32_t          GetValue();
 		[[nodiscard]] bool                  HasKeyword(BGSKeyword* a_keyword);
 		[[nodiscard]] bool                  IsCrimeToActivate();
 		[[nodiscard]] bool                  IsInSpace();
