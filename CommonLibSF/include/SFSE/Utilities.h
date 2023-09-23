@@ -12,7 +12,7 @@ namespace SFSE
 		{
 			SFSE::AllocTrampoline(14);
 			auto& trampoline = SFSE::GetTrampoline();
-			T::func = trampoline.write_call<Size>(a_address, T::Thunk);
+			T::func = trampoline.write_call<Size>(a_address, T::thunk);
 		}
 
 		template <class T, std::size_t Size = 5>
@@ -25,19 +25,13 @@ namespace SFSE
 		constexpr void write_vfunc(const REL::Offset a_offset) noexcept
 		{
 			REL::Relocation<std::uintptr_t> vtbl{ a_offset };
-			T::func = vtbl.write_vfunc(T::idx, T::Thunk);
+			T::func = vtbl.write_vfunc(T::idx, T::thunk);
 		}
 
 		template <class To, class From>
-		constexpr void write_vfunc(const std::size_t a_vtable_idx) noexcept
+		constexpr void write_vfunc(const std::size_t a_vtableIdx = 0) noexcept
 		{
-			write_vfunc<From>(To::VTABLE[a_vtable_idx]);
-		}
-
-		template <class To, class From>
-		constexpr void write_vfunc() noexcept
-		{
-			write_vfunc<From>(To::VTABLE[0]);
+			write_vfunc<From>(To::VTABLE[a_vtableIdx]);
 		}
 	}  // namespace stl
 }  // namespace SFSE
