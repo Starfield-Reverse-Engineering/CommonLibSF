@@ -8,6 +8,7 @@
 #include "RE/I/IPostAnimationChannelUpdateFunctor.h"
 #include "RE/N/NiPoint3.h"
 #include "RE/T/TESHandleForm.h"
+#include "RE/T/TESWorldSpace.h"
 
 namespace RE
 {
@@ -284,6 +285,7 @@ namespace RE
 
 		// NiPointer<TESObjectREFR>
 		[[nodiscard]] TESObjectREFR* GetAttachedSpaceship();
+		[[nodiscard]] TESWorldSpace* GetParentWorldSpace();
 
 		[[nodiscard]] TESBoundObject*       GetBaseObject() { return data.objectReference; }
 		[[nodiscard]] const TESBoundObject* GetBaseObject() const { return data.objectReference; };
