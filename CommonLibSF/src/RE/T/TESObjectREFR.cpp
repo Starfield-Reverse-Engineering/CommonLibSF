@@ -9,17 +9,17 @@ namespace RE
 		return func(this);
 	}
 
-	TESWorldSpace* TESObjectREFR::GetParentWorldSpace()
-	{
-		using func_t = decltype(&TESObjectREFR::GetParentWorldSpace);
-		REL::Relocation<func_t> func{ REL::Offset(0x01A093BC) };
-		return func(this);
-	}
-
 	BGSLocation* TESObjectREFR::GetCurrentLocation()
 	{
 		using func_t = decltype(&TESObjectREFR::GetCurrentLocation);
 		REL::Relocation<func_t> func{ REL::Offset(0x01A0505C) };
+		return func(this);
+	}
+
+	TESWorldSpace* TESObjectREFR::GetParentWorldSpace()
+	{
+		using func_t = decltype(&TESObjectREFR::GetParentWorldSpace);
+		REL::Relocation<func_t> func{ REL::Offset(0x01A093BC) };
 		return func(this);
 	}
 
