@@ -23,6 +23,13 @@ namespace RE
 		return func(this);
 	}
 
+	TESObjectREFR* TESObjectREFR::GetSpaceShipPilot()
+	{
+		using func_t = decltype(&TESObjectREFR::GetSpaceShipPilot);
+		REL::Relocation<func_t> func{ REL::Offset(0x02B39D74) };
+		return func(this);
+	}
+
 	std::int32_t TESObjectREFR::GetValue()
 	{
 		using func_t = decltype(&TESObjectREFR::GetValue);
