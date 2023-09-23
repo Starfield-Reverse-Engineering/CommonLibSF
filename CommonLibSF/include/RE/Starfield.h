@@ -92,5 +92,5 @@
 #include "RE/T/TESResponse.h"
 #include "RE/T/TESSpellList.h"
 #include "RE/T/TESTopicInfo.h"
-#include "RE/U/UI.h"
 #include "RE/T/TESWorldSpace.h"
+#include "RE/U/UI.h"

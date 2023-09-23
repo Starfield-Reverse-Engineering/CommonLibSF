@@ -3,9 +3,9 @@
 #include "RE/T/TESForm.h"
 #include "RE/T/TESFullName.h"
 
-class TESWorldSpace : public RE::TESForm,    // 00
-    public RE::TESFullName // 20
+class TESWorldSpace : public RE::TESForm,     // 00
+					  public RE::TESFullName  // 20
 {
 public:
-    SF_FORMTYPE(WRLD);
+	SF_FORMTYPE(WRLD);
 };
