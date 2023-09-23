@@ -41,6 +41,7 @@
 #include "RE/B/BaseFormComponent.h"
 #include "RE/C/CombatGroup.h"
 #include "RE/C/ConsoleLog.h"
+#include "RE/E/ExtraDataTypes.h"
 #include "RE/F/FORM_ENUM_STRING.h"
 #include "RE/F/FormTypes.h"
 #include "RE/I/IAnimationGraphManagerHolder.h"
