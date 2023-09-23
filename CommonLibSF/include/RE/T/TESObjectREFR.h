@@ -285,8 +285,10 @@ namespace RE
 
 		// NiPointer<TESObjectREFR>
 		[[nodiscard]] TESObjectREFR* GetAttachedSpaceship();
+		[[nodiscard]] TESObjectREFR* GetSpaceshipPilot();
 		[[nodiscard]] TESWorldSpace* GetParentWorldSpace();
 		[[nodiscard]] BGSLocation*   GetCurrentLocation();
+
 
 		[[nodiscard]] TESBoundObject*       GetBaseObject() { return data.objectReference; }
 		[[nodiscard]] const TESBoundObject* GetBaseObject() const { return data.objectReference; };
