@@ -9,6 +9,13 @@ namespace RE
 		return func(this);
 	}
 
+	TESWorldSpace* TESObjectREFR::GetParentWorldSpace()
+	{
+		using func_t = decltype(&TESObjectREFR::GetParentWorldSpace);
+		REL::Relocation<func_t> func{ REL::Offset(0x01A093BC) };
+		return func(this);
+	}
+
 	std::int32_t TESObjectREFR::GetValue()
 	{
 		using func_t = decltype(&TESObjectREFR::GetValue);
