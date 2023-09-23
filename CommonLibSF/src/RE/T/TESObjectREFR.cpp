@@ -16,6 +16,13 @@ namespace RE
 		return func(this);
 	}
 
+	BGSLocation* TESObjectREFR::GetCurrentLocation()
+	{
+		using func_t = decltype(&GetCurrentLocation);
+		REL::Relocation<func_t> func{ REL::Offset(0x01A0505C) };
+		return func(this);
+	}
+
 	std::int32_t TESObjectREFR::GetValue()
 	{
 		using func_t = decltype(&TESObjectREFR::GetValue);
