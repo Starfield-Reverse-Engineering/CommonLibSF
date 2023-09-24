@@ -1,10 +1,11 @@
 #pragma once
 
 #include "RE/B/BaseFormComponent.h"
-#include "RE/T/TESRace.h"
 
 namespace RE
 {
+	class TESRace;
+
 	class TESRaceForm : public BaseFormComponent
 	{
 	public:

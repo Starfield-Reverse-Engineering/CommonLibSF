@@ -2,10 +2,11 @@
 
 #include "RE/T/TESForm.h"
 #include "RE/T/TESFullName.h"
-#include "RE/T/TESWorldSpace.h"
 
 namespace RE
 {
+	class TESWorldSpace;
+
 	class TESObjectCELL :
 		public TESForm,     // 00
 		public TESFullName  // 20
@@ -15,6 +16,6 @@ namespace RE
 		SF_FORMTYPE(CELL);
 
 		std::uint8_t   pad[0xD8];
-		TESWorldSpace* cellWorldspace;  //120
+		TESWorldSpace* cellWorldspace;  // 120
 	};
 }

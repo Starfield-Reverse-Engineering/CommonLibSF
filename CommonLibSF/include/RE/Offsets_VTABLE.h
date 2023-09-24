@@ -2,6 +2,9 @@
 
 #include "REL/Relocation.h"
 
+#define SF_VTABLE(VTBL) \
+	inline static constexpr auto VTABLE = VTABLE::VTBL
+
 namespace RE
 {
 	namespace VTABLE

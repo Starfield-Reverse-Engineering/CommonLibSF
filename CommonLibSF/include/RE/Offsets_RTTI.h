@@ -2,6 +2,13 @@
 
 #include "REL/Relocation.h"
 
+#define SF_RTTI(TYPE) \
+	inline static constexpr auto RTTI = RTTI::TYPE
+
+#define SF_RTTI_VTABLE(ENTRY) \
+	SF_RTTI(ENTRY);           \
+	SF_VTABLE(ENTRY)
+
 namespace RE
 {
 	namespace RTTI

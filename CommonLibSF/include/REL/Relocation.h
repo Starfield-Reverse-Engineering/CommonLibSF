@@ -49,14 +49,6 @@
 	REL_MAKE_MEMBER_FUNCTION_NON_POD_TYPE_HELPER(&, ##__VA_ARGS__) \
 	REL_MAKE_MEMBER_FUNCTION_NON_POD_TYPE_HELPER(&&, ##__VA_ARGS__)
 
-#define SF_RTTI(TYPE) \
-	inline static constexpr auto RTTI = RTTI::TYPE
-#define SF_VTABLE(VTBL) \
-	inline static constexpr auto VTABLE = VTABLE::VTBL
-#define SF_RTTI_VTABLE(ENTRY) \
-	SF_RTTI(ENTRY);           \
-	SF_VTABLE(ENTRY)
-
 namespace REL
 {
 	namespace detail
@@ -281,3 +273,11 @@ namespace REL
 		std::uintptr_t _address{ 0 };
 	};
 }  // namespace REL
+
+#undef REL_MAKE_MEMBER_FUNCTION_NON_POD_TYPE
+#undef REL_MAKE_MEMBER_FUNCTION_NON_POD_TYPE_HELPER
+#undef REL_MAKE_MEMBER_FUNCTION_NON_POD_TYPE_HELPER_IMPL
+
+#undef REL_MAKE_MEMBER_FUNCTION_POD_TYPE
+#undef REL_MAKE_MEMBER_FUNCTION_POD_TYPE_HELPER
+#undef REL_MAKE_MEMBER_FUNCTION_POD_TYPE_HELPER_IMPL

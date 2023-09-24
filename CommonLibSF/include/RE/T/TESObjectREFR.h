@@ -8,10 +8,10 @@
 #include "RE/I/IPostAnimationChannelUpdateFunctor.h"
 #include "RE/N/NiPoint3.h"
 #include "RE/T/TESHandleForm.h"
-#include "RE/T/TESWorldSpace.h"
 
 namespace RE
 {
+	class Actor;
 	class BGSLocation;
 	class BGSScene;
 	class BSAnimationGraphEvent;
@@ -20,7 +20,7 @@ namespace RE
 	class TESObjectCELL;
 	class TESRace;
 	class TESTopicInfo;
-	class Actor;
+	class TESWorldSpace;
 
 	namespace ActorValueEvents
 	{
