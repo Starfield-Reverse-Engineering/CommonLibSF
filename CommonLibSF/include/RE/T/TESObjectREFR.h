@@ -20,6 +20,7 @@ namespace RE
 	class TESObjectCELL;
 	class TESRace;
 	class TESTopicInfo;
+	class Actor;
 
 	namespace ActorValueEvents
 	{
@@ -285,14 +286,15 @@ namespace RE
 
 		// NiPointer<TESObjectREFR>
 		[[nodiscard]] TESObjectREFR* GetAttachedSpaceship();
-		[[nodiscard]] TESWorldSpace* GetParentWorldSpace();
-
 		[[nodiscard]] TESBoundObject*       GetBaseObject() { return data.objectReference; }
 		[[nodiscard]] const TESBoundObject* GetBaseObject() const { return data.objectReference; };
+		[[nodiscard]] BGSLocation*   GetCurrentLocation();
+		[[nodiscard]] TESWorldSpace* GetParentWorldSpace();
 		[[nodiscard]] constexpr NiPoint3A   GetPosition() const noexcept { return data.location; }
 		[[nodiscard]] constexpr float       GetPositionX() const noexcept { return data.location.x; }
 		[[nodiscard]] constexpr float       GetPositionY() const noexcept { return data.location.y; }
 		[[nodiscard]] constexpr float       GetPositionZ() const noexcept { return data.location.z; }
+		[[nodiscard]] Actor* 				GetSpaceshipPilot();
 		[[nodiscard]] std::int32_t          GetValue();
 		[[nodiscard]] bool                  HasKeyword(BGSKeyword* a_keyword);
 		[[nodiscard]] bool                  IsCrimeToActivate();
