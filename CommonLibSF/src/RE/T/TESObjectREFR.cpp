@@ -16,6 +16,20 @@ namespace RE
 		return func(this);
 	}
 
+    TESObjectREFR* GetDockedParentShip()
+    {
+        using func_t = decltype(&TESObjectREFR::GetDockedParentShip);
+        REL::Relocation<func_t> func{ REL::Offset(0x02B53DC0) };
+        return func(this);
+    }
+
+    TESObjectREFR* GetLinkedRef(BGSKeyword* a_keyword)
+    {
+        using func_t = decltype(&TESObjectREFR::GetLinkedRef);
+        REL::Relocation<func_t> func{ REL::Offset(0x1A379E4) };
+        return func(this, a_keyword);
+    }
+
 	TESWorldSpace* TESObjectREFR::GetParentWorldSpace()
 	{
 		using func_t = decltype(&TESObjectREFR::GetParentWorldSpace);
