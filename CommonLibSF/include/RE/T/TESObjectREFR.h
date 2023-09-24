@@ -289,6 +289,8 @@ namespace RE
 		[[nodiscard]] TESBoundObject*       GetBaseObject() { return data.objectReference; }
 		[[nodiscard]] const TESBoundObject* GetBaseObject() const { return data.objectReference; };
 		[[nodiscard]] BGSLocation*          GetCurrentLocation();
+		[[nodiscard]] TESObjectREFR* 		GetDockedParentShip()
+		[[nodiscard]] TESObjectREFR* 		GetLinkedRef(BGSKeyword* a_keyword)
 		[[nodiscard]] TESWorldSpace*        GetParentWorldSpace();
 		[[nodiscard]] constexpr NiPoint3A   GetPosition() const noexcept { return data.location; }
 		[[nodiscard]] constexpr float       GetPositionX() const noexcept { return data.location.x; }
