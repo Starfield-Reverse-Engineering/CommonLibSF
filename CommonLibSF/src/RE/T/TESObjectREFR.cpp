@@ -16,12 +16,12 @@ namespace RE
 		return func(this);
 	}
 
-    TESObjectREFR* TESObjectREFR::GetLinkedRef(BGSKeyword* a_keyword)
-    {
-        using func_t = decltype(&TESObjectREFR::GetLinkedRef);
-        REL::Relocation<func_t> func{ REL::Offset(0x1A379E4) };
-        return func(this, a_keyword);
-    }
+	TESObjectREFR* TESObjectREFR::GetLinkedRef(BGSKeyword* a_keyword)
+	{
+		using func_t = decltype(&TESObjectREFR::GetLinkedRef);
+		REL::Relocation<func_t> func{ REL::Offset(0x1A379E4) };
+		return func(this, a_keyword);
+	}
 
 	TESWorldSpace* TESObjectREFR::GetParentWorldSpace()
 	{
