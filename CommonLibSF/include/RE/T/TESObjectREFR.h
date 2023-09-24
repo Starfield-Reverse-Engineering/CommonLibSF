@@ -279,13 +279,10 @@ namespace RE
 		virtual void         Unk_12E();                                                                                                                         // 12E
 		virtual void         Unk_12F();                                                                                                                         // 12F
 
-		[[nodiscard]] constexpr NiPoint3A GetAngle() const { return data.angle; }
-		[[nodiscard]] constexpr float     GetAngleX() const { return data.angle.x; }
-		[[nodiscard]] constexpr float     GetAngleY() const { return data.angle.y; }
-		[[nodiscard]] constexpr float     GetAngleZ() const { return data.angle.z; }
-
-		// NiPointer<TESObjectREFR>
-		[[nodiscard]] TESObjectREFR*        GetAttachedSpaceship();
+		[[nodiscard]] constexpr NiPoint3A   GetAngle() const { return data.angle; }
+		[[nodiscard]] constexpr float       GetAngleX() const { return data.angle.x; }
+		[[nodiscard]] constexpr float       GetAngleY() const { return data.angle.y; }
+		[[nodiscard]] constexpr float       GetAngleZ() const { return data.angle.z; }
 		[[nodiscard]] TESBoundObject*       GetBaseObject() { return data.objectReference; }
 		[[nodiscard]] const TESBoundObject* GetBaseObject() const { return data.objectReference; };
 		[[nodiscard]] BGSLocation*          GetCurrentLocation();
@@ -295,12 +292,13 @@ namespace RE
 		[[nodiscard]] constexpr float       GetPositionX() const noexcept { return data.location.x; }
 		[[nodiscard]] constexpr float       GetPositionY() const noexcept { return data.location.y; }
 		[[nodiscard]] constexpr float       GetPositionZ() const noexcept { return data.location.z; }
+		[[nodiscard]] TESObjectREFR*        GetSpaceship(bool a_arg1 = true);
 		[[nodiscard]] TESObjectREFR*        GetSpaceshipParentDock();
 		[[nodiscard]] Actor*                GetSpaceshipPilot();
 		[[nodiscard]] std::int32_t          GetValue();
 		[[nodiscard]] bool                  HasKeyword(BGSKeyword* a_keyword);
 		[[nodiscard]] bool                  IsCrimeToActivate();
-		[[nodiscard]] bool                  IsInSpace();
+		[[nodiscard]] bool                  IsInSpace(bool a_arg1);
 
 		// members
 		std::uint32_t  unk80;          // 80

@@ -2,13 +2,6 @@
 
 namespace RE
 {
-	TESObjectREFR* TESObjectREFR::GetAttachedSpaceship()
-	{
-		using func_t = decltype(&TESObjectREFR::GetAttachedSpaceship);
-		REL::Relocation<func_t> func{ REL::Offset(0x02B3A714) };
-		return func(this);
-	}
-
 	BGSLocation* TESObjectREFR::GetCurrentLocation()
 	{
 		using func_t = decltype(&TESObjectREFR::GetCurrentLocation);
@@ -28,6 +21,13 @@ namespace RE
 		using func_t = decltype(&TESObjectREFR::GetParentWorldSpace);
 		REL::Relocation<func_t> func{ REL::Offset(0x01A093BC) };
 		return func(this);
+	}
+
+	TESObjectREFR* TESObjectREFR::GetSpaceship(bool a_arg1)
+	{
+		using func_t = decltype(&TESObjectREFR::GetSpaceship);
+		REL::Relocation<func_t> func{ REL::Offset(0x02B3A714) };
+		return func(this, a_arg1);
 	}
 
 	TESObjectREFR* TESObjectREFR::GetSpaceshipParentDock()
@@ -65,10 +65,10 @@ namespace RE
 		return func(this);
 	}
 
-	bool TESObjectREFR::IsInSpace()
+	bool TESObjectREFR::IsInSpace(bool a_arg1)
 	{
 		using func_t = decltype(&TESObjectREFR::IsInSpace);
 		REL::Relocation<func_t> func{ REL::Offset(0x01A0E1C8) };
-		return func(this);
+		return func(this, a_arg1);
 	}
 }
