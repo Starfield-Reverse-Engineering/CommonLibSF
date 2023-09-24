@@ -1,11 +1,12 @@
 #pragma once
 
-#include "RE/B/BGSKeyword.h"
 #include "RE/B/BSIntrusiveRefCounted.h"
-#include "RE/T/TBO_InstanceData.h"
 
 namespace RE
 {
+	class BGSKeyword;
+	class TBO_InstanceData;
+
 	class IKeywordFormBase
 	{
 	public:

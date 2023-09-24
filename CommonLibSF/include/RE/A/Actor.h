@@ -1,15 +1,15 @@
 #pragma once
 
-#include "RE/C/CombatGroup.h"
 #include "RE/T/TESObjectREFR.h"
 
 namespace RE
 {
+	class CombatGroup;
 	class TESFaction;
 
 	class Actor :
 		public TESObjectREFR  // 110
-
+							  // ...
 	{
 	public:
 		SF_RTTI_VTABLE(Actor);

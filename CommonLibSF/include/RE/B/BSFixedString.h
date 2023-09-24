@@ -2,10 +2,6 @@
 
 #include "RE/B/BSStringPool.h"
 
-#include <cstddef>
-#include <cstdint>
-#include <cstring>
-
 namespace RE
 {
 	namespace detail
