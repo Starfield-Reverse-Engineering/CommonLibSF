@@ -16,13 +16,6 @@ namespace RE
 		return func(this);
 	}
 
-    TESObjectREFR* TESObjectREFR::GetDockedParentShip()
-    {
-        using func_t = decltype(&TESObjectREFR::GetDockedParentShip);
-        REL::Relocation<func_t> func{ REL::Offset(0x02B53DC0) };
-        return func(this);
-    }
-
     TESObjectREFR* TESObjectREFR::GetLinkedRef(BGSKeyword* a_keyword)
     {
         using func_t = decltype(&TESObjectREFR::GetLinkedRef);
@@ -34,6 +27,13 @@ namespace RE
 	{
 		using func_t = decltype(&TESObjectREFR::GetParentWorldSpace);
 		REL::Relocation<func_t> func{ REL::Offset(0x01A093BC) };
+		return func(this);
+	}
+
+	TESObjectREFR* TESObjectREFR::GetSpaceshipParentDock()
+	{
+		using func_t = decltype(&TESObjectREFR::GetSpaceshipParentDock);
+		REL::Relocation<func_t> func{ REL::Offset(0x02B53DC0) };
 		return func(this);
 	}
 
