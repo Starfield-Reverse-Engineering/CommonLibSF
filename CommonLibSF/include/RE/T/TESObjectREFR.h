@@ -289,13 +289,13 @@ namespace RE
 		[[nodiscard]] TESBoundObject*       GetBaseObject() { return data.objectReference; }
 		[[nodiscard]] const TESBoundObject* GetBaseObject() const { return data.objectReference; };
 		[[nodiscard]] BGSLocation*          GetCurrentLocation();
-		[[nodiscard]] TESObjectREFR* 		GetDockedParentShip();
 		[[nodiscard]] TESObjectREFR* 		GetLinkedRef(BGSKeyword* a_keyword);
 		[[nodiscard]] TESWorldSpace*        GetParentWorldSpace();
 		[[nodiscard]] constexpr NiPoint3A   GetPosition() const noexcept { return data.location; }
 		[[nodiscard]] constexpr float       GetPositionX() const noexcept { return data.location.x; }
 		[[nodiscard]] constexpr float       GetPositionY() const noexcept { return data.location.y; }
 		[[nodiscard]] constexpr float       GetPositionZ() const noexcept { return data.location.z; }
+		[[nodiscard]] TESObjectREFR*        GetSpaceshipParentDock();
 		[[nodiscard]] Actor*                GetSpaceshipPilot();
 		[[nodiscard]] std::int32_t          GetValue();
 		[[nodiscard]] bool                  HasKeyword(BGSKeyword* a_keyword);
