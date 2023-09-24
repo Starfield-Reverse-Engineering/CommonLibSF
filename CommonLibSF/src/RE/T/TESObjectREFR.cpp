@@ -23,7 +23,7 @@ namespace RE
 		return func(this);
 	}
 
-	TESObjectREFR* TESObjectREFR::GetSpaceshipPilot()
+	Actor* TESObjectREFR::GetSpaceshipPilot()
 	{
 		using func_t = decltype(&TESObjectREFR::GetSpaceshipPilot);
 		REL::Relocation<func_t> func{ REL::Offset(0x02B39D74) };
