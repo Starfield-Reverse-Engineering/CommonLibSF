@@ -6,8 +6,8 @@
 namespace RE
 {
 	class TESWorldSpace :
-		public RE::TESForm,     // 00
-		public RE::TESFullName  // 20
+		public TESForm,     // 00
+		public TESFullName  // 20
 	{
 	public:
 		SF_FORMTYPE(WRLD);
