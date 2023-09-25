@@ -120,6 +120,16 @@ The main requirement of this license is: if you link your mod against CommonLibS
     </a>
   </td>
   <td align="center">
+    <a href="https://github.com/TommInfinite" title="TommInfinite">
+      <img src="https://avatars.githubusercontent.com/u/81481291?v=4" width="50;" alt="TommInfinite"/>
+    </a>
+  </td>
+  <td align="center">
+    <a href="https://github.com/shadeMe" title="Madeesh Kannan">
+      <img src="https://avatars.githubusercontent.com/u/214450?v=4" width="50;" alt="Madeesh Kannan"/>
+    </a>
+  </td>
+  <td align="center">
     <a href="https://github.com/alandtse" title="Alan Tse">
       <img src="https://avatars.githubusercontent.com/u/7086117?v=4" width="50;" alt="Alan Tse"/>
     </a>
