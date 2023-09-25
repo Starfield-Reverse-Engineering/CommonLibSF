@@ -71,4 +71,12 @@ namespace RE
 		REL::Relocation<func_t> func{ REL::Offset(0x01A0E1C8) };
 		return func(this, a_arg1);
 	}
+
+	bool TESObjectREFR::IsSpaceshipDocked()
+	{
+		using func_t = decltype(&TESObjectREFR::IsSpaceshipDocked);
+		REL::Relocation<func_t> func{ REL::Offset(0x2B557C8) };
+		return func(this);
+	}
+
 }

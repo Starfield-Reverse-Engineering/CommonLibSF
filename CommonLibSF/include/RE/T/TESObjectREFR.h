@@ -299,6 +299,7 @@ namespace RE
 		[[nodiscard]] bool                  HasKeyword(BGSKeyword* a_keyword);
 		[[nodiscard]] bool                  IsCrimeToActivate();
 		[[nodiscard]] bool                  IsInSpace(bool a_arg1);
+		[[nodiscard]] bool                  IsSpaceshipDocked();
 
 		// members
 		std::uint32_t  unk80;          // 80
