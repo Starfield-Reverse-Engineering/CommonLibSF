@@ -47,23 +47,21 @@ namespace RE
 	class BSTEventSource : public BSTEventDetail::SourceBase
 	{
 	public:
-		using event_type = Event;
-
 		~BSTEventSource() override = default;  // 00
 
-		void Notify(const event_type& a_event)
+		void Notify(const Event& a_event)
 		{
 			using func_t = decltype(&BSTEventSource::Notify);
 			REL::Relocation<func_t> func{ REL::ID(178573) };
 			return func(this, a_event);
 		}
-		void RegisterSink(BSTEventSink<event_type>* a_sink)
+		void RegisterSink(BSTEventSink<Event>* a_sink)
 		{
 			using func_t = decltype(&BSTEventSource::RegisterSink);
 			REL::Relocation<func_t> func{ REL::ID(34452) };
 			return func(this, a_sink);
 		}
-		void UnregisterSink(BSTEventSink<event_type>* a_sink)
+		void UnregisterSink(BSTEventSink<Event>* a_sink)
 		{
 			using func_t = decltype(&BSTEventSource::UnregisterSink);
 			REL::Relocation<func_t> func{ REL::ID(34451) };
