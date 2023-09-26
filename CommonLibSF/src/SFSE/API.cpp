@@ -18,8 +18,8 @@ namespace SFSE
 			std::uint32_t releaseIndex{ 0 };
 
 			TrampolineInterface* trampolineInterface{ nullptr };
-			MessagingInterface* messagingInterface{ nullptr };
-			MenuInterface* menuInterface{ nullptr };
+			MessagingInterface*  messagingInterface{ nullptr };
+			MenuInterface*       menuInterface{ nullptr };
 
 			std::mutex                         apiLock;
 			std::vector<std::function<void()>> apiInitRegs;
