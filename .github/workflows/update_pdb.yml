@@ -6,6 +6,10 @@ on:
     types: completed
   workflow_dispatch:
 
+concurrency:
+  group: pdb
+  cancel-in-progress: true
+
 env:
   VCPKG_COMMIT_ID: 5a38b5ec0eee3d1a1a6faab5e944617fee2697cf
   GITHUB_WORKSPACE: ${{ github.workspace }}
