@@ -80,7 +80,8 @@ target_link_libraries(
 
 ## End-User Dependencies
 
-[Starfield Script Extender](https://www.nexusmods.com/starfield/mods/106)
+- [Starfield Script Extender](https://www.nexusmods.com/starfield/mods/106)
+- [Address Library for SFSE Plugins](https://www.nexusmods.com/starfield/mods/3256)
 
 ## Notes
 
