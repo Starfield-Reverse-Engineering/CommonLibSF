@@ -14,7 +14,7 @@ namespace SFSE
 				return singleton;
 			}
 
-			PluginHandle  pluginHandle{ static_cast<PluginHandle>(-1) };
+			PluginHandle pluginHandle{ static_cast<PluginHandle>(-1) };
 
 			TrampolineInterface* trampolineInterface{ nullptr };
 			MessagingInterface*  messagingInterface{ nullptr };

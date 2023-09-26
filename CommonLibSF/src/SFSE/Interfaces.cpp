@@ -32,7 +32,7 @@ namespace SFSE
 
 	const PluginInfo* LoadInterface::GetPluginInfo(const char* a_name) const
 	{
-		return static_cast<const PluginInfo*>(GetProxy()->GetPluginInfo(a_name)); 
+		return static_cast<const PluginInfo*>(GetProxy()->GetPluginInfo(a_name));
 	}
 
 	void* LoadInterface::QueryInterface(std::uint32_t a_id) const
