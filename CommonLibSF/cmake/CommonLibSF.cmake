@@ -75,9 +75,9 @@ function(target_commonlibsf_properties TARGET)
 
     # Setup compatibility configuration.
     if(NOT ADD_COMMONLIBSF_PLUGIN_STRUCT_DEPENDENT)
-        set(commonlibsf_plugin_struct_compatibility "true")
+        set(commonlibsf_is_layout_dependent "true")
     else()
-        set(commonlibsf_plugin_struct_compatibility "false")
+        set(commonlibsf_is_layout_dependent "false")
     endif()
 
     if(NOT ADD_COMMONLIBSF_PLUGIN_USE_SIGNATURE_SCANNING)
@@ -86,9 +86,9 @@ function(target_commonlibsf_properties TARGET)
 
     if(ADD_COMMONLIBSF_PLUGIN_USE_ADDRESS_LIBRARY OR ADD_COMMONLIBSF_PLUGIN_USE_SIGNATURE_SCANNING)
         if(NOT ADD_COMMONLIBSF_PLUGIN_USE_ADDRESS_LIBRARY)
-            set(commonlibsf_uses_signature_scanning "false")
+            set(commonlibsf_uses_address_library "false")
         else()
-            set(commonlibsf_uses_signature_scanning "true")
+            set(commonlibsf_uses_address_library "true")
         endif()
     endif()
 
@@ -129,8 +129,8 @@ function(target_commonlibsf_properties TARGET)
             "    data.PluginVersion(Plugin::Version.pack());\n"
             "    data.PluginName(Plugin::Name);\n"
             "    data.AuthorName(Plugin::Author);\n"
-            "    data.UsesAddressLibrary(${commonlibsf_uses_signature_scanning});\n"
-            "    data.IsLayoutDependent(${commonlibsf_plugin_struct_compatibility});\n"
+            "    data.UsesAddressLibrary(${commonlibsf_uses_address_library});\n"
+            "    data.IsLayoutDependent(${commonlibsf_is_layout_dependent});\n"
             "    data.CompatibleVersions(${commonlibsf_plugin_compatibility});\n"
             "\n"
             "    return data;\n"
