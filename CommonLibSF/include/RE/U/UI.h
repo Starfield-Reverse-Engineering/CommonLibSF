@@ -5,14 +5,14 @@ namespace RE
 	public:
 		inline static UI* GetSingleton()
 		{
-			static REL::Relocation<UI**> singleton{ REL::Offset(0x056EE0D0) };
+			static REL::Relocation<UI**> singleton{ REL::ID(878339) };
 			return *singleton;
 		}
 
 		bool IsMenuOpen(const BSFixedString& a_name)
 		{
 			using func_t = decltype(&UI::IsMenuOpen);
-			REL::Relocation<func_t> func{ REL::Offset(0x02E7095C) };
+			REL::Relocation<func_t> func{ REL:ID(187048) };
 			return func(this, a_name);
 		}
 	};

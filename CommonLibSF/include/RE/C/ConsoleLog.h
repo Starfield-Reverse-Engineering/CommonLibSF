@@ -10,7 +10,7 @@ namespace RE
 		// BSTSDM
 		[[nodiscard]] static ConsoleLog* GetSingleton()
 		{
-			static REL::Relocation<ConsoleLog**> singleton{ REL::Offset(0x058F7A90) };
+			static REL::Relocation<ConsoleLog**> singleton{ REL::ID(879277) };
 			return *singleton;
 		}
 
@@ -25,7 +25,7 @@ namespace RE
 		void VPrint(const char* a_fmt, std::va_list a_args)
 		{
 			using func_t = decltype(&ConsoleLog::VPrint);
-			REL::Relocation<func_t> func{ REL::Offset(0x02883978) };
+			REL::Relocation<func_t> func{ REL::ID(166358) };
 			func(this, a_fmt, a_args);
 		}
 	};
