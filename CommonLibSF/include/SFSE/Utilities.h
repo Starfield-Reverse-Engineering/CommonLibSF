@@ -22,9 +22,9 @@ namespace SFSE
 		}
 
 		template <class T>
-		constexpr void write_vfunc(const REL::Offset a_offset) noexcept
+		constexpr void write_vfunc(const REL::ID a_id) noexcept
 		{
-			REL::Relocation<std::uintptr_t> vtbl{ a_offset };
+			REL::Relocation<std::uintptr_t> vtbl{ a_id };
 			T::func = vtbl.write_vfunc(T::idx, T::thunk);
 		}
 
