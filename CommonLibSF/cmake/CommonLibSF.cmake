@@ -75,9 +75,9 @@ function(target_commonlibsf_properties TARGET)
 
     # Setup compatibility configuration.
     if(NOT ADD_COMMONLIBSF_PLUGIN_STRUCT_DEPENDENT)
-        set(commonlibsf_plugin_struct_compatibility "false")
-    else()
         set(commonlibsf_plugin_struct_compatibility "true")
+    else()
+        set(commonlibsf_plugin_struct_compatibility "false")
     endif()
 
     if(NOT ADD_COMMONLIBSF_PLUGIN_USE_SIGNATURE_SCANNING)
@@ -129,7 +129,7 @@ function(target_commonlibsf_properties TARGET)
             "    data.PluginVersion(Plugin::Version.pack());\n"
             "    data.PluginName(Plugin::Name);\n"
             "    data.AuthorName(Plugin::Author);\n"
-            "    data.UsesSigScanning(${commonlibsf_uses_signature_scanning});\n"
+            "    data.UsesAddressLibrary(${commonlibsf_uses_signature_scanning});\n"
             "    data.IsLayoutDependent(${commonlibsf_plugin_struct_compatibility});\n"
             "    data.CompatibleVersions(${commonlibsf_plugin_compatibility});\n"
             "\n"
