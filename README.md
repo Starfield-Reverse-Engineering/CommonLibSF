@@ -85,7 +85,9 @@ target_link_libraries(
 
 ## Notes
 
-CommonLibSF is incompatible with SFSE and is intended to replace it as a static dependency&mdash;the runtime component is still required.
+CommonLibSF is intended to replace SFSE as a static dependency. However, the runtime component of SFSE is still required.
+
+You may download the PDB for the latest build of CommonLibSF via the [Update PDB](https://github.com/Starfield-Reverse-Engineering/CommonLibSF/actions/workflows/update_pdb.yml) workflow. This is useful for importing the latest type information into IDA using the "import PDB" feature.
 
 ## License
 
