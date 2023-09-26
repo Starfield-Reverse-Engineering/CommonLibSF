@@ -47,7 +47,7 @@ namespace RE
 	std::int32_t TESObjectREFR::GetValue()
 	{
 		using func_t = decltype(&TESObjectREFR::GetValue);
-		REL::Relocation<func_t> func{ REL::ID(107605)};
+		REL::Relocation<func_t> func{ REL::ID(107605) };
 		return func(this);
 	}
 
