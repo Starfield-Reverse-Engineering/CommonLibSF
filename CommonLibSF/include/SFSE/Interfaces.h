@@ -3,6 +3,11 @@
 #include "SFSE/Impl/Stubs.h"
 #include "SFSE/Version.h"
 
+namespace RE
+{
+	class IMenu;
+}
+
 namespace SFSE
 {
 	struct PluginInfo;
@@ -20,11 +25,12 @@ namespace SFSE
 	class LoadInterface : public QueryInterface
 	{
 	public:
-		enum : std::uint32_t
+		enum InterfaceType : std::uint32_t
 		{
 			kInvalid = 0,
 			kMessaging,
 			kTrampoline,
+			kMenu,
 
 			kTotal
 		};
@@ -47,12 +53,12 @@ namespace SFSE
 
 		using EventCallback = std::add_pointer_t<void(Message* a_msg)>;
 
-		enum
+		enum Version : std::uint32_t
 		{
-			kVersion = 2
+			kVersion = 1
 		};
 
-		enum : std::uint32_t
+		enum MessageType : std::uint32_t
 		{
 			kPostLoad,
 			kPostPostLoad,
@@ -71,7 +77,7 @@ namespace SFSE
 	class TrampolineInterface
 	{
 	public:
-		enum
+		enum Version : std::uint32_t
 		{
 			kVersion = 1
 		};
@@ -85,9 +91,27 @@ namespace SFSE
 		[[nodiscard]] const detail::SFSETrampolineInterface* GetProxy() const;
 	};
 
+	class MenuInterface
+	{
+	public:
+		using RegCallback = void(RE::IMenu* a_menu);
+
+		enum Version : std::uint32_t
+		{
+			kVersion = 1
+		};
+
+		[[nodiscard]] std::uint32_t Version() const;
+
+		void Register(RegCallback* a_callback) const;
+
+	private:
+		[[nodiscard]] const detail::SFSEMenuInterface* GetProxy() const;
+	};
+
 	struct PluginInfo
 	{
-		enum
+		enum Version : std::uint32_t
 		{
 			kVersion = 1
 		};
@@ -100,9 +124,9 @@ namespace SFSE
 	struct PluginVersionData
 	{
 	public:
-		enum
+		enum Version : std::uint32_t
 		{
-			kVersion = 1,
+			kVersion = 1
 		};
 
 		constexpr void PluginVersion(std::uint32_t a_version) noexcept { pluginVersion = a_version; }

@@ -68,6 +68,22 @@ namespace SFSE
 		return reinterpret_cast<const detail::SFSETrampolineInterface*>(this);
 	}
 
+	std::uint32_t MenuInterface::Version() const
+	{
+		return GetProxy()->interfaceVersion;
+	}
+
+	void MenuInterface::Register(RegCallback* a_callback) const
+	{
+		return GetProxy()->Register(reinterpret_cast<void*>(a_callback));
+	}
+
+	const detail::SFSEMenuInterface* MenuInterface::GetProxy() const
+	{
+		assert(this);
+		return reinterpret_cast<const detail::SFSEMenuInterface*>(this);
+	}
+
 	const PluginVersionData* PluginVersionData::GetSingleton() noexcept
 	{
 		return reinterpret_cast<const PluginVersionData*>(WinAPI::GetProcAddress(WinAPI::GetCurrentModule(), "SFSEPlugin_Version"));
