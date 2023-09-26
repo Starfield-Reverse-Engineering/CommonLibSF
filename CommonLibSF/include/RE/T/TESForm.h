@@ -93,7 +93,7 @@ namespace RE
 		virtual TESObjectREFR*                     AsReference1();                                                   // 45
 		[[nodiscard]] virtual const TESObjectREFR* AsReference2() const;                                             // 46
 		virtual void                               Unk_47();                                                         // 47
-		virtual void                               Unk_48();                                                         // 48
+		virtual const char*                        GetDisplayFullBaseName();                                         // 48
 		virtual void                               Unk_49();                                                         // 49
 		virtual void                               Unk_4A();                                                         // 4A
 		virtual void                               Unk_4B();                                                         // 4B
