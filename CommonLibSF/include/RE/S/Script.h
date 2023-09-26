@@ -158,13 +158,13 @@ namespace RE
 
 		inline static SCRIPT_FUNCTION GetFirstScriptCommand()
 		{
-			static REL::Relocation<SCRIPT_FUNCTION> chunk{ REL::Offset(0x05511F30) };
+			static REL::Relocation<SCRIPT_FUNCTION> chunk{ REL::ID(841467) };
 			return chunk.get();
 		}
 
 		inline static SCRIPT_FUNCTION GetFirstConsoleCommand()
 		{
-			static REL::Relocation<SCRIPT_FUNCTION> chunk{ REL::Offset(0x055056C0) };
+			static REL::Relocation<SCRIPT_FUNCTION> chunk{ REL::ID(841465) };
 			return chunk.get();
 		}
 
