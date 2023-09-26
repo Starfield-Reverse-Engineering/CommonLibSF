@@ -1,0 +1,46 @@
+name: Update PDB
+
+on:
+  workflow_run:
+    workflows: Maintenance
+    types: completed
+  workflow_dispatch:
+
+env:
+  VCPKG_COMMIT_ID: 5a38b5ec0eee3d1a1a6faab5e944617fee2697cf
+  GITHUB_WORKSPACE: ${{ github.workspace }}
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Get CMake
+        uses: lukka/get-cmake@latest
+
+      - name: Setup vcpkg
+        uses: lukka/run-vcpkg@v11.1
+        with:
+          vcpkgGitCommitId: ${{ env.VCPKG_COMMIT_ID }}
+
+      - name: Run CMake
+        uses: lukka/run-cmake@v10.6
+        with:
+          cmakeListsTxtPath: "${{ github.workspace }}/CommonLibSF/CMakeLists.txt"
+          configurePreset: build-debug-msvc-ninja
+          configurePresetCmdString: "[`-B`, `$[env.GITHUB_WORKSPACE]/build`, `-S`, `$[env.GITHUB_WORKSPACE]/CommonLibSF`, `--preset`, `$[env.CONFIGURE_PRESET_NAME]`]"
+          buildPreset: debug-msvc-ninja
+          buildPresetCmdString: "[`--build`, `$[env.GITHUB_WORKSPACE]/build`, `--preset`, `$[env.BUILD_PRESET_NAME]`]"
+
+      - name: Find PDB
+        run: |
+          $pdb = Get-ChildItem -Path "${{ github.workspace }}" -Filter "CommonLibSF.pdb" -Recurse -ErrorAction SilentlyContinue -Force
+          "PDB_PATH=$pdb" >> $env:GITHUB_ENV
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: CommonLibSF.pdb
+          path: ${{ env.PDB_PATH }}
