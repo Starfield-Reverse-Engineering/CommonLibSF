@@ -1,11 +1,13 @@
 #pragma once
 
 #include "RE/T/TESObjectREFR.h"
+#include "RE/A/AIProcess.h"
 
 namespace RE
 {
 	class CombatGroup;
 	class TESFaction;
+	class AIProcess;
 
 	class Actor :
 		public TESObjectREFR  // 110
@@ -145,6 +147,198 @@ namespace RE
 		virtual void         Unk_1A0();                                                                              // 1A0
 		virtual void         Unk_1A1();                                                                              // 1A1
 
-		// More...
+		std::uint64_t unk110;  // 110
+		std::uint64_t unk118;  // 118
+		std::uint64_t unk120;  // 120
+		std::uint64_t unk128;  // 128
+		std::uint64_t unk130;  // 130
+		std::uint64_t unk138;  // 138
+		std::uint64_t unk140;  // 140
+		std::uint64_t unk148;  // 148
+		std::uint64_t unk150;  // 150
+		std::uint64_t unk158;  // 158
+		std::uint64_t unk160;  // 160
+		std::uint64_t unk168;  // 168
+		std::uint64_t unk170;  // 170
+		std::uint64_t unk178;  // 178
+		std::uint64_t unk180;  // 180
+		std::uint64_t unk188;  // 188
+		std::uint64_t unk190;  // 190
+		std::uint64_t unk198;  // 198
+		std::uint64_t unk1A0;  // 1A0
+		std::uint64_t unk1A8;  // 1A8
+		std::uint64_t unk1B0;  // 1B0
+		std::uint64_t unk1B8;  // 1B8
+		std::uint64_t unk1C0;  // 1C0
+		std::uint64_t unk1C8;  // 1C8
+		std::uint64_t unk1D0;  // 1D0
+		std::uint64_t unk1D8;  // 1D8
+		std::uint64_t unk1E0;  // 1E0
+		std::uint64_t unk1E8;  // 1E8
+		std::uint64_t unk1F0;  // 1F0
+		std::uint64_t unk1F8;  // 1F8
+		std::uint64_t unk200;  // 200
+		std::uint64_t unk208;  // 208
+		std::uint64_t unk210;  // 210
+		std::uint64_t unk218;  // 218
+		std::uint64_t unk220;  // 220
+		std::uint64_t unk228;  // 228
+		std::uint64_t unk230;  // 230
+		std::uint64_t unk238;  // 238
+		std::uint64_t unk240;  // 240
+		std::uint64_t unk248;  // 248
+		std::uint64_t unk250;  // 250
+		std::uint64_t unk258;  // 258
+		AIProcess* currentProcess;  // 260
+		std::uint64_t unk268;  // 268
+		std::uint64_t unk270;  // 270
+		std::uint64_t unk278;  // 278
+		std::uint64_t unk280;  // 280
+		std::uint64_t unk288;  // 288
+		std::uint64_t unk290;  // 290
+		std::uint64_t unk298;  // 298
+		std::uint64_t unk2A0;  // 2A0
+		std::uint64_t unk2A8;  // 2A8
+		std::uint64_t unk2B0;  // 2B0
+		std::uint64_t unk2B8;  // 2B8
+		std::uint64_t unk2C0;  // 2C0
+		std::uint64_t unk2C8;  // 2C8
+		std::uint64_t unk2D0;  // 2D0
+		std::uint64_t unk2D8;  // 2D8
+		std::uint64_t unk2E0;  // 2E0
+		std::uint64_t unk2E8;  // 2E8
+		std::uint64_t unk2F0;  // 2F0
+		std::uint64_t unk2F8;  // 2F8
+		std::uint64_t unk300;  // 300
+		std::uint64_t unk308;  // 308
+		std::uint64_t unk310;  // 310
+		std::uint64_t unk318;  // 318
+		std::uint64_t unk320;  // 320
+		std::uint64_t unk328;  // 328
+		std::uint64_t unk330;  // 330
+		std::uint64_t unk338;  // 338
+		std::uint64_t unk340;  // 340
+		std::uint64_t unk348;  // 348
+		std::uint64_t unk350;  // 350
+		std::uint64_t unk358;  // 358
+		std::uint64_t unk360;  // 360
+		std::uint64_t unk368;  // 368
+		std::uint64_t unk370;  // 370
+		std::uint64_t unk378;  // 378
+		std::uint64_t unk380;  // 380
+		std::uint64_t unk388;  // 388
+		std::uint64_t unk390;  // 390
+		std::uint64_t unk398;  // 398
+		std::uint64_t unk3A0;  // 3A0
+		std::uint64_t unk3A8;  // 3A8
+		std::uint64_t unk3B0;  // 3B0
+		std::uint64_t unk3B8;  // 3B8
+		std::uint64_t unk3C0;  // 3C0
+		std::uint64_t unk3C8;  // 3C8
+		std::uint64_t unk3D0;  // 3D0
+		std::uint64_t unk3D8;  // 3D8
+		std::uint64_t unk3E0;  // 3E0
+		std::uint64_t unk3E8;  // 3E8
+		std::uint64_t unk3F0;  // 3F0
+		std::uint64_t unk3F8;  // 3F8
+		std::uint64_t unk400;  // 400
+		std::uint64_t unk408;  // 408
+		std::uint64_t unk410;  // 410
+		std::uint64_t unk418;  // 418
+		std::uint64_t unk420;  // 420
+		std::uint64_t unk428;  // 428
+		std::uint64_t unk430;  // 430
+		std::uint64_t unk438;  // 438
+		std::uint64_t unk440;  // 440
+		std::uint64_t unk448;  // 448
+		std::uint64_t unk450;  // 450
+		std::uint64_t unk458;  // 458
+		std::uint64_t unk460;  // 460
+		std::uint64_t unk468;  // 468
+		std::uint64_t unk470;  // 470
+		std::uint64_t unk478;  // 478
+		std::uint64_t unk480;  // 480
+		std::uint64_t unk488;  // 488
+		std::uint64_t unk490;  // 490
+		std::uint64_t unk498;  // 498
+		std::uint64_t unk4A0;  // 4A0
+		std::uint64_t unk4A8;  // 4A8
+		std::uint64_t unk4B0;  // 4B0
+		std::uint64_t unk4B8;  // 4B8
+		std::uint64_t unk4C0;  // 4C0
+		std::uint64_t unk4C8;  // 4C8
+		std::uint64_t unk4D0;  // 4D0
+		std::uint64_t unk4D8;  // 4D8
+		std::uint64_t unk4E0;  // 4E0
+		std::uint64_t unk4E8;  // 4E8
+		std::uint64_t unk4F0;  // 4F0
+		std::uint64_t unk4F8;  // 4F8
+		std::uint64_t unk500;  // 500
+		std::uint64_t unk508;  // 508
+		std::uint64_t unk510;  // 510
+		std::uint64_t unk518;  // 518
+		std::uint64_t unk520;  // 520
+		std::uint64_t unk528;  // 528
+		std::uint64_t unk530;  // 530
+		std::uint64_t unk538;  // 538
+		std::uint64_t unk540;  // 540
+		std::uint64_t unk548;  // 548
 	};
+	static_assert(sizeof(Actor) == 0x550);
+
+	struct MiddleLowProcessData;
+	struct MiddleHighProcessData;
+	struct HighProcessData;
+	struct ActorPackageData;
+	class TESPackage;
+
+	class ActorPackage
+	{
+	public:
+		// members
+		void*		      packageLock;            // 00
+		TESPackage*       package;                // 08
+		ActorPackageData* data;                   // 10
+		void*			  target;                 // 18
+		std::int32_t      currentProcedureIndex;  // 1C
+		float             packageStartTime;       // 20
+		std::uint32_t     modifiedPackageFlag;    // 24
+		std::uint16_t     modifiedInterruptFlag;  // 28
+		std::int8_t       actorPackageFlags;      // 2A
+		std::int8_t       preferredSpeed;         // 2B
+	};
+	static_assert(sizeof(ActorPackage) == 0x30);
+
+	// F8
+	class AIProcess
+	{
+		MiddleLowProcessData*  middleLow;       // 00
+		MiddleHighProcessData* middleHigh;      // 08
+		HighProcessData*       high;            // 10
+		ActorPackage           currentPackage;  // 18
+		float                  hourLastProcessed;  // 48
+		std::uint32_t          unk4C;
+		std::uint64_t          unk50;
+		std::uint64_t          unk58;
+		std::uint64_t          unk60;
+		std::uint64_t          unk68;
+		std::uint64_t          unk70;
+		std::uint64_t          unk78;
+		std::uint64_t          unk80;
+		std::uint64_t          unk88;
+		std::uint64_t          unk90;
+		std::uint64_t          unk98;
+		std::uint64_t          unkA0;
+		std::uint64_t          unkA8;
+		std::uint64_t          unkB0;
+		std::uint64_t          unkB8;
+		std::uint64_t          unkC0;
+		std::uint64_t          unkC8;
+		std::uint64_t          unkD0;
+		std::uint64_t          unkD8;
+		std::uint64_t          unkE0;
+		std::uint64_t          unkE8;
+		std::uint64_t          unkF0;
+	};
+	static_assert(sizeof(AIProcess) == 0xF8);
 }
