@@ -41,5 +41,11 @@ namespace SFSE
 			void* (*AllocateFromBranchPool)(PluginHandle, std::size_t);
 			void* (*AllocateFromLocalPool)(PluginHandle, std::size_t);
 		};
+
+		struct SFSEMenuInterface
+		{
+			std::uint32_t interfaceVersion;
+			void (*Register)(void*);
+		};
 	}  // namespace detail
 }  // namespace SFSE
