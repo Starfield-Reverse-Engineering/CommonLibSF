@@ -156,14 +156,14 @@ namespace SFSE
 			std::ranges::fill(a_dst, '\0');
 			std::ranges::copy(a_src, a_dst.begin());
 		}
-		
+
 		[[nodiscard]] static constexpr std::uint32_t SetOrClearBit(std::uint32_t a_data, std::uint32_t a_bit, bool a_set) noexcept
 		{
 			if (a_set)
 				a_data |= a_bit;
 			else
 				a_data &= ~a_bit;
-			
+
 			return a_data;
 		}
 	};
