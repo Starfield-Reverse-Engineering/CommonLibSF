@@ -4,6 +4,7 @@
 #include "RE/T/TESFullName.h"
 #include "RE/A/ActorValueOwner.h"
 #include "RE/B/BGSPropertySheet.h"
+#include "RE/B/BGSKeywordForm.h"
 
 namespace RE
 {
