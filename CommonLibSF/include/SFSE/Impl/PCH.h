@@ -669,7 +669,7 @@ namespace REL
 	namespace WinAPI = SFSE::WinAPI;
 }  // namespace REL
 
-#include "REL/Relocation.h"
+#include "REL/REL.h"
 
 #include "RE/Offsets.h"
 #include "RE/Offsets_NiRTTI.h"
