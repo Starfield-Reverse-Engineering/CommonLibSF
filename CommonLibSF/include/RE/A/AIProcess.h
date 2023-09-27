@@ -1,5 +1,7 @@
 #pragma once
+
 #include "ActorPackage.h"
+
 namespace RE
 {
 	struct MiddleLowProcessData;
