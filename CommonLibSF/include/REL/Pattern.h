@@ -1,5 +1,7 @@
 #pragma once
 
+#include "REL/Module.h"
+
 namespace REL
 {
 	namespace detail
@@ -139,7 +141,7 @@ namespace REL
 				if (!this->match(a_address)) {
 					const auto version = Module::get().version();
 					stl::report_and_fail(
-						fmt::format(
+						std::format(
 							"A pattern has failed to match.\n"
 							"This means the plugin is incompatible with either the "
 							"current version of the game ({}.{}.{}), or another "
@@ -186,8 +188,7 @@ namespace REL
 							Rules...,
 							rule_t>();
 					} else {
-						consteval_error(
-							"a space character is required to split byte patterns");
+						consteval_error("a space character is required to split byte patterns");
 					}
 				}
 			}
@@ -205,13 +206,13 @@ namespace REL
 	}
 
 	template <stl::nttp::string S>
-	[[nodiscard]] constexpr auto make_pattern() noexcept
+	[[nodiscard]] constexpr auto Pattern() noexcept
 	{
 		return detail::do_make_pattern<S>();
-	}
+	};
 
-	static_assert(make_pattern<"40 10 F2 ??">().match(
+	static_assert(Pattern<"40 10 F2 ??">().match(
 		detail::make_byte_array(0x40, 0x10, 0xF2, 0x41)));
-	static_assert(make_pattern<"B8 D0 ?? ?? D4 6E">().match(
+	static_assert(Pattern<"B8 D0 ?? ?? D4 6E">().match(
 		detail::make_byte_array(0xB8, 0xD0, 0x35, 0x2A, 0xD4, 0x6E)));
 }
