@@ -19,14 +19,14 @@ namespace RE
 		SF_FORMTYPE(LCTN);
 
         std::int8_t  pad90[25];             // 90
-        std::uint8_t MinLevel;              // A9
+        std::uint8_t minLevel;              // A9
         std::int8_t  padAA;                 // AA
-        std::uint8_t MaxLevel;              // AB
+        std::uint8_t maxLevel;              // AB
         std::int8_t  padAC[20];             // AC
-        BGSLocation* ParentLocation;        // C0
+        BGSLocation* parentLocation;        // C0
         std::int8_t  padC8[276];            // C8
-        bool         bIsExplored;           // 1DC
-        bool         bHasBeenEverExplored;  // 1DD
+        bool         IsExplored;           	// 1DC
+        bool         HasBeenEverExplored;  	// 1DD
         //
 	};
 }
