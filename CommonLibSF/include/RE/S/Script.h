@@ -156,18 +156,6 @@ namespace RE
 			kScriptOpBase = 0x1000,
 		};
 
-		inline static SCRIPT_FUNCTION* GetFirstConsoleCommand()
-		{
-			static REL::Relocation<SCRIPT_FUNCTION*> chunk{ REL::ID(841465) };
-			return chunk.get();
-		}
-
-		inline static SCRIPT_FUNCTION* GetFirstScriptCommand()
-		{
-			static REL::Relocation<SCRIPT_FUNCTION*> chunk{ REL::ID(841467) };
-			return chunk.get();
-		}
-
 		inline static const auto GetConsoleCommands()
 		{
 			static REL::Relocation<SCRIPT_FUNCTION(*)[kNumConsoleCommands]> chunk{ REL::ID(841465) };
