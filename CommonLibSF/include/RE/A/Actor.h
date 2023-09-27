@@ -2,6 +2,7 @@
 
 #include "RE/T/TESObjectREFR.h"
 #include "RE/A/AIProcess.h"
+#include "RE/A/ActorPackage.h"
 
 namespace RE
 {
@@ -285,60 +286,4 @@ namespace RE
 		std::uint64_t unk548;  // 548
 	};
 	static_assert(sizeof(Actor) == 0x550);
-
-	struct MiddleLowProcessData;
-	struct MiddleHighProcessData;
-	struct HighProcessData;
-	struct ActorPackageData;
-	class TESPackage;
-
-	class ActorPackage
-	{
-	public:
-		// members
-		void*		      packageLock;            // 00
-		TESPackage*       package;                // 08
-		ActorPackageData* data;                   // 10
-		void*			  target;                 // 18
-		std::int32_t      currentProcedureIndex;  // 1C
-		float             packageStartTime;       // 20
-		std::uint32_t     modifiedPackageFlag;    // 24
-		std::uint16_t     modifiedInterruptFlag;  // 28
-		std::int8_t       actorPackageFlags;      // 2A
-		std::int8_t       preferredSpeed;         // 2B
-	};
-	static_assert(sizeof(ActorPackage) == 0x30);
-
-	// F8
-	class AIProcess
-	{
-		MiddleLowProcessData*  middleLow;       // 00
-		MiddleHighProcessData* middleHigh;      // 08
-		HighProcessData*       high;            // 10
-		ActorPackage           currentPackage;  // 18
-		float                  hourLastProcessed;  // 48
-		std::uint32_t          unk4C;
-		std::uint64_t          unk50;
-		std::uint64_t          unk58;
-		std::uint64_t          unk60;
-		std::uint64_t          unk68;
-		std::uint64_t          unk70;
-		std::uint64_t          unk78;
-		std::uint64_t          unk80;
-		std::uint64_t          unk88;
-		std::uint64_t          unk90;
-		std::uint64_t          unk98;
-		std::uint64_t          unkA0;
-		std::uint64_t          unkA8;
-		std::uint64_t          unkB0;
-		std::uint64_t          unkB8;
-		std::uint64_t          unkC0;
-		std::uint64_t          unkC8;
-		std::uint64_t          unkD0;
-		std::uint64_t          unkD8;
-		std::uint64_t          unkE0;
-		std::uint64_t          unkE8;
-		std::uint64_t          unkF0;
-	};
-	static_assert(sizeof(AIProcess) == 0xF8);
 }
