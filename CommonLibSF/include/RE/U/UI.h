@@ -12,9 +12,8 @@ namespace RE
 		bool IsMenuOpen(const BSFixedString& a_name)
 		{
 			using func_t = decltype(&UI::IsMenuOpen);
-			REL::Relocation<func_t> func{ REL::ID(187048) };
+			REL::Relocation<func_t> func{ REL::ID(187049) };
 			return func(this, a_name);
 		}
 	};
-
 }
