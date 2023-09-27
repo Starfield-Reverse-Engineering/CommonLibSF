@@ -26,8 +26,8 @@ namespace RE
         std::int8_t  padAC[20];             // AC
         BGSLocation* parentLocation;        // C0
         std::int8_t  padC8[276];            // C8
-        bool         IsExplored;           	// 1DC
-        bool         HasBeenEverExplored;  	// 1DD
+        bool         isExplored;           	// 1DC
+        bool         hasBeenEverExplored;  	// 1DD
         //
 	};
 }
