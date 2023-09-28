@@ -28,4 +28,4 @@ namespace RE
 		[[nodiscard]] virtual bool GetIsPlayerOwner() const;                                                                                           // 0B
 	};
 	static_assert(sizeof(ActorValueOwner) == 0x8);
-}
+}  // namespace RE

@@ -270,5 +270,5 @@ namespace RE
 			REL::Relocation<func_t> func{ REL::ID(110912) };
 			return func(a_entryPoint, a_perkOwner, a_args...);
 		}
-	}
-}
+	}  // namespace BGSEntryPoint
+}  // namespace RE

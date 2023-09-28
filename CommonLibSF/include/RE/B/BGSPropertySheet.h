@@ -13,4 +13,4 @@ namespace RE
 		std::uint64_t /* BSTArray<BSTTuple<TESForm*, BGSTypedFormValuePair::SharedVal>>* */ unk08;
 	};
 	static_assert(sizeof(BGSPropertySheet) == 0x10);
-}
+}  // namespace RE

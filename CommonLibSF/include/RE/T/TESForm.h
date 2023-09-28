@@ -200,4 +200,4 @@ namespace RE
 		stl::enumeration<FormType, std::uint8_t> formType;     // 36
 	};
 	static_assert(sizeof(TESForm) == 0x38);
-}
+}  // namespace RE

@@ -15,4 +15,4 @@ namespace RE
 		TESRace* formRace;  // 08
 	};
 	static_assert(sizeof(TESRaceForm) == 0x10);
-}
+}  // namespace RE

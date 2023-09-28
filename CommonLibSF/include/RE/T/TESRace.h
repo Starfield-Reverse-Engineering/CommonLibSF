@@ -11,4 +11,4 @@ namespace RE
 		SF_RTTI_VTABLE(TESRace);
 		SF_FORMTYPE(RACE);
 	};
-}
+}  // namespace RE

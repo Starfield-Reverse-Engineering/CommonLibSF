@@ -12,4 +12,4 @@ namespace RE
 		bool          opening;   // 08
 	};
 	static_assert(sizeof(MenuOpenCloseEvent) == 0x10);
-}
+}  // namespace RE

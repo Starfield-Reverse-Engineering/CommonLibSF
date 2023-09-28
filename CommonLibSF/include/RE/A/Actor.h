@@ -147,4 +147,4 @@ namespace RE
 
 		// More...
 	};
-}
+}  // namespace RE

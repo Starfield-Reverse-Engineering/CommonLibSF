@@ -52,4 +52,4 @@ namespace RE
 		std::array<std::byte, 0x4> padding;  // 0xC
 	};
 	static_assert(sizeof(NiPoint3A) == 0x10);
-}
+}  // namespace RE

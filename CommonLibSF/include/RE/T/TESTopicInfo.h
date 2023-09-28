@@ -27,4 +27,4 @@ namespace RE
 		TESResponse*  responses;  // 70
 	};
 	static_assert(sizeof(TESTopicInfo) == 0x78);
-}
+}  // namespace RE

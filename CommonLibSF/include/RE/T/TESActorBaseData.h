@@ -55,4 +55,4 @@ namespace RE
 		std::uint64_t   unk68;        // 68
 	};
 	static_assert(sizeof(TESActorBaseData) == 0x70);
-}
+}  // namespace RE

@@ -33,4 +33,4 @@ namespace RE
 		std::uint32_t pad44;         // 44
 	};
 	static_assert(sizeof(TESCamera) == 0x48);
-}
+}  // namespace RE

@@ -38,4 +38,4 @@ namespace RE
 		PackageList aiPackList;  // 18
 	};
 	static_assert(sizeof(TESAIForm) == 0x40);
-}
+}  // namespace RE

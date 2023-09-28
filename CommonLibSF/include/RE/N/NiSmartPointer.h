@@ -172,7 +172,7 @@ namespace RE
 
 	template <class T>
 	NiPointer(T*) -> NiPointer<T>;
-}
+}  // namespace RE
 
 #define NiSmartPointer(className) \
 	class className;              \

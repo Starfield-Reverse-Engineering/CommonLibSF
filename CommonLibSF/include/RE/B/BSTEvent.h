@@ -27,7 +27,7 @@ namespace RE
 
 		inline SinkBase::~SinkBase() = default;
 		inline SourceBase::~SourceBase() = default;
-	}
+	}  // namespace BSTEventDetail
 
 	template <class>
 	class BSTEventSource;
@@ -86,4 +86,4 @@ namespace RE
 		virtual ~BSTGlobalEvent();  // 00
 	};
 	static_assert(sizeof(BSTGlobalEvent) == 0x08);
-}
+}  // namespace RE

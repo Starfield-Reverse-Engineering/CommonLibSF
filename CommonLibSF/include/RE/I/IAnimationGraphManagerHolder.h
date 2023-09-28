@@ -33,4 +33,4 @@ namespace RE
 		virtual void Unk_17();  // 17
 		virtual void Unk_18();  // 18
 	};
-}
+}  // namespace RE

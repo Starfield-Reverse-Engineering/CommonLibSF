@@ -23,7 +23,7 @@ namespace REL
 			{
 				return a_ch == '?';
 			}
-		}
+		}  // namespace characters
 
 		namespace rules
 		{
@@ -59,7 +59,7 @@ namespace REL
 						lut[static_cast<unsigned char>(a_hi)] * 0x10u +
 						lut[static_cast<unsigned char>(a_lo)]);
 				}
-			}
+			}  // namespace detail
 
 			template <char HI, char LO>
 			class Hexadecimal
@@ -110,7 +110,7 @@ namespace REL
 			template <char C1, char C2>
 			Wildcard rule_for() noexcept
 				requires(characters::wildcard(C1) && characters::wildcard(C2));
-		}
+		}  // namespace rules
 
 		template <class... Rules>
 		class PatternMatcher
@@ -203,7 +203,7 @@ namespace REL
 				"all bytes must be an integral type");
 			return { static_cast<std::byte>(a_bytes)... };
 		}
-	}
+	}  // namespace detail
 
 	template <stl::nttp::string S>
 	[[nodiscard]] constexpr auto Pattern() noexcept
@@ -215,4 +215,4 @@ namespace REL
 		detail::make_byte_array(0x40, 0x10, 0xF2, 0x41)));
 	static_assert(Pattern<"B8 D0 ?? ?? D4 6E">().match(
 		detail::make_byte_array(0xB8, 0xD0, 0x35, 0x2A, 0xD4, 0x6E)));
-}
+}  // namespace REL

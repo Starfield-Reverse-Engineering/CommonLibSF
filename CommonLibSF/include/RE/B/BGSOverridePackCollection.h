@@ -21,4 +21,4 @@ namespace RE
 		BGSListForm* unk40;
 	};
 	static_assert(sizeof(BGSOverridePackCollection) == 0x48);
-}
+}  // namespace RE

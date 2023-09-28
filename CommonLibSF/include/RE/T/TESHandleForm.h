@@ -13,4 +13,4 @@ namespace RE
 		~TESHandleForm() override;  // 00
 	};
 	static_assert(sizeof(TESHandleForm) == 0x38);
-}
+}  // namespace RE

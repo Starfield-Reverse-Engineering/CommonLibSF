@@ -33,4 +33,4 @@ namespace RE
 		std::uint64_t   unk130;            // 130
 	};
 	extern template class SettingCollection<Setting>;
-}
+}  // namespace RE

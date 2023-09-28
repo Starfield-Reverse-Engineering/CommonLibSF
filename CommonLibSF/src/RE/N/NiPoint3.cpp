@@ -157,4 +157,4 @@ namespace RE
 		}
 		return length;
 	}
-}
+}  // namespace RE

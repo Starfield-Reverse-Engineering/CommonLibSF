@@ -27,6 +27,6 @@ namespace RE
 				void* unk18;  // 18
 			};
 			static_assert(sizeof(Items) == 0x20);
-		}
-	}
-}
+		}  // namespace Template
+	}      // namespace BGSMod
+}  // namespace RE

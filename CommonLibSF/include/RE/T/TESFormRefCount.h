@@ -21,4 +21,4 @@ namespace RE
 		volatile mutable std::uint64_t refCount;  // 08
 	};
 	static_assert(sizeof(TESFormRefCount) == 0x10);
-}
+}  // namespace RE

@@ -20,4 +20,4 @@ namespace RE
 		std::uint64_t unk40;  // 40
 	};
 	static_assert(sizeof(BGSPreviewTransform) == 0x48);
-}
+}  // namespace RE

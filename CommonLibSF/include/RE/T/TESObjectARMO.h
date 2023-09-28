@@ -11,4 +11,4 @@ namespace RE
 		SF_RTTI_VTABLE(TESObjectARMO);
 		SF_FORMTYPE(ARMO);
 	};
-}
+}  // namespace RE

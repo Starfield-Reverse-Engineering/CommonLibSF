@@ -14,4 +14,4 @@ namespace RE
 		std::uint64_t unk10;  // 10
 	};
 	static_assert(sizeof(BGSForcedLocRefType) == 0x18);
-}
+}  // namespace RE

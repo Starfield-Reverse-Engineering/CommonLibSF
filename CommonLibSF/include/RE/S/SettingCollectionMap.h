@@ -27,4 +27,4 @@ namespace RE
 		void* /* BSTBTree<BSFixedString, T*, detail::SettingCollectionMapCompare> */ settings;  // 118
 	};
 	extern template class SettingCollectionMap<Setting>;
-}
+}  // namespace RE

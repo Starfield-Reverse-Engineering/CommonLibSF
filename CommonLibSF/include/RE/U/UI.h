@@ -18,4 +18,4 @@ namespace RE
 			return func(this, a_name);
 		}
 	};
-}
+}  // namespace RE

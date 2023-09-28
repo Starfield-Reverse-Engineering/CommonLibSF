@@ -200,10 +200,10 @@ namespace RE
 		extern template class BSFixedString<char, true>;
 		extern template class BSFixedString<wchar_t, false>;
 		extern template class BSFixedString<wchar_t, true>;
-	}
+	}  // namespace detail
 
 	using BSFixedString = detail::BSFixedString<char, false>;
 	using BSFixedStringCS = detail::BSFixedString<char, true>;
 	using BSFixedStringW = detail::BSFixedString<wchar_t, false>;
 	using BSFixedStringWCS = detail::BSFixedString<wchar_t, true>;
-}
+}  // namespace RE

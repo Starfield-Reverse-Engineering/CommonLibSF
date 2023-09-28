@@ -14,4 +14,4 @@ namespace RE
 		TESObjectARMO* formSkin;  // 08
 	};
 	static_assert(sizeof(BGSSkinForm) == 0x10);
-}
+}  // namespace RE
