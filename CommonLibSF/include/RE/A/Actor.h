@@ -286,4 +286,4 @@ namespace RE
 		std::uint64_t unk548;  // 548
 	};
 	static_assert(sizeof(Actor) == 0x550);
-}
+}  // namespace RE
