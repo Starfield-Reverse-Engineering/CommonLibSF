@@ -48,7 +48,7 @@ namespace REL
 				return *this;
 			}
 
-			[[nodiscard]] void* data() noexcept { return _view; }
+			[[nodiscard]] void* data() const noexcept { return _view; }
 
 			bool open(stl::zwstring a_name, std::size_t a_size);
 
@@ -111,7 +111,7 @@ namespace REL
 			using reference = stream_type&;
 			using const_reference = const stream_type&;
 
-			istream_t(stl::zwstring a_filename, std::ios_base::openmode a_mode) :
+			istream_t(const stl::zwstring a_filename, const std::ios_base::openmode a_mode) :
 				_stream(a_filename.data(), a_mode)
 			{
 				stl_assert(_stream.is_open(),
@@ -120,7 +120,7 @@ namespace REL
 				_stream.exceptions(std::ios::badbit | std::ios::failbit | std::ios::eofbit);
 			}
 
-			void ignore(std::streamsize a_count)
+			void ignore(const std::streamsize a_count)
 			{
 				_stream.ignore(a_count);
 			}
@@ -244,11 +244,11 @@ namespace REL
 	public:
 		constexpr ID() noexcept = default;
 
-		explicit constexpr ID(std::uint64_t a_id) noexcept :
+		explicit constexpr ID(const std::uint64_t a_id) noexcept :
 			_id(a_id)
 		{}
 
-		constexpr ID& operator=(std::uint64_t a_id) noexcept
+		constexpr ID& operator=(const std::uint64_t a_id) noexcept
 		{
 			_id = a_id;
 			return *this;

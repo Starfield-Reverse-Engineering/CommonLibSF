@@ -22,7 +22,7 @@ namespace REL
 
 		Segment() noexcept = default;
 
-		Segment(std::uintptr_t a_proxyBase, std::uintptr_t a_address, std::uintptr_t a_size) noexcept :
+		Segment(const std::uintptr_t a_proxyBase, const std::uintptr_t a_address, const std::uintptr_t a_size) noexcept :
 			_proxyBase(a_proxyBase), _address(a_address), _size(a_size)
 		{}
 
@@ -64,11 +64,11 @@ namespace REL
 			return std::bit_cast<T*>(base());
 		}
 
-		[[nodiscard]] constexpr auto segment(Segment::Name a_segment) noexcept { return _segments[a_segment]; }
+		[[nodiscard]] constexpr auto segment(const Segment::Name a_segment) const noexcept { return _segments[a_segment]; }
 
-		[[nodiscard]] constexpr auto version() noexcept { return _version; }
+		[[nodiscard]] constexpr auto version() const noexcept { return _version; }
 
-		[[nodiscard]] static Module& get(const std::uintptr_t a_address) noexcept;
+		[[nodiscard]] static Module& get(std::uintptr_t a_address) noexcept;
 
 		[[nodiscard]] static Module& get(std::string_view a_filePath = {}) noexcept;
 

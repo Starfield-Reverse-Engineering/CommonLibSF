@@ -4,7 +4,7 @@
 
 namespace SFSE
 {
-	std::uint32_t InputMap::GamepadMaskToKeycode(std::uint32_t keyMask)
+	std::uint32_t InputMap::GamepadMaskToKeycode(const std::uint32_t keyMask)
 	{
 		using XInputButton = RE::XInput::XInputButton;
 		switch (keyMask) {
@@ -45,7 +45,7 @@ namespace SFSE
 		}
 	}
 
-	std::uint32_t InputMap::GamepadKeycodeToMask(std::uint32_t keyCode)
+	std::uint32_t InputMap::GamepadKeycodeToMask(const std::uint32_t keyCode)
 	{
 		using XInputButton = RE::XInput::XInputButton;
 
@@ -87,7 +87,7 @@ namespace SFSE
 		}
 	}
 
-	std::string InputMap::GetKeyName(std::uint32_t a_keyCode)
+	std::string InputMap::GetKeyName(const std::uint32_t a_keyCode)
 	{
 		if (a_keyCode >= kMacro_MouseButtonOffset && a_keyCode < kMacro_GamepadOffset) {
 			return GetMouseButtonName(a_keyCode);
@@ -98,7 +98,7 @@ namespace SFSE
 		}
 	}
 
-	std::string InputMap::GetKeyboardKeyName(std::uint32_t a_keyCode)
+	std::string InputMap::GetKeyboardKeyName(const std::uint32_t a_keyCode)
 	{
 		std::int32_t scancode = static_cast<std::int32_t>(a_keyCode & 0xFF);
 
@@ -155,14 +155,14 @@ namespace SFSE
 			lParam |= (0x1 << 24);
 		}
 
-		wchar_t      buffer[WinAPI::MAX_PATH];
-		auto         length = WinAPI::GetKeyNameText(lParam, buffer, WinAPI::MAX_PATH);
-		std::wstring keyNameW{ buffer, static_cast<std::size_t>(length) };
+		wchar_t            buffer[WinAPI::MAX_PATH];
+		const auto         length = WinAPI::GetKeyNameText(lParam, buffer, WinAPI::MAX_PATH);
+		const std::wstring keyNameW{ buffer, static_cast<std::size_t>(length) };
 
 		return stl::utf16_to_utf8(keyNameW).value_or(""s);
 	}
 
-	std::string InputMap::GetMouseButtonName(std::uint32_t a_keyCode)
+	std::string InputMap::GetMouseButtonName(const std::uint32_t a_keyCode)
 	{
 		switch (a_keyCode) {
 		case 256:
@@ -190,7 +190,7 @@ namespace SFSE
 		}
 	}
 
-	std::string InputMap::GetGamepadButtonName(std::uint32_t a_keyCode)
+	std::string InputMap::GetGamepadButtonName(const std::uint32_t a_keyCode)
 	{
 		switch (a_keyCode) {
 		case kGamepadButtonOffset_DPAD_UP:

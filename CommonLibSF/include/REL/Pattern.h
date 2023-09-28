@@ -8,18 +8,18 @@ namespace REL
 	{
 		namespace characters
 		{
-			[[nodiscard]] constexpr bool hexadecimal(char a_ch) noexcept
+			[[nodiscard]] constexpr bool hexadecimal(const char a_ch) noexcept
 			{
 				return ('0' <= a_ch && a_ch <= '9') || ('A' <= a_ch && a_ch <= 'F') ||
 				       ('a' <= a_ch && a_ch <= 'f');
 			}
 
-			[[nodiscard]] constexpr bool space(char a_ch) noexcept
+			[[nodiscard]] constexpr bool space(const char a_ch) noexcept
 			{
 				return a_ch == ' ';
 			}
 
-			[[nodiscard]] constexpr bool wildcard(char a_ch) noexcept
+			[[nodiscard]] constexpr bool wildcard(const char a_ch) noexcept
 			{
 				return a_ch == '?';
 			}
@@ -30,8 +30,8 @@ namespace REL
 			namespace detail
 			{
 				[[nodiscard]] consteval std::byte hexacharacters_to_hexadecimal(
-					char a_hi,
-					char a_lo) noexcept
+					const char a_hi,
+					const char a_lo) noexcept
 				{
 					constexpr auto lut = []() noexcept {
 						std::array<
@@ -42,7 +42,7 @@ namespace REL
 						const auto iterate =
 							[&](std::uint8_t  a_iFirst,
 								unsigned char a_cFirst,
-								unsigned char a_cLast) noexcept {
+								const unsigned char a_cLast) noexcept {
 								for (; a_cFirst <= a_cLast; ++a_cFirst, ++a_iFirst) {
 									a[a_cFirst] = a_iFirst;
 								}
@@ -65,7 +65,7 @@ namespace REL
 			class Hexadecimal
 			{
 			public:
-				[[nodiscard]] static constexpr bool match(std::byte a_byte) noexcept
+				[[nodiscard]] static constexpr bool match(const std::byte a_byte) noexcept
 				{
 					constexpr auto expected = detail::hexacharacters_to_hexadecimal(
 						HI,
@@ -134,8 +134,8 @@ namespace REL
 			}
 
 			void match_or_fail(
-				std::uintptr_t       a_address,
-				std::source_location a_loc = std::source_location::current())
+				const std::uintptr_t       a_address,
+				const std::source_location& a_loc = std::source_location::current())
 				const noexcept
 			{
 				if (!this->match(a_address)) {

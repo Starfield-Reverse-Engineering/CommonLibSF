@@ -2,7 +2,7 @@
 
 namespace REL
 {
-	constexpr Version::Version(std::string_view a_version)
+	constexpr Version::Version(const std::string_view a_version)
 	{
 		std::array<value_type, 4> powers{ 1, 1, 1, 1 };
 		std::size_t               position = 0;
@@ -28,7 +28,7 @@ namespace REL
 		}
 	}
 
-	[[nodiscard]] std::optional<Version> get_file_version(stl::zwstring a_filename)
+	[[nodiscard]] std::optional<Version> get_file_version(const stl::zwstring a_filename)
 	{
 		std::uint32_t     dummy{ 0 };
 		std::vector<char> buf(WinAPI::GetFileVersionInfoSize(a_filename.data(), std::addressof(dummy)));

@@ -28,7 +28,7 @@ namespace REL
 			return it->id;
 		}
 
-		bool memory_map::open(stl::zwstring a_name, std::size_t a_size)
+		bool memory_map::open(const stl::zwstring a_name, const std::size_t a_size)
 		{
 			close();
 
@@ -60,7 +60,7 @@ namespace REL
 			return true;
 		}
 
-		bool memory_map::create(stl::zwstring a_name, std::size_t a_size)
+		bool memory_map::create(const stl::zwstring a_name, const std::size_t a_size)
 		{
 			close();
 
@@ -203,7 +203,7 @@ namespace REL
 		load_file(file, version, true);
 	}
 
-	bool IDDatabase::load_file(stl::zwstring a_filename, Version a_version, bool a_failOnError)
+	bool IDDatabase::load_file(const stl::zwstring a_filename, const Version a_version, const bool a_failOnError)
 	{
 		try {
 			database::istream_t in(a_filename.data(), std::ios::in | std::ios::binary);
@@ -264,7 +264,7 @@ namespace REL
 		return true;
 	}
 
-	bool IDDatabase::unpack_file(database::istream_t& a_in, database::header_t a_header, bool a_failOnError)
+	bool IDDatabase::unpack_file(database::istream_t& a_in, database::header_t a_header, const bool a_failOnError)
 	{
 		std::uint8_t  type = 0;
 		std::uint64_t id = 0;
