@@ -151,7 +151,7 @@ namespace RE
 		// members
 		element_type* _ptr{ nullptr };  // 0
 	};
-	//static_assert(sizeof(NiPointer<void*>) == 0x8);
+	static_assert(sizeof(NiPointer<void*>) == 0x8);
 
 	template <class T, class... Args>
 	[[nodiscard]] NiPointer<T> make_nismart(Args&&... a_args)
