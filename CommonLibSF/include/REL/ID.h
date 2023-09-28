@@ -71,7 +71,7 @@ namespace REL
 			using const_reverse_iterator = typename container_type::const_reverse_iterator;
 
 			template <class ExecutionPolicy>
-			explicit Offset2ID(ExecutionPolicy&& a_policy)  //
+			explicit Offset2ID(ExecutionPolicy&& a_policy)
 				requires(std::is_execution_policy_v<std::decay_t<ExecutionPolicy>>);
 
 			Offset2ID() :
@@ -279,7 +279,7 @@ namespace REL
 	};
 
 	template <class ExecutionPolicy>
-	database::Offset2ID::Offset2ID(ExecutionPolicy&& a_policy)  //
+	database::Offset2ID::Offset2ID(ExecutionPolicy&& a_policy)
 		requires(std::is_execution_policy_v<std::decay_t<ExecutionPolicy>>)
 	{
 		const std::span<const mapping_t> id2offset = IDDatabase::get()._id2offset;

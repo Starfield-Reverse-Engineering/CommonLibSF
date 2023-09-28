@@ -13,7 +13,7 @@ namespace RE
 		constexpr NiPointer(std::nullptr_t) noexcept {}
 
 		template <class Y>
-		explicit NiPointer(Y* a_rhs)  //
+		explicit NiPointer(Y* a_rhs)
 			requires(std::convertible_to<Y*, element_type*>)
 			:
 			_ptr(static_cast<element_type*>(a_rhs))
@@ -28,7 +28,7 @@ namespace RE
 		}
 
 		template <class Y>
-		NiPointer(const NiPointer<Y>& a_rhs)  //
+		NiPointer(const NiPointer<Y>& a_rhs)
 			requires(std::convertible_to<Y*, element_type*>)
 			:
 			_ptr(static_cast<element_type*>(a_rhs._ptr))
@@ -41,7 +41,7 @@ namespace RE
 		{}
 
 		template <class Y>
-		NiPointer(NiPointer<Y>&& a_rhs) noexcept  //
+		NiPointer(NiPointer<Y>&& a_rhs) noexcept
 			requires(std::convertible_to<Y*, element_type*>)
 			:
 			_ptr(static_cast<element_type*>(std::exchange(a_rhs._ptr, nullptr)))
@@ -60,7 +60,7 @@ namespace RE
 		}
 
 		template <class Y>
-		NiPointer& operator=(const NiPointer<Y>& a_rhs)  //
+		NiPointer& operator=(const NiPointer<Y>& a_rhs)
 			requires(std::convertible_to<Y*, element_type*>)
 		{
 			TryDetach();
@@ -79,7 +79,7 @@ namespace RE
 		}
 
 		template <class Y>
-		NiPointer& operator=(NiPointer<Y>&& a_rhs) noexcept  //
+		NiPointer& operator=(NiPointer<Y>&& a_rhs) noexcept
 			requires(std::convertible_to<Y*, element_type*>)
 		{
 			TryDetach();
@@ -90,7 +90,7 @@ namespace RE
 		void reset() { TryDetach(); }
 
 		template <class Y>
-		void reset(Y* a_ptr)  //
+		void reset(Y* a_ptr)
 			requires(std::convertible_to<Y*, element_type*>)
 		{
 			if (_ptr != a_ptr) {

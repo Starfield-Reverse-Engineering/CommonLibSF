@@ -151,14 +151,14 @@ namespace RE
 		[[nodiscard]] bool Is(FormType a_type) const noexcept { return GetFormType() == a_type; }
 
 		template <class... Args>
-		[[nodiscard]] bool Is(Args... a_args) const noexcept  //
+		[[nodiscard]] bool Is(Args... a_args) const noexcept
 			requires(std::same_as<Args, FormType> && ...)
 		{
 			return (Is(a_args) || ...);
 		}
 
 		template <class T>
-		[[nodiscard]] bool Is() const noexcept  //
+		[[nodiscard]] bool Is() const noexcept
 			requires(std::derived_from<T, TESForm> &&
 					 !std::is_pointer_v<T> &&
 					 !std::is_reference_v<T>)
@@ -178,7 +178,7 @@ namespace RE
 		[[nodiscard]] bool IsNot(FormType a_type) const noexcept { return !Is(a_type); }
 
 		template <class... Args>
-		[[nodiscard]] bool IsNot(Args... a_args) const noexcept  //
+		[[nodiscard]] bool IsNot(Args... a_args) const noexcept
 			requires(std::same_as<Args, FormType> && ...)
 		{
 			return (IsNot(a_args) && ...);

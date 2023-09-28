@@ -135,7 +135,7 @@ namespace REL
 
 	template <class F, class... Args>
 	std::invoke_result_t<F, Args...> invoke(F&& a_func, Args&&... a_args)  //
-		noexcept(std::is_nothrow_invocable_v<F, Args...>)                  //
+		noexcept(std::is_nothrow_invocable_v<F, Args...>)
 		requires(std::invocable<F, Args...>)
 	{
 		if constexpr (std::is_member_function_pointer_v<std::decay_t<F>>) {
@@ -237,7 +237,7 @@ namespace REL
 			return *get();
 		}
 
-		[[nodiscard]] constexpr auto operator->() const noexcept  //
+		[[nodiscard]] constexpr auto operator->() const noexcept
 			requires(std::is_pointer_v<value_type>)
 		{
 			return get();
@@ -245,13 +245,13 @@ namespace REL
 
 		template <class... Args>
 		std::invoke_result_t<const value_type&, Args...> operator()(Args&&... a_args) const  //
-			noexcept(std::is_nothrow_invocable_v<const value_type&, Args...>)                //
+			noexcept(std::is_nothrow_invocable_v<const value_type&, Args...>)
 			requires(std::invocable<const value_type&, Args...>)
 		{
 			return invoke(get(), std::forward<Args>(a_args)...);
 		}
 
-		std::uintptr_t write_vfunc(std::size_t a_idx, std::uintptr_t a_newFunc)  //
+		std::uintptr_t write_vfunc(std::size_t a_idx, std::uintptr_t a_newFunc)
 			requires(std::same_as<value_type, std::uintptr_t>)
 		{
 			const auto addr = address() + (sizeof(void*) * a_idx);
@@ -261,7 +261,7 @@ namespace REL
 		}
 
 		template <class F>
-		std::uintptr_t write_vfunc(std::size_t a_idx, F a_newFunc)  //
+		std::uintptr_t write_vfunc(std::size_t a_idx, F a_newFunc)
 			requires(std::same_as<value_type, std::uintptr_t>)
 		{
 			return write_vfunc(a_idx, stl::unrestricted_cast<std::uintptr_t>(a_newFunc));
