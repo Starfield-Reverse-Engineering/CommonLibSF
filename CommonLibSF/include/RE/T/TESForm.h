@@ -120,6 +120,13 @@ namespace RE
 		virtual void                               Unk_60();                                                         // 60
 		virtual void                               Unk_61();                                                         // 61
 
+		std::uint64_t DecRefCount() const
+		{
+			using func_t = decltype(&TESForm::DecRefCount);
+			REL::Relocation<func_t> func{ REL::ID(35164) };
+			return func(this);
+		}
+
 		[[nodiscard]] static TESForm* LookupByID(std::uint32_t a_formID)
 		{
 			using func_t = decltype(&TESForm::LookupByID);
