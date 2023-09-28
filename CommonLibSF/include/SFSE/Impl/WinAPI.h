@@ -1077,6 +1077,9 @@ namespace SFSE::WinAPI
 	[[nodiscard]] std::int32_t ShowCursor(
 		bool a_show) noexcept;
 
+	void Sleep(
+		std::uint32_t a_milliseconds) noexcept;
+
 	bool TerminateProcess(
 		void*         a_process,
 		std::uint32_t a_exitCode) noexcept;

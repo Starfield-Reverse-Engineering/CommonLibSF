@@ -781,6 +781,12 @@ namespace SFSE::WinAPI
 			static_cast<::BOOL>(a_show));
 	}
 
+	void Sleep(
+		std::uint32_t a_milliseconds) noexcept
+	{
+		::Sleep(static_cast<DWORD>(a_milliseconds));
+	}
+
 	bool TerminateProcess(
 		void*         a_process,
 		std::uint32_t a_exitCode) noexcept
