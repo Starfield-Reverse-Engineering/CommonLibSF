@@ -1,57 +1,142 @@
 #pragma once
 
-#include <algorithm>
-#include <array>
-#include <bit>
-#include <bitset>
-#include <cassert>
-#include <cmath>
+/* +++++++++++++++++++++++++ C++23 Standard Library +++++++++++++++++++++++++ */
+
+// Concepts library
 #include <concepts>
+
+// Utilities library
+#include <any>
+#include <bitset>
+#include <chrono>
+#include <compare>
+#include <csetjmp>
+#include <csignal>
 #include <cstdarg>
 #include <cstddef>
-#include <cstdint>
-#include <cstdio>
 #include <cstdlib>
-#include <cstring>
 #include <ctime>
-#include <cwchar>
-#include <cwctype>
-#include <exception>
-#include <execution>
-#include <filesystem>
-#include <format>
-#include <fstream>
+#include <expected>
 #include <functional>
-#include <iomanip>
-#include <ios>
-#include <istream>
-#include <iterator>
-#include <limits>
-#include <locale>
-#include <map>
-#include <memory>
-#include <mutex>
-#include <new>
-#include <numeric>
+#include <initializer_list>
 #include <optional>
-#include <random>
-#include <regex>
-#include <set>
 #include <source_location>
-#include <span>
-#include <sstream>
-#include <stack>
-#include <stdexcept>
-#include <string>
-#include <string_view>
-#include <system_error>
-#include <thread>
 #include <tuple>
 #include <type_traits>
+#include <typeindex>
 #include <typeinfo>
 #include <utility>
 #include <variant>
+#include <version>
+
+// Dynamic memory management
+#include <memory>
+#include <memory_resource>
+#include <new>
+#include <scoped_allocator>
+
+// Numeric limits
+#include <cfloat>
+#include <cinttypes>
+#include <climits>
+#include <cstdint>
+#include <limits>
+#include <stdfloat>
+
+// Error handling
+#include <cassert>
+#include <cerrno>
+#include <exception>
+#include <stacktrace>
+#include <stdexcept>
+#include <system_error>
+
+// Strings library
+#include <cctype>
+#include <charconv>
+#include <cstring>
+#include <cuchar>
+#include <cwchar>
+#include <cwctype>
+#include <string>
+#include <string_view>
+
+// Containers library
+#include <array>
+#include <deque>
+#include <forward_list>
+#include <list>
+#include <map>
+#include <queue>
+#include <set>
+#include <span>
+#include <stack>
+#include <unordered_map>
+#include <unordered_set>
 #include <vector>
+
+// Iterators library
+#include <iterator>
+
+// Ranges library
+#include <ranges>
+
+// Algorithms library
+#include <algorithm>
+#include <execution>
+
+// Numerics library
+#include <bit>
+#include <cfenv>
+#include <cmath>
+#include <complex>
+#include <numbers>
+#include <numeric>
+#include <random>
+#include <ratio>
+#include <valarray>
+
+// Localization library
+#include <clocale>
+#include <locale>
+
+// Input/output library
+#include <cstdio>
+#include <fstream>
+#include <iomanip>
+#include <ios>
+#include <iosfwd>
+#include <iostream>
+#include <istream>
+#include <ostream>
+#include <print>
+#include <spanstream>
+#include <sstream>
+#include <streambuf>
+#include <strstream>
+#include <syncstream>
+
+// Filesystem library
+#include <filesystem>
+
+// Regular Expressions library
+#include <regex>
+
+// Atomic Operations library
+#include <atomic>
+
+// Thread support library
+#include <barrier>
+#include <condition_variable>
+#include <future>
+#include <latch>
+#include <mutex>
+#include <semaphore>
+#include <shared_mutex>
+#include <stop_token>
+#include <thread>
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 static_assert(std::is_integral_v<std::time_t> && sizeof(std::time_t) == sizeof(std::size_t), "wrap std::time_t instead");
 
@@ -154,15 +239,15 @@ namespace SFSE
 			string(const CharT (&)[N]) -> string<CharT, N - 1>;
 		}  // namespace nttp
 
-		template <class EF>                                        //
-			requires(std::invocable<std::remove_reference_t<EF>>)  //
+		template <class EF>
+			requires(std::invocable<std::remove_reference_t<EF>>)
 		class scope_exit
 		{
 		public:
 			// 1)
 			template <class Fn>
-			explicit scope_exit(Fn&& a_fn)                                                                     //
-				noexcept(std::is_nothrow_constructible_v<EF, Fn> || std::is_nothrow_constructible_v<EF, Fn&>)  //
+			explicit scope_exit(Fn&& a_fn)  //
+				noexcept(std::is_nothrow_constructible_v<EF, Fn> || std::is_nothrow_constructible_v<EF, Fn&>)
 				requires(!std::is_same_v<std::remove_cvref_t<Fn>, scope_exit> && std::is_constructible_v<EF, Fn>)
 			{
 				static_assert(std::invocable<Fn>);
@@ -175,8 +260,8 @@ namespace SFSE
 			}
 
 			// 2)
-			scope_exit(scope_exit&& a_rhs)                                                                      //
-				noexcept(std::is_nothrow_move_constructible_v<EF> || std::is_nothrow_copy_constructible_v<EF>)  //
+			scope_exit(scope_exit&& a_rhs)  //
+				noexcept(std::is_nothrow_move_constructible_v<EF> || std::is_nothrow_copy_constructible_v<EF>)
 				requires(std::is_nothrow_move_constructible_v<EF> || std::is_copy_constructible_v<EF>)
 			{
 				static_assert(!(std::is_nothrow_move_constructible_v<EF> && !std::is_move_constructible_v<EF>));
@@ -235,7 +320,7 @@ namespace SFSE
 			{}
 
 			template <class... Args>
-			constexpr enumeration(Args... a_values) noexcept  //
+			constexpr enumeration(Args... a_values) noexcept
 				requires(std::same_as<Args, enum_type> && ...)
 				:
 				_impl((static_cast<underlying_type>(a_values) | ...))
@@ -267,7 +352,7 @@ namespace SFSE
 			[[nodiscard]] constexpr underlying_type underlying() const noexcept { return _impl; }
 
 			template <class... Args>
-			constexpr enumeration& set(Args... a_args) noexcept  //
+			constexpr enumeration& set(Args... a_args) noexcept
 				requires(std::same_as<Args, enum_type> && ...)
 			{
 				_impl |= (static_cast<underlying_type>(a_args) | ...);
@@ -275,7 +360,7 @@ namespace SFSE
 			}
 
 			template <class... Args>
-			constexpr enumeration& reset(Args... a_args) noexcept  //
+			constexpr enumeration& reset(Args... a_args) noexcept
 				requires(std::same_as<Args, enum_type> && ...)
 			{
 				_impl &= ~(static_cast<underlying_type>(a_args) | ...);
@@ -283,21 +368,21 @@ namespace SFSE
 			}
 
 			template <class... Args>
-			[[nodiscard]] constexpr bool any(Args... a_args) const noexcept  //
+			[[nodiscard]] constexpr bool any(Args... a_args) const noexcept
 				requires(std::same_as<Args, enum_type> && ...)
 			{
 				return (_impl & (static_cast<underlying_type>(a_args) | ...)) != static_cast<underlying_type>(0);
 			}
 
 			template <class... Args>
-			[[nodiscard]] constexpr bool all(Args... a_args) const noexcept  //
+			[[nodiscard]] constexpr bool all(Args... a_args) const noexcept
 				requires(std::same_as<Args, enum_type> && ...)
 			{
 				return (_impl & (static_cast<underlying_type>(a_args) | ...)) == (static_cast<underlying_type>(a_args) | ...);
 			}
 
 			template <class... Args>
-			[[nodiscard]] constexpr bool none(Args... a_args) const noexcept  //
+			[[nodiscard]] constexpr bool none(Args... a_args) const noexcept
 				requires(std::same_as<Args, enum_type> && ...)
 			{
 				return (_impl & (static_cast<underlying_type>(a_args) | ...)) == static_cast<underlying_type>(0);
@@ -503,7 +588,7 @@ namespace SFSE
 		}
 
 		template <class... Args>
-		[[nodiscard]] inline auto pun_bits(Args... a_args)  //
+		[[nodiscard]] inline auto pun_bits(Args... a_args)
 			requires(std::same_as<std::remove_cv_t<Args>, bool> && ...)
 		{
 			constexpr auto ARGC = sizeof...(Args);
@@ -611,7 +696,7 @@ namespace SFSE
 		}
 
 		template <class Enum>
-		[[nodiscard]] constexpr auto to_underlying(Enum a_val) noexcept  //
+		[[nodiscard]] constexpr auto to_underlying(Enum a_val) noexcept
 			requires(std::is_enum_v<Enum>)
 		{
 			return static_cast<std::underlying_type_t<Enum>>(a_val);
