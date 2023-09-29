@@ -202,4 +202,4 @@ namespace RE
 		BSSimpleList<ScriptVariable*>           variables;                    // 4C
 	};
 	static_assert(sizeof(Script) == 0x60);
-}  // namespace RE
+}

@@ -70,4 +70,4 @@ namespace SFSE
 
 		return origAddr;
 	}
-}  // namespace SFSE
+}

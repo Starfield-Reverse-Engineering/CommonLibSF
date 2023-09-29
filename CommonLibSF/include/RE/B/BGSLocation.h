@@ -30,4 +30,4 @@ namespace RE
 		bool         hasBeenEverExplored;  // 1DD
 										   //
 	};
-}  // namespace RE
+}

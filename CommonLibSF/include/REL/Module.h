@@ -89,4 +89,4 @@ namespace REL
 		Version                             _version;
 		std::wstring                        _file;
 	};
-}  // namespace REL
+}

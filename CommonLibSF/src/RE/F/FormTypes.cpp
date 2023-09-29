@@ -19,4 +19,4 @@ namespace RE
 
 		return FormType::kNONE;
 	}
-}  // namespace RE
+}

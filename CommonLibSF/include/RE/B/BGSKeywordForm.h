@@ -21,4 +21,4 @@ namespace RE
 		std::uint64_t unk28;
 	};
 	static_assert(sizeof(BGSKeywordForm) == 0x30);
-}  // namespace RE
+}

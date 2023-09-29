@@ -12,4 +12,4 @@ namespace RE
 	{
 		return refCount & kRefCountMask;
 	}
-}  // namespace RE
+}

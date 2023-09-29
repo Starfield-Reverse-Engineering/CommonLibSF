@@ -54,7 +54,7 @@ ContinuationIndentWidth: 4
 Cpp11BracedListStyle: false
 DerivePointerAlignment: false
 DisableFormat: false
-FixNamespaceComments: true
+FixNamespaceComments: false
 IncludeBlocks: Preserve
 IndentCaseBlocks: true
 IndentCaseLabels: false

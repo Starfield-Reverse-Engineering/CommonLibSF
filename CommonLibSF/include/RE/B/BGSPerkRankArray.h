@@ -24,4 +24,4 @@ namespace RE
 		std::uint32_t perkCount;  // 10
 	};
 	static_assert(sizeof(BGSPerkRankArray) == 0x18);
-}  // namespace RE
+}

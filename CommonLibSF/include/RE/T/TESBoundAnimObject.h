@@ -23,4 +23,4 @@ namespace RE
 		std::uint64_t unk110;  // 110
 	};
 	static_assert(sizeof(TESBoundAnimObject) == 0x118);
-}  // namespace RE
+}

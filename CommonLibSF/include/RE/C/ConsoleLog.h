@@ -37,4 +37,4 @@ namespace RE
 			Print(std::vformat(a_fmt.get(), std::make_format_args(a_args...)).c_str());
 		}
 	};
-}  // namespace RE
+}

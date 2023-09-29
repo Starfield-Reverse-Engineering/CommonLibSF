@@ -18,4 +18,4 @@ namespace RE
 		virtual ~INISettingCollection();
 	};
 	static_assert(sizeof(INISettingCollection) == 0x160);
-}  // namespace RE
+}

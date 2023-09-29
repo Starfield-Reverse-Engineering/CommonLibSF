@@ -15,4 +15,4 @@ namespace RE
 
 		//
 	};
-}  // namespace RE
+}

@@ -34,4 +34,4 @@ namespace RE
 		TESForm*      _owner;  // 08
 	};
 	static_assert(sizeof(BGSEditorID) == 0x10);
-}  // namespace RE
+}

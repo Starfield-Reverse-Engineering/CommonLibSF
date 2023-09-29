@@ -1191,7 +1191,7 @@ namespace SFSE::WinAPI
 		const void*  a_buffer,
 		std::size_t  a_bufferLen,
 		std::size_t* a_bufferWritten) noexcept;
-}  // namespace SFSE::WinAPI
+}
 
 #endif  // _INC_WINAPIFAMILY
 
@@ -1204,4 +1204,4 @@ namespace RE::DirectX
 		float m[4][4];
 	};
 	static_assert(sizeof(XMFLOAT4X4) == 0x40);
-}  // namespace RE::DirectX
+}

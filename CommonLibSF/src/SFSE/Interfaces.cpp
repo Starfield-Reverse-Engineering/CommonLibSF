@@ -116,4 +116,4 @@ namespace SFSE
 	{
 		return reinterpret_cast<const PluginVersionData*>(WinAPI::GetProcAddress(WinAPI::GetCurrentModule(), "SFSEPlugin_Version"));
 	}
-}  // namespace SFSE
+}

@@ -12,4 +12,4 @@ namespace RE
 		virtual ~RegSettingCollection();
 	};
 	static_assert(sizeof(RegSettingCollection) == 0x160);
-}  // namespace RE
+}

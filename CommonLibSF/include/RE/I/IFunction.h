@@ -57,5 +57,5 @@ namespace RE
 			BSIntrusiveRefCounted refCount;  // 08
 		};
 		static_assert(sizeof(IFunction) == 0x10);
-	}  // namespace BSScript
-}  // namespace RE
+	}
+}

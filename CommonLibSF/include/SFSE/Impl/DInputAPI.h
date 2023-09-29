@@ -592,4 +592,4 @@ namespace RE::DirectInput8
 		virtual HRESULT ConfigureDevices(LPDICONFIGUREDEVICESCALLBACK, DICONFIGUREDEVICESPARAMSA*, std::uint32_t, void*) noexcept = 0;
 	};
 
-}  // namespace RE::DirectInput8
+}

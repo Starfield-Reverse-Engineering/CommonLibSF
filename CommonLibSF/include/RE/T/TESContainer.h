@@ -16,4 +16,4 @@ namespace RE
 		std::uint32_t     numContainerObjects;  // 10
 	};
 	static_assert(sizeof(TESContainer) == 0x18);
-}  // namespace RE
+}

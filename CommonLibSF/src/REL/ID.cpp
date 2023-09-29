@@ -142,7 +142,7 @@ namespace REL
 				_version[i] = static_cast<std::uint16_t>(version[i]);
 			}
 		}
-	}  // namespace database
+	}
 
 	[[nodiscard]] std::size_t IDDatabase::id2offset(std::uint64_t a_id) const
 	{
@@ -349,4 +349,4 @@ namespace REL
 	}
 
 	IDDatabase IDDatabase::_instance;
-}  // namespace REL
+}
