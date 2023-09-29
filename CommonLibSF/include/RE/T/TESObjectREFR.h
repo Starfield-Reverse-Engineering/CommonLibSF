@@ -302,19 +302,13 @@ namespace RE
 		[[nodiscard]] bool                  IsSpaceshipDocked();
 
 		// members
-		std::uint32_t  unk80;          // 80
-		std::uint32_t  unk84;          // 84
-		std::uint64_t  unk88;          // 88
-		std::uint64_t  unk90;          // 90
-		std::uint32_t  unk98;          // 98
-		std::uint8_t   pad9C[4];       // 9C
-		OBJ_REFR       data;           // A0
-		std::uint64_t  unkD0;          // D0
-		std::uint64_t  unkD8;          // D8
-		TESObjectCELL* parentCell;     // E0
-		void*          loadedData;     // E8
-		std::uint64_t  unkF0;          // F0
-		std::uint64_t  extraDataList;  // F8
+		OBJ_REFR       data;           // 0A0
+		std::uint64_t  unkD0;          // 0D0
+		std::uint64_t  unkD8;          // 0D8
+		TESObjectCELL* parentCell;     // 0E0
+		void*          loadedData;     // 0E8
+		std::uint64_t  unkF0;          // 0F0
+		std::uint64_t  extraDataList;  // 0F8
 		std::uint64_t  unk100;         // 100
 		std::uint16_t  scale;          // 108
 		std::uint8_t   unk10A;         // 10A
