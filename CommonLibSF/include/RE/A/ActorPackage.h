@@ -21,5 +21,4 @@ namespace RE
 		std::int8_t       preferredSpeed;         // 2B
 	};
 	static_assert(sizeof(ActorPackage) == 0x30);
-}
-
+}  // namespace RE

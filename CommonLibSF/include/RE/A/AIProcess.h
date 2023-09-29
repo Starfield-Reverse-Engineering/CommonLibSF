@@ -41,4 +41,4 @@ namespace RE
 		std::uint64_t          unkF0;              // F0
 	};
 	static_assert(sizeof(AIProcess) == 0xF8);
-}
+}  // namespace RE
