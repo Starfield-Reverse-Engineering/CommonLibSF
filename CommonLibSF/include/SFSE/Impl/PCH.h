@@ -237,7 +237,7 @@ namespace SFSE
 
 			template <class CharT, std::size_t N>
 			string(const CharT (&)[N]) -> string<CharT, N - 1>;
-		}  // namespace nttp
+		}
 
 		template <class EF>
 			requires(std::invocable<std::remove_reference_t<EF>>)
@@ -394,8 +394,8 @@ namespace SFSE
 
 		template <class... Args>
 		enumeration(Args...) -> enumeration<std::common_type_t<Args...>, std::underlying_type_t<std::common_type_t<Args...>>>;
-	}  // namespace stl
-}  // namespace SFSE
+	}
+}
 
 #define SFSE_MAKE_LOGICAL_OP(a_op, a_result)                                                                    \
 	template <class E, class U1, class U2>                                                                      \
@@ -732,8 +732,8 @@ namespace SFSE
 				return to;
 			}
 		}
-	}  // namespace stl
-}  // namespace SFSE
+	}
+}
 
 #undef SFSE_MAKE_INCREMENTER_OP
 #undef SFSE_MAKE_ENUMERATION_OP
@@ -745,14 +745,14 @@ namespace RE
 	using namespace std::literals;
 	namespace stl = SFSE::stl;
 	namespace WinAPI = SFSE::WinAPI;
-}  // namespace RE
+}
 
 namespace REL
 {
 	using namespace std::literals;
 	namespace stl = SFSE::stl;
 	namespace WinAPI = SFSE::WinAPI;
-}  // namespace REL
+}
 
 #include "REL/REL.h"
 

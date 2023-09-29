@@ -114,4 +114,4 @@ namespace RE
 		REL::Relocation<func_t> func{ REL::ID(198220) };
 		return func(a_result, a_string, a_caseSensitive);
 	}
-}  // namespace RE
+}

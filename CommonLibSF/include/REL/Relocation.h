@@ -116,7 +116,7 @@ namespace REL
 
 			return func(std::forward<First>(a_first), std::addressof(result), std::forward<Rest>(a_rest)...);
 		}
-	}  // namespace detail
+	}
 
 	inline constexpr std::uint8_t NOP = 0x90;
 	inline constexpr std::uint8_t NOP2[] = { 0x66, 0x90 };
@@ -272,7 +272,7 @@ namespace REL
 
 		std::uintptr_t _address{ 0 };
 	};
-}  // namespace REL
+}
 
 #undef REL_MAKE_MEMBER_FUNCTION_NON_POD_TYPE
 #undef REL_MAKE_MEMBER_FUNCTION_NON_POD_TYPE_HELPER

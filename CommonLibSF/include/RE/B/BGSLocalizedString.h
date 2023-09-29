@@ -47,4 +47,4 @@ namespace RE
 		BSFixedStringCS _data;  // 0
 	};
 	static_assert(sizeof(BGSLocalizedString) == 0x8);
-}  // namespace RE
+}

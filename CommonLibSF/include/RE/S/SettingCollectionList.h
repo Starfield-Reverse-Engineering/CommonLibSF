@@ -14,4 +14,4 @@ namespace RE
 		BSSimpleList<T*> settings;  // 118
 	};
 	extern template class SettingCollectionList<Setting>;
-}  // namespace RE
+}

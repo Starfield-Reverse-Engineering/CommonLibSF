@@ -17,4 +17,4 @@ namespace RE
 		DestructibleObjectData* data;  // 08
 	};
 	static_assert(sizeof(BGSDestructibleObjectForm) == 0x10);
-}  // namespace RE
+}

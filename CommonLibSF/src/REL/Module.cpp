@@ -57,4 +57,4 @@ namespace REL
 		const auto base = AsAddress(WinAPI::GetModuleHandle(a_filePath.empty() ? WinAPI::GetProcPath(nullptr).data() : a_filePath.data()));
 		return get(base);
 	}
-}  // namespace REL
+}

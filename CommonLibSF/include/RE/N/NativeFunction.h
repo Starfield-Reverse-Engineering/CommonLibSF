@@ -31,5 +31,5 @@ namespace RE
 			void* _callback;  // 50
 		};
 		static_assert(sizeof(NativeFunction) == 0x60);
-	}  // namespace BSScript
-}  // namespace RE
+	}
+}

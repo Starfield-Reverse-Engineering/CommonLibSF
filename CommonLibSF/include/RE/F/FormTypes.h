@@ -225,7 +225,7 @@ namespace RE
 
 	[[nodiscard]] const char* FormTypeToString(FormType a_formType);
 	[[nodiscard]] FormType    StringToFormType(std::string_view a_formType);
-}  // namespace RE
+}
 
 namespace std
 {
@@ -233,7 +233,7 @@ namespace std
 	{
 		return RE::FormTypeToString(a_formType);
 	}
-}  // namespace std
+}
 
 #ifdef FMT_VERSION
 namespace fmt
@@ -253,7 +253,7 @@ namespace fmt
 			return fmt::format_to(a_ctx.out(), "{}", RE::FormTypeToString(a_formType));
 		}
 	};
-}  // namespace fmt
+}
 #endif
 
 #ifdef __cpp_lib_format
@@ -268,7 +268,7 @@ namespace std
 			return formatter<std::string_view, CharT>::format(RE::FormTypeToString(a_formType), a_ctx);
 		}
 	};
-}  // namespace std
+}
 #endif
 
 #define SF_FORMTYPE(TYPE) \

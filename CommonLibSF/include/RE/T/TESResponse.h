@@ -17,4 +17,4 @@ namespace RE
 		std::uint32_t      unk24;         // 24
 	};
 	static_assert(sizeof(TESResponse) == 0x28);
-}  // namespace RE
+}

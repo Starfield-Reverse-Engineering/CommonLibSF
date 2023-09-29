@@ -132,6 +132,6 @@ namespace RE
 				BSFixedString _docString;                       // 48
 			};
 			static_assert(sizeof(NativeFunctionBase) == 0x50);
-		}  // namespace NF_util
-	}      // namespace BSScript
-}  // namespace RE
+		}
+	}
+}

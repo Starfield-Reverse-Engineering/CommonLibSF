@@ -18,4 +18,4 @@ namespace RE
 		NiPointer<BGSAttackDataMap> attackDataMap;  // 08
 	};
 	static_assert(sizeof(BGSAttackDataForm) == 0x10);
-}  // namespace RE
+}

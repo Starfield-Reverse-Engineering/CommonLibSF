@@ -20,4 +20,4 @@ namespace SFSE
 
 	Trampoline& GetTrampoline();
 	void        AllocTrampoline(std::size_t a_size, bool a_trySFSEReserve = true);
-}  // namespace SFSE
+}

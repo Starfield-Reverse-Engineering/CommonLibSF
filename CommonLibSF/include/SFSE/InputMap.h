@@ -49,5 +49,5 @@ namespace SFSE
 		std::string GetKeyboardKeyName(std::uint32_t keyCode);
 		std::string GetMouseButtonName(std::uint32_t keyCode);
 		std::string GetGamepadButtonName(std::uint32_t a_keyCode);
-	}  // namespace InputMap
-}  // namespace SFSE
+	}
+}

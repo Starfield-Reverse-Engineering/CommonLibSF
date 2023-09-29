@@ -129,7 +129,7 @@ namespace REL
 					return position * 10;
 				}
 			}
-		}  // namespace detail
+		}
 
 		template <char... C>
 		[[nodiscard]] constexpr REL::Version operator""_v() noexcept
@@ -143,7 +143,7 @@ namespace REL
 		{
 			return Version(std::string_view(str, len));
 		}
-	}  // namespace literals
+	}
 
 	[[nodiscard]] std::optional<Version> get_file_version(stl::zwstring a_filename);
-}  // namespace REL
+}

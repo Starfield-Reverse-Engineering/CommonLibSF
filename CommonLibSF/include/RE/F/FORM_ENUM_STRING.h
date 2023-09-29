@@ -18,4 +18,4 @@ namespace RE
 		FormType    formType;    // 08
 	};
 	static_assert(sizeof(FORM_ENUM_STRING) == 0x10);
-}  // namespace RE
+}

@@ -1048,4 +1048,4 @@ namespace SFSE::WinAPI
 				static_cast<::SIZE_T>(a_bufferLen),
 				static_cast<::SIZE_T*>(a_bufferWritten)));
 	}
-}  // namespace SFSE::WinAPI
+}

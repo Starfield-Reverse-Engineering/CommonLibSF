@@ -22,7 +22,7 @@ namespace RE
 		};
 
 		static_assert(sizeof(type_info) == 0x18);
-	}  // namespace msvc
+	}
 
 	namespace RTTI
 	{
@@ -133,7 +133,7 @@ namespace RE
 		};
 
 		static_assert(sizeof(CompleteObjectLocator) == 0x14);
-	}  // namespace RTTI
+	}
 
 	inline void* RTDynamicCast(void* a_inptr, std::int32_t a_vfDelta, void* a_srcType, void* a_targetType, std::int32_t a_isReference)
 	{
@@ -185,8 +185,8 @@ namespace RE
 
 		template <class To, class From>
 		inline constexpr bool cast_is_valid_v = cast_is_valid<To, From>::value;
-	}  // namespace detail
-}  // namespace RE
+	}
+}
 
 template <class To, class From, std::enable_if_t<RE::detail::cast_is_valid_v<To, From*>, int> = 0>
 To starfield_cast(From* a_from)

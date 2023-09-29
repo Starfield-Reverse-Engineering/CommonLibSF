@@ -63,4 +63,4 @@ namespace RE
 		std::uint32_t                                       sortIndex;            // 17C
 	};
 	static_assert(sizeof(ActorValueInfo) == 0x180);
-}  // namespace RE
+}

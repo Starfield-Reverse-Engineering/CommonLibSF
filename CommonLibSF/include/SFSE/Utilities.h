@@ -33,5 +33,5 @@ namespace SFSE
 		{
 			write_vfunc<From>(To::VTABLE[a_vtableIdx]);
 		}
-	}  // namespace stl
-}  // namespace SFSE
+	}
+}

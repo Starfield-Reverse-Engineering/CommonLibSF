@@ -22,4 +22,4 @@ namespace RE
 		virtual void Unk_6A();  // 6A
 		virtual void Unk_6B();  // 6B
 	};
-}  // namespace RE
+}

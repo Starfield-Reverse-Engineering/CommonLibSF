@@ -15,4 +15,4 @@ namespace RE
 		std::uint64_t unk10;  // 10
 	};
 	static_assert(sizeof(TESSpellList) == 0x18);
-}  // namespace RE
+}
