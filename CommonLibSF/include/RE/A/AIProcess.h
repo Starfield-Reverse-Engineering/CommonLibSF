@@ -11,6 +11,7 @@ namespace RE
 	// F8
 	class AIProcess
 	{
+	public:
 		MiddleLowProcessData*  middleLow;          // 00
 		MiddleHighProcessData* middleHigh;         // 08
 		HighProcessData*       high;               // 10
