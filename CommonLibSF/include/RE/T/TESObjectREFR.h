@@ -17,6 +17,7 @@ namespace RE
 	class BSAnimationGraphEvent;
 	class BSTransformDeltaEvent;
 	class TESBoundObject;
+	class TESModel;
 	class TESObjectCELL;
 	class TESRace;
 	class TESTopicInfo;
@@ -94,7 +95,7 @@ namespace RE
 		virtual void         Unk_75();                                                                                                                          // 075
 		virtual void         Unk_76();                                                                                                                          // 076
 		virtual void         Unk_77();                                                                                                                          // 077
-		virtual void         Unk_78();                                                                                                                          // 078
+		virtual bool         IsInZeroGravity();                                                                                                                 // 078
 		virtual void         Unk_79();                                                                                                                          // 079
 		virtual BGSScene*    GetCurrentScene() const;                                                                                                           // 07A
 		virtual void         Unk_7B();                                                                                                                          // 07B
@@ -149,7 +150,7 @@ namespace RE
 		virtual void         Unk_AC();                                                                                                                          // 0AC - Get3D(NiPointer<NiAVObject>&)?
 		virtual void         Unk_AD();                                                                                                                          // 0AD
 		virtual void         Unk_AE();                                                                                                                          // 0AE
-		virtual void         Unk_AF();                                                                                                                          // 0AF
+		virtual TESModel*    GetTESModel() const;                                                                                                               // 0AF
 		virtual TESRace*     GetVisualsRace() const;                                                                                                            // 0B0
 		virtual void         Unk_B1();                                                                                                                          // 0B1
 		virtual void         Unk_B2();                                                                                                                          // 0B2
@@ -242,7 +243,7 @@ namespace RE
 		virtual void         Unk_109();                                                                                                                         // 109
 		virtual void         Unk_10A();                                                                                                                         // 10A
 		virtual void         Unk_10B();                                                                                                                         // 10B
-		virtual void         Unk_10C();                                                                                                                         // 10C
+		virtual void         SetParentCell(TESObjectCELL* a_cell);                                                                                              // 10C
 		virtual bool         IsDead(bool a_notEssential) const;                                                                                                 // 10D
 		virtual bool         ProcessInWater(std::uint32_t a_bodyID, float a_waterHeight, float a_deltaTime);                                                    // 10E
 		virtual void         Unk_10F();                                                                                                                         // 10F

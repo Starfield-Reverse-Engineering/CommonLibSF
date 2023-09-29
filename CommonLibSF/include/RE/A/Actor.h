@@ -1,36 +1,153 @@
 #pragma once
 
 #include "RE/A/AIProcess.h"
-#include "RE/A/ActorPackage.h"
+#include "RE/A/ActorState.h"
+#include "RE/I/IMovementStateStore.h"
+#include "RE/I/IStoreAnimationActions.h"
+#include "RE/M/MagicTarget.h"
 #include "RE/T/TESObjectREFR.h"
 
 namespace RE
 {
-	class CombatGroup;
-	class TESFaction;
 	class AIProcess;
+	class CombatController;
+	class CombatGroup;
+	class MovementMessageUpdateRequestImmediate;
+	class TESFaction;
+	class TESRace;
+
+	struct ActorCPMEvent;
+	struct ActorSprintEvent;
+	struct bhkCharacterMoveFinishEvent;
+	struct bhkCharacterStateChangeEvent;
+	struct bhkNonSupportContactEvent;
+	struct BSMovementDataChangedEvent;
+	struct BSNavmeshChangeEvent;
+	struct BSSubGraphActivationUpdate;
+	struct Perks;
+
+	namespace PerkValueEvents
+	{
+		struct PerkValueChangedEvent;
+		struct PerkEntryUpdatedEvent;
+	}
+
+	enum class ACTOR_CRITICAL_STAGE
+	{
+		kNone = 0,
+		kGooStart = 1,
+		kGooEnd = 2,
+		kDisintegrateStart = 3,
+		kDisintegrateEnd = 4,
+		kFreezeStart = 5,
+		kFreezeEnd = 6
+
+		kTotal
+	};
 
 	class Actor :
-		public TESObjectREFR  // 110
-							  // ...
+		public TESObjectREFR,                                           // 000
+		public MagicTarget,                                             // 110
+		public ActorState,                                              // 128
+		public IMovementStateStore,                                     // 138
+		public IStoreAnimationActions,                                  // 140
+		public BSTEventSink<BSNavmeshChangeEvent>,                      // 148
+		public BSTEventSink<BSMovementDataChangedEvent>,                // 150
+		public BSTEventSink<BSSubGraphActivationUpdate>,                // 158
+		public BSTEventSink<bhkCharacterMoveFinishEvent>,               // 160
+		public BSTEventSink<bhkNonSupportContactEvent>,                 // 168
+		public BSTEventSink<bhkCharacterStateChangeEvent>,              // 170
+		public BSTEventSource<MovementMessageUpdateRequestImmediate>,   // 178
+		public BSTEventSource<PerkValueEvents::PerkValueChangedEvent>,  // 1A0
+		public BSTEventSource<PerkValueEvents::PerkEntryUpdatedEvent>,  // 1C8
+		public BSTEventSource<ActorCPMEvent>,                           // 1F0
+		public BSTEventSource<ActorSprintEvent>                         // 218
 	{
 	public:
 		SF_RTTI_VTABLE(Actor);
 		SF_FORMTYPE(ACHR);
 
+		enum class BOOL_BITS
+		{
+			kNone = 0,
+			kDelayUpdateScenegraph = 1 << 0,
+			kProcessMe = 1 << 1,
+			kMurderAlarm = 1 << 2,
+			kHasSceneExtra = 1 << 3,
+			kHeadingFixed = 1 << 4,
+			kSpeakingDone = 1 << 5,
+			kIgnoreChangeAnimationCall = 1 << 6,
+			kSoundFileDone = 1 << 7,
+			kVoiceFileDone = 1 << 8,
+			kInTempChangeList = 1 << 9,
+			kDoNotRunSayToCallback = 1 << 10,
+			kDead = 1 << 11,
+			kForceGreetingPlayer = 1 << 12,
+			kForceUpdateQuestTarget = 1 << 13,
+			kSearchingInCombat = 1 << 14,
+			kAttackOnNextTheft = 1 << 15,
+			kEvpBuffered = 1 << 16,
+			kResetAI = 1 << 17,
+			kInWater = 1 << 18,
+			kSwimming = 1 << 19,
+			kVoicePausedByScript = 1 << 20,
+			kWasInFrustrum = 1 << 21,
+			kShouldRotateToTrack = 1 << 22,
+			kSetOnDeath = 1 << 23,
+			kDoNotPadVoice = 1 << 24,
+			kFootIKInRange = 1 << 25,
+			kPlayerTeammate = 1 << 26,
+			kGivePlayerXP = 1 << 27,
+			kSoundCallbackSuccess = 1 << 28,
+			kUseEmotion = 1 << 29,
+			kGuard = 1 << 30,
+			kParalyzed = 1 << 31
+		};
+
+		enum class BOOL_FLAGS
+		{
+			kNone = 0,
+			kScenePackage = 1 << 0,
+			kIsAMount = 1 << 1,
+			kIsMountPointClear = 1 << 2,
+			kIsGettingOnOffMount = 1 << 3,
+			kInRandomScene = 1 << 4,
+			kNoBleedoutRecovery = 1 << 5,
+			kInBleedoutAnimation = 1 << 6,
+			kCanDoFavor = 1 << 7,
+			kShouldAnimGraphUpdate = 1 << 8,
+			kCanSpeakToEssentialDown = 1 << 9,
+			kBribedByPlayer = 1 << 10,
+			kAngryWithPlayer = 1 << 11,
+			kIsTresspassing = 1 << 12,
+			kCanSpeak = 1 << 13,
+			kIsInKillMove = 1 << 14,
+			kAttackOnSight = 1 << 15,
+			kIsCommandedActor = 1 << 16,
+			kForceOneAnimGraphUpdate = 1 << 17,
+			kEssential = 1 << 18,
+			kProtected = 1 << 19,
+			kAttackingDisabled = 1 << 20,
+			kCastingDisabled = 1 << 21,
+			kSceneHeadtrackRotation = 1 << 22,
+			kForceIncMinBoneUpdate = 1 << 23,
+			kCrimeSearch = 1 << 24,
+			kMovingIntoLoadedArea = 1 << 25,
+			kDoNotShowOnStealthMeter = 1 << 26,
+			kMovementBlocked = 1 << 27,
+			kAllowInstantFurniturePopInPlayerCell = 1 << 28,
+			kForceAnimGraphUpdate = 1 << 29,
+			kCheckAddEffectDualCast = 1 << 30,
+			kUnderwater = 1 << 31,
+		};
+
+		enum class BOOL_FLAGS2
+		{
+			kNone = 0,
+			kHasChargenSkeleton = 1 << 5,
+		};
+
 		~Actor() override;  // 00
-
-		inline static Actor* PlayerCharacter()
-		{
-			static REL::Relocation<Actor**> singleton{ REL::ID(865059) };
-			return *singleton;
-		}
-
-		inline static bool IsPlayerCharacterInChargen()
-		{
-			auto PC = PlayerCharacter();
-			return *(stl::adjust_pointer<bool>(PC, 0xF24));
-		}
 
 		// add
 		virtual void         PlayPickUpSound(TESBoundObject* a_boundObj, bool a_pickUp, bool a_use);                 // 130
@@ -95,14 +212,14 @@ namespace RE
 		virtual void         Unk_16B();                                                                              // 16B
 		virtual bool         IsInCombat() const;                                                                     // 16C
 		virtual void         Unk_16D();                                                                              // 16D
-		virtual void         Unk_16E();                                                                              // 16E
+		virtual void         StopCombat();                                                                           // 16E
 		virtual void         Unk_16F();                                                                              // 16F
 		virtual void         SetLifeState(std::uint32_t a_state);                                                    // 170
 		virtual void         Unk_171();                                                                              // 171
 		virtual void         Unk_172();                                                                              // 172
 		virtual void         Unk_173();                                                                              // 173
 		virtual void         Unk_174();                                                                              // 174
-		virtual void         Unk_175();                                                                              // 175
+		virtual bool         IsInFaction(TESFaction* a_faction);                                                     // 175
 		virtual void         Unk_176();                                                                              // 176
 		virtual void         Unk_177();                                                                              // 177
 		virtual void         Unk_178();                                                                              // 178
@@ -148,142 +265,110 @@ namespace RE
 		virtual void         Unk_1A0();                                                                              // 1A0
 		virtual void         Unk_1A1();                                                                              // 1A1
 
-		std::uint64_t unk110;          // 110
-		std::uint64_t unk118;          // 118
-		std::uint64_t unk120;          // 120
-		std::uint64_t unk128;          // 128
-		std::uint64_t unk130;          // 130
-		std::uint64_t unk138;          // 138
-		std::uint64_t unk140;          // 140
-		std::uint64_t unk148;          // 148
-		std::uint64_t unk150;          // 150
-		std::uint64_t unk158;          // 158
-		std::uint64_t unk160;          // 160
-		std::uint64_t unk168;          // 168
-		std::uint64_t unk170;          // 170
-		std::uint64_t unk178;          // 178
-		std::uint64_t unk180;          // 180
-		std::uint64_t unk188;          // 188
-		std::uint64_t unk190;          // 190
-		std::uint64_t unk198;          // 198
-		std::uint64_t unk1A0;          // 1A0
-		std::uint64_t unk1A8;          // 1A8
-		std::uint64_t unk1B0;          // 1B0
-		std::uint64_t unk1B8;          // 1B8
-		std::uint64_t unk1C0;          // 1C0
-		std::uint64_t unk1C8;          // 1C8
-		std::uint64_t unk1D0;          // 1D0
-		std::uint64_t unk1D8;          // 1D8
-		std::uint64_t unk1E0;          // 1E0
-		std::uint64_t unk1E8;          // 1E8
-		std::uint64_t unk1F0;          // 1F0
-		std::uint64_t unk1F8;          // 1F8
-		std::uint64_t unk200;          // 200
-		std::uint64_t unk208;          // 208
-		std::uint64_t unk210;          // 210
-		std::uint64_t unk218;          // 218
-		std::uint64_t unk220;          // 220
-		std::uint64_t unk228;          // 228
-		std::uint64_t unk230;          // 230
-		std::uint64_t unk238;          // 238
-		std::uint64_t unk240;          // 240
-		std::uint64_t unk248;          // 248
-		std::uint64_t unk250;          // 250
-		std::uint64_t unk258;          // 258
-		AIProcess*    currentProcess;  // 260
-		std::uint64_t unk268;          // 268
-		std::uint64_t unk270;          // 270
-		std::uint64_t unk278;          // 278
-		std::uint64_t unk280;          // 280
-		std::uint64_t unk288;          // 288
-		std::uint64_t unk290;          // 290
-		std::uint64_t unk298;          // 298
-		std::uint64_t unk2A0;          // 2A0
-		std::uint64_t unk2A8;          // 2A8
-		std::uint64_t unk2B0;          // 2B0
-		std::uint64_t unk2B8;          // 2B8
-		std::uint64_t unk2C0;          // 2C0
-		std::uint64_t unk2C8;          // 2C8
-		std::uint64_t unk2D0;          // 2D0
-		std::uint64_t unk2D8;          // 2D8
-		std::uint64_t unk2E0;          // 2E0
-		std::uint64_t unk2E8;          // 2E8
-		std::uint64_t unk2F0;          // 2F0
-		std::uint64_t unk2F8;          // 2F8
-		std::uint64_t unk300;          // 300
-		std::uint64_t unk308;          // 308
-		std::uint64_t unk310;          // 310
-		std::uint64_t unk318;          // 318
-		std::uint64_t unk320;          // 320
-		std::uint64_t unk328;          // 328
-		std::uint64_t unk330;          // 330
-		std::uint64_t unk338;          // 338
-		std::uint64_t unk340;          // 340
-		std::uint64_t unk348;          // 348
-		std::uint64_t unk350;          // 350
-		std::uint64_t unk358;          // 358
-		std::uint64_t unk360;          // 360
-		std::uint64_t unk368;          // 368
-		std::uint64_t unk370;          // 370
-		std::uint64_t unk378;          // 378
-		std::uint64_t unk380;          // 380
-		std::uint64_t unk388;          // 388
-		std::uint64_t unk390;          // 390
-		std::uint64_t unk398;          // 398
-		std::uint64_t unk3A0;          // 3A0
-		std::uint64_t unk3A8;          // 3A8
-		std::uint64_t unk3B0;          // 3B0
-		std::uint64_t unk3B8;          // 3B8
-		std::uint64_t unk3C0;          // 3C0
-		std::uint64_t unk3C8;          // 3C8
-		std::uint64_t unk3D0;          // 3D0
-		std::uint64_t unk3D8;          // 3D8
-		std::uint64_t unk3E0;          // 3E0
-		std::uint64_t unk3E8;          // 3E8
-		std::uint64_t unk3F0;          // 3F0
-		std::uint64_t unk3F8;          // 3F8
-		std::uint64_t unk400;          // 400
-		std::uint64_t unk408;          // 408
-		std::uint64_t unk410;          // 410
-		std::uint64_t unk418;          // 418
-		std::uint64_t unk420;          // 420
-		std::uint64_t unk428;          // 428
-		std::uint64_t unk430;          // 430
-		std::uint64_t unk438;          // 438
-		std::uint64_t unk440;          // 440
-		std::uint64_t unk448;          // 448
-		std::uint64_t unk450;          // 450
-		std::uint64_t unk458;          // 458
-		std::uint64_t unk460;          // 460
-		std::uint64_t unk468;          // 468
-		std::uint64_t unk470;          // 470
-		std::uint64_t unk478;          // 478
-		std::uint64_t unk480;          // 480
-		std::uint64_t unk488;          // 488
-		std::uint64_t unk490;          // 490
-		std::uint64_t unk498;          // 498
-		std::uint64_t unk4A0;          // 4A0
-		std::uint64_t unk4A8;          // 4A8
-		std::uint64_t unk4B0;          // 4B0
-		std::uint64_t unk4B8;          // 4B8
-		std::uint64_t unk4C0;          // 4C0
-		std::uint64_t unk4C8;          // 4C8
-		std::uint64_t unk4D0;          // 4D0
-		std::uint64_t unk4D8;          // 4D8
-		std::uint64_t unk4E0;          // 4E0
-		std::uint64_t unk4E8;          // 4E8
-		std::uint64_t unk4F0;          // 4F0
-		std::uint64_t unk4F8;          // 4F8
-		std::uint64_t unk500;          // 500
-		std::uint64_t unk508;          // 508
-		std::uint64_t unk510;          // 510
-		std::uint64_t unk518;          // 518
-		std::uint64_t unk520;          // 520
-		std::uint64_t unk528;          // 528
-		std::uint64_t unk530;          // 530
-		std::uint64_t unk538;          // 538
-		std::uint64_t unk540;          // 540
-		std::uint64_t unk548;          // 548
+		// members
+		stl::enumeration<BOOL_BITS, std::uint32_t>           boolBits;                 // 240
+		std::uint32_t                                        unk244;                   // 244
+		std::uint64_t                                        unk248;                   // 248
+		std::uint64_t                                        unk250;                   // 250
+		std::uint64_t                                        unk258;                   // 258
+		AIProcess*                                           currentProcess;           // 260
+		std::uint64_t                                        unk268;                   // 268
+		std::uint64_t                                        unk270;                   // 270
+		std::uint64_t                                        unk278;                   // 278
+		std::uint64_t                                        unk280;                   // 280
+		CombatController*                                    combatController;         // 288
+		std::uint64_t                                        unk290;                   // 290
+		std::uint64_t                                        unk298;                   // 298
+		std::uint64_t                                        unk2A0;                   // 2A0
+		std::uint64_t                                        unk2A8;                   // 2A8
+		std::uint64_t                                        unk2B0;                   // 2B0
+		std::uint64_t                                        unk2B8;                   // 2B8
+		std::uint64_t                                        unk2C0;                   // 2C0
+		stl::enumeration<ACTOR_CRITICAL_STAGE, std::int32_t> criticalStage;            // 2C8
+		std::uint32_t                                        dialogueItemTarget;       // 2CC - TESPointerHandle
+		std::uint32_t                                        currentCombatTarget;      // 2D0 - TESPointerHandle
+		std::uint32_t                                        myKiller;                 // 2D4 - TESPointerHandle
+		std::uint64_t                                        unk2D8;                   // 2D8
+		std::uint64_t                                        unk2E0;                   // 2E0
+		std::uint64_t                                        unk2E8;                   // 2E8
+		std::uint64_t                                        unk2F0;                   // 2F0
+		std::uint32_t                                        intimidateBribeDayStamp;  // 2F8
+		std::uint32_t                                        unk2FC;                   // 2FC
+		std::uint64_t                                        unk300;                   // 300
+		std::uint64_t                                        unk308;                   // 308
+		std::uint64_t                                        unk310;                   // 310
+		std::uint64_t                                        unk318;                   // 318
+		std::uint64_t                                        unk320;                   // 320
+		std::uint64_t                                        unk328;                   // 328
+		std::uint64_t                                        unk330;                   // 330
+		std::uint64_t                                        unk338;                   // 338
+		std::uint64_t                                        unk340;                   // 340
+		std::uint64_t                                        unk348;                   // 348
+		std::uint64_t                                        unk350;                   // 350
+		std::uint64_t                                        unk358;                   // 358
+		std::uint64_t                                        unk360;                   // 360
+		std::uint64_t                                        unk368;                   // 368
+		std::uint64_t                                        unk370;                   // 370
+		std::uint64_t                                        unk378;                   // 378
+		std::uint64_t                                        unk380;                   // 380
+		TESRace*                                             race;                     // 388
+		Perks*                                               perks;                    // 390
+		std::uint64_t                                        unk398;                   // 398
+		std::uint64_t                                        unk3A0;                   // 3A0
+		stl::enumeration<BOOL_FLAGS, std::uint32_t>          boolFlags;                // 3A8
+		stl::enumeration<BOOL_FLAGS2, std::uint32_t>         boolFlags2;               // 3AC
+		std::uint64_t                                        unk3B0;                   // 3B0
+		std::uint64_t                                        unk3B8;                   // 3B8
+		std::uint64_t                                        unk3C0;                   // 3C0
+		std::uint64_t                                        unk3C8;                   // 3C8
+		std::uint64_t                                        unk3D0;                   // 3D0
+		std::uint64_t                                        unk3D8;                   // 3D8
+		std::uint64_t                                        unk3E0;                   // 3E0
+		std::uint64_t                                        unk3E8;                   // 3E8
+		std::uint64_t                                        unk3F0;                   // 3F0
+		std::uint64_t                                        unk3F8;                   // 3F8
+		std::uint64_t                                        unk400;                   // 400
+		std::uint64_t                                        unk408;                   // 408
+		std::uint64_t                                        unk410;                   // 410
+		std::uint64_t                                        unk418;                   // 418
+		std::uint64_t                                        unk420;                   // 420
+		std::uint64_t                                        unk428;                   // 428
+		std::uint64_t                                        unk430;                   // 430
+		std::uint64_t                                        unk438;                   // 438
+		std::uint64_t                                        unk440;                   // 440
+		std::uint64_t                                        unk448;                   // 448
+		std::uint64_t                                        unk450;                   // 450
+		std::uint64_t                                        unk458;                   // 458
+		std::uint64_t                                        unk460;                   // 460
+		std::uint64_t                                        unk468;                   // 468
+		std::uint64_t                                        unk470;                   // 470
+		std::uint64_t                                        unk478;                   // 478
+		std::uint64_t                                        unk480;                   // 480
+		std::uint64_t                                        unk488;                   // 488
+		std::uint64_t                                        unk490;                   // 490
+		std::uint64_t                                        unk498;                   // 498
+		std::uint64_t                                        unk4A0;                   // 4A0
+		std::uint64_t                                        unk4A8;                   // 4A8
+		std::uint64_t                                        unk4B0;                   // 4B0
+		std::uint64_t                                        unk4B8;                   // 4B8
+		std::uint64_t                                        unk4C0;                   // 4C0
+		std::uint64_t                                        unk4C8;                   // 4C8
+		std::uint64_t                                        unk4D0;                   // 4D0
+		std::uint64_t                                        unk4D8;                   // 4D8
+		std::uint64_t                                        unk4E0;                   // 4E0
+		std::uint64_t                                        unk4E8;                   // 4E8
+		std::uint64_t                                        unk4F0;                   // 4F0
+		std::uint64_t                                        unk4F8;                   // 4F8
+		std::uint64_t                                        unk500;                   // 500
+		std::uint64_t                                        unk508;                   // 508
+		std::uint64_t                                        unk510;                   // 510
+		std::uint64_t                                        unk518;                   // 518
+		std::uint64_t                                        unk520;                   // 520
+		std::uint64_t                                        unk528;                   // 528
+		std::uint64_t                                        unk530;                   // 530
+		std::uint64_t                                        unk538;                   // 538
+		std::uint64_t                                        unk540;                   // 540
+		std::uint64_t                                        unk548;                   // 548
 	};
 	static_assert(sizeof(Actor) == 0x550);
 }
