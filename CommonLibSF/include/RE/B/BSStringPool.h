@@ -20,24 +20,21 @@ namespace RE
 				return func(a_entry);
 			}
 
-			void acquire()
+			std::uint32_t acquire()
 			{
-				_InterlockedExchangeAdd(reinterpret_cast<volatile long*>(&_refCount), 1);
+				stl::atomic_ref refCount{ _refCount };
+				return ++refCount;
 			}
 
 			template <class T>
-			[[nodiscard]] const T* data() const noexcept;
-
-			template <>
-			[[nodiscard]] const char* data<char>() const noexcept
+			[[nodiscard]] const T* data() const noexcept
 			{
-				return u8();
-			}
-
-			template <>
-			[[nodiscard]] const wchar_t* data<wchar_t>() const noexcept
-			{
-				return u16();
+				const auto entry = leaf();
+				if (entry) {
+					return reinterpret_cast<const T*>(entry + 1);
+				} else {
+					return nullptr;
+				}
 			}
 
 			[[nodiscard]] const Entry* leaf() const noexcept
@@ -57,26 +54,6 @@ namespace RE
 
 			[[nodiscard]] bool          external() const noexcept { return _flags & kExternal; }
 			[[nodiscard]] std::uint32_t size() const noexcept { return length(); }
-
-			[[nodiscard]] const char* u8() const noexcept
-			{
-				const auto entry = leaf();
-				if (entry) {
-					return reinterpret_cast<const char*>(entry + 1);
-				} else {
-					return nullptr;
-				}
-			}
-
-			[[nodiscard]] const wchar_t* u16() const noexcept
-			{
-				const auto entry = leaf();
-				if (entry) {
-					return reinterpret_cast<const wchar_t*>(entry + 1);
-				} else {
-					return nullptr;
-				}
-			}
 
 			// members
 			Entry* _left;  // 00
