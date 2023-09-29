@@ -21,4 +21,4 @@ namespace RE
 		BGSLocalizedString fullName;  // 08 - FULL
 	};
 	static_assert(sizeof(TESFullName) == 0x10);
-}
+}  // namespace RE

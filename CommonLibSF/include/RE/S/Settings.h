@@ -61,4 +61,4 @@ namespace RE
 	extern template class SettingT<INIPrefSettingCollection>;
 	extern template class SettingT<INISettingCollection>;
 	extern template class SettingT<RegSettingCollection>;
-}
+}  // namespace RE

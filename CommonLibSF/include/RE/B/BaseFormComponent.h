@@ -20,4 +20,4 @@ namespace RE
 		virtual void Unk_0A();                                 // 0A
 	};
 	static_assert(sizeof(BaseFormComponent) == 0x08);
-}
+}  // namespace RE

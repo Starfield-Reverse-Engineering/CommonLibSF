@@ -27,7 +27,7 @@ namespace RE
 
 		inline SinkBase::~SinkBase() = default;
 		inline SourceBase::~SourceBase() = default;
-	}
+	}  // namespace BSTEventDetail
 
 	template <class>
 	class BSTEventSource;
@@ -49,7 +49,7 @@ namespace RE
 	public:
 		~BSTEventSource() override = default;  // 00
 
-		void Notify(const Event& a_event)
+		void Notify(void* a_event)
 		{
 			using func_t = decltype(&BSTEventSource::Notify);
 			REL::Relocation<func_t> func{ REL::ID(178573) };
@@ -86,4 +86,4 @@ namespace RE
 		virtual ~BSTGlobalEvent();  // 00
 	};
 	static_assert(sizeof(BSTGlobalEvent) == 0x08);
-}
+}  // namespace RE

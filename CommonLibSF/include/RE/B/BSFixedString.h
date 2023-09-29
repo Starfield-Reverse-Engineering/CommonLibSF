@@ -41,7 +41,7 @@ namespace RE
 			}
 
 			template <class T>
-			BSFixedString(const T& a_string)  //
+			BSFixedString(const T& a_string)
 				requires(std::convertible_to<const T&, std::basic_string_view<value_type>> &&
 						 !std::convertible_to<const T&, const_pointer> &&
 						 !std::same_as<T, BSFixedString<value_type, true>> &&
@@ -86,7 +86,7 @@ namespace RE
 			}
 
 			template <class T>
-			BSFixedString& operator=(const T& a_string)  //
+			BSFixedString& operator=(const T& a_string)
 				requires(std::convertible_to<const T&, std::basic_string_view<value_type>> &&
 						 !std::convertible_to<const T&, const_pointer> &&
 						 !std::same_as<T, BSFixedString<value_type, true>> &&
@@ -200,10 +200,10 @@ namespace RE
 		extern template class BSFixedString<char, true>;
 		extern template class BSFixedString<wchar_t, false>;
 		extern template class BSFixedString<wchar_t, true>;
-	}
+	}  // namespace detail
 
 	using BSFixedString = detail::BSFixedString<char, false>;
 	using BSFixedStringCS = detail::BSFixedString<char, true>;
 	using BSFixedStringW = detail::BSFixedString<wchar_t, false>;
 	using BSFixedStringWCS = detail::BSFixedString<wchar_t, true>;
-}
+}  // namespace RE

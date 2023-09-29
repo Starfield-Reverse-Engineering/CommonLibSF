@@ -26,4 +26,4 @@ namespace REL
 	private:
 		std::ptrdiff_t _offset{ 0 };
 	};
-}
+}  // namespace REL

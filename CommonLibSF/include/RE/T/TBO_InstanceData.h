@@ -12,4 +12,4 @@ namespace RE
 
 		virtual ~TBO_InstanceData() = default;  // 00
 	};
-}
+}  // namespace RE

@@ -22374,5 +22374,5 @@ namespace RE
 		inline constexpr std::array<REL::ID, 1>   type_info{ REL::ID(284559) };
 		inline constexpr std::array<REL::ID, 1>   winrt__impl__delegate_winrt__Windows__Foundation__EventHandler_winrt__Windows__Gaming__Input__Gamepad___lambda_a466c087e9cd272369893bc050bef422__{ REL::ID(438927) };
 		inline constexpr std::array<REL::ID, 1>   winrt__impl__make_marshaler__2__marshaler{ REL::ID(438935) };
-	}
-}
+	}  // namespace VTABLE
+}  // namespace RE

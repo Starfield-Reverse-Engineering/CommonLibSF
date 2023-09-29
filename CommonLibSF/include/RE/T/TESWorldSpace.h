@@ -12,4 +12,4 @@ namespace RE
 	public:
 		SF_FORMTYPE(WRLD);
 	};
-}
+}  // namespace RE

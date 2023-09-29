@@ -50,4 +50,4 @@ namespace RE
 	static_assert(offsetof(TESBoundObject, previewTransform) == 0x88);
 	static_assert(offsetof(TESBoundObject, placementDefaults) == 0xD0);
 	static_assert(sizeof(TESBoundObject) == 0xF0);
-}
+}  // namespace RE

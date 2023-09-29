@@ -120,6 +120,13 @@ namespace RE
 		virtual void                               Unk_60();                                                         // 60
 		virtual void                               Unk_61();                                                         // 61
 
+		std::uint64_t DecRefCount() const
+		{
+			using func_t = decltype(&TESForm::DecRefCount);
+			REL::Relocation<func_t> func{ REL::ID(35164) };
+			return func(this);
+		}
+
 		[[nodiscard]] static TESForm* LookupByID(std::uint32_t a_formID)
 		{
 			using func_t = decltype(&TESForm::LookupByID);
@@ -144,14 +151,14 @@ namespace RE
 		[[nodiscard]] bool Is(FormType a_type) const noexcept { return GetFormType() == a_type; }
 
 		template <class... Args>
-		[[nodiscard]] bool Is(Args... a_args) const noexcept  //
+		[[nodiscard]] bool Is(Args... a_args) const noexcept
 			requires(std::same_as<Args, FormType> && ...)
 		{
 			return (Is(a_args) || ...);
 		}
 
 		template <class T>
-		[[nodiscard]] bool Is() const noexcept  //
+		[[nodiscard]] bool Is() const noexcept
 			requires(std::derived_from<T, TESForm> &&
 					 !std::is_pointer_v<T> &&
 					 !std::is_reference_v<T>)
@@ -171,7 +178,7 @@ namespace RE
 		[[nodiscard]] bool IsNot(FormType a_type) const noexcept { return !Is(a_type); }
 
 		template <class... Args>
-		[[nodiscard]] bool IsNot(Args... a_args) const noexcept  //
+		[[nodiscard]] bool IsNot(Args... a_args) const noexcept
 			requires(std::same_as<Args, FormType> && ...)
 		{
 			return (IsNot(a_args) && ...);
@@ -193,4 +200,4 @@ namespace RE
 		stl::enumeration<FormType, std::uint8_t> formType;     // 36
 	};
 	static_assert(sizeof(TESForm) == 0x38);
-}
+}  // namespace RE

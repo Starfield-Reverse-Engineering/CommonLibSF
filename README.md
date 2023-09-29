@@ -1,11 +1,11 @@
 # CommonLibSF
 
-## A collaborative reverse-engineered library for Starfield.
+## A collaborative reverse-engineered library for Starfield
 
 [![C++23](https://img.shields.io/static/v1?label=standard&message=c%2B%2B23&color=blue&logo=c%2B%2B&&logoColor=red&style=flat)](https://en.cppreference.com/w/cpp/compiler_support)
 ![Platform](https://img.shields.io/static/v1?label=platform&message=windows&color=dimgray&style=flat&logo=windows)
 [![Game version](https://img.shields.io/badge/game%20version-1.7.29-orange)](#Developing-with-CommonLibSF)
-[![VCPKG_VER](https://img.shields.io/static/v1?label=vcpkg%20registry&message=2023-09-26.11&color=green&style=flat)](https://github.com/Starfield-Reverse-Engineering/Starfield-RE-vcpkg)
+[![VCPKG_VER](https://img.shields.io/static/v1?label=vcpkg%20registry&message=2023-09-29.1&color=green&style=flat)](https://github.com/Starfield-Reverse-Engineering/Starfield-RE-vcpkg)
 [![Main CI](https://img.shields.io/github/actions/workflow/status/Starfield-Reverse-Engineering/CommonLibSF/main_ci.yml)](https://github.com/Starfield-Reverse-Engineering/CommonLibSF/actions/workflows/main_ci.yml)
 
 ## Build Dependencies
@@ -22,8 +22,6 @@
 
 ### Using the CommonLibSF plugin templates
 
-You can choose from the following community plugin templates to speed up the setup process:
-
 - [CLibSFPluginTemplate](https://github.com/Starfield-Reverse-Engineering/CLibSFPluginTemplate)
   - Uses **CMake**. Consumes CommonLibSF as a [vcpkg port package](https://github.com/Starfield-Reverse-Engineering/Starfield-RE-vcpkg) or git submodule.
 - [SF_PluginTemplate](https://github.com/gottyduke/SF_PluginTemplate)
@@ -31,52 +29,7 @@ You can choose from the following community plugin templates to speed up the set
 - [commonlibsf-template-xmake](https://github.com/Starfield-Reverse-Engineering/commonlibsf-template-xmake)
   - Uses **XMake**. Consumes CommonLibSF as an [xrepo package](https://github.com/Starfield-Reverse-Engineering/commonlibsf-xrepo).
 
-### Including CommonLibSF in your project
-
-#### vcpkg
-
-[Instructions for consuming CommonLibSF using vcpkg are provided at our vcpkg registry repo.](https://github.com/Starfield-Reverse-Engineering/Starfield-RE-vcpkg)
-
-#### xrepo
-
-> Thanks to Qudix for maintaining the custom xmake repo!
-
-Add the following to your `xmake.lua`:
-
-```lua
--- add commonlibsf-xrepo repository
-add_repositories("re https://github.com/Starfield-Reverse-Engineering/commonlibsf-xrepo")
-
--- require package dependencies
-add_requires("commonlibsf")
-
-target("name")
-...
-    -- bind packages to the target
-    add_packages("commonlibsf")
-```
-
-#### git submodule
-
-To consume CommonLibSF as a submodule, `cd` into your project directory and run:
-
-```ps
-git submodule add https://github.com/Starfield-Reverse-Engineering/CommonLibSF extern/CommonLibSF
-git submodule update -f --init
-```
-
-Then add the following to your `CMakeLists.txt`:
-
-```cmake
-add_subdirectory(extern/CommonLibSF)
-target_link_libraries(
-  ${PROJECT_NAME}
-  PRIVATE
-  CommonLibSF::CommonLibSF
-)
-```
-
-**NOTE**: You may also use the [custom `add_commonlibsf_plugin` command](https://github.com/Starfield-Reverse-Engineering/CommonLibSF/wiki/Miscellanous-Explanatory-Stuff#custom-cmake-command) instead of `target_link_libraries`.
+### Please see the [Using CommonLibSF wiki page](https://github.com/Starfield-Reverse-Engineering/CommonLibSF/wiki/Using-CommonLibSF) for more information about using CommonLibSF.
 
 ## End-User Dependencies
 

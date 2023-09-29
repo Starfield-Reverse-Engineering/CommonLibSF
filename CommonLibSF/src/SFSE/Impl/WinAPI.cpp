@@ -140,13 +140,13 @@ namespace SFSE::WinAPI
 	}
 
 	void* CreateRemoteThread(
-		void*                a_process,
-		SECURITY_ATTRIBUTES* a_threadAttr,
-		std::size_t          a_stackSize,
-		std::uint32_t (*a_startAddr)(void*),
-		void*          a_param,
-		std::uint32_t  a_flags,
-		std::uint32_t* a_threadId) noexcept
+		void*                 a_process,
+		SECURITY_ATTRIBUTES*  a_threadAttr,
+		std::size_t           a_stackSize,
+		THREAD_START_ROUTINE* a_startAddr,
+		void*                 a_param,
+		std::uint32_t         a_flags,
+		std::uint32_t*        a_threadID) noexcept
 	{
 		return static_cast<void*>(
 			::CreateRemoteThread(
@@ -156,7 +156,25 @@ namespace SFSE::WinAPI
 				reinterpret_cast<::LPTHREAD_START_ROUTINE>(a_startAddr),
 				static_cast<::LPVOID>(a_param),
 				static_cast<::DWORD>(a_flags),
-				reinterpret_cast<::LPDWORD>(a_threadId)));
+				reinterpret_cast<::LPDWORD>(a_threadID)));
+	}
+
+	void* CreateThread(
+		SECURITY_ATTRIBUTES*  a_threadAttr,
+		std::size_t           a_stackSize,
+		THREAD_START_ROUTINE* a_startAddr,
+		void*                 a_param,
+		std::uint32_t         a_flags,
+		std::uint32_t*        a_threadID) noexcept
+	{
+		return static_cast<void*>(
+			::CreateThread(
+				reinterpret_cast<::LPSECURITY_ATTRIBUTES>(a_threadAttr),
+				static_cast<::SIZE_T>(a_stackSize),
+				reinterpret_cast<::LPTHREAD_START_ROUTINE>(a_startAddr),
+				static_cast<::LPVOID>(a_param),
+				static_cast<::DWORD>(a_flags),
+				reinterpret_cast<::LPDWORD>(a_threadID)));
 	}
 
 	std::uint32_t ExpandEnvironmentStrings(
@@ -761,6 +779,12 @@ namespace SFSE::WinAPI
 	{
 		return ::ShowCursor(
 			static_cast<::BOOL>(a_show));
+	}
+
+	void Sleep(
+		std::uint32_t a_milliseconds) noexcept
+	{
+		::Sleep(static_cast<DWORD>(a_milliseconds));
 	}
 
 	bool TerminateProcess(

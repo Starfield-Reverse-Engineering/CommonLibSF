@@ -7,4 +7,4 @@ namespace RE
 	public:
 		SF_RTTI_VTABLE(TESFile);
 	};
-}
+}  // namespace RE

@@ -79,4 +79,4 @@ namespace RE
 		return func(this);
 	}
 
-}
+}  // namespace RE

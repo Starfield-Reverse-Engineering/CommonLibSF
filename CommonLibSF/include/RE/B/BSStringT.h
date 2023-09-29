@@ -118,4 +118,4 @@ namespace RE
 		size_type _size{ 0 };        // ??
 		size_type _capacity{ 0 };    // ??
 	};
-}
+}  // namespace RE

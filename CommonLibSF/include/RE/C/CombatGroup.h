@@ -46,4 +46,4 @@ namespace RE
 		*/
 	};
 	//static_assert(sizeof(CombatGroup) == 0x168);
-}
+}  // namespace RE

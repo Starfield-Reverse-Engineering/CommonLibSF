@@ -55,5 +55,5 @@ namespace RE
 			void*  data;  // 08
 		};
 		static_assert(sizeof(TypedData) == 0x10);
-	}
-}
+	}  // namespace BSReflection
+}  // namespace RE

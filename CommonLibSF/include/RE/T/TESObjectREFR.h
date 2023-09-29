@@ -321,4 +321,4 @@ namespace RE
 		std::uint8_t   unk10B;         // 10B
 	};
 	static_assert(sizeof(TESObjectREFR) == 0x110);
-}
+}  // namespace RE

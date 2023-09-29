@@ -15,4 +15,4 @@ namespace RE
 		std::uint32_t unk18;  // 18
 	};
 	static_assert(sizeof(BGSObjectPlacementDefaults) == 0x20);
-}
+}  // namespace RE
