@@ -7,7 +7,7 @@ namespace RE
 	class IMovementPlayerControlsFilter : public IMovementInterface
 	{
 	public:
-		SF_RTTI(IMovementPlayerControlsFilter)
+		SF_RTTI(IMovementPlayerControlsFilter);
 
 		~IMovementPlayerControlsFilter() override;  // 00
 
