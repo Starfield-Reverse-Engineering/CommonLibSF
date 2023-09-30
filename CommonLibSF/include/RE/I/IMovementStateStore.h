@@ -7,7 +7,7 @@ namespace RE
 	struct IMovementStateStore : public IMovementInterface
 	{
 	public:
-		SF_RTTI(IMovementStateStore)
+		SF_RTTI(IMovementStateStore);
 
 		~IMovementStateStore() override;  // 00
 

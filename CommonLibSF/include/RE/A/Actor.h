@@ -40,7 +40,7 @@ namespace RE
 		kDisintegrateStart = 3,
 		kDisintegrateEnd = 4,
 		kFreezeStart = 5,
-		kFreezeEnd = 6
+		kFreezeEnd = 6,
 
 		kTotal
 	};

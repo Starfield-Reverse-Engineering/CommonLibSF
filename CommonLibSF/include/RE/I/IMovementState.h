@@ -7,7 +7,7 @@ namespace RE
 	class IMovementState : public IMovementInterface
 	{
 	public:
-		SF_RTTI(IMovementState)
+		SF_RTTI(IMovementState);
 
 		~IMovementState() override;  // 00
 

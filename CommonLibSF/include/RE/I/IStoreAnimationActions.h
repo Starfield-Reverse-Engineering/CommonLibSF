@@ -7,7 +7,7 @@ namespace RE
 	class IStoreAnimationActions : public IMovementInterface
 	{
 	public:
-		SF_RTTI(IStoreAnimationActions)
+		SF_RTTI(IStoreAnimationActions);
 
 		~IStoreAnimationActions() override;  // 00
 
