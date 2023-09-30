@@ -34,6 +34,12 @@ namespace RE
 	public:
 		SF_RTTI_VTABLE(UI);
 
+		template <class T>
+		[[nodiscard]] auto GetEventSource()
+		{
+			return static_cast<BSTEventSource<T>*>(this);
+		}
+
 		inline static UI* GetSingleton()
 		{
 			static REL::Relocation<UI**> singleton{ REL::ID(878339) };
@@ -45,6 +51,18 @@ namespace RE
 			using func_t = decltype(&UI::IsMenuOpen);
 			REL::Relocation<func_t> func{ REL::ID(187049) };
 			return func(this, a_name);
+		}
+
+		template <class T>
+		void RegisterSink(BSTEventSink<T>* a_sink)
+		{
+			GetEventSource<T>()->RegisterSink(a_sink);
+		}
+
+		template <class T>
+		void UnregisterSink(BSTEventSink<T>* a_sink)
+		{
+			GetEventSource<T>()->UnregisterSink(a_sink);
 		}
 
 		std::uint8_t                    pad178[0x278];  // 178
