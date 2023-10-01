@@ -129,8 +129,6 @@ namespace SFSE
 			kVersion = 1
 		};
 
-		constexpr void PluginVersion(std::uint32_t a_version) noexcept { pluginVersion = a_version; }
-
 		constexpr void PluginVersion(REL::Version a_version) noexcept { pluginVersion = a_version.pack(); }
 
 		[[nodiscard]] constexpr REL::Version GetPluginVersion() const noexcept { return REL::Version::unpack(pluginVersion); }
