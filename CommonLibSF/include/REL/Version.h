@@ -55,7 +55,7 @@ namespace REL
 		[[nodiscard]] constexpr value_type patch() const noexcept { return _impl[2]; }
 		[[nodiscard]] constexpr value_type build() const noexcept { return _impl[3]; }
 
-		[[nodiscard]] std::string string(std::string_view a_separator = "-"sv) const
+		[[nodiscard]] std::string string(std::string_view a_separator = "."sv) const
 		{
 			std::string result;
 			for (auto&& ver : _impl) {
@@ -66,7 +66,7 @@ namespace REL
 			return result;
 		}
 
-		[[nodiscard]] std::wstring wstring(std::wstring_view a_separator = L"-"sv) const
+		[[nodiscard]] std::wstring wstring(std::wstring_view a_separator = L"."sv) const
 		{
 			std::wstring result;
 			for (auto&& ver : _impl) {
@@ -147,3 +147,18 @@ namespace REL
 
 	[[nodiscard]] std::optional<Version> get_file_version(stl::zwstring a_filename);
 }
+
+#ifdef __cpp_lib_format
+namespace std
+{
+	template<class CharT>
+	struct formatter<REL::Version, CharT> : formatter<std::string, CharT>
+	{
+		template<class FormatContext>
+		auto format(const REL::Version a_version, FormatContext& a_ctx) const
+		{
+			return formatter<std::string, CharT>::format(a_version.string(), a_ctx);
+		}
+	};
+}
+#endif
