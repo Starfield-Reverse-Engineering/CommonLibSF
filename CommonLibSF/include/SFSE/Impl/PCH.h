@@ -554,7 +554,7 @@ namespace SFSE
 		inline constexpr auto ssizeof_v = ssizeof<T>::value;
 
 		template <class T, class U>
-		[[nodiscard]] auto adjust_pointer(U* a_ptr, std::ptrdiff_t a_adjust) noexcept
+		[[nodiscard]] auto adjust_pointer(U* a_ptr, const std::ptrdiff_t a_adjust) noexcept
 		{
 			auto addr = a_ptr ? reinterpret_cast<std::uintptr_t>(a_ptr) + a_adjust : 0;
 			if constexpr (std::is_const_v<U> && std::is_volatile_v<U>) {
@@ -580,7 +580,7 @@ namespace SFSE
 		}
 
 		template <class T>
-		void memzero(volatile T* a_ptr, std::size_t a_size = sizeof(T))
+		void memzero(volatile T* a_ptr, const std::size_t a_size = sizeof(T))
 		{
 			const auto     begin = reinterpret_cast<volatile char*>(a_ptr);
 			constexpr char val{ 0 };
@@ -606,9 +606,9 @@ namespace SFSE
 			}
 		}
 
-		[[nodiscard]] inline auto utf8_to_utf16(std::string_view a_in) noexcept -> std::optional<std::wstring>
+		[[nodiscard]] inline auto utf8_to_utf16(const std::string_view a_in) noexcept -> std::optional<std::wstring>
 		{
-			const auto cvt = [&](wchar_t* a_dst, std::size_t a_length) {
+			const auto cvt = [&](wchar_t* a_dst, const std::size_t a_length) {
 				return WinAPI::MultiByteToWideChar(
 					WinAPI::CP_UTF8, 0, a_in.data(), static_cast<int>(a_in.length()), a_dst, static_cast<int>(a_length));
 			};
@@ -626,9 +626,9 @@ namespace SFSE
 			return out;
 		}
 
-		[[nodiscard]] inline auto utf16_to_utf8(std::wstring_view a_in) noexcept -> std::optional<std::string>
+		[[nodiscard]] inline auto utf16_to_utf8(const std::wstring_view a_in) noexcept -> std::optional<std::string>
 		{
-			const auto cvt = [&](char* a_dst, std::size_t a_length) {
+			const auto cvt = [&](char* a_dst, const std::size_t a_length) {
 				return WinAPI::WideCharToMultiByte(
 					WinAPI::CP_UTF8, 0, a_in.data(), static_cast<int>(a_in.length()), a_dst, static_cast<int>(a_length), nullptr, nullptr);
 			};
@@ -646,7 +646,7 @@ namespace SFSE
 			return out;
 		}
 
-		inline bool report_and_error(std::string_view a_msg, bool a_fail = true, std::source_location a_loc = std::source_location::current())
+		inline bool report_and_error(std::string_view a_msg, const bool a_fail = true, const std::source_location& a_loc = std::source_location::current())
 		{
 			const auto body = [&]() -> std::wstring {
 				const std::filesystem::path p = a_loc.file_name();
@@ -689,7 +689,7 @@ namespace SFSE
 			return true;
 		}
 
-		[[noreturn]] inline void report_and_fail(std::string_view a_msg, std::source_location a_loc = std::source_location::current())
+		[[noreturn]] inline void report_and_fail(const std::string_view a_msg, const std::source_location& a_loc = std::source_location::current())
 		{
 			report_and_error(a_msg, true, a_loc);
 			std::unreachable();

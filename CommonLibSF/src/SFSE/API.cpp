@@ -36,7 +36,7 @@ namespace SFSE
 		};
 
 		template <class T>
-		T* QueryInterface(const LoadInterface* a_intfc, std::uint32_t a_id)
+		T* QueryInterface(const LoadInterface* a_intfc, const std::uint32_t a_id)
 		{
 			auto result = static_cast<T*>(a_intfc->QueryInterface(a_id));
 			if (result && result->Version() > T::kVersion) {
@@ -46,7 +46,7 @@ namespace SFSE
 		}
 	}
 
-	void Init(const LoadInterface* a_intfc, bool a_log) noexcept
+	void Init(const LoadInterface* a_intfc, const bool a_log) noexcept
 	{
 		stl_assert(a_intfc, "interface is null"sv);
 
@@ -76,7 +76,7 @@ namespace SFSE
 		}
 	}
 
-	void RegisterForAPIInitEvent(std::function<void()> a_fn)
+	void RegisterForAPIInitEvent(const std::function<void()>& a_fn)
 	{
 		{
 			auto&                  storage = detail::APIStorage::get();
@@ -116,11 +116,11 @@ namespace SFSE
 		return trampoline;
 	}
 
-	void AllocTrampoline(std::size_t a_size, bool a_trySFSEReserve)
+	void AllocTrampoline(const std::size_t a_size, const bool a_trySFSEReserve)
 	{
 		auto& trampoline = GetTrampoline();
-		if (auto intfc = GetTrampolineInterface(); intfc && a_trySFSEReserve) {
-			auto memory = intfc->AllocateFromBranchPool(a_size);
+		if (const auto intfc = GetTrampolineInterface(); intfc && a_trySFSEReserve) {
+			const auto memory = intfc->AllocateFromBranchPool(a_size);
 			if (memory) {
 				trampoline.set_trampoline(memory, a_size);
 				return;

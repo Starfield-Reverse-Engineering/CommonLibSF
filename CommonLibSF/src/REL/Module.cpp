@@ -2,14 +2,14 @@
 
 namespace REL
 {
-	Module::Module(std::uintptr_t a_base)
+	Module::Module(const std::uintptr_t a_base)
 	{
 		stl_assert(a_base, "failed to initializing module info with null module base");
 
 		_base = a_base;
 
-		auto        dosHeader = reinterpret_cast<const WinAPI::IMAGE_DOS_HEADER*>(_base);
-		auto        ntHeader = stl::adjust_pointer<WinAPI::IMAGE_NT_HEADERS64>(dosHeader, dosHeader->lfanew);
+		const auto  dosHeader = reinterpret_cast<const WinAPI::IMAGE_DOS_HEADER*>(_base);
+		const auto  ntHeader = stl::adjust_pointer<WinAPI::IMAGE_NT_HEADERS64>(dosHeader, dosHeader->lfanew);
 		const auto* sections = WinAPI::IMAGE_FIRST_SECTION(ntHeader);
 		const auto  size = std::min<std::size_t>(ntHeader->fileHeader.sectionCount, _segments.size());
 
@@ -52,7 +52,7 @@ namespace REL
 		return managed.at(base);
 	}
 
-	[[nodiscard]] Module& Module::get(std::string_view a_filePath) noexcept
+	[[nodiscard]] Module& Module::get(const std::string_view a_filePath) noexcept
 	{
 		const auto base = AsAddress(WinAPI::GetModuleHandle(a_filePath.empty() ? WinAPI::GetProcPath(nullptr).data() : a_filePath.data()));
 		return get(base);

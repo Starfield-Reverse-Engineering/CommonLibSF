@@ -151,7 +151,7 @@ namespace REL
 		}
 	}
 
-	inline void safe_write(std::uintptr_t a_dst, const void* a_src, std::size_t a_count)
+	inline void safe_write(const std::uintptr_t a_dst, const void* a_src, const std::size_t a_count)
 	{
 		std::uint32_t old{ 0 };
 		auto          success = WinAPI::VirtualProtect(reinterpret_cast<void*>(a_dst), a_count, WinAPI::PAGE_EXECUTE_READWRITE, std::addressof(old));
@@ -164,18 +164,18 @@ namespace REL
 	}
 
 	template <std::integral T>
-	void safe_write(std::uintptr_t a_dst, const T& a_data)
+	void safe_write(const std::uintptr_t a_dst, const T& a_data)
 	{
 		safe_write(a_dst, std::addressof(a_data), sizeof(T));
 	}
 
 	template <class T>
-	void safe_write(std::uintptr_t a_dst, std::span<T> a_data)
+	void safe_write(const std::uintptr_t a_dst, std::span<T> a_data)
 	{
 		safe_write(a_dst, a_data.data(), a_data.size_bytes());
 	}
 
-	inline void safe_fill(std::uintptr_t a_dst, std::uint8_t a_value, std::size_t a_count)
+	inline void safe_fill(const std::uintptr_t a_dst, const std::uint8_t a_value, const std::size_t a_count)
 	{
 		std::uint32_t old{ 0 };
 		auto          success = WinAPI::VirtualProtect(reinterpret_cast<void*>(a_dst), a_count, WinAPI::PAGE_EXECUTE_READWRITE, std::addressof(old));
@@ -251,7 +251,7 @@ namespace REL
 			return invoke(get(), std::forward<Args>(a_args)...);
 		}
 
-		std::uintptr_t write_vfunc(std::size_t a_idx, std::uintptr_t a_newFunc)
+		std::uintptr_t write_vfunc(const std::size_t a_idx, const std::uintptr_t a_newFunc)
 			requires(std::same_as<value_type, std::uintptr_t>)
 		{
 			const auto addr = address() + (sizeof(void*) * a_idx);
@@ -261,7 +261,7 @@ namespace REL
 		}
 
 		template <class F>
-		std::uintptr_t write_vfunc(std::size_t a_idx, F a_newFunc)
+		std::uintptr_t write_vfunc(const std::size_t a_idx, F a_newFunc)
 			requires(std::same_as<value_type, std::uintptr_t>)
 		{
 			return write_vfunc(a_idx, stl::unrestricted_cast<std::uintptr_t>(a_newFunc));

@@ -25,7 +25,7 @@ namespace SFSE
 #endif
 
 	// https://stackoverflow.com/a/54732489
-	void* Trampoline::do_create(std::size_t a_size, std::uintptr_t a_address)
+	void* Trampoline::do_create(const std::size_t a_size, const std::uintptr_t a_address)
 	{
 		constexpr std::size_t    gigabyte = static_cast<std::size_t>(1) << 30;
 		constexpr std::size_t    minRange = gigabyte * 2;
@@ -33,7 +33,7 @@ namespace SFSE
 
 		WinAPI::SYSTEM_INFO si;
 		WinAPI::GetSystemInfo(&si);
-		std::uint32_t granularity = si.allocationGranularity;
+		const std::uint32_t granularity = si.allocationGranularity;
 
 		std::uintptr_t       min = a_address >= minRange ? detail::roundup(a_address - minRange, granularity) : 0;
 		const std::uintptr_t max = a_address < (maxAddr - minRange) ? detail::rounddown(a_address + minRange, granularity) : maxAddr;
@@ -46,7 +46,7 @@ namespace SFSE
 				return nullptr;
 			}
 
-			auto baseAddr = reinterpret_cast<std::uintptr_t>(mbi.baseAddress);
+			const auto baseAddr = reinterpret_cast<std::uintptr_t>(mbi.baseAddress);
 			min = baseAddr + mbi.regionSize;
 
 			if (mbi.state == WinAPI::MEM_FREE) {
@@ -54,7 +54,7 @@ namespace SFSE
 
 				// if rounding didn't advance us into the next region and the region is the required size
 				if (addr < min && (min - addr) >= a_size) {
-					auto mem = WinAPI::VirtualAlloc(reinterpret_cast<void*>(addr), a_size, WinAPI::MEM_COMMIT | WinAPI::MEM_RESERVE, WinAPI::PAGE_EXECUTE_READWRITE);
+					const auto mem = WinAPI::VirtualAlloc(reinterpret_cast<void*>(addr), a_size, WinAPI::MEM_COMMIT | WinAPI::MEM_RESERVE, WinAPI::PAGE_EXECUTE_READWRITE);
 					if (mem) {
 						return mem;
 					} else {

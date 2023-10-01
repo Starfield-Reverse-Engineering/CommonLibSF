@@ -11,17 +11,17 @@ namespace REL
 
 		constexpr Version() noexcept = default;
 
-		explicit constexpr Version(std::array<value_type, 4> a_version) noexcept :
+		explicit constexpr Version(const std::array<value_type, 4> a_version) noexcept :
 			_impl(a_version) {}
 
-		constexpr Version(value_type a_v1, value_type a_v2 = 0, value_type a_v3 = 0, value_type a_v4 = 0) noexcept :
+		constexpr Version(const value_type a_v1, const value_type a_v2 = 0, const value_type a_v3 = 0, const value_type a_v4 = 0) noexcept :
 			_impl{ a_v1, a_v2, a_v3, a_v4 } {}
 
 		explicit constexpr Version(std::string_view a_version);
 
-		[[nodiscard]] constexpr reference operator[](std::size_t a_idx) noexcept { return _impl[a_idx]; }
+		[[nodiscard]] constexpr reference operator[](const std::size_t a_idx) noexcept { return _impl[a_idx]; }
 
-		[[nodiscard]] constexpr const_reference operator[](std::size_t a_idx) const noexcept { return _impl[a_idx]; }
+		[[nodiscard]] constexpr const_reference operator[](const std::size_t a_idx) const noexcept { return _impl[a_idx]; }
 
 		[[nodiscard]] constexpr decltype(auto) begin() const noexcept { return _impl.begin(); }
 
@@ -55,7 +55,7 @@ namespace REL
 		[[nodiscard]] constexpr value_type patch() const noexcept { return _impl[2]; }
 		[[nodiscard]] constexpr value_type build() const noexcept { return _impl[3]; }
 
-		[[nodiscard]] std::string string(std::string_view a_separator = "."sv) const
+		[[nodiscard]] std::string string(const std::string_view a_separator = "."sv) const
 		{
 			std::string result;
 			for (auto&& ver : _impl) {
@@ -66,7 +66,7 @@ namespace REL
 			return result;
 		}
 
-		[[nodiscard]] std::wstring wstring(std::wstring_view a_separator = L"."sv) const
+		[[nodiscard]] std::wstring wstring(const std::wstring_view a_separator = L"."sv) const
 		{
 			std::wstring result;
 			for (auto&& ver : _impl) {
@@ -77,7 +77,7 @@ namespace REL
 			return result;
 		}
 
-		[[nodiscard]] static constexpr Version unpack(std::uint32_t a_packedVersion) noexcept
+		[[nodiscard]] static constexpr Version unpack(const std::uint32_t a_packedVersion) noexcept
 		{
 			return REL::Version{
 				static_cast<value_type>((a_packedVersion >> 24) & 0x0FF),
@@ -139,7 +139,7 @@ namespace REL
 			return REL::Version(result);
 		}
 
-		[[nodiscard]] constexpr REL::Version operator""_v(const char* str, std::size_t len)
+		[[nodiscard]] constexpr REL::Version operator""_v(const char* str, const std::size_t len)
 		{
 			return Version(std::string_view(str, len));
 		}
