@@ -151,10 +151,10 @@ namespace REL
 #ifdef __cpp_lib_format
 namespace std
 {
-	template<class CharT>
+	template <class CharT>
 	struct formatter<REL::Version, CharT> : formatter<std::string, CharT>
 	{
-		template<class FormatContext>
+		template <class FormatContext>
 		auto format(const REL::Version a_version, FormatContext& a_ctx) const
 		{
 			return formatter<std::string, CharT>::format(a_version.string(), a_ctx);

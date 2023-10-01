@@ -191,7 +191,7 @@ namespace REL
 		file += ".bin";
 
 		stl_assert(std::filesystem::exists(file),
-			"Failed to find address library file: \n{}",  file.string());
+			"Failed to find address library file: \n{}", file.string());
 
 		return file.wstring();
 	}
