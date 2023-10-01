@@ -40,8 +40,8 @@ namespace REL
 							a = {};
 
 						const auto iterate =
-							[&](std::uint8_t  a_iFirst,
-								unsigned char a_cFirst,
+							[&](std::uint8_t        a_iFirst,
+								unsigned char       a_cFirst,
 								const unsigned char a_cLast) noexcept {
 								for (; a_cFirst <= a_cLast; ++a_cFirst, ++a_iFirst) {
 									a[a_cFirst] = a_iFirst;
@@ -134,7 +134,7 @@ namespace REL
 			}
 
 			void match_or_fail(
-				const std::uintptr_t       a_address,
+				const std::uintptr_t        a_address,
 				const std::source_location& a_loc = std::source_location::current())
 				const noexcept
 			{
