@@ -11,4 +11,4 @@ namespace RE
 		SF_RTTI_VTABLE(BGSListForm);
 		SF_FORMTYPE(FLST);
 	};
-}  // namespace RE
+}

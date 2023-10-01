@@ -142,7 +142,7 @@ namespace REL
 				_version[i] = static_cast<std::uint16_t>(version[i]);
 			}
 		}
-	}  // namespace database
+	}
 
 	[[nodiscard]] std::size_t IDDatabase::id2offset(std::uint64_t a_id) const
 	{
@@ -170,7 +170,7 @@ namespace REL
 		// sfse only loads plugins from { runtimeDirectory + "Data\\SFSE\\Plugins" }
 		auto file = std::filesystem::current_path();
 
-		file /= std::format("{}\\versionlib-{}", database::LookUpDir, version.string());
+		file /= std::format("{}\\versionlib-{}", database::LookUpDir, version.string("-"));
 
 		_platform = Platform::kUnknown;
 		for (auto& [vendor, registered] : database::VendorModule) {
@@ -191,7 +191,7 @@ namespace REL
 		file += ".bin";
 
 		stl_assert(std::filesystem::exists(file),
-			"Failed to find address library file in directory.");
+			"Failed to find address library file: \n{}", file.string());
 
 		return file.wstring();
 	}
@@ -223,7 +223,7 @@ namespace REL
 				// kDatabaseVersion, runtimeVersion, runtimePlatform
 				"CommonLibSF-Offsets-v{}-{}-{}",
 				std::to_underlying(database::kDatabaseVersion),
-				a_version.string(),
+				a_version.string("-"),
 				std::to_underlying(_platform)));
 
 			stl_assert(mapname.has_value(),
@@ -349,4 +349,4 @@ namespace REL
 	}
 
 	IDDatabase IDDatabase::_instance;
-}  // namespace REL
+}

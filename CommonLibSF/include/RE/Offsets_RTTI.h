@@ -31715,5 +31715,5 @@ namespace RE
 		inline constexpr REL::ID winrt__impl__delegate_winrt__Windows__Foundation__EventHandler_winrt__Windows__Gaming__Input__Gamepad___lambda_a466c087e9cd272369893bc050bef422__{ 811143 };
 		inline constexpr REL::ID winrt__impl__implements_delegate_winrt__Windows__Foundation__EventHandler_winrt__Windows__Gaming__Input__Gamepad___lambda_a466c087e9cd272369893bc050bef422__{ 811147 };
 		inline constexpr REL::ID winrt__impl__make_marshaler__2__marshaler{ 811144 };
-	}  // namespace RTTI
-}  // namespace RE
+	}
+}

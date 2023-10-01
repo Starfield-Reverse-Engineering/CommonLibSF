@@ -34,4 +34,4 @@ namespace RE
 	static_assert(offsetof(TESNPC, forcedLocRefType) == 0x2F0);
 	static_assert(offsetof(TESNPC, terminalForm) == 0x308);
 	*/
-}  // namespace RE
+}

@@ -175,7 +175,7 @@ namespace REL
 			std::uint32_t _pointerSize{ 0 };
 			std::uint32_t _addressCount{ 0 };
 		};
-	}  // namespace database
+	}
 
 	class IDDatabase
 	{
@@ -293,4 +293,4 @@ namespace REL
 				return a_lhs.offset < a_rhs.offset;
 			});
 	}
-}  // namespace REL
+}

@@ -44,7 +44,7 @@ namespace SFSE
 			}
 			return result;
 		}
-	}  // namespace detail
+	}
 
 	void Init(const LoadInterface* a_intfc, const bool a_log) noexcept
 	{
@@ -129,4 +129,4 @@ namespace SFSE
 
 		trampoline.create(a_size);
 	}
-}  // namespace SFSE
+}

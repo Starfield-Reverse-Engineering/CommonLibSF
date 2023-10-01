@@ -45,4 +45,4 @@ namespace RE
 		REL::Relocation<func_t> func{ REL::ID(166081) };
 		return func(this, a_cameraState);
 	}
-}  // namespace RE
+}

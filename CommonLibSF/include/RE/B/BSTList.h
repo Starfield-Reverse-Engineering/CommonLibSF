@@ -429,4 +429,4 @@ namespace RE
 		// members
 		Node _listHead;  // 00
 	};
-}  // namespace RE
+}

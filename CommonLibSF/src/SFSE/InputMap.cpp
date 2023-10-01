@@ -229,4 +229,4 @@ namespace SFSE
 			return ""s;
 		}
 	}
-}  // namespace SFSE
+}

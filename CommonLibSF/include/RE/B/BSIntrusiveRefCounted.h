@@ -11,4 +11,4 @@ namespace RE
 		std::uint32_t                  unk04;          // 04
 	};
 	static_assert(sizeof(BSIntrusiveRefCounted) == 0x08);
-}  // namespace RE
+}

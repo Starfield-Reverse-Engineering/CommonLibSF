@@ -8,4 +8,4 @@ namespace RE
 		virtual ~IMovementInterface();  // 00
 	};
 	static_assert(sizeof(IMovementInterface) == 0x8);
-}  // namespace RE
+}

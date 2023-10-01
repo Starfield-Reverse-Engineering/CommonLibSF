@@ -72,4 +72,4 @@ namespace SFSE
 		auto pct = (static_cast<double>(_size) / static_cast<double>(_capacity)) * 100.0;
 		log::debug("{} => {}B / {}B ({:05.2f}%)"sv, _name, _size, _capacity, pct);
 	}
-}  // namespace SFSE
+}

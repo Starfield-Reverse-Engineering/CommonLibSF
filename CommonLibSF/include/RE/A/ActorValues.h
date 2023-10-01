@@ -221,4 +221,4 @@ namespace RE
 		std::uint32_t   avTypeCounts[10];                            // 598
 	};
 	static_assert(sizeof(ActorValue) == 0x5C0);
-}  // namespace RE
+}

@@ -11,4 +11,4 @@ namespace RE
 		BGSTerminal* terminal;  // 08
 	};
 	static_assert(sizeof(BGSNativeTerminalForm) == 0x10);
-}  // namespace RE
+}

@@ -28,4 +28,4 @@ namespace SFSE
 	{
 		return PatchIAT(stl::unrestricted_cast<std::uintptr_t>(a_newFunc), a_dll, a_function);
 	}
-}  // namespace SFSE
+}

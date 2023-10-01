@@ -47,5 +47,5 @@ namespace SFSE
 			std::uint32_t interfaceVersion;
 			void (*Register)(void*);
 		};
-	}  // namespace detail
-}  // namespace SFSE
+	}
+}

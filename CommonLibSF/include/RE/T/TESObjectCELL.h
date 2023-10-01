@@ -166,4 +166,4 @@ namespace RE
 		std::uint64_t                              unk148;          // 148
 	};
 	static_assert(sizeof(TESObjectCELL) == 0x150);
-}  // namespace RE
+}

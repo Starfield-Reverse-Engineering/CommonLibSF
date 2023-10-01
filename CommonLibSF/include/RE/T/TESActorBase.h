@@ -70,4 +70,4 @@ namespace RE
 	static_assert(offsetof(TESActorBase, perkRankArray) == 0x270);
 	static_assert(offsetof(TESActorBase, propertySheet) == 0x288);
 	*/
-}  // namespace RE
+}

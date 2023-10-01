@@ -10,4 +10,4 @@ namespace RE
 		SF_RTTI_VTABLE(BGSKeyword);
 		SF_FORMTYPE(KYWD);
 	};
-}  // namespace RE
+}

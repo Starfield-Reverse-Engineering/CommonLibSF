@@ -129,11 +129,9 @@ namespace SFSE
 			kVersion = 1
 		};
 
-		constexpr void PluginVersion(const std::uint32_t a_version) noexcept { pluginVersion = a_version; }
-
 		constexpr void PluginVersion(const REL::Version a_version) noexcept { pluginVersion = a_version.pack(); }
 
-		[[nodiscard]] constexpr std::uint32_t GetPluginVersion() const noexcept { return pluginVersion; }
+		[[nodiscard]] constexpr REL::Version GetPluginVersion() const noexcept { return REL::Version::unpack(pluginVersion); }
 
 		constexpr void PluginName(const std::string_view a_plugin) noexcept { SetCharBuffer(a_plugin, std::span{ pluginName }); }
 
@@ -143,19 +141,21 @@ namespace SFSE
 
 		[[nodiscard]] constexpr std::string_view GetAuthorName() const noexcept { return std::string_view{ author }; }
 
-		constexpr void UsesSigScanning(const bool a_value) noexcept { addressIndependence = SetOrClearBit(addressIndependence, 1 << 0, a_value); }
+		constexpr void UsesSigScanning(const bool a_value) noexcept { SetOrClearBit(addressIndependence, 1 << 0, a_value); }
 
-		constexpr void UsesAddressLibrary(const bool a_value) noexcept { addressIndependence = SetOrClearBit(addressIndependence, 1 << 1, a_value); }
+		constexpr void UsesAddressLibrary(const bool a_value) noexcept { SetOrClearBit(addressIndependence, 1 << 1, a_value); }
 
-		constexpr void HasNoStructUse(const bool a_value) noexcept { structureCompatibility = SetOrClearBit(structureCompatibility, 1 << 0, a_value); }
+		constexpr void HasNoStructUse(const bool a_value) noexcept { SetOrClearBit(structureCompatibility, 1 << 0, a_value); }
 
-		constexpr void IsLayoutDependent(const bool a_value) noexcept { structureCompatibility = SetOrClearBit(structureCompatibility, 1 << 1, a_value); }
+		constexpr void IsLayoutDependent(const bool a_value) noexcept { SetOrClearBit(structureCompatibility, 1 << 1, a_value); }
 
 		constexpr void CompatibleVersions(std::initializer_list<REL::Version> a_versions) noexcept
 		{
 			// must be zero-terminated
 			assert(a_versions.size() < std::size(compatibleVersions) - 1);
-			std::ranges::transform(a_versions, std::begin(compatibleVersions), [](const REL::Version& a_version) noexcept { return a_version.pack(); });
+			std::ranges::transform(a_versions, std::begin(compatibleVersions), [](const REL::Version& a_version) noexcept {
+				return a_version.pack();
+			});
 		}
 
 		constexpr void MinimumRequiredXSEVersion(const REL::Version a_version) noexcept { xseMinimum = a_version.pack(); }
@@ -181,14 +181,12 @@ namespace SFSE
 			std::ranges::copy(a_src, a_dst.begin());
 		}
 
-		[[nodiscard]] static constexpr std::uint32_t SetOrClearBit(std::uint32_t a_data, const std::uint32_t a_bit, const bool a_set) noexcept
+		static constexpr void SetOrClearBit(std::uint32_t& a_data, const std::uint32_t a_bit, const bool a_set) noexcept
 		{
 			if (a_set)
 				a_data |= a_bit;
 			else
 				a_data &= ~a_bit;
-
-			return a_data;
 		}
 	};
 
@@ -203,7 +201,7 @@ namespace SFSE
 	static_assert(offsetof(PluginVersionData, reservedNonBreaking) == 0x254);
 	static_assert(offsetof(PluginVersionData, reservedBreaking) == 0x258);
 	static_assert(sizeof(PluginVersionData) == 0x25C);
-}  // namespace SFSE
+}
 
 #define SFSEPluginPreload(...) extern "C" [[maybe_unused]] __declspec(dllexport) bool SFSEPlugin_Preload(__VA_ARGS__)
 #define SFSEPluginLoad(...) extern "C" [[maybe_unused]] __declspec(dllexport) bool SFSEPlugin_Load(__VA_ARGS__)

@@ -16,7 +16,7 @@ namespace RE
 		struct TakeOffEvent;
 		struct DockEvent;
 		struct LandedSetEvent;
-	}  // namespace Spaceship
+	}
 
 	struct CameraStates
 	{
@@ -83,4 +83,4 @@ namespace RE
 	private:
 		bool QCameraEquals(CameraState a_cameraState) const;
 	};
-}  // namespace RE
+}

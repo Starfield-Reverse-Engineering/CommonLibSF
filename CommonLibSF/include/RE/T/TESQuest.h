@@ -8,4 +8,4 @@ namespace RE
 		SF_RTTI_VTABLE(TESQuest);
 		SF_FORMTYPE(QUST);
 	};
-}  // namespace RE
+}

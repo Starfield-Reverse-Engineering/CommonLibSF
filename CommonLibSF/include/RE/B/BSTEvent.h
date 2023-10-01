@@ -27,7 +27,7 @@ namespace RE
 
 		inline SinkBase::~SinkBase() = default;
 		inline SourceBase::~SourceBase() = default;
-	}  // namespace BSTEventDetail
+	}
 
 	template <class>
 	class BSTEventSource;
@@ -67,7 +67,15 @@ namespace RE
 			REL::Relocation<func_t> func{ REL::ID(34451) };
 			return func(this, a_sink);
 		}
+
+		// members
+		std::uint8_t  sinks[0x10];  // 08 - BSTArray<BSTEventSink<Event>>
+		std::uint32_t unk18;        // 18
+		std::uint32_t unk1C;        // 1C
+		std::uint32_t unk20;        // 20
+		std::uint32_t unk24;        // 24
 	};
+	static_assert(sizeof(BSTEventSource<void*>) == 0x28);
 
 	class BSTGlobalEvent
 	{
@@ -86,4 +94,4 @@ namespace RE
 		virtual ~BSTGlobalEvent();  // 00
 	};
 	static_assert(sizeof(BSTGlobalEvent) == 0x08);
-}  // namespace RE
+}

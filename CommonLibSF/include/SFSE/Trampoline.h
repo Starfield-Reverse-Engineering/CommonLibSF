@@ -30,7 +30,7 @@ namespace SFSE
 			const auto remainder = a_number % a_multiple;
 			return remainder == 0 ? a_number : a_number - remainder;
 		}
-	}  // namespace detail
+	}
 
 	class Trampoline
 	{
@@ -352,4 +352,4 @@ namespace SFSE
 		std::size_t                          _capacity{ 0 };
 		std::size_t                          _size{ 0 };
 	};
-}  // namespace SFSE
+}
