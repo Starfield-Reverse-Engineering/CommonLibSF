@@ -140,7 +140,6 @@ namespace RE::Scaleform::GFx
 		};
 		static_assert(sizeof(ValueUnion) == 0x8);
 
-
 		class ObjectInterface
 		{
 		public:
@@ -166,7 +165,6 @@ namespace RE::Scaleform::GFx
 			static_assert(sizeof(ObjVisitor) == 0x8);
 
 			virtual ~ObjectInterface() = default;  // 00
-
 
 			void ObjectAddRef(Value* a_val, void* a_obj)
 			{

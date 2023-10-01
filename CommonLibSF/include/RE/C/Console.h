@@ -4,7 +4,7 @@
 
 namespace RE
 {
-    class Console :
+	class Console :
 		public GameMenuBase  // 00
 	{
 	public:

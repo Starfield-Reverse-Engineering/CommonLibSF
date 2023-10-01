@@ -1,13 +1,13 @@
 #pragma once
 
-#include "RE/S/ScaleformPtr.h"
 #include "RE/S/ScaleformGFxStateBag.h"
+#include "RE/S/ScaleformPtr.h"
 
 namespace RE::Scaleform::GFx
 {
 	class ASMovieRootBase;
 
-    class Movie :
+	class Movie :
 		public RefCountBase<Movie>,  // 00
 		public StateBag              // 10
 	{

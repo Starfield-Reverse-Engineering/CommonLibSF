@@ -2,7 +2,7 @@
 
 namespace RE
 {
-    template <class T, class Allocator = void /* BSTArrayHeapAllocator? */>
+	template <class T, class Allocator = void /* BSTArrayHeapAllocator? */>
 	class BSTArray
 	{
 	public:

@@ -16,7 +16,7 @@ namespace RE
 		void Call(const Params&) override { return; }  // 01
 
 		// add
-		virtual void MapCodeObjectFunctions() { return; } // 02
+		virtual void MapCodeObjectFunctions() { return; }  // 02
 	};
 	static_assert(sizeof(SWFToCodeFunctionHandler) == 0x10);
 }
