@@ -48,8 +48,8 @@ namespace RE
         virtual void Unk_85(); // 85
 
         // members
-        std::uint8_t pad298[488];                               // 298
-        stl::enumeration<Pronoun_Type, std::uint8_t> pronoun;     // 480
+        std::uint8_t pad298[488];                                   // 298
+        stl::enumeration<Pronoun_Type, std::uint8_t> pronoun;       // 480
         //
     };
 
