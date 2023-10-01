@@ -170,7 +170,7 @@ namespace REL
 		// sfse only loads plugins from { runtimeDirectory + "Data\\SFSE\\Plugins" }
 		auto file = std::filesystem::current_path();
 
-		file /= std::format("{}\\versionlib-{}", database::LookUpDir, version.string());
+		file /= std::format("{}\\versionlib-{}", database::LookUpDir, version.string("-"));
 
 		_platform = Platform::kUnknown;
 		for (auto& [vendor, registered] : database::VendorModule) {
@@ -223,7 +223,7 @@ namespace REL
 				// kDatabaseVersion, runtimeVersion, runtimePlatform
 				"CommonLibSF-Offsets-v{}-{}-{}",
 				std::to_underlying(database::kDatabaseVersion),
-				a_version.string(),
+				a_version.string("-"),
 				std::to_underlying(_platform)));
 
 			stl_assert(mapname.has_value(),
