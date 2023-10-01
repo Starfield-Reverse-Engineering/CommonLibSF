@@ -79,7 +79,7 @@ namespace REL
 
 		[[nodiscard]] static constexpr Version unpack(const std::uint32_t a_packedVersion) noexcept
 		{
-			return REL::Version{
+			return Version{
 				static_cast<value_type>((a_packedVersion >> 24) & 0x0FF),
 				static_cast<value_type>((a_packedVersion >> 16) & 0x0FF),
 				static_cast<value_type>((a_packedVersion >> 4) & 0xFFF),
@@ -106,7 +106,7 @@ namespace REL
 		namespace detail
 		{
 			template <std::size_t Index, char C>
-			constexpr uint8_t read_version(std::array<typename REL::Version::value_type, 4>& result)
+			constexpr uint8_t read_version(std::array<Version::value_type, 4>& result)
 			{
 				static_assert(C >= '0' && C <= '9', "Invalid character in semantic version literal.");
 				static_assert(Index < 4, "Too many components in semantic version literal.");
@@ -116,7 +116,7 @@ namespace REL
 
 			template <std::size_t Index, char C, char... Rest>
 				requires(sizeof...(Rest) > 0)
-			constexpr uint8_t read_version(std::array<typename REL::Version::value_type, 4>& result)
+			constexpr uint8_t read_version(std::array<Version::value_type, 4>& result)
 			{
 				static_assert(C == '.' || (C >= '0' && C <= '9'), "Invalid character in semantic version literal.");
 				static_assert(Index < 4, "Too many components in semantic version literal.");
@@ -132,14 +132,14 @@ namespace REL
 		}
 
 		template <char... C>
-		[[nodiscard]] constexpr REL::Version operator""_v() noexcept
+		[[nodiscard]] constexpr Version operator""_v() noexcept
 		{
-			std::array<typename REL::Version::value_type, 4> result{ 0, 0, 0, 0 };
+			std::array<Version::value_type, 4> result{ 0, 0, 0, 0 };
 			detail::read_version<0, C...>(result);
-			return REL::Version(result);
+			return Version(result);
 		}
 
-		[[nodiscard]] constexpr REL::Version operator""_v(const char* str, const std::size_t len)
+		[[nodiscard]] constexpr Version operator""_v(const char* str, const std::size_t len)
 		{
 			return Version(std::string_view(str, len));
 		}

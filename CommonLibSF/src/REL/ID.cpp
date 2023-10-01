@@ -4,8 +4,8 @@ namespace REL
 {
 	namespace database
 	{
-		constexpr auto                                                             LookUpDir = "Data\\SFSE\\Plugins"sv;
-		constexpr std::array<std::pair<std::string_view, IDDatabase::Platform>, 2> VendorModule{
+		constexpr auto       LookUpDir = "Data\\SFSE\\Plugins"sv;
+		constexpr std::array VendorModule{
 			std::make_pair("steam_api64"sv, IDDatabase::Platform::kSteam),
 			std::make_pair("XGameRuntime"sv, IDDatabase::Platform::kMsStore),
 		};
@@ -32,7 +32,7 @@ namespace REL
 		{
 			close();
 
-			WinAPI::ULARGE_INTEGER bytes{};
+			WinAPI::ULARGE_INTEGER bytes;
 			bytes.value = a_size;
 
 			_mapping = WinAPI::OpenFileMapping(
@@ -64,7 +64,7 @@ namespace REL
 		{
 			close();
 
-			WinAPI::ULARGE_INTEGER bytes{};
+			WinAPI::ULARGE_INTEGER bytes;
 			bytes.value = a_size;
 
 			_mapping = WinAPI::OpenFileMapping(
@@ -103,7 +103,7 @@ namespace REL
 		void memory_map::close()
 		{
 			if (_view) {
-				(void)WinAPI::UnmapViewOfFile(static_cast<const void*>(_view));
+				(void)WinAPI::UnmapViewOfFile(_view);
 				_view = nullptr;
 			}
 
@@ -161,7 +161,7 @@ namespace REL
 			"library for this version of the game, and thus does not support it."sv,
 			a_id, std::to_underlying(database::kDatabaseVersion));
 
-		return static_cast<std::size_t>(it->offset);
+		return it->offset;
 	}
 
 	std::wstring IDDatabase::addresslib_filename()
@@ -229,7 +229,7 @@ namespace REL
 			stl_assert(mapname.has_value(),
 				"Failed to generate memory map name.");
 
-			const auto byteSize = static_cast<std::size_t>(header.address_count()) * sizeof(database::mapping_t);
+			const auto byteSize = header.address_count() * sizeof(database::mapping_t);
 			if (_mmap.open(mapname.value(), byteSize)) {
 				_id2offset = { static_cast<database::mapping_t*>(_mmap.data()), header.address_count() };
 			} else if (_mmap.create(mapname.value(), byteSize)) {
@@ -259,7 +259,6 @@ namespace REL
 					a_version.string(),
 					database::VendorModule[std::to_underlying(_platform)].first),
 				a_failOnError);
-			return false;
 		}
 		return true;
 	}

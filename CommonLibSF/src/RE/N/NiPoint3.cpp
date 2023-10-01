@@ -147,7 +147,8 @@ namespace RE
 		auto length = Length();
 		if (length == 1.f) {
 			return length;
-		} else if (length > FLT_EPSILON) {
+		}
+		if (length > FLT_EPSILON) {
 			operator/=(length);
 		} else {
 			x = 0.0;

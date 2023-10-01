@@ -3,7 +3,6 @@
 #include "SFSE/Impl/Stubs.h"
 #include "SFSE/Interfaces.h"
 #include "SFSE/Trampoline.h"
-#include "SFSE/Version.h"
 
 #define SFSEAPI __cdecl
 

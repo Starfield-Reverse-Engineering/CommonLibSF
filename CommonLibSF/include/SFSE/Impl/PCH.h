@@ -389,11 +389,11 @@ namespace SFSE
 			}
 
 		private:
-			underlying_type _impl{ 0 };
+			underlying_type _impl{};
 		};
 
 		template <class... Args>
-		enumeration(Args...) -> enumeration<std::common_type_t<Args...>, std::underlying_type_t<std::common_type_t<Args...>>>;
+		enumeration(Args...) -> enumeration<std::common_type_t<Args...>>;
 	}
 }
 
@@ -583,12 +583,12 @@ namespace SFSE
 		void memzero(volatile T* a_ptr, const std::size_t a_size = sizeof(T))
 		{
 			const auto     begin = reinterpret_cast<volatile char*>(a_ptr);
-			constexpr char val{ 0 };
+			constexpr char val{};
 			std::fill_n(begin, a_size, val);
 		}
 
 		template <class... Args>
-		[[nodiscard]] inline auto pun_bits(Args... a_args)
+		[[nodiscard]] auto pun_bits(Args... a_args)
 			requires(std::same_as<std::remove_cv_t<Args>, bool> && ...)
 		{
 			constexpr auto ARGC = sizeof...(Args);
@@ -675,9 +675,8 @@ namespace SFSE
 				if (result && result != buf.size()) {
 					std::filesystem::path p(buf.begin(), buf.begin() + result);
 					return p.filename().native();
-				} else {
-					return L""s;
 				}
+				return L""s;
 			}();
 
 			spdlog::log(spdlog::source_loc{ a_loc.file_name(), static_cast<int>(a_loc.line()), a_loc.function_name() }, spdlog::level::critical, a_msg);

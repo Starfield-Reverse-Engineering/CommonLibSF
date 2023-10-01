@@ -10,7 +10,7 @@ namespace SFSE
 	{
 		std::optional<std::filesystem::path> log_directory()
 		{
-			wchar_t*                                                           buffer{ nullptr };
+			wchar_t*                                                           buffer{};
 			const auto                                                         result = WinAPI::SHGetKnownFolderPath(WinAPI::FOLDERID_DOCUMENTS, WinAPI::KF_FLAG_DEFAULT, nullptr, std::addressof(buffer));
 			const std::unique_ptr<wchar_t[], decltype(&WinAPI::CoTaskMemFree)> knownPath(buffer, WinAPI::CoTaskMemFree);
 			if (!knownPath || result != 0) {

@@ -231,7 +231,7 @@ namespace std
 {
 	[[nodiscard]] inline std::string to_string(RE::FormType a_formType)
 	{
-		return RE::FormTypeToString(a_formType);
+		return FormTypeToString(a_formType);
 	}
 }
 
@@ -250,7 +250,7 @@ namespace fmt
 		template <class FormatContext>
 		auto format(const RE::FormType& a_formType, FormatContext& a_ctx)
 		{
-			return fmt::format_to(a_ctx.out(), "{}", RE::FormTypeToString(a_formType));
+			return fmt::format_to(a_ctx.out(), "{}", FormTypeToString(a_formType));
 		}
 	};
 }
@@ -265,7 +265,7 @@ namespace std
 		template <class FormatContext>
 		auto format(RE::FormType a_formType, FormatContext& a_ctx)
 		{
-			return formatter<std::string_view, CharT>::format(RE::FormTypeToString(a_formType), a_ctx);
+			return formatter<std::string_view, CharT>::format(FormTypeToString(a_formType), a_ctx);
 		}
 	};
 }

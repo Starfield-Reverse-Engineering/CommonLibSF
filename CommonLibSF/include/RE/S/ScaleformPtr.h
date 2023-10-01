@@ -174,7 +174,7 @@ namespace RE::Scaleform
 		}
 
 		// members
-		element_type* _ptr{ nullptr };  // 00
+		element_type* _ptr{};  // 00
 	};
 	static_assert(sizeof(Ptr<void*>) == 0x8);
 

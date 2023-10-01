@@ -125,10 +125,10 @@ namespace RE
 				std::uint64_t _retType;                         // 28 TypeInfo
 				ParameterInfo _params;                          // 30
 				bool          _isStatic;                        // 40
-				bool          _isCallableFromTasklet{ false };  // 41
-				bool          _isLatent{ false };               // 42
+				bool          _isCallableFromTasklet{};  // 41
+				bool          _isLatent{};               // 42
 				std::uint8_t  _pad43;                           // 43
-				std::uint32_t _userFlags{ 0 };                  // 44
+				std::uint32_t _userFlags{};                  // 44
 				BSFixedString _docString;                       // 48
 			};
 			static_assert(sizeof(NativeFunctionBase) == 0x50);

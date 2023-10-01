@@ -32,16 +32,15 @@ namespace SFSE
 		constexpr std::uintptr_t maxAddr = std::numeric_limits<std::uintptr_t>::max();
 
 		WinAPI::SYSTEM_INFO si;
-		WinAPI::GetSystemInfo(&si);
+		GetSystemInfo(&si);
 		const std::uint32_t granularity = si.allocationGranularity;
 
 		std::uintptr_t       min = a_address >= minRange ? detail::roundup(a_address - minRange, granularity) : 0;
 		const std::uintptr_t max = a_address < (maxAddr - minRange) ? detail::rounddown(a_address + minRange, granularity) : maxAddr;
-		std::uintptr_t       addr;
 
 		WinAPI::MEMORY_BASIC_INFORMATION mbi;
 		do {
-			if (!WinAPI::VirtualQuery(reinterpret_cast<void*>(min), std::addressof(mbi), sizeof(mbi))) {
+			if (!VirtualQuery(reinterpret_cast<void*>(min), std::addressof(mbi), sizeof(mbi))) {
 				log::error("VirtualQuery failed with code: 0x{:08X}"sv, WinAPI::GetLastError());
 				return nullptr;
 			}
@@ -50,7 +49,7 @@ namespace SFSE
 			min = baseAddr + mbi.regionSize;
 
 			if (mbi.state == WinAPI::MEM_FREE) {
-				addr = detail::roundup(baseAddr, granularity);
+				std::uintptr_t addr = detail::roundup(baseAddr, granularity);
 
 				// if rounding didn't advance us into the next region and the region is the required size
 				if (addr < min && (min - addr) >= a_size) {

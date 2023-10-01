@@ -1,7 +1,6 @@
 #pragma once
 
 #include "SFSE/Impl/Stubs.h"
-#include "SFSE/Version.h"
 
 namespace RE
 {

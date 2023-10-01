@@ -44,9 +44,9 @@ namespace REL
 	private:
 		friend class Module;
 
-		std::uintptr_t _proxyBase{ 0 };
-		std::uintptr_t _address{ 0 };
-		std::size_t    _size{ 0 };
+		std::uintptr_t _proxyBase{};
+		std::uintptr_t _address{};
+		std::size_t    _size{};
 	};
 
 	class Module
@@ -59,7 +59,7 @@ namespace REL
 		[[nodiscard]] constexpr auto base() const noexcept { return _base; }
 
 		template <typename T = void>
-		[[nodiscard]] constexpr auto* pointer() const noexcept
+		[[nodiscard]] constexpr auto pointer() const noexcept
 		{
 			return std::bit_cast<T*>(base());
 		}

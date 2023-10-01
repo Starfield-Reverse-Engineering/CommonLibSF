@@ -57,8 +57,8 @@ namespace REL
 			void close();
 
 		private:
-			void* _mapping{ nullptr };
-			void* _view{ nullptr };
+			void* _mapping{};
+			void* _view{};
 		};
 
 		class Offset2ID
@@ -66,9 +66,9 @@ namespace REL
 		public:
 			using value_type = mapping_t;
 			using container_type = std::vector<value_type>;
-			using size_type = typename container_type::size_type;
-			using const_iterator = typename container_type::const_iterator;
-			using const_reverse_iterator = typename container_type::const_reverse_iterator;
+			using size_type = container_type::size_type;
+			using const_iterator = container_type::const_iterator;
+			using const_reverse_iterator = container_type::const_reverse_iterator;
 
 			template <class ExecutionPolicy>
 			explicit Offset2ID(ExecutionPolicy&& a_policy)
@@ -151,12 +151,12 @@ namespace REL
 
 			[[nodiscard]] std::size_t address_count() const noexcept
 			{
-				return static_cast<std::size_t>(_addressCount);
+				return _addressCount;
 			}
 
 			[[nodiscard]] std::uint64_t pointer_size() const noexcept
 			{
-				return static_cast<std::uint64_t>(_pointerSize);
+				return _pointerSize;
 			}
 
 			[[nodiscard]] std::string_view name() const noexcept
@@ -172,8 +172,8 @@ namespace REL
 		private:
 			char          _name[20]{};
 			Version       _version;
-			std::uint32_t _pointerSize{ 0 };
-			std::uint32_t _addressCount{ 0 };
+			std::uint32_t _pointerSize{};
+			std::uint32_t _addressCount{};
 		};
 	}
 
@@ -232,7 +232,7 @@ namespace REL
 		}
 
 		static IDDatabase              _instance;
-		inline static std::atomic_bool _initialized{ false };
+		inline static std::atomic_bool _initialized{};
 		inline static std::mutex       _initLock;
 		database::memory_map           _mmap;
 		std::span<database::mapping_t> _id2offset;
@@ -275,7 +275,7 @@ namespace REL
 			return Module::get().base();
 		}
 
-		std::uint64_t _id{ 0 };
+		std::uint64_t _id{};
 	};
 
 	template <class ExecutionPolicy>
