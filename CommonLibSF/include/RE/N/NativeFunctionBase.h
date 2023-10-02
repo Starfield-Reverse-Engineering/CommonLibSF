@@ -119,17 +119,17 @@ namespace RE
 				virtual void Run() = 0;
 
 			protected:
-				BSFixedString _name;                            // 10
-				BSFixedString _className;                       // 18
-				BSFixedString _stateName{ "" };                 // 20
-				std::uint64_t _retType;                         // 28 TypeInfo
-				ParameterInfo _params;                          // 30
-				bool          _isStatic;                        // 40
+				BSFixedString _name;                     // 10
+				BSFixedString _className;                // 18
+				BSFixedString _stateName{ "" };          // 20
+				std::uint64_t _retType;                  // 28 TypeInfo
+				ParameterInfo _params;                   // 30
+				bool          _isStatic;                 // 40
 				bool          _isCallableFromTasklet{};  // 41
 				bool          _isLatent{};               // 42
-				std::uint8_t  _pad43;                           // 43
-				std::uint32_t _userFlags{};                  // 44
-				BSFixedString _docString;                       // 48
+				std::uint8_t  _pad43;                    // 43
+				std::uint32_t _userFlags{};              // 44
+				BSFixedString _docString;                // 48
 			};
 			static_assert(sizeof(NativeFunctionBase) == 0x50);
 		}

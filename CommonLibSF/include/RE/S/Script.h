@@ -80,9 +80,9 @@ namespace RE
 	{
 	public:
 		// members
-		const char*   paramName{ "" };    // 00
-		std::uint32_t paramType;          // 08 enumeration
-		bool          optional{};  // 0C
+		const char*   paramName{ "" };  // 00
+		std::uint32_t paramType;        // 08 enumeration
+		bool          optional{};       // 0C
 	};
 	static_assert(sizeof(SCRIPT_PARAMETER) == 0x10);
 

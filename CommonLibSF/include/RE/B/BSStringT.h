@@ -114,8 +114,8 @@ namespace RE
 			a_rhs._capacity = 0;
 		}
 
-		pointer   _data{};  // ??
-		size_type _size{};        // ??
-		size_type _capacity{};    // ??
+		pointer   _data{};      // ??
+		size_type _size{};      // ??
+		size_type _capacity{};  // ??
 	};
 }
