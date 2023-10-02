@@ -8,7 +8,7 @@ namespace RE::Scaleform::GFx
 	class Movie;
 
 	class FunctionHandler :
-		public RefCountBase<FunctionHandler>  // 00
+		public RefCountBase<FunctionHandler, 2>  // 00
 	{
 	public:
 		SF_RTTI_VTABLE(Scaleform__GFx__FunctionHandler);

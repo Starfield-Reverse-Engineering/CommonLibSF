@@ -5,7 +5,7 @@
 namespace RE::Scaleform::GFx
 {
 	class State :
-		public RefCountBase<State>  // 00
+		public RefCountBase<State, 2>  // 00
 	{
 	public:
 		SF_RTTI_VTABLE(Scaleform__GFx__State);
