@@ -159,7 +159,7 @@ namespace REL
 				return _pointerSize;
 			}
 
-			[[nodiscard]] consteval std::string_view name() const noexcept
+			[[nodiscard]] constexpr std::string_view name() const noexcept
 			{
 				return _name;
 			}
@@ -244,11 +244,11 @@ namespace REL
 	public:
 		constexpr ID() noexcept = default;
 
-		explicit consteval ID(const std::uint64_t a_id) noexcept :
+		explicit constexpr ID(const std::uint64_t a_id) noexcept :
 			_id(a_id)
 		{}
 
-		consteval ID& operator=(const std::uint64_t a_id) noexcept
+		constexpr ID& operator=(const std::uint64_t a_id) noexcept
 		{
 			_id = a_id;
 			return *this;
@@ -259,7 +259,7 @@ namespace REL
 			return base() + offset();
 		}
 
-		[[nodiscard]] consteval std::uint64_t id() const noexcept
+		[[nodiscard]] constexpr std::uint64_t id() const noexcept
 		{
 			return _id;
 		}
