@@ -1,6 +1,11 @@
 name: Main CI [XMake]
 
-on: [push]
+on:
+  pull_request:
+    branches: [main, feature/*, fix/*]
+    paths:
+      - "CommonLibSF/**"
+      - "xmake.lua"
 
 jobs:
   build:
