@@ -30,7 +30,7 @@ namespace REL
 		_version = get_file_version(_file).value();
 	}
 
-	Module::Module(std::string_view a_filePath)
+	constexpr Module::Module(std::string_view a_filePath)
 	{
 		const auto base = AsAddress(WinAPI::GetModuleHandle(a_filePath.data())) & ~3;
 		stl_assert(base,

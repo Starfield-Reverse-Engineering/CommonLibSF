@@ -4,7 +4,7 @@
 
 namespace SFSE
 {
-	std::uint32_t InputMap::GamepadMaskToKeycode(const std::uint32_t keyMask)
+	constexpr std::uint32_t InputMap::GamepadMaskToKeycode(const std::uint32_t keyMask)
 	{
 		using XInputButton = RE::XInput::XInputButton;
 		switch (keyMask) {
@@ -45,7 +45,7 @@ namespace SFSE
 		}
 	}
 
-	std::uint32_t InputMap::GamepadKeycodeToMask(const std::uint32_t keyCode)
+	constexpr std::uint32_t InputMap::GamepadKeycodeToMask(const std::uint32_t keyCode)
 	{
 		using XInputButton = RE::XInput::XInputButton;
 
@@ -87,7 +87,7 @@ namespace SFSE
 		}
 	}
 
-	std::string InputMap::GetKeyName(const std::uint32_t a_keyCode)
+	constexpr std::string InputMap::GetKeyName(const std::uint32_t a_keyCode)
 	{
 		if (a_keyCode >= kMacro_MouseButtonOffset && a_keyCode < kMacro_GamepadOffset) {
 			return GetMouseButtonName(a_keyCode);
@@ -162,7 +162,7 @@ namespace SFSE
 		return stl::utf16_to_utf8(keyNameW).value_or(""s);
 	}
 
-	std::string InputMap::GetMouseButtonName(const std::uint32_t a_keyCode)
+	constexpr std::string InputMap::GetMouseButtonName(const std::uint32_t a_keyCode)
 	{
 		switch (a_keyCode) {
 		case 256:
@@ -190,7 +190,7 @@ namespace SFSE
 		}
 	}
 
-	std::string InputMap::GetGamepadButtonName(const std::uint32_t a_keyCode)
+	constexpr std::string InputMap::GetGamepadButtonName(const std::uint32_t a_keyCode)
 	{
 		switch (a_keyCode) {
 		case kGamepadButtonOffset_DPAD_UP:

@@ -31,7 +31,7 @@ namespace REL
 
 		[[nodiscard]] constexpr decltype(auto) cend() const noexcept { return _impl.cend(); }
 
-		[[nodiscard]] std::strong_ordering constexpr compare(const Version& a_rhs) const noexcept
+		[[nodiscard]] constexpr std::strong_ordering compare(const Version& a_rhs) const noexcept
 		{
 			for (std::size_t i = 0; i < _impl.size(); ++i) {
 				if ((*this)[i] != a_rhs[i]) {
@@ -55,7 +55,7 @@ namespace REL
 		[[nodiscard]] constexpr value_type patch() const noexcept { return _impl[2]; }
 		[[nodiscard]] constexpr value_type build() const noexcept { return _impl[3]; }
 
-		[[nodiscard]] std::string string(const std::string_view a_separator = "."sv) const
+		[[nodiscard]] constexpr std::string string(const std::string_view a_separator = "."sv) const
 		{
 			std::string result;
 			for (auto&& ver : _impl) {
@@ -66,7 +66,7 @@ namespace REL
 			return result;
 		}
 
-		[[nodiscard]] std::wstring wstring(const std::wstring_view a_separator = L"."sv) const
+		[[nodiscard]] constexpr std::wstring wstring(const std::wstring_view a_separator = L"."sv) const
 		{
 			std::wstring result;
 			for (auto&& ver : _impl) {
@@ -155,7 +155,7 @@ namespace std
 	struct formatter<REL::Version, CharT> : formatter<std::string, CharT>
 	{
 		template <class FormatContext>
-		auto format(const REL::Version a_version, FormatContext& a_ctx) const
+		constexpr auto format(const REL::Version a_version, FormatContext& a_ctx) const
 		{
 			return formatter<std::string, CharT>::format(a_version.string(), a_ctx);
 		}

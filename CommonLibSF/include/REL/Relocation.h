@@ -104,7 +104,7 @@ namespace REL
 		static constexpr bool is_x64_pod_v = is_x64_pod<T>::value;
 
 		template <class F, class First, class... Rest>
-		decltype(auto) invoke_member_function_non_pod(F&& a_func, First&& a_first, Rest&&... a_rest)  //
+		constexpr decltype(auto) invoke_member_function_non_pod(F&& a_func, First&& a_first, Rest&&... a_rest)  //
 			noexcept(std::is_nothrow_invocable_v<F, First, Rest...>)
 		{
 			using result_t = std::invoke_result_t<F, First, Rest...>;
@@ -133,7 +133,7 @@ namespace REL
 	inline constexpr std::uint8_t INT3 = 0xCC;
 
 	template <class F, class... Args>
-	std::invoke_result_t<F, Args...> invoke(F&& a_func, Args&&... a_args)  //
+	constexpr std::invoke_result_t<F, Args...> invoke(F&& a_func, Args&&... a_args)  //
 		noexcept(std::is_nothrow_invocable_v<F, Args...>)
 		requires(std::invocable<F, Args...>)
 	{
@@ -163,13 +163,13 @@ namespace REL
 	}
 
 	template <std::integral T>
-	void safe_write(const std::uintptr_t a_dst, const T& a_data)
+	constexpr void safe_write(const std::uintptr_t a_dst, const T& a_data)
 	{
 		safe_write(a_dst, std::addressof(a_data), sizeof(T));
 	}
 
 	template <class T>
-	void safe_write(const std::uintptr_t a_dst, std::span<T> a_data)
+	constexpr void safe_write(const std::uintptr_t a_dst, std::span<T> a_data)
 	{
 		safe_write(a_dst, a_data.data(), a_data.size_bytes());
 	}
@@ -228,7 +228,7 @@ namespace REL
 
 		[[nodiscard]] constexpr decltype(auto) address() const noexcept { return _address; }
 
-		[[nodiscard]] std::size_t offset() const noexcept { return _address - base(); }
+		[[nodiscard]] constexpr std::size_t offset() const noexcept { return _address - base(); }
 
 		[[nodiscard]] constexpr decltype(auto) operator*() const noexcept
 			requires(std::is_pointer_v<value_type>)
@@ -243,14 +243,14 @@ namespace REL
 		}
 
 		template <class... Args>
-		std::invoke_result_t<const value_type&, Args...> operator()(Args&&... a_args) const  //
+		constexpr std::invoke_result_t<const value_type&, Args...> operator()(Args&&... a_args) const  //
 			noexcept(std::is_nothrow_invocable_v<const value_type&, Args...>)
 			requires(std::invocable<const value_type&, Args...>)
 		{
 			return invoke(get(), std::forward<Args>(a_args)...);
 		}
 
-		std::uintptr_t write_vfunc(const std::size_t a_idx, const std::uintptr_t a_newFunc)
+		constexpr std::uintptr_t write_vfunc(const std::size_t a_idx, const std::uintptr_t a_newFunc)
 			requires(std::same_as<value_type, std::uintptr_t>)
 		{
 			const auto addr = address() + (sizeof(void*) * a_idx);
@@ -260,14 +260,14 @@ namespace REL
 		}
 
 		template <class F>
-		std::uintptr_t write_vfunc(const std::size_t a_idx, F a_newFunc)
+		constexpr std::uintptr_t write_vfunc(const std::size_t a_idx, F a_newFunc)
 			requires(std::same_as<value_type, std::uintptr_t>)
 		{
 			return write_vfunc(a_idx, stl::unrestricted_cast<std::uintptr_t>(a_newFunc));
 		}
 
 	private:
-		[[nodiscard]] static std::uintptr_t base() { return Module::get().base(); }
+		[[nodiscard]] static constexpr std::uintptr_t base() { return Module::get().base(); }
 
 		std::uintptr_t _address{};
 	};

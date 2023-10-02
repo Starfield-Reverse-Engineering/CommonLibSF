@@ -38,7 +38,7 @@ namespace SFSE
 		using deleter_type = std::function<void(void* a_mem, std::size_t a_size)>;
 
 		Trampoline() = default;
-		Trampoline(const Trampoline&) = delete;
+		constexpr Trampoline(const Trampoline&) = delete;
 
 		Trampoline(Trampoline&& a_rhs) { move_from(std::move(a_rhs)); }
 
@@ -47,9 +47,9 @@ namespace SFSE
 
 		~Trampoline() { release(); }
 
-		Trampoline& operator=(const Trampoline&) = delete;
+		constexpr Trampoline& operator=(const Trampoline&) = delete;
 
-		Trampoline& operator=(Trampoline&& a_rhs)
+		constexpr Trampoline& operator=(Trampoline&& a_rhs)
 		{
 			if (this != std::addressof(a_rhs)) {
 				move_from(std::move(a_rhs));
@@ -110,7 +110,7 @@ namespace SFSE
 #endif
 
 		template <class T>
-		[[nodiscard]] T* allocate()
+		[[nodiscard]] constexpr T* allocate()
 		{
 			return static_cast<T*>(allocate(sizeof(T)));
 		}
@@ -124,7 +124,7 @@ namespace SFSE
 		[[nodiscard]] constexpr std::size_t free_size() const noexcept { return _capacity - _size; }
 
 		template <std::size_t N>
-		std::uintptr_t write_branch(const std::uintptr_t a_src, const std::uintptr_t a_dst)
+		constexpr std::uintptr_t write_branch(const std::uintptr_t a_src, const std::uintptr_t a_dst)
 		{
 			std::uint8_t data = 0;
 			if constexpr (N == 5) {
@@ -143,13 +143,13 @@ namespace SFSE
 		}
 
 		template <std::size_t N, class F>
-		std::uintptr_t write_branch(const std::uintptr_t a_src, F a_dst)
+		constexpr std::uintptr_t write_branch(const std::uintptr_t a_src, F a_dst)
 		{
 			return write_branch<N>(a_src, stl::unrestricted_cast<std::uintptr_t>(a_dst));
 		}
 
 		template <std::size_t N>
-		std::uintptr_t write_call(const std::uintptr_t a_src, const std::uintptr_t a_dst)
+		constexpr std::uintptr_t write_call(const std::uintptr_t a_src, const std::uintptr_t a_dst)
 		{
 			std::uint8_t data = 0;
 			if constexpr (N == 5) {
@@ -168,7 +168,7 @@ namespace SFSE
 		}
 
 		template <std::size_t N, class F>
-		std::uintptr_t write_call(const std::uintptr_t a_src, F a_dst)
+		constexpr std::uintptr_t write_call(const std::uintptr_t a_src, F a_dst)
 		{
 			return write_call<N>(a_src, stl::unrestricted_cast<std::uintptr_t>(a_dst));
 		}
@@ -176,7 +176,7 @@ namespace SFSE
 	private:
 		[[nodiscard]] void* do_create(std::size_t a_size, std::uintptr_t a_address);
 
-		[[nodiscard]] void* do_allocate(const std::size_t a_size)
+		[[nodiscard]] constexpr void* do_allocate(const std::size_t a_size)
 		{
 			if (a_size > free_size()) {
 				stl::report_and_fail("Failed to handle allocation request"sv);
@@ -286,7 +286,7 @@ namespace SFSE
 		}
 
 		template <std::size_t N>
-		[[nodiscard]] std::uintptr_t write_branch(const std::uintptr_t a_src, const std::uintptr_t a_dst, const std::uint8_t a_data)
+		[[nodiscard]] constexpr std::uintptr_t write_branch(const std::uintptr_t a_src, const std::uintptr_t a_dst, const std::uint8_t a_data)
 		{
 			const auto disp = reinterpret_cast<std::int32_t*>(a_src + N - 4);
 			const auto nextOp = a_src + N;
@@ -323,7 +323,7 @@ namespace SFSE
 
 		void log_stats() const;
 
-		[[nodiscard]] bool in_range(const std::ptrdiff_t a_disp) const
+		[[nodiscard]] constexpr bool in_range(const std::ptrdiff_t a_disp) const
 		{
 			constexpr auto min = (std::numeric_limits<std::int32_t>::min)();
 			constexpr auto max = (std::numeric_limits<std::int32_t>::max)();

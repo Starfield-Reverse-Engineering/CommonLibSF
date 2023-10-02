@@ -26,17 +26,17 @@ namespace SFSE
 
 		private:
 			APIStorage() noexcept = default;
-			APIStorage(const APIStorage&) = delete;
-			APIStorage(APIStorage&&) = delete;
-
 			~APIStorage() noexcept = default;
 
-			APIStorage& operator=(const APIStorage&) = delete;
-			APIStorage& operator=(APIStorage&&) = delete;
+			constexpr APIStorage(const APIStorage&) = delete;
+			constexpr APIStorage(APIStorage&&) = delete;
+
+			constexpr APIStorage& operator=(const APIStorage&) = delete;
+			constexpr APIStorage& operator=(APIStorage&&) = delete;
 		};
 
 		template <class T>
-		T* QueryInterface(const LoadInterface* a_intfc, const std::uint32_t a_id)
+		constexpr T* QueryInterface(const LoadInterface* a_intfc, const std::uint32_t a_id)
 		{
 			auto result = static_cast<T*>(a_intfc->QueryInterface(a_id));
 			if (result && result->Version() > T::kVersion) {
