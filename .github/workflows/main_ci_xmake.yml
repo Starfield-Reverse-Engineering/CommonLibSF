@@ -20,7 +20,7 @@ jobs:
           xmake-version: '2.8.2'
 
       - name: Configure
-        run: xmake config --mode=${{ matrix.mode }}
+        run: xmake config -y --mode=${{ matrix.mode }}
 
       - name: Build
         run: xmake build -y -vD
