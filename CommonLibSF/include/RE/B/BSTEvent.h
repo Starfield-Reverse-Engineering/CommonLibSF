@@ -1,6 +1,7 @@
 #pragma once
 
-#include "BSTSingleton.h"
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSTSingleton.h"
 
 namespace RE
 {
@@ -69,11 +70,11 @@ namespace RE
 		}
 
 		// members
-		std::uint8_t  sinks[0x10];  // 08 - BSTArray<BSTEventSink<Event>>
-		std::uint32_t unk18;        // 18
-		std::uint32_t unk1C;        // 1C
-		std::uint32_t unk20;        // 20
-		std::uint32_t unk24;        // 24
+		BSTArray<BSTEventSink<Event>> sinks;  // 08
+		std::uint32_t                 unk18;  // 18
+		std::uint32_t                 unk1C;  // 1C
+		std::uint32_t                 unk20;  // 20
+		std::uint32_t                 unk24;  // 24
 	};
 	static_assert(sizeof(BSTEventSource<void*>) == 0x28);
 
