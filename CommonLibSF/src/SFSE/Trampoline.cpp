@@ -32,7 +32,7 @@ namespace SFSE
 		constexpr std::uintptr_t maxAddr = std::numeric_limits<std::uintptr_t>::max();
 
 		WinAPI::SYSTEM_INFO si;
-		GetSystemInfo(&si);
+		WinAPI::GetSystemInfo(&si);
 		const std::uint32_t granularity = si.allocationGranularity;
 
 		std::uintptr_t       min = a_address >= minRange ? detail::roundup(a_address - minRange, granularity) : 0;
@@ -40,7 +40,7 @@ namespace SFSE
 
 		WinAPI::MEMORY_BASIC_INFORMATION mbi;
 		do {
-			if (!VirtualQuery(reinterpret_cast<void*>(min), std::addressof(mbi), sizeof(mbi))) {
+			if (!WinAPI::VirtualQuery(reinterpret_cast<void*>(min), std::addressof(mbi), sizeof(mbi))) {
 				log::error("VirtualQuery failed with code: 0x{:08X}"sv, WinAPI::GetLastError());
 				return nullptr;
 			}
@@ -56,9 +56,8 @@ namespace SFSE
 					const auto mem = WinAPI::VirtualAlloc(reinterpret_cast<void*>(addr), a_size, WinAPI::MEM_COMMIT | WinAPI::MEM_RESERVE, WinAPI::PAGE_EXECUTE_READWRITE);
 					if (mem) {
 						return mem;
-					} else {
-						log::warn("VirtualAlloc failed with code: 0x{:08X}"sv, WinAPI::GetLastError());
 					}
+					log::warn("VirtualAlloc failed with code: 0x{:08X}"sv, WinAPI::GetLastError());
 				}
 			}
 		} while (min < max);

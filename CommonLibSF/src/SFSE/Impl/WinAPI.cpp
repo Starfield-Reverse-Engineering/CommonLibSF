@@ -41,14 +41,14 @@ namespace SFSE::WinAPI
 	{
 		return static_cast<bool>(
 			::CloseHandle(
-				static_cast<::HANDLE>(a_handle)));
+				a_handle));
 	}
 
 	void CoTaskMemFree(
 		void* a_block) noexcept
 	{
 		::CoTaskMemFree(
-			static_cast<::LPVOID>(a_block));
+			a_block);
 	}
 
 	void* CreateFileMapping(
@@ -59,14 +59,13 @@ namespace SFSE::WinAPI
 		std::uint32_t        a_maxSizeLow,
 		const char*          a_name) noexcept
 	{
-		return static_cast<void*>(
-			::CreateFileMappingA(
-				static_cast<::HANDLE>(a_file),
-				reinterpret_cast<::LPSECURITY_ATTRIBUTES>(a_attributes),
-				static_cast<::DWORD>(a_protect),
-				static_cast<::DWORD>(a_maxSizeHigh),
-				static_cast<::DWORD>(a_maxSizeLow),
-				static_cast<::LPCSTR>(a_name)));
+		return CreateFileMappingA(
+			a_file,
+			reinterpret_cast<LPSECURITY_ATTRIBUTES>(a_attributes),
+			a_protect,
+			a_maxSizeHigh,
+			a_maxSizeLow,
+			a_name);
 	}
 
 	void* CreateFileMapping(
@@ -77,14 +76,13 @@ namespace SFSE::WinAPI
 		std::uint32_t        a_maxSizeLow,
 		const wchar_t*       a_name) noexcept
 	{
-		return static_cast<void*>(
-			::CreateFileMappingW(
-				static_cast<::HANDLE>(a_file),
-				reinterpret_cast<::LPSECURITY_ATTRIBUTES>(a_attributes),
-				static_cast<::DWORD>(a_protect),
-				static_cast<::DWORD>(a_maxSizeHigh),
-				static_cast<::DWORD>(a_maxSizeLow),
-				static_cast<::LPCWSTR>(a_name)));
+		return CreateFileMappingW(
+			a_file,
+			reinterpret_cast<LPSECURITY_ATTRIBUTES>(a_attributes),
+			a_protect,
+			a_maxSizeHigh,
+			a_maxSizeLow,
+			a_name);
 	}
 
 	bool CreateProcess(
@@ -100,17 +98,17 @@ namespace SFSE::WinAPI
 		PROCESS_INFORMATION* a_procInfo) noexcept
 	{
 		return static_cast<bool>(
-			::CreateProcessA(
-				static_cast<::LPCSTR>(a_name),
-				static_cast<::LPSTR>(a_cmd),
-				reinterpret_cast<::LPSECURITY_ATTRIBUTES>(a_procAttr),
-				reinterpret_cast<::LPSECURITY_ATTRIBUTES>(a_threadAttr),
-				static_cast<::BOOL>(a_inherit),
-				static_cast<::DWORD>(a_flags),
-				static_cast<::LPVOID>(a_env),
-				static_cast<::LPCSTR>(a_curDir),
-				reinterpret_cast<::LPSTARTUPINFOA>(a_startInfo),
-				reinterpret_cast<::LPPROCESS_INFORMATION>(a_procInfo)));
+			CreateProcessA(
+				a_name,
+				a_cmd,
+				reinterpret_cast<LPSECURITY_ATTRIBUTES>(a_procAttr),
+				reinterpret_cast<LPSECURITY_ATTRIBUTES>(a_threadAttr),
+				a_inherit,
+				a_flags,
+				a_env,
+				a_curDir,
+				reinterpret_cast<LPSTARTUPINFOA>(a_startInfo),
+				reinterpret_cast<LPPROCESS_INFORMATION>(a_procInfo)));
 	}
 
 	bool CreateProcess(
@@ -126,17 +124,17 @@ namespace SFSE::WinAPI
 		PROCESS_INFORMATION* a_procInfo) noexcept
 	{
 		return static_cast<bool>(
-			::CreateProcessW(
-				static_cast<::LPCWSTR>(a_name),
-				static_cast<::LPWSTR>(a_cmd),
-				reinterpret_cast<::LPSECURITY_ATTRIBUTES>(a_procAttr),
-				reinterpret_cast<::LPSECURITY_ATTRIBUTES>(a_threadAttr),
-				static_cast<::BOOL>(a_inherit),
-				static_cast<::DWORD>(a_flags),
-				static_cast<::LPVOID>(a_env),
-				static_cast<::LPCWSTR>(a_curDir),
-				reinterpret_cast<::LPSTARTUPINFOW>(a_startInfo),
-				reinterpret_cast<::LPPROCESS_INFORMATION>(a_procInfo)));
+			CreateProcessW(
+				a_name,
+				a_cmd,
+				reinterpret_cast<LPSECURITY_ATTRIBUTES>(a_procAttr),
+				reinterpret_cast<LPSECURITY_ATTRIBUTES>(a_threadAttr),
+				a_inherit,
+				a_flags,
+				a_env,
+				a_curDir,
+				reinterpret_cast<LPSTARTUPINFOW>(a_startInfo),
+				reinterpret_cast<LPPROCESS_INFORMATION>(a_procInfo)));
 	}
 
 	void* CreateRemoteThread(
@@ -148,15 +146,14 @@ namespace SFSE::WinAPI
 		std::uint32_t         a_flags,
 		std::uint32_t*        a_threadID) noexcept
 	{
-		return static_cast<void*>(
-			::CreateRemoteThread(
-				static_cast<::HANDLE>(a_process),
-				reinterpret_cast<::LPSECURITY_ATTRIBUTES>(a_threadAttr),
-				static_cast<::SIZE_T>(a_stackSize),
-				reinterpret_cast<::LPTHREAD_START_ROUTINE>(a_startAddr),
-				static_cast<::LPVOID>(a_param),
-				static_cast<::DWORD>(a_flags),
-				reinterpret_cast<::LPDWORD>(a_threadID)));
+		return ::CreateRemoteThread(
+			a_process,
+			reinterpret_cast<LPSECURITY_ATTRIBUTES>(a_threadAttr),
+			a_stackSize,
+			reinterpret_cast<LPTHREAD_START_ROUTINE>(a_startAddr),
+			a_param,
+			a_flags,
+			reinterpret_cast<LPDWORD>(a_threadID));
 	}
 
 	void* CreateThread(
@@ -167,14 +164,13 @@ namespace SFSE::WinAPI
 		std::uint32_t         a_flags,
 		std::uint32_t*        a_threadID) noexcept
 	{
-		return static_cast<void*>(
-			::CreateThread(
-				reinterpret_cast<::LPSECURITY_ATTRIBUTES>(a_threadAttr),
-				static_cast<::SIZE_T>(a_stackSize),
-				reinterpret_cast<::LPTHREAD_START_ROUTINE>(a_startAddr),
-				static_cast<::LPVOID>(a_param),
-				static_cast<::DWORD>(a_flags),
-				reinterpret_cast<::LPDWORD>(a_threadID)));
+		return ::CreateThread(
+			reinterpret_cast<LPSECURITY_ATTRIBUTES>(a_threadAttr),
+			a_stackSize,
+			reinterpret_cast<LPTHREAD_START_ROUTINE>(a_startAddr),
+			a_param,
+			a_flags,
+			reinterpret_cast<LPDWORD>(a_threadID));
 	}
 
 	std::uint32_t ExpandEnvironmentStrings(
@@ -183,10 +179,10 @@ namespace SFSE::WinAPI
 		std::uint32_t a_dstLen) noexcept
 	{
 		return static_cast<std::uint32_t>(
-			::ExpandEnvironmentStringsA(
-				static_cast<::LPCSTR>(a_src),
-				static_cast<::LPSTR>(a_dst),
-				static_cast<::DWORD>(a_dstLen)));
+			ExpandEnvironmentStringsA(
+				a_src,
+				a_dst,
+				a_dstLen));
 	}
 
 	std::uint32_t ExpandEnvironmentStrings(
@@ -195,10 +191,10 @@ namespace SFSE::WinAPI
 		std::uint32_t  a_dstLen) noexcept
 	{
 		return static_cast<std::uint32_t>(
-			::ExpandEnvironmentStringsW(
-				static_cast<::LPCWSTR>(a_src),
-				static_cast<::LPWSTR>(a_dst),
-				static_cast<::DWORD>(a_dstLen)));
+			ExpandEnvironmentStringsW(
+				a_src,
+				a_dst,
+				a_dstLen));
 	}
 
 	bool FindClose(
@@ -206,27 +202,25 @@ namespace SFSE::WinAPI
 	{
 		return static_cast<bool>(
 			::FindClose(
-				static_cast<::HMODULE>(a_file)));
+				a_file));
 	}
 
 	void* FindFirstFile(
 		const char*       a_name,
 		WIN32_FIND_DATAA* a_data) noexcept
 	{
-		return static_cast<void*>(
-			::FindFirstFileA(
-				static_cast<::LPCSTR>(a_name),
-				reinterpret_cast<::LPWIN32_FIND_DATAA>(a_data)));
+		return FindFirstFileA(
+			a_name,
+			reinterpret_cast<LPWIN32_FIND_DATAA>(a_data));
 	}
 
 	void* FindFirstFile(
 		const wchar_t*    a_name,
 		WIN32_FIND_DATAW* a_data) noexcept
 	{
-		return static_cast<void*>(
-			::FindFirstFileW(
-				static_cast<::LPCWSTR>(a_name),
-				reinterpret_cast<::LPWIN32_FIND_DATAW>(a_data)));
+		return FindFirstFileW(
+			a_name,
+			reinterpret_cast<LPWIN32_FIND_DATAW>(a_data));
 	}
 
 	bool FindNextFile(
@@ -234,9 +228,9 @@ namespace SFSE::WinAPI
 		WIN32_FIND_DATAA* a_data) noexcept
 	{
 		return static_cast<bool>(
-			::FindNextFileA(
-				static_cast<::HANDLE>(a_file),
-				reinterpret_cast<::LPWIN32_FIND_DATAA>(a_data)));
+			FindNextFileA(
+				a_file,
+				reinterpret_cast<LPWIN32_FIND_DATAA>(a_data)));
 	}
 
 	bool FindNextFile(
@@ -244,9 +238,9 @@ namespace SFSE::WinAPI
 		WIN32_FIND_DATAW* a_data) noexcept
 	{
 		return static_cast<bool>(
-			::FindNextFileW(
-				static_cast<::HANDLE>(a_file),
-				reinterpret_cast<::LPWIN32_FIND_DATAW>(a_data)));
+			FindNextFileW(
+				a_file,
+				reinterpret_cast<LPWIN32_FIND_DATAW>(a_data)));
 	}
 
 	bool FlushInstructionCache(
@@ -256,9 +250,9 @@ namespace SFSE::WinAPI
 	{
 		return static_cast<bool>(
 			::FlushInstructionCache(
-				static_cast<::HANDLE>(a_process),
-				static_cast<::LPCVOID>(a_baseAddr),
-				static_cast<::SIZE_T>(a_size)));
+				a_process,
+				a_baseAddr,
+				a_size));
 	}
 
 	bool FreeLibrary(
@@ -271,20 +265,18 @@ namespace SFSE::WinAPI
 
 	void* GetCurrentModule() noexcept
 	{
-		return static_cast<void*>(
-			std::addressof(__ImageBase));
+		return std::addressof(__ImageBase);
 	}
 
 	void* GetCurrentProcess() noexcept
 	{
-		return static_cast<void*>(
-			::GetCurrentProcess());
+		return ::GetCurrentProcess();
 	}
 
 	std::uint32_t GetCurrentThreadID() noexcept
 	{
 		return static_cast<std::uint32_t>(
-			::GetCurrentThreadId());
+			GetCurrentThreadId());
 	}
 
 	std::uint32_t GetEnvironmentVariable(
@@ -293,10 +285,10 @@ namespace SFSE::WinAPI
 		std::uint32_t a_bufferLen) noexcept
 	{
 		return static_cast<std::uint32_t>(
-			::GetEnvironmentVariableA(
-				static_cast<::LPCSTR>(a_name),
-				static_cast<::LPSTR>(a_buffer),
-				static_cast<::DWORD>(a_bufferLen)));
+			GetEnvironmentVariableA(
+				a_name,
+				a_buffer,
+				a_bufferLen));
 	}
 
 	std::uint32_t GetEnvironmentVariable(
@@ -305,10 +297,10 @@ namespace SFSE::WinAPI
 		std::uint32_t  a_bufferLen) noexcept
 	{
 		return static_cast<std::uint32_t>(
-			::GetEnvironmentVariableW(
-				static_cast<::LPCWSTR>(a_name),
-				static_cast<::LPWSTR>(a_buffer),
-				static_cast<::DWORD>(a_bufferLen)));
+			GetEnvironmentVariableW(
+				a_name,
+				a_buffer,
+				a_bufferLen));
 	}
 
 	bool GetFileVersionInfo(
@@ -318,11 +310,11 @@ namespace SFSE::WinAPI
 		void*         a_data) noexcept
 	{
 		return static_cast<bool>(
-			::GetFileVersionInfoA(
-				static_cast<::LPCSTR>(a_name),
-				static_cast<::DWORD>(a_handle),
-				static_cast<::DWORD>(a_dataLen),
-				static_cast<::LPVOID>(a_data)));
+			GetFileVersionInfoA(
+				a_name,
+				a_handle,
+				a_dataLen,
+				a_data));
 	}
 
 	bool GetFileVersionInfo(
@@ -332,11 +324,11 @@ namespace SFSE::WinAPI
 		void*          a_data) noexcept
 	{
 		return static_cast<bool>(
-			::GetFileVersionInfoW(
-				static_cast<::LPCWSTR>(a_name),
-				static_cast<::DWORD>(a_handle),
-				static_cast<::DWORD>(a_dataLen),
-				static_cast<::LPVOID>(a_data)));
+			GetFileVersionInfoW(
+				a_name,
+				a_handle,
+				a_dataLen,
+				a_data));
 	}
 
 	std::uint32_t GetFileVersionInfoSize(
@@ -344,9 +336,9 @@ namespace SFSE::WinAPI
 		std::uint32_t* a_handle) noexcept
 	{
 		return static_cast<std::uint32_t>(
-			::GetFileVersionInfoSizeA(
-				static_cast<::LPCSTR>(a_name),
-				reinterpret_cast<::LPDWORD>(a_handle)));
+			GetFileVersionInfoSizeA(
+				a_name,
+				reinterpret_cast<LPDWORD>(a_handle)));
 	}
 
 	std::uint32_t GetFileVersionInfoSize(
@@ -354,9 +346,9 @@ namespace SFSE::WinAPI
 		std::uint32_t* a_handle) noexcept
 	{
 		return static_cast<std::uint32_t>(
-			::GetFileVersionInfoSizeW(
-				static_cast<::LPCWSTR>(a_name),
-				reinterpret_cast<::LPDWORD>(a_handle)));
+			GetFileVersionInfoSizeW(
+				a_name,
+				reinterpret_cast<LPDWORD>(a_handle)));
 	}
 
 	std::int32_t GetKeyNameText(
@@ -364,9 +356,9 @@ namespace SFSE::WinAPI
 		wchar_t*     a_buffer,
 		std::int32_t a_bufferLen) noexcept
 	{
-		return ::GetKeyNameTextW(
-			static_cast<::LONG>(a_param),
-			static_cast<::LPWSTR>(a_buffer),
+		return GetKeyNameTextW(
+			a_param,
+			a_buffer,
 			a_bufferLen);
 	}
 
@@ -375,9 +367,9 @@ namespace SFSE::WinAPI
 		char*        a_buffer,
 		std::int32_t a_bufferLen) noexcept
 	{
-		return ::GetKeyNameTextA(
-			static_cast<::LONG>(a_param),
-			static_cast<::LPSTR>(a_buffer),
+		return GetKeyNameTextA(
+			a_param,
+			a_buffer,
 			a_bufferLen);
 	}
 
@@ -395,7 +387,7 @@ namespace SFSE::WinAPI
 
 	std::size_t GetMaxPath() noexcept
 	{
-		return static_cast<std::size_t>(MAX_PATH);
+		return MAX_PATH;
 	}
 
 	std::uint32_t GetModuleFileName(
@@ -404,10 +396,10 @@ namespace SFSE::WinAPI
 		std::uint32_t a_nameLen) noexcept
 	{
 		return static_cast<std::uint32_t>(
-			::GetModuleFileNameA(
+			GetModuleFileNameA(
 				static_cast<::HMODULE>(a_module),
-				static_cast<::LPSTR>(a_name),
-				static_cast<::DWORD>(a_nameLen)));
+				a_name,
+				a_nameLen));
 	}
 
 	std::uint32_t GetModuleFileName(
@@ -416,25 +408,25 @@ namespace SFSE::WinAPI
 		std::uint32_t a_nameLen) noexcept
 	{
 		return static_cast<std::uint32_t>(
-			::GetModuleFileNameW(
+			GetModuleFileNameW(
 				static_cast<::HMODULE>(a_module),
-				static_cast<::LPWSTR>(a_name),
-				static_cast<::DWORD>(a_nameLen)));
+				a_name,
+				a_nameLen));
 	}
 
 	HMODULE GetModuleHandle(
 		const char* a_name) noexcept
 	{
 		return reinterpret_cast<HMODULE>(
-			::GetModuleHandleA(
-				static_cast<::LPCSTR>(a_name)));
+			GetModuleHandleA(
+				a_name));
 	}
 
 	HMODULE GetModuleHandle(
 		const wchar_t* a_name) noexcept
 	{
 		return reinterpret_cast<HMODULE>(
-			::GetModuleHandleW(static_cast<::LPCWSTR>(a_name)));
+			GetModuleHandleW(a_name));
 	}
 
 	std::uint32_t GetPrivateProfileString(
@@ -446,13 +438,13 @@ namespace SFSE::WinAPI
 		const char*   a_name) noexcept
 	{
 		return static_cast<std::uint32_t>(
-			::GetPrivateProfileStringA(
-				static_cast<::LPCSTR>(a_app),
-				static_cast<::LPCSTR>(a_key),
-				static_cast<::LPCSTR>(a_default),
-				static_cast<::LPSTR>(a_out),
-				static_cast<::DWORD>(a_outLen),
-				static_cast<::LPCSTR>(a_name)));
+			GetPrivateProfileStringA(
+				a_app,
+				a_key,
+				a_default,
+				a_out,
+				a_outLen,
+				a_name));
 	}
 
 	std::uint32_t GetPrivateProfileString(
@@ -464,13 +456,13 @@ namespace SFSE::WinAPI
 		const wchar_t* a_name) noexcept
 	{
 		return static_cast<std::uint32_t>(
-			::GetPrivateProfileStringW(
-				static_cast<::LPCWSTR>(a_app),
-				static_cast<::LPCWSTR>(a_key),
-				static_cast<::LPCWSTR>(a_default),
-				static_cast<::LPWSTR>(a_out),
-				static_cast<::DWORD>(a_outLen),
-				static_cast<::LPCWSTR>(a_name)));
+			GetPrivateProfileStringW(
+				a_app,
+				a_key,
+				a_default,
+				a_out,
+				a_outLen,
+				a_name));
 	}
 
 	void* GetProcAddress(
@@ -480,7 +472,7 @@ namespace SFSE::WinAPI
 		return reinterpret_cast<void*>(
 			::GetProcAddress(
 				static_cast<::HMODULE>(a_module),
-				static_cast<::LPCSTR>(a_name)));
+				a_name));
 	}
 
 	std::string_view GetProcPath(
@@ -500,7 +492,7 @@ namespace SFSE::WinAPI
 		SYSTEM_INFO* a_info) noexcept
 	{
 		::GetSystemInfo(
-			reinterpret_cast<::LPSYSTEM_INFO>(a_info));
+			reinterpret_cast<LPSYSTEM_INFO>(a_info));
 	}
 
 	bool IMAGE_SNAP_BY_ORDINAL64(
@@ -536,30 +528,30 @@ namespace SFSE::WinAPI
 		std::intptr_t   a_sortHandle) noexcept
 	{
 		return ::LCMapStringEx(
-			static_cast<::LPCWSTR>(a_locale),
-			static_cast<::DWORD>(a_flags),
-			static_cast<::LPCWSTR>(a_src),
+			a_locale,
+			a_flags,
+			a_src,
 			a_srcLen,
-			static_cast<::LPWSTR>(a_dest),
+			a_dest,
 			a_destLen,
-			reinterpret_cast<::LPNLSVERSIONINFO>(a_info),
-			static_cast<::LPVOID>(a_reserved),
-			static_cast<::LPARAM>(a_sortHandle));
+			reinterpret_cast<LPNLSVERSIONINFO>(a_info),
+			a_reserved,
+			a_sortHandle);
 	}
 
 	HMODULE LoadLibrary(
 		const char* a_name) noexcept
 	{
 		return reinterpret_cast<HMODULE>(
-			::LoadLibraryA(
-				static_cast<::LPCSTR>(a_name)));
+			LoadLibraryA(
+				a_name));
 	}
 
 	HMODULE LoadLibrary(
 		const wchar_t* a_name) noexcept
 	{
 		return reinterpret_cast<HMODULE>(
-			::LoadLibraryW(static_cast<::LPCWSTR>(a_name)));
+			LoadLibraryW(a_name));
 	}
 
 	void* MapViewOfFile(
@@ -569,13 +561,12 @@ namespace SFSE::WinAPI
 		std::uint32_t a_fileOffsetLow,
 		std::size_t   a_numBytesToMap) noexcept
 	{
-		return static_cast<void*>(
-			::MapViewOfFile(
-				static_cast<::LPVOID>(a_object),
-				static_cast<::DWORD>(a_desiredAccess),
-				static_cast<::DWORD>(a_fileOffsetHigh),
-				static_cast<::DWORD>(a_fileOffsetLow),
-				static_cast<::SIZE_T>(a_numBytesToMap)));
+		return ::MapViewOfFile(
+			a_object,
+			a_desiredAccess,
+			a_fileOffsetHigh,
+			a_fileOffsetLow,
+			a_numBytesToMap);
 	}
 
 	void* MapViewOfFileEx(
@@ -586,14 +577,13 @@ namespace SFSE::WinAPI
 		std::size_t   a_numBytesToMap,
 		void*         a_baseAddress) noexcept
 	{
-		return static_cast<void*>(
-			::MapViewOfFileEx(
-				static_cast<::LPVOID>(a_object),
-				static_cast<::DWORD>(a_desiredAccess),
-				static_cast<::DWORD>(a_fileOffsetHigh),
-				static_cast<::DWORD>(a_fileOffsetLow),
-				static_cast<::SIZE_T>(a_numBytesToMap),
-				static_cast<::LPVOID>(a_baseAddress)));
+		return ::MapViewOfFileEx(
+			a_object,
+			a_desiredAccess,
+			a_fileOffsetHigh,
+			a_fileOffsetLow,
+			a_numBytesToMap,
+			a_baseAddress);
 	}
 
 	std::int32_t MessageBox(
@@ -602,12 +592,11 @@ namespace SFSE::WinAPI
 		const char*   a_caption,
 		std::uint32_t a_type) noexcept
 	{
-		return static_cast<std::int32_t>(
-			::MessageBoxA(
-				static_cast<::HWND>(a_wnd),
-				static_cast<::LPCSTR>(a_text),
-				static_cast<::LPCSTR>(a_caption),
-				static_cast<::UINT>(a_type)));
+		return MessageBoxA(
+			static_cast<::HWND>(a_wnd),
+			a_text,
+			a_caption,
+			a_type);
 	}
 
 	std::int32_t MessageBox(
@@ -616,12 +605,11 @@ namespace SFSE::WinAPI
 		const wchar_t* a_caption,
 		std::uint32_t  a_type) noexcept
 	{
-		return static_cast<std::int32_t>(
-			::MessageBoxW(
-				static_cast<::HWND>(a_wnd),
-				static_cast<::LPCWSTR>(a_text),
-				static_cast<::LPCWSTR>(a_caption),
-				static_cast<::UINT>(a_type)));
+		return MessageBoxW(
+			static_cast<::HWND>(a_wnd),
+			a_text,
+			a_caption,
+			a_type);
 	}
 
 	std::int32_t MultiByteToWideChar(
@@ -633,11 +621,11 @@ namespace SFSE::WinAPI
 		std::int32_t  a_wstrLen)
 	{
 		return ::MultiByteToWideChar(
-			static_cast<::UINT>(a_codePage),
-			static_cast<::DWORD>(a_flags),
-			static_cast<::LPCCH>(a_str),
+			a_codePage,
+			a_flags,
+			a_str,
 			a_strLen,
-			static_cast<::LPWSTR>(a_wstr),
+			a_wstr,
 			a_wstrLen);
 	}
 
@@ -649,10 +637,10 @@ namespace SFSE::WinAPI
 		std::int32_t   a_destLen)
 	{
 		return ::NormalizeString(
-			static_cast<::NORM_FORM>(a_normForm),
-			static_cast<::LPCWSTR>(a_src),
+			static_cast<NORM_FORM>(a_normForm),
+			a_src,
 			a_srcLen,
-			static_cast<::LPWSTR>(a_dest),
+			a_dest,
 			a_destLen);
 	}
 
@@ -661,11 +649,10 @@ namespace SFSE::WinAPI
 		bool          a_inheritHandle,
 		const char*   a_name) noexcept
 	{
-		return static_cast<void*>(
-			::OpenFileMappingA(
-				static_cast<::DWORD>(a_desiredAccess),
-				static_cast<::BOOL>(a_inheritHandle),
-				static_cast<::LPCSTR>(a_name)));
+		return OpenFileMappingA(
+			a_desiredAccess,
+			a_inheritHandle,
+			a_name);
 	}
 
 	void* OpenFileMapping(
@@ -673,25 +660,24 @@ namespace SFSE::WinAPI
 		bool           a_inheritHandle,
 		const wchar_t* a_name) noexcept
 	{
-		return static_cast<void*>(
-			::OpenFileMappingW(
-				static_cast<::DWORD>(a_desiredAccess),
-				static_cast<::BOOL>(a_inheritHandle),
-				static_cast<::LPCWSTR>(a_name)));
+		return OpenFileMappingW(
+			a_desiredAccess,
+			a_inheritHandle,
+			a_name);
 	}
 
 	void OutputDebugString(
 		const char* a_out) noexcept
 	{
-		::OutputDebugStringA(
-			static_cast<::LPCSTR>(a_out));
+		OutputDebugStringA(
+			a_out);
 	}
 
 	void OutputDebugString(
 		const wchar_t* a_out) noexcept
 	{
-		::OutputDebugStringW(
-			static_cast<::LPCWSTR>(a_out));
+		OutputDebugStringW(
+			a_out);
 	}
 
 	std::int32_t RegGetValue(
@@ -703,14 +689,14 @@ namespace SFSE::WinAPI
 		void*          a_data,
 		std::uint32_t* a_dataLen)
 	{
-		return ::RegGetValueA(
+		return RegGetValueA(
 			reinterpret_cast<::HKEY>(a_key),
 			a_subKey,
 			a_value,
 			a_flags,
-			reinterpret_cast<::LPDWORD>(a_type),
+			reinterpret_cast<LPDWORD>(a_type),
 			a_data,
-			reinterpret_cast<::LPDWORD>(a_dataLen));
+			reinterpret_cast<LPDWORD>(a_dataLen));
 	}
 
 	std::int32_t RegGetValue(
@@ -722,14 +708,14 @@ namespace SFSE::WinAPI
 		void*          a_data,
 		std::uint32_t* a_dataLen)
 	{
-		return ::RegGetValueW(
+		return RegGetValueW(
 			reinterpret_cast<::HKEY>(a_key),
 			a_subKey,
 			a_value,
 			a_flags,
-			reinterpret_cast<::LPDWORD>(a_type),
+			reinterpret_cast<LPDWORD>(a_type),
 			a_data,
-			reinterpret_cast<::LPDWORD>(a_dataLen));
+			reinterpret_cast<LPDWORD>(a_dataLen));
 	}
 
 	std::uint32_t ResumeThread(
@@ -737,7 +723,7 @@ namespace SFSE::WinAPI
 	{
 		return static_cast<std::uint32_t>(
 			::ResumeThread(
-				static_cast<::HANDLE>(a_handle)));
+				a_handle));
 	}
 
 	bool SetEnvironmentVariable(
@@ -745,9 +731,9 @@ namespace SFSE::WinAPI
 		const char* a_value) noexcept
 	{
 		return static_cast<bool>(
-			::SetEnvironmentVariableA(
-				static_cast<::LPCSTR>(a_name),
-				static_cast<::LPCSTR>(a_value)));
+			SetEnvironmentVariableA(
+				a_name,
+				a_value));
 	}
 
 	bool SetEnvironmentVariable(
@@ -755,9 +741,9 @@ namespace SFSE::WinAPI
 		const wchar_t* a_value) noexcept
 	{
 		return static_cast<bool>(
-			::SetEnvironmentVariableW(
-				static_cast<::LPCWSTR>(a_name),
-				static_cast<::LPCWSTR>(a_value)));
+			SetEnvironmentVariableW(
+				a_name,
+				a_value));
 	}
 
 	std::int32_t SHGetKnownFolderPath(
@@ -768,23 +754,23 @@ namespace SFSE::WinAPI
 	{
 		return static_cast<std::int32_t>(
 			::SHGetKnownFolderPath(
-				reinterpret_cast<const ::KNOWNFOLDERID&>(a_id),
-				static_cast<::DWORD>(a_flags),
-				static_cast<::HANDLE>(a_token),
-				static_cast<::PWSTR*>(a_path)));
+				reinterpret_cast<const KNOWNFOLDERID&>(a_id),
+				a_flags,
+				a_token,
+				a_path));
 	}
 
 	std::int32_t ShowCursor(
 		bool a_show) noexcept
 	{
 		return ::ShowCursor(
-			static_cast<::BOOL>(a_show));
+			a_show);
 	}
 
 	void Sleep(
 		std::uint32_t a_milliseconds) noexcept
 	{
-		::Sleep(static_cast<DWORD>(a_milliseconds));
+		::Sleep(a_milliseconds);
 	}
 
 	bool TerminateProcess(
@@ -793,16 +779,15 @@ namespace SFSE::WinAPI
 	{
 		return static_cast<bool>(
 			::TerminateProcess(
-				static_cast<::HANDLE>(a_process),
-				static_cast<::UINT>(a_exitCode)));
+				a_process,
+				a_exitCode));
 	}
 
 	void* TlsGetValue(
 		std::uint32_t a_index) noexcept
 	{
-		return static_cast<void*>(
-			::TlsGetValue(
-				static_cast<::DWORD>(a_index)));
+		return ::TlsGetValue(
+			a_index);
 	}
 
 	bool TlsSetValue(
@@ -811,8 +796,8 @@ namespace SFSE::WinAPI
 	{
 		return static_cast<bool>(
 			::TlsSetValue(
-				static_cast<::DWORD>(a_index),
-				static_cast<::LPVOID>(a_value)));
+				a_index,
+				a_value));
 	}
 
 	std::uint32_t UnDecorateSymbolName(
@@ -823,10 +808,10 @@ namespace SFSE::WinAPI
 	{
 		return static_cast<std::uint32_t>(
 			::UnDecorateSymbolName(
-				static_cast<::PCSTR>(a_name),
-				static_cast<::PSTR>(a_out),
-				static_cast<::DWORD>(a_outLenMax),
-				static_cast<::DWORD>(a_flags)));
+				a_name,
+				a_out,
+				a_outLenMax,
+				a_flags));
 	}
 
 	std::uint32_t UnDecorateSymbolName(
@@ -836,11 +821,11 @@ namespace SFSE::WinAPI
 		std::uint32_t  a_flags) noexcept
 	{
 		return static_cast<std::uint32_t>(
-			::UnDecorateSymbolNameW(
-				static_cast<::PCWSTR>(a_name),
-				static_cast<::PWSTR>(a_out),
-				static_cast<::DWORD>(a_outLenMax),
-				static_cast<::DWORD>(a_flags)));
+			UnDecorateSymbolNameW(
+				a_name,
+				a_out,
+				a_outLenMax,
+				a_flags));
 	}
 
 	bool UnmapViewOfFile(
@@ -848,7 +833,7 @@ namespace SFSE::WinAPI
 	{
 		return static_cast<bool>(
 			::UnmapViewOfFile(
-				static_cast<::LPCVOID>(a_baseAddress)));
+				a_baseAddress));
 	}
 
 	bool VerQueryValue(
@@ -858,10 +843,10 @@ namespace SFSE::WinAPI
 		std::uint32_t* a_bufferLen) noexcept
 	{
 		return static_cast<bool>(
-			::VerQueryValueA(static_cast<::LPCVOID>(a_block),
-				static_cast<::LPCSTR>(a_subBlock),
-				static_cast<::LPVOID*>(a_buffer),
-				static_cast<::PUINT>(a_bufferLen)));
+			VerQueryValueA(a_block,
+				a_subBlock,
+				a_buffer,
+				a_bufferLen));
 	}
 
 	bool VerQueryValue(
@@ -871,11 +856,11 @@ namespace SFSE::WinAPI
 		std::uint32_t* a_bufferLen) noexcept
 	{
 		return static_cast<bool>(
-			::VerQueryValueW(
-				static_cast<::LPCVOID>(a_block),
-				static_cast<::LPCWSTR>(a_subBlock),
-				static_cast<::LPVOID*>(a_buffer),
-				static_cast<::PUINT>(a_bufferLen)));
+			VerQueryValueW(
+				a_block,
+				a_subBlock,
+				a_buffer,
+				a_bufferLen));
 	}
 
 	void* VirtualAlloc(
@@ -884,12 +869,11 @@ namespace SFSE::WinAPI
 		std::uint32_t a_type,
 		std::uint32_t a_protect) noexcept
 	{
-		return static_cast<void*>(
-			::VirtualAlloc(
-				static_cast<::LPVOID>(a_address),
-				static_cast<::SIZE_T>(a_size),
-				static_cast<::DWORD>(a_type),
-				static_cast<::DWORD>(a_protect)));
+		return ::VirtualAlloc(
+			a_address,
+			a_size,
+			a_type,
+			a_protect);
 	}
 
 	void* VirtualAllocEx(
@@ -899,13 +883,12 @@ namespace SFSE::WinAPI
 		std::uint32_t a_type,
 		std::uint32_t a_protect) noexcept
 	{
-		return static_cast<void*>(
-			::VirtualAllocEx(
-				static_cast<::HANDLE>(a_process),
-				static_cast<::LPVOID>(a_address),
-				static_cast<::SIZE_T>(a_size),
-				static_cast<::DWORD>(a_type),
-				static_cast<::DWORD>(a_protect)));
+		return ::VirtualAllocEx(
+			a_process,
+			a_address,
+			a_size,
+			a_type,
+			a_protect);
 	}
 
 	bool VirtualFree(
@@ -915,9 +898,9 @@ namespace SFSE::WinAPI
 	{
 		return static_cast<bool>(
 			::VirtualFree(
-				static_cast<::LPVOID>(a_address),
-				static_cast<::SIZE_T>(a_size),
-				static_cast<::DWORD>(a_type)));
+				a_address,
+				a_size,
+				a_type));
 	}
 
 	bool VirtualFreeEx(
@@ -928,10 +911,10 @@ namespace SFSE::WinAPI
 	{
 		return static_cast<bool>(
 			::VirtualFreeEx(
-				static_cast<::HANDLE>(a_process),
-				static_cast<::LPVOID>(a_address),
-				static_cast<::SIZE_T>(a_size),
-				static_cast<::DWORD>(a_type)));
+				a_process,
+				a_address,
+				a_size,
+				a_type));
 	}
 
 	bool VirtualProtect(
@@ -942,10 +925,10 @@ namespace SFSE::WinAPI
 	{
 		return static_cast<bool>(
 			::VirtualProtect(
-				static_cast<::LPVOID>(a_address),
-				static_cast<::SIZE_T>(a_size),
-				static_cast<::DWORD>(a_newProtect),
-				reinterpret_cast<::PDWORD>(a_oldProtect)));
+				a_address,
+				a_size,
+				a_newProtect,
+				reinterpret_cast<PDWORD>(a_oldProtect)));
 	}
 
 	bool VirtualProtectEx(
@@ -957,11 +940,11 @@ namespace SFSE::WinAPI
 	{
 		return static_cast<bool>(
 			::VirtualProtectEx(
-				static_cast<::HANDLE>(a_process),
-				static_cast<::LPVOID>(a_address),
-				static_cast<::SIZE_T>(a_size),
-				static_cast<::DWORD>(a_newProtect),
-				reinterpret_cast<::PDWORD>(a_oldProtect)));
+				a_process,
+				a_address,
+				a_size,
+				a_newProtect,
+				reinterpret_cast<PDWORD>(a_oldProtect)));
 	}
 
 	std::size_t VirtualQuery(
@@ -969,11 +952,10 @@ namespace SFSE::WinAPI
 		MEMORY_BASIC_INFORMATION* a_buffer,
 		std::size_t               a_bufferLen) noexcept
 	{
-		return static_cast<std::size_t>(
-			::VirtualQuery(
-				static_cast<::LPCVOID>(a_address),
-				reinterpret_cast<::PMEMORY_BASIC_INFORMATION>(a_buffer),
-				static_cast<::SIZE_T>(a_bufferLen)));
+		return ::VirtualQuery(
+			a_address,
+			reinterpret_cast<PMEMORY_BASIC_INFORMATION>(a_buffer),
+			a_bufferLen);
 	}
 
 	std::size_t VirtualQueryEx(
@@ -982,12 +964,11 @@ namespace SFSE::WinAPI
 		MEMORY_BASIC_INFORMATION* a_buffer,
 		std::size_t               a_bufferLen) noexcept
 	{
-		return static_cast<std::size_t>(
-			::VirtualQueryEx(
-				static_cast<::HANDLE>(a_process),
-				static_cast<::LPCVOID>(a_address),
-				reinterpret_cast<::PMEMORY_BASIC_INFORMATION>(a_buffer),
-				static_cast<::SIZE_T>(a_bufferLen)));
+		return ::VirtualQueryEx(
+			a_process,
+			a_address,
+			reinterpret_cast<PMEMORY_BASIC_INFORMATION>(a_buffer),
+			a_bufferLen);
 	}
 
 	std::uint32_t WaitForSingleObject(
@@ -996,8 +977,8 @@ namespace SFSE::WinAPI
 	{
 		return static_cast<std::uint32_t>(
 			::WaitForSingleObject(
-				static_cast<::HANDLE>(a_handle),
-				static_cast<::DWORD>(a_milliseconds)));
+				a_handle,
+				a_milliseconds));
 	}
 
 	std::uint32_t WaitForSingleObjectEx(
@@ -1007,9 +988,9 @@ namespace SFSE::WinAPI
 	{
 		return static_cast<std::uint32_t>(
 			::WaitForSingleObjectEx(
-				static_cast<::HANDLE>(a_handle),
-				static_cast<::DWORD>(a_milliseconds),
-				static_cast<::BOOL>(a_alertable)));
+				a_handle,
+				a_milliseconds,
+				a_alertable));
 	}
 
 	std::int32_t WideCharToMultiByte(
@@ -1023,14 +1004,14 @@ namespace SFSE::WinAPI
 		std::int32_t*  a_defaultLen)
 	{
 		return ::WideCharToMultiByte(
-			static_cast<::UINT>(a_codePage),
-			static_cast<::DWORD>(a_flags),
-			static_cast<::LPCWCH>(a_wstr),
+			a_codePage,
+			a_flags,
+			a_wstr,
 			a_wstrLen,
-			static_cast<::LPSTR>(a_str),
+			a_str,
 			a_strLen,
-			static_cast<::LPCCH>(a_default),
-			static_cast<::LPBOOL>(a_defaultLen));
+			a_default,
+			a_defaultLen);
 	}
 
 	bool WriteProcessMemory(
@@ -1042,10 +1023,10 @@ namespace SFSE::WinAPI
 	{
 		return static_cast<bool>(
 			::WriteProcessMemory(
-				static_cast<::HANDLE>(a_process),
-				static_cast<::LPVOID>(a_address),
-				static_cast<::LPCVOID>(a_buffer),
-				static_cast<::SIZE_T>(a_bufferLen),
-				static_cast<::SIZE_T*>(a_bufferWritten)));
+				a_process,
+				a_address,
+				a_buffer,
+				a_bufferLen,
+				a_bufferWritten));
 	}
 }
