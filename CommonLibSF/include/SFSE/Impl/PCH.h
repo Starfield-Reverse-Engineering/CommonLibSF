@@ -41,7 +41,7 @@
 #include <climits>
 #include <cstdint>
 #include <limits>
-#include <stdfloat>
+//#include <stdfloat>
 
 // Error handling
 #include <cassert>
