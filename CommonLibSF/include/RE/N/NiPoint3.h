@@ -39,9 +39,9 @@ namespace RE
 		float                  Unitize();
 
 		// members
-		float x{ 0.0F };  // 0x0
-		float y{ 0.0F };  // 0x4
-		float z{ 0.0F };  // 0x8
+		float x{};  // 0x0
+		float y{};  // 0x4
+		float z{};  // 0x8
 	};
 	static_assert(sizeof(NiPoint3) == 0xC);
 

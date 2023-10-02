@@ -91,11 +91,11 @@ namespace SFSE
 	{
 		if (a_keyCode >= kMacro_MouseButtonOffset && a_keyCode < kMacro_GamepadOffset) {
 			return GetMouseButtonName(a_keyCode);
-		} else if (a_keyCode >= kMacro_GamepadOffset && a_keyCode < kMaxMacros) {
-			return GetGamepadButtonName(a_keyCode);
-		} else {
-			return GetKeyboardKeyName(a_keyCode);
 		}
+		if (a_keyCode >= kMacro_GamepadOffset && a_keyCode < kMaxMacros) {
+			return GetGamepadButtonName(a_keyCode);
+		}
+		return GetKeyboardKeyName(a_keyCode);
 	}
 
 	std::string InputMap::GetKeyboardKeyName(const std::uint32_t a_keyCode)

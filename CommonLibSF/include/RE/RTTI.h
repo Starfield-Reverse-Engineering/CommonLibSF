@@ -53,7 +53,7 @@ namespace RE
 			[[nodiscard]] constexpr bool is_good() const noexcept { return _rva != 0; }
 
 			// members
-			std::uint32_t _rva{ 0 };  // 00
+			std::uint32_t _rva{};  // 00
 		};
 
 		static_assert(sizeof(RVA<void*>) == 0x4);

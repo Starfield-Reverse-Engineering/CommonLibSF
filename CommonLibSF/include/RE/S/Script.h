@@ -82,7 +82,7 @@ namespace RE
 		// members
 		const char*   paramName{ "" };    // 00
 		std::uint32_t paramType;          // 08 enumeration
-		bool          optional{ false };  // 0C
+		bool          optional{};  // 0C
 	};
 	static_assert(sizeof(SCRIPT_PARAMETER) == 0x10);
 

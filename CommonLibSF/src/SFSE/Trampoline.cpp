@@ -37,7 +37,6 @@ namespace SFSE
 
 		std::uintptr_t       min = a_address >= minRange ? detail::roundup(a_address - minRange, granularity) : 0;
 		const std::uintptr_t max = a_address < (maxAddr - minRange) ? detail::rounddown(a_address + minRange, granularity) : maxAddr;
-		std::uintptr_t       addr;
 
 		WinAPI::MEMORY_BASIC_INFORMATION mbi;
 		do {
@@ -50,16 +49,15 @@ namespace SFSE
 			min = baseAddr + mbi.regionSize;
 
 			if (mbi.state == WinAPI::MEM_FREE) {
-				addr = detail::roundup(baseAddr, granularity);
+				std::uintptr_t addr = detail::roundup(baseAddr, granularity);
 
 				// if rounding didn't advance us into the next region and the region is the required size
 				if (addr < min && (min - addr) >= a_size) {
 					const auto mem = WinAPI::VirtualAlloc(reinterpret_cast<void*>(addr), a_size, WinAPI::MEM_COMMIT | WinAPI::MEM_RESERVE, WinAPI::PAGE_EXECUTE_READWRITE);
 					if (mem) {
 						return mem;
-					} else {
-						log::warn("VirtualAlloc failed with code: 0x{:08X}"sv, WinAPI::GetLastError());
 					}
+					log::warn("VirtualAlloc failed with code: 0x{:08X}"sv, WinAPI::GetLastError());
 				}
 			}
 		} while (min < max);

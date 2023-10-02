@@ -84,7 +84,7 @@ namespace SFSE
 		{
 			const auto trampoline = static_cast<std::byte*>(a_trampoline);
 			if (trampoline) {
-				constexpr auto INT3 = static_cast<int>(0xCC);
+				constexpr auto INT3 = 0xCC;
 				std::memset(trampoline, INT3, a_size);
 			}
 
@@ -241,8 +241,8 @@ namespace SFSE
 
 			mem->jmp = static_cast<std::uint8_t>(0xFF);
 			mem->modrm = static_cast<std::uint8_t>(0x25);
-			mem->disp = static_cast<std::int32_t>(0);
-			mem->addr = static_cast<std::uint64_t>(a_dst);
+			mem->disp = 0;
+			mem->addr = a_dst;
 		}
 
 		void write_6branch(const std::uintptr_t a_src, std::uintptr_t a_dst, const std::uint8_t a_modrm)
@@ -263,7 +263,7 @@ namespace SFSE
 			static_assert(sizeof(Assembly) == 0x6);
 #pragma pack(pop)
 
-			std::uintptr_t* mem = nullptr;
+			std::uintptr_t* mem;
 			if (const auto it = _6branches.find(a_dst); it != _6branches.end()) {
 				mem = reinterpret_cast<std::uintptr_t*>(it->second);
 			} else {
@@ -348,8 +348,8 @@ namespace SFSE
 		std::map<std::uintptr_t, std::byte*> _6branches;
 		std::string                          _name{ "Default Trampoline"sv };
 		deleter_type                         _deleter;
-		std::byte*                           _data{ nullptr };
-		std::size_t                          _capacity{ 0 };
-		std::size_t                          _size{ 0 };
+		std::byte*                           _data{};
+		std::size_t                          _capacity{};
+		std::size_t                          _size{};
 	};
 }

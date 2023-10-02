@@ -3,7 +3,6 @@
 #include "REL/ID.h"
 #include "REL/Module.h"
 #include "REL/Offset.h"
-#include "REL/Version.h"
 
 #define REL_MAKE_MEMBER_FUNCTION_POD_TYPE_HELPER_IMPL(a_nopropQual, a_propQual, ...)              \
 	template <class R, class Cls, class... Args>                                                  \
@@ -153,14 +152,14 @@ namespace REL
 
 	inline void safe_write(const std::uintptr_t a_dst, const void* a_src, const std::size_t a_count)
 	{
-		std::uint32_t old{ 0 };
+		std::uint32_t old{};
 		auto          success = WinAPI::VirtualProtect(reinterpret_cast<void*>(a_dst), a_count, WinAPI::PAGE_EXECUTE_READWRITE, std::addressof(old));
-		if (success != 0) {
+		if (success) {
 			std::memcpy(reinterpret_cast<void*>(a_dst), a_src, a_count);
 			success = WinAPI::VirtualProtect(reinterpret_cast<void*>(a_dst), a_count, old, std::addressof(old));
 		}
 
-		assert(success != 0);
+		assert(success);
 	}
 
 	template <std::integral T>
@@ -177,14 +176,14 @@ namespace REL
 
 	inline void safe_fill(const std::uintptr_t a_dst, const std::uint8_t a_value, const std::size_t a_count)
 	{
-		std::uint32_t old{ 0 };
+		std::uint32_t old{};
 		auto          success = WinAPI::VirtualProtect(reinterpret_cast<void*>(a_dst), a_count, WinAPI::PAGE_EXECUTE_READWRITE, std::addressof(old));
-		if (success != 0) {
+		if (success) {
 			std::fill_n(reinterpret_cast<std::uint8_t*>(a_dst), a_count, a_value);
 			success = WinAPI::VirtualProtect(reinterpret_cast<void*>(a_dst), a_count, old, std::addressof(old));
 		}
 
-		assert(success != 0);
+		assert(success);
 	};
 
 	template <typename T = std::uintptr_t>
@@ -270,7 +269,7 @@ namespace REL
 	private:
 		[[nodiscard]] static std::uintptr_t base() { return Module::get().base(); }
 
-		std::uintptr_t _address{ 0 };
+		std::uintptr_t _address{};
 	};
 }
 

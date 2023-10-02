@@ -193,7 +193,7 @@ namespace RE
 			static constexpr const value_type EMPTY[]{ 0 };
 
 			// members
-			BSStringPool::Entry* _data{ nullptr };  // 0
+			BSStringPool::Entry* _data{};  // 0
 		};
 
 		extern template class BSFixedString<char, false>;

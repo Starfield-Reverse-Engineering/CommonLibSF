@@ -16,13 +16,13 @@ namespace SFSE
 
 			PluginHandle pluginHandle{ static_cast<PluginHandle>(-1) };
 
-			TrampolineInterface* trampolineInterface{ nullptr };
-			MessagingInterface*  messagingInterface{ nullptr };
-			MenuInterface*       menuInterface{ nullptr };
+			TrampolineInterface* trampolineInterface{};
+			MessagingInterface*  messagingInterface{};
+			MenuInterface*       menuInterface{};
 
 			std::mutex                         apiLock;
 			std::vector<std::function<void()>> apiInitRegs;
-			bool                               apiInit{ false };
+			bool                               apiInit{};
 
 		private:
 			APIStorage() noexcept = default;
