@@ -1,4 +1,4 @@
-name: Main CI
+name: Main CI [CMake]
 
 on:
   pull_request:
