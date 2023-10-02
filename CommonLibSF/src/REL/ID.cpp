@@ -7,7 +7,7 @@ namespace REL
 		constexpr auto       LookUpDir = "Data\\SFSE\\Plugins"sv;
 		constexpr std::array VendorModule{
 			std::make_pair("steam_api64"sv, IDDatabase::Platform::kSteam),
-			std::make_pair("XGameRuntime"sv, IDDatabase::Platform::kMsStore),
+			std::make_pair("Xcurl"sv, IDDatabase::Platform::kMsStore),
 		};
 
 		[[nodiscard]] std::uint64_t Offset2ID::operator()(std::size_t a_offset) const
@@ -186,7 +186,7 @@ namespace REL
 
 		// steam version omits the suffix
 		if (_platform != Platform::kSteam) {
-			file /= std::format("-{}", std::to_underlying(_platform));
+			file += std::format("-{}", std::to_underlying(_platform));
 		}
 		file += ".bin";
 
