@@ -44,9 +44,9 @@ namespace SFSE
 
 		constexpr std::uint32_t GamepadMaskToKeycode(std::uint32_t keyMask);
 		constexpr std::uint32_t GamepadKeycodeToMask(std::uint32_t keyCode);
-		 
+
 		constexpr std::string GetKeyName(std::uint32_t keyCode);
-		std::string GetKeyboardKeyName(std::uint32_t keyCode);
+		std::string           GetKeyboardKeyName(std::uint32_t keyCode);
 		constexpr std::string GetMouseButtonName(std::uint32_t keyCode);
 		constexpr std::string GetGamepadButtonName(std::uint32_t a_keyCode);
 	}
