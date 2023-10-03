@@ -234,6 +234,7 @@ namespace REL
 		static IDDatabase              _instance;
 		inline static std::atomic_bool _initialized{};
 		inline static std::mutex       _initLock;
+		inline static bool             _is_steam{};
 		database::memory_map           _mmap;
 		std::span<database::mapping_t> _id2offset;
 		Platform                       _platform{ Platform::kUnknown };

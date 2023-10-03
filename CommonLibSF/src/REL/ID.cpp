@@ -5,10 +5,6 @@ namespace REL
 	namespace database
 	{
 		constexpr auto       LookUpDir = "Data\\SFSE\\Plugins"sv;
-		constexpr std::array VendorModule{
-			std::make_pair("steam_api64"sv, IDDatabase::Platform::kSteam),
-			std::make_pair("Xcurl"sv, IDDatabase::Platform::kMsStore),
-		};
 
 		[[nodiscard]] std::uint64_t Offset2ID::operator()(std::size_t a_offset) const
 		{
@@ -173,11 +169,12 @@ namespace REL
 		file /= std::format("{}\\versionlib-{}", database::LookUpDir, version.string("-"));
 
 		_platform = Platform::kUnknown;
-		for (auto& [vendor, registered] : database::VendorModule) {
-			if (WinAPI::GetModuleHandle(vendor.data())) {
-				_platform = registered;
-				break;
-			}
+		if (WinAPI::GetModuleHandle(L"steam_api64")) {
+			_platform = Platform::kSteam;
+			_is_steam = true;
+		}
+		else {
+			_platform = Platform::kMsStore;
 		}
 
 		stl_assert(_platform != Platform::kUnknown,
@@ -257,7 +254,7 @@ namespace REL
 					"Current vendor module: {}"sv,
 					stl::utf16_to_utf8(a_filename).value_or("<unknown filename>"s),
 					a_version.string(),
-					database::VendorModule[std::to_underlying(_platform)].first),
+					_is_steam ? "Steam" : "Microsoft Store"),
 				a_failOnError);
 		}
 		return true;
