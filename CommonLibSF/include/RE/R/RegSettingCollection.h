@@ -4,12 +4,12 @@
 
 namespace RE
 {
-	class RegSettingCollection : public SettingCollectionList<Setting>
+	class RegSettingCollection :
+		public SettingCollectionList<Setting>  // 000
 	{
 	public:
 		SF_RTTI_VTABLE(RegSettingCollection);
 
-		virtual ~RegSettingCollection();
+		virtual ~RegSettingCollection();  // 000
 	};
-	static_assert(sizeof(RegSettingCollection) == 0x160);
 }

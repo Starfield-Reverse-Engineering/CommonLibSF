@@ -1,5 +1,6 @@
 #pragma once
 
+#include "RE/S/Setting.h"
 #include "RE/S/SettingCollectionList.h"
 
 namespace RE
