@@ -6,25 +6,25 @@ namespace REL
 	{
 		std::array<value_type, 4> powers{ 1, 1, 1, 1 };
 		std::size_t               position{};
-		for (std::size_t i = 0; i < a_version.size(); ++i) {
-			if (a_version[i] == '.') {
-				if (++position == powers.size()) {
-					throw std::invalid_argument("Too many parts in version number.");
-				}
-			} else {
-				powers[position] *= 10;
-			}
+		for (const auto& c : a_version) {
+		    if (c == '.') {
+		        if (++position == powers.size()) {
+		            throw std::invalid_argument("Too many parts in version number.");
+		        }
+		    } else {
+		        powers[position] *= 10;
+		    }
 		}
 		position = 0;
-		for (std::size_t i = 0; i < a_version.size(); ++i) {
-			if (a_version[i] == '.') {
-				++position;
-			} else if (a_version[i] < '0' || a_version[i] > '9') {
+		for (const auto& c : a_version) {
+		    if (c == '.') {
+		        ++position;
+		    } else if (c < '0' || c > '9') {
 				throw std::invalid_argument("Invalid character in version number.");
-			} else {
+		    } else {
 				powers[position] /= 10;
-				_impl[position] += static_cast<value_type>((a_version[i] - '0') * powers[position]);
-			}
+				_impl[position] += static_cast<value_type>((c - '0') * powers[position]);
+		    }
 		}
 	}
 

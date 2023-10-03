@@ -4,10 +4,10 @@
 
 namespace SFSE
 {
-	constexpr std::uint32_t InputMap::GamepadMaskToKeycode(const std::uint32_t keyMask)
+	constexpr std::uint32_t InputMap::GamepadMaskToKeycode(const std::uint32_t a_keyMask)
 	{
 		using XInputButton = RE::XInput::XInputButton;
-		switch (keyMask) {
+		switch (a_keyMask) {
 		case XInputButton::XINPUT_GAMEPAD_DPAD_UP:
 			return kGamepadButtonOffset_DPAD_UP;
 		case XInputButton::XINPUT_GAMEPAD_DPAD_DOWN:
@@ -45,11 +45,11 @@ namespace SFSE
 		}
 	}
 
-	constexpr std::uint32_t InputMap::GamepadKeycodeToMask(const std::uint32_t keyCode)
+	constexpr std::uint32_t InputMap::GamepadKeycodeToMask(const std::uint32_t a_keyCode)
 	{
 		using XInputButton = RE::XInput::XInputButton;
 
-		switch (keyCode) {
+		switch (a_keyCode) {
 		case kGamepadButtonOffset_DPAD_UP:
 			return XInputButton::XINPUT_GAMEPAD_DPAD_UP;
 		case kGamepadButtonOffset_DPAD_DOWN:

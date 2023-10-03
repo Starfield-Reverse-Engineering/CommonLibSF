@@ -40,7 +40,7 @@ namespace SFSE
 		Trampoline() = default;
 		constexpr Trampoline(const Trampoline&) = delete;
 
-		Trampoline(Trampoline&& a_rhs) { move_from(std::move(a_rhs)); }
+		Trampoline(Trampoline&& a_rhs) noexcept { move_from(std::move(a_rhs)); }
 
 		explicit Trampoline(const std::string_view a_name) :
 			_name(a_name) {}
@@ -49,7 +49,7 @@ namespace SFSE
 
 		constexpr Trampoline& operator=(const Trampoline&) = delete;
 
-		constexpr Trampoline& operator=(Trampoline&& a_rhs)
+		constexpr Trampoline& operator=(Trampoline&& a_rhs) noexcept
 		{
 			if (this != std::addressof(a_rhs)) {
 				move_from(std::move(a_rhs));
@@ -174,7 +174,7 @@ namespace SFSE
 		}
 
 	private:
-		[[nodiscard]] void* do_create(std::size_t a_size, std::uintptr_t a_address);
+		[[nodiscard]] static void* do_create(std::size_t a_size, std::uintptr_t a_address);
 
 		[[nodiscard]] constexpr void* do_allocate(const std::size_t a_size)
 		{
@@ -221,7 +221,7 @@ namespace SFSE
 			static_assert(sizeof(TrampolineAssembly) == 0xE);
 #pragma pack(pop)
 
-			TrampolineAssembly* mem = nullptr;
+			TrampolineAssembly* mem;
 			if (const auto it = _5branches.find(a_dst); it != _5branches.end()) {
 				mem = reinterpret_cast<TrampolineAssembly*>(it->second);
 			} else {
@@ -323,7 +323,7 @@ namespace SFSE
 
 		void log_stats() const;
 
-		[[nodiscard]] constexpr bool in_range(const std::ptrdiff_t a_disp) const
+		[[nodiscard]] static constexpr bool in_range(const std::ptrdiff_t a_disp)
 		{
 			constexpr auto min = (std::numeric_limits<std::int32_t>::min)();
 			constexpr auto max = (std::numeric_limits<std::int32_t>::max)();
