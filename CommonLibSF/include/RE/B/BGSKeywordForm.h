@@ -12,6 +12,8 @@ namespace RE
 	public:
 		SF_RTTI_VTABLE(BGSKeywordForm);
 
+		~BGSKeywordForm() override;
+
 		// members
 		std::uint32_t unk10;
 		std::uint32_t unk14;

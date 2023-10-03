@@ -9,6 +9,8 @@ namespace RE
 	public:
 		SF_RTTI_VTABLE(BGSForcedLocRefType);
 
+		~BGSForcedLocRefType() override;
+
 		// members
 		std::uint64_t unk08;  // 08
 		std::uint64_t unk10;  // 10

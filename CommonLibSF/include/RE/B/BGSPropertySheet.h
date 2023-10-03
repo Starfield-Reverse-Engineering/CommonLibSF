@@ -9,6 +9,8 @@ namespace RE
 	public:
 		SF_RTTI_VTABLE(BGSPropertySheet);
 
+		~BGSPropertySheet() override;
+
 		// members
 		std::uint64_t /* BSTArray<BSTTuple<TESForm*, BGSTypedFormValuePair::SharedVal>>* */ unk08;
 	};

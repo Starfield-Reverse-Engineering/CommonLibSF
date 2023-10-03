@@ -4,10 +4,13 @@
 
 namespace RE
 {
-	class BGSObjectPlacementDefaults :
-		public BaseFormComponent
+	class BGSObjectPlacementDefaults : public BaseFormComponent
 	{
 	public:
+		SF_RTTI_VTABLE(BGSObjectPlacementDefaults);
+		
+		~BGSObjectPlacementDefaults() override;
+		
 		// members
 		std::uint64_t unk08;  // 08
 		std::uint32_t unk10;  // 10

@@ -10,6 +10,8 @@ namespace RE
 	public:
 		SF_RTTI_VTABLE(BGSSkinForm);
 
+		~BGSSkinForm() override;
+
 		// members
 		TESObjectARMO* formSkin;  // 08
 	};

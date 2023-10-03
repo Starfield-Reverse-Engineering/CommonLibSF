@@ -19,6 +19,8 @@ namespace RE
 	public:
 		SF_RTTI(BGSPerkRankArray);
 
+		~BGSPerkRankArray() override;
+
 		// members
 		PerkRankData* perks;      // 08
 		std::uint32_t perkCount;  // 10

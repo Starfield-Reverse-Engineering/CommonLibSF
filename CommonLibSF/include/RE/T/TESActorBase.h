@@ -17,7 +17,7 @@
 namespace RE
 {
 	class TESActorBase :
-		public TESBoundAnimObject,
+		public TESBoundAnimObject,         // 000
 		public TESActorBaseData,           // 118
 		public TESContainer,               // 188
 		public TESSpellList,               // 1A0
@@ -34,24 +34,13 @@ namespace RE
 	public:
 		SF_RTTI_VTABLE(TESActorBase);
 
-		enum class Pronoun_Type
-		{
-			kNotSet,
-			kHeHim,
-			kSheHer,
-			kTheyThem
-		};
+		~TESActorBase() override;
 
 		// add
 		virtual void Unk_82();  // 82
 		virtual void Unk_83();  // 83
 		virtual void Unk_84();  // 84
 		virtual void Unk_85();  // 85
-
-		// members
-		std::uint8_t                                 pad298[488];  // 298
-		stl::enumeration<Pronoun_Type, std::uint8_t> pronoun;      // 480
-																   //
 	};
-
-}  // namespace RE
+	static_assert(sizeof(TESActorBase) == 0x298);
+}

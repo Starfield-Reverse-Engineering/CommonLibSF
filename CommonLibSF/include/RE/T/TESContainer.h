@@ -11,6 +11,8 @@ namespace RE
 	public:
 		SF_RTTI_VTABLE(TESContainer);
 
+		~TESContainer() override;
+
 		// members
 		ContainerObject** containerObjects;     // 08
 		std::uint32_t     numContainerObjects;  // 10

@@ -11,6 +11,8 @@ namespace RE
 	public:
 		SF_RTTI_VTABLE(TESRaceForm);
 
+		~TESRaceForm() override;
+
 		// members
 		TESRace* formRace;  // 08
 	};

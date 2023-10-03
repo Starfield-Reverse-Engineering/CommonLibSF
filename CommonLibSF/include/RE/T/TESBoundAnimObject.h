@@ -16,8 +16,7 @@ namespace RE
 		virtual void Unk_81();  // 81
 
 		// members
-		std::uint64_t unkF0;   // F0
-		std::uint64_t unkF8;   // F8
+		std::uint64_t unk0F8;  // 0F8
 		std::uint64_t unk100;  // 100
 		std::uint64_t unk108;  // 108
 		std::uint64_t unk110;  // 110
