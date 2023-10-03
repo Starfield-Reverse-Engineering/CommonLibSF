@@ -65,7 +65,7 @@ namespace RE
 			_value.s = _defaultValue.s = _strdup(a_value);
 		}
 
-		virtual ~Setting() { SFSE::stl::emplace_vtable(this); }  // 00
+		virtual ~Setting() { stl::emplace_vtable(this); }  // 00
 
 		// add
 		[[nodiscard]] virtual bool IsPrefSetting() { return false; }  // 01
@@ -215,7 +215,7 @@ namespace RE
 	};
 	static_assert(sizeof(Setting) == 0x20);
 
-	template <typename T>
+	template <class T>
 	class SettingT :
 		public Setting
 	{
