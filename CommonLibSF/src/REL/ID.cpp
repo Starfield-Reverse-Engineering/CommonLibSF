@@ -251,7 +251,7 @@ namespace REL
 					"then it is likely that address library has not yet added support "
 					"for this version of the game or this platform.\n"
 					"Current version: {}\n"
-					"Current vendor module: {}"sv,
+					"Current platform: {}"sv,
 					stl::utf16_to_utf8(a_filename).value_or("<unknown filename>"s),
 					a_version.string(),
 					_is_steam ? "Steam" : "Microsoft Store"),
