@@ -4,7 +4,7 @@
 
 namespace SFSE
 {
-	std::uint32_t InputMap::GamepadMaskToKeycode(const std::uint32_t keyMask)
+	std::uint32_t InputMap::GamepadMaskToKeycode(const std::uint32_t a_keyMask)
 	{
 		using XInputButton = RE::XInput::XInputButton;
 		switch (a_keyMask) {
@@ -45,7 +45,7 @@ namespace SFSE
 		}
 	}
 
-	std::uint32_t InputMap::GamepadKeycodeToMask(const std::uint32_t keyCode)
+	std::uint32_t InputMap::GamepadKeycodeToMask(const std::uint32_t a_keyCode)
 	{
 		using XInputButton = RE::XInput::XInputButton;
 
