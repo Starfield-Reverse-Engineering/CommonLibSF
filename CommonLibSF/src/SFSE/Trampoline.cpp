@@ -49,7 +49,7 @@ namespace SFSE
 			min = baseAddr + mbi.regionSize;
 
 			if (mbi.state == WinAPI::MEM_FREE) {
-				std::uintptr_t addr = detail::roundup(baseAddr, granularity);
+				const std::uintptr_t addr = detail::roundup(baseAddr, granularity);
 
 				// if rounding didn't advance us into the next region and the region is the required size
 				if (addr < min && (min - addr) >= a_size) {

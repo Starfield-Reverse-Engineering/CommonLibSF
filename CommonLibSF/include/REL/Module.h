@@ -20,23 +20,23 @@ namespace REL
 			total
 		};
 
-		Segment() noexcept = default;
+		constexpr Segment() noexcept = default;
 
-		Segment(const std::uintptr_t a_proxyBase, const std::uintptr_t a_address, const std::uintptr_t a_size) noexcept :
+		constexpr Segment(const std::uintptr_t a_proxyBase, const std::uintptr_t a_address, const std::uintptr_t a_size) noexcept :
 			_proxyBase(a_proxyBase), _address(a_address), _size(a_size)
 		{}
 
-		[[nodiscard]] std::uintptr_t address() const noexcept { return _address; }
-		[[nodiscard]] std::size_t    offset() const noexcept { return address() - _proxyBase; }
-		[[nodiscard]] std::size_t    size() const noexcept { return _size; }
+		[[nodiscard]] constexpr std::uintptr_t address() const noexcept { return _address; }
+		[[nodiscard]] constexpr std::size_t    offset() const noexcept { return address() - _proxyBase; }
+		[[nodiscard]] constexpr std::size_t    size() const noexcept { return _size; }
 
-		[[nodiscard]] void* pointer() const noexcept
+		[[nodiscard]] constexpr void* pointer() const noexcept
 		{
 			return std::bit_cast<void*>(address());
 		}
 
 		template <class T>
-		[[nodiscard]] T* pointer() const noexcept
+		[[nodiscard]] constexpr T* pointer() const noexcept
 		{
 			return static_cast<T*>(pointer());
 		}
@@ -54,7 +54,7 @@ namespace REL
 	public:
 		constexpr Module() = delete;
 		explicit Module(std::uintptr_t a_base);
-		explicit Module(std::string_view a_filePath);
+		explicit constexpr Module(std::string_view a_filePath);
 
 		[[nodiscard]] constexpr auto base() const noexcept { return _base; }
 

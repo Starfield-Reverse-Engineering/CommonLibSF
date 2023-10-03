@@ -6,7 +6,7 @@ namespace REL
 	{
 		constexpr auto LookUpDir = "Data\\SFSE\\Plugins"sv;
 
-		[[nodiscard]] std::uint64_t Offset2ID::operator()(std::size_t a_offset) const
+		[[nodiscard]] constexpr std::uint64_t Offset2ID::operator()(std::size_t a_offset) const
 		{
 			const mapping_t elem{ 0, a_offset };
 			const auto      it = std::ranges::lower_bound(
@@ -96,7 +96,7 @@ namespace REL
 			return true;
 		}
 
-		void memory_map::close()
+		constexpr void memory_map::close()
 		{
 			if (_view) {
 				(void)WinAPI::UnmapViewOfFile(_view);
@@ -140,9 +140,9 @@ namespace REL
 		}
 	}
 
-	[[nodiscard]] std::size_t IDDatabase::id2offset(std::uint64_t a_id) const
+	[[nodiscard]] constexpr std::size_t IDDatabase::id2offset(std::uint64_t a_id) const
 	{
-		database::mapping_t elem{ a_id, 0 };
+		const database::mapping_t elem{ a_id, 0 };
 		const auto          it = std::ranges::lower_bound(
             _id2offset,
             elem,
@@ -215,7 +215,7 @@ namespace REL
 					a_failOnError);
 			}
 
-			auto mapname = stl::utf8_to_utf16(std::format(
+			const auto mapname = stl::utf8_to_utf16(std::format(
 				// kDatabaseVersion, runtimeVersion, runtimePlatform
 				"CommonLibSF-Offsets-v{}-{}-{}",
 				std::to_underlying(database::kDatabaseVersion),
@@ -259,7 +259,7 @@ namespace REL
 		return true;
 	}
 
-	bool IDDatabase::unpack_file(database::istream_t& a_in, database::header_t a_header, const bool a_failOnError)
+	bool IDDatabase::unpack_file(database::istream_t& a_in, const database::header_t& a_header, const bool a_failOnError)
 	{
 		std::uint8_t  type = 0;
 		std::uint64_t id = 0;

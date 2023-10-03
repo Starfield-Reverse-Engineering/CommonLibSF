@@ -20,11 +20,11 @@ namespace REL
 		class memory_map
 		{
 		public:
-			memory_map() noexcept = default;
+			constexpr memory_map() noexcept = default;
 
-			memory_map(const memory_map&) = delete;
+			constexpr memory_map(const memory_map&) = delete;
 
-			memory_map(memory_map&& a_rhs) noexcept :
+			constexpr memory_map(memory_map&& a_rhs) noexcept :
 				_mapping(a_rhs._mapping),
 				_view(a_rhs._view)
 			{
@@ -34,9 +34,9 @@ namespace REL
 
 			~memory_map() { close(); }
 
-			memory_map& operator=(const memory_map&) = delete;
+			constexpr memory_map& operator=(const memory_map&) = delete;
 
-			memory_map& operator=(memory_map&& a_rhs) noexcept
+			constexpr memory_map& operator=(memory_map&& a_rhs) noexcept
 			{
 				if (this != std::addressof(a_rhs)) {
 					_mapping = a_rhs._mapping;
@@ -48,13 +48,13 @@ namespace REL
 				return *this;
 			}
 
-			[[nodiscard]] void* data() const noexcept { return _view; }
+			[[nodiscard]] constexpr void* data() const noexcept { return _view; }
 
 			bool open(stl::zwstring a_name, std::size_t a_size);
 
 			bool create(stl::zwstring a_name, std::size_t a_size);
 
-			void close();
+			constexpr void close();
 
 		private:
 			void* _mapping{};
@@ -78,25 +78,25 @@ namespace REL
 				Offset2ID(std::execution::sequenced_policy{})
 			{}
 
-			[[nodiscard]] std::uint64_t operator()(std::size_t a_offset) const;
+			[[nodiscard]] constexpr std::uint64_t operator()(std::size_t a_offset) const;
 
-			[[nodiscard]] const_iterator begin() const noexcept { return _offset2id.begin(); }
+			[[nodiscard]] constexpr const_iterator begin() const noexcept { return _offset2id.begin(); }
 
-			[[nodiscard]] const_iterator cbegin() const noexcept { return _offset2id.cbegin(); }
+			[[nodiscard]] constexpr const_iterator cbegin() const noexcept { return _offset2id.cbegin(); }
 
-			[[nodiscard]] const_iterator end() const noexcept { return _offset2id.end(); }
+			[[nodiscard]] constexpr const_iterator end() const noexcept { return _offset2id.end(); }
 
-			[[nodiscard]] const_iterator cend() const noexcept { return _offset2id.cend(); }
+			[[nodiscard]] constexpr const_iterator cend() const noexcept { return _offset2id.cend(); }
 
-			[[nodiscard]] const_reverse_iterator rbegin() const noexcept { return _offset2id.rbegin(); }
+			[[nodiscard]] constexpr const_reverse_iterator rbegin() const noexcept { return _offset2id.rbegin(); }
 
-			[[nodiscard]] const_reverse_iterator crbegin() const noexcept { return _offset2id.crbegin(); }
+			[[nodiscard]] constexpr const_reverse_iterator crbegin() const noexcept { return _offset2id.crbegin(); }
 
-			[[nodiscard]] const_reverse_iterator rend() const noexcept { return _offset2id.rend(); }
+			[[nodiscard]] constexpr const_reverse_iterator rend() const noexcept { return _offset2id.rend(); }
 
-			[[nodiscard]] const_reverse_iterator crend() const noexcept { return _offset2id.crend(); }
+			[[nodiscard]] constexpr const_reverse_iterator crend() const noexcept { return _offset2id.crend(); }
 
-			[[nodiscard]] size_type size() const noexcept { return _offset2id.size(); }
+			[[nodiscard]] constexpr size_type size() const noexcept { return _offset2id.size(); }
 
 		private:
 			container_type _offset2id;
@@ -149,22 +149,22 @@ namespace REL
 		public:
 			void read(istream_t& a_in);
 
-			[[nodiscard]] std::size_t address_count() const noexcept
+			[[nodiscard]] constexpr std::size_t address_count() const noexcept
 			{
 				return _addressCount;
 			}
 
-			[[nodiscard]] std::uint64_t pointer_size() const noexcept
+			[[nodiscard]] constexpr std::uint64_t pointer_size() const noexcept
 			{
 				return _pointerSize;
 			}
 
-			[[nodiscard]] std::string_view name() const noexcept
+			[[nodiscard]] constexpr std::string_view name() const noexcept
 			{
 				return _name;
 			}
 
-			[[nodiscard]] Version version() const noexcept
+			[[nodiscard]] constexpr Version version() const noexcept
 			{
 				return _version;
 			}
@@ -198,24 +198,24 @@ namespace REL
 			return _instance;
 		}
 
-		[[nodiscard]] std::size_t id2offset(std::uint64_t a_id) const;
+		[[nodiscard]] constexpr std::size_t id2offset(std::uint64_t a_id) const;
 
 	private:
 		friend class Module;
 
 		friend class database::Offset2ID;
 
-		IDDatabase() = default;
-
-		IDDatabase(const IDDatabase&) = delete;
-
-		IDDatabase(IDDatabase&&) = delete;
+		constexpr IDDatabase() = default;
 
 		~IDDatabase() = default;
 
-		IDDatabase& operator=(const IDDatabase&) = delete;
+		constexpr IDDatabase(const IDDatabase&) = delete;
 
-		IDDatabase& operator=(IDDatabase&&) = delete;
+		constexpr IDDatabase(IDDatabase&&) = delete;
+
+		constexpr IDDatabase& operator=(const IDDatabase&) = delete;
+
+		constexpr IDDatabase& operator=(IDDatabase&&) = delete;
 
 		std::wstring addresslib_filename();
 
@@ -223,7 +223,7 @@ namespace REL
 
 		bool load_file(stl::zwstring a_filename, Version a_version, bool a_failOnError);
 
-		bool unpack_file(database::istream_t& a_in, database::header_t a_header, bool a_failOnError);
+		bool unpack_file(database::istream_t& a_in, const database::header_t& a_header, bool a_failOnError);
 
 		void clear()
 		{
@@ -271,7 +271,7 @@ namespace REL
 		}
 
 	private:
-		[[nodiscard]] static std::uintptr_t base()
+		[[nodiscard]] static constexpr std::uintptr_t base()
 		{
 			return Module::get().base();
 		}
