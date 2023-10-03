@@ -4,8 +4,8 @@
 #include "RE/B/BSTArray.h"
 #include "RE/B/BSTEvent.h"
 #include "RE/B/BSTList.h"
-#include "RE/B/BSTSingleton.h"
 #include "RE/F/FormTypes.h"
+#include "RE/N/NiSmartPointer.h"
 
 namespace RE
 {
@@ -33,8 +33,8 @@ namespace RE
 
 		struct FormArray
 		{
-			mutable BSReadWriteLock lock;       // 00
-			BSTArray<TESForm*>      formArray;  // 08
+			mutable BSReadWriteLock      lock;       // 00
+			BSTArray<NiPointer<TESForm>> formArray;  // 08
 		};
 		static_assert(sizeof(FormArray) == 0x18);
 
