@@ -4,7 +4,7 @@ namespace REL
 {
 	namespace database
 	{
-		constexpr auto       LookUpDir = "Data\\SFSE\\Plugins"sv;
+		constexpr auto LookUpDir = "Data\\SFSE\\Plugins"sv;
 
 		[[nodiscard]] std::uint64_t Offset2ID::operator()(std::size_t a_offset) const
 		{
@@ -172,8 +172,7 @@ namespace REL
 		if (WinAPI::GetModuleHandle(L"steam_api64")) {
 			_platform = Platform::kSteam;
 			_is_steam = true;
-		}
-		else {
+		} else {
 			_platform = Platform::kMsStore;
 		}
 

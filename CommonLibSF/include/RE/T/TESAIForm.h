@@ -35,7 +35,7 @@ namespace RE
 	{
 	public:
 		SF_RTTI_VTABLE(TESAIForm);
-		
+
 		~TESAIForm() override;
 
 		// members

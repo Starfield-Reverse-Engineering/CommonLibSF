@@ -11,7 +11,7 @@ namespace RE
 		SF_RTTI_VTABLE(BGSOverridePackCollection);
 
 		~BGSOverridePackCollection() override;
-		
+
 		// members
 		BGSListForm* unk08;  // 08
 		BGSListForm* unk10;  // 10

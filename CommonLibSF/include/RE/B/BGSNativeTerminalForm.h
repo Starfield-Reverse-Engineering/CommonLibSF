@@ -5,7 +5,7 @@
 namespace RE
 {
 	class BGSTerminal;
-	
+
 	class BGSNativeTerminalForm : public BaseFormComponent
 	{
 	public:
