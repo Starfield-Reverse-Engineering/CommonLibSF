@@ -17,14 +17,16 @@ namespace RE
 		*/
 	}
 
-	template <typename T>
-	class SettingCollectionMap : public SettingCollection<T>
+	template <class T>
+	class SettingCollectionMap :
+		public SettingCollection<T>  // 000
 	{
 	public:
-		virtual ~SettingCollectionMap();
+		virtual ~SettingCollectionMap();  // 000
 
 		// members
 		void* /* BSTBTree<BSFixedString, T*, detail::SettingCollectionMapCompare> */ settings;  // 118
 	};
+
 	extern template class SettingCollectionMap<Setting>;
 }
