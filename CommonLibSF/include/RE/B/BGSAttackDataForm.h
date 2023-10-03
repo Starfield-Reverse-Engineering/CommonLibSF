@@ -12,7 +12,7 @@ namespace RE
 	public:
 		SF_RTTI_VTABLE(BGSAttackDataForm);
 
-		virtual ~BGSAttackDataForm();  // 00
+		~BGSAttackDataForm() override;  // 00
 
 		// members
 		NiPointer<BGSAttackDataMap> attackDataMap;  // 08

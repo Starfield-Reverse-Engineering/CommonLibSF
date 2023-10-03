@@ -9,6 +9,8 @@ namespace RE
 	public:
 		SF_RTTI_VTABLE(TESSpellList);
 
+		~TESSpellList() override;
+
 		// members
 		std::uint32_t unk08;  // 08
 		std::uint32_t unk0C;  // 0C

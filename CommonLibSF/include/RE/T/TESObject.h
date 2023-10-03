@@ -4,11 +4,12 @@
 
 namespace RE
 {
-	class TESObject :
-		public TESForm  // 00
+	class TESObject : public TESForm
 	{
 	public:
 		SF_RTTI_VTABLE(TESObject);
+
+		~TESObject() override;
 
 		// add
 		virtual void Unk_62();  // 62
@@ -22,4 +23,5 @@ namespace RE
 		virtual void Unk_6A();  // 6A
 		virtual void Unk_6B();  // 6B
 	};
+	static_assert(sizeof(TESObject) == 0x38);
 }

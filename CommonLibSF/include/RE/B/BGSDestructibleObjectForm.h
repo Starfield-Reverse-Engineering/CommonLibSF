@@ -13,6 +13,8 @@ namespace RE
 	public:
 		SF_RTTI_VTABLE(BGSDestructibleObjectForm);
 
+		~BGSDestructibleObjectForm() override;
+
 		// members
 		DestructibleObjectData* data;  // 08
 	};

@@ -8,11 +8,12 @@
 
 namespace RE
 {
-	class TESBoundObject :
-		public TESObject  // 00
+	class TESBoundObject : public TESObject
 	{
 	public:
 		SF_RTTI_VTABLE(TESBoundObject);
+
+		~TESBoundObject() override;
 
 		// add
 		virtual void Unk_6C();  // 6C
@@ -45,9 +46,7 @@ namespace RE
 		BGSMod::Template::Items    templateItems;      // 68
 		BGSPreviewTransform        previewTransform;   // 88
 		BGSObjectPlacementDefaults placementDefaults;  // D0
+		std::uint32_t              unkF0;              // F0
 	};
-	static_assert(offsetof(TESBoundObject, templateItems) == 0x68);
-	static_assert(offsetof(TESBoundObject, previewTransform) == 0x88);
-	static_assert(offsetof(TESBoundObject, placementDefaults) == 0xD0);
-	static_assert(sizeof(TESBoundObject) == 0xF0);
+	static_assert(sizeof(TESBoundObject) == 0xF8);
 }
