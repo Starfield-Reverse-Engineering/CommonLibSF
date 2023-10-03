@@ -140,7 +140,7 @@ namespace REL
 		}
 	}
 
-	[[nodiscard]] constexpr std::size_t IDDatabase::id2offset(std::uint64_t a_id) const
+	[[nodiscard]] std::size_t IDDatabase::id2offset(std::uint64_t a_id) const
 	{
 		const database::mapping_t elem{ a_id, 0 };
 		const auto                it = std::ranges::lower_bound(
