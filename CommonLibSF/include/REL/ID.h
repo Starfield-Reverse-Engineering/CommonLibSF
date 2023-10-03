@@ -198,7 +198,7 @@ namespace REL
 			return _instance;
 		}
 
-		[[nodiscard]] constexpr std::size_t id2offset(std::uint64_t a_id) const;
+		[[nodiscard]] std::size_t id2offset(std::uint64_t a_id) const;
 
 	private:
 		friend class Module;

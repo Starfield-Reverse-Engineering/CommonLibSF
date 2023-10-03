@@ -40,11 +40,11 @@ namespace SFSE::InputMap
 		kGamepadButtonOffset_RT  // 281
 	};
 
-	constexpr std::uint32_t GamepadMaskToKeycode(std::uint32_t a_keyMask);
-	constexpr std::uint32_t GamepadKeycodeToMask(std::uint32_t a_keyCode);
+	std::uint32_t GamepadMaskToKeycode(std::uint32_t a_keyMask);
+	std::uint32_t GamepadKeycodeToMask(std::uint32_t a_keyCode);
 
-	constexpr std::string GetKeyName(std::uint32_t a_keyCode);
+	std::string GetKeyName(std::uint32_t a_keyCode);
 	std::string           GetKeyboardKeyName(std::uint32_t a_keyCode);
-	constexpr std::string GetMouseButtonName(std::uint32_t a_keyCode);
-	constexpr std::string GetGamepadButtonName(std::uint32_t a_keyCode);
+	std::string GetMouseButtonName(std::uint32_t a_keyCode);
+	std::string GetGamepadButtonName(std::uint32_t a_keyCode);
 }
