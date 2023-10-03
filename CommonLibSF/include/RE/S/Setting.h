@@ -95,31 +95,31 @@ namespace RE
 			return Type::kNone;
 		}
 
-		[[nodiscard]] auto GetBool(bool a_default = false) const noexcept
+		[[nodiscard]] auto GetBool(const bool a_default = false) const noexcept
 		{
 			assert(GetType() == Type::kBool);
 			return a_default ? _value.b : _defaultValue.b;
 		}
 
-		[[nodiscard]] auto GetChar(bool a_default = false) const noexcept
+		[[nodiscard]] auto GetChar(const bool a_default = false) const noexcept
 		{
 			assert(GetType() == Type::kChar);
 			return a_default ? _value.c : _defaultValue.c;
 		}
 
-		[[nodiscard]] auto GetFloat(bool a_default = false) const noexcept
+		[[nodiscard]] auto GetFloat(const bool a_default = false) const noexcept
 		{
 			assert(GetType() == Type::kFloat);
 			return a_default ? _value.f : _defaultValue.f;
 		}
 
-		[[nodiscard]] auto GetInt(bool a_default = false) const noexcept
+		[[nodiscard]] auto GetInt(const bool a_default = false) const noexcept
 		{
 			assert(GetType() == Type::kInt);
 			return a_default ? _value.i : _defaultValue.i;
 		}
 
-		[[nodiscard]] auto GetString(bool a_default = false) const noexcept
+		[[nodiscard]] auto GetString(const bool a_default = false) const noexcept
 		{
 			assert(GetType() == Type::kString);
 			if (!a_default && _value.s)
@@ -130,13 +130,13 @@ namespace RE
 			return ""sv;
 		}
 
-		[[nodiscard]] auto GetUChar(bool a_default = false) const noexcept
+		[[nodiscard]] auto GetUChar(const bool a_default = false) const noexcept
 		{
 			assert(GetType() == Type::kUChar);
 			return a_default ? _value.h : _defaultValue.h;
 		}
 
-		[[nodiscard]] auto GetUInt(bool a_default = false) const noexcept
+		[[nodiscard]] auto GetUInt(const bool a_default = false) const noexcept
 		{
 			assert(GetType() == Type::kUInt);
 			return a_default ? _value.u : _defaultValue.u;

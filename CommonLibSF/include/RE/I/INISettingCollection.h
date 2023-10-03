@@ -21,7 +21,7 @@ namespace RE
 
 		[[nodiscard]] Setting* GetSetting(const std::string_view a_name)
 		{
-			for (auto& setting : settings) {
+			for (const auto& setting : settings) {
 				if (setting->GetKey() == a_name) {
 					return setting;
 				}
