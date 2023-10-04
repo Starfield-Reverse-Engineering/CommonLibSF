@@ -12,6 +12,10 @@ namespace RE
 
 		~BGSSkinForm() override;
 
+		// override (BaseFormComponent)
+		const BSFixedString& GetFormComponentType() const override;  // 01 - { return "BGSSkinForm_Component"; }
+		void                 InitializeDataComponent() override;     // 02 - { return; }
+
 		// members
 		TESObjectARMO* formSkin;  // 08
 	};

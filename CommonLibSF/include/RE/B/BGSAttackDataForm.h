@@ -14,6 +14,10 @@ namespace RE
 
 		~BGSAttackDataForm() override;  // 00
 
+		// override (BaseFormComponent)
+		const BSFixedString& GetFormComponentType() const override;  // 01 - { return "BGSAttackData_Component"; }
+		void                 InitializeDataComponent() override;     // 02 - { return; }
+
 		// members
 		NiPointer<BGSAttackDataMap> attackDataMap;  // 08
 	};

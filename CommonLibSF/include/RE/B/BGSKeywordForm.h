@@ -14,6 +14,10 @@ namespace RE
 
 		~BGSKeywordForm() override;
 
+		// override (BaseFormComponent)
+		const BSFixedString& GetFormComponentType() const override;  // 01 - { return "BGSKeywordForm_Component"; }
+		void                 InitializeDataComponent() override;     // 02 - { return; }
+
 		// members
 		std::uint32_t unk10;
 		std::uint32_t unk14;

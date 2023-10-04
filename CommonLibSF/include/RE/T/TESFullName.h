@@ -12,10 +12,14 @@ namespace RE
 
 		~TESFullName() override;
 
+		// override (BaseFormComponent)
+		const BSFixedString& GetFormComponentType() const override;  // 01 - { return "TESFullName_Component"; }
+		void                 InitializeDataComponent() override;     // 02
+
 		// add
-		virtual std::uint32_t             GetFullNameLength() const;     // 11
-		virtual const char*               GetFullName() const;           // 12
-		virtual const BGSLocalizedString& GetFullNameLocalized() const;  // 13
+		virtual std::uint32_t             GetFullNameLength() const;     // 0B
+		virtual const char*               GetFullName() const;           // 0C
+		virtual const BGSLocalizedString& GetFullNameLocalized() const;  // OD
 
 		// members
 		BGSLocalizedString fullName;  // 08 - FULL

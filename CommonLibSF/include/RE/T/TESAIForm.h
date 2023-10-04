@@ -38,6 +38,10 @@ namespace RE
 
 		~TESAIForm() override;
 
+		// override (BaseFormComponent)
+		const BSFixedString& GetFormComponentType() const override;  // 01 - { return "TESAIForm_Component"; }
+		void                 InitializeDataComponent() override;     // 02
+
 		// members
 		AIDATA_GAME aiData;      // 08
 		PackageList aiPackList;  // 18

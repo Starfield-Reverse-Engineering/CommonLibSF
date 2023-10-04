@@ -11,6 +11,10 @@ namespace RE
 
 		~BGSForcedLocRefType() override;
 
+		// override (BaseFormComponent)
+		const BSFixedString& GetFormComponentType() const override;  // 01 - { return "BGSForcedLocRefType_Component"; }
+		void                 InitializeDataComponent() override;     // 02 - { return; }
+
 		// members
 		std::uint64_t unk08;  // 08
 		std::uint64_t unk10;  // 10

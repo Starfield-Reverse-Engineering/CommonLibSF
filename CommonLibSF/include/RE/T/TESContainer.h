@@ -13,6 +13,10 @@ namespace RE
 
 		~TESContainer() override;
 
+		// override (BaseFormComponent)
+		const BSFixedString& GetFormComponentType() const override;  // 01 - { return "TESContainer_Component"; }
+		void                 InitializeDataComponent() override;     // 02 - { return; }
+
 		// members
 		ContainerObject** containerObjects;     // 08
 		std::uint32_t     numContainerObjects;  // 10
