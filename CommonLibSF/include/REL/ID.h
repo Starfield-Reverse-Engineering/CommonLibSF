@@ -182,12 +182,13 @@ namespace REL
 	public:
 		enum class Platform
 		{
+			kNotSet = -2,
 			kUnknown = -1,
 			kSteam,
 			kMsStore,
 		};
 
-		inline static enum Platform CurrentPlatform;
+		enum Platform CurrentPlatform = Platform::kNotSet;
 
 		[[nodiscard]] static IDDatabase& get()
 		{
