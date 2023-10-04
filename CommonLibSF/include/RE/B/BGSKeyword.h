@@ -14,7 +14,7 @@ namespace RE
 
 		struct OnDestroyEvent;
 
-		~BGSKeyword() override; // 00
+		~BGSKeyword() override;  // 00
 
 		// members
 		BGSEditorID                    formEditorID;  // 38

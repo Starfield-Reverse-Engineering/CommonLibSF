@@ -14,7 +14,7 @@ namespace RE
 	public:
 		SF_RTTI_VTABLE(BGSKeywordForm);
 
-		~BGSKeywordForm() override; // 00
+		~BGSKeywordForm() override;  // 00
 
 		// override (BaseFormComponent)
 		const BSFixedString& GetFormComponentType() const override;  // 01 - { return "BGSKeywordForm_Component"; }
