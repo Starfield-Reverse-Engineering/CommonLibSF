@@ -10,7 +10,7 @@ namespace RE
 		SF_RTTI_VTABLE(BGSLocationRefType);
 		SF_FORMTYPE(LCRT);
 
-		~BGSLocationRefType() override;
+		~BGSLocationRefType() override; // 00
 	};
 	static_assert(sizeof(BGSLocationRefType) == 0x80);
 }
