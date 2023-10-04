@@ -41,7 +41,8 @@ namespace RE::Scaleform::GFx
 
 	enum class FocusMovedType;
 
-	class ASMovieRootBase
+	class ASMovieRootBase :
+		public RefCountBase<ASMovieRootBase, 327>  // 000
 	{
 	public:
 		SF_RTTI_VTABLE(Scaleform__GFx__ASMovieRootBase);
