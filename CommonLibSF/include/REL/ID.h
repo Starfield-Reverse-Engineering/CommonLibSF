@@ -188,7 +188,7 @@ namespace REL
 			kMsStore,
 		};
 
-		enum Platform CurrentPlatform = Platform::kNotSet;
+		inline static enum Platform CurrentPlatform = Platform::kNotSet;
 
 		[[nodiscard]] static IDDatabase& get()
 		{
