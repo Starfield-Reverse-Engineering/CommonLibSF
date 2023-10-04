@@ -24,9 +24,9 @@ namespace RE
 		virtual bool ReadSettings();                  // 0B
 
 		// members
-		char            settingFile[260];  // 008
-		std::uint32_t   pad10C;            // 10C
-		void*           handle;            // 110
+		char          settingFile[260];  // 008
+		std::uint32_t pad10C;            // 10C
+		void*         handle;            // 110
 	};
 
 	extern template class SettingCollection<Setting>;

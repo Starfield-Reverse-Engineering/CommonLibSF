@@ -79,16 +79,26 @@ namespace RE
 		{
 			if (_key) {
 				switch (_key[0]) {
-				case 'a': return Type::kRGBA;
-				case 'b': return Type::kBool;
-				case 'c': return Type::kChar;
-				case 'f': return Type::kFloat;
-				case 'h': return Type::kUChar;
-				case 'i': return Type::kInt;
-				case 'r': return Type::kRGB;
-				case 's': return Type::kString;  // static
-				case 'S': return Type::kString;  // dynamic
-				case 'u': return Type::kUInt;
+				case 'a':
+					return Type::kRGBA;
+				case 'b':
+					return Type::kBool;
+				case 'c':
+					return Type::kChar;
+				case 'f':
+					return Type::kFloat;
+				case 'h':
+					return Type::kUChar;
+				case 'i':
+					return Type::kInt;
+				case 'r':
+					return Type::kRGB;
+				case 's':
+					return Type::kString;  // static
+				case 'S':
+					return Type::kString;  // dynamic
+				case 'u':
+					return Type::kUInt;
 				}
 			}
 
