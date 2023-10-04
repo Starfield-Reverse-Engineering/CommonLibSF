@@ -1,15 +1,14 @@
 #pragma once
 
-#include "RE/B/BSTList.h"
-#include "RE/S/Settings.h"
-
 namespace RE
 {
-	template <typename T>
+	class Setting;
+
+	template <class T>
 	class SettingCollection
 	{
 	public:
-		virtual ~SettingCollection();
+		virtual ~SettingCollection();  // 000
 
 		// add
 		virtual void Add(T* a_setting) = 0;           // 01
@@ -28,9 +27,7 @@ namespace RE
 		char            settingFile[260];  // 008
 		std::uint32_t   pad10C;            // 10C
 		void*           handle;            // 110
-		BSSimpleList<T> settings;          // 118
-		std::uint64_t   unk128;            // 128
-		std::uint64_t   unk130;            // 130
 	};
+
 	extern template class SettingCollection<Setting>;
 }

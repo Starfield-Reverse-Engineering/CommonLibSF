@@ -1,13 +1,17 @@
 #pragma once
 
+#include "RE/S/Setting.h"
 #include "RE/S/SettingCollectionList.h"
 
 namespace RE
 {
-	class INISettingCollection : public SettingCollectionList<Setting>
+	class INISettingCollection :
+		public SettingCollectionList<Setting>  // 000
 	{
 	public:
 		SF_RTTI_VTABLE(INISettingCollection);
+
+		virtual ~INISettingCollection();  // 000
 
 		[[nodiscard]] static INISettingCollection* GetSingleton()
 		{
@@ -15,7 +19,15 @@ namespace RE
 			return *singleton;
 		}
 
-		virtual ~INISettingCollection();
+		[[nodiscard]] Setting* GetSetting(const std::string_view a_name)
+		{
+			for (const auto& setting : settings) {
+				if (setting->GetKey() == a_name) {
+					return setting;
+				}
+			}
+
+			return nullptr;
+		}
 	};
-	static_assert(sizeof(INISettingCollection) == 0x160);
 }
