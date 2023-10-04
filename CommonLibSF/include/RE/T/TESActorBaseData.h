@@ -56,6 +56,7 @@ namespace RE
 
 		// override (BaseFormComponent)
 		const BSFixedString& GetFormComponentType() const override;  // 01 - return { "TESActorBaseData_Component" }
+		void                 InitializeDataComponent() override;     // 02
 
 		// add
 		virtual void Unk_0B();  // 0B
