@@ -1,7 +1,5 @@
 #pragma once
 
-#include "RE/B/BSIntrusiveRefCounted.h"
-
 namespace RE
 {
 	class BGSKeyword;
@@ -12,7 +10,7 @@ namespace RE
 	public:
 		SF_RTTI(IKeywordFormBase);
 
-		virtual ~IKeywordFormBase();
+		virtual ~IKeywordFormBase(); // 00
 
 		// add
 		virtual bool HasKeyword(const BGSKeyword* a_keyword, const TBO_InstanceData* a_data);
