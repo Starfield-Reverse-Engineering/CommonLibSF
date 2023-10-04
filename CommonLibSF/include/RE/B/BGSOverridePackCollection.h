@@ -12,6 +12,10 @@ namespace RE
 
 		~BGSOverridePackCollection() override;
 
+		// override (BaseFormComponent)
+		const BSFixedString& GetFormComponentType() const override;  // 01 - { return "BGSOverridePackCollection_Component"; }
+		void                 InitializeDataComponent() override;     // 02
+
 		// members
 		BGSListForm* unk08;  // 08
 		BGSListForm* unk10;  // 10

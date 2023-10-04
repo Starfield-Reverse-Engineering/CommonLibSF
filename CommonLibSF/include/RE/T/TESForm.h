@@ -31,6 +31,10 @@ namespace RE
 
 		~TESForm() override;  // 00
 
+		// override (BaseFormComponent)
+		const BSFixedString& GetFormComponentType() const override;  // 01 - { return ""; }
+		void                 InitializeDataComponent() override;     // 02 - { return; }
+
 		// add
 		virtual void                               Unk_0B();                                                         // 0B
 		virtual void                               Unk_0C();                                                         // 0C

@@ -54,6 +54,9 @@ namespace RE
 
 		~TESActorBaseData() override;
 
+		// override (BaseFormComponent)
+		const BSFixedString& GetFormComponentType() const override;  // 01 - return { "TESActorBaseData_Component" }
+
 		// add
 		virtual void Unk_0B();  // 0B
 		virtual void Unk_0C();  // 0C
@@ -72,7 +75,8 @@ namespace RE
 		std::uint64_t   unk50;        // 50
 		std::uint64_t   unk58;        // 58
 		std::uint64_t   unk60;        // 60
-		std::uint64_t   unk68;        // 68
+		std::uint32_t   unk68;        // 68
+		std::uint32_t   unk6C;        // 6C
 	};
 	static_assert(sizeof(TESActorBaseData) == 0x70);
 }

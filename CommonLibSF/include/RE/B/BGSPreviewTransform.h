@@ -7,7 +7,13 @@ namespace RE
 	class BGSPreviewTransform : public BaseFormComponent
 	{
 	public:
-		virtual ~BGSPreviewTransform();
+		SF_RTTI_VTABLE(BGSPreviewTransform);
+
+		virtual ~BGSPreviewTransform() override;
+
+		// override (BaseFormComponent)
+		const BSFixedString& GetFormComponentType() const override;  // 01 - { return "BGSPreviewTransform_Component"; }
+		void                 InitializeDataComponent() override;     // 02 - { return; }
 
 		// members
 		std::uint64_t unk08;  // 08

@@ -12,6 +12,10 @@ namespace RE
 		SF_RTTI_VTABLE(BGSAttachParentArray);
 
 		~BGSAttachParentArray() override;
+
+		// override (BaseFormComponent)
+		const BSFixedString& GetFormComponentType() const override;  // 01 - { return "BGSAttachParentArray_Component"; }
+		void                 InitializeDataComponent() override;     // 02 - { return; }
 	};
 	static_assert(sizeof(BGSAttachParentArray) == 0x18);
 }

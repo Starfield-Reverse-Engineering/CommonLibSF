@@ -13,6 +13,10 @@ namespace RE
 
 		~BGSNativeTerminalForm() override;
 
+		// override (BaseFormComponent)
+		const BSFixedString& GetFormComponentType() const override;  // 01 - { return "BGSNativeTerminalForm_Component"; }
+		void                 InitializeDataComponent() override;     // 02 - { return; }
+
 		// members
 		BGSTerminal* terminal;  // 08
 	};

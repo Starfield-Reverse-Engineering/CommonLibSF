@@ -21,6 +21,10 @@ namespace RE
 
 		~BGSPerkRankArray() override;
 
+		// override (BaseFormComponent)
+		const BSFixedString& GetFormComponentType() const override;  // 01 - { return "BGSPerkRankArray_Component"; }
+		void                 InitializeDataComponent() override;     // 02 - { return; }
+
 		// members
 		PerkRankData* perks;      // 08
 		std::uint32_t perkCount;  // 10

@@ -11,6 +11,10 @@ namespace RE
 
 		~TESSpellList() override;
 
+		// override (BaseFormComponent)
+		const BSFixedString& GetFormComponentType() const override;  // 01 - { return "TESSpellList_Component"; }
+		void                 InitializeDataComponent() override;     // 02 - { return; }
+
 		// members
 		std::uint32_t unk08;  // 08
 		std::uint32_t unk0C;  // 0C

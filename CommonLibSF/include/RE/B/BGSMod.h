@@ -1,6 +1,5 @@
 #pragma once
 
-#include "RE/B/BSFixedString.h"
 #include "RE/B/BaseFormComponent.h"
 
 namespace RE
@@ -15,6 +14,10 @@ namespace RE
 				SF_RTTI_VTABLE(BGSMod__Template__Items);
 
 				virtual ~Items() override;
+
+				// override (BaseFormComponent)
+				const BSFixedString& GetFormComponentType() const override;  // 01 - { return "BGSMod_Template_Component"; }
+				void                 InitializeDataComponent() override;     // 02
 
 				// add
 				virtual void Unk_0B();  // 0B
