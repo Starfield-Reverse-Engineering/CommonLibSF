@@ -187,8 +187,6 @@ namespace REL
 			kMsStore,
 		};
 
-		inline static enum Platform CurrentPlatform;
-
 		[[nodiscard]] static IDDatabase& get()
 		{
 			if (_initialized.load(std::memory_order_relaxed)) {
