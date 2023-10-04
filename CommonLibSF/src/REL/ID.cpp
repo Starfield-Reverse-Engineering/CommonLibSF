@@ -176,6 +176,8 @@ namespace REL
 			_platform = Platform::kMsStore;
 		}
 
+		CurrentPlatform = _platform;
+
 		stl_assert(_platform != Platform::kUnknown,
 			"Failed to identify game runtime platform,"
 			"This means the address library is incompatible for this platform."sv);
