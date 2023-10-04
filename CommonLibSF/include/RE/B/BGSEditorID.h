@@ -19,19 +19,24 @@ namespace RE
 		[[nodiscard]] const_pointer data() const noexcept { return _data.data(); }
 		[[nodiscard]] const_pointer c_str() const noexcept { return _data.c_str(); }
 
-		[[nodiscard]] operator std::basic_string_view<value_type>() const { return { _data }; }
+		[[nodiscard]] operator std::basic_string_view<value_type>() const { return { c_str(), length() }; }
 
 		[[nodiscard]] bool empty() const noexcept { return _data.empty(); }
 
 		[[nodiscard]] size_type size() const noexcept { return _data.size(); }
 		[[nodiscard]] size_type length() const noexcept { return _data.length(); }
 
+		[[nodiscard]] bool operator==(const BSFixedString& a_rhs) const noexcept { return _data == a_rhs; }
+		[[nodiscard]] bool operator==(std::basic_string_view<value_type> a_rhs) const { return _data == a_rhs; }
+
+		[[nodiscard]] bool contains(std::basic_string_view<value_type> a_rhs) const { return _data.contains(a_rhs); }
+
 		[[nodiscard]] TESForm* owner() const { return _owner; }
 
 	private:
 		// members
-		BSFixedString _data;   // 00
-		TESForm*      _owner;  // 08
+		BSFixedString _data;     // 00
+		TESForm*      _owner{};  // 08
 	};
 	static_assert(sizeof(BGSEditorID) == 0x10);
 }

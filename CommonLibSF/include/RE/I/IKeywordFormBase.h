@@ -1,7 +1,5 @@
 #pragma once
 
-#include "RE/B/BSIntrusiveRefCounted.h"
-
 namespace RE
 {
 	class BGSKeyword;

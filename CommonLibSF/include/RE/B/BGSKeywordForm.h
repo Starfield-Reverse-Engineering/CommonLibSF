@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/B/BSContainer.h"
+#include "RE/B/BSTArray.h"
 #include "RE/B/BaseFormComponent.h"
 #include "RE/I/IKeywordFormBase.h"
 
@@ -18,13 +20,17 @@ namespace RE
 		const BSFixedString& GetFormComponentType() const override;  // 01 - { return "BGSKeywordForm_Component"; }
 		void                 InitializeDataComponent() override;     // 02 - { return; }
 
+		// add
+		virtual BGSKeyword* GetDefaultKeyword() const;  // 0B
+
+		[[nodiscard]] bool          ContainsKeywordString(std::string_view a_editorID);
+		void                        ForEachKeyword(std::function<BSContainer::ForEachResult(BGSKeyword*)> a_callback);
+		[[nodiscard]] std::uint32_t GetNumKeywords() const;
+		[[nodiscard]] bool          HasKeywordString(std::string_view a_editorID);
+
 		// members
-		std::uint32_t unk10;
-		std::uint32_t unk14;
-		std::uint64_t unk18;
-		std::uint32_t unk20;
-		std::uint32_t unk24;
-		std::uint64_t unk28;
+		BSTArray<BGSKeyword*> keywords1;  // 10 - empty?
+		BSTArray<BGSKeyword*> keywords2;  // 20
 	};
 	static_assert(sizeof(BGSKeywordForm) == 0x30);
 }
