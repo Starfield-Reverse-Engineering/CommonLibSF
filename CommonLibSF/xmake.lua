@@ -1,10 +1,16 @@
+-- make extras available
+includes("xmake-extra.lua")
+
+-- define options
 option("sfse_xbyak", function()
     set_default(false)
     set_description("Enable trampoline support for Xbyak")
     add_defines("SFSE_SUPPORT_XBYAK=1")
 end)
 
+-- define targets
 target("commonlibsf")
+    -- set target kind
     set_kind("static")
 
     -- add packages
