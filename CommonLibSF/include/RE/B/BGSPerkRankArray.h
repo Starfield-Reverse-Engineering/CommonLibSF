@@ -1,19 +1,12 @@
 #pragma once
 
+#include "RE/B/BSTArray.h"
 #include "RE/B/BaseFormComponent.h"
 
 namespace RE
 {
-	class BGSPerk;
-
-	struct PerkRankData
-	{
-		// members
-		BGSPerk*    perk;         // 00
-		std::int8_t currentRank;  // 08
-	};
-	static_assert(sizeof(PerkRankData) == 0x10);
-
+	struct PerkRankData;
+	
 	class BGSPerkRankArray : public BaseFormComponent
 	{
 	public:
@@ -26,8 +19,7 @@ namespace RE
 		void                 InitializeDataComponent() override;     // 02 - { return; }
 
 		// members
-		PerkRankData* perks;      // 08
-		std::uint32_t perkCount;  // 10
+		BSTArray<PerkRankData> perks;  // 08
 	};
 	static_assert(sizeof(BGSPerkRankArray) == 0x18);
 }

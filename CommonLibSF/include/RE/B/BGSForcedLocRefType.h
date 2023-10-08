@@ -1,5 +1,6 @@
 #pragma once
 
+#include "RE/B/BSTArray.h"
 #include "RE/B/BaseFormComponent.h"
 
 namespace RE
@@ -16,8 +17,7 @@ namespace RE
 		void                 InitializeDataComponent() override;     // 02 - { return; }
 
 		// members
-		std::uint64_t unk08;  // 08
-		std::uint64_t unk10;  // 10
+		BSTArray<void*> unk08;  // 08
 	};
 	static_assert(sizeof(BGSForcedLocRefType) == 0x18);
 }
