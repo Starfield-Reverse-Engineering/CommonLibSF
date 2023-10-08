@@ -79,4 +79,11 @@ namespace RE
 		return func(this);
 	}
 
+	bool TESObjectREFR::IsSpaceshipLanded()
+	{
+		using func_t = decltype(&TESObjectREFR::IsSpaceshipLanded);
+		REL::Relocation<func_t> func{ REL::ID(173880) };
+		return func(this);
+	}
+
 }
