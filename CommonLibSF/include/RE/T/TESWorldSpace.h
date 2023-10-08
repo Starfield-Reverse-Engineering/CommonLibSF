@@ -2,6 +2,7 @@
 
 #include "RE/T/TESForm.h"
 #include "RE/T/TESFullName.h"
+#include "RE/B/BGSLocation.h"
 
 namespace RE
 {
@@ -11,5 +12,9 @@ namespace RE
 	{
 	public:
 		SF_FORMTYPE(WRLD);
+
+		[[nodiscard]] BGSLocation* GetLocationFromCoordinates(NiPoint3A a_coordinates);
+
+		//
 	};
 }
