@@ -350,7 +350,7 @@ namespace RE
 		std::uint64_t unk0EE0;        // 0EE0
 		std::uint64_t unk0EE8;        // 0EE8
 		std::uint64_t unk0EF0;        // 0EF0
-		std::uint64_t unk0EF8;        // 0EF8
+		BGSLocation*  currentLocation;// 0EF8
 		std::uint64_t unk0F00;        // 0F00
 		std::uint64_t unk0F08;        // 0F08
 		std::uint64_t unk0F10;        // 0F10
@@ -361,7 +361,7 @@ namespace RE
 		std::uint64_t unk0F38;        // 0F38
 		std::uint64_t unk0F40;        // 0F40
 		std::uint64_t unk0F48;        // 0F48
-		std::uint64_t unk0F50;        // 0F50
+		TESObjectREFR* crosshairRef;  // 0F50
 		std::uint64_t unk0F58;        // 0F58
 		std::uint64_t unk0F60;        // 0F60
 		std::uint64_t unk0F68;        // 0F68
