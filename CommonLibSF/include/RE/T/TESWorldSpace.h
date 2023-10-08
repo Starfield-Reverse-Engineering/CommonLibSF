@@ -3,6 +3,7 @@
 #include "RE/T/TESForm.h"
 #include "RE/T/TESFullName.h"
 #include "RE/B/BGSLocation.h"
+#include "RE/N/NiPoint3.h"
 
 namespace RE
 {
