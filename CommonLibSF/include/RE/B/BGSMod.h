@@ -1,5 +1,6 @@
 #pragma once
 
+#include "RE/B/BSTArray.h"
 #include "RE/B/BaseFormComponent.h"
 
 namespace RE
@@ -25,9 +26,8 @@ namespace RE
 				virtual void Unk_0D();  // 0D
 
 				// members
-				void*         unk08;  // 08
-				void*         unk10;  // 10
-				BSFixedString unk18;  // 18
+				BSTArray<void*> unk08;  // 08
+				BSFixedString   unk18;  // 18
 			};
 			static_assert(sizeof(Items) == 0x20);
 		}

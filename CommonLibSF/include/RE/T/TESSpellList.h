@@ -1,9 +1,12 @@
 #pragma once
 
+#include "RE/B/BSTArray.h"
 #include "RE/B/BaseFormComponent.h"
 
 namespace RE
 {
+	class SpellItem;
+
 	class TESSpellList : public BaseFormComponent
 	{
 	public:
@@ -16,9 +19,7 @@ namespace RE
 		void                 InitializeDataComponent() override;     // 02 - { return; }
 
 		// members
-		std::uint32_t unk08;  // 08
-		std::uint32_t unk0C;  // 0C
-		std::uint64_t unk10;  // 10
+		BSTArray<SpellItem*> spells;  // 08
 	};
 	static_assert(sizeof(TESSpellList) == 0x18);
 }
