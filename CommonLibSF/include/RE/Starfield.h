@@ -79,6 +79,7 @@
 #include "RE/Offsets_NiRTTI.h"
 #include "RE/Offsets_RTTI.h"
 #include "RE/Offsets_VTABLE.h"
+#include "RE/P/PerkRankData.h"
 #include "RE/P/PlayerCamera.h"
 #include "RE/P/PlayerCharacter.h"
 #include "RE/R/RegSettingCollection.h"

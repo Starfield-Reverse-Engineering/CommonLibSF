@@ -6,7 +6,7 @@
 namespace RE
 {
 	struct PerkRankData;
-	
+
 	class BGSPerkRankArray : public BaseFormComponent
 	{
 	public:

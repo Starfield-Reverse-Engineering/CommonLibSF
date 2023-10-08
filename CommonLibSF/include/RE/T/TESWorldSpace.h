@@ -1,8 +1,8 @@
 #pragma once
 
+#include "RE/N/NiPoint3.h"
 #include "RE/T/TESForm.h"
 #include "RE/T/TESFullName.h"
-#include "RE/N/NiPoint3.h"
 
 namespace RE
 {
