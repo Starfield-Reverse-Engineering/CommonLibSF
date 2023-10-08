@@ -361,7 +361,7 @@ namespace RE
 		std::uint64_t unk0F38;        // 0F38
 		std::uint64_t unk0F40;        // 0F40
 		std::uint64_t unk0F48;        // 0F48
-		TESObjectREFR* crosshairRef;  // 0F50
+		TESObjectREFR* crosshairRef;  // 0F50 NiPointer?
 		std::uint64_t unk0F58;        // 0F58
 		std::uint64_t unk0F60;        // 0F60
 		std::uint64_t unk0F68;        // 0F68
