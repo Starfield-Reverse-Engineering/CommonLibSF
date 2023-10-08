@@ -301,6 +301,7 @@ namespace RE
 		[[nodiscard]] bool                  IsCrimeToActivate();
 		[[nodiscard]] bool                  IsInSpace(bool a_arg1);
 		[[nodiscard]] bool                  IsSpaceshipDocked();
+		[[nodiscard]] bool                  IsSpaceshipLanded();
 
 		// members
 		OBJ_REFR       data;           // 0A0
