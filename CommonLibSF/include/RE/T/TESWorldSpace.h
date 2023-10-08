@@ -14,7 +14,7 @@ namespace RE
 	public:
 		SF_FORMTYPE(WRLD);
 
-		[[nodiscard]] BGSLocation* GetLocationFromCoordinates(NiPoint3A a_coordinates);
+		[[nodiscard]] BGSLocation* GetLocationFromCoordinates(NiPoint3A& a_coordinates);
 
 		//
 	};
