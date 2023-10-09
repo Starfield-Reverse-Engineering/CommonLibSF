@@ -2,14 +2,17 @@
 
 #include "RE/A/AIProcess.h"
 #include "RE/A/ActorState.h"
+#include "RE/A/ActorValueStorage.h"
 #include "RE/I/IMovementStateStore.h"
 #include "RE/I/IStoreAnimationActions.h"
 #include "RE/M/MagicTarget.h"
+#include "RE/P/PerkRankData.h"
 #include "RE/T/TESObjectREFR.h"
 
 namespace RE
 {
 	class AIProcess;
+	class BGSPerk;
 	class CombatController;
 	class CombatGroup;
 	class MovementMessageUpdateRequestImmediate;
@@ -24,7 +27,6 @@ namespace RE
 	struct BSMovementDataChangedEvent;
 	struct BSNavmeshChangeEvent;
 	struct BSSubGraphActivationUpdate;
-	struct Perks;
 
 	namespace PerkValueEvents
 	{
@@ -44,6 +46,15 @@ namespace RE
 
 		kTotal
 	};
+
+	struct Perks
+	{
+	public:
+		// members
+		BSTArray<PerkRankData>* perkRanks;  // 00
+		BSTArray<void*>         unk10;      // 08
+	};
+	static_assert(sizeof(Perks) == 0x18);
 
 	class Actor :
 		public TESObjectREFR,                                           // 000
@@ -265,6 +276,8 @@ namespace RE
 		virtual void         Unk_1A0();                                                                              // 1A0
 		virtual void         Unk_1A1();                                                                              // 1A1
 
+		[[nodiscard]] bool IsHostileToActor(Actor* a_actor);
+
 		// members
 		stl::enumeration<BOOL_BITS, std::uint32_t>           boolBits;                 // 240
 		std::uint32_t                                        unk244;                   // 244
@@ -278,11 +291,7 @@ namespace RE
 		std::uint64_t                                        unk280;                   // 280
 		CombatController*                                    combatController;         // 288
 		std::uint64_t                                        unk290;                   // 290
-		std::uint64_t                                        unk298;                   // 298
-		std::uint64_t                                        unk2A0;                   // 2A0
-		std::uint64_t                                        unk2A8;                   // 2A8
-		std::uint64_t                                        unk2B0;                   // 2B0
-		std::uint64_t                                        unk2B8;                   // 2B8
+		ActorValueStorage                                    avStorage;                // 298
 		std::uint64_t                                        unk2C0;                   // 2C0
 		stl::enumeration<ACTOR_CRITICAL_STAGE, std::int32_t> criticalStage;            // 2C8
 		std::uint32_t                                        dialogueItemTarget;       // 2CC - TESPointerHandle
@@ -290,7 +299,8 @@ namespace RE
 		std::uint32_t                                        myKiller;                 // 2D4 - TESPointerHandle
 		std::uint64_t                                        unk2D8;                   // 2D8
 		std::uint64_t                                        unk2E0;                   // 2E0
-		std::uint64_t                                        unk2E8;                   // 2E8
+		std::uint32_t                                        actionValue;              // 2E8
+		float                                                timerOnAction;            // 2EC
 		std::uint64_t                                        unk2F0;                   // 2F0
 		std::uint32_t                                        intimidateBribeDayStamp;  // 2F8
 		std::uint32_t                                        unk2FC;                   // 2FC
@@ -313,8 +323,9 @@ namespace RE
 		std::uint64_t                                        unk380;                   // 380
 		TESRace*                                             race;                     // 388
 		Perks*                                               perks;                    // 390
-		std::uint64_t                                        unk398;                   // 398
-		std::uint64_t                                        unk3A0;                   // 3A0
+		std::uint32_t                                        unk398;                   // 398
+		mutable BSReadWriteLock                              perkArrayLock;            // 39C
+		std::uint32_t                                        unk3A4;                   // 394
 		stl::enumeration<BOOL_FLAGS, std::uint32_t>          boolFlags;                // 3A8
 		stl::enumeration<BOOL_FLAGS2, std::uint32_t>         boolFlags2;               // 3AC
 		std::uint64_t                                        unk3B0;                   // 3B0
