@@ -1,7 +1,7 @@
 #pragma once
 
-#include "RE/B/BSTArray.h"
 #include "RE/B/BSLock.h"
+#include "RE/B/BSTArray.h"
 
 namespace RE
 {
@@ -12,7 +12,7 @@ namespace RE
 		float modifiers[3];  // 0
 	};
 	static_assert(sizeof(Modifiers) == 0xC);
-	
+
 	class ActorValueStorage
 	{
 	public:

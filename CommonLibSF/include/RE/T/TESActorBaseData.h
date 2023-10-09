@@ -65,9 +65,9 @@ namespace RE
 
 		// add
 		virtual void CopyFromTemplateForms(TESActorBase** a_forceTemplates);  // 0B
-		virtual void Unk_0C();  // 0C
-		virtual void Unk_0D();  // 0D
-		virtual void Unk_0E();  // 0E
+		virtual void Unk_0C();                                                // 0C
+		virtual void Unk_0D();                                                // 0D
+		virtual void Unk_0E();                                                // 0E
 
 		// members
 		ACTOR_BASE_DATA        actorData;         // 08
