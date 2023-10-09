@@ -101,6 +101,11 @@ The main requirement of this license is: if you link your mod against CommonLibS
     </a>
   </td>
   <td align="center">
+    <a href="https://github.com/gazzamc" title="Gary McGovern">
+      <img src="https://avatars.githubusercontent.com/u/7975925?v=4" width="50;" alt="Gary McGovern"/>
+    </a>
+  </td>
+  <td align="center">
     <a href="https://github.com/ianpatt" title="Ian Patterson">
       <img src="https://avatars.githubusercontent.com/u/292795?v=4" width="50;" alt="Ian Patterson"/>
     </a>
