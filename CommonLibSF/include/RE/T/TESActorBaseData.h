@@ -1,9 +1,14 @@
 #pragma once
 
+#include "RE/B/BSTArray.h"
 #include "RE/B/BaseFormComponent.h"
+#include "RE/F/FactionRank.h"
 
 namespace RE
 {
+	class BGSVoiceType;
+	class TESActorBase;
+
 	struct alignas(0x4) ACTOR_BASE_DATA
 	{
 		enum class Flag
@@ -59,25 +64,24 @@ namespace RE
 		void                 InitializeDataComponent() override;     // 02
 
 		// add
-		virtual void Unk_0B();  // 0B
+		virtual void CopyFromTemplateForms(TESActorBase** a_forceTemplates);  // 0B
 		virtual void Unk_0C();  // 0C
 		virtual void Unk_0D();  // 0D
 		virtual void Unk_0E();  // 0E
 
 		// members
-		ACTOR_BASE_DATA actorData;    // 08
-		std::int32_t    changeFlags;  // 1C
-		std::uint64_t   unk20;        // 20
-		std::uint64_t   unk28;        // 28
-		std::uint64_t   unk30;        // 30
-		std::uint64_t   unk38;        // 38
-		std::uint64_t   unk40;        // 40
-		std::uint64_t   unk48;        // 48
-		std::uint64_t   unk50;        // 50
-		std::uint64_t   unk58;        // 58
-		std::uint64_t   unk60;        // 60
-		std::uint32_t   unk68;        // 68
-		std::uint32_t   unk6C;        // 6C
+		ACTOR_BASE_DATA        actorData;         // 08
+		std::int32_t           changeFlags;       // 1C
+		BSTArray<FACTION_RANK> factions;          // 20
+		TESForm**              templateForms;     // 30
+		std::uint64_t          unk38;             // 38
+		TESForm*               baseTemplateForm;  // 40
+		std::uint64_t          unk48;             // 48
+		std::uint64_t          unk50;             // 50
+		TESForm*               legendTemplate;    // 58
+		BGSVoiceType*          voiceType;         // 60
+		std::uint32_t          unk68;             // 68
+		std::uint32_t          unk6C;             // 6C
 	};
 	static_assert(sizeof(TESActorBaseData) == 0x70);
 }

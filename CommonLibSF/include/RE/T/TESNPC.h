@@ -16,6 +16,7 @@ namespace RE
 	class BGSHeadPart;
 	class BGSListForm;
 	class BGSOutfit;
+	class BGSRelationship;
 	class MenuOpenCloseEvent;
 	class TESClass;
 	class TESCombatStyle;
@@ -41,19 +42,19 @@ namespace RE
 			kTheyThem
 		};
 
-		struct HeadPartData
+		struct TintData
 		{
 			std::uint32_t type;         // 00
 			std::uint32_t unk04;        // 04
 			BSFixedString category;     // 08
-			BSFixedString material;     // 10
+			BSFixedString name;         // 10
 			BSFixedString texturePath;  // 18
 			Color         color;        // 20
 			std::uint32_t intensity;    // 24
 		};
-		static_assert(sizeof(HeadPartData) == 0x28);
+		static_assert(sizeof(TintData) == 0x28);
 
-		~TESNPC() override;
+		~TESNPC() override;  // 00
 
 		// members
 		BGSAttachParentArray                         attachParents;    // 320
@@ -88,8 +89,8 @@ namespace RE
 		std::uint64_t                                unk408;           // 408
 		std::uint64_t                                unk410;           // 410
 		std::uint64_t                                unk418;           // 418
-		BSTArray<HeadPartData>                       headpartData;     // 420
-		std::uint32_t                                skinTone;         // 430
+		BSTArray<TintData>                           tintData;         // 420
+		std::uint32_t                                skinToneIndex;    // 430
 		std::uint32_t                                unk434;           // 434
 		BSFixedString                                teeth;            // 438
 		BSFixedString                                jewelryColor;     // 440
@@ -97,7 +98,7 @@ namespace RE
 		BSFixedString                                hairColor;        // 450
 		BSFixedString                                facialColor;      // 458
 		BSFixedString                                eyebrowColor;     // 460
-		std::uint64_t                                unk468;           // 468
+		BSTArray<BGSRelationship*>*                  relationships;    // 468
 		BGSLocalizedString                           organization;     // 470 - faction?
 		std::uint64_t                                unk478;           // 478
 		stl::enumeration<PRONOUN_TYPE, std::uint8_t> pronoun;          // 480
