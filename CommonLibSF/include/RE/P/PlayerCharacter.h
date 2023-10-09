@@ -65,16 +65,9 @@ namespace RE
 		virtual void Unk_1A4();  // 1A4
 		virtual void Unk_1A5();  // 1A5
 
-		[[nodiscard]] static PlayerCharacter* GetSingleton()
-		{
-			static REL::Relocation<PlayerCharacter**> singleton{ REL::ID(865059) };
-			return *singleton;
-		}
+		[[nodiscard]] static PlayerCharacter* GetSingleton();
 
-		bool IsInChargen()
-		{
-			return *(stl::adjust_pointer<bool>(this, 0xF24));
-		}
+		bool IsInChargen();
 
 		// members
 		std::uint64_t  unk0670;          // 0670
@@ -361,7 +354,7 @@ namespace RE
 		std::uint64_t  unk0F38;          // 0F38
 		std::uint64_t  unk0F40;          // 0F40
 		std::uint64_t  unk0F48;          // 0F48
-		TESObjectREFR* crosshairRef;     // 0F50 NiPointer?
+		TESObjectREFR* crosshairRef;     // 0F50 - NiPointer?
 		std::uint64_t  unk0F58;          // 0F58
 		std::uint64_t  unk0F60;          // 0F60
 		std::uint64_t  unk0F68;          // 0F68
