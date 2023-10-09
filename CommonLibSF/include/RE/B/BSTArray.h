@@ -22,6 +22,11 @@ namespace RE
 			return static_cast<pointer>(_data);
 		}
 
+		[[nodiscard]] constexpr const_pointer data() const noexcept
+		{
+			return static_cast<const_pointer>(_data);
+		}
+
 		[[nodiscard]] constexpr iterator begin() noexcept
 		{
 			return data();
