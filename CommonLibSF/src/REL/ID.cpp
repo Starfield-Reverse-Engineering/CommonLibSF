@@ -6,7 +6,7 @@ namespace REL
 	{
 		constexpr auto LookUpDir = "Data\\SFSE\\Plugins"sv;
 
-		[[nodiscard]] constexpr std::uint64_t Offset2ID::operator()(std::size_t a_offset) const
+		[[nodiscard]] std::uint64_t Offset2ID::operator()(std::size_t a_offset) const
 		{
 			const mapping_t elem{ 0, a_offset };
 			const auto      it = std::ranges::lower_bound(
