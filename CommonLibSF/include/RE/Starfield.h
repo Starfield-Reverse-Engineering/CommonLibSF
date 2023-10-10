@@ -128,6 +128,7 @@
 #include "RE/T/TESRaceForm.h"
 #include "RE/T/TESResponse.h"
 #include "RE/T/TESSpellList.h"
+#include "RE/T/TESTexture.h"
 #include "RE/T/TESTopicInfo.h"
 #include "RE/T/TESWorldSpace.h"
 #include "RE/U/UI.h"
