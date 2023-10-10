@@ -1,10 +1,16 @@
 #pragma once
 
+#include "RE/B/BSContainer.h"
+#include "RE/B/BSLock.h"
+#include "RE/B/BSTArray.h"
+#include "RE/N/NiPoint3.h"
+#include "RE/N/NiSmartPointer.h"
 #include "RE/T/TESFullName.h"
 #include "RE/T/TESHandleForm.h"
 
 namespace RE
 {
+	class TESObjectREFR;
 	class TESWorldSpace;
 
 	struct INTERIOR_DATA
@@ -111,12 +117,15 @@ namespace RE
 		};
 		static_assert(sizeof(CellData) == 0x8);
 
-		~TESObjectCELL() override;
+		~TESObjectCELL() override;  // 00
 
 		[[nodiscard]] bool IsAttached() const noexcept { return cellState.all(CELL_STATE::kAttached); }
 		[[nodiscard]] bool IsExterior() const noexcept { return !IsInterior(); }
 		[[nodiscard]] bool IsInterior() const noexcept { return cellFlags.any(Flag::kInterior); }
 		[[nodiscard]] bool UsesPlanetGravity() const noexcept { return cellFlags.any(Flag::kUsePlanetGravity); }
+
+		void ForEachReference(std::function<BSContainer::ForEachResult(const NiPointer<TESObjectREFR>&)> a_callback) const;
+		void ForEachReferenceInRange(const NiPoint3A& a_origin, float a_radius, std::function<BSContainer::ForEachResult(const NiPointer<TESObjectREFR>&)> a_callback) const;
 
 		// members
 		stl::enumeration<Flag, std::uint32_t>      cellFlags;       // 048
@@ -135,9 +144,7 @@ namespace RE
 		std::uint16_t                              pad07A;          // 07A
 		std::uint32_t                              pad07C;          // 07C
 		std::uint64_t                              unk080;          // 080
-		std::uint32_t                              unk088;          // 088
-		std::uint32_t                              unk08C;          // 08C
-		std::uint64_t                              unk090;          // 090
+		BSTArray<NiPointer<TESObjectREFR>>         references;      // 088
 		std::uint64_t                              unk098;          // 098
 		std::uint64_t                              unk0A0;          // 0A0
 		std::uint64_t                              unk0A8;          // 0A8
@@ -159,7 +166,7 @@ namespace RE
 		std::uint64_t                              unk110;          // 110
 		std::uint64_t                              unk118;          // 118
 		TESWorldSpace*                             cellWorldspace;  // 120
-		std::uint64_t                              lock;            // 128
+		mutable BSReadWriteLock                    lock;            // 128
 		std::uint64_t                              unk130;          // 130
 		std::uint64_t                              unk138;          // 138
 		std::uint32_t                              unk140;          // 140
