@@ -9,5 +9,5 @@ namespace SFSE
 	constexpr REL::Version RUNTIME_SF_1_7_36(1, 7, 36, 0);
 	constexpr auto         RUNTIME_LATEST = RUNTIME_SF_1_7_36;
 
-	constexpr REL::Version SFSE_PACK_LATEST(0, 1, 3, 0);
+	constexpr REL::Version SFSE_PACK_LATEST(0, 1, 4, 0);
 }
