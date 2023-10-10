@@ -14,6 +14,7 @@ concurrency:
 jobs:
   maintenance:
     runs-on: ubuntu-latest
+    if: github.repository_owner == 'Starfield-Reverse-Engineering'
     steps:
       - name: Checkout
         uses: actions/checkout@v4
