@@ -78,7 +78,7 @@ namespace REL
 				Offset2ID(std::execution::sequenced_policy{})
 			{}
 
-			[[nodiscard]] constexpr std::uint64_t operator()(std::size_t a_offset) const;
+			[[nodiscard]] std::uint64_t operator()(std::size_t a_offset) const;
 
 			[[nodiscard]] constexpr const_iterator begin() const noexcept { return _offset2id.begin(); }
 
