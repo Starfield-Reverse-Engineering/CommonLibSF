@@ -61,6 +61,8 @@ namespace SFSE
 		{
 			kPostLoad,
 			kPostPostLoad,
+			kPostDataLoad,
+			kPostPostDataLoad,
 		};
 
 		[[nodiscard]] std::uint32_t Version() const;
