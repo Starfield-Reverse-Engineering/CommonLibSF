@@ -1,4 +1,5 @@
 #include "SFSE/Logger.h"
+
 #include "SFSE/API.h"
 
 #include <spdlog/sinks/basic_file_sink.h>
