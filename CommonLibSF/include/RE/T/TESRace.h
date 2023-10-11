@@ -29,6 +29,7 @@ namespace RE
 	class BGSMaterialType;
 	class BGSMovementType;
 	class TESObjectWEAP;
+	class TESQuest;
 
 	struct RACE_DATA
 	{
