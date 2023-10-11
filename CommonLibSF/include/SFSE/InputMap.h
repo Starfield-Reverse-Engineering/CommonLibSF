@@ -44,7 +44,7 @@ namespace SFSE::InputMap
 	std::uint32_t GamepadKeycodeToMask(std::uint32_t a_keyCode);
 
 	std::string GetKeyName(std::uint32_t a_keyCode);
-	std::string           GetKeyboardKeyName(std::uint32_t a_keyCode);
+	std::string GetKeyboardKeyName(std::uint32_t a_keyCode);
 	std::string GetMouseButtonName(std::uint32_t a_keyCode);
 	std::string GetGamepadButtonName(std::uint32_t a_keyCode);
 }

@@ -7,24 +7,24 @@ namespace REL
 		std::array<value_type, 4> powers{ 1, 1, 1, 1 };
 		std::size_t               position{};
 		for (const auto& c : a_version) {
-		    if (c == '.') {
-		        if (++position == powers.size()) {
-		            throw std::invalid_argument("Too many parts in version number.");
-		        }
-		    } else {
-		        powers[position] *= 10;
-		    }
+			if (c == '.') {
+				if (++position == powers.size()) {
+					throw std::invalid_argument("Too many parts in version number.");
+				}
+			} else {
+				powers[position] *= 10;
+			}
 		}
 		position = 0;
 		for (const auto& c : a_version) {
-		    if (c == '.') {
-		        ++position;
-		    } else if (c < '0' || c > '9') {
+			if (c == '.') {
+				++position;
+			} else if (c < '0' || c > '9') {
 				throw std::invalid_argument("Invalid character in version number.");
-		    } else {
+			} else {
 				powers[position] /= 10;
 				_impl[position] += static_cast<value_type>((c - '0') * powers[position]);
-		    }
+			}
 		}
 	}
 
