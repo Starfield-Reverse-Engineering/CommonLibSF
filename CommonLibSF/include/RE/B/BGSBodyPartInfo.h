@@ -8,7 +8,7 @@ namespace RE
 	class BGSBodyPartData;
 
 	struct FACEFX_BONESET;
-	
+
 	class BGSBodyPartInfo : public BaseFormComponent
 	{
 	public:

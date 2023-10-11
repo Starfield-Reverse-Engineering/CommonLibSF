@@ -38,7 +38,7 @@ namespace RE
 	{
 		if (a_alignmentRequired)
 			return static_cast<T*>(malloc(sizeof(T), alignof(T)));
-			
+
 		return static_cast<T*>(malloc(sizeof(T)));
 	}
 
@@ -64,86 +64,86 @@ namespace RE
 	}
 }
 
-#define SF_HEAP_REDEFINE_NEW_HELPER(...)                                                         \
-[[nodiscard]] void* operator new(std::size_t a_count, std::align_val_t a_alignment)              \
-{                                                                                                \
-	const auto mem = RE::malloc(a_count, static_cast<std::size_t>(a_alignment));                 \
-	if (mem)                                                                                     \
-		return mem;                                                                              \
-	                                                                                             \
-	SFSE::stl::report_and_fail("out of memory");                                                 \
-}                                                                                                \
-                                                                                                 \
-[[nodiscard]] void* operator new[](std::size_t a_count, std::align_val_t a_alignment)            \
-{                                                                                                \
-	const auto mem = RE::malloc(a_count, static_cast<std::size_t>(a_alignment));                 \
-	if (mem)                                                                                     \
-		return mem;                                                                              \
-	                                                                                             \
-	SFSE::stl::report_and_fail("out of memory");                                                 \
-}                                                                                                \
-                                                                                                 \
-[[nodiscard]] void* operator new(std::size_t, void* a_ptr) { return a_ptr; }                     \
-[[nodiscard]] void* operator new[](std::size_t, void* a_ptr) { return a_ptr; }                   \
-[[nodiscard]] void* operator new(std::size_t, std::align_val_t, void* a_ptr) { return a_ptr; }   \
-[[nodiscard]] void* operator new[](std::size_t, std::align_val_t, void* a_ptr) { return a_ptr; } \
-                                                                                                 \
-void operator delete(void*, void*) { return; }                                                   \
-void operator delete[](void*, void*) { return; }                                                 \
-                                                                                                 \
-void operator delete(void* a_ptr, std::align_val_t) { RE::free(a_ptr, true); }                   \
-void operator delete[](void* a_ptr, std::align_val_t) { RE::free(a_ptr, true); }                 \
-void operator delete(void* a_ptr, std::size_t, std::align_val_t) { RE::free(a_ptr, true); }      \
-void operator delete[](void* a_ptr, std::size_t, std::align_val_t) { RE::free(a_ptr, true); }
+#define SF_HEAP_REDEFINE_NEW_HELPER(...)                                                             \
+	[[nodiscard]] void* operator new(std::size_t a_count, std::align_val_t a_alignment)              \
+	{                                                                                                \
+		const auto mem = RE::malloc(a_count, static_cast<std::size_t>(a_alignment));                 \
+		if (mem)                                                                                     \
+			return mem;                                                                              \
+                                                                                                     \
+		SFSE::stl::report_and_fail("out of memory");                                                 \
+	}                                                                                                \
+                                                                                                     \
+	[[nodiscard]] void* operator new[](std::size_t a_count, std::align_val_t a_alignment)            \
+	{                                                                                                \
+		const auto mem = RE::malloc(a_count, static_cast<std::size_t>(a_alignment));                 \
+		if (mem)                                                                                     \
+			return mem;                                                                              \
+                                                                                                     \
+		SFSE::stl::report_and_fail("out of memory");                                                 \
+	}                                                                                                \
+                                                                                                     \
+	[[nodiscard]] void* operator new(std::size_t, void* a_ptr) { return a_ptr; }                     \
+	[[nodiscard]] void* operator new[](std::size_t, void* a_ptr) { return a_ptr; }                   \
+	[[nodiscard]] void* operator new(std::size_t, std::align_val_t, void* a_ptr) { return a_ptr; }   \
+	[[nodiscard]] void* operator new[](std::size_t, std::align_val_t, void* a_ptr) { return a_ptr; } \
+                                                                                                     \
+	void operator delete(void*, void*) { return; }                                                   \
+	void operator delete[](void*, void*) { return; }                                                 \
+                                                                                                     \
+	void operator delete(void* a_ptr, std::align_val_t) { RE::free(a_ptr, true); }                   \
+	void operator delete[](void* a_ptr, std::align_val_t) { RE::free(a_ptr, true); }                 \
+	void operator delete(void* a_ptr, std::size_t, std::align_val_t) { RE::free(a_ptr, true); }      \
+	void operator delete[](void* a_ptr, std::size_t, std::align_val_t) { RE::free(a_ptr, true); }
 
-#define SF_HEAP_REDEFINE_NEW(...)                                     \
-[[nodiscard]] void* operator new(std::size_t a_count)                 \
-{                                                                     \
-	const auto mem = RE::malloc(a_count);                             \
-	if (mem)                                                          \
-		return mem;                                                   \
-	                                                                  \
-	SFSE::stl::report_and_fail("out of memory");                      \
-}                                                                     \
-                                                                      \
-[[nodiscard]] void* operator new[](std::size_t a_count)               \
-{                                                                     \
-	const auto mem = RE::malloc(a_count);                             \
-	if (mem)                                                          \
-		return mem;                                                   \
-	                                                                  \
-	SFSE::stl::report_and_fail("out of memory");                      \
-}                                                                     \
-                                                                      \
-void operator delete(void* a_ptr) { RE::free(a_ptr); }                \
-void operator delete[](void* a_ptr) { RE::free(a_ptr); }              \
-void operator delete(void* a_ptr, std::size_t) { RE::free(a_ptr); }   \
-void operator delete[](void* a_ptr, std::size_t) { RE::free(a_ptr); } \
-                                                                      \
-SF_HEAP_REDEFINE_NEW_HELPER(__VA_ARGS__)
+#define SF_HEAP_REDEFINE_NEW(...)                                         \
+	[[nodiscard]] void* operator new(std::size_t a_count)                 \
+	{                                                                     \
+		const auto mem = RE::malloc(a_count);                             \
+		if (mem)                                                          \
+			return mem;                                                   \
+                                                                          \
+		SFSE::stl::report_and_fail("out of memory");                      \
+	}                                                                     \
+                                                                          \
+	[[nodiscard]] void* operator new[](std::size_t a_count)               \
+	{                                                                     \
+		const auto mem = RE::malloc(a_count);                             \
+		if (mem)                                                          \
+			return mem;                                                   \
+                                                                          \
+		SFSE::stl::report_and_fail("out of memory");                      \
+	}                                                                     \
+                                                                          \
+	void operator delete(void* a_ptr) { RE::free(a_ptr); }                \
+	void operator delete[](void* a_ptr) { RE::free(a_ptr); }              \
+	void operator delete(void* a_ptr, std::size_t) { RE::free(a_ptr); }   \
+	void operator delete[](void* a_ptr, std::size_t) { RE::free(a_ptr); } \
+                                                                          \
+	SF_HEAP_REDEFINE_NEW_HELPER(__VA_ARGS__)
 
-#define SF_HEAP_REDEFINE_NEW_ALIGNED(...)                                   \
-[[nodiscard]] void* operator new(std::size_t a_count)                       \
-{                                                                           \
-	const auto mem = RE::malloc(a_count, alignof(__VA_ARGS__));             \
-	if (mem)                                                                \
-		return mem;                                                         \
-	                                                                        \
-	SFSE::stl::report_and_fail("out of memory");                            \
-}                                                                           \
-                                                                            \
-[[nodiscard]] void* operator new[](std::size_t a_count)                     \
-{                                                                           \
-	const auto mem = RE::malloc(a_count, alignof(__VA_ARGS__));             \
-	if (mem)                                                                \
-		return mem;                                                         \
-	                                                                        \
-	SFSE::stl::report_and_fail("out of memory");                            \
-}                                                                           \
-                                                                            \
-void operator delete(void* a_ptr) { RE::free(a_ptr, true); }                \
-void operator delete[](void* a_ptr) { RE::free(a_ptr, true); }              \
-void operator delete(void* a_ptr, std::size_t) { RE::free(a_ptr, true); }   \
-void operator delete[](void* a_ptr, std::size_t) { RE::free(a_ptr, true); } \
-                                                                            \
-SF_HEAP_REDEFINE_NEW_HELPER(__VA_ARGS__)
+#define SF_HEAP_REDEFINE_NEW_ALIGNED(...)                                       \
+	[[nodiscard]] void* operator new(std::size_t a_count)                       \
+	{                                                                           \
+		const auto mem = RE::malloc(a_count, alignof(__VA_ARGS__));             \
+		if (mem)                                                                \
+			return mem;                                                         \
+                                                                                \
+		SFSE::stl::report_and_fail("out of memory");                            \
+	}                                                                           \
+                                                                                \
+	[[nodiscard]] void* operator new[](std::size_t a_count)                     \
+	{                                                                           \
+		const auto mem = RE::malloc(a_count, alignof(__VA_ARGS__));             \
+		if (mem)                                                                \
+			return mem;                                                         \
+                                                                                \
+		SFSE::stl::report_and_fail("out of memory");                            \
+	}                                                                           \
+                                                                                \
+	void operator delete(void* a_ptr) { RE::free(a_ptr, true); }                \
+	void operator delete[](void* a_ptr) { RE::free(a_ptr, true); }              \
+	void operator delete(void* a_ptr, std::size_t) { RE::free(a_ptr, true); }   \
+	void operator delete[](void* a_ptr, std::size_t) { RE::free(a_ptr, true); } \
+                                                                                \
+	SF_HEAP_REDEFINE_NEW_HELPER(__VA_ARGS__)

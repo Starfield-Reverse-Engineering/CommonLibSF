@@ -10,7 +10,7 @@ namespace RE
 		virtual ~BGSPreloadable();  // 00
 
 		// add
-		virtual void Unk_01(); // 01
+		virtual void Unk_01();  // 01
 	};
 	static_assert(sizeof(BGSPreloadable) == 0x08);
 }
