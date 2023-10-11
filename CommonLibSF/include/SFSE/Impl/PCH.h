@@ -222,9 +222,9 @@ namespace SFSE
 
 				[[nodiscard]] consteval const_reference front() const noexcept { return (*this)[0]; }
 
-				[[nodiscard]] consteval size_type length() const noexcept { return N; }
+				[[nodiscard]] static consteval size_type length() noexcept { return N; }
 
-				[[nodiscard]] consteval size_type size() const noexcept { return length(); }
+				[[nodiscard]] static consteval size_type size() noexcept { return length(); }
 
 				template <std::size_t POS = 0, std::size_t COUNT = npos>
 				[[nodiscard]] consteval auto substr() const noexcept
@@ -335,6 +335,7 @@ namespace SFSE
 			constexpr enumeration& operator=(enumeration<Enum, U2> a_rhs) noexcept
 			{
 				_impl = static_cast<underlying_type>(a_rhs.get());
+				return *this;
 			}
 
 			constexpr enumeration& operator=(enum_type a_value) noexcept
@@ -475,261 +476,258 @@ namespace SFSE
 		return tmp;                                                                                               \
 	}
 
-namespace SFSE
+namespace SFSE::stl
 {
-	namespace stl
+	template <class E, class U>
+	[[nodiscard]] constexpr auto operator~(enumeration<E, U> a_enum) noexcept -> enumeration<E, U>
 	{
-		template <class E, class U>
-		[[nodiscard]] constexpr auto operator~(enumeration<E, U> a_enum) noexcept -> enumeration<E, U>
-		{
-			return static_cast<E>(~static_cast<U>(a_enum.get()));
+		return static_cast<E>(~static_cast<U>(a_enum.get()));
+	}
+
+	SFSE_MAKE_LOGICAL_OP(==, bool);
+	SFSE_MAKE_LOGICAL_OP(<=>, std::strong_ordering);
+
+	SFSE_MAKE_ARITHMETIC_OP(<<);
+	SFSE_MAKE_ENUMERATION_OP(<<);
+	SFSE_MAKE_ARITHMETIC_OP(>>);
+	SFSE_MAKE_ENUMERATION_OP(>>);
+
+	SFSE_MAKE_ENUMERATION_OP(|);
+	SFSE_MAKE_ENUMERATION_OP(&);
+	SFSE_MAKE_ENUMERATION_OP(^);
+
+	SFSE_MAKE_ENUMERATION_OP(+);
+	SFSE_MAKE_ENUMERATION_OP(-);
+
+	SFSE_MAKE_INCREMENTER_OP(+);  // ++
+	SFSE_MAKE_INCREMENTER_OP(-);  // --
+
+	template <class T>
+	class atomic_ref : public std::atomic_ref<T>
+	{
+	private:
+		using super = std::atomic_ref<T>;
+
+	public:
+		using value_type = typename super::value_type;
+
+		explicit atomic_ref(volatile T& a_obj) noexcept(std::is_nothrow_constructible_v<super, value_type&>) :
+			super(const_cast<value_type&>(a_obj)) {}
+
+		using super::super;
+		using super::operator=;
+	};
+
+	template <class T>
+	atomic_ref(volatile T&) -> atomic_ref<T>;
+
+	template class atomic_ref<std::int8_t>;
+	template class atomic_ref<std::uint8_t>;
+	template class atomic_ref<std::int16_t>;
+	template class atomic_ref<std::uint16_t>;
+	template class atomic_ref<std::int32_t>;
+	template class atomic_ref<std::uint32_t>;
+	template class atomic_ref<std::int64_t>;
+	template class atomic_ref<std::uint64_t>;
+
+	static_assert(atomic_ref<std::int8_t>::is_always_lock_free);
+	static_assert(atomic_ref<std::uint8_t>::is_always_lock_free);
+	static_assert(atomic_ref<std::int16_t>::is_always_lock_free);
+	static_assert(atomic_ref<std::uint16_t>::is_always_lock_free);
+	static_assert(atomic_ref<std::int32_t>::is_always_lock_free);
+	static_assert(atomic_ref<std::uint32_t>::is_always_lock_free);
+	static_assert(atomic_ref<std::int64_t>::is_always_lock_free);
+	static_assert(atomic_ref<std::uint64_t>::is_always_lock_free);
+
+	template <class T>
+	struct ssizeof
+	{
+		[[nodiscard]] constexpr operator std::ptrdiff_t() const noexcept { return value; }
+
+		[[nodiscard]] constexpr std::ptrdiff_t operator()() const noexcept { return value; }
+
+		static constexpr auto value = static_cast<std::ptrdiff_t>(sizeof(T));
+	};
+
+	template <class T>
+	inline constexpr auto ssizeof_v = ssizeof<T>::value;
+
+	template <class T, class U>
+	[[nodiscard]] auto adjust_pointer(U* a_ptr, const std::ptrdiff_t a_adjust) noexcept
+	{
+		auto addr = a_ptr ? reinterpret_cast<std::uintptr_t>(a_ptr) + a_adjust : 0;
+		if constexpr (std::is_const_v<U> && std::is_volatile_v<U>) {
+			return reinterpret_cast<std::add_cv_t<T>*>(addr);
+		} else if constexpr (std::is_const_v<U>) {
+			return reinterpret_cast<std::add_const_t<T>*>(addr);
+		} else if constexpr (std::is_volatile_v<U>) {
+			return reinterpret_cast<std::add_volatile_t<T>*>(addr);
+		} else {
+			return reinterpret_cast<T*>(addr);
 		}
+	}
 
-		SFSE_MAKE_LOGICAL_OP(==, bool);
-		SFSE_MAKE_LOGICAL_OP(<=>, std::strong_ordering);
+	template <class T>
+	bool emplace_vtable(T* a_ptr)
+	{
+		auto address = T::VTABLE[0].address();
+		if (!address) {
+			return false;
+		}
+		reinterpret_cast<std::uintptr_t*>(a_ptr)[0] = address;
+		return true;
+	}
 
-		SFSE_MAKE_ARITHMETIC_OP(<<);
-		SFSE_MAKE_ENUMERATION_OP(<<);
-		SFSE_MAKE_ARITHMETIC_OP(>>);
-		SFSE_MAKE_ENUMERATION_OP(>>);
+	template <class T>
+	void memzero(volatile T* a_ptr, const std::size_t a_size = sizeof(T))
+	{
+		const auto     begin = reinterpret_cast<volatile char*>(a_ptr);
+		constexpr char val{};
+		std::fill_n(begin, a_size, val);
+	}
 
-		SFSE_MAKE_ENUMERATION_OP(|);
-		SFSE_MAKE_ENUMERATION_OP(&);
-		SFSE_MAKE_ENUMERATION_OP(^);
+	template <class... Args>
+	[[nodiscard]] auto pun_bits(Args... a_args)
+		requires(std::same_as<std::remove_cv_t<Args>, bool> && ...)
+	{
+		constexpr auto ARGC = sizeof...(Args);
 
-		SFSE_MAKE_ENUMERATION_OP(+);
-		SFSE_MAKE_ENUMERATION_OP(-);
+		std::bitset<ARGC> bits;
+		std::size_t       i = 0;
+		((bits[i++] = a_args), ...);
 
-		SFSE_MAKE_INCREMENTER_OP(+);  // ++
-		SFSE_MAKE_INCREMENTER_OP(-);  // --
+		if constexpr (ARGC <= std::numeric_limits<unsigned long>::digits) {
+			return bits.to_ulong();
+		} else if constexpr (ARGC <= std::numeric_limits<unsigned long long>::digits) {
+			return bits.to_ullong();
+		} else {
+			static_assert(false && sizeof...(Args));
+		}
+	}
 
-		template <class T>
-		class atomic_ref : public std::atomic_ref<T>
-		{
-		private:
-			using super = std::atomic_ref<T>;
-
-		public:
-			using value_type = typename super::value_type;
-
-			explicit atomic_ref(volatile T& a_obj) noexcept(std::is_nothrow_constructible_v<super, value_type&>) :
-				super(const_cast<value_type&>(a_obj)) {}
-
-			using super::super;
-			using super::operator=;
+	[[nodiscard]] inline auto utf8_to_utf16(const std::string_view a_in) noexcept -> std::optional<std::wstring>
+	{
+		const auto cvt = [&](wchar_t* a_dst, const std::size_t a_length) {
+			return WinAPI::MultiByteToWideChar(
+				WinAPI::CP_UTF8, 0, a_in.data(), static_cast<int>(a_in.length()), a_dst, static_cast<int>(a_length));
 		};
 
-		template <class T>
-		atomic_ref(volatile T&) -> atomic_ref<T>;
+		const auto len = cvt(nullptr, 0);
+		if (len == 0) {
+			return std::nullopt;
+		}
 
-		template class atomic_ref<std::int8_t>;
-		template class atomic_ref<std::uint8_t>;
-		template class atomic_ref<std::int16_t>;
-		template class atomic_ref<std::uint16_t>;
-		template class atomic_ref<std::int32_t>;
-		template class atomic_ref<std::uint32_t>;
-		template class atomic_ref<std::int64_t>;
-		template class atomic_ref<std::uint64_t>;
+		std::wstring out(len, '\0');
+		if (cvt(out.data(), out.length()) == 0) {
+			return std::nullopt;
+		}
 
-		static_assert(atomic_ref<std::int8_t>::is_always_lock_free);
-		static_assert(atomic_ref<std::uint8_t>::is_always_lock_free);
-		static_assert(atomic_ref<std::int16_t>::is_always_lock_free);
-		static_assert(atomic_ref<std::uint16_t>::is_always_lock_free);
-		static_assert(atomic_ref<std::int32_t>::is_always_lock_free);
-		static_assert(atomic_ref<std::uint32_t>::is_always_lock_free);
-		static_assert(atomic_ref<std::int64_t>::is_always_lock_free);
-		static_assert(atomic_ref<std::uint64_t>::is_always_lock_free);
+		return out;
+	}
 
-		template <class T>
-		struct ssizeof
-		{
-			[[nodiscard]] constexpr operator std::ptrdiff_t() const noexcept { return value; }
-
-			[[nodiscard]] constexpr std::ptrdiff_t operator()() const noexcept { return value; }
-
-			static constexpr auto value = static_cast<std::ptrdiff_t>(sizeof(T));
+	[[nodiscard]] inline auto utf16_to_utf8(const std::wstring_view a_in) noexcept -> std::optional<std::string>
+	{
+		const auto cvt = [&](char* a_dst, const std::size_t a_length) {
+			return WinAPI::WideCharToMultiByte(
+				WinAPI::CP_UTF8, 0, a_in.data(), static_cast<int>(a_in.length()), a_dst, static_cast<int>(a_length), nullptr, nullptr);
 		};
 
-		template <class T>
-		inline constexpr auto ssizeof_v = ssizeof<T>::value;
+		const auto len = cvt(nullptr, 0);
+		if (len == 0) {
+			return std::nullopt;
+		}
 
-		template <class T, class U>
-		[[nodiscard]] auto adjust_pointer(U* a_ptr, const std::ptrdiff_t a_adjust) noexcept
-		{
-			auto addr = a_ptr ? reinterpret_cast<std::uintptr_t>(a_ptr) + a_adjust : 0;
-			if constexpr (std::is_const_v<U> && std::is_volatile_v<U>) {
-				return reinterpret_cast<std::add_cv_t<T>*>(addr);
-			} else if constexpr (std::is_const_v<U>) {
-				return reinterpret_cast<std::add_const_t<T>*>(addr);
-			} else if constexpr (std::is_volatile_v<U>) {
-				return reinterpret_cast<std::add_volatile_t<T>*>(addr);
-			} else {
-				return reinterpret_cast<T*>(addr);
+		std::string out(len, '\0');
+		if (cvt(out.data(), out.length()) == 0) {
+			return std::nullopt;
+		}
+
+		return out;
+	}
+
+	inline bool report_and_error(std::string_view a_msg, const bool a_fail = true, const std::source_location& a_loc = std::source_location::current())
+	{
+		const auto body = [&]() -> std::wstring {
+			const std::filesystem::path p = a_loc.file_name();
+			auto                        filename = p.lexically_normal().generic_string();
+
+			const std::regex r{ R"((?:^|[\\\/])(?:include|src)[\\\/](.*)$)" };
+			std::smatch      matches;
+			if (std::regex_search(filename, matches, r)) {
+				filename = matches[1].str();
 			}
-		}
 
-		template <class T>
-		bool emplace_vtable(T* a_ptr)
-		{
-			auto address = T::VTABLE[0].address();
-			if (!address) {
-				return false;
+			return utf8_to_utf16(std::format("{}({}): {}"sv, filename, a_loc.line(), a_msg)).value_or(L"<character encoding error>"s);
+		}();
+
+		const auto caption = []() {
+			const auto           maxPath = WinAPI::GetMaxPath();
+			std::vector<wchar_t> buf;
+			buf.reserve(maxPath);
+			buf.resize(maxPath / 2);
+			std::uint32_t result;
+			do {
+				buf.resize(buf.size() * 2);
+				result = WinAPI::GetModuleFileName(WinAPI::GetCurrentModule(), buf.data(), static_cast<std::uint32_t>(buf.size()));
+			} while (result && result == buf.size() && buf.size() <= (std::numeric_limits<std::uint32_t>::max)());
+
+			if (result && result != buf.size()) {
+				const std::filesystem::path p(buf.begin(), buf.begin() + result);
+				return p.filename().native();
 			}
-			reinterpret_cast<std::uintptr_t*>(a_ptr)[0] = address;
-			return true;
+			return L""s;
+		}();
+
+		spdlog::log(spdlog::source_loc{ a_loc.file_name(), static_cast<int>(a_loc.line()), a_loc.function_name() }, spdlog::level::critical, a_msg);
+
+		if (a_fail) {
+			WinAPI::MessageBox(nullptr, body.c_str(), (caption.empty() ? nullptr : caption.c_str()), 0);
+			WinAPI::TerminateProcess(WinAPI::GetCurrentProcess(), EXIT_FAILURE);
 		}
+		return true;
+	}
 
-		template <class T>
-		void memzero(volatile T* a_ptr, const std::size_t a_size = sizeof(T))
-		{
-			const auto     begin = reinterpret_cast<volatile char*>(a_ptr);
-			constexpr char val{};
-			std::fill_n(begin, a_size, val);
-		}
+	[[noreturn]] inline void report_and_fail(const std::string_view a_msg, const std::source_location& a_loc = std::source_location::current())
+	{
+		report_and_error(a_msg, true, a_loc);
+		std::unreachable();
+	}
 
-		template <class... Args>
-		[[nodiscard]] auto pun_bits(Args... a_args)
-			requires(std::same_as<std::remove_cv_t<Args>, bool> && ...)
-		{
-			constexpr auto ARGC = sizeof...(Args);
+	template <class Enum>
+	[[nodiscard]] constexpr auto to_underlying(Enum a_val) noexcept
+		requires(std::is_enum_v<Enum>)
+	{
+		return static_cast<std::underlying_type_t<Enum>>(a_val);
+	}
 
-			std::bitset<ARGC> bits;
-			std::size_t       i = 0;
-			((bits[i++] = a_args), ...);
+	template <class To, class From>
+	[[nodiscard]] To unrestricted_cast(From a_from) noexcept
+	{
+		if constexpr (std::is_same_v<std::remove_cv_t<From>, std::remove_cv_t<To>>) {
+			return To{ a_from };
 
-			if constexpr (ARGC <= std::numeric_limits<unsigned long>::digits) {
-				return bits.to_ulong();
-			} else if constexpr (ARGC <= std::numeric_limits<unsigned long long>::digits) {
-				return bits.to_ullong();
-			} else {
-				static_assert(false && sizeof...(Args));
-			}
-		}
+			// From != To
+		} else if constexpr (std::is_reference_v<From>) {
+			return stl::unrestricted_cast<To>(std::addressof(a_from));
 
-		[[nodiscard]] inline auto utf8_to_utf16(const std::string_view a_in) noexcept -> std::optional<std::wstring>
-		{
-			const auto cvt = [&](wchar_t* a_dst, const std::size_t a_length) {
-				return WinAPI::MultiByteToWideChar(
-					WinAPI::CP_UTF8, 0, a_in.data(), static_cast<int>(a_in.length()), a_dst, static_cast<int>(a_length));
+			// From: NOT reference
+		} else if constexpr (std::is_reference_v<To>) {
+			return *stl::unrestricted_cast<std::add_pointer_t<std::remove_reference_t<To>>>(a_from);
+
+			// To: NOT reference
+		} else if constexpr (std::is_pointer_v<From> && std::is_pointer_v<To>) {
+			return static_cast<To>(const_cast<void*>(static_cast<const volatile void*>(a_from)));
+		} else if constexpr ((std::is_pointer_v<From> && std::is_integral_v<To>) || (std::is_integral_v<From> && std::is_pointer_v<To>)) {
+			return reinterpret_cast<To>(a_from);
+		} else {
+			union
+			{
+				std::remove_cv_t<std::remove_reference_t<From>> from;
+				std::remove_cv_t<std::remove_reference_t<To>>   to;
 			};
 
-			const auto len = cvt(nullptr, 0);
-			if (len == 0) {
-				return std::nullopt;
-			}
-
-			std::wstring out(len, '\0');
-			if (cvt(out.data(), out.length()) == 0) {
-				return std::nullopt;
-			}
-
-			return out;
-		}
-
-		[[nodiscard]] inline auto utf16_to_utf8(const std::wstring_view a_in) noexcept -> std::optional<std::string>
-		{
-			const auto cvt = [&](char* a_dst, const std::size_t a_length) {
-				return WinAPI::WideCharToMultiByte(
-					WinAPI::CP_UTF8, 0, a_in.data(), static_cast<int>(a_in.length()), a_dst, static_cast<int>(a_length), nullptr, nullptr);
-			};
-
-			const auto len = cvt(nullptr, 0);
-			if (len == 0) {
-				return std::nullopt;
-			}
-
-			std::string out(len, '\0');
-			if (cvt(out.data(), out.length()) == 0) {
-				return std::nullopt;
-			}
-
-			return out;
-		}
-
-		inline bool report_and_error(std::string_view a_msg, const bool a_fail = true, const std::source_location& a_loc = std::source_location::current())
-		{
-			const auto body = [&]() -> std::wstring {
-				const std::filesystem::path p = a_loc.file_name();
-				auto                        filename = p.lexically_normal().generic_string();
-
-				const std::regex r{ R"((?:^|[\\\/])(?:include|src)[\\\/](.*)$)" };
-				std::smatch      matches;
-				if (std::regex_search(filename, matches, r)) {
-					filename = matches[1].str();
-				}
-
-				return utf8_to_utf16(std::format("{}({}): {}"sv, filename, a_loc.line(), a_msg)).value_or(L"<character encoding error>"s);
-			}();
-
-			const auto caption = []() {
-				const auto           maxPath = WinAPI::GetMaxPath();
-				std::vector<wchar_t> buf;
-				buf.reserve(maxPath);
-				buf.resize(maxPath / 2);
-				std::uint32_t result = 0;
-				do {
-					buf.resize(buf.size() * 2);
-					result = WinAPI::GetModuleFileName(WinAPI::GetCurrentModule(), buf.data(), static_cast<std::uint32_t>(buf.size()));
-				} while (result && result == buf.size() && buf.size() <= (std::numeric_limits<std::uint32_t>::max)());
-
-				if (result && result != buf.size()) {
-					std::filesystem::path p(buf.begin(), buf.begin() + result);
-					return p.filename().native();
-				}
-				return L""s;
-			}();
-
-			spdlog::log(spdlog::source_loc{ a_loc.file_name(), static_cast<int>(a_loc.line()), a_loc.function_name() }, spdlog::level::critical, a_msg);
-
-			if (a_fail) {
-				WinAPI::MessageBox(nullptr, body.c_str(), (caption.empty() ? nullptr : caption.c_str()), 0);
-				WinAPI::TerminateProcess(WinAPI::GetCurrentProcess(), EXIT_FAILURE);
-			}
-			return true;
-		}
-
-		[[noreturn]] inline void report_and_fail(const std::string_view a_msg, const std::source_location& a_loc = std::source_location::current())
-		{
-			report_and_error(a_msg, true, a_loc);
-			std::unreachable();
-		}
-
-		template <class Enum>
-		[[nodiscard]] constexpr auto to_underlying(Enum a_val) noexcept
-			requires(std::is_enum_v<Enum>)
-		{
-			return static_cast<std::underlying_type_t<Enum>>(a_val);
-		}
-
-		template <class To, class From>
-		[[nodiscard]] To unrestricted_cast(From a_from) noexcept
-		{
-			if constexpr (std::is_same_v<std::remove_cv_t<From>, std::remove_cv_t<To>>) {
-				return To{ a_from };
-
-				// From != To
-			} else if constexpr (std::is_reference_v<From>) {
-				return stl::unrestricted_cast<To>(std::addressof(a_from));
-
-				// From: NOT reference
-			} else if constexpr (std::is_reference_v<To>) {
-				return *stl::unrestricted_cast<std::add_pointer_t<std::remove_reference_t<To>>>(a_from);
-
-				// To: NOT reference
-			} else if constexpr (std::is_pointer_v<From> && std::is_pointer_v<To>) {
-				return static_cast<To>(const_cast<void*>(static_cast<const volatile void*>(a_from)));
-			} else if constexpr ((std::is_pointer_v<From> && std::is_integral_v<To>) || (std::is_integral_v<From> && std::is_pointer_v<To>)) {
-				return reinterpret_cast<To>(a_from);
-			} else {
-				union
-				{
-					std::remove_cv_t<std::remove_reference_t<From>> from;
-					std::remove_cv_t<std::remove_reference_t<To>>   to;
-				};
-
-				from = std::forward<From>(a_from);
-				return to;
-			}
+			from = std::forward<From>(a_from);
+			return to;
 		}
 	}
 }

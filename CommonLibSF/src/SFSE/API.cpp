@@ -1,4 +1,5 @@
 #include "SFSE/API.h"
+
 #include "SFSE/Logger.h"
 
 namespace SFSE
