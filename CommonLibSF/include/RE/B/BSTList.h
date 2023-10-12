@@ -71,8 +71,7 @@ namespace RE
 				return *this;
 			}
 
-			// FIXME: MemoryManager unimplemented
-			// SF_HEAP_REDEFINE_NEW();
+			SF_HEAP_REDEFINE_NEW();
 
 			// members
 			value_type           item;  // 00
@@ -208,8 +207,7 @@ namespace RE
 			return *this;
 		}
 
-		// FIXME: MemoryManager unimplemented
-		// SF_HEAP_REDEFINE_NEW();
+		SF_HEAP_REDEFINE_NEW();
 
 		[[nodiscard]] inline reference front()
 		{

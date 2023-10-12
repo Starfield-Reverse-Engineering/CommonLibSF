@@ -6,8 +6,7 @@ namespace RE
 	{
 	public:
 		SF_RTTI_VTABLE(Setting);
-		// FIXME: MemoryManager unimplemented
-		// SF_HEAP_REDEFINE_NEW(Setting);
+		SF_HEAP_REDEFINE_NEW(Setting);
 
 		enum class Type
 		{
