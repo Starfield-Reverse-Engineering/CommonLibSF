@@ -33,7 +33,7 @@ namespace RE
 		template <class T>
 		T GetSetting(const std::string_view a_name, T a_fallback, const bool a_default = false)
 		{
-			if (auto setting = GetSetting(a_name)) {
+			if (const auto setting = GetSetting(a_name)) {
 				return setting->GetValue(a_fallback, a_default);
 			}
 
@@ -43,7 +43,7 @@ namespace RE
 		template <class T>
 		bool SetSetting(const std::string_view a_name, T a_value)
 		{
-			if (auto setting = GetSetting(a_name)) {
+			if (const auto setting = GetSetting(a_name)) {
 				return setting->SetValue(a_value);
 			}
 
