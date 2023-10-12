@@ -261,7 +261,7 @@ namespace RE
 					SetFloat(a_value);
 				else if constexpr (std::is_convertible_v<T, std::string_view>)
 					SetString(a_value);
-					
+
 				return true;
 			}
 
