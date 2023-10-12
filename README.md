@@ -12,7 +12,7 @@
 
 - [CMake v3.26+](https://cmake.org/) or [XMake v2.8.2+](https://github.com/xmake-io/xmake/releases)
   - Add this to your PATH
-- [vcpkg](https://github.com/microsoft/vcpkg)
+- [vcpkg](https://github.com/microsoft/vcpkg) (CMake)
   - Add the environment variable `VCPKG_ROOT` with the value as the path to the folder containing vcpkg
 - [Visual Studio 2022](https://visualstudio.microsoft.com/) with "Desktop development with C++"
   - clang-cl toolset and build support if using `clang-cl` configuration
@@ -23,11 +23,11 @@
 ### Using the CommonLibSF plugin templates
 
 - [CLibSFPluginTemplate](https://github.com/Starfield-Reverse-Engineering/CLibSFPluginTemplate)
-  - Uses **CMake**. Consumes CommonLibSF as a [vcpkg port package](https://github.com/Starfield-Reverse-Engineering/Starfield-RE-vcpkg) or git submodule.
+  - Uses **CMake**. Consumes CommonLibSF as a [vcpkg port package](https://github.com/Starfield-Reverse-Engineering/Starfield-RE-vcpkg) or a git submodule.
 - [SF_PluginTemplate](https://github.com/gottyduke/SF_PluginTemplate)
-  - Uses **CMake**. Consumes CommonLibSF as a git submodule or local fork.
+  - Uses **CMake**. Consumes CommonLibSF as a git submodule or a local fork.
 - [commonlibsf-template-xmake](https://github.com/Starfield-Reverse-Engineering/commonlibsf-template-xmake)
-  - Uses **XMake**. Consumes CommonLibSF as an [xrepo package](https://github.com/Starfield-Reverse-Engineering/commonlibsf-xrepo).
+  - Uses **XMake**. Consumes CommonLibSF as an [xrepo package](https://github.com/Starfield-Reverse-Engineering/commonlibsf-xrepo), git submodule, or a local fork.
 
 ### Please see the [Using CommonLibSF wiki page](https://github.com/Starfield-Reverse-Engineering/CommonLibSF/wiki/Using-CommonLibSF) for more information about using CommonLibSF.
 
