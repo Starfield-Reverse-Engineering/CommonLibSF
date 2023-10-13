@@ -8,12 +8,12 @@ namespace RE
 	{
 	public:
 		SF_RTTI(BSIntrusiveRefCounted);
-		
+
 		template <class>
 		friend struct BSTSmartPointerIntrusiveRefCount;
 
 		constexpr BSIntrusiveRefCounted() noexcept {}
-		
+
 		std::uint32_t IncRef() const
 		{
 			stl::atomic_ref myRefCount{ _refCount };
