@@ -306,6 +306,20 @@ namespace RE::Scaleform::GFx
 				return func(this, a_data, a_value, a_name, a_depth);
 			}
 
+			bool GotoAndPlayL(void* a_data, const char* a_frame, bool a_stop)
+			{
+				using func_t = decltype(&ObjectInterface::GotoAndPlayL);
+				REL::Relocation<func_t> func{ REL::ID(57329) };
+				return func(this, a_data, a_frame, a_stop);
+			}
+
+			bool GotoAndPlay(void* a_data, std::uint32_t a_frame, bool a_stop)
+			{
+				using func_t = decltype(&ObjectInterface::GotoAndPlay);
+				REL::Relocation<func_t> func{ REL::ID(57330) };
+				return func(this, a_data, a_frame, a_stop);
+			}
+
 			// members
 			MovieImpl* movieRoot;  // 08
 		};
@@ -562,6 +576,7 @@ namespace RE::Scaleform::GFx
 
 		bool GetMember(stl::zstring a_name, Value* a_value) const
 		{
+			assert(IsObject());
 			return _objectInterface->GetMember(_value.data, a_name.data(), a_value, IsDisplayObject());
 		}
 
@@ -588,13 +603,39 @@ namespace RE::Scaleform::GFx
 			return _objectInterface->GetText(_value.data, a_value, true);
 		}
 
+		bool GotoAndPlay(stl::zstring a_frame)
+		{
+			assert(IsDisplayObject());
+			return _objectInterface->GotoAndPlayL(_value.data, a_frame.data(), false);
+		}
+
+		bool GotoAndPlay(std::uint32_t a_frame)
+		{
+			assert(IsDisplayObject());
+			return _objectInterface->GotoAndPlay(_value.data, a_frame, false);
+		}
+
+		bool GotoAndStop(stl::zstring a_frame)
+		{
+			assert(IsDisplayObject());
+			return _objectInterface->GotoAndPlayL(_value.data, a_frame.data(), true);
+		}
+
+		bool GotoAndStop(std::uint32_t a_frame)
+		{
+			assert(IsDisplayObject());
+			return _objectInterface->GotoAndPlay(_value.data, a_frame, true);
+		}
+
 		[[nodiscard]] bool HasMember(stl::zstring a_name) const
 		{
+			assert(IsObject());
 			return _objectInterface->HasMember(_value.data, a_name.data(), IsDisplayObject());
 		}
 
 		bool Invoke(const char* a_name, Value* a_result, const Value* a_args, std::size_t a_numArgs)
 		{
+			assert(IsObject());
 			return _objectInterface->Invoke(_value.data, a_result, a_name, a_args, a_numArgs, IsDisplayObject());
 		}
 
@@ -605,56 +646,67 @@ namespace RE::Scaleform::GFx
 
 		bool PopBack(Value* a_value = nullptr)
 		{
+			assert(IsArray());
 			return _objectInterface->PopBack(_value.data, a_value);
 		}
 
 		bool PushBack(const Value& a_value)
 		{
+			assert(IsArray());
 			return _objectInterface->PushBack(_value.data, a_value);
 		}
 
 		bool RemoveElements(std::uint32_t a_index, std::int32_t a_count = -1)
 		{
+			assert(IsArray());
 			return _objectInterface->RemoveElements(_value.data, a_index, a_count);
 		}
 
 		bool RemoveElement(std::uint32_t a_index)
 		{
+			assert(IsArray());
 			return RemoveElements(a_index, 1);
 		}
 
 		bool SetArraySize(std::uint32_t a_size)
 		{
+			assert(IsArray());
 			return _objectInterface->SetArraySize(_value.data, a_size);
 		}
 
 		bool SetMember(stl::zstring a_name, const Value& a_value)
 		{
+			assert(IsObject());
 			return _objectInterface->SetMember(_value.data, a_name.data(), a_value, IsDisplayObject());
 		}
 
 		bool SetText(stl::zstring a_text)
 		{
+			assert(IsDisplayObject());
 			return _objectInterface->SetText(_value.data, a_text.data(), false);
 		}
 
 		bool SetTextHTML(stl::zstring a_text)
 		{
+			assert(IsDisplayObject());
 			return _objectInterface->SetText(_value.data, a_text.data(), true);
 		}
 
 		void VisitElements(ArrayVisitor* a_visitor, std::uint32_t a_index, std::int32_t a_count = -1)
 		{
+			assert(IsArray());
 			_objectInterface->VisitElements(_value.data, a_visitor, a_index, a_count);
 		}
 
 		void VisitElements(ArrayVisitor* a_visitor)
 		{
+			assert(IsArray());
 			VisitElements(a_visitor, 0);
 		}
 
 		void VisitMembers(ObjectVisitor* a_visitor)
 		{
+			assert(IsObject());
 			_objectInterface->VisitMembers(_value.data, a_visitor, IsDisplayObject());
 		}
 
