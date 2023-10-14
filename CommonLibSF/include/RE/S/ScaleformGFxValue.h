@@ -740,4 +740,5 @@ namespace RE::Scaleform::GFx
 		ValueUnion                                _value{};                        // 20
 		std::size_t                               _dataAux{};                      // 28
 	};
+	static_assert(sizeof(Value) == 0x30);
 }

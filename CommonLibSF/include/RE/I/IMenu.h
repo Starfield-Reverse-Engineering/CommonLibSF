@@ -1,5 +1,6 @@
 #pragma once
 
+#include "RE/B/BSFixedString.h"
 #include "RE/B/BSInputEventUser.h"
 #include "RE/B/BSTEvent.h"
 #include "RE/S/SWFToCodeFunctionHandler.h"
