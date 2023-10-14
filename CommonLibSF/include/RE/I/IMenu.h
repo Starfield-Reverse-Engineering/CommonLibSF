@@ -46,9 +46,7 @@ namespace RE
 		virtual void        Unk_19(void);                                       // 19
 		virtual void        Unk_1A(void);                                       // 1A
 
-		std::int64_t                          unk058;    // 058
-		std::int64_t                          unk060;    // 060
-		Scaleform::GFx::Value                 menuObj;   // 080
+		Scaleform::GFx::Value                 menuObj;   // 058
 		Scaleform::Ptr<Scaleform::GFx::Movie> uiMovie;   // 088
 		std::uint64_t                         unk090;    // 090
 		std::uint64_t                         unk098;    // 098

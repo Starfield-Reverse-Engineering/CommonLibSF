@@ -681,9 +681,11 @@ namespace RE::Scaleform::GFx
 		}
 
 		// members
-		ObjectInterface*                          _objectInterface{};              // 00
-		stl::enumeration<ValueType, std::int32_t> _type{ ValueType::kUndefined };  // 08
-		ValueUnion                                _value{};                        // 10
-		std::size_t                               _dataAux{};                      // 18
+		void*                                     _unk00{};                        // 00
+		void*                                     _unk08{};                        // 08
+		ObjectInterface*                          _objectInterface{};              // 10
+		stl::enumeration<ValueType, std::int32_t> _type{ ValueType::kUndefined };  // 18
+		ValueUnion                                _value{};                        // 20
+		std::size_t                               _dataAux{};                      // 28
 	};
 }
