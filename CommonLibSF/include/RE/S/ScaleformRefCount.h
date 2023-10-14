@@ -41,7 +41,7 @@ namespace RE::Scaleform
 	};
 	static_assert(sizeof(RefCountImpl) == 0x10);
 
-	template <class Base>
+	template <class Base, std::int32_t>
 	class RefCountBaseStatImpl :
 		public Base  // 00
 	{
@@ -51,9 +51,9 @@ namespace RE::Scaleform
 		virtual ~RefCountBaseStatImpl() = default;  // 00
 	};
 
-	template <class T>
+	template <class T, std::int32_t STAT>
 	class RefCountBase :
-		public RefCountBaseStatImpl<RefCountImpl>  // 00
+		public RefCountBaseStatImpl<RefCountImpl, STAT>  // 00
 	{
 	public:
 		RefCountBase() = default;

@@ -8,8 +8,8 @@ namespace RE::Scaleform::GFx
 	class ASMovieRootBase;
 
 	class Movie :
-		public RefCountBase<Movie>,  // 00
-		public StateBag              // 10
+		public RefCountBase<Movie, 327>,  // 00
+		public StateBag                   // 10
 	{
 	public:
 		SF_RTTI_VTABLE(Scaleform__GFx__Movie);
