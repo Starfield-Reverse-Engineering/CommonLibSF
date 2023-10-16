@@ -11,7 +11,7 @@ namespace RE
 			REL::Relocation<func_t> func{ REL::ID(107177) };
 			return func();
 		}
-		
+
 		// members
 		std::uint32_t formID;  // 0
 		bool          loaded;  // 4
