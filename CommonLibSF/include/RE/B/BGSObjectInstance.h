@@ -6,7 +6,7 @@ namespace RE
 {
 	class TBO_InstanceData;
 	class TESForm;
-	
+
 	class BGSObjectInstance
 	{
 	public:
@@ -16,8 +16,8 @@ namespace RE
 		}
 
 		// members
-		TESForm*                          object{};             // 00
-		BSTSmartPointer<TBO_InstanceData> instanceData{};       // 08
+		TESForm*                          object{};        // 00
+		BSTSmartPointer<TBO_InstanceData> instanceData{};  // 08
 
 	private:
 		BGSObjectInstance* ctor(TESForm* a_object, TBO_InstanceData* a_instanceData)

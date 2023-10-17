@@ -4,6 +4,7 @@
 
 #include "RE/A/AIProcess.h"
 #include "RE/A/Actor.h"
+#include "RE/A/ActorEquipManager.h"
 #include "RE/A/ActorPackage.h"
 #include "RE/A/ActorState.h"
 #include "RE/A/ActorValueInfo.h"
@@ -18,6 +19,7 @@
 #include "RE/B/BGSDestructibleObjectForm.h"
 #include "RE/B/BGSEditorID.h"
 #include "RE/B/BGSEntryPoint.h"
+#include "RE/B/BGSEquipSlot.h"
 #include "RE/B/BGSForcedLocRefType.h"
 #include "RE/B/BGSInventoryList.h"
 #include "RE/B/BGSKeyword.h"
@@ -29,6 +31,7 @@
 #include "RE/B/BGSLocationRefType.h"
 #include "RE/B/BGSMod.h"
 #include "RE/B/BGSNativeTerminalForm.h"
+#include "RE/B/BGSObjectInstance.h"
 #include "RE/B/BGSObjectPlacementDefaults.h"
 #include "RE/B/BGSOverridePackCollection.h"
 #include "RE/B/BGSPerk.h"
