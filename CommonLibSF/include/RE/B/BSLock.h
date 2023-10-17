@@ -76,6 +76,7 @@ namespace RE
 		static void lock(Mutex& a_mutex) { a_mutex.lock(); }
 		static void unlock(Mutex& a_mutex) { a_mutex.unlock(); }
 	};
+	static_assert(std::is_empty_v<BSAutoLockDefaultPolicy<BSSpinLock>>);
 
 	template <class Mutex>
 	struct BSAutoLockReadLockPolicy
@@ -84,8 +85,7 @@ namespace RE
 		static void lock(Mutex& a_mutex) { a_mutex.lock_read(); }
 		static void unlock(Mutex& a_mutex) { a_mutex.unlock_read(); }
 	};
-
-	extern template struct BSAutoLockReadLockPolicy<BSReadWriteLock>;
+	static_assert(std::is_empty_v<BSAutoLockReadLockPolicy<BSReadWriteLock>>);
 
 	template <class Mutex>
 	struct BSAutoLockWriteLockPolicy
@@ -94,8 +94,7 @@ namespace RE
 		static void lock(Mutex& a_mutex) { a_mutex.lock_write(); }
 		static void unlock(Mutex& a_mutex) { a_mutex.unlock_write(); }
 	};
-
-	extern template struct BSAutoLockWriteLockPolicy<BSReadWriteLock>;
+	static_assert(std::is_empty_v<BSAutoLockWriteLockPolicy<BSReadWriteLock>>);
 
 	template <class Mutex, template <class> class Policy = BSAutoLockDefaultPolicy>
 	class BSAutoLock
@@ -129,6 +128,7 @@ namespace RE
 		// members
 		mutex_type* _lock{ nullptr };  // 00
 	};
+	static_assert(sizeof(BSAutoLock<BSSpinLock>) == 0x8);
 
 	template <class Mutex>
 	BSAutoLock(Mutex&) -> BSAutoLock<Mutex>;
@@ -136,9 +136,9 @@ namespace RE
 	template <class Mutex>
 	BSAutoLock(Mutex*) -> BSAutoLock<Mutex>;
 
-	extern template class BSAutoLock<BSReadWriteLock, BSAutoLockReadLockPolicy>;
-	extern template class BSAutoLock<BSReadWriteLock, BSAutoLockWriteLockPolicy>;
-
 	using BSAutoReadLock = BSAutoLock<BSReadWriteLock, BSAutoLockReadLockPolicy>;
+	static_assert(sizeof(BSAutoReadLock) == 0x8);
+
 	using BSAutoWriteLock = BSAutoLock<BSReadWriteLock, BSAutoLockWriteLockPolicy>;
+	static_assert(sizeof(BSAutoWriteLock) == 0x8);
 }
