@@ -40,6 +40,35 @@ namespace RE
 	};
 	static_assert(sizeof(BSReadWriteLock) == 0x8);
 
+	class BSSpinLock
+	{
+	public:
+		void lock()
+		{
+			using func_t = decltype(&BSSpinLock::lock);
+			REL::Relocation<func_t> func{ REL::ID(178543) };
+			return func(this);
+		}
+
+		[[nodiscard]] bool try_lock()
+		{
+			using func_t = decltype(&BSSpinLock::try_lock);
+			REL::Relocation<func_t> func{ REL::ID(178545) };
+			return func(this);
+		}
+
+		void unlock()
+		{
+			using func_t = decltype(&BSSpinLock::unlock);
+			REL::Relocation<func_t> func{ REL::ID(178544) };
+			return func(this);
+		}
+
+		std::uint32_t          _owningThread{ 0 };  // 0
+		volatile std::uint32_t _lock{ 0 };          // 4
+	};
+	static_assert(sizeof(BSSpinLock) == 0x8);
+
 	template <class Mutex>
 	struct BSAutoLockDefaultPolicy
 	{
