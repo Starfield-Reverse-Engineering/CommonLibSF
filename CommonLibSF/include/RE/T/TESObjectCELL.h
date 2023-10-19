@@ -3,6 +3,8 @@
 #include "RE/B/BSContainer.h"
 #include "RE/B/BSLock.h"
 #include "RE/B/BSTArray.h"
+#include "RE/B/BSTSmartPointer.h"
+#include "RE/E/ExtraDataList.h"
 #include "RE/N/NiPoint3.h"
 #include "RE/N/NiSmartPointer.h"
 #include "RE/T/TESFullName.h"
@@ -133,7 +135,7 @@ namespace RE
 		std::uint8_t                               unk4E;           // 04E
 		stl::enumeration<CELL_STATE, std::uint8_t> cellState;       // 04F
 		std::uint64_t                              unk50;           // 050
-		void*                                      extraDataList;   // 058 - smart ptr
+		BSTSmartPointer<ExtraDataList>             extraDataList;   // 058
 		CellData                                   cellData;        // 060
 		std::uint32_t                              unk068;          // 068
 		float                                      unk06C;          // 06C

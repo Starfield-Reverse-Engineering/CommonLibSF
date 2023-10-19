@@ -4,6 +4,8 @@
 #include "RE/B/BGSInventoryList.h"
 #include "RE/B/BSLock.h"
 #include "RE/B/BSTEvent.h"
+#include "RE/B/BSTSmartPointer.h"
+#include "RE/E/ExtraDataList.h"
 #include "RE/I/IAnimationGraphManagerHolder.h"
 #include "RE/I/IKeywordFormBase.h"
 #include "RE/I/IMovementInterface.h"
@@ -318,17 +320,17 @@ namespace RE
 		[[nodiscard]] bool                  IsSpaceshipLanded();
 
 		// members
-		OBJ_REFR                data;               // 0A0
-		BGSInventoryList*       inventoryList;      // 0D0 - this + lock is one struct?
-		mutable BSReadWriteLock inventoryListLock;  // 0D8
-		TESObjectCELL*          parentCell;         // 0E0
-		LOADED_REF_DATA*        loadedData;         // 0E8 - same as above
-		mutable BSReadWriteLock loadedDataLock;     // 0F0
-		std::uint64_t           extraDataList;      // 0F8
-		BGSLocalizedString      unk100;             // 100 - empty?
-		std::uint16_t           scale;              // 108
-		bool                    unk10A;             // 10A
-		std::uint8_t            flags;              // 10B
+		OBJ_REFR                       data;               // 0A0
+		BGSInventoryList*              inventoryList;      // 0D0 - this + lock is one struct?
+		mutable BSReadWriteLock        inventoryListLock;  // 0D8
+		TESObjectCELL*                 parentCell;         // 0E0
+		LOADED_REF_DATA*               loadedData;         // 0E8 - same as above
+		mutable BSReadWriteLock        loadedDataLock;     // 0F0
+		BSTSmartPointer<ExtraDataList> extraDataList;      // 0F8
+		BGSLocalizedString             unk100;             // 100 - empty?
+		std::uint16_t                  scale;              // 108
+		bool                           unk10A;             // 10A
+		std::uint8_t                   flags;              // 10B
 	};
 	static_assert(sizeof(TESObjectREFR) == 0x110);
 }
