@@ -13,14 +13,14 @@ namespace RE
 		void AddExtra(BSExtraData* a_extra)
 		{
 			using func_t = decltype(&BaseExtraList::AddExtra);
-			REL::Relocation<func_t> func{ Offset::BaseExtraList::AddExtra };
+			REL::Relocation<func_t> func{ ID::BaseExtraList::AddExtra };
 			return func(this, a_extra);
 		}
 
 		[[nodiscard]] BSExtraData* GetByType(ExtraDataType a_type) const noexcept
 		{
 			using func_t = decltype(&BaseExtraList::GetByType);
-			REL::Relocation<func_t> func{ Offset::BaseExtraList::GetByType };
+			REL::Relocation<func_t> func{ ID::BaseExtraList::GetByType };
 			return func(this, a_type);
 		}
 
@@ -66,7 +66,7 @@ namespace RE
 		[[nodiscard]] bool HasType(ExtraDataType a_type) const noexcept
 		{
 			using func_t = bool (*)(const ExtraDataList*, ExtraDataType);
-			REL::Relocation<func_t> func{ Offset::ExtraDataList::HasType };
+			REL::Relocation<func_t> func{ ID::ExtraDataList::HasType };
 			return func(this, a_type);
 		}
 

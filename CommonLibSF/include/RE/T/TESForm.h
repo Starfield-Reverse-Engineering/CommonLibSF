@@ -142,21 +142,21 @@ namespace RE
 		std::uint64_t DecRefCount() const
 		{
 			using func_t = decltype(&TESForm::DecRefCount);
-			REL::Relocation<func_t> func{ Offset::TESForm::DecRefCount };
+			REL::Relocation<func_t> func{ ID::TESForm::DecRefCount };
 			return func(this);
 		}
 
 		[[nodiscard]] static TESForm* LookupByID(std::uint32_t a_formID)
 		{
 			using func_t = decltype(&TESForm::LookupByID);
-			REL::Relocation<func_t> func{ Offset::TESForm::LookupByID };
+			REL::Relocation<func_t> func{ ID::TESForm::LookupByID };
 			return func(a_formID);
 		}
 
 		[[nodiscard]] static TESForm* LookupByEditorID(const char* a_editorID)
 		{
 			using func_t = decltype(&TESForm::LookupByEditorID);
-			REL::Relocation<func_t> func{ Offset::TESForm::LookupByEditorID };
+			REL::Relocation<func_t> func{ ID::TESForm::LookupByEditorID };
 			return func(a_editorID);
 		}
 

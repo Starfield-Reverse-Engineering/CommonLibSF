@@ -1,8 +1,6 @@
 #pragma once
 
-#include "REL/Relocation.h"
-
-namespace RE::Offset
+namespace RE::ID
 {
 	namespace Actor
 	{

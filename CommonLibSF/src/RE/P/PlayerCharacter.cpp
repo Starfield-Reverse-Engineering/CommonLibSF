@@ -4,7 +4,7 @@ namespace RE
 {
 	PlayerCharacter* PlayerCharacter::GetSingleton()
 	{
-		static REL::Relocation<PlayerCharacter**> singleton{ Offset::PlayerCharacter::singleton };
+		static REL::Relocation<PlayerCharacter**> singleton{ ID::PlayerCharacter::singleton };
 		return *singleton;
 	}
 
