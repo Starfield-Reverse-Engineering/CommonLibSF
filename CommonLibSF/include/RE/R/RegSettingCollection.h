@@ -1,5 +1,6 @@
 #pragma once
 
+#include "RE/Offsets.h"
 #include "RE/S/Setting.h"
 #include "RE/S/SettingCollectionList.h"
 
@@ -15,7 +16,7 @@ namespace RE
 
 		[[nodiscard]] static RegSettingCollection* GetSingleton()
 		{
-			REL::Relocation<RegSettingCollection**> singleton{ REL::ID(885510) };
+			REL::Relocation<RegSettingCollection**> singleton{ Offset::RegSettingCollection::singleton };
 			return *singleton;
 		}
 

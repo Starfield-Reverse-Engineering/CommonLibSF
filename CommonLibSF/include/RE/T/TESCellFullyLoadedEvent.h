@@ -1,6 +1,7 @@
 #pragma once
 
 #include "RE/B/BSTEvent.h"
+#include "RE/Offsets.h"
 
 namespace RE
 {
@@ -12,7 +13,7 @@ namespace RE
 		[[nodiscard]] static BSTEventSource<TESCellFullyLoadedEvent>* GetEventSource()
 		{
 			using func_t = decltype(&TESCellFullyLoadedEvent::GetEventSource);
-			REL::Relocation<func_t> func{ REL::ID(107143) };
+			REL::Relocation<func_t> func{ Offset::TESCellFullyLoadedEvent::GetEventSource };
 			return func();
 		}
 

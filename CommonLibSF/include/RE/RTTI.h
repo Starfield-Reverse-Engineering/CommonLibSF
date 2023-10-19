@@ -1,5 +1,6 @@
 #pragma once
 
+#include "RE/Offsets.h"
 // NOTE: this has not been updated
 
 struct __type_info_node;
@@ -138,7 +139,7 @@ namespace RE
 	inline void* RTDynamicCast(void* a_inptr, std::int32_t a_vfDelta, void* a_srcType, void* a_targetType, std::int32_t a_isReference)
 	{
 		using func_t = decltype(&RTDynamicCast);
-		REL::Relocation<func_t> func{ REL::ID(211916) };
+		REL::Relocation<func_t> func{ Offset::RTDynamicCast };
 		return func(a_inptr, a_vfDelta, a_srcType, a_targetType, a_isReference);
 	}
 

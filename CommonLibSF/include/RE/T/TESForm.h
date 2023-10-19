@@ -1,6 +1,7 @@
 #pragma once
 
 #include "RE/B/BSReflection.h"
+#include "RE/Offsets.h"
 #include "RE/T/TESFile.h"
 #include "RE/T/TESFormRefCount.h"
 
@@ -142,21 +143,21 @@ namespace RE
 		std::uint64_t DecRefCount() const
 		{
 			using func_t = decltype(&TESForm::DecRefCount);
-			REL::Relocation<func_t> func{ REL::ID(35164) };
+			REL::Relocation<func_t> func{ Offset::TESForm::DecRefCount };
 			return func(this);
 		}
 
 		[[nodiscard]] static TESForm* LookupByID(std::uint32_t a_formID)
 		{
 			using func_t = decltype(&TESForm::LookupByID);
-			REL::Relocation<func_t> func{ REL::ID(86125) };
+			REL::Relocation<func_t> func{ Offset::TESForm::LookupByID };
 			return func(a_formID);
 		}
 
 		[[nodiscard]] static TESForm* LookupByEditorID(const char* a_editorID)
 		{
 			using func_t = decltype(&TESForm::LookupByEditorID);
-			REL::Relocation<func_t> func{ REL::ID(86127) };
+			REL::Relocation<func_t> func{ Offset::TESForm::LookupByEditorID };
 			return func(a_editorID);
 		}
 

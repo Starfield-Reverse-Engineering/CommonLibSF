@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/Offsets.h"
+
 namespace RE
 {
 	class IMenu;
@@ -42,14 +44,14 @@ namespace RE
 
 		inline static UI* GetSingleton()
 		{
-			static REL::Relocation<UI**> singleton{ REL::ID(878339) };
+			static REL::Relocation<UI**> singleton{ Offset::UI::singleton };
 			return *singleton;
 		}
 
 		bool IsMenuOpen(const BSFixedString& a_name)
 		{
 			using func_t = decltype(&UI::IsMenuOpen);
-			REL::Relocation<func_t> func{ REL::ID(187049) };
+			REL::Relocation<func_t> func{ Offset::UI::IsMenuOpen };
 			return func(this, a_name);
 		}
 

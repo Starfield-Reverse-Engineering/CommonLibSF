@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/Offsets.h"
+
 namespace RE
 {
 	class MemoryManager
@@ -8,21 +10,21 @@ namespace RE
 		[[nodiscard]] static MemoryManager* GetSingleton()
 		{
 			using func_t = decltype(&MemoryManager::GetSingleton);
-			const REL::Relocation<func_t> func{ REL::ID(33961) };
+			const REL::Relocation<func_t> func{ Offset::MemoryManager::GetSingleton };
 			return func();
 		}
 
 		[[nodiscard]] void* Allocate(std::size_t a_size, std::uint32_t a_alignment, bool a_alignmentRequired)
 		{
 			using func_t = decltype(&MemoryManager::Allocate);
-			const REL::Relocation<func_t> func{ REL::ID(33962) };
+			const REL::Relocation<func_t> func{ Offset::MemoryManager::Allocate };
 			return func(this, a_size, a_alignment, a_alignmentRequired);
 		}
 
 		void Free(void* a_ptr, bool a_alignmentRequired)
 		{
 			using func_t = decltype(&MemoryManager::Free);
-			const REL::Relocation<func_t> func{ REL::ID(34032) };
+			const REL::Relocation<func_t> func{ Offset::MemoryManager::Free };
 			return func(this, a_ptr, a_alignmentRequired);
 		}
 	};

@@ -1,10 +1,11 @@
 #include "RE/P/PlayerCharacter.h"
+#include "RE/Offsets.h"
 
 namespace RE
 {
 	PlayerCharacter* PlayerCharacter::GetSingleton()
 	{
-		static REL::Relocation<PlayerCharacter**> singleton{ REL::ID(865059) };
+		static REL::Relocation<PlayerCharacter**> singleton{ Offset::PlayerCharacter::singleton };
 		return *singleton;
 	}
 

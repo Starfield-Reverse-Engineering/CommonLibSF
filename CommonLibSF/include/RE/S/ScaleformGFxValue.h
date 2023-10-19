@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/Offsets.h"
+
 namespace RE::Scaleform::GFx
 {
 	class MovieImpl;
@@ -168,155 +170,155 @@ namespace RE::Scaleform::GFx
 
 			void ObjectAddRef(Value* a_val, void* a_obj)
 			{
-				using func_t = decltype(&ObjectInterface::ObjectRelease);
-				REL::Relocation<func_t> func{ REL::ID(57288) };
+				using func_t = decltype(&ObjectInterface::ObjectAddRef);
+				REL::Relocation<func_t> func{ Offset::Scaleform::ObjectInterface::ObjectAddRef };
 				return func(this, a_val, a_obj);
 			}
 
 			void ObjectRelease(Value* a_val, void* a_obj)
 			{
 				using func_t = decltype(&ObjectInterface::ObjectRelease);
-				REL::Relocation<func_t> func{ REL::ID(57289) };
+				REL::Relocation<func_t> func{ Offset::Scaleform::ObjectInterface::ObjectRelease };
 				return func(this, a_val, a_obj);
 			}
 
 			bool HasMember(void* a_data, const char* a_name, bool a_isdobj) const
 			{
 				using func_t = decltype(&ObjectInterface::HasMember);
-				REL::Relocation<func_t> func{ REL::ID(57290) };
+				REL::Relocation<func_t> func{ Offset::Scaleform::ObjectInterface::HasMember };
 				return func(this, a_data, a_name, a_isdobj);
 			}
 
 			bool GetMember(void* a_data, const char* a_name, Value* a_val, bool a_isdobj) const
 			{
 				using func_t = decltype(&ObjectInterface::GetMember);
-				REL::Relocation<func_t> func{ REL::ID(57291) };
+				REL::Relocation<func_t> func{ Offset::Scaleform::ObjectInterface::GetMember };
 				return func(this, a_data, a_name, a_val, a_isdobj);
 			}
 
 			bool SetMember(void* a_data, const char* a_name, const Value& a_value, bool a_isdobj)
 			{
 				using func_t = decltype(&ObjectInterface::SetMember);
-				REL::Relocation<func_t> func{ REL::ID(57292) };
+				REL::Relocation<func_t> func{ Offset::Scaleform::ObjectInterface::SetMember };
 				return func(this, a_data, a_name, a_value, a_isdobj);
 			}
 
 			bool Invoke(void* a_data, Value* a_result, const char* a_name, const Value* a_args, std::size_t a_numArgs, bool a_isdobj)
 			{
 				using func_t = decltype(&ObjectInterface::Invoke);
-				REL::Relocation<func_t> func{ REL::ID(57293) };
+				REL::Relocation<func_t> func{ Offset::Scaleform::ObjectInterface::Invoke };
 				return func(this, a_data, a_result, a_name, a_args, a_numArgs, a_isdobj);
 			}
 
 			void VisitMembers(void* a_data, ObjVisitor* a_visitor, bool a_isdobj)
 			{
 				using func_t = decltype(&ObjectInterface::VisitMembers);
-				REL::Relocation<func_t> func{ REL::ID(57296) };
+				REL::Relocation<func_t> func{ Offset::Scaleform::ObjectInterface::VisitMembers };
 				return func(this, a_data, a_visitor, a_isdobj);
 			}
 
 			std::uint32_t GetArraySize(void* a_data)
 			{
 				using func_t = decltype(&ObjectInterface::GetArraySize);
-				REL::Relocation<func_t> func{ REL::ID(57297) };
+				REL::Relocation<func_t> func{ Offset::Scaleform::ObjectInterface::GetArraySize };
 				return func(this, a_data);
 			}
 
 			bool SetArraySize(void* a_data, std::uint32_t a_size)
 			{
 				using func_t = decltype(&ObjectInterface::SetArraySize);
-				REL::Relocation<func_t> func{ REL::ID(57298) };
+				REL::Relocation<func_t> func{ Offset::Scaleform::ObjectInterface::SetArraySize };
 				return func(this, a_data, a_size);
 			}
 
 			bool GetElement(void* a_data, std::uint32_t a_index, Value* a_value)
 			{
 				using func_t = decltype(&ObjectInterface::GetElement);
-				REL::Relocation<func_t> func{ REL::ID(57299) };
+				REL::Relocation<func_t> func{ Offset::Scaleform::ObjectInterface::GetElement };
 				return func(this, a_data, a_index, a_value);
 			}
 
 			bool SetElement(void* a_data, std::uint32_t a_index, const Value& a_value)
 			{
 				using func_t = decltype(&ObjectInterface::SetElement);
-				REL::Relocation<func_t> func{ REL::ID(57300) };
+				REL::Relocation<func_t> func{ Offset::Scaleform::ObjectInterface::SetElement };
 				return func(this, a_data, a_index, a_value);
 			}
 
 			void VisitElements(void* a_data, ArrVisitor* a_visitor, std::uint32_t a_index, std::int32_t a_count)
 			{
 				using func_t = decltype(&ObjectInterface::VisitElements);
-				REL::Relocation<func_t> func{ REL::ID(57301) };
+				REL::Relocation<func_t> func{ Offset::Scaleform::ObjectInterface::VisitElements };
 				return func(this, a_data, a_visitor, a_index, a_count);
 			}
 
 			bool PushBack(void* a_data, const Value& a_value)
 			{
 				using func_t = decltype(&ObjectInterface::PushBack);
-				REL::Relocation<func_t> func{ REL::ID(57303) };
+				REL::Relocation<func_t> func{ Offset::Scaleform::ObjectInterface::PushBack };
 				return func(this, a_data, a_value);
 			}
 
 			bool PopBack(void* a_data, Value* a_value)
 			{
 				using func_t = decltype(&ObjectInterface::PopBack);
-				REL::Relocation<func_t> func{ REL::ID(57304) };
+				REL::Relocation<func_t> func{ Offset::Scaleform::ObjectInterface::PopBack };
 				return func(this, a_data, a_value);
 			}
 
 			bool RemoveElements(void* a_data, std::uint32_t a_index, std::int32_t a_count)
 			{
 				using func_t = decltype(&ObjectInterface::RemoveElements);
-				REL::Relocation<func_t> func{ REL::ID(57305) };
+				REL::Relocation<func_t> func{ Offset::Scaleform::ObjectInterface::RemoveElements };
 				return func(this, a_data, a_index, a_count);
 			}
 
 			bool GetParent(void* a_data, Value* a_value)
 			{
 				using func_t = decltype(&ObjectInterface::GetParent);
-				REL::Relocation<func_t> func{ REL::ID(57314) };
+				REL::Relocation<func_t> func{ Offset::Scaleform::ObjectInterface::GetParent };
 				return func(this, a_data, a_value);
 			}
 
 			bool GetText(void* a_data, Value* a_value, bool a_html)
 			{
 				using func_t = decltype(&ObjectInterface::GetText);
-				REL::Relocation<func_t> func{ REL::ID(57324) };
+				REL::Relocation<func_t> func{ Offset::Scaleform::ObjectInterface::GetText };
 				return func(this, a_data, a_value, a_html);
 			}
 
 			bool SetText(void* a_data, const char* a_text, bool a_html)
 			{
 				using func_t = decltype(&ObjectInterface::SetText);
-				REL::Relocation<func_t> func{ REL::ID(57325) };
+				REL::Relocation<func_t> func{ Offset::Scaleform::ObjectInterface::SetText };
 				return func(this, a_data, a_text, a_html);
 			}
 
 			bool SetTextW(void* a_data, const wchar_t* a_text, bool a_html)
 			{
 				using func_t = decltype(&ObjectInterface::SetTextW);
-				REL::Relocation<func_t> func{ REL::ID(57326) };
+				REL::Relocation<func_t> func{ Offset::Scaleform::ObjectInterface::SetTextW };
 				return func(this, a_data, a_text, a_html);
 			}
 
 			bool CreateEmptyMovieClip(void* a_data, Value* a_value, const char* a_name, std::int32_t a_depth)
 			{
 				using func_t = decltype(&ObjectInterface::CreateEmptyMovieClip);
-				REL::Relocation<func_t> func{ REL::ID(57327) };
+				REL::Relocation<func_t> func{ Offset::Scaleform::ObjectInterface::CreateEmptyMovieClip };
 				return func(this, a_data, a_value, a_name, a_depth);
 			}
 
 			bool GotoAndPlayL(void* a_data, const char* a_frame, bool a_stop)
 			{
 				using func_t = decltype(&ObjectInterface::GotoAndPlayL);
-				REL::Relocation<func_t> func{ REL::ID(57329) };
+				REL::Relocation<func_t> func{ Offset::Scaleform::ObjectInterface::GotoAndPlayL };
 				return func(this, a_data, a_frame, a_stop);
 			}
 
 			bool GotoAndPlay(void* a_data, std::uint32_t a_frame, bool a_stop)
 			{
 				using func_t = decltype(&ObjectInterface::GotoAndPlay);
-				REL::Relocation<func_t> func{ REL::ID(57330) };
+				REL::Relocation<func_t> func{ Offset::Scaleform::ObjectInterface::GotoAndPlay };
 				return func(this, a_data, a_frame, a_stop);
 			}
 
