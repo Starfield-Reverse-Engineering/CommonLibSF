@@ -8,7 +8,7 @@ namespace RE
 		REL::Relocation<func_t> func{ REL::ID(138728) };
 		return func(a_notification, a_soundToPlay, a_cancelIfAlreadyQueued, a_arg4);
 	}
-	
+
 	void PlayMenuSound(const char* a_editorID, const char* a_arg3, float a_arg4)
 	{
 		std::uint32_t arg1 = 0;

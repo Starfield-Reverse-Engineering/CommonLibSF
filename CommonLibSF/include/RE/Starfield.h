@@ -88,6 +88,7 @@
 #include "RE/M/MagicTarget.h"
 #include "RE/M/MemoryManager.h"
 #include "RE/M/MenuOpenCloseEvent.h"
+#include "RE/M/Misc.h"
 #include "RE/N/NativeFunction.h"
 #include "RE/N/NativeFunctionBase.h"
 #include "RE/N/NiPoint3.h"
