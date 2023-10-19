@@ -30,7 +30,7 @@ namespace RE
 		return func(this);
 	}
 
-	BSReadWriteLock::lock_write()
+	void BSReadWriteLock::lock_write()
 	{
 		using func_t = decltype(&BSReadWriteLock::lock_write);
 		REL::Relocation<func_t> func{ REL::ID(34125) };
