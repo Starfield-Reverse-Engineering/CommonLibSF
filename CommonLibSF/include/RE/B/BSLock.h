@@ -2,36 +2,26 @@
 
 namespace RE
 {
+	class BSNonReentrantSpinLock
+	{
+	public:
+		void               lock();
+		[[nodiscard]] bool try_lock();
+		void               unlock();
+
+	private:
+		// members
+		volatile std::uint32_t _lock{ 0 };  // 0
+	};
+	static_assert(sizeof(BSNonReentrantSpinLock) == 0x4);
+
 	class BSReadWriteLock
 	{
 	public:
-		void lock_read()
-		{
-			using func_t = decltype(&BSReadWriteLock::lock_read);
-			REL::Relocation<func_t> func{ REL::ID(178605) };
-			return func(this);
-		}
-
-		void lock_write()
-		{
-			using func_t = decltype(&BSReadWriteLock::lock_write);
-			REL::Relocation<func_t> func{ REL::ID(34125) };
-			return func(this);
-		}
-
-		void unlock_read()
-		{
-			using func_t = decltype(&BSReadWriteLock::unlock_read);
-			REL::Relocation<func_t> func{ REL::ID(178609) };
-			return func(this);
-		}
-
-		void unlock_write()
-		{
-			using func_t = decltype(&BSReadWriteLock::unlock_write);
-			REL::Relocation<func_t> func{ REL::ID(34257) };
-			return func(this);
-		}
+		void lock_read();
+		void lock_write();
+		void unlock_read();
+		void unlock_write();
 
 	private:
 		// members
@@ -43,27 +33,12 @@ namespace RE
 	class BSSpinLock
 	{
 	public:
-		void lock()
-		{
-			using func_t = decltype(&BSSpinLock::lock);
-			REL::Relocation<func_t> func{ REL::ID(178543) };
-			return func(this);
-		}
+		void               lock();
+		[[nodiscard]] bool try_lock();
+		void               unlock();
 
-		[[nodiscard]] bool try_lock()
-		{
-			using func_t = decltype(&BSSpinLock::try_lock);
-			REL::Relocation<func_t> func{ REL::ID(178545) };
-			return func(this);
-		}
-
-		void unlock()
-		{
-			using func_t = decltype(&BSSpinLock::unlock);
-			REL::Relocation<func_t> func{ REL::ID(178544) };
-			return func(this);
-		}
-
+	private:
+		// members
 		std::uint32_t          _owningThread{ 0 };  // 0
 		volatile std::uint32_t _lock{ 0 };          // 4
 	};
@@ -128,7 +103,7 @@ namespace RE
 		// members
 		mutex_type* _lock{ nullptr };  // 00
 	};
-	static_assert(sizeof(BSAutoLock<BSSpinLock>) == 0x8);
+	static_assert(sizeof(BSAutoLock<void*>) == 0x8);
 
 	template <class Mutex>
 	BSAutoLock(Mutex&) -> BSAutoLock<Mutex>;
