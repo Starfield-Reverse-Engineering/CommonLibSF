@@ -2,6 +2,7 @@
 
 #include "RE/B/BSTEvent.h"
 #include "RE/N/NiSmartPointer.h"
+#include "RE/Offsets.h"
 
 namespace RE
 {
@@ -13,7 +14,7 @@ namespace RE
 		[[nodiscard]] static BSTEventSource<TESDeathEvent>* GetEventSource()
 		{
 			using func_t = decltype(&TESDeathEvent::GetEventSource);
-			REL::Relocation<func_t> func{ REL::ID(107156) };
+			REL::Relocation<func_t> func{ Offset::TESDeathEvent::GetEventSource };
 			return func();
 		}
 

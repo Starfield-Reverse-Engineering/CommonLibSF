@@ -2,6 +2,7 @@
 
 #include "RE/B/BSStringT.h"
 #include "RE/B/BSTList.h"
+#include "RE/Offsets.h"
 #include "RE/T/TESForm.h"
 #include "RE/T/TESQuest.h"
 
@@ -158,13 +159,13 @@ namespace RE
 
 		inline static const auto GetConsoleCommands()
 		{
-			static REL::Relocation<SCRIPT_FUNCTION(*)[kNumConsoleCommands]> chunk{ REL::ID(841465) };
+			static REL::Relocation<SCRIPT_FUNCTION(*)[kNumConsoleCommands]> chunk{ Offset::Script::GetConsoleCommands };
 			return std::span{ *chunk };
 		}
 
 		inline static const auto GetScriptCommands()
 		{
-			static REL::Relocation<SCRIPT_FUNCTION(*)[kNumScriptCommands]> chunk{ REL::ID(841467) };
+			static REL::Relocation<SCRIPT_FUNCTION(*)[kNumScriptCommands]> chunk{ Offset::Script::GetScriptCommands };
 			return std::span{ *chunk };
 		}
 

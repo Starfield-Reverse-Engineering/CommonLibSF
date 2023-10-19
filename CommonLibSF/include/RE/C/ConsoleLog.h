@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/Offsets.h"
+
 namespace RE
 {
 	class ConsoleLog
@@ -10,14 +12,14 @@ namespace RE
 		// BSTSDM
 		[[nodiscard]] static ConsoleLog* GetSingleton()
 		{
-			static REL::Relocation<ConsoleLog**> singleton{ REL::ID(879277) };
+			static REL::Relocation<ConsoleLog**> singleton{ Offset::ConsoleLog::singleton };
 			return *singleton;
 		}
 
 		void VPrint(const char* a_fmt, std::va_list a_args)
 		{
 			using func_t = decltype(&ConsoleLog::VPrint);
-			REL::Relocation<func_t> func{ REL::ID(166358) };
+			REL::Relocation<func_t> func{ Offset::ConsoleLog::VPrint };
 			func(this, a_fmt, a_args);
 		}
 

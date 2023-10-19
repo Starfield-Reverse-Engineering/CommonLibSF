@@ -1,6 +1,7 @@
 #pragma once
 
 #include "RE/B/BSTSmartPointer.h"
+#include "RE/Offsets.h"
 
 namespace RE
 {
@@ -23,7 +24,7 @@ namespace RE
 		BGSObjectInstance* ctor(TESForm* a_object, TBO_InstanceData* a_instanceData)
 		{
 			using func_t = decltype(&BGSObjectInstance::ctor);
-			REL::Relocation<func_t> func{ REL::ID(101725) };
+			REL::Relocation<func_t> func{ Offset::BGSObjectInstance::ctor };
 			return func(this, a_object, a_instanceData);
 		}
 	};

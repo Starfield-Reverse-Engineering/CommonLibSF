@@ -6,6 +6,7 @@
 #include "RE/B/BSTList.h"
 #include "RE/F/FormTypes.h"
 #include "RE/N/NiSmartPointer.h"
+#include "RE/Offsets.h"
 
 namespace RE
 {
@@ -40,7 +41,7 @@ namespace RE
 
 		[[nodiscard]] static TESDataHandler* GetSingleton()
 		{
-			REL::Relocation<TESDataHandler**> singleton{ REL::ID(825890) };
+			REL::Relocation<TESDataHandler**> singleton{ Offset::TESDataHandler::singleton };
 			return *singleton;
 		}
 
