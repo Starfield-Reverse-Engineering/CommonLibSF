@@ -47,7 +47,7 @@ namespace RE
 	public:
 		void AddExtra(BSExtraData* a_extra)
 		{
-		    const BSAutoWriteLock l{ _extraRWLock };
+			const BSAutoWriteLock l{ _extraRWLock };
 			_extraData.AddExtra(a_extra);
 		}
 
@@ -65,7 +65,7 @@ namespace RE
 
 		[[nodiscard]] bool HasType(ExtraDataType a_type) const noexcept
 		{
-			using func_t = bool(*)(const ExtraDataList*, ExtraDataType);
+			using func_t = bool (*)(const ExtraDataList*, ExtraDataType);
 			REL::Relocation<func_t> func{ REL::ID(83208) };
 			return func(this, a_type);
 		}
