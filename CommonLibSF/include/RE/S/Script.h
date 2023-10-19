@@ -2,7 +2,6 @@
 
 #include "RE/B/BSStringT.h"
 #include "RE/B/BSTList.h"
-#include "RE/Offsets.h"
 #include "RE/T/TESForm.h"
 #include "RE/T/TESQuest.h"
 

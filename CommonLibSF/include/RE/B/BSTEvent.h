@@ -2,7 +2,6 @@
 
 #include "RE/B/BSTArray.h"
 #include "RE/B/BSTSingleton.h"
-#include "RE/Offsets.h"
 
 namespace RE
 {

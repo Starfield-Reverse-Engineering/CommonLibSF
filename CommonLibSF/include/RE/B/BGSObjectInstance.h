@@ -1,7 +1,6 @@
 #pragma once
 
 #include "RE/B/BSTSmartPointer.h"
-#include "RE/Offsets.h"
 
 namespace RE
 {

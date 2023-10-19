@@ -1,7 +1,6 @@
 #pragma once
 
 #include "RE/I/IFunction.h"
-#include "RE/Offsets.h"
 
 namespace RE
 {

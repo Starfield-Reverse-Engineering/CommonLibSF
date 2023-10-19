@@ -6,7 +6,6 @@
 #include "RE/B/BSTList.h"
 #include "RE/F/FormTypes.h"
 #include "RE/N/NiSmartPointer.h"
-#include "RE/Offsets.h"
 
 namespace RE
 {

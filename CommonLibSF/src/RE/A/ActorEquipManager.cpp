@@ -1,5 +1,4 @@
 #include "RE/A/ActorEquipManager.h"
-#include "RE/Offsets.h"
 
 namespace RE
 {

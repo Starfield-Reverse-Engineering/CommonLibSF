@@ -1,5 +1,4 @@
 #include "RE/T/TESWorldSpace.h"
-#include "RE/Offsets.h"
 
 namespace RE
 {

@@ -1,5 +1,4 @@
 #include "RE/B/BSLock.h"
-#include "RE/Offsets.h"
 
 namespace RE
 {

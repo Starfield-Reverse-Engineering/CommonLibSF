@@ -1,5 +1,4 @@
 #include "RE/P/PlayerCharacter.h"
-#include "RE/Offsets.h"
 
 namespace RE
 {

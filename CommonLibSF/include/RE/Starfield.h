@@ -93,7 +93,6 @@
 #include "RE/N/NativeFunctionBase.h"
 #include "RE/N/NiPoint3.h"
 #include "RE/N/NiSmartPointer.h"
-#include "RE/Offsets.h"
 #include "RE/Offsets_NiRTTI.h"
 #include "RE/Offsets_RTTI.h"
 #include "RE/Offsets_VTABLE.h"

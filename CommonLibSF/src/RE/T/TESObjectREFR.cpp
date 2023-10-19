@@ -1,5 +1,4 @@
 #include "RE/T/TESObjectREFR.h"
-#include "RE/Offsets.h"
 
 namespace RE
 {

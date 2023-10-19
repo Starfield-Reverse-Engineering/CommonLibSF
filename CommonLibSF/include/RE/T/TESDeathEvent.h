@@ -2,7 +2,6 @@
 
 #include "RE/B/BSTEvent.h"
 #include "RE/N/NiSmartPointer.h"
-#include "RE/Offsets.h"
 
 namespace RE
 {

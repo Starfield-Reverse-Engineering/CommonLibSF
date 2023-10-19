@@ -4,7 +4,6 @@
 #include "RE/B/BSIntrusiveRefCounted.h"
 #include "RE/B/BSLock.h"
 #include "RE/E/ExtraDataTypes.h"
-#include "RE/Offsets.h"
 
 namespace RE
 {

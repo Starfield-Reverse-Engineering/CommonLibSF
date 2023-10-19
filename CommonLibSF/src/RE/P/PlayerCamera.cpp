@@ -1,5 +1,4 @@
 #include "RE/P/PlayerCamera.h"
-#include "RE/Offsets.h"
 
 namespace RE
 {
