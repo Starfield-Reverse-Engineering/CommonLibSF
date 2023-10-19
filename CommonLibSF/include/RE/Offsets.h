@@ -120,6 +120,12 @@ namespace RE::Offset
 		inline constexpr REL::ID Free{ 34032 };
 	}
 
+	namespace Misc
+	{
+		inline constexpr REL::ID DebugNotification{ 138728 };
+		inline constexpr REL::ID PlayMenuSound{ 167344 };
+	}
+
 	namespace PlayerCamera
 	{
 		inline constexpr REL::ID singleton{ 878523 };
