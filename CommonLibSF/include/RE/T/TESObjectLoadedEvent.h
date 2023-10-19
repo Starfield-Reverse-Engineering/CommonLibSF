@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/B/BSTEvent.h"
+
 namespace RE
 {
 	struct TESObjectLoadedEvent
