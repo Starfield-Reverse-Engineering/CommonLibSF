@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	enum class EXTRA_DATA_TYPE
+	enum class ExtraDataType
 	{
 		kNone,                                     // 0x00
 		kHavok,                                    // 0x01 - ExtraHavok
@@ -260,3 +260,6 @@ namespace RE
 		kPlacedPlanetContent,                      // 0xFD - ExtraPlacedPlanetContent
 	};
 }
+
+#define SF_EXTRADATATYPE(TYPE) \
+	inline static constexpr auto EXTRADATATYPE = RE::ExtraDataType::k##TYPE
