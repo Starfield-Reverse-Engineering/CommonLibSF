@@ -86,6 +86,7 @@
 #include "RE/I/IPostAnimationChannelUpdateFunctor.h"
 #include "RE/I/IStoreAnimationActions.h"
 #include "RE/IDs.h"
+#include "RE/I/IVMObjectBindInterface.h"
 #include "RE/M/MagicTarget.h"
 #include "RE/M/MemoryManager.h"
 #include "RE/M/MenuOpenCloseEvent.h"
