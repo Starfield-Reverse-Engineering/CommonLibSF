@@ -10,7 +10,7 @@
 
 ## Build Dependencies
 
-- [CMake v3.26+](https://cmake.org/) or [XMake v2.8.2+](https://github.com/xmake-io/xmake/releases)
+- [CMake v3.27+](https://cmake.org/) or [XMake v2.8.2+](https://github.com/xmake-io/xmake/releases)
   - Add this to your PATH
 - [vcpkg](https://github.com/microsoft/vcpkg) (CMake)
   - Add the environment variable `VCPKG_ROOT` with the value as the path to the folder containing vcpkg
