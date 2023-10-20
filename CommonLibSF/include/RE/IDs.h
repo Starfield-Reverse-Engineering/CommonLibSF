@@ -124,6 +124,11 @@ namespace RE::ID
 		inline constexpr REL::ID PlayMenuSound{ 167344 };
 	}
 
+	namespace ObjectBindPolicy
+	{
+		inline constexpr REL::ID BindObject{ 195981 };
+	}
+
 	namespace PlayerCamera
 	{
 		inline constexpr REL::ID singleton{ 878523 };
