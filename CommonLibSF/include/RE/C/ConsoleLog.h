@@ -10,14 +10,14 @@ namespace RE
 		// BSTSDM
 		[[nodiscard]] static ConsoleLog* GetSingleton()
 		{
-			static REL::Relocation<ConsoleLog**> singleton{ Offset::ConsoleLog::singleton };
+			static REL::Relocation<ConsoleLog**> singleton{ ID::ConsoleLog::singleton };
 			return *singleton;
 		}
 
 		void VPrint(const char* a_fmt, std::va_list a_args)
 		{
 			using func_t = decltype(&ConsoleLog::VPrint);
-			REL::Relocation<func_t> func{ Offset::ConsoleLog::VPrint };
+			REL::Relocation<func_t> func{ ID::ConsoleLog::VPrint };
 			func(this, a_fmt, a_args);
 		}
 

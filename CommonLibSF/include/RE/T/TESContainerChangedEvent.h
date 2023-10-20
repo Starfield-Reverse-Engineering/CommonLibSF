@@ -10,7 +10,7 @@ namespace RE
 		[[nodiscard]] static BSTEventSource<TESContainerChangedEvent>* GetEventSource()
 		{
 			using func_t = decltype(&TESContainerChangedEvent::GetEventSource);
-			REL::Relocation<func_t> func{ Offset::TESContainerChangedEvent::GetEventSource };
+			REL::Relocation<func_t> func{ ID::TESContainerChangedEvent::GetEventSource };
 			return func();
 		}
 

@@ -40,7 +40,7 @@ namespace RE
 
 		[[nodiscard]] static TESDataHandler* GetSingleton()
 		{
-			REL::Relocation<TESDataHandler**> singleton{ Offset::TESDataHandler::singleton };
+			REL::Relocation<TESDataHandler**> singleton{ ID::TESDataHandler::singleton };
 			return *singleton;
 		}
 

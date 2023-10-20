@@ -23,7 +23,7 @@ namespace RE
 		BGSObjectInstance* ctor(TESForm* a_object, TBO_InstanceData* a_instanceData)
 		{
 			using func_t = decltype(&BGSObjectInstance::ctor);
-			REL::Relocation<func_t> func{ Offset::BGSObjectInstance::ctor };
+			REL::Relocation<func_t> func{ ID::BGSObjectInstance::ctor };
 			return func(this, a_object, a_instanceData);
 		}
 	};
