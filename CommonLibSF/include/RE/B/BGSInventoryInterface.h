@@ -50,7 +50,7 @@ namespace RE
 
 		[[nodiscard]] static BGSInventoryInterface* GetSingleton()
 		{
-			REL::Relocation<BGSInventoryInterface**> singleton { ID::BGSInventoryInterface::singleton };
+			REL::Relocation<BGSInventoryInterface**> singleton{ ID::BGSInventoryInterface::singleton };
 			return *singleton;
 		}
 

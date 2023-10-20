@@ -21,6 +21,8 @@
 #include "RE/B/BGSEntryPoint.h"
 #include "RE/B/BGSEquipSlot.h"
 #include "RE/B/BGSForcedLocRefType.h"
+#include "RE/B/BGSInventoryInterface.h"
+#include "RE/B/BGSInventoryItem.h"
 #include "RE/B/BGSInventoryList.h"
 #include "RE/B/BGSKeyword.h"
 #include "RE/B/BGSKeywordForm.h"

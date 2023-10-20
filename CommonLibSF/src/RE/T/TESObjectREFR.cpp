@@ -92,7 +92,7 @@ namespace RE
 		return func(this, a_arg1);
 	}
 
-    bool TESObjectREFR::IsObjectEquipped(TESBoundObject* a_object)
+	bool TESObjectREFR::IsObjectEquipped(TESBoundObject* a_object)
 	{
 		using func_t = decltype(&TESObjectREFR::IsObjectEquipped);
 		REL::Relocation<func_t> func{ ID::TESObjectREFR::IsObjectEquipped };
