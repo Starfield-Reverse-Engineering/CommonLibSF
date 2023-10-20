@@ -73,6 +73,7 @@
 #include "RE/G/GameMenuBase.h"
 #include "RE/H/HandlePolicy.h"
 #include "RE/I/IAnimationGraphManagerHolder.h"
+#include "RE/I/IComplexType.h"
 #include "RE/I/IFunction.h"
 #include "RE/I/IKeywordFormBase.h"
 #include "RE/I/IMenu.h"
@@ -153,4 +154,5 @@
 #include "RE/T/TESTexture.h"
 #include "RE/T/TESTopicInfo.h"
 #include "RE/T/TESWorldSpace.h"
+#include "RE/T/TypeInfo.h"
 #include "RE/U/UI.h"
