@@ -42,14 +42,14 @@ namespace RE
 
 		inline static UI* GetSingleton()
 		{
-			static REL::Relocation<UI**> singleton{ Offset::UI::singleton };
+			static REL::Relocation<UI**> singleton{ ID::UI::singleton };
 			return *singleton;
 		}
 
 		bool IsMenuOpen(const BSFixedString& a_name)
 		{
 			using func_t = decltype(&UI::IsMenuOpen);
-			REL::Relocation<func_t> func{ Offset::UI::IsMenuOpen };
+			REL::Relocation<func_t> func{ ID::UI::IsMenuOpen };
 			return func(this, a_name);
 		}
 
