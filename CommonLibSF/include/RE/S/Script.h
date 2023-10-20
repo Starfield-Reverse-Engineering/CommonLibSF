@@ -158,13 +158,13 @@ namespace RE
 
 		inline static const auto GetConsoleCommands()
 		{
-			static REL::Relocation<SCRIPT_FUNCTION(*)[kNumConsoleCommands]> chunk{ Offset::Script::GetConsoleCommands };
+			static REL::Relocation<SCRIPT_FUNCTION(*)[kNumConsoleCommands]> chunk{ ID::Script::GetConsoleCommands };
 			return std::span{ *chunk };
 		}
 
 		inline static const auto GetScriptCommands()
 		{
-			static REL::Relocation<SCRIPT_FUNCTION(*)[kNumScriptCommands]> chunk{ Offset::Script::GetScriptCommands };
+			static REL::Relocation<SCRIPT_FUNCTION(*)[kNumScriptCommands]> chunk{ ID::Script::GetScriptCommands };
 			return std::span{ *chunk };
 		}
 

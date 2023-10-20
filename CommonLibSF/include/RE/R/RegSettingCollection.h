@@ -15,7 +15,7 @@ namespace RE
 
 		[[nodiscard]] static RegSettingCollection* GetSingleton()
 		{
-			REL::Relocation<RegSettingCollection**> singleton{ Offset::RegSettingCollection::singleton };
+			REL::Relocation<RegSettingCollection**> singleton{ ID::RegSettingCollection::singleton };
 			return *singleton;
 		}
 
