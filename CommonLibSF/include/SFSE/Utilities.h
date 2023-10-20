@@ -31,4 +31,12 @@ namespace SFSE::stl
 	{
 		write_vfunc<From>(To::VTABLE[a_vtableIdx]);
 	}
+
+	template <class T, std::size_t Size = 5>
+	constexpr void write_thunk_jump(const std::uintptr_t a_src) noexcept
+	{
+		SFSE::AllocTrampoline(14);
+		auto& trampoline = SFSE::GetTrampoline();
+		T::func = trampoline.write_branch<Size>(a_src, T::thunk);
+	}
 }
