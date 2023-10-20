@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 
 env:
-  VCPKG_COMMIT_ID: e44d60e6bf0964064bf69667cd9f3e91dc383c7c
+  VCPKG_COMMIT_ID: 830f86fb309ad7167468a433a890b7415fbb90a5
   GITHUB_WORKSPACE: ${{ github.workspace }}
 
 jobs:
