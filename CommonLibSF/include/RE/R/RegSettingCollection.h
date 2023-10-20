@@ -1,6 +1,5 @@
 #pragma once
 
-#include "RE/Offsets.h"
 #include "RE/S/Setting.h"
 #include "RE/S/SettingCollectionList.h"
 

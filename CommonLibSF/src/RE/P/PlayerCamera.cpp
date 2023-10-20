@@ -1,25 +1,24 @@
 #include "RE/P/PlayerCamera.h"
-#include "RE/Offsets.h"
 
 namespace RE
 {
 	PlayerCamera* PlayerCamera::GetSingleton()
 	{
-		REL::Relocation<PlayerCamera**> singleton{ Offset::PlayerCamera::singleton };
+		REL::Relocation<PlayerCamera**> singleton{ ID::PlayerCamera::singleton };
 		return *singleton;
 	}
 
 	void PlayerCamera::ForceFirstPerson()
 	{
 		using func_t = decltype(&PlayerCamera::ForceFirstPerson);
-		REL::Relocation<func_t> func{ Offset::PlayerCamera::ForceFirstPerson };
+		REL::Relocation<func_t> func{ ID::PlayerCamera::ForceFirstPerson };
 		return func(this);
 	}
 
 	void PlayerCamera::ForceThirdPerson()
 	{
 		using func_t = decltype(&PlayerCamera::ForceThirdPerson);
-		REL::Relocation<func_t> func{ Offset::PlayerCamera::ForceThirdPerson };
+		REL::Relocation<func_t> func{ ID::PlayerCamera::ForceThirdPerson };
 		return func(this);
 	}
 
@@ -36,14 +35,14 @@ namespace RE
 	void PlayerCamera::SetCameraState(CameraState a_cameraState)
 	{
 		using func_t = decltype(&PlayerCamera::SetCameraState);
-		REL::Relocation<func_t> func{ Offset::PlayerCamera::SetCameraState };
+		REL::Relocation<func_t> func{ ID::PlayerCamera::SetCameraState };
 		return func(this, a_cameraState);
 	}
 
 	bool PlayerCamera::QCameraEquals(CameraState a_cameraState) const
 	{
 		using func_t = decltype(&PlayerCamera::QCameraEquals);
-		REL::Relocation<func_t> func{ Offset::PlayerCamera::QCameraEquals };
+		REL::Relocation<func_t> func{ ID::PlayerCamera::QCameraEquals };
 		return func(this, a_cameraState);
 	}
 }

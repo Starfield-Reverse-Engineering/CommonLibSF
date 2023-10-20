@@ -1,7 +1,5 @@
 #pragma once
 
-#include "RE/Offsets.h"
-
 namespace RE
 {
 	class ConsoleLog

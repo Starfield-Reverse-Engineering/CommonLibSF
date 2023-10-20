@@ -1,7 +1,5 @@
 #pragma once
 
-#include "RE/Offsets.h"
-
 namespace RE
 {
 	struct BSStringPool
@@ -18,7 +16,7 @@ namespace RE
 			static void release(Entry*& a_entry)
 			{
 				using func_t = decltype(&Entry::release);
-				REL::Relocation<func_t> func{ Offset::BSStringPool::Entry::release };
+				REL::Relocation<func_t> func{ ID::BSStringPool::Entry::release };
 				return func(a_entry);
 			}
 
@@ -87,7 +85,7 @@ namespace RE
 		static BucketTable& GetSingleton()
 		{
 			using func_t = decltype(&BucketTable::GetSingleton);
-			REL::Relocation<func_t> func{ Offset::BSStringPool::BucketTable::GetSingleton };
+			REL::Relocation<func_t> func{ ID::BSStringPool::BucketTable::GetSingleton };
 			return func();
 		}
 
@@ -105,7 +103,7 @@ namespace RE
 	inline void GetEntry<char>(BSStringPool::Entry*& a_result, const char* a_string, bool a_caseSensitive)
 	{
 		using func_t = decltype(&GetEntry<char>);
-		REL::Relocation<func_t> func{ Offset::BSStringPool::GetEntry_char_ };
+		REL::Relocation<func_t> func{ ID::BSStringPool::GetEntry_char_ };
 		return func(a_result, a_string, a_caseSensitive);
 	}
 
@@ -113,7 +111,7 @@ namespace RE
 	inline void GetEntry<wchar_t>(BSStringPool::Entry*& a_result, const wchar_t* a_string, bool a_caseSensitive)
 	{
 		using func_t = decltype(&GetEntry<wchar_t>);
-		REL::Relocation<func_t> func{ Offset::BSStringPool::GetEntry_wchar_t_ };
+		REL::Relocation<func_t> func{ ID::BSStringPool::GetEntry_wchar_t_ };
 		return func(a_result, a_string, a_caseSensitive);
 	}
 }

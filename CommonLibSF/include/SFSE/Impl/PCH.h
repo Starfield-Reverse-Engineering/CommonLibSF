@@ -753,7 +753,7 @@ namespace REL
 
 #include "REL/REL.h"
 
-#include "RE/Offsets.h"
+#include "RE/IDs.h"
 #include "RE/Offsets_NiRTTI.h"
 #include "RE/Offsets_RTTI.h"
 #include "RE/Offsets_VTABLE.h"

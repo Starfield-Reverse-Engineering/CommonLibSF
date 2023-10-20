@@ -2,7 +2,6 @@
 
 #include "RE/B/BSTArray.h"
 #include "RE/B/BSTSingleton.h"
-#include "RE/Offsets.h"
 
 namespace RE
 {
@@ -54,19 +53,19 @@ namespace RE
 		void Notify(void* a_event)
 		{
 			using func_t = decltype(&BSTEventSource::Notify);
-			REL::Relocation<func_t> func{ Offset::BSTEventSource::Notify };
+			REL::Relocation<func_t> func{ ID::BSTEventSource::Notify };
 			return func(this, a_event);
 		}
 		void RegisterSink(BSTEventSink<Event>* a_sink)
 		{
 			using func_t = decltype(&BSTEventSource::RegisterSink);
-			REL::Relocation<func_t> func{ Offset::BSTEventSource::RegisterSink };
+			REL::Relocation<func_t> func{ ID::BSTEventSource::RegisterSink };
 			return func(this, a_sink);
 		}
 		void UnregisterSink(BSTEventSink<Event>* a_sink)
 		{
 			using func_t = decltype(&BSTEventSource::UnregisterSink);
-			REL::Relocation<func_t> func{ Offset::BSTEventSource::UnregisterSink };
+			REL::Relocation<func_t> func{ ID::BSTEventSource::UnregisterSink };
 			return func(this, a_sink);
 		}
 

@@ -1,6 +1,5 @@
 #pragma once
 
-#include "RE/Offsets.h"
 // NOTE: this has not been updated
 
 struct __type_info_node;

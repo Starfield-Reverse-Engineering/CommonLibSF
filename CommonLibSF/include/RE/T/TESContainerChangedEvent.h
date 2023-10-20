@@ -1,7 +1,6 @@
 #pragma once
 
 #include "RE/B/BSTEvent.h"
-#include "RE/Offsets.h"
 
 namespace RE
 {
