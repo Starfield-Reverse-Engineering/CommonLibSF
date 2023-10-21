@@ -17,6 +17,7 @@
 
 namespace RE
 {
+	enum class LOCK_LEVEL;
 	class TESContainer;
 	class Actor;
 	class BGSEquipSlot;
@@ -33,6 +34,7 @@ namespace RE
 	class TESTopicInfo;
 	class TESWorldSpace;
 	class TESWaterForm;
+	struct REFR_LOCK;
 
 	namespace ActorValueEvents
 	{
@@ -361,6 +363,8 @@ namespace RE
 		[[nodiscard]] const TESBoundObject* GetBaseObject() const { return data.objectReference.get(); }
 		[[nodiscard]] BGSLocation*          GetCurrentLocation();
 		[[nodiscard]] TESObjectREFR*        GetLinkedRef(BGSKeyword* a_keyword);
+		[[nodiscard]] REFR_LOCK*            GetLock() const;
+		[[nodiscard]] LOCK_LEVEL            GetLockLevel() const;
 		[[nodiscard]] TESWorldSpace*        GetParentWorldSpace();
 		[[nodiscard]] constexpr NiPoint3A   GetPosition() const noexcept { return data.location; }
 		[[nodiscard]] constexpr float       GetPositionX() const noexcept { return data.location.x; }
@@ -373,9 +377,12 @@ namespace RE
 		[[nodiscard]] bool                  HasKeyword(BGSKeyword* a_keyword);
 		[[nodiscard]] bool                  IsCrimeToActivate();
 		[[nodiscard]] bool                  IsInSpace(bool a_arg1);
+		[[nodiscard]] bool                  IsLocked() const;
 		[[nodiscard]] bool                  IsObjectEquipped(TESBoundObject* a_object);
 		[[nodiscard]] bool                  IsSpaceshipDocked();
 		[[nodiscard]] bool                  IsSpaceshipLanded();
+		void                                Lock();
+		void                                Unlock();
 
 		// members
 		OBJ_REFR                       data;               // 0A0
@@ -389,6 +396,9 @@ namespace RE
 		std::uint16_t                  scale;              // 108
 		bool                           unk10A;             // 10A
 		std::uint8_t                   flags;              // 10B
+
+	private:
+		void AddLockChange();
 	};
 	static_assert(sizeof(TESObjectREFR) == 0x110);
 }
