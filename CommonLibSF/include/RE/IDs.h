@@ -260,7 +260,7 @@ namespace RE::ID
 	namespace TESObjectREFR
 	{
 		inline constexpr REL::ID AddLockChange{ 106386 };
-	    inline constexpr REL::ID GetCurrentLocation{ 106554 };
+		inline constexpr REL::ID GetCurrentLocation{ 106554 };
 		inline constexpr REL::ID GetLinkedRef{ 107578 };
 		inline constexpr REL::ID GetLock{ 107581 };
 		inline constexpr REL::ID GetParentWorldSpace{ 106696 };
