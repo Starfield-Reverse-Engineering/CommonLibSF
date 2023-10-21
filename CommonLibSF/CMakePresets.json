@@ -10,7 +10,7 @@
       "name": "common",
       "hidden": true,
       "cacheVariables": {
-        "CMAKE_CXX_FLAGS": "$env{PROJECT_PLATFORM_FLAGS} $env{PROJECT_TEXT_FLAGS} $env{PROJECT_COMPILER_FLAGS} $penv{CXXFLAGS}",
+        "CMAKE_CXX_FLAGS": "$env{PROJECT_COMPILER_FLAGS} $penv{CXXFLAGS}",
         "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreaded$<$<CONFIG:Debug>:Debug>DLL"
       }
     },
@@ -27,8 +27,7 @@
       "name": "buildtype-debug-msvc",
       "hidden": true,
       "cacheVariables": {
-        "CMAKE_BUILD_TYPE": "Debug",
-        "CMAKE_SHARED_LINKER_FLAGS_DEBUG": "/CGTHREADS:8 /DEBUG:FULL /DEBUGTYPE:FIXUP"
+        "CMAKE_BUILD_TYPE": "Debug"
       }
     },
     {
@@ -36,16 +35,14 @@
       "hidden": true,
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Release",
-        "CMAKE_CXX_FLAGS_RELEASE": "/fp:fast /GR- /Gw /O2 /Ob3 /Qpar",
-        "CMAKE_SHARED_LINKER_FLAGS_RELEASE": "/CGTHREADS:8 /OPT:ICF=4"
+        "CMAKE_CXX_FLAGS_RELEASE": "/fp:fast /GR- /Gw /O2 /Ob3 /Qpar"
       }
     },
     {
       "name": "buildtype-debug-clang-cl",
       "hidden": true,
       "cacheVariables": {
-        "CMAKE_BUILD_TYPE": "Debug",
-        "CMAKE_SHARED_LINKER_FLAGS_DEBUG": "/DEBUG:FULL /DEBUGTYPE:FIXUP"
+        "CMAKE_BUILD_TYPE": "Debug"
       }
     },
     {
@@ -53,14 +50,16 @@
       "hidden": true,
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Release",
-        "CMAKE_CXX_FLAGS_RELEASE": "/fp:fast /GR- /Gw /O2",
-        "CMAKE_SHARED_LINKER_FLAGS_RELEASE": "/OPT:ICF=4"
+        "CMAKE_CXX_FLAGS_RELEASE": "/fp:fast /GR- /Gw /O2"
       }
     },
     {
       "name": "x64",
       "hidden": true,
-      "architecture": "x64"
+      "architecture": {
+        "value": "x64",
+        "strategy": "external"
+      }
     },
     {
       "name": "generator-msvc",
@@ -82,8 +81,7 @@
       "vendor": {
         "microsoft.com/VisualStudioSettings/CMake/1.0": {
           "intelliSenseMode": "windows-msvc-x64",
-          "enableMicrosoftCodeAnalysis": true,
-          "enableClangTidyCodeAnalysis": true
+          "enableMicrosoftCodeAnalysis": true
         }
       }
     },
