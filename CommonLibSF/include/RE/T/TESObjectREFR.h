@@ -2,6 +2,7 @@
 
 #include "RE/A/ActorValueOwner.h"
 #include "RE/B/BGSInventoryList.h"
+#include "RE/B/BGSLocalizedString.h"
 #include "RE/B/BSContainer.h"
 #include "RE/B/BSLock.h"
 #include "RE/B/BSTEvent.h"
