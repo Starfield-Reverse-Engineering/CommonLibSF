@@ -54,6 +54,31 @@ namespace RE::ID
 
 	namespace BSScript
 	{
+		namespace Array
+		{
+			inline constexpr REL::ID ctor{ 196577 };
+			inline constexpr REL::ID dtor{ 196579 };
+		}
+
+		namespace Object
+		{
+			inline constexpr REL::ID ctor{ 196025 };
+			inline constexpr REL::ID dtor{ 196032 };
+			inline constexpr REL::ID GetHandle{ 196069 };
+			inline constexpr REL::ID SetHandle{ 196079 };
+			inline constexpr REL::ID IncRef{ 37879 };
+			inline constexpr REL::ID DecRef{ 196057 };
+		}
+
+		namespace ObjectTypeInfo
+		{
+			inline constexpr REL::ID ctor{ 197047 };
+			inline constexpr REL::ID dtor{ 196202 };
+			inline constexpr REL::ID Clear{ 196218 };
+			inline constexpr REL::ID CopyFromLinkedData{ 196219 };
+			inline constexpr REL::ID GetProperty{ 196241 };
+		}
+
 		namespace Internal
 		{
 			namespace NF_util
@@ -128,6 +153,11 @@ namespace RE::ID
 	{
 		inline constexpr REL::ID DebugNotification{ 138728 };
 		inline constexpr REL::ID PlayMenuSound{ 167344 };
+	}
+
+	namespace ObjectBindPolicy
+	{
+		inline constexpr REL::ID BindObject{ 195981 };
 	}
 
 	namespace PlayerCamera
