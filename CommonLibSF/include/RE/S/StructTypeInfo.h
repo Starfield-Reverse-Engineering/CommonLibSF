@@ -6,6 +6,7 @@
 #include "RE/B/BSTSmartPointer.h"
 #include "RE/I/IComplexType.h"
 #include "RE/M/MemoryManager.h"
+#include "RE/O/ObjectTypeInfo.h"
 #include "RE/T/TypeInfo.h"
 #include "RE/V/Variable.h"
 
