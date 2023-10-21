@@ -126,7 +126,7 @@ function(target_commonlibsf_properties TARGET)
             "SFSEPluginVersion = []() noexcept {\n"
             "    SFSE::PluginVersionData data{};\n"
             "\n"
-            "    data.PluginVersion(Plugin::Version.pack());\n"
+            "    data.PluginVersion(Plugin::Version);\n"
             "    data.PluginName(Plugin::Name);\n"
             "    data.AuthorName(Plugin::Author);\n"
             "    data.UsesAddressLibrary(${commonlibsf_uses_address_library});\n"
