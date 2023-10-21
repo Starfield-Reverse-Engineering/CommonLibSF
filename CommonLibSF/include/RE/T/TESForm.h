@@ -12,12 +12,9 @@ namespace RE
 	class BGSSnapTemplateComponent;
 	class TESObjectREFR;
 
-	namespace BGSMod
+	namespace BGSMod::Template
 	{
-		namespace Template
-		{
-			class Items;
-		}
+		class Items;
 	}
 
 	struct FORM;

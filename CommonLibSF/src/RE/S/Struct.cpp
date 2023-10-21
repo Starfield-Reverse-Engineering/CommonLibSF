@@ -1,4 +1,5 @@
 #include "RE/S/Struct.h"
+
 #include "RE/V/Variable.h"
 
 namespace RE::BSScript

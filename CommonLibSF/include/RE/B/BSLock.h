@@ -11,7 +11,7 @@ namespace RE
 
 	private:
 		// members
-		volatile std::uint32_t _lock{ 0 };  // 0
+		volatile std::uint32_t _lock{};  // 0
 	};
 	static_assert(sizeof(BSNonReentrantSpinLock) == 0x4);
 
@@ -25,8 +25,8 @@ namespace RE
 
 	private:
 		// members
-		std::uint32_t          _writerThread{ 0 };  // 0
-		volatile std::uint32_t _lock{ 0 };          // 4
+		std::uint32_t          _writerThread{};  // 0
+		volatile std::uint32_t _lock{};          // 4
 	};
 	static_assert(sizeof(BSReadWriteLock) == 0x8);
 
@@ -39,8 +39,8 @@ namespace RE
 
 	private:
 		// members
-		std::uint32_t          _owningThread{ 0 };  // 0
-		volatile std::uint32_t _lock{ 0 };          // 4
+		std::uint32_t          _owningThread{};  // 0
+		volatile std::uint32_t _lock{};          // 4
 	};
 	static_assert(sizeof(BSSpinLock) == 0x8);
 
@@ -101,7 +101,7 @@ namespace RE
 
 	private:
 		// members
-		mutex_type* _lock{ nullptr };  // 00
+		mutex_type* _lock{};  // 00
 	};
 	static_assert(sizeof(BSAutoLock<void*>) == 0x8);
 

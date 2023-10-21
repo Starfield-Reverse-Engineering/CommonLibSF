@@ -1,4 +1,5 @@
 #include "RE/V/Variable.h"
+
 #include "RE/A/Array.h"
 #include "RE/O/Object.h"
 #include "RE/O/ObjectTypeInfo.h"
