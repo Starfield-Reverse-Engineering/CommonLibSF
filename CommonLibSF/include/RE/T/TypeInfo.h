@@ -94,21 +94,21 @@ namespace RE
 			}
 			[[nodiscard]] bool IsObject() const { return GetRawType() == RawType::kObject; }
 			[[nodiscard]] bool IsStruct() const { return GetRawType() == RawType::kStruct; }
-            IComplexType* GetComplexType() const
-            {
-                return IsComplex() ? reinterpret_cast<IComplexType*>(
-                                        reinterpret_cast<std::uintptr_t>(data.complexTypeInfo) &
-                                        ~static_cast<std::uintptr_t>(1)) :
-                                    nullptr;
-            }
-            ObjectTypeInfo* GetObjectTypeInfo() const
-            {
-                return IsObject() || IsObjectArray() ? reinterpret_cast<ObjectTypeInfo*>(GetComplexType()) : nullptr;
-            }
-            StructTypeInfo* GetStructTypeInfo() const
-            {
-                return IsStruct() || IsStructArray() ? reinterpret_cast<StructTypeInfo*>(GetComplexType()) : nullptr;
-            }
+			IComplexType*      GetComplexType() const
+			{
+				return IsComplex() ? reinterpret_cast<IComplexType*>(
+										 reinterpret_cast<std::uintptr_t>(data.complexTypeInfo) &
+										 ~static_cast<std::uintptr_t>(1)) :
+				                     nullptr;
+			}
+			ObjectTypeInfo* GetObjectTypeInfo() const
+			{
+				return IsObject() || IsObjectArray() ? reinterpret_cast<ObjectTypeInfo*>(GetComplexType()) : nullptr;
+			}
+			StructTypeInfo* GetStructTypeInfo() const
+			{
+				return IsStruct() || IsStructArray() ? reinterpret_cast<StructTypeInfo*>(GetComplexType()) : nullptr;
+			}
 			void SetArray(bool a_set) noexcept
 			{
 				if (IsComplex()) {
