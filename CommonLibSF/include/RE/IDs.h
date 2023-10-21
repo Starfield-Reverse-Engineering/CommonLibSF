@@ -117,6 +117,12 @@ namespace RE::ID
 		inline constexpr REL::ID HasType{ 83208 };
 	}
 
+	namespace LockPickedEvent
+	{
+		inline constexpr REL::ID GetEventSource{ 107115 };
+		inline constexpr REL::ID Notify{ 107339 };
+	}
+
 	namespace MemoryManager
 	{
 		inline constexpr REL::ID GetSingleton{ 33961 };
@@ -142,6 +148,11 @@ namespace RE::ID
 	namespace PlayerCharacter
 	{
 		inline constexpr REL::ID singleton{ 865059 };
+	}
+
+	namespace REFR_LOCK
+	{
+		inline constexpr REL::ID GetLockLevel{ 84103 };
 	}
 
 	namespace RegSettingCollection
@@ -218,8 +229,10 @@ namespace RE::ID
 
 	namespace TESObjectREFR
 	{
-		inline constexpr REL::ID GetCurrentLocation{ 106554 };
+		inline constexpr REL::ID AddLockChange{ 106386 };
+	    inline constexpr REL::ID GetCurrentLocation{ 106554 };
 		inline constexpr REL::ID GetLinkedRef{ 107578 };
+		inline constexpr REL::ID GetLock{ 107581 };
 		inline constexpr REL::ID GetParentWorldSpace{ 106696 };
 		inline constexpr REL::ID GetSpaceship{ 173851 };
 		inline constexpr REL::ID GetSpaceshipParentDock{ 174134 };

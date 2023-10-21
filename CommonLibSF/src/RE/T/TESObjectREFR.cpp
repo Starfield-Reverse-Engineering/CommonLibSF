@@ -1,8 +1,16 @@
 #include "RE/T/TESObjectREFR.h"
 #include "RE/B/BGSInventoryItem.h"
+#include "RE/E/ExtraLock.h"
 
 namespace RE
 {
+	void TESObjectREFR::AddLockChange()
+	{
+		using func_t = decltype(&TESObjectREFR::AddLockChange);
+		REL::Relocation<func_t> func{ ID::TESObjectREFR::AddLockChange };
+		return func(this);
+	}
+
 	void TESObjectREFR::ForEachEquippedItem(std::function<BSContainer::ForEachResult(const BGSInventoryItem&)> a_callback) const
 	{
 		ForEachInventoryItem([&](const BGSInventoryItem& a_invItem) {
@@ -34,6 +42,19 @@ namespace RE
 		using func_t = decltype(&TESObjectREFR::GetLinkedRef);
 		REL::Relocation<func_t> func{ ID::TESObjectREFR::GetLinkedRef };
 		return func(this, a_keyword);
+	}
+
+	REFR_LOCK* TESObjectREFR::GetLock() const
+	{
+		using func_t = decltype(&TESObjectREFR::GetLock);
+		REL::Relocation<func_t> func{ ID::TESObjectREFR::GetLock };
+		return func(this);
+	}
+
+	LOCK_LEVEL TESObjectREFR::GetLockLevel() const
+	{
+		const auto state = GetLock();
+		return state ? state->GetLockLevel(this) : LOCK_LEVEL::kUnlocked;
 	}
 
 	TESWorldSpace* TESObjectREFR::GetParentWorldSpace()
@@ -92,6 +113,11 @@ namespace RE
 		return func(this, a_arg1);
 	}
 
+	bool TESObjectREFR::IsLocked() const
+	{
+		return GetLockLevel() != LOCK_LEVEL::kUnlocked;
+	}
+
 	bool TESObjectREFR::IsObjectEquipped(TESBoundObject* a_object)
 	{
 		using func_t = decltype(&TESObjectREFR::IsObjectEquipped);
@@ -113,4 +139,19 @@ namespace RE
 		return func(this);
 	}
 
+	void TESObjectREFR::Lock()
+	{
+		if (const auto lock = GetLock()) {
+			lock->SetLocked(true);
+			AddLockChange();
+		}
+	}
+
+	void TESObjectREFR::Unlock()
+	{
+		if (const auto lock = GetLock()) {
+			lock->SetLocked(false);
+			AddLockChange();
+		}
+	}
 }
