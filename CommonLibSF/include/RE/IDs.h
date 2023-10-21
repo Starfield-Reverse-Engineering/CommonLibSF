@@ -25,6 +25,12 @@ namespace RE::ID
 		inline constexpr REL::ID GetByType{ 83208 };
 	}
 
+	namespace BGSInventoryInterface
+	{
+		inline constexpr REL::ID singleton{ 825787 };
+		inline constexpr REL::ID GetInventoryObject{ 87520 };
+	}
+
 	namespace BGSObjectInstance
 	{
 		inline constexpr REL::ID ctor{ 101725 };
@@ -252,6 +258,7 @@ namespace RE::ID
 		inline constexpr REL::ID HasKeyword{ 80343 };
 		inline constexpr REL::ID IsCrimeToActivate{ 106755 };
 		inline constexpr REL::ID IsInSpace{ 106767 };
+		inline constexpr REL::ID IsObjectEquipped{ 106991 };
 		inline constexpr REL::ID IsSpaceshipDocked{ 174146 };
 		inline constexpr REL::ID IsSpaceshipLanded{ 173880 };
 	}

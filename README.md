@@ -5,17 +5,17 @@
 [![C++23](https://img.shields.io/static/v1?label=standard&message=c%2B%2B23&color=blue&logo=c%2B%2B&&logoColor=red&style=flat)](https://en.cppreference.com/w/cpp/compiler_support)
 ![Platform](https://img.shields.io/static/v1?label=platform&message=windows&color=dimgray&style=flat&logo=windows)
 [![Game version](https://img.shields.io/badge/game%20version-1.7.36-orange)](#Developing-with-CommonLibSF)
-[![VCPKG_VER](https://img.shields.io/static/v1?label=vcpkg%20registry&message=2023-10-20&color=green&style=flat)](https://github.com/Starfield-Reverse-Engineering/Starfield-RE-vcpkg)
+[![VCPKG_VER](https://img.shields.io/static/v1?label=vcpkg%20registry&message=2023-10-20.5&color=green&style=flat)](https://github.com/Starfield-Reverse-Engineering/Starfield-RE-vcpkg)
 [![Main CI](https://img.shields.io/github/actions/workflow/status/Starfield-Reverse-Engineering/CommonLibSF/main_ci.yml)](https://github.com/Starfield-Reverse-Engineering/CommonLibSF/actions/workflows/main_ci.yml)
 
 ## Build Dependencies
 
 - [CMake v3.26+](https://cmake.org/) or [XMake v2.8.2+](https://github.com/xmake-io/xmake/releases)
-  - Add this to your PATH
-- [vcpkg](https://github.com/microsoft/vcpkg) (CMake)
-  - Add the environment variable `VCPKG_ROOT` with the value as the path to the folder containing vcpkg
-- [Visual Studio 2022](https://visualstudio.microsoft.com/) with "Desktop development with C++"
-  - clang-cl toolset and build support if using `clang-cl` configuration
+  - Add this to your `PATH`
+- [vcpkg](https://github.com/microsoft/vcpkg) (not required if using XMake)
+  - Create a Windows environment variable called `VCPKG_ROOT` with the value as the path to your vcpkg install directory
+- [Visual Studio 2022](https://visualstudio.microsoft.com/) with "Desktop development with C++" workload
+  - clang-cl toolset and build support if using `clang-cl` configurations
 - [PowerShell](https://github.com/PowerShell/PowerShell/releases)
 
 ## Developing with CommonLibSF

@@ -1,7 +1,27 @@
 #include "RE/T/TESObjectREFR.h"
+#include "RE/B/BGSInventoryItem.h"
 
 namespace RE
 {
+	void TESObjectREFR::ForEachEquippedItem(std::function<BSContainer::ForEachResult(const BGSInventoryItem&)> a_callback) const
+	{
+		ForEachInventoryItem([&](const BGSInventoryItem& a_invItem) {
+			return a_invItem.IsEquipped() ? a_callback(a_invItem) : BSContainer::ForEachResult::kContinue;
+		});
+	}
+
+	void TESObjectREFR::ForEachInventoryItem(std::function<BSContainer::ForEachResult(const BGSInventoryItem&)> a_callback) const
+	{
+		BSAutoReadLock locker(inventoryListLock);
+		if (inventoryList) {
+			for (const auto& invItem : inventoryList->data) {
+				if (invItem.object && a_callback(invItem) == BSContainer::ForEachResult::kStop) {
+					break;
+				}
+			}
+		}
+	}
+
 	BGSLocation* TESObjectREFR::GetCurrentLocation()
 	{
 		using func_t = decltype(&TESObjectREFR::GetCurrentLocation);
@@ -70,6 +90,13 @@ namespace RE
 		using func_t = decltype(&TESObjectREFR::IsInSpace);
 		REL::Relocation<func_t> func{ ID::TESObjectREFR::IsInSpace };
 		return func(this, a_arg1);
+	}
+
+	bool TESObjectREFR::IsObjectEquipped(TESBoundObject* a_object)
+	{
+		using func_t = decltype(&TESObjectREFR::IsObjectEquipped);
+		REL::Relocation<func_t> func{ ID::TESObjectREFR::IsObjectEquipped };
+		return func(this, a_object);
 	}
 
 	bool TESObjectREFR::IsSpaceshipDocked()
