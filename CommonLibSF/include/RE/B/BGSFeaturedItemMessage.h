@@ -11,7 +11,7 @@ namespace RE
 	public:
 		SF_RTTI(BGSFeaturedItemMessage);
 
-		~BGSFeaturedItemMessage() override; // 00
+		~BGSFeaturedItemMessage() override;  // 00
 
 		// override (BaseFormComponent)
 		const BSFixedString& GetFormComponentType() const override;  // 01 - { return "BGSFeaturedItemMessage_Component"; }

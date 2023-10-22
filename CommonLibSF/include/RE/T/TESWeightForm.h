@@ -9,7 +9,7 @@ namespace RE
 	public:
 		SF_RTTI_VTABLE(TESWeightForm);
 
-		~TESWeightForm() override; // 00
+		~TESWeightForm() override;  // 00
 
 		// override (BaseFormComponent)
 		const BSFixedString& GetFormComponentType() const override;  // 01 - { return "TESWeight_Component"; }
