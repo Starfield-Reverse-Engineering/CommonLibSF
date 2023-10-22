@@ -4,16 +4,14 @@
 
 namespace RE
 {
-	struct DestructibleObjectData
-	{
-	};
+	struct DestructibleObjectData;
 
 	class BGSDestructibleObjectForm : public BaseFormComponent
 	{
 	public:
 		SF_RTTI_VTABLE(BGSDestructibleObjectForm);
 
-		~BGSDestructibleObjectForm() override;
+		~BGSDestructibleObjectForm() override; // 00
 
 		// override (BaseFormComponent)
 		const BSFixedString& GetFormComponentType() const override;  // 01 - { return "BGSDestructibleObject_Component"; }
