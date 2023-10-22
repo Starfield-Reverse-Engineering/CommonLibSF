@@ -2,6 +2,7 @@
 
 #include "RE/B/BSLock.h"
 #include "RE/B/BSTArray.h"
+#include "RE/B/BSTTuple.h"
 
 namespace RE
 {
@@ -17,9 +18,9 @@ namespace RE
 	{
 	public:
 		// members
-		BSTArray<void*> baseValues;  // 00 - BSTTuple<std::uint32_t, float>
-		BSTArray<void*> modifiers;   // 10 - BSTTuple<std::uint32_t, Modifiers>
-		BSReadWriteLock avLock;      // 20
+		BSTArray<BSTTuple<std::uint32_t, float>>     baseValues;  // 00
+		BSTArray<BSTTuple<std::uint32_t, Modifiers>> modifiers;   // 10
+		BSReadWriteLock                              avLock;      // 20
 	};
 	static_assert(sizeof(ActorValueStorage) == 0x28);
 }
