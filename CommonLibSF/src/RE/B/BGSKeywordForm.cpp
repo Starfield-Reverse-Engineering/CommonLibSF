@@ -5,7 +5,7 @@ namespace RE
 {
 	bool BGSKeywordForm::ContainsKeywordString(std::string_view a_editorID)
 	{
-		bool result = false;
+		bool result{};
 		ForEachKeyword([&](const BGSKeyword* a_keyword) {
 			if (result = a_keyword->formEditorID.contains(a_editorID); result) {
 				return BSContainer::ForEachResult::kStop;
@@ -36,7 +36,7 @@ namespace RE
 
 	bool BGSKeywordForm::HasKeywordString(std::string_view a_editorID)
 	{
-		bool result = false;
+		bool result{};
 		ForEachKeyword([&](const BGSKeyword* a_keyword) {
 			if (result = (a_keyword->formEditorID == a_editorID); result) {
 				return BSContainer::ForEachResult::kStop;

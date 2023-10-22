@@ -236,39 +236,33 @@ namespace std
 }
 
 #ifdef FMT_VERSION
-namespace fmt
+template <>
+struct fmt::formatter<RE::FormType>
 {
-	template <>
-	struct formatter<RE::FormType>
+	template <class ParseContext>
+	static constexpr auto parse(ParseContext& a_ctx)
 	{
-		template <class ParseContext>
-		constexpr auto parse(ParseContext& a_ctx)
-		{
-			return a_ctx.begin();
-		}
+		return a_ctx.begin();
+	}
 
-		template <class FormatContext>
-		auto format(const RE::FormType& a_formType, FormatContext& a_ctx)
-		{
-			return fmt::format_to(a_ctx.out(), "{}", FormTypeToString(a_formType));
-		}
-	};
-}
+	template <class FormatContext>
+	auto format(const RE::FormType& a_formType, FormatContext& a_ctx)
+	{
+		return fmt::format_to(a_ctx.out(), "{}", FormTypeToString(a_formType));
+	}
+};
 #endif
 
 #ifdef __cpp_lib_format
-namespace std
+template <class CharT>
+struct std::formatter<RE::FormType, CharT> : std::formatter<std::string_view, CharT>
 {
-	template <class CharT>
-	struct formatter<RE::FormType, CharT> : std::formatter<std::string_view, CharT>
+	template <class FormatContext>
+	auto format(RE::FormType a_formType, FormatContext& a_ctx)
 	{
-		template <class FormatContext>
-		auto format(RE::FormType a_formType, FormatContext& a_ctx)
-		{
-			return formatter<std::string_view, CharT>::format(FormTypeToString(a_formType), a_ctx);
-		}
-	};
-}
+		return formatter<std::string_view, CharT>::format(FormTypeToString(a_formType), a_ctx);
+	}
+};
 #endif
 
 #define SF_FORMTYPE(TYPE) \

@@ -108,7 +108,7 @@ namespace RE
 				kExteriorShort = 1 << 28,
 				kExteriorChar = 1 << 29,
 				kDetachTime = 1 << 30,
-				kSeenData = (std::uint32_t)1 << 31
+				kSeenData = static_cast<std::uint32_t>(1) << 31
 			};
 		};
 

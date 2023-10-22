@@ -1,4 +1,5 @@
 #include "RE/T/TESObjectCELL.h"
+
 #include "RE/T/TESObjectREFR.h"
 
 namespace RE

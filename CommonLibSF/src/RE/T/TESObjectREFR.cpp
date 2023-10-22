@@ -1,4 +1,5 @@
 #include "RE/T/TESObjectREFR.h"
+
 #include "RE/B/BGSInventoryItem.h"
 #include "RE/E/ExtraLock.h"
 

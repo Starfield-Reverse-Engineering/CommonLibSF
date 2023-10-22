@@ -79,7 +79,6 @@ namespace RE
 			// TODO: unk28 is likely `BSTHashMap<std::size_t, BSTSmallSharedArray<BSTSmartPointer<BoundScript>>> attachedScripts`, but unsure where exactly it starts
 		};
 		static_assert(sizeof(ObjectBindPolicy) == 0x60);
-
 	}
 
 	namespace GameScript
