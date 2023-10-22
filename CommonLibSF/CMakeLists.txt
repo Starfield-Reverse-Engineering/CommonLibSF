@@ -1,5 +1,4 @@
 cmake_minimum_required(VERSION 3.26)
-message("Using toolchain file ${CMAKE_TOOLCHAIN_FILE}.")
 
 # singleton target across multiple projects
 if(TARGET CommonLibSF)

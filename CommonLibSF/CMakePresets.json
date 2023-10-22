@@ -15,15 +15,6 @@
       }
     },
     {
-      "name": "packaging-vcpkg",
-      "hidden": true,
-      "cacheVariables": {
-        "CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
-        "VCPKG_TARGET_TRIPLET": "x64-windows-static-md",
-        "VCPKG_HOST_TRIPLET": "x64-windows-static-md"
-      }
-    },
-    {
       "name": "buildtype-debug-msvc",
       "hidden": true,
       "cacheVariables": {
@@ -106,7 +97,6 @@
       "name": "build-debug-msvc-msvc",
       "inherits": [
         "common",
-        "packaging-vcpkg",
         "buildtype-debug-msvc",
         "generator-msvc",
         "compiler-msvc"
@@ -116,7 +106,6 @@
       "name": "build-debug-msvc-ninja",
       "inherits": [
         "common",
-        "packaging-vcpkg",
         "buildtype-debug-msvc",
         "generator-ninja",
         "compiler-msvc"
@@ -127,7 +116,6 @@
       "toolset": "ClangCL",
       "inherits": [
         "common",
-        "packaging-vcpkg",
         "buildtype-debug-clang-cl",
         "generator-msvc",
         "compiler-clang-cl"
@@ -137,7 +125,6 @@
       "name": "build-debug-clang-cl-ninja",
       "inherits": [
         "common",
-        "packaging-vcpkg",
         "buildtype-debug-clang-cl",
         "generator-ninja",
         "compiler-clang-cl"
@@ -147,7 +134,6 @@
       "name": "build-release-msvc-msvc",
       "inherits": [
         "common",
-        "packaging-vcpkg",
         "buildtype-release-msvc",
         "generator-msvc",
         "compiler-msvc"
@@ -157,7 +143,6 @@
       "name": "build-release-msvc-ninja",
       "inherits": [
         "common",
-        "packaging-vcpkg",
         "buildtype-release-msvc",
         "generator-ninja",
         "compiler-msvc"
@@ -168,7 +153,6 @@
       "toolset": "ClangCL",
       "inherits": [
         "common",
-        "packaging-vcpkg",
         "buildtype-release-clang-cl",
         "generator-msvc",
         "compiler-clang-cl"
@@ -178,7 +162,6 @@
       "name": "build-release-clang-cl-ninja",
       "inherits": [
         "common",
-        "packaging-vcpkg",
         "buildtype-release-clang-cl",
         "generator-ninja",
         "compiler-clang-cl"
