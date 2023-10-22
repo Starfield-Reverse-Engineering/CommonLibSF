@@ -27,12 +27,15 @@ namespace SFSE
 
 		private:
 			APIStorage() noexcept = default;
+
 			~APIStorage() noexcept = default;
 
 			constexpr APIStorage(const APIStorage&) = delete;
+
 			constexpr APIStorage(APIStorage&&) = delete;
 
 			constexpr APIStorage& operator=(const APIStorage&) = delete;
+
 			constexpr APIStorage& operator=(APIStorage&&) = delete;
 		};
 

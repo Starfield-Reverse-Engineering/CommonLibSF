@@ -15,6 +15,7 @@ namespace SFSE
 	{
 	public:
 		[[nodiscard]] REL::Version  RuntimeVersion() const;
+
 		[[nodiscard]] std::uint32_t SFSEVersion() const;
 
 	protected:
@@ -35,7 +36,9 @@ namespace SFSE
 		};
 
 		[[nodiscard]] PluginHandle GetPluginHandle() const;
+
 		const PluginInfo*          GetPluginInfo(const char* a_name) const;
+
 		[[nodiscard]] void*        QueryInterface(std::uint32_t a_id) const;
 	};
 
@@ -68,7 +71,9 @@ namespace SFSE
 		[[nodiscard]] std::uint32_t Version() const;
 
 		bool Dispatch(std::uint32_t a_messageType, void* a_data, std::uint32_t a_dataLen, const char* a_receiver) const;
+
 		bool RegisterListener(EventCallback a_callback) const;
+
 		bool RegisterListener(const char* a_sender, EventCallback a_callback) const;
 
 	protected:
@@ -86,6 +91,7 @@ namespace SFSE
 		[[nodiscard]] std::uint32_t Version() const;
 
 		[[nodiscard]] void* AllocateFromBranchPool(std::size_t a_size) const;
+
 		[[nodiscard]] void* AllocateFromLocalPool(std::size_t a_size) const;
 
 	private:
