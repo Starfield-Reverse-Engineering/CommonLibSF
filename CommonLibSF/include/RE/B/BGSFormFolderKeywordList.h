@@ -17,7 +17,7 @@ namespace RE
 
 		// members
 		BSTArray<BGSKeyword*> keywords;    // 38
-		BSFixedString         formFolder;  // 50
+		BSFixedString         formFolder;  // 48
 	};
 	static_assert(sizeof(BGSFormFolderKeywordList) == 0x50);
 }
