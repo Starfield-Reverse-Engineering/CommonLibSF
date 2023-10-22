@@ -26,9 +26,9 @@ namespace RE
 
 	private:
 		// members
-		BSExtraData*  _head{};                // 00
+		BSExtraData*  _head{};                         // 00
 		BSExtraData** _tail{ std::addressof(_head) };  // 08
-		std::uint8_t* _flags{};               // 10
+		std::uint8_t* _flags{};                        // 10
 	};
 	static_assert(sizeof(BaseExtraList) == 0x18);
 

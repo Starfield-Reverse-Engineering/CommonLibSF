@@ -238,7 +238,7 @@ namespace RE::BSScript
 		{
 		public:
 			template <class T>
-			[[nodiscard]] static auto&& get_raw(T&& a_var)  
+			[[nodiscard]] static auto&& get_raw(T&& a_var)
 				requires(std::same_as<std::remove_cvref_t<T>, Variable>)
 			{
 				return std::forward<T>(a_var).value;
@@ -247,7 +247,7 @@ namespace RE::BSScript
 	}
 
 	template <class T>
-	[[nodiscard]] BSTSmartPointer<Object> get(const Variable& a_var)  
+	[[nodiscard]] BSTSmartPointer<Object> get(const Variable& a_var)
 		requires(std::same_as<T, Object>)
 	{
 		assert(a_var.is<Object>());
@@ -255,7 +255,7 @@ namespace RE::BSScript
 	}
 
 	template <class T>
-	[[nodiscard]] BSFixedString get(const Variable& a_var)  
+	[[nodiscard]] BSFixedString get(const Variable& a_var)
 		requires(std::same_as<T, BSFixedString>)
 	{
 		assert(a_var.is<BSFixedString>());
@@ -263,7 +263,7 @@ namespace RE::BSScript
 	}
 
 	template <class T>
-	[[nodiscard]] std::uint32_t get(const Variable& a_var)  
+	[[nodiscard]] std::uint32_t get(const Variable& a_var)
 		requires(std::same_as<T, std::uint32_t>)
 	{
 		assert(a_var.is<std::uint32_t>());
@@ -271,7 +271,7 @@ namespace RE::BSScript
 	}
 
 	template <class T>
-	[[nodiscard]] std::int32_t get(const Variable& a_var)  
+	[[nodiscard]] std::int32_t get(const Variable& a_var)
 		requires(std::same_as<T, std::int32_t>)
 	{
 		assert(a_var.is<std::int32_t>());
@@ -279,7 +279,7 @@ namespace RE::BSScript
 	}
 
 	template <class T>
-	[[nodiscard]] float get(const Variable& a_var) 
+	[[nodiscard]] float get(const Variable& a_var)
 		requires(std::same_as<T, float>)
 	{
 		assert(a_var.is<float>());
@@ -287,7 +287,7 @@ namespace RE::BSScript
 	}
 
 	template <class T>
-	[[nodiscard]] bool get(const Variable& a_var)  
+	[[nodiscard]] bool get(const Variable& a_var)
 		requires(std::same_as<T, bool>)
 	{
 		assert(a_var.is<bool>());
@@ -295,7 +295,7 @@ namespace RE::BSScript
 	}
 
 	template <class T>
-	[[nodiscard]] stl::observer<Variable*> get(const Variable& a_var)  
+	[[nodiscard]] stl::observer<Variable*> get(const Variable& a_var)
 		requires(std::same_as<T, Variable>)
 	{
 		assert(a_var.is<Variable>());
@@ -303,7 +303,7 @@ namespace RE::BSScript
 	}
 
 	template <class T>
-	[[nodiscard]] BSTSmartPointer<Struct> get(const Variable& a_var)  
+	[[nodiscard]] BSTSmartPointer<Struct> get(const Variable& a_var)
 		requires(std::same_as<T, Struct>)
 	{
 		assert(a_var.is<Struct>());
@@ -311,7 +311,7 @@ namespace RE::BSScript
 	}
 
 	template <class T>
-	[[nodiscard]] BSTSmartPointer<Array> get(const Variable& a_var)  
+	[[nodiscard]] BSTSmartPointer<Array> get(const Variable& a_var)
 		requires(std::same_as<T, Array>)
 	{
 		assert(a_var.is<Array>());
