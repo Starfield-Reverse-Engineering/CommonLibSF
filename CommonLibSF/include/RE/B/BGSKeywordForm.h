@@ -7,6 +7,8 @@
 
 namespace RE
 {
+	class BGSFormFolderKeywordList;
+
 	class BGSKeywordForm :
 		public BaseFormComponent,  // 00
 		public IKeywordFormBase    // 08
@@ -29,8 +31,8 @@ namespace RE
 		[[nodiscard]] bool          HasKeywordString(std::string_view a_editorID);
 
 		// members
-		BSTArray<BGSKeyword*> keywords1;  // 10 - empty?
-		BSTArray<BGSKeyword*> keywords2;  // 20
+		BSTArray<BGSFormFolderKeywordList*> formFolderKeywordLists;  // 10
+		BSTArray<BGSKeyword*>               keywords;                // 20
 	};
 	static_assert(sizeof(BGSKeywordForm) == 0x30);
 }
