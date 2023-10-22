@@ -8,7 +8,6 @@ on:
   workflow_dispatch:
 
 env:
-  VCPKG_COMMIT_ID: 830f86fb309ad7167468a433a890b7415fbb90a5
   GITHUB_WORKSPACE: ${{ github.workspace }}
 
 jobs:
@@ -26,11 +25,6 @@ jobs:
 
       - name: Get CMake
         uses: lukka/get-cmake@latest
-
-      - name: Setup vcpkg
-        uses: lukka/run-vcpkg@v11.1
-        with:
-          vcpkgGitCommitId: ${{ env.VCPKG_COMMIT_ID }}
 
       - name: Run CMake
         uses: lukka/run-cmake@v10.6
