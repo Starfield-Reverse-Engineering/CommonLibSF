@@ -1,4 +1,5 @@
 #include "RE/B/BGSKeywordForm.h"
+#include "RE/B/BGSFormFolderKeywordList.h"
 #include "RE/B/BGSKeyword.h"
 
 namespace RE
@@ -17,21 +18,25 @@ namespace RE
 
 	void BGSKeywordForm::ForEachKeyword(std::function<BSContainer::ForEachResult(BGSKeyword*)> a_callback)
 	{
-		for (const auto& keyword : keywords2) {
+		for (const auto& keyword : keywords) {
 			if (keyword && a_callback(keyword) == BSContainer::ForEachResult::kStop) {
 				return;
 			}
 		}
-		for (const auto& keyword : keywords1) {
-			if (keyword && a_callback(keyword) == BSContainer::ForEachResult::kStop) {
-				return;
+		for (const auto& formFolderKeywordList : formFolderKeywordLists) {
+			if (formFolderKeywordList) {
+				for (const auto& keyword : formFolderKeywordList->keywords) {
+					if (keyword && a_callback(keyword) == BSContainer::ForEachResult::kStop) {
+						return;
+					}
+				}
 			}
 		}
 	}
 
 	std::uint32_t BGSKeywordForm::GetNumKeywords() const
 	{
-		return keywords1.size() + keywords2.size();
+		return keywords.size();
 	}
 
 	bool BGSKeywordForm::HasKeywordString(std::string_view a_editorID)
