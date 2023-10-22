@@ -66,10 +66,6 @@
     {
       "name": "compiler-msvc",
       "hidden": true,
-      "cacheVariables": {
-        "CMAKE_C_COMPILER": "cl",
-        "CMAKE_CXX_COMPILER": "cl"
-      },
       "environment": {
         "PROJECT_COMPILER_FLAGS": "/cgthreads8 /diagnostics:caret /EHsc /fp:contract /fp:except- /guard:cf- /MP /permissive- /W4 /Zc:__cplusplus /Zc:enumTypes /Zc:lambda /Zc:preprocessor /Zc:referenceBinding /Zc:rvalueCast /Zc:templateScope /Zc:ternary /external:anglebrackets /external:W0"
       },
@@ -84,7 +80,6 @@
       "name": "compiler-clang-cl",
       "hidden": true,
       "cacheVariables": {
-        "CMAKE_C_COMPILER": "clang-cl",
         "CMAKE_CXX_COMPILER": "clang-cl"
       },
       "environment": {
