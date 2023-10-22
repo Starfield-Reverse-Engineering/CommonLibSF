@@ -26,13 +26,19 @@ set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 
 include(GNUInstallDirs)
 
+include("${CMAKE_CURRENT_SOURCE_DIR}/cmake/CPM.cmake")
+
 # out-of-source builds only
 if(${PROJECT_SOURCE_DIR} STREQUAL ${PROJECT_BINARY_DIR})
   message(FATAL_ERROR "In-source builds are not allowed.")
 endif()
 
 # dependencies
-find_package(spdlog CONFIG REQUIRED)
+CPMAddPackage(
+  GITHUB_REPOSITORY gabime/spdlog
+  VERSION 1.12.0
+  OPTIONS "SPDLOG_USE_STD_FORMAT ON"
+)
 
 # source files
 execute_process(
@@ -125,7 +131,7 @@ target_link_libraries(
 )
 
 if(SFSE_SUPPORT_XBYAK)
-find_package(xbyak CONFIG REQUIRED)
+CPMAddPackage("gh:herumi/xbyak@6.73")
 
 target_link_libraries(
   ${PROJECT_NAME}
@@ -141,7 +147,7 @@ target_precompile_headers(
 )
 
 install(
-  TARGETS ${PROJECT_NAME}
+  TARGETS ${PROJECT_NAME} spdlog
   EXPORT ${PROJECT_NAME}-targets
 )
 
