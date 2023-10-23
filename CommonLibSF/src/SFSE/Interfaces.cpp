@@ -123,7 +123,7 @@ namespace SFSE
 		return GetProxy()->AddTask(new Task(std::move(a_fn)));
 	}
 
-	void TaskInterface::AddTask(detail::ITaskDelegate* a_task) const
+	void TaskInterface::AddTask(ITaskDelegate* a_task) const
 	{
 		return GetProxy()->AddTask(a_task);
 	}
@@ -133,7 +133,7 @@ namespace SFSE
 		return GetProxy()->AddPermanentTask(new Task(std::move(a_fn)));
 	}
 
-	void TaskInterface::AddPermanentTask(detail::ITaskDelegate* a_task) const
+	void TaskInterface::AddPermanentTask(ITaskDelegate* a_task) const
 	{
 		return GetProxy()->AddPermanentTask(a_task);
 	}

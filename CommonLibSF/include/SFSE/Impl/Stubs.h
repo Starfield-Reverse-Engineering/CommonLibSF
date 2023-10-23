@@ -54,12 +54,12 @@ namespace SFSE
 			void (*AddTask)(void*);
 			void (*AddPermanentTask)(void*);
 		};
-
-		class ITaskDelegate 
-		{
-		public:
-			virtual void Run() = 0;
-			virtual void Destroy() = 0;
-		};
 	}
+
+	class ITaskDelegate 
+	{
+	public:
+		virtual void Run() = 0;
+		virtual void Destroy() = 0;
+	};
 }
