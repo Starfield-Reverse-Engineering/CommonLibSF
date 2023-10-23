@@ -131,29 +131,17 @@ namespace SFSE
 
 		void AddTask(TaskFn a_fn) const;
 
-		void AddTask(ITaskDelegate* a_task) const;
+		void AddTask(detail::ITaskDelegate* a_task) const;
 
 		void AddPermanentTask(TaskFn a_fn) const;
 
-		void AddPermanentTask(ITaskDelegate* a_task) const;
+		void AddPermanentTask(detail::ITaskDelegate* a_task) const;
 
 	private:
 		class Task : public detail::ITaskDelegate
 		{
 		public:
-			Task(TaskFn&& a_task);
-
-			void Run() override;
-			void Destroy() override;
-
-		private:
-			TaskFn _fn;
-		};
-
-		class PermanentTask : public detail::ITaskDelegate
-		{
-		public:
-			PermanentTask(TaskFn&& a_task);
+			Task(TaskFn&& a_fn);
 
 			void Run() override;
 			void Destroy() override;

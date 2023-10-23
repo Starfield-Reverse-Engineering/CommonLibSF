@@ -123,17 +123,17 @@ namespace SFSE
 		return GetProxy()->AddTask(new Task(std::move(a_fn)));
 	}
 
-	void TaskInterface::AddTask(ITaskDelegate* a_task) const
+	void TaskInterface::AddTask(detail::ITaskDelegate* a_task) const
 	{
 		return GetProxy()->AddTask(a_task);
 	}
 
 	void TaskInterface::AddPermanentTask(TaskFn a_fn) const
 	{
-		return GetProxy()->AddPermanentTask(new PermanentTask(std::move(a_fn)));
+		return GetProxy()->AddPermanentTask(new Task(std::move(a_fn)));
 	}
 
-	void TaskInterface::AddPermanentTask(ITaskDelegate* a_task) const
+	void TaskInterface::AddPermanentTask(detail::ITaskDelegate* a_task) const
 	{
 		return GetProxy()->AddPermanentTask(a_task);
 	}
@@ -148,20 +148,6 @@ namespace SFSE
 	}
 
 	void TaskInterface::Task::Destroy()
-	{
-		delete this;
-	}
-
-	TaskInterface::PermanentTask::PermanentTask(TaskFn&& a_fn) :
-		_fn(std::move(a_fn))
-	{}
-
-	void TaskInterface::PermanentTask::Run()
-	{
-		_fn();
-	}
-
-	void TaskInterface::PermanentTask::Destroy()
 	{
 		delete this;
 	}

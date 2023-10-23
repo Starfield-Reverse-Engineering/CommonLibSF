@@ -1,7 +1,5 @@
 #pragma once
 
-class ITaskDelegate;
-
 namespace SFSE
 {
 	using PluginHandle = std::uint32_t;
