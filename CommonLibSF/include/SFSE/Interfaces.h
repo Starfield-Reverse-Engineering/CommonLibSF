@@ -14,7 +14,7 @@ namespace SFSE
 	class QueryInterface
 	{
 	public:
-		[[nodiscard]] REL::Version  RuntimeVersion() const;
+		[[nodiscard]] REL::Version RuntimeVersion() const;
 
 		[[nodiscard]] std::uint32_t SFSEVersion() const;
 
@@ -37,9 +37,9 @@ namespace SFSE
 
 		[[nodiscard]] PluginHandle GetPluginHandle() const;
 
-		const PluginInfo*          GetPluginInfo(const char* a_name) const;
+		const PluginInfo* GetPluginInfo(const char* a_name) const;
 
-		[[nodiscard]] void*        QueryInterface(std::uint32_t a_id) const;
+		[[nodiscard]] void* QueryInterface(std::uint32_t a_id) const;
 	};
 
 	class MessagingInterface

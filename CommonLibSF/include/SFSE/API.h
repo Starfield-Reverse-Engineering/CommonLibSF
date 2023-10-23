@@ -16,11 +16,11 @@ namespace SFSE
 
 	const TrampolineInterface* GetTrampolineInterface() noexcept;
 
-	const MessagingInterface*  GetMessagingInterface() noexcept;
+	const MessagingInterface* GetMessagingInterface() noexcept;
 
-	const MenuInterface*       GetMenuInterface() noexcept;
+	const MenuInterface* GetMenuInterface() noexcept;
 
 	Trampoline& GetTrampoline();
 
-	void        AllocTrampoline(std::size_t a_size, bool a_trySFSEReserve = true);
+	void AllocTrampoline(std::size_t a_size, bool a_trySFSEReserve = true);
 }
