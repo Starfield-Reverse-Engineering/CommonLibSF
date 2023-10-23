@@ -3,6 +3,7 @@
 namespace SFSE
 {
 	[[nodiscard]] std::uintptr_t GetIATAddr(std::string_view a_dll, std::string_view a_function);
+
 	[[nodiscard]] std::uintptr_t GetIATAddr(void* a_module, std::string_view a_dll, std::string_view a_function);
 
 	[[nodiscard]] constexpr void* GetIATPtr(std::string_view a_dll, std::string_view a_function);

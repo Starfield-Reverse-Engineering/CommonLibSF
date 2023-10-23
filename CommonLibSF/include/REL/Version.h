@@ -12,12 +12,38 @@ namespace REL
 		constexpr Version() noexcept = default;
 
 		explicit constexpr Version(const std::array<value_type, 4> a_version) noexcept :
-			_impl(a_version) {}
+			_impl(a_version)
+		{}
 
 		constexpr Version(const value_type a_v1, const value_type a_v2 = 0, const value_type a_v3 = 0, const value_type a_v4 = 0) noexcept :
-			_impl{ a_v1, a_v2, a_v3, a_v4 } {}
+			_impl{ a_v1, a_v2, a_v3, a_v4 }
+		{}
 
-		explicit constexpr Version(std::string_view a_version);
+		explicit constexpr Version(const std::string_view a_version)
+		{
+			std::array<value_type, 4> powers{ 1, 1, 1, 1 };
+			std::size_t               position{};
+			for (const auto& c : a_version) {
+				if (c == '.') {
+					if (++position == powers.size()) {
+						throw std::invalid_argument("Too many parts in version number.");
+					}
+				} else {
+					powers[position] *= 10;
+				}
+			}
+			position = 0;
+			for (const auto& c : a_version) {
+				if (c == '.') {
+					++position;
+				} else if (c < '0' || c > '9') {
+					throw std::invalid_argument("Invalid character in version number.");
+				} else {
+					powers[position] /= 10;
+					_impl[position] += static_cast<value_type>((c - '0') * powers[position]);
+				}
+			}
+		}
 
 		[[nodiscard]] constexpr reference operator[](const std::size_t a_idx) noexcept { return _impl[a_idx]; }
 
@@ -51,8 +77,11 @@ namespace REL
 		}
 
 		[[nodiscard]] constexpr value_type major() const noexcept { return _impl[0]; }
+
 		[[nodiscard]] constexpr value_type minor() const noexcept { return _impl[1]; }
+
 		[[nodiscard]] constexpr value_type patch() const noexcept { return _impl[2]; }
+
 		[[nodiscard]] constexpr value_type build() const noexcept { return _impl[3]; }
 
 		[[nodiscard]] constexpr std::string string(const std::string_view a_separator = "."sv) const
@@ -145,7 +174,33 @@ namespace REL
 		}
 	}
 
-	[[nodiscard]] std::optional<Version> get_file_version(stl::zwstring a_filename);
+	[[nodiscard]] inline std::optional<Version> get_file_version(const stl::zwstring a_filename)
+	{
+		std::uint32_t     dummy{};
+		std::vector<char> buf(WinAPI::GetFileVersionInfoSize(a_filename.data(), std::addressof(dummy)));
+		if (buf.empty()) {
+			return std::nullopt;
+		}
+
+		if (!WinAPI::GetFileVersionInfo(a_filename.data(), 0, buf.size(), buf.data())) {
+			return std::nullopt;
+		}
+
+		void*         verBuf{};
+		std::uint32_t verLen{};
+		if (!WinAPI::VerQueryValue(buf.data(), L"\\StringFileInfo\\040904B0\\ProductVersion", std::addressof(verBuf), std::addressof(verLen))) {
+			return std::nullopt;
+		}
+
+		Version             version;
+		std::wistringstream ss(std::wstring(static_cast<const wchar_t*>(verBuf), verLen));
+		std::wstring        token;
+		for (std::size_t i = 0; i < 4 && std::getline(ss, token, L'.'); ++i) {
+			version[i] = static_cast<std::uint16_t>(std::stoi(token));
+		}
+
+		return version;
+	}
 }
 
 #ifdef __cpp_lib_format
