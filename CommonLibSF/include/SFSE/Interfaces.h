@@ -31,6 +31,7 @@ namespace SFSE
 			kMessaging,
 			kTrampoline,
 			kMenu,
+			kTask,
 
 			kTotal
 		};
@@ -114,6 +115,54 @@ namespace SFSE
 
 	private:
 		[[nodiscard]] const detail::SFSEMenuInterface* GetProxy() const;
+	};
+
+	class TaskInterface
+	{
+	public:
+		using TaskFn = std::function<void()>;
+
+		enum Version : std::uint32_t
+		{
+			kVersion = 1
+		};
+
+		[[nodiscard]] std::uint32_t Version() const;
+
+		void AddTask(TaskFn a_fn) const;
+
+		void AddTask(ITaskDelegate* a_task) const;
+
+		void AddPermanentTask(TaskFn a_fn) const;
+
+		void AddPermanentTask(ITaskDelegate* a_task) const;
+
+	private:
+		class Task : public detail::ITaskDelegate
+		{
+		public:
+			Task(TaskFn&& a_task);
+
+			void Run() override;
+			void Destroy() override;
+
+		private:
+			TaskFn _fn;
+		};
+
+		class PermanentTask : public detail::ITaskDelegate
+		{
+		public:
+			PermanentTask(TaskFn&& a_task);
+
+			void Run() override;
+			void Destroy() override;
+
+		private:
+			TaskFn _fn;
+		};
+
+		[[nodiscard]] const detail::SFSETaskInterface* GetProxy() const;
 	};
 
 	struct PluginInfo

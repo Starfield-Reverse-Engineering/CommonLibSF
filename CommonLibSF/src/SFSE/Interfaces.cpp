@@ -113,6 +113,65 @@ namespace SFSE
 		return reinterpret_cast<const detail::SFSEMenuInterface*>(this);
 	}
 
+	std::uint32_t TaskInterface::Version() const
+	{
+		return GetProxy()->interfaceVersion;
+	}
+
+	void TaskInterface::AddTask(TaskFn a_fn) const
+	{
+		return GetProxy()->AddTask(new Task(std::move(a_fn)));
+	}
+
+	void TaskInterface::AddTask(ITaskDelegate* a_task) const
+	{
+		return GetProxy()->AddTask(a_task);
+	}
+
+	void TaskInterface::AddPermanentTask(TaskFn a_fn) const
+	{
+		return GetProxy()->AddPermanentTask(new PermanentTask(std::move(a_fn)));
+	}
+
+	void TaskInterface::AddPermanentTask(ITaskDelegate* a_task) const
+	{
+		return GetProxy()->AddPermanentTask(a_task);
+	}
+
+	TaskInterface::Task::Task(TaskFn&& a_fn) :
+		_fn(std::move(a_fn))
+	{}
+
+	void TaskInterface::Task::Run()
+	{
+		_fn();
+	}
+
+	void TaskInterface::Task::Destroy()
+	{
+		delete this;
+	}
+
+	TaskInterface::PermanentTask::PermanentTask(TaskFn&& a_fn) :
+		_fn(std::move(a_fn))
+	{}
+
+	void TaskInterface::PermanentTask::Run()
+	{
+		_fn();
+	}
+
+	void TaskInterface::PermanentTask::Destroy()
+	{
+		delete this;
+	}
+
+	const detail::SFSETaskInterface* TaskInterface::GetProxy() const
+	{
+		assert(this);
+		return reinterpret_cast<const detail::SFSETaskInterface*>(this);
+	}
+
 	const PluginVersionData* PluginVersionData::GetSingleton() noexcept
 	{
 		return reinterpret_cast<const PluginVersionData*>(WinAPI::GetProcAddress(WinAPI::GetCurrentModule(), "SFSEPlugin_Version"));
