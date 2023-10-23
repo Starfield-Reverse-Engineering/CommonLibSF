@@ -26,8 +26,7 @@ namespace SFSE::log
 	SFSE_MAKE_SOURCE_LOGGER(critical, critical);
 
 	[[nodiscard]] std::optional<std::filesystem::path> log_directory();
-
-	void init();
+	void                                               init();
 }
 
 #undef SFSE_MAKE_SOURCE_LOGGER

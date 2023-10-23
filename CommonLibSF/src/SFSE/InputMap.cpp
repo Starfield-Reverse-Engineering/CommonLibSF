@@ -7,7 +7,6 @@ namespace SFSE
 	std::uint32_t InputMap::GamepadMaskToKeycode(const std::uint32_t a_keyMask)
 	{
 		using XInputButton = RE::XInput::XInputButton;
-
 		switch (a_keyMask) {
 		case XInputButton::XINPUT_GAMEPAD_DPAD_UP:
 			return kGamepadButtonOffset_DPAD_UP;
