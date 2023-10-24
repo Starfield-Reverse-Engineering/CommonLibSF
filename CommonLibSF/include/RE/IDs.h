@@ -148,6 +148,16 @@ namespace RE::ID
 		inline constexpr REL::ID Notify{ 107339 };
 	}
 
+	namespace msvc
+	{
+		namespace type_info
+		{
+			inline constexpr REL::ID name{ 248847 };
+			inline constexpr REL::ID _RootNode{ 824582 };
+			inline constexpr REL::ID compare{ 248848 };
+		}
+	}
+
 	namespace MemoryManager
 	{
 		inline constexpr REL::ID GetSingleton{ 33961 };
