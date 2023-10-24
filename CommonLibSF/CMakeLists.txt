@@ -32,7 +32,17 @@ if(${PROJECT_SOURCE_DIR} STREQUAL ${PROJECT_BINARY_DIR})
 endif()
 
 # dependencies
-find_package(spdlog CONFIG REQUIRED)
+if(USING_VCPKG)
+  find_package(spdlog CONFIG REQUIRED)
+else()
+  include("${CMAKE_CURRENT_SOURCE_DIR}/cmake/CPM.cmake")
+
+  CPMAddPackage(
+    GITHUB_REPOSITORY gabime/spdlog
+    VERSION 1.12.0
+    OPTIONS "SPDLOG_USE_STD_FORMAT ON"
+  )
+endif()
 
 # source files
 execute_process(
@@ -125,13 +135,17 @@ target_link_libraries(
 )
 
 if(SFSE_SUPPORT_XBYAK)
-find_package(xbyak CONFIG REQUIRED)
+  if(USING_VCPKG)
+    find_package(xbyak CONFIG REQUIRED)
+  else()
+    CPMAddPackage("gh:herumi/xbyak@6.73")
+  endif()
 
-target_link_libraries(
-  ${PROJECT_NAME}
-  PUBLIC
-    xbyak::xbyak
-)
+  target_link_libraries(
+    ${PROJECT_NAME}
+    PUBLIC
+      xbyak::xbyak
+  )
 endif()
 
 target_precompile_headers(
@@ -140,10 +154,17 @@ target_precompile_headers(
     include/SFSE/Impl/PCH.h
 )
 
-install(
-  TARGETS ${PROJECT_NAME}
-  EXPORT ${PROJECT_NAME}-targets
-)
+if(USING_VCPKG)
+  install(
+    TARGETS ${PROJECT_NAME}
+    EXPORT ${PROJECT_NAME}-targets
+  )
+else()
+  install(
+    TARGETS ${PROJECT_NAME} spdlog
+    EXPORT ${PROJECT_NAME}-targets
+  )
+endif()
 
 install(
   EXPORT ${PROJECT_NAME}-targets

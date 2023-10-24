@@ -33,9 +33,9 @@ jobs:
         uses: lukka/run-cmake@v10.6
         with:
           cmakeListsTxtPath: "${{ github.workspace }}/CommonLibSF/CMakeLists.txt"
-          configurePreset: build-debug-msvc-ninja
+          configurePreset: build-debug-msvc-ninja-vcpkg
           configurePresetCmdString: "[`-B`, `$[env.GITHUB_WORKSPACE]/build`, `-S`, `$[env.GITHUB_WORKSPACE]/CommonLibSF`, `--preset`, `$[env.CONFIGURE_PRESET_NAME]`]"
-          buildPreset: debug-msvc-ninja
+          buildPreset: debug-msvc-ninja-vcpkg
           buildPresetCmdString: "[`--build`, `$[env.GITHUB_WORKSPACE]/build`, `--preset`, `$[env.BUILD_PRESET_NAME]`]"
 
       - name: Find PDB
