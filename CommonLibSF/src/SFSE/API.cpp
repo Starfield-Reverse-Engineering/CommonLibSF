@@ -20,6 +20,7 @@ namespace SFSE
 			TrampolineInterface* trampolineInterface{};
 			MessagingInterface*  messagingInterface{};
 			MenuInterface*       menuInterface{};
+			TaskInterface* taskInterface{};
 
 			std::mutex                         apiLock;
 			std::vector<std::function<void()>> apiInitRegs;
@@ -69,6 +70,7 @@ namespace SFSE
 			storage.messagingInterface = detail::QueryInterface<MessagingInterface>(a_intfc, LoadInterface::kMessaging);
 			storage.trampolineInterface = detail::QueryInterface<TrampolineInterface>(a_intfc, LoadInterface::kTrampoline);
 			storage.menuInterface = detail::QueryInterface<MenuInterface>(a_intfc, LoadInterface::kMenu);
+			storage.taskInterface = detail::QueryInterface<TaskInterface>(a_intfc, LoadInterface::kTask);
 
 			storage.apiInit = true;
 			auto& regs = storage.apiInitRegs;
@@ -112,6 +114,11 @@ namespace SFSE
 	const MenuInterface* GetMenuInterface() noexcept
 	{
 		return detail::APIStorage::get().menuInterface;
+	}
+
+	const TaskInterface* GetTaskInterface() noexcept
+	{
+		return detail::APIStorage::get().taskInterface;
 	}
 
 	Trampoline& GetTrampoline()

@@ -47,5 +47,19 @@ namespace SFSE
 			std::uint32_t interfaceVersion;
 			void (*Register)(void*);
 		};
+
+		struct SFSETaskInterface
+		{
+			std::uint32_t interfaceVersion;
+			void (*AddTask)(void*);
+			void (*AddPermanentTask)(void*);
+		};
 	}
+
+	class ITaskDelegate 
+	{
+	public:
+		virtual void Run() = 0;
+		virtual void Destroy() = 0;
+	};
 }

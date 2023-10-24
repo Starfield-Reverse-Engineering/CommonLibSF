@@ -20,6 +20,8 @@ namespace SFSE
 
 	const MenuInterface* GetMenuInterface() noexcept;
 
+	const TaskInterface* GetTaskInterface() noexcept;
+
 	Trampoline& GetTrampoline();
 
 	void AllocTrampoline(std::size_t a_size, bool a_trySFSEReserve = true);
