@@ -8,20 +8,7 @@ namespace RE
 {
 	namespace msvc
 	{
-		class __declspec(novtable) type_info
-		{
-		public:
-			virtual ~type_info();  // 00
-
-			[[nodiscard]] const char* mangled_name() const noexcept { return _name; }
-
-		private:
-			// members
-			void* _data;     // 08
-			char  _name[1];  // 10
-		};
-
-		static_assert(sizeof(type_info) == 0x18);
+		class type_info;
 	}
 
 	namespace RTTI
