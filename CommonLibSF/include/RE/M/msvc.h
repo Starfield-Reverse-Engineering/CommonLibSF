@@ -369,7 +369,7 @@ namespace RE::msvc
 					 std::same_as<E, deleter_type> &&
 					 (std::is_reference_v<deleter_type> ?
 							 std::is_nothrow_constructible_v<deleter_type, const E&> :
-							 std::is_nothrow_constructible_v<deleter_type, E &&>))
+							 std::is_nothrow_constructible_v<deleter_type, E&&>))
 			:
 			super(std::move(a_rhs))
 		{}
@@ -598,7 +598,7 @@ namespace RE::msvc
 					  std::convertible_to<typename unique_ptr<U, E>::element_type (*)[], element_type (*)[]> &&
 					  (std::is_reference_v<deleter_type> ?
 							  std::same_as<E, deleter_type> && std::is_nothrow_constructible_v<deleter_type, const E&> :
-							  std::convertible_to<E, deleter_type> && std::is_nothrow_constructible_v<deleter_type, E &&>)))
+							  std::convertible_to<E, deleter_type> && std::is_nothrow_constructible_v<deleter_type, E&&>)))
 			:
 			super(std::move(a_rhs))
 		{}
@@ -635,7 +635,7 @@ namespace RE::msvc
 					  std::same_as<pointer, element_type*> &&
 					  std::same_as<typename unique_ptr<U, E>::pointer, typename unique_ptr<U, E>::element_type*> &&
 					  std::convertible_to<typename unique_ptr<U, E>::element_type (*)[], element_type (*)[]> &&
-					  std::is_assignable_v<deleter_type&, E &&>))
+					  std::is_assignable_v<deleter_type&, E&&>))
 		{
 			if (this != std::addressof(a_rhs)) {
 				reset(a_rhs.release());
@@ -795,7 +795,7 @@ namespace RE::msvc
 		[[nodiscard]] const char* name() const noexcept
 		{
 			using func_t = const char* (*)(const type_info*, __type_info_node*) noexcept;
-			REL::Relocation<func_t*>   func{ ID::msvc::type_info::name };
+			REL::Relocation<func_t*> func{ ID::msvc::type_info::name };
 			return (*func)(this, std::addressof(get_root_node()));
 		}
 
@@ -807,7 +807,7 @@ namespace RE::msvc
 	private:
 		[[nodiscard]] int compare(const type_info& a_rhs) const
 		{
-			using func_t = int       (*)(const type_info*, const type_info*) noexcept;
+			using func_t = int (*)(const type_info*, const type_info*) noexcept;
 			REL::Relocation<func_t*> func{ ID::msvc::type_info::compare };
 			return (*func)(this, &a_rhs);
 		}
