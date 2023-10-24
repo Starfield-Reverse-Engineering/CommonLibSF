@@ -56,7 +56,7 @@ namespace SFSE
 		};
 	}
 
-	class ITaskDelegate 
+	class ITaskDelegate
 	{
 	public:
 		virtual void Run() = 0;

@@ -20,7 +20,7 @@ namespace SFSE
 			TrampolineInterface* trampolineInterface{};
 			MessagingInterface*  messagingInterface{};
 			MenuInterface*       menuInterface{};
-			TaskInterface* taskInterface{};
+			TaskInterface*       taskInterface{};
 
 			std::mutex                         apiLock;
 			std::vector<std::function<void()>> apiInitRegs;
