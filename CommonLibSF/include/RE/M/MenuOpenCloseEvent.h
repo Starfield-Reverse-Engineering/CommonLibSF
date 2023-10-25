@@ -4,7 +4,7 @@
 
 namespace RE
 {
-	struct MenuOpenCloseEvent
+	class MenuOpenCloseEvent
 	{
 	public:
 		// members
