@@ -40,7 +40,7 @@ namespace SFSE::stl
 		T::func = trampoline.write_branch<Size>(a_src, T::thunk);
 	}
 
-	namespace detail 
+	namespace detail
 	{
 		template <class T>
 		struct is_chrono_duration : std::false_type
