@@ -7,10 +7,6 @@ on:
       - "CommonLibSF/**"
   workflow_dispatch:
 
-env:
-  VCPKG_COMMIT_ID: 830f86fb309ad7167468a433a890b7415fbb90a5
-  GITHUB_WORKSPACE: ${{ github.workspace }}
-
 jobs:
   build:
     runs-on: windows-latest
@@ -27,17 +23,12 @@ jobs:
       - name: Get CMake
         uses: lukka/get-cmake@latest
 
-      - name: Setup vcpkg
-        uses: lukka/run-vcpkg@v11.1
+      - name: Setup MSVC prompt
+        uses: TheMrMilchmann/setup-msvc-dev@v3
         with:
-          vcpkgGitCommitId: ${{ env.VCPKG_COMMIT_ID }}
+          arch: x64
+          toolset: 14.37
 
-      - name: Run CMake
-        uses: lukka/run-cmake@v10.6
-        with:
-          cmakeListsTxtPath: "${{ github.workspace }}/CommonLibSF/CMakeLists.txt"
-          configurePreset: build-release-${{ matrix.compiler }}-ninja-vcpkg
-          configurePresetCmdString: "[`-B`, `$[env.GITHUB_WORKSPACE]/build`, `-S`, `$[env.GITHUB_WORKSPACE]/CommonLibSF`, `--preset`, `$[env.CONFIGURE_PRESET_NAME]`]"
-          configurePresetAdditionalArgs: "['-DSFSE_BUILD_TESTS=true']"
-          buildPreset: release-${{ matrix.compiler }}-ninja-vcpkg
-          buildPresetCmdString: "[`--build`, `$[env.GITHUB_WORKSPACE]/build`, `--preset`, `$[env.BUILD_PRESET_NAME]`]"
+      - name: Build
+        run: |
+          ${{ github.workspace }}/scripts/build-release-${{ matrix.compiler }}-cpm-test.bat
