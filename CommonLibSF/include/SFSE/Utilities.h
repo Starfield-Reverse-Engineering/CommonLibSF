@@ -8,8 +8,8 @@ namespace SFSE::stl
 	template <class T, std::size_t Size = 5>
 	constexpr void write_thunk_call(const std::uintptr_t a_address) noexcept
 	{
-		SFSE::AllocTrampoline(14);
-		auto& trampoline = SFSE::GetTrampoline();
+		AllocTrampoline(14);
+		auto& trampoline = GetTrampoline();
 		T::func = trampoline.write_call<Size>(a_address, T::thunk);
 	}
 
@@ -35,24 +35,38 @@ namespace SFSE::stl
 	template <class T, std::size_t Size = 5>
 	constexpr void write_thunk_jump(const std::uintptr_t a_src) noexcept
 	{
-		SFSE::AllocTrampoline(14);
-		auto& trampoline = SFSE::GetTrampoline();
+		AllocTrampoline(14);
+		auto& trampoline = GetTrampoline();
 		T::func = trampoline.write_branch<Size>(a_src, T::thunk);
 	}
 
-	void add_thread_task(std::function<void()> a_fn, std::chrono::milliseconds a_wait_for_ms = 0ms) noexcept
+	namespace detail 
+	{
+		template <class T>
+		struct is_chrono_duration : std::false_type
+		{};
+
+		template <class Rep, class Duration>
+		struct is_chrono_duration<std::chrono::duration<Rep, Duration>> : std::true_type
+		{};
+
+		template <typename T>
+		concept is_duration = is_chrono_duration<T>::value;
+	}
+
+	void add_thread_task(const std::function<void()> a_fn, detail::is_duration auto a_wait_for = 0ms) noexcept
 	{
 		std::jthread([=] {
-			std::this_thread::sleep_for(a_wait_for_ms);
-			SFSE::GetTaskInterface()->AddTask(a_fn);
+			std::this_thread::sleep_for(a_wait_for);
+			GetTaskInterface()->AddTask(a_fn);
 		}).detach();
 	}
 
-	void add_thread_task_permanent(std::function<void()> a_fn, std::chrono::milliseconds a_wait_for_ms = 0ms) noexcept
+	void add_thread_task_permanent(const std::function<void()> a_fn, detail::is_duration auto a_wait_for = 0ms) noexcept
 	{
 		std::jthread([=] {
-			std::this_thread::sleep_for(a_wait_for_ms);
-			SFSE::GetTaskInterface()->AddPermanentTask(a_fn);
+			std::this_thread::sleep_for(a_wait_for);
+			GetTaskInterface()->AddPermanentTask(a_fn);
 		}).detach();
 	}
 }
