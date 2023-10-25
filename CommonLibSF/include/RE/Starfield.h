@@ -145,6 +145,7 @@
 #include "RE/S/SettingCollectionMap.h"
 #include "RE/S/Sexes.h"
 #include "RE/S/Stack.h"
+#include "RE/S/StackFrame.h"
 #include "RE/S/Struct.h"
 #include "RE/S/StructTypeInfo.h"
 #include "RE/T/TBO_InstanceData.h"
