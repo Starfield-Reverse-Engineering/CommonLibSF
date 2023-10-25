@@ -32,7 +32,7 @@ jobs:
 
       - name: Find PDB
         run: |
-          $pdb = Get-ChildItem -Path "${{ github.workspace }}" -Filter "CommonLibSF.pdb" -Recurse -ErrorAction SilentlyContinue -Force
+          $pdb = Get-ChildItem -Path "${{ github.workspace }}/.." -Filter "CommonLibSF.pdb" -Recurse -ErrorAction SilentlyContinue -Force
           "PDB_PATH=$pdb" >> $env:GITHUB_ENV
 
       - name: Upload Artifact
