@@ -2,7 +2,7 @@ name: Main CI [CMake]
 
 on:
   pull_request:
-    branches: [main, feature/*, fix/*]
+    branches: [main, feature/*, fix/*, maintenance]
     paths:
       - "CommonLibSF/**"
   workflow_dispatch:
