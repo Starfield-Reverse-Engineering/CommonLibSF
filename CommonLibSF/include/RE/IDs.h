@@ -79,6 +79,14 @@ namespace RE::ID
 			inline constexpr REL::ID GetProperty{ 196241 };
 		}
 
+		namespace Stack
+		{
+			inline constexpr REL::ID ctor{ 196325 };
+			inline constexpr REL::ID dtor{ 196333 };
+			inline constexpr REL::ID GetStackFrameVariable{ 196367 };
+			inline constexpr REL::ID GetPageForFrame{ 196366 };
+		}
+
 		namespace Internal
 		{
 			namespace NF_util
