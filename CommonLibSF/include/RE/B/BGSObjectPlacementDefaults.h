@@ -9,7 +9,7 @@ namespace RE
 	public:
 		SF_RTTI_VTABLE(BGSObjectPlacementDefaults);
 
-		~BGSObjectPlacementDefaults() override; // 00
+		~BGSObjectPlacementDefaults() override;  // 00
 
 		// override (BaseFormComponent)
 		const BSFixedString& GetFormComponentType() const override;  // 01 - { return "BGSObjectPaletteDefaults_Component"; } ???

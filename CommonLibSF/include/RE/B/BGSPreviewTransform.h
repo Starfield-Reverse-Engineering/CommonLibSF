@@ -11,7 +11,7 @@ namespace RE
 	public:
 		SF_RTTI_VTABLE(BGSPreviewTransform);
 
-		~BGSPreviewTransform() override; // 00
+		~BGSPreviewTransform() override;  // 00
 
 		// override (BaseFormComponent)
 		const BSFixedString& GetFormComponentType() const override;  // 01 - { return "BGSPreviewTransform_Component"; }

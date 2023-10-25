@@ -11,7 +11,7 @@ namespace RE
 	public:
 		SF_RTTI(BGSMenuDisplayObject);
 
-		virtual ~BGSMenuDisplayObject() override; // 00
+		virtual ~BGSMenuDisplayObject() override;  // 00
 
 		// override (BaseFormComponent)
 		const BSFixedString& GetFormComponentType() const override;  // 01 - { return "BGSMenuDisplayObject_Component"; }
