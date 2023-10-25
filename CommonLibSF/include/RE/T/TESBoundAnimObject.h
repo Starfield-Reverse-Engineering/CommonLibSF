@@ -9,11 +9,7 @@ namespace RE
 	public:
 		SF_RTTI_VTABLE(TESBoundAnimObject);
 
-		virtual ~TESBoundAnimObject();
-
-		// add
-		virtual void Unk_80();  // 80
-		virtual void Unk_81();  // 81
+        ~TESBoundAnimObject() override; // 00
 	};
 	static_assert(sizeof(TESBoundAnimObject) == 0x118);
 }
