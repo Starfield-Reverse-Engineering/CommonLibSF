@@ -39,4 +39,20 @@ namespace SFSE::stl
 		auto& trampoline = SFSE::GetTrampoline();
 		T::func = trampoline.write_branch<Size>(a_src, T::thunk);
 	}
+
+	void add_thread_task(std::function<void()> a_fn, std::chrono::milliseconds a_wait_for_ms = 0ms) noexcept
+	{
+		std::jthread([=] {
+			std::this_thread::sleep_for(a_wait_for_ms);
+			SFSE::GetTaskInterface()->AddTask(a_fn);
+		}).detach();
+	}
+
+	void add_thread_task_permanent(std::function<void()> a_fn, std::chrono::milliseconds a_wait_for_ms = 0ms) noexcept
+	{
+		std::jthread([=] {
+			std::this_thread::sleep_for(a_wait_for_ms);
+			SFSE::GetTaskInterface()->AddPermanentTask(a_fn);
+		}).detach();
+	}
 }
