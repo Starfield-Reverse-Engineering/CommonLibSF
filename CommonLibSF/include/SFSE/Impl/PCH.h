@@ -760,4 +760,5 @@ namespace REL
 
 #include "RE/F/FormTypes.h"
 #include "RE/M/msvc.h"
+
 #undef cdecl  // Workaround for Clang.

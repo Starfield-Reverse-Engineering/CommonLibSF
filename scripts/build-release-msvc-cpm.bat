@@ -1,4 +1,3 @@
 echo off
-rd /s /q "%~dp0/../build"
-cmake -B "%~dp0/../build" -S "%~dp0/../CommonLibSF" --preset=build-release-msvc-ninja-cpm
-cmake --build "%~dp0/../build" --config Release
+cmake -B "%~dp0/../build/build-release-msvc-ninja-cpm" -S "%~dp0/../CommonLibSF" --preset=build-release-msvc-ninja-cpm
+cmake --build "%~dp0/../build/build-release-msvc-ninja-cpm" --config Release

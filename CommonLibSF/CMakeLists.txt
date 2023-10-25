@@ -59,15 +59,6 @@ source_group(
   FILES ${SOURCES}
 )
 
-add_library(
-  ${PROJECT_NAME}
-  STATIC
-    ${SOURCES}
-    .clang-format
-)
-
-add_library(${PROJECT_NAME}::${PROJECT_NAME} ALIAS ${PROJECT_NAME})
-
 function (configure_target TARGET_NAME)
   target_compile_definitions(
     ${TARGET_NAME}
@@ -144,14 +135,14 @@ function (configure_target TARGET_NAME)
     else()
       CPMAddPackage("gh:herumi/xbyak@6.73")
     endif()
-  
+
     target_link_libraries(
       ${TARGET_NAME}
       PUBLIC
         xbyak::xbyak
     )
   endif()
-  
+
   target_precompile_headers(
     ${TARGET_NAME}
     PRIVATE
@@ -159,9 +150,7 @@ function (configure_target TARGET_NAME)
   )
 endfunction()
 
-configure_target(${PROJECT_NAME})
-
-if (SFSE_BUILD_TESTS)
+if(SFSE_BUILD_TESTS)
   # add a custom library target that just builds test.cpp
   add_library(
     ${PROJECT_NAME}-test
@@ -171,8 +160,17 @@ if (SFSE_BUILD_TESTS)
       ${CMAKE_CURRENT_SOURCE_DIR}/test/test.cpp
   )
   configure_target(${PROJECT_NAME}-test)
+  set(PROJECT_NAME ${PROJECT_NAME}-test)
+else()
+  add_library(
+    ${PROJECT_NAME}
+    STATIC
+      ${SOURCES}
+      .clang-format
+  )
+  add_library(${PROJECT_NAME}::${PROJECT_NAME} ALIAS ${PROJECT_NAME})
+  configure_target(${PROJECT_NAME})
 endif()
-
 
 if(USING_VCPKG)
   install(
