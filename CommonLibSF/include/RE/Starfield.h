@@ -1,7 +1,5 @@
 #pragma once
 
-#include "SFSE/Impl/PCH.h"
-
 #include "RE/A/AIProcess.h"
 #include "RE/A/Actor.h"
 #include "RE/A/ActorEquipManager.h"

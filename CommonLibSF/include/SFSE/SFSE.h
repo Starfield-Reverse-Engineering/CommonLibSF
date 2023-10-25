@@ -1,7 +1,5 @@
 #pragma once
 
-#include "SFSE/Impl/PCH.h"
-
 #include "SFSE/API.h"
 #include "SFSE/IAT.h"
 #include "SFSE/InputMap.h"

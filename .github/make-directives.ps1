@@ -47,7 +47,6 @@ Remove-Item "$PathIn/Starfield.h" -Force -Confirm:$false -ErrorAction Ignore
 
 $generated = '#pragma once
 
-#include "SFSE/Impl/PCH.h"
 '
 $generated += Resolve-Files
 $generated += "`n"
