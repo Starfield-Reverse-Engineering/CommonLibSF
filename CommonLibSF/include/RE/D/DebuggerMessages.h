@@ -10,18 +10,20 @@ namespace Json
 {
 	class Value;
 }
+
 namespace RE::GameScript
 {
 	class RemoteDebugger;
+
 	namespace DebuggerMessages
 	{
-
 		// base messages
 		struct __declspec(novtable) ProtocolMessage
 		{
 			SF_RTTI_VTABLE(GameScript__DebuggerMessages__ProtocolMessage);
 
 			~ProtocolMessage() = default;                                  // 00
+
 			virtual void Serialize(const Json::Value& a_val) = 0;          // 01
 			virtual void HandleMessage(const RemoteDebugger& a_debugger);  // 02
 
@@ -72,6 +74,7 @@ namespace RE::GameScript
 			SF_RTTI_VTABLE(GameScript__DebuggerMessages__Event);
 
 			~Event();  // 00
+
 			// override ProtocolMessage
 			virtual void Serialize(const Json::Value& a_val) override;  // 01
 
@@ -169,6 +172,7 @@ namespace RE::GameScript
 			SF_RTTI_VTABLE(GameScript__DebuggerMessages__StackTraceRequest);
 
 			~StackTraceRequest();  // 00
+
 			// override Request
 			virtual void HandleMessage(const RemoteDebugger& a_debugger) override;  // 02
 			virtual void DeserializeArgs(const Json::Value& a_val) override;        // 04
@@ -206,7 +210,9 @@ namespace RE::GameScript
 		struct ValueRequest : public Request
 		{
 			SF_RTTI_VTABLE(GameScript__DebuggerMessages__ValueRequest);
+
 			~ValueRequest();  // 00
+
 			// override Request
 			virtual void HandleMessage(const RemoteDebugger& a_debugger) override;  // 02
 			virtual void DeserializeArgs(const Json::Value& a_val) override;        // 04
@@ -220,7 +226,9 @@ namespace RE::GameScript
 		struct VariablesRequest : public Request
 		{
 			SF_RTTI_VTABLE(GameScript__DebuggerMessages__VariablesRequest);
+
 			~VariablesRequest();  // 00
+
 			// override Request
 			virtual void HandleMessage(const RemoteDebugger& a_debugger) override;  // 02
 			virtual void DeserializeArgs(const Json::Value& a_val) override;        // 04
@@ -266,6 +274,7 @@ namespace RE::GameScript
 			};
 
 			~StackTraceResponse();  // 00
+
 			// override Response
 			virtual void SerializeBody(Json::Value& r_val) override;  // 03
 
@@ -279,6 +288,7 @@ namespace RE::GameScript
 			SF_RTTI_VTABLE(GameScript__DebuggerMessages__ThreadsResponse);
 
 			~ThreadsResponse();  // 00
+
 			struct Thread
 			{
 				std::string name;
@@ -296,7 +306,9 @@ namespace RE::GameScript
 		struct ValueResponse : public Response
 		{
 			SF_RTTI_VTABLE(GameScript__DebuggerMessages__ValueResponse);
+
 			~ValueResponse();  // 00
+
 			// override Response
 			virtual void SerializeBody(Json::Value& r_val) override;  // 03
 
@@ -308,7 +320,9 @@ namespace RE::GameScript
 		struct VariablesResponse : public Response
 		{
 			SF_RTTI_VTABLE(GameScript__DebuggerMessages__VariablesResponse);
+
 			~VariablesResponse();  // 00
+
 			// override Response
 			virtual void SerializeBody(Json::Value& r_val) override;  // 03
 
@@ -322,7 +336,9 @@ namespace RE::GameScript
 		struct OutputEvent : public Event
 		{
 			SF_RTTI_VTABLE(GameScript__DebuggerMessages__OutputEvent);
+
 			~OutputEvent();  // 00
+
 			// override Event
 			virtual void SerializeBody(Json::Value& r_val) override;  // 03
 
@@ -338,6 +354,7 @@ namespace RE::GameScript
 			SF_RTTI_VTABLE(GameScript__DebuggerMessages__StoppedEvent);
 
 			~StoppedEvent();  // 00
+
 			// override Event
 			virtual void SerializeBody(Json::Value& r_val) override;  // 03
 
@@ -350,7 +367,9 @@ namespace RE::GameScript
 		struct ThreadEvent : public Event
 		{
 			SF_RTTI_VTABLE(GameScript__DebuggerMessages__ThreadEvent);
+
 			~ThreadEvent();  // 00
+
 			// override Event
 			virtual void SerializeBody(Json::Value& r_val) override;  // 03
 
@@ -363,11 +382,12 @@ namespace RE::GameScript
 		struct VersionEvent : public Event
 		{
 			SF_RTTI_VTABLE(GameScript__DebuggerMessages__VersionEvent);
+
 			~VersionEvent();  // 00
+
 			// override Event
 			virtual void SerializeBody(Json::Value& r_val) override;  // 03
 		};
 		static_assert(sizeof(VersionEvent) == 0x50);
-
 	}
 }
