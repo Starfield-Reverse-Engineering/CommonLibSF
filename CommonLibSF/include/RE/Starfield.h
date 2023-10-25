@@ -79,6 +79,7 @@
 #include "RE/C/CombatGroup.h"
 #include "RE/C/Console.h"
 #include "RE/C/ConsoleLog.h"
+#include "RE/D/DebuggerMessages.h"
 #include "RE/E/ExtraDataList.h"
 #include "RE/E/ExtraDataTypes.h"
 #include "RE/E/ExtraLock.h"
