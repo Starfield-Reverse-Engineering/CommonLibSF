@@ -28,7 +28,7 @@ jobs:
 
       - name: Build
         run: |
-          ${{ github.workspace }}/scripts/build-debug-${{ matrix.compiler }}-cpm.bat
+          ${{ github.workspace }}/scripts/build-debug-msvc-cpm.bat
 
       - name: Find PDB
         run: |
