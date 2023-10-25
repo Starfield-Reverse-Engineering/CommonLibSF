@@ -28,7 +28,8 @@
       "name": "buildtype-debug-msvc",
       "hidden": true,
       "cacheVariables": {
-        "CMAKE_BUILD_TYPE": "Debug"
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_CONFIGURATION_TYPES": "Debug"
       }
     },
     {
@@ -36,14 +37,16 @@
       "hidden": true,
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Release",
-        "CMAKE_CXX_FLAGS_RELEASE": "/fp:fast /GR- /Gw /O2 /Ob3 /Qpar"
+        "CMAKE_CXX_FLAGS_RELEASE": "/fp:fast /GR- /Gw /O2 /Ob3 /Qpar",
+        "CMAKE_CONFIGURATION_TYPES": "Release"
       }
     },
     {
       "name": "buildtype-debug-clang-cl",
       "hidden": true,
       "cacheVariables": {
-        "CMAKE_BUILD_TYPE": "Debug"
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_CONFIGURATION_TYPES": "Debug"
       }
     },
     {
@@ -51,7 +54,8 @@
       "hidden": true,
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Release",
-        "CMAKE_CXX_FLAGS_RELEASE": "/fp:fast /GR- /Gw /O2"
+        "CMAKE_CXX_FLAGS_RELEASE": "/fp:fast /GR- /Gw /O2",
+        "CMAKE_CONFIGURATION_TYPES": "Release"
       }
     },
     {
