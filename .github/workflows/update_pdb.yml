@@ -28,11 +28,11 @@ jobs:
 
       - name: Build
         run: |
-          ${{ github.workspace }}/scripts/build-debug-msvc-cpm.bat
+          ${{ github.workspace }}/scripts/build-debug-msvc-cpm-test.bat
 
       - name: Find PDB
         run: |
-          $pdb = Get-ChildItem -Path "${{ github.workspace }}/.." -Filter "CommonLibSF.pdb" -Recurse -ErrorAction SilentlyContinue -Force
+          $pdb = Get-ChildItem -Path "${{ github.workspace }}" -Filter "CommonLibSF-test.pdb" -Recurse -ErrorAction SilentlyContinue -Force
           "PDB_PATH=$pdb" >> $env:GITHUB_ENV
 
       - name: Upload Artifact
