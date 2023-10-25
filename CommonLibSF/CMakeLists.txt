@@ -38,6 +38,8 @@ if(USING_VCPKG)
 else()
   include("${CMAKE_CURRENT_SOURCE_DIR}/cmake/CPM.cmake")
 
+  set(CPM_SOURCE_CACHE "${CMAKE_CURRENT_BINARY_DIR}/.cpm")
+
   CPMAddPackage(
     GITHUB_REPOSITORY gabime/spdlog
     VERSION 1.12.0
@@ -213,3 +215,10 @@ install(
     include/SFSE
   DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
 )
+
+if(NOT USING_VCPKG)
+set_property(
+  TARGET ${PROJECT_NAME}
+  APPEND PROPERTY ADDITIONAL_CLEAN_FILES ${CPM_SOURCE_CACHE} ${CMAKE_CURRENT_BINARY_DIR}/_deps
+)
+endif()
