@@ -22,7 +22,7 @@ namespace RE::GameScript
 		{
 			SF_RTTI_VTABLE(GameScript__DebuggerMessages__ProtocolMessage);
 
-			~ProtocolMessage() = default;                                  // 00
+			~ProtocolMessage() = default;  // 00
 
 			virtual void Serialize(const Json::Value& a_val) = 0;          // 01
 			virtual void HandleMessage(const RemoteDebugger& a_debugger);  // 02
