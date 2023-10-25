@@ -5,6 +5,7 @@ on:
     branches: [main, feature/*, fix/*, maintenance]
     paths:
       - "CommonLibSF/**"
+      - ".github/workflows/main_ci.yml"
   workflow_dispatch:
 
 jobs:
