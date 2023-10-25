@@ -1,6 +1,6 @@
 #pragma once
 
-#include "RE/T/TESObjectMisc.h"
+#include "RE/T/TESObjectMISC.h"
 
 namespace RE
 {
