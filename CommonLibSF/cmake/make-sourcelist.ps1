@@ -26,7 +26,7 @@ function Normalize-Path {
 
 function Resolve-Files {
     param (
-        [string[]]$range = @('include', 'src', 'test')
+        [string[]]$range = @('include', 'src')
     )
 
     process {
