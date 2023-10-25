@@ -9,7 +9,7 @@ namespace RE
 	public:
 		SF_RTTI_VTABLE(BGSObjectPlacementDefaults);
 
-		~BGSObjectPlacementDefaults() override;
+		~BGSObjectPlacementDefaults() override; // 00
 
 		// override (BaseFormComponent)
 		const BSFixedString& GetFormComponentType() const override;  // 01 - { return "BGSObjectPaletteDefaults_Component"; } ???
@@ -17,9 +17,6 @@ namespace RE
 
 		// members
 		std::uint64_t unk08;  // 08
-		std::uint32_t unk10;  // 10
-		std::uint32_t unk14;  // 14
-		std::uint32_t unk18;  // 18
 	};
-	static_assert(sizeof(BGSObjectPlacementDefaults) == 0x20);
+	static_assert(sizeof(BGSObjectPlacementDefaults) == 0x10);
 }
