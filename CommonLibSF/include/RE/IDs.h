@@ -126,6 +126,24 @@ namespace RE::ID
 
 	}
 
+	namespace BSSystemFile
+	{
+		inline constexpr REL::ID ctor{ 198445 };
+		inline constexpr REL::ID dtor{ 198446 };
+		inline constexpr REL::ID DoClose{ 198452 };
+		inline constexpr REL::ID DeleteFileA{ 198451 };
+		inline constexpr REL::ID DoOpen{ 198454 };
+		inline constexpr REL::ID DoSeek{ 198456 };
+		inline constexpr REL::ID DoSetEndOfFile{ 198457 };
+		inline constexpr REL::ID Flush{ 78151 };
+		inline constexpr REL::ID GetSize{ 85176 };
+		inline constexpr REL::ID Read{ 75362 };
+		inline constexpr REL::ID RenameFile{ 198459 };
+		inline constexpr REL::ID Truncate{ 195959 };
+		inline constexpr REL::ID Write{ 75363 };
+		inline constexpr REL::ID operatorEqCopy{ 198448 };
+	}
+
 	namespace BSTEventSource
 	{
 		inline constexpr REL::ID Notify{ 178573 };

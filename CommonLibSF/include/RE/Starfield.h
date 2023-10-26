@@ -68,6 +68,7 @@
 #include "RE/B/BSReflection.h"
 #include "RE/B/BSStringPool.h"
 #include "RE/B/BSStringT.h"
+#include "RE/B/BSSystemFile.h"
 #include "RE/B/BSTArray.h"
 #include "RE/B/BSTEvent.h"
 #include "RE/B/BSTList.h"
