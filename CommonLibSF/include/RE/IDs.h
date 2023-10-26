@@ -36,6 +36,19 @@ namespace RE::ID
 		inline constexpr REL::ID ctor{ 101725 };
 	}
 
+	namespace BSLog
+	{
+		inline constexpr REL::ID ctor{ 184813 };
+		inline constexpr REL::ID dtor{ 184816 };
+		inline constexpr REL::ID CycleLog{ 184822 };
+		inline constexpr REL::ID FlushBuffer{ 184823 };
+		inline constexpr REL::ID FlushBufferToFile{ 184824 };
+		inline constexpr REL::ID GenerateTimeStamp{ 184825 };
+		inline constexpr REL::ID MakeLogFilename{ 184826 };
+		inline constexpr REL::ID WriteData{ 184832 };
+		inline constexpr REL::ID WriteEntry{ 184833 };
+	}
+
 	namespace BSNonReentrantSpinLock
 	{
 		inline constexpr REL::ID lock{ 73879 };
@@ -125,7 +138,6 @@ namespace RE::ID
 		inline constexpr REL::ID GetEntry_wchar_t_{ 198220 };
 
 	}
-
 	namespace BSSystemFile
 	{
 		inline constexpr REL::ID ctor{ 198445 };
