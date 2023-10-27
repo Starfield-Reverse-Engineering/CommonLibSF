@@ -313,9 +313,11 @@ namespace RE::GameScript
 			virtual void SerializeBody(Json::Value& r_val) override;  // 03
 
 			// members
-			Variable value;  // 78
+			std::string value;     // 78
+			std::string type;      // 98
+			bool        compound;  // B8
 		};
-		static_assert(sizeof(ValueResponse) == 0xE0);
+		static_assert(sizeof(ValueResponse) == 0xC0);
 
 		struct VariablesResponse : public Response
 		{
