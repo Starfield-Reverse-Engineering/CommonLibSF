@@ -108,7 +108,7 @@ namespace RE
 
 		if (s->sa_family == AFType::AF_INET) {
 			const auto sin = reinterpret_cast<sockaddr_in*>(s);
-			auto ip = sin->sin_addr.s_addr;
+			auto       ip = sin->sin_addr.s_addr;
 			*reinterpret_cast<unsigned int*>(&a->ip) = ip;
 			a->port = WinAPI::htons(sin->sin_port);
 			ip = WinAPI::ntohl(ip);

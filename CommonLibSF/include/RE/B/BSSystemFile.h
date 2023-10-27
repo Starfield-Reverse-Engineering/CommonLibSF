@@ -46,7 +46,7 @@ namespace RE
 			kCurrent = 1,
 			kEnd = 2
 		};
-		
+
 		BSSystemFile();
 
 		~BSSystemFile();
