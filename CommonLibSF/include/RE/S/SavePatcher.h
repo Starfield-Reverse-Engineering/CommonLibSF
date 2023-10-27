@@ -1,3 +1,5 @@
+#pragma once
+
 #include "RE/I/ISavePatcherInterface.h"
 
 namespace RE::GameScript
