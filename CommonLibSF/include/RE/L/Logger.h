@@ -1,3 +1,5 @@
+#pragma once
+
 #include "RE/E/ErrorLogger.h"
 
 namespace RE::GameScript
