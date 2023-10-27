@@ -120,7 +120,8 @@ namespace RE::GameScript
 			// override Request
 			virtual void HandleMessage(const RemoteDebugger& a_debugger) override;  // 02
 
-			std::uint32_t threadId;
+			// members
+			std::uint32_t threadId;  // 50
 		};
 		static_assert(sizeof(StepInRequest) == 0x58);
 
@@ -130,7 +131,9 @@ namespace RE::GameScript
 
 			// override Request
 			virtual void HandleMessage(const RemoteDebugger& a_debugger) override;  // 02
-			std::uint32_t threadId;
+
+			// members
+			std::uint32_t threadId;  // 50
 		};
 		static_assert(sizeof(StepOutRequest) == 0x58);
 
@@ -140,7 +143,9 @@ namespace RE::GameScript
 
 			// override Request
 			virtual void HandleMessage(const RemoteDebugger& a_debugger) override;  // 02
-			std::uint32_t threadId;
+
+			// members
+			std::uint32_t threadId;  // 50
 		};
 		static_assert(sizeof(NextRequest) == 0x58);
 
