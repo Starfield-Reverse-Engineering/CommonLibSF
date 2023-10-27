@@ -9,11 +9,11 @@ namespace RE
 		class __declspec(novtable) IVMRemoteDebuggerInterface
 		{
 		public:
-			static constexpr auto RTTI{ RTTI::BSScript__IVMRemoteDebuggerInterface };
-			static constexpr auto VTABLE{ VTABLE::BSScript__IVMRemoteDebuggerInterface };
+			SF_RTTI_VTABLE(BSScript__IVMRemoteDebuggerInterface);
 
-			virtual ~IVMRemoteDebuggerInterface();  // 00
+			~IVMRemoteDebuggerInterface() = delete;
 
+			virtual void Unk00();  // 00 -- calls Unk05 in IVirtualMachine
 			virtual void Unk01();  // 01
 			virtual void Unk02();  // 02
 		};
