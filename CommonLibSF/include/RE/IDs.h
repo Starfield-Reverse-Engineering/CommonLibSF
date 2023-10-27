@@ -150,6 +150,20 @@ namespace RE::ID
 		inline constexpr REL::ID HasType{ 83208 };
 	}
 
+	namespace idLogging
+	{
+		inline constexpr REL::ID singleton{ 895197 };
+	}
+
+	namespace idTCP
+	{
+		inline constexpr REL::ID Accept{ 211257 };
+		inline constexpr REL::ID Close{ 211258 };
+		inline constexpr REL::ID Listen{ 211259 };
+		inline constexpr REL::ID Read{ 211264 };
+		inline constexpr REL::ID Write{ 211266 };
+	}
+
 	namespace LockPickedEvent
 	{
 		inline constexpr REL::ID GetEventSource{ 107115 };
@@ -309,4 +323,9 @@ namespace RE::ID
 
 	inline constexpr REL::ID RTDynamicCast{ 211916 };
 
+	// idCoreSocket functions
+	inline constexpr REL::ID NET_ErrorString{ 211261 };
+	inline constexpr REL::ID Net_SockadrToNetadr{ 211262 };
+	inline constexpr REL::ID NET_WaitForData{ 211263 };
+	inline constexpr REL::ID Sys_InitNetworking{ 211265 };
 }

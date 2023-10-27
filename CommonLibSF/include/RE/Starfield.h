@@ -107,6 +107,8 @@
 #include "RE/I/IPostAnimationChannelUpdateFunctor.h"
 #include "RE/I/IStoreAnimationActions.h"
 #include "RE/I/IVMObjectBindInterface.h"
+#include "RE/I/idLogging.h"
+#include "RE/I/idTCP.h"
 #include "RE/IDs.h"
 #include "RE/IDs_NiRTTI.h"
 #include "RE/IDs_RTTI.h"
