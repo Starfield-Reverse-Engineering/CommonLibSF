@@ -36,6 +36,19 @@ namespace RE::ID
 		inline constexpr REL::ID ctor{ 101725 };
 	}
 
+	namespace BSLog
+	{
+		inline constexpr REL::ID ctor{ 184813 };
+		inline constexpr REL::ID dtor{ 184816 };
+		inline constexpr REL::ID CycleLog{ 184822 };
+		inline constexpr REL::ID FlushBuffer{ 184823 };
+		inline constexpr REL::ID FlushBufferToFile{ 184824 };
+		inline constexpr REL::ID GenerateTimeStamp{ 184825 };
+		inline constexpr REL::ID MakeLogFilename{ 184826 };
+		inline constexpr REL::ID WriteData{ 184832 };
+		inline constexpr REL::ID WriteEntry{ 184833 };
+	}
+
 	namespace BSNonReentrantSpinLock
 	{
 		inline constexpr REL::ID lock{ 73879 };
@@ -125,6 +138,23 @@ namespace RE::ID
 		inline constexpr REL::ID GetEntry_wchar_t_{ 198220 };
 
 	}
+	namespace BSSystemFile
+	{
+		inline constexpr REL::ID ctor{ 198445 };
+		inline constexpr REL::ID dtor{ 198446 };
+		inline constexpr REL::ID DoClose{ 198452 };
+		inline constexpr REL::ID DeleteFileA{ 198451 };
+		inline constexpr REL::ID DoOpen{ 198454 };
+		inline constexpr REL::ID DoSeek{ 198456 };
+		inline constexpr REL::ID DoSetEndOfFile{ 198457 };
+		inline constexpr REL::ID Flush{ 78151 };
+		inline constexpr REL::ID GetSize{ 85176 };
+		inline constexpr REL::ID Read{ 75362 };
+		inline constexpr REL::ID RenameFile{ 198459 };
+		inline constexpr REL::ID Truncate{ 195959 };
+		inline constexpr REL::ID Write{ 75363 };
+		inline constexpr REL::ID operatorEqCopy{ 198448 };
+	}
 
 	namespace BSTEventSource
 	{
@@ -148,6 +178,20 @@ namespace RE::ID
 	namespace ExtraDataList
 	{
 		inline constexpr REL::ID HasType{ 83208 };
+	}
+
+	namespace idLogging
+	{
+		inline constexpr REL::ID singleton{ 895197 };
+	}
+
+	namespace idTCP
+	{
+		inline constexpr REL::ID Accept{ 211257 };
+		inline constexpr REL::ID Close{ 211258 };
+		inline constexpr REL::ID Listen{ 211259 };
+		inline constexpr REL::ID Read{ 211264 };
+		inline constexpr REL::ID Write{ 211266 };
 	}
 
 	namespace LockPickedEvent
@@ -309,4 +353,9 @@ namespace RE::ID
 
 	inline constexpr REL::ID RTDynamicCast{ 211916 };
 
+	// idCoreSocket functions
+	inline constexpr REL::ID NET_ErrorString{ 211261 };
+	inline constexpr REL::ID Net_SockadrToNetadr{ 211262 };
+	inline constexpr REL::ID NET_WaitForData{ 211263 };
+	inline constexpr REL::ID Sys_InitNetworking{ 211265 };
 }

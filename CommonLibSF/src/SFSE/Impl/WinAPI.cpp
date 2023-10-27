@@ -7,6 +7,7 @@
 #include <DbgHelp.h>
 #include <objbase.h>
 #include <ShlObj.h>
+#include <WinSock2.h>
 // clang-format on
 
 #undef CreateFileMapping
@@ -495,6 +496,11 @@ namespace SFSE::WinAPI
 			reinterpret_cast<LPSYSTEM_INFO>(a_info));
 	}
 
+	std::uint16_t htons(std::uint16_t hostshort) noexcept
+	{
+		return ::htons(hostshort);
+	}
+
 	bool IMAGE_SNAP_BY_ORDINAL64(
 		std::uint64_t a_ordinal) noexcept
 	{
@@ -642,6 +648,11 @@ namespace SFSE::WinAPI
 			a_srcLen,
 			a_dest,
 			a_destLen);
+	}
+
+	std::uint32_t ntohl(std::uint32_t netlong) noexcept
+	{
+		return ::ntohl(netlong);
 	}
 
 	void* OpenFileMapping(
@@ -1012,6 +1023,11 @@ namespace SFSE::WinAPI
 			a_strLen,
 			a_default,
 			a_defaultLen);
+	}
+
+	std::int32_t WSAGetLastError() noexcept
+	{
+		return ::WSAGetLastError();
 	}
 
 	bool WriteProcessMemory(
