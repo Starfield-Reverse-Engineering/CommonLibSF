@@ -47,9 +47,9 @@ namespace RE
 			kEnd = 2
 		};
 
-		BSSystemFile();
-
 		~BSSystemFile();
+
+		BSSystemFile();
 
 		BSSystemFile(
 			const char*                    a_path,
