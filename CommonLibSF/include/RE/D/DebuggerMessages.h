@@ -119,8 +119,11 @@ namespace RE::GameScript
 
 			// override Request
 			virtual void HandleMessage(const RemoteDebugger& a_debugger) override;  // 02
+
+			// members
+			std::uint32_t threadId;  // 50
 		};
-		static_assert(sizeof(StepInRequest) == 0x50);
+		static_assert(sizeof(StepInRequest) == 0x58);
 
 		struct StepOutRequest : public Request
 		{
@@ -128,8 +131,11 @@ namespace RE::GameScript
 
 			// override Request
 			virtual void HandleMessage(const RemoteDebugger& a_debugger) override;  // 02
+
+			// members
+			std::uint32_t threadId;  // 50
 		};
-		static_assert(sizeof(StepOutRequest) == 0x50);
+		static_assert(sizeof(StepOutRequest) == 0x58);
 
 		struct NextRequest : public Request
 		{
@@ -137,8 +143,11 @@ namespace RE::GameScript
 
 			// override Request
 			virtual void HandleMessage(const RemoteDebugger& a_debugger) override;  // 02
+
+			// members
+			std::uint32_t threadId;  // 50
 		};
-		static_assert(sizeof(NextRequest) == 0x50);
+		static_assert(sizeof(NextRequest) == 0x58);
 
 		struct ContinueRequest : public Request
 		{
