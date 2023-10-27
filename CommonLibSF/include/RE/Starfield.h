@@ -110,6 +110,7 @@
 #include "RE/I/ISavePatcherInterface.h"
 #include "RE/I/IStoreAnimationActions.h"
 #include "RE/I/IVMDebugInterface.h"
+#include "RE/I/IVMFunctionMessageDispatch.h"
 #include "RE/I/IVMObjectBindInterface.h"
 #include "RE/I/IVMRemoteDebuggerInterface.h"
 #include "RE/I/IVMSaveLoadInterface.h"
