@@ -2,15 +2,14 @@
 
 namespace RE
 {
-	BSSystemFile::~BSSystemFile()
-	{
-		DoClose();
-	}
-
 	BSSystemFile::BSSystemFile() :
 		flags(1),
 		file(WinAPI::INVALID_HANDLE_VALUE)
+	{}
+
+	BSSystemFile::~BSSystemFile()
 	{
+		DoClose();
 	}
 
 	BSSystemFile::BSSystemFile(
@@ -35,15 +34,15 @@ namespace RE
 	}
 
 	BSSystemFile::BSSystemFile(BSSystemFile& a_lhs) :
-		file(a_lhs.file),
-		flags(a_lhs.flags)
+		flags(a_lhs.flags),
+		file(a_lhs.file)
 	{
 		a_lhs.Invalidate();
 	}
 
 	BSSystemFile::BSSystemFile(BSSystemFile&& a_rhs) :
-		file(a_rhs.file),
-		flags(a_rhs.flags)
+		flags(a_rhs.flags),
+		file(a_rhs.file)
 	{
 		a_rhs.Invalidate();
 	}
@@ -82,7 +81,7 @@ namespace RE
 
 	BSSystemFile::ErrorCode BSSystemFile::GetErrorCode()
 	{
-		return static_cast<BSSystemFile::ErrorCode>(flags & 0x3FFFFFFF);
+		return static_cast<ErrorCode>(flags & 0x3FFFFFFF);
 	}
 
 	BSSystemFile::ErrorCode BSSystemFile::Read(void* a_buffer, std::uint64_t a_toRead, std::uint64_t& r_read)
@@ -158,5 +157,4 @@ namespace RE
 		REL::Relocation<func_t> func{ ID::BSSystemFile::DoSeek };
 		return func(this, a_offset, a_seekMode, r_newPosition);
 	}
-
 }

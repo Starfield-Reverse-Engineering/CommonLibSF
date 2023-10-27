@@ -17,9 +17,12 @@ namespace RE
 		struct ILogger
 		{
 			SF_RTTI_VTABLE(idLogging__ILogger);
+
 			~ILogger() = default;                                                                                 // 00
+
 			virtual bool ShouldLog(Severity severity) = 0;                                                        // 01
 			virtual void Log(const char* a_fileName, int a_line_number, Severity severity, const char* msg) = 0;  // 02
+
 			void         Printf(const char* a_fileName, int a_line_number, Severity severity, const char* a_fmt, ...)
 			{
 				va_list args;
@@ -38,9 +41,12 @@ namespace RE
 	struct NetSocketLogger : public idLogging::ILogger
 	{
 		SF_RTTI_VTABLE(__NetSocketLogger);
+
 		~NetSocketLogger() = default;  // 00
+
 		// override idLogging::ILogger
 		bool ShouldLog([[maybe_unused]] idLogging::Severity severity) override { return false; }                     // 01
+
 		void Log(const char* a_fileName, int a_line_number, idLogging::Severity severity, const char* msg) override  // 02
 		{
 			const char* severitystr;

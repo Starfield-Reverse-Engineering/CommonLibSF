@@ -15,12 +15,14 @@ namespace RE
 			kAccessDenied = 5,
 			kOtherFileError = 6
 		};
+
 		enum class AccessMode : std::uint32_t
 		{
 			kRead = 0,
 			kReadWrite = 1,
 			kWriteOnly = 2
 		};
+
 		enum class OpenMode : std::uint32_t
 		{
 			kOpenExisting = 0,
@@ -29,6 +31,7 @@ namespace RE
 			kTruncateExisting = 3,
 			kCreateIfNotExist = 4
 		};
+
 		enum class ShareMode : std::uint32_t
 		{
 			kExclusive = 0,
@@ -43,9 +46,11 @@ namespace RE
 			kCurrent = 1,
 			kEnd = 2
 		};
+		
+		BSSystemFile();
 
 		~BSSystemFile();
-		BSSystemFile();
+
 		BSSystemFile(
 			const char*                    a_path,
 			AccessMode                     a_accessMode,

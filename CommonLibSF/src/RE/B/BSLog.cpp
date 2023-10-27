@@ -2,11 +2,6 @@
 
 namespace RE
 {
-	BSLog::~BSLog()
-	{
-		dtor();
-	}
-
 	BSLog::BSLog(
 		const char*   a_logName,
 		const char*   a_logFolderPath,
@@ -16,6 +11,11 @@ namespace RE
 		std::uint32_t a_blocks_allocated)
 	{
 		ctor(a_logName, a_logFolderPath, a_timeStamped, a_logNumber, a_bufferSize, a_blocks_allocated);
+	}
+
+	BSLog::~BSLog()
+	{
+		dtor();
 	}
 
 	BSLog* BSLog::ctor(const char* a_logName, const char* a_logFolderPath, bool a_timeStamped, std::uint32_t a_logNumber, std::uint32_t a_bufferSize, std::uint32_t a_blocks_allocated)
@@ -80,5 +80,4 @@ namespace RE
 		REL::Relocation<func_t> func{ ID::BSLog::GenerateTimeStamp };
 		return func(a_buffer);
 	}
-
 }

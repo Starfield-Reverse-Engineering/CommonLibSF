@@ -28,8 +28,7 @@ namespace RE
 		class __declspec(novtable) IVMSaveLoadInterface
 		{
 		public:
-			static constexpr auto RTTI{ RTTI::BSScript__IVMSaveLoadInterface };
-			static constexpr auto VTABLE{ VTABLE::BSScript__IVMSaveLoadInterface };
+			SF_RTTI_VTABLE(BSScript__IVMSaveLoadInterface);
 
 			virtual ~IVMSaveLoadInterface();  // 00
 

@@ -1,4 +1,5 @@
 #pragma once
+
 #include "RE/B/BSFixedString.h"
 #include "RE/B/BSLock.h"
 #include "RE/B/BSSystemFile.h"
@@ -8,9 +9,12 @@ namespace RE
 	class BSLog
 	{
 		~BSLog();
+
 		BSLog() = delete;
+
 		BSLog(const BSLog&) = delete;
 		BSLog(BSLog&&) = delete;
+
 		BSLog(
 			const char*   a_logName,
 			const char*   a_logFolderPath,
@@ -36,6 +40,7 @@ namespace RE
 			std::uint32_t a_logNumber,
 			std::uint32_t a_bufferSize,
 			std::uint32_t a_blocks_allocated);
+
 		void dtor();
 
 	public:

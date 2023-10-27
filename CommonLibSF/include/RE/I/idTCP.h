@@ -28,6 +28,7 @@ namespace RE
 		SF_RTTI_VTABLE(idTCP);
 
 		virtual ~idTCP();                                        // 00
+
 		bool         Listen(std::uint16_t port, bool blocking);  // 'blocking' is ignored
 		bool         Accept(const idTCP& listener);
 		std::int32_t Close();

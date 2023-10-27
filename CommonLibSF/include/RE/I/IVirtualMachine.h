@@ -1,6 +1,8 @@
 #pragma once
+
 #include "RE/B/BSIntrusiveRefCounted.h"
 #include "RE/B/BSTSmartPointer.h"
+
 namespace RE
 {
 	template <class F>
@@ -39,8 +41,7 @@ namespace RE
 			public BSIntrusiveRefCounted  // 08
 		{
 		public:
-			static constexpr auto RTTI{ RTTI::BSScript__IVirtualMachine };
-			static constexpr auto VTABLE{ VTABLE::BSScript__IVirtualMachine };
+			SF_RTTI_VTABLE(BSScript__IVirtualMachine);
 
 			virtual ~IVirtualMachine() = default;  // 00
 

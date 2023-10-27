@@ -489,12 +489,15 @@ namespace SFSE::WinAPI
 			{
 				std::uint8_t s_b1, s_b2, s_b3, s_b4;
 			} S_un_b;
+
 			struct
 			{
 				std::uint16_t s_w1, s_w2;
 			} S_un_w;
+
 			std::uint32_t S_addr;
 		} S_un;
+
 		// getting around the #DEFINEs in inaddr.h
 		struct
 		{
@@ -503,10 +506,12 @@ namespace SFSE::WinAPI
 			std::uint8_t s_lh;
 			std::uint8_t s_impno;
 		};
+
 		struct
 		{
 			std::uint16_t _s_w1, s_imp;
 		};
+
 		std::uint32_t s_addr;
 	};
 

@@ -2,10 +2,11 @@
 
 namespace RE
 {
-	const char* NET_ErrorString(void)
+	const char* NET_ErrorString()
 	{
 		using WSAError = WinAPI::WSAError;
-		WSAError code = static_cast<WSAError>(WinAPI::WSAGetLastError());
+
+		const auto code = static_cast<WSAError>(WinAPI::WSAGetLastError());
 		switch (code) {
 		case WSAError::WSAEINTR:
 			return "WSAEINTR";
@@ -100,18 +101,18 @@ namespace RE
 		}
 	}
 
-	void Net_SockadrToNetadr(struct WinAPI::sockaddr* s, netadr_t* a)
+	void Net_SockadrToNetadr(WinAPI::sockaddr* s, netadr_t* a)
 	{
 		using AFType = WinAPI::AFType;
 		using sockaddr_in = WinAPI::sockaddr_in;
 
-		unsigned int ip;
 		if (s->sa_family == AFType::AF_INET) {
-			sockaddr_in* sin = reinterpret_cast<sockaddr_in*>(s);
-			ip = sin->sin_addr.s_addr;
-			*(unsigned int*)&a->ip = ip;
+			const auto sin = reinterpret_cast<sockaddr_in*>(s);
+			auto ip = sin->sin_addr.s_addr;
+			*reinterpret_cast<unsigned int*>(&a->ip) = ip;
 			a->port = WinAPI::htons(sin->sin_port);
 			ip = WinAPI::ntohl(ip);
+
 			if (ip == WinAPI::INADDR_LOOPBACK) {
 				a->type = netadrtype_t::NA_LOOPBACK;
 			} else {
@@ -133,6 +134,7 @@ namespace RE
 		REL::Relocation<func_t> func{ ID::Sys_InitNetworking };
 		return func();
 	}
+
 	bool idTCP::Listen(std::uint16_t port, bool blocking)
 	{
 		using func_t = decltype(&idTCP::Listen);
@@ -167,5 +169,4 @@ namespace RE
 		REL::Relocation<func_t> func{ ID::idTCP::Write };
 		return func(this, buffer, size, timeoutMs);
 	}
-
 }

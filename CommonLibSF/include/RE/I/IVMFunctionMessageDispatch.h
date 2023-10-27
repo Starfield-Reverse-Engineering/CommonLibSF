@@ -5,7 +5,7 @@ namespace RE::BSScript::Internal
 	class __declspec(novtable) IVMFunctionMessageDispatch
 	{
 	public:
-		static constexpr auto RTTI{ RTTI::BSScript__Internal__IVMFunctionMessageDispatch };
+		SF_RTTI(BSScript__Internal__IVMFunctionMessageDispatch);
 		// VTable got optimized out?
 
 		virtual void Unk00();                   // 00
