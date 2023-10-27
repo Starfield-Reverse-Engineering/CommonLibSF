@@ -20,7 +20,7 @@ namespace RE
 			~ILogger() = default;                                                                                 // 00
 			virtual bool ShouldLog(Severity severity) = 0;                                                        // 01
 			virtual void Log(const char* a_fileName, int a_line_number, Severity severity, const char* msg) = 0;  // 02
-			void Printf(const char* a_fileName, int a_line_number, Severity severity, const char* a_fmt, ...)
+			void         Printf(const char* a_fileName, int a_line_number, Severity severity, const char* a_fmt, ...)
 			{
 				va_list args;
 				va_start(args, a_fmt);
