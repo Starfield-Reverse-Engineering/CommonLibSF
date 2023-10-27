@@ -99,6 +99,12 @@ namespace SFSE::WinAPI
 	inline constexpr auto FILE_MAP_TARGETS_INVALID{ 0x40000000u };
 	inline constexpr auto FILE_MAP_RESERVE{ 0x80000000u };
 
+	// file open mode flags
+	inline constexpr auto GENERIC_READ{ 0x80000000L };
+	inline constexpr auto GENERIC_WRITE{ 0x40000000L };
+	inline constexpr auto GENERIC_EXECUTE{ 0x20000000L };
+	inline constexpr auto GENERIC_ALL{ 0x10000000L };
+
 	// known folder flags
 	inline constexpr auto KF_FLAG_DEFAULT{ 0x00000000u };
 	inline constexpr auto KF_FLAG_FORCE_APP_DATA_REDIRECTION{ 0x00080000u };

@@ -36,6 +36,19 @@ namespace RE::ID
 		inline constexpr REL::ID ctor{ 101725 };
 	}
 
+	namespace BSLog
+	{
+		inline constexpr REL::ID ctor{ 184813 };
+		inline constexpr REL::ID dtor{ 184816 };
+		inline constexpr REL::ID CycleLog{ 184822 };
+		inline constexpr REL::ID FlushBuffer{ 184823 };
+		inline constexpr REL::ID FlushBufferToFile{ 184824 };
+		inline constexpr REL::ID GenerateTimeStamp{ 184825 };
+		inline constexpr REL::ID MakeLogFilename{ 184826 };
+		inline constexpr REL::ID WriteData{ 184832 };
+		inline constexpr REL::ID WriteEntry{ 184833 };
+	}
+
 	namespace BSNonReentrantSpinLock
 	{
 		inline constexpr REL::ID lock{ 73879 };
@@ -124,6 +137,23 @@ namespace RE::ID
 		inline constexpr REL::ID GetEntry_char_{ 198219 };
 		inline constexpr REL::ID GetEntry_wchar_t_{ 198220 };
 
+	}
+	namespace BSSystemFile
+	{
+		inline constexpr REL::ID ctor{ 198445 };
+		inline constexpr REL::ID dtor{ 198446 };
+		inline constexpr REL::ID DoClose{ 198452 };
+		inline constexpr REL::ID DeleteFileA{ 198451 };
+		inline constexpr REL::ID DoOpen{ 198454 };
+		inline constexpr REL::ID DoSeek{ 198456 };
+		inline constexpr REL::ID DoSetEndOfFile{ 198457 };
+		inline constexpr REL::ID Flush{ 78151 };
+		inline constexpr REL::ID GetSize{ 85176 };
+		inline constexpr REL::ID Read{ 75362 };
+		inline constexpr REL::ID RenameFile{ 198459 };
+		inline constexpr REL::ID Truncate{ 195959 };
+		inline constexpr REL::ID Write{ 75363 };
+		inline constexpr REL::ID operatorEqCopy{ 198448 };
 	}
 
 	namespace BSTEventSource
