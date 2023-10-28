@@ -8,6 +8,7 @@
 #include "RE/B/BSTEvent.h"
 #include "RE/C/Color.h"
 #include "RE/N/NiPoint3.h"
+#include "RE/S/Sexes.h"
 #include "RE/T/TESActorBase.h"
 #include "RE/T/TESRaceForm.h"
 
@@ -21,6 +22,7 @@ namespace RE
 	class TESClass;
 	class TESCombatStyle;
 	class TESFaction;
+	class TESFurniture;
 
 	class TESNPC :
 		public TESActorBase,                     // 000
@@ -36,7 +38,7 @@ namespace RE
 
 		enum class PRONOUN_TYPE
 		{
-			kNone,
+			kUnselected,
 			kHeHim,
 			kSheHer,
 			kTheyThem
@@ -56,6 +58,13 @@ namespace RE
 
 		~TESNPC() override;  // 00
 
+		[[nodiscard]] TESRace* GetRace() const { return formRace; }
+
+		[[nodiscard]] SEX  GetSex() const;
+        [[nodiscard]] bool ContainsKeyword(std::string_view a_editorID);
+		[[nodiscard]] bool HasKeyword(std::string_view a_editorID);
+		[[nodiscard]] bool IsInFaction(TESFaction* a_faction) const;
+
 		// members
 		BGSAttachParentArray                         attachParents;    // 320
 		std::uint64_t                                unk338;           // 338
@@ -73,20 +82,20 @@ namespace RE
 		float                                        height;           // 38C
 		float                                        heightMax;        // 390
 		std::uint32_t                                unk394;           // 394
-		std::uint64_t                                unk398;           // 398
+		TESNPC*                                      unk398;           // 398
 		std::uint64_t                                unk3A0;           // 3A0
 		std::uint64_t                                unk3A8;           // 3A8
 		BGSLocalizedString                           shortName;        // 3B0
-		std::uint64_t                                unk3B8;           // 3B8
-		std::uint64_t                                unk3C0;           // 3C0
+		TESObjectARMO*                               farSkin;          // 3B8
+		TESFurniture*                                powerArmorFurn;   // 3C0
 		BGSOutfit*                                   defaultOutfit;    // 3C8
 		BGSOutfit*                                   sleepOutfit;      // 3D0
 		BGSListForm*                                 defaultPackList;  // 3D8
 		TESFaction*                                  crimeFaction;     // 3E0
-		std::uint64_t                                unk3E8;           // 3E8
+		TESFaction*                                  unk3E8;           // 3E8
 		BSTArray<BGSHeadPart*>                       headparts;        // 3F0
 		std::uint64_t                                unk400;           // 400
-		std::uint64_t                                unk408;           // 408
+		BSTArray<float>*                             unk408;           // 408
 		std::uint64_t                                unk410;           // 410
 		std::uint64_t                                unk418;           // 418
 		BSTArray<TintData>                           tintData;         // 420

@@ -1,6 +1,7 @@
 #pragma once
 
 #include "RE/B/BSReflection.h"
+#include "RE/F/FormTypes.h"
 #include "RE/T/TESFile.h"
 #include "RE/T/TESFormRefCount.h"
 

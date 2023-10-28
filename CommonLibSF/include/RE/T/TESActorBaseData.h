@@ -8,6 +8,8 @@ namespace RE
 {
 	class BGSVoiceType;
 	class TESActorBase;
+	class TESGlobal;
+	class TESLevItem;
 
 	struct alignas(0x4) ACTOR_BASE_DATA
 	{
@@ -30,14 +32,31 @@ namespace RE
 			kOppositeGenderanims = 1 << 19,
 			kSimpleActor = 1 << 20,
 			kLoopedScript = 1 << 21,  // ?
-			kLoopedAudio = 1 << 28,   // ?
+			kWalkStyle = 1 << 23,
+			kEditorDead = 1 << 25,
+			kLoopedAudio = 1 << 28,  // ?
 			kIsGhost = 1 << 29,
+			kUnk30 = 1 << 30,
 			kInvulnerable = 1 << 31
 		};
 
 		enum class TEMPLATE_USE_FLAG
 		{
 			kNone = 0,
+			kTraits = 1 << 0,
+			kStats = 1 << 1,
+			kFactions = 1 << 2,
+			kSpells = 1 << 3,
+			kAIData = 1 << 4,
+			kAIPackages = 1 << 5,
+			kUnused = 1 << 6,
+			kBaseData = 1 << 7,
+			kInventory = 1 << 8,
+			kScript = 1 << 9,
+			kAIDefPackList = 1 << 10,
+			kAttackData = 1 << 11,
+			kKeywords = 1 << 12,
+			kCopiedTemplate = 1 << 15
 		};
 
 		// members
@@ -64,20 +83,40 @@ namespace RE
 		void                 InitializeDataComponent() override;     // 02
 
 		// add
-		virtual void CopyFromTemplateForms(TESActorBase** a_forceTemplates);  // 0B
-		virtual void Unk_0C();                                                // 0C
-		virtual void Unk_0D();                                                // 0D
-		virtual void Unk_0E();                                                // 0E
+		virtual void               CopyFromTemplateForms(TESActorBase** a_forceTemplates);  // 0B
+		[[nodiscard]] virtual bool GetIsGhost() const;                                      // 0C
+		[[nodiscard]] virtual bool GetEditorDead() const;                                   // 0D
+		virtual void               Unk_0E();                                                // 0E
+
+		[[nodiscard]] constexpr bool IsEssential() const noexcept { return actorData.actorBaseFlags.all(ACTOR_BASE_DATA::Flag::kEssential); }
+		[[nodiscard]] constexpr bool IsFemale() const noexcept { return actorData.actorBaseFlags.all(ACTOR_BASE_DATA::Flag::kFemale); }
+		[[nodiscard]] bool           IsGhost() const { return GetIsGhost(); }
+		[[nodiscard]] constexpr bool IsProtected() const noexcept { return actorData.actorBaseFlags.all(ACTOR_BASE_DATA::Flag::kProtected); }
+		[[nodiscard]] constexpr bool IsUnique() const noexcept { return actorData.actorBaseFlags.all(ACTOR_BASE_DATA::Flag::kUnique); }
+
+		[[nodiscard]] std::uint16_t GetLevel() const
+		{
+			using func_t = decltype(&TESActorBaseData::GetLevel);
+			REL::Relocation<func_t> func{ ID::TESActorBaseData::GetLevel };
+			return func(this);
+		}
+
+		[[nodiscard]] bool GetUsesLeveledTemplate(std::uint32_t a_templateUseFlag = 0xFFFFFFFF)
+		{
+			using func_t = decltype(&TESActorBaseData::GetUsesLeveledTemplate);
+			REL::Relocation<func_t> func{ ID::TESActorBaseData::GetUsesLeveledTemplate };
+			return func(this, a_templateUseFlag);
+		}
 
 		// members
 		ACTOR_BASE_DATA        actorData;         // 08
 		std::int32_t           changeFlags;       // 1C
 		BSTArray<FACTION_RANK> factions;          // 20
 		TESForm**              templateForms;     // 30
-		std::uint64_t          unk38;             // 38
+		TESForm**              unk38;             // 38
 		TESForm*               baseTemplateForm;  // 40
-		std::uint64_t          unk48;             // 48
-		std::uint64_t          unk50;             // 50
+		TESLevItem*            deathItem;         // 48
+		TESGlobal*             legendChance;      // 50
 		TESForm*               legendTemplate;    // 58
 		BGSVoiceType*          voiceType;         // 60
 		std::uint32_t          unk68;             // 68

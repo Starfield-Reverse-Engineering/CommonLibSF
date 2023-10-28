@@ -758,7 +758,6 @@ namespace REL
 #include "RE/IDs_RTTI.h"
 #include "RE/IDs_VTABLE.h"
 
-#include "RE/F/FormTypes.h"
 #include "RE/M/msvc.h"
 
 #undef cdecl  // Workaround for Clang.

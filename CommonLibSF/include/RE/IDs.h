@@ -287,6 +287,12 @@ namespace RE::ID
 		inline constexpr REL::ID GetScriptCommands{ 841467 };
 	}
 
+	namespace TESActorBaseData
+	{
+		inline constexpr REL::ID GetLevel{ 85868 };
+		inline constexpr REL::ID GetUsesLeveledTemplate{ 85873 };
+	}
+
 	namespace TESCellFullyLoadedEvent
 	{
 		inline constexpr REL::ID GetEventSource{ 107143 };
