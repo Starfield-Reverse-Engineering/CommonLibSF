@@ -16,6 +16,8 @@
 
 namespace RE
 {
+	class TESCombatStyle;
+
 	class TESActorBase :
 		public TESBoundAnimObject,         // 000
 		public TESActorBaseData,           // 118
@@ -34,13 +36,13 @@ namespace RE
 	public:
 		SF_RTTI_VTABLE(TESActorBase);
 
-		~TESActorBase() override;
+		~TESActorBase() override; // 00
 
 		// add
-		virtual void Unk_82();  // 82
-		virtual void Unk_83();  // 83
-		virtual void Unk_84();  // 84
-		virtual void Unk_85();  // 85
+		virtual bool            GetHasPLSpecTex() const;          // 82
+		virtual TESCombatStyle* GetCombatStyle();                 // 83
+		virtual void            SetCombatStyle(TESCombatStyle*);  // 84
+		virtual TESForm*        GetAsForm();                      // 85
 	};
 	static_assert(sizeof(TESActorBase) == 0x298);
 }

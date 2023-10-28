@@ -74,7 +74,7 @@ namespace RE
 		float             unkB8;                  // B8
 		float             unkBC;                  // BC
 		std::uint32_t     unkC0;                  // C0
-		std::uint32_t     unkC4;                  // C4
+		std::int32_t      unkC4;                  // C4
 		std::uint32_t     unkC8;                  // C8
 		std::uint32_t     unkCC;                  // CC
 		BGSExplosion*     unkD0;                  // D0
