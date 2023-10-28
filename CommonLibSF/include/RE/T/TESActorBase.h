@@ -36,7 +36,7 @@ namespace RE
 	public:
 		SF_RTTI_VTABLE(TESActorBase);
 
-		~TESActorBase() override; // 00
+		~TESActorBase() override;  // 00
 
 		// add
 		virtual bool            GetHasPLSpecTex() const;          // 82

@@ -30,7 +30,7 @@ namespace RE
 		return false;
 	}
 
-    bool TESNPC::IsInFaction(TESFaction* a_faction) const
+	bool TESNPC::IsInFaction(TESFaction* a_faction) const
 	{
 		return std::ranges::any_of(factions, [&](const auto& faction) {
 			return faction.faction == a_faction && faction.rank > -1;

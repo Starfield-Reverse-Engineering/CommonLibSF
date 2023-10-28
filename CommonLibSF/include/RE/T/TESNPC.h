@@ -61,7 +61,7 @@ namespace RE
 		[[nodiscard]] TESRace* GetRace() const { return formRace; }
 
 		[[nodiscard]] SEX  GetSex() const;
-        [[nodiscard]] bool ContainsKeyword(std::string_view a_editorID);
+		[[nodiscard]] bool ContainsKeyword(std::string_view a_editorID);
 		[[nodiscard]] bool HasKeyword(std::string_view a_editorID);
 		[[nodiscard]] bool IsInFaction(TESFaction* a_faction) const;
 
