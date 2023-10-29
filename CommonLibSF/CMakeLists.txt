@@ -127,6 +127,7 @@ function (configure_target TARGET_NAME)
       spdlog::spdlog
       Version.lib
       Dbghelp.lib
+      Ws2_32.lib
   )
 
   if(SFSE_SUPPORT_XBYAK)
