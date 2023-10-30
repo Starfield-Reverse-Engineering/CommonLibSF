@@ -64,7 +64,13 @@ namespace RE::BSScript
 				kARRAY_INSERT,
 				kARRAY_REMOVELAST,
 				kARRAY_REMOVE,
-				kARRAY_CLEAR
+				kARRAY_CLEAR,
+				// added in Fallout 76
+				kARRAY_GETALLMATCHINGSTRUCTS,
+				// New in Starfield
+				kLOCK_GUARDS,
+				kUNLOCK_GUARDS,
+				kTRY_LOCK_GUARDS,
 			};
 
 			enum class ResumeReason
