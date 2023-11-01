@@ -80,10 +80,10 @@ namespace RE::BSScript
 				REL::Relocation<func_t> func{ ID::BSScript::Internal::NF_util::NativeFunctionBase::Unk_10 };
 				return func(this);
 			}
-			virtual bool Unk_11(std::uint32_t a_unk0, std::uint32_t* a_unk1) override
+			virtual bool TranslateIPToLineNumber(std::uint32_t a_IP, std::uint32_t* r_lineNumber) override
 			{
-				(void)a_unk0;
-				*a_unk1 = 0;
+				(void)a_IP;
+				*r_lineNumber = 0;
 				return false;
 			}
 			virtual std::uint64_t* Unk_12(std::uint64_t* a_out) override
