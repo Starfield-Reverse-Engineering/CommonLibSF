@@ -1,5 +1,6 @@
 #pragma once
 
+#include "RE/B/BGSSoundReference.h"
 #include "RE/B/BaseFormComponent.h"
 
 namespace RE
@@ -16,12 +17,7 @@ namespace RE
 		void                 InitializeDataComponent() override;     // 02 - { return; }
 
 		// members
-		std::uint64_t unk08;  // 08
-		std::uint64_t unk10;  // 10
-		std::uint64_t unk18;  // 18
-		std::uint64_t unk20;  // 20
-		std::uint64_t unk28;  // 28
-		std::uint64_t unk30;  // 30
+		BGSSoundReference craftingUseSound;  // 08
 	};
 	static_assert(sizeof(BGSCraftingUseSound) == 0x38);
 }

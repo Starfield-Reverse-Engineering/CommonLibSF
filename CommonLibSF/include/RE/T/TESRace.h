@@ -10,6 +10,7 @@
 #include "RE/B/BGSPreloadable.h"
 #include "RE/B/BGSPropertySheet.h"
 #include "RE/B/BGSSkinForm.h"
+#include "RE/B/BGSSoundReference.h"
 #include "RE/B/BGSTextureModel.h"
 #include "RE/S/Sexes.h"
 #include "RE/T/TESDescription.h"
@@ -77,9 +78,9 @@ namespace RE
 		std::int32_t      unkC4;                  // C4
 		std::uint32_t     unkC8;                  // C8
 		std::uint32_t     unkCC;                  // CC
-		BGSExplosion*     unkD0;                  // D0
-		BGSDebris*        unkD8;                  // D8
-		BGSImpactDataSet* unkE0;                  // E0
+		BGSExplosion*     explosion;              // D0
+		BGSDebris*        debris;                 // D8
+		BGSImpactDataSet* impactDataSet;          // E0
 		std::uint32_t     unkE8;                  // E8
 		std::uint32_t     unkEC;                  // EC
 		float             unkF0;                  // F0
@@ -125,18 +126,8 @@ namespace RE
 		// members
 		BGSEditorID                formEditorID;                     // 0F0
 		BGSMaterialType*           bloodImpactMaterial;              // 100
-		std::uint64_t              unk108;                           // 108 - sound related?
-		std::uint64_t              unk110;                           // 110
-		std::uint64_t              unk118;                           // 118
-		std::uint64_t              unk120;                           // 120
-		std::uint64_t              unk128;                           // 128
-		std::uint64_t              unk130;                           // 130
-		std::uint64_t              unk138;                           // 138 - sound related?
-		std::uint64_t              unk140;                           // 140
-		std::uint64_t              unk148;                           // 148
-		std::uint64_t              unk150;                           // 150
-		std::uint64_t              unk158;                           // 158
-		std::uint64_t              unk160;                           // 160
+		BGSSoundReference          corpseOpenSound;                  // 108
+		BGSSoundReference          corpseCloseSound;                 // 138
 		BSFixedString              bipedObjectNames[64];             // 168
 		ActorValueInfo*            bipedObjectConditions[64];        // 368
 		std::uint64_t              unk568;                           // 568
