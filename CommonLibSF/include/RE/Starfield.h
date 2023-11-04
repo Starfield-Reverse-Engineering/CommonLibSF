@@ -55,6 +55,7 @@
 #include "RE/B/BGSScene.h"
 #include "RE/B/BGSSkinForm.h"
 #include "RE/B/BGSSnapTemplateComponent.h"
+#include "RE/B/BGSSoundReference.h"
 #include "RE/B/BGSTerminal.h"
 #include "RE/B/BGSTerminalMenu.h"
 #include "RE/B/BGSTextureModel.h"
