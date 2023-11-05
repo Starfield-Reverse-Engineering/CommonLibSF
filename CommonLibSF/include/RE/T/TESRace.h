@@ -10,13 +10,13 @@
 #include "RE/B/BGSPreloadable.h"
 #include "RE/B/BGSPropertySheet.h"
 #include "RE/B/BGSSkinForm.h"
-#include "RE/B/BGSSoundReference.h"
 #include "RE/B/BGSTextureModel.h"
 #include "RE/S/Sexes.h"
 #include "RE/T/TESDescription.h"
 #include "RE/T/TESForm.h"
 #include "RE/T/TESFullName.h"
 #include "RE/T/TESSpellList.h"
+#include "RE/W/WWiseSoundHook.h"
 
 namespace RE
 {
@@ -126,8 +126,8 @@ namespace RE
 		// members
 		BGSEditorID                formEditorID;                     // 0F0
 		BGSMaterialType*           bloodImpactMaterial;              // 100
-		BGSSoundReference          corpseOpenSound;                  // 108
-		BGSSoundReference          corpseCloseSound;                 // 138
+		BGSAudio::WwiseSoundHook   corpseOpenSound;                  // 108
+		BGSAudio::WwiseSoundHook   corpseCloseSound;                 // 138
 		BSFixedString              bipedObjectNames[64];             // 168
 		ActorValueInfo*            bipedObjectConditions[64];        // 368
 		std::uint64_t              unk568;                           // 568

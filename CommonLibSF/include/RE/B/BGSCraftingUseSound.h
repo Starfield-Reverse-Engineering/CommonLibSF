@@ -1,7 +1,7 @@
 #pragma once
 
-#include "RE/B/BGSSoundReference.h"
 #include "RE/B/BaseFormComponent.h"
+#include "RE/W/WWiseSoundHook.h"
 
 namespace RE
 {
@@ -17,7 +17,7 @@ namespace RE
 		void                 InitializeDataComponent() override;     // 02 - { return; }
 
 		// members
-		BGSSoundReference craftingUseSound;  // 08
+		BGSAudio::WwiseSoundHook craftingUseSound;  // 08
 	};
 	static_assert(sizeof(BGSCraftingUseSound) == 0x38);
 }
