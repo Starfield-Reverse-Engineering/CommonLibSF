@@ -214,5 +214,5 @@
 #include "RE/T/TypeInfo.h"
 #include "RE/U/UI.h"
 #include "RE/V/Variable.h"
-#include "RE/W/WWiseSoundHook.h"
 #include "RE/W/WwiseGUID.h"
+#include "RE/W/WwiseSoundHook.h"

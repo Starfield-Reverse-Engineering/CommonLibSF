@@ -9,7 +9,7 @@ namespace RE
 
 	namespace BGSAudio
 	{
-	    class WwiseSoundHook
+		class WwiseSoundHook
 		{
 		public:
 			// members
