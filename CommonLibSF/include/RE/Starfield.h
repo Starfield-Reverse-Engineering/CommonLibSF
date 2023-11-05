@@ -55,7 +55,6 @@
 #include "RE/B/BGSScene.h"
 #include "RE/B/BGSSkinForm.h"
 #include "RE/B/BGSSnapTemplateComponent.h"
-#include "RE/B/BGSSoundReference.h"
 #include "RE/B/BGSTerminal.h"
 #include "RE/B/BGSTerminalMenu.h"
 #include "RE/B/BGSTextureModel.h"
@@ -215,3 +214,5 @@
 #include "RE/T/TypeInfo.h"
 #include "RE/U/UI.h"
 #include "RE/V/Variable.h"
+#include "RE/W/WWiseSoundHook.h"
+#include "RE/W/WwiseGUID.h"
