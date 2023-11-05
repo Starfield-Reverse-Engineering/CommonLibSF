@@ -67,7 +67,6 @@ namespace RE
 
 		// members
 		BGSAttachParentArray                         attachParents;    // 320
-		std::uint64_t                                unk338;           // 338
 		std::uint32_t                                unk340;           // 340
 		std::uint32_t                                unk344;           // 344
 		TESClass*                                    npcClass;         // 348
