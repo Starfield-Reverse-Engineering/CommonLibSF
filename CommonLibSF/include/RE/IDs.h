@@ -317,7 +317,7 @@ namespace RE::ID
 	{
 		inline constexpr REL::ID DecRefCount{ 35164 };
 		inline constexpr REL::ID LookupByID{ 86125 };
-		inline constexpr REL::ID LookupByEditorID{ 86123 };
+		inline constexpr REL::ID LookupByEditorID{ 86127 };
 	}
 
 	namespace TESObjectARMO
@@ -332,7 +332,9 @@ namespace RE::ID
 
 	namespace TESObjectREFR
 	{
-		inline constexpr REL::ID AddLockChange{ 106386 };
+		inline constexpr REL::ID ActivateRef{ 106374 };
+	    inline constexpr REL::ID AddLockChange{ 106386 };
+		inline constexpr REL::ID GetCalcLevel{ 107531 };
 		inline constexpr REL::ID GetCurrentLocation{ 106554 };
 		inline constexpr REL::ID GetLinkedRef{ 107578 };
 		inline constexpr REL::ID GetLock{ 107581 };
