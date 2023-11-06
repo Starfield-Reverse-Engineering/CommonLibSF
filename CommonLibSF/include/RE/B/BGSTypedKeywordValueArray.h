@@ -60,6 +60,7 @@ namespace RE
 		// members
 		BGSTypedKeywordValue<TYPE>* array;  // 00
 		std::uint32_t               size;   // 08
+		std::uint64_t               unk10;  // 10
 	};
-	static_assert(sizeof(BGSTypedKeywordValueArray<KeywordType::kNone>) == 0x10);
+	static_assert(sizeof(BGSTypedKeywordValueArray<KeywordType::kNone>) == 0x18);
 }

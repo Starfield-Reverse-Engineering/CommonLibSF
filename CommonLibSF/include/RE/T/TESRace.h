@@ -152,7 +152,6 @@ namespace RE
 		BGSVoiceType*              defaultVoiceType[SEXES::kTotal];  // 8F8
 		BGSBodyPartInfo            bodyPartInfo;                     // 908
 		BGSAttachParentArray       attachParents;                    // 930
-		std::uint64_t              unk948;                           // 948
 		BSTArray<void*>            unk950;                           // 950
 		BGSMovementType*           baseMoveTypes[4];                 // 960
 		std::uint64_t              unk980;                           // 980

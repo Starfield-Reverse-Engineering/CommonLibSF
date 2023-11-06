@@ -320,6 +320,11 @@ namespace RE::ID
 		inline constexpr REL::ID LookupByEditorID{ 86127 };
 	}
 
+	namespace TESObjectARMO
+	{
+		inline constexpr REL::ID CanUseArmor{ 103501 };
+	}
+
 	namespace TESObjectLoadedEvent
 	{
 		inline constexpr REL::ID GetEventSource{ 107177 };
@@ -327,7 +332,9 @@ namespace RE::ID
 
 	namespace TESObjectREFR
 	{
-		inline constexpr REL::ID AddLockChange{ 106386 };
+		inline constexpr REL::ID ActivateRef{ 106374 };
+	    inline constexpr REL::ID AddLockChange{ 106386 };
+		inline constexpr REL::ID GetCalcLevel{ 107531 };
 		inline constexpr REL::ID GetCurrentLocation{ 106554 };
 		inline constexpr REL::ID GetLinkedRef{ 107578 };
 		inline constexpr REL::ID GetLock{ 107581 };
