@@ -333,7 +333,7 @@ namespace RE::ID
 	namespace TESObjectREFR
 	{
 		inline constexpr REL::ID ActivateRef{ 106374 };
-	    inline constexpr REL::ID AddLockChange{ 106386 };
+		inline constexpr REL::ID AddLockChange{ 106386 };
 		inline constexpr REL::ID GetCalcLevel{ 107531 };
 		inline constexpr REL::ID GetCurrentLocation{ 106554 };
 		inline constexpr REL::ID GetLinkedRef{ 107578 };

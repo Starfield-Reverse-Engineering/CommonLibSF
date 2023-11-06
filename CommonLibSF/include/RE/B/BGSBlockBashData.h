@@ -6,7 +6,7 @@ namespace RE
 {
 	class BGSImpactDataSet;
 	class BGSMaterialType;
-	
+
 	class BGSBlockBashData : public BaseFormComponent
 	{
 	public:
