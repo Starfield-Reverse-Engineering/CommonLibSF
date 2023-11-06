@@ -24,7 +24,7 @@ target("commonlibsf")
     add_options("sfse_xbyak")
 
     -- add system links
-    add_syslinks("advapi32", "dbghelp", "ole32", "shell32", "user32", "version")
+    add_syslinks("advapi32", "dbghelp", "ole32", "shell32", "user32", "version", "Ws2_32")
 
     -- add source files
     add_files("src/**.cpp")
