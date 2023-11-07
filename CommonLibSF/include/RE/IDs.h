@@ -231,6 +231,7 @@ namespace RE::ID
 		inline constexpr REL::ID GetSingleton{ 33961 };
 		inline constexpr REL::ID Allocate{ 33962 };
 		inline constexpr REL::ID Free{ 34032 };
+		inline constexpr REL::ID GetThreadScrapHeap{ 36848 };
 	}
 
 	namespace Misc
