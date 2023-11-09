@@ -45,7 +45,7 @@ namespace RE::BSScript
 		virtual BSFixedString* Unk_10(void) = 0;  // file/line number?
 		virtual bool           Unk_11(std::uint32_t a_unk0, std::uint32_t* a_unk1) = 0;
 		virtual std::uint64_t* Unk_12(std::uint64_t* a_out) = 0;                        // new, might be type reflection
-		virtual Unk13          Unk_13(Unk13* a_out) = 0;                                // new, might be type reflection
+		virtual Unk13*         Unk_13(Unk13* a_out) = 0;                                // new, might be type reflection
 		virtual bool           GetParamInfo(std::uint32_t a_idx, void* a_out) = 0;      // param list stuff
 		virtual void*          Unk_15(std::uint64_t a_arg0, std::uint64_t a_arg1) = 0;  // param list stuff, loop
 		virtual bool           GetUnk41(void) = 0;

@@ -91,10 +91,11 @@ namespace RE::BSScript
 
 				return a_out;
 			}
-			virtual Unk13 Unk_13(Unk13* a_out) override
+			virtual Unk13* Unk_13(Unk13* a_out) override
 			{
 				a_out->unk00 = 0;
 				a_out->unk08 = 0;
+				return a_out;
 				// a_out[8] = 0; // as std::uint8_t?
 			}
 			virtual bool GetParamInfo(std::uint32_t a_idx, void* a_out) override
