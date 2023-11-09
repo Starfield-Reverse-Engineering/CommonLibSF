@@ -2,6 +2,7 @@
 
 #include "RE/B/BSFixedString.h"
 #include "RE/B/BSIntrusiveRefCounted.h"
+#include "RE/T/TypeInfo.h"
 
 namespace RE::BSScript
 {
@@ -10,10 +11,9 @@ namespace RE::BSScript
 		class VirtualMachine;
 	}
 
-	class VMClassInfo;
-	class VMClassRegistry;
-	class VMState;
-	class VMValue;
+	class StackFrame;
+	class Variable;
+	class IVirtualMachine;
 
 	class IFunction
 	{
@@ -30,7 +30,7 @@ namespace RE::BSScript
 		virtual BSFixedString* GetName(void) = 0;
 		virtual BSFixedString* GetClassName(void) = 0;
 		virtual BSFixedString* GetStateName(void) = 0;
-		virtual std::uint64_t* GetReturnType(std::uint64_t* a_dst) = 0;
+		virtual TypeInfo*      GetReturnType(TypeInfo* a_typeInfo) = 0;
 		virtual std::uint64_t  GetNumParams(void) = 0;
 		virtual std::uint64_t* GetParam(std::uint32_t a_idx, BSFixedString* a_nameOut, std::uint64_t* a_typeOut) = 0;
 		virtual std::uint64_t  GetNumParams2(void) = 0;
@@ -41,7 +41,7 @@ namespace RE::BSScript
 		virtual std::uint32_t  GetUserFlags(void) = 0;
 		virtual BSFixedString* GetDocString(void) = 0;
 		virtual void           Unk_0E(std::uint32_t a_unk) = 0;
-		virtual std::uint32_t  Invoke(std::uint64_t a_unk0, std::uint64_t a_unk1, VMClassRegistry* a_registry, VMState* a_unk3) = 0;
+		virtual std::uint32_t  Invoke(std::uint64_t a_unk0, std::uint64_t a_unk1, IVirtualMachine* a_vm, StackFrame* a_frame) = 0;
 		virtual BSFixedString* Unk_10(void) = 0;  // file/line number?
 		virtual bool           Unk_11(std::uint32_t a_unk0, std::uint32_t* a_unk1) = 0;
 		virtual std::uint64_t* Unk_12(std::uint64_t* a_out) = 0;                        // new, might be type reflection

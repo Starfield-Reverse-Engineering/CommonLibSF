@@ -23,7 +23,7 @@ namespace RE::BSScript
 		}
 
 		virtual bool HasCallback(void) override { return _callback != 0; }
-		virtual bool Run(VMValue* a_baseValue, VMClassRegistry* a_registry, std::uint32_t a_arg2, VMValue* a_resultValue, VMState* a_state) = 0;
+		virtual bool Run(Variable* a_selfValue, IVirtualMachine* a_vm, std::uint32_t a_arg2, Variable* a_resultValue, StackFrame* a_frame) = 0;
 
 	protected:
 		void* _callback;  // 50
