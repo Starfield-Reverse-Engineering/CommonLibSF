@@ -7,6 +7,7 @@ namespace RE::BSScript
 	class StackFrame;
 	class __declspec(novtable) IRemoteDebugger
 	{
+	public:
 		~IRemoteDebugger() = delete;
 
 		virtual void SetVMRemoteDebuggerInterface(IVMRemoteDebuggerInterface* a_interface) = 0;                    // 00
