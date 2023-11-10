@@ -202,6 +202,10 @@ namespace RE::ID
 			inline constexpr REL::ID HandleStepRequest{ 167587 };
 		}
 	}
+	namespace GameVM
+	{
+		inline constexpr REL::ID singleton{ 878371 };
+	}
 
 	namespace idLogging
 	{

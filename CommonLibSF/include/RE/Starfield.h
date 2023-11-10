@@ -102,6 +102,7 @@
 #include "RE/F/FactionRank.h"
 #include "RE/F/FormTypes.h"
 #include "RE/G/GameMenuBase.h"
+#include "RE/G/GameVM.h"
 #include "RE/H/HandlePolicy.h"
 #include "RE/H/HandleReaderWriter.h"
 #include "RE/I/IAnimationGraphManagerHolder.h"
