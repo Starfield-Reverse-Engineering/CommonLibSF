@@ -311,6 +311,12 @@ namespace RE::ID
 		}
 	}
 
+	namespace ScrapHeap
+	{
+		inline constexpr REL::ID Allocate{ 34432 };
+		inline constexpr REL::ID Deallocate{ 37624 };
+	}
+
 	namespace Script
 	{
 		inline constexpr REL::ID GetConsoleCommands{ 841465 };
