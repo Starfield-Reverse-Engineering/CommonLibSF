@@ -12,8 +12,6 @@ namespace RE
 		class IStore;  // stub
 		class Object;
 
-		struct ILoader;
-
 		namespace Internal
 		{
 			class ReadableStringTable;
