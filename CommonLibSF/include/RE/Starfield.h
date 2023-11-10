@@ -232,5 +232,6 @@
 #include "RE/T/TypeInfo.h"
 #include "RE/U/UI.h"
 #include "RE/V/Variable.h"
+#include "RE/V/VirtualMachine.h"
 #include "RE/W/WritableStringTable.h"
 #include "RE/W/WritableTypeTable.h"
