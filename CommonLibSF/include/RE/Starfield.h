@@ -83,6 +83,7 @@
 #include "RE/B/BSTSmartPointer.h"
 #include "RE/B/BSTTuple.h"
 #include "RE/B/BSTTuple3.h"
+#include "RE/B/BSTimer.h"
 #include "RE/B/BaseFormComponent.h"
 #include "RE/C/CodeTasklet.h"
 #include "RE/C/Color.h"
