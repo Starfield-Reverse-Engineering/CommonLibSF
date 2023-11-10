@@ -42,7 +42,7 @@ namespace RE
 		inline static constexpr auto RTTI = { RTTI::BSStorage };
 		inline static constexpr auto VTABLE = { VTABLE::BSStorage };
 
-		virtual ~BSStorage();  // 00
+		virtual ~BSStorage() = default;  // 00
 
 		virtual std::size_t              GetSize() const = 0;                                                       // 01
 		virtual std::size_t              GetPosition() const = 0;                                                   // 02
