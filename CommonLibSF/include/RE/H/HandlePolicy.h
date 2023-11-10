@@ -1,5 +1,8 @@
+#pragma once
+
 #include "RE/B/BSFixedString.h"
 #include "RE/B/BSIntrusiveRefCounted.h"
+#include "RE/B/BSLock.h"
 #include "RE/I/IObjectHandlePolicy.h"
 
 namespace RE::GameScript
