@@ -138,6 +138,13 @@ namespace RE::ID
 		inline constexpr REL::ID GetEntry_wchar_t_{ 198220 };
 
 	}
+
+	namespace BSStorage
+	{
+		inline constexpr REL::ID FlushStreamBuffer{ 72433 };
+		inline constexpr REL::ID PrepareStreamBuffer{ 72461 };
+		inline constexpr REL::ID WriteString{ 87863 };
+	}
 	namespace BSSystemFile
 	{
 		inline constexpr REL::ID ctor{ 198445 };
