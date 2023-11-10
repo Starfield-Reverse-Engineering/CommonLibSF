@@ -12,6 +12,35 @@ namespace RE
 	class MemoryManager
 	{
 	public:
+		struct AutoScrapBuffer
+		{
+		public:
+			AutoScrapBuffer() { ctor(0, 0); }
+			AutoScrapBuffer(std::size_t a_size, std::size_t a_alignment) { ctor(a_size, a_alignment); }
+			~AutoScrapBuffer() { dtor(); }
+
+			[[nodiscard]] void* GetPtr() const noexcept { return ptr; }
+
+			// members
+			void* ptr{ nullptr };  // 0
+
+		private:
+			AutoScrapBuffer* ctor(std::size_t a_size, std::size_t a_alignment)
+			{
+				using func_t = decltype(&AutoScrapBuffer::ctor);
+				REL::Relocation<func_t> func{ ID::MemoryManager::AutoScrapBuffer::ctor };
+				return func(this, a_size, a_alignment);
+			}
+
+			void dtor()
+			{
+				using func_t = decltype(&AutoScrapBuffer::dtor);
+				REL::Relocation<func_t> func{ ID::MemoryManager::AutoScrapBuffer::dtor };
+				return func(this);
+			}
+		};
+		static_assert(sizeof(AutoScrapBuffer) == 0x8);
+
 		[[nodiscard]] static MemoryManager* GetSingleton()
 		{
 			using func_t = decltype(&MemoryManager::GetSingleton);
