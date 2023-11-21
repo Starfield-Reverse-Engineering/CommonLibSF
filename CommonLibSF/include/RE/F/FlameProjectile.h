@@ -10,7 +10,7 @@ namespace RE
 		SF_RTTI_VTABLE(FlameProjectile);
 		SF_FORMTYPE(PFLA);
 
-		~FlameProjectile() override;  // 00                                                                                                                                    // C1
+		~FlameProjectile() override;  // 00
 
 		// members
 		float expirationTimer;  // 280

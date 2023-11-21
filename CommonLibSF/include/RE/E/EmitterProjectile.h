@@ -15,7 +15,7 @@ namespace RE
 		SF_RTTI_VTABLE(EmitterProjectile);
 		SF_FORMTYPE(PEMI);
 
-		~EmitterProjectile() override;  // 00                                                                                                                                    // C1
+		~EmitterProjectile() override;  // 00
 
 		// members
 		std::int32_t                              unk280;  // 280

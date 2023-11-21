@@ -10,7 +10,7 @@ namespace RE
 		SF_RTTI_VTABLE(ConeProjectile);
 		SF_FORMTYPE(PCON);
 
-		~ConeProjectile() override;  // 00                                                                                                                                     // C0
+		~ConeProjectile() override;  // 00
 
 		// members
 		stl::enumeration<ImpactResult, std::int32_t> impactResult;                  // 280

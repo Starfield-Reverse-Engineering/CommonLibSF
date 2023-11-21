@@ -10,7 +10,7 @@ namespace RE
 		SF_RTTI_VTABLE(MissileProjectile);
 		SF_FORMTYPE(PMIS);
 
-		~MissileProjectile() override;  // 00                                                                                                                                            // C0
+		~MissileProjectile() override;  // 00
 
 		// add
 		virtual bool ShouldReorient() const;  // 15D

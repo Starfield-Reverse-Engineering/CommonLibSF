@@ -10,7 +10,7 @@ namespace RE
 		SF_RTTI_VTABLE(PlasmaProjectile);
 		SF_FORMTYPE(PPLA);
 
-		~PlasmaProjectile() override;  // 00                                                                                                                                     // C0
+		~PlasmaProjectile() override;  // 00
 	};
 	static_assert(sizeof(PlasmaProjectile) == 0x2C0);
 }
