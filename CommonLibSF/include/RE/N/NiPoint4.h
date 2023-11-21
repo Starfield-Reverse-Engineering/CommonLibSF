@@ -20,7 +20,7 @@ namespace RE
 		union
 		{
 			NiPoint4Struct v;
-			float pt[4]{ 0.0F };
+			float          pt[4]{ 0.0F };
 		};  // 00
 	};
 	static_assert(sizeof(NiPoint4) == 0x10);
