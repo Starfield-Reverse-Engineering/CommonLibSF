@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/T/TESCondition.h"
+
 namespace RE
 {
 	class EffectSetting;
@@ -27,7 +29,7 @@ namespace RE
 		std::uint32_t  unk30;           // 30
 		std::uint32_t  unk34;           // 34
 		float          rawCost;         // 38
-		std::uint64_t  conditions[2];   // 40 - TESCondition
+		TESCondition   conditions;      // 40
 	};
 	static_assert(sizeof(EffectItem) == 0x50);
 }
