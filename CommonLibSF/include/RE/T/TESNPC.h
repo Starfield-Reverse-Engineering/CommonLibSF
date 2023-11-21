@@ -1,12 +1,13 @@
 #pragma once
 
+#include "RE/A/AVMData.h"
 #include "RE/B/BGSAttachParentArray.h"
 #include "RE/B/BGSForcedLocRefType.h"
 #include "RE/B/BGSNativeTerminalForm.h"
 #include "RE/B/BGSOverridePackCollection.h"
+#include "RE/B/BSLock.h"
 #include "RE/B/BSTArray.h"
 #include "RE/B/BSTEvent.h"
-#include "RE/C/Color.h"
 #include "RE/N/NiPoint3.h"
 #include "RE/S/Sexes.h"
 #include "RE/T/TESActorBase.h"
@@ -43,18 +44,6 @@ namespace RE
 			kSheHer,
 			kTheyThem
 		};
-
-		struct TintData
-		{
-			std::uint32_t type;         // 00
-			std::uint32_t unk04;        // 04
-			BSFixedString category;     // 08
-			BSFixedString name;         // 10
-			BSFixedString texturePath;  // 18
-			Color         color;        // 20
-			std::uint32_t intensity;    // 24
-		};
-		static_assert(sizeof(TintData) == 0x28);
 
 		~TESNPC() override;  // 00
 
@@ -93,11 +82,11 @@ namespace RE
 		TESFaction*                                  crimeFaction;     // 3E0
 		TESFaction*                                  unk3E8;           // 3E8
 		BSTArray<BGSHeadPart*>                       headparts;        // 3F0
-		std::uint64_t                                unk400;           // 400
+		BSNonReentrantSpinLock                       headpartsLock;    // 3F8
 		BSTArray<float>*                             unk408;           // 408
 		std::uint64_t                                unk410;           // 410
 		std::uint64_t                                unk418;           // 418
-		BSTArray<TintData>                           tintData;         // 420
+		BSTArray<AVMData>                            tintAVMData;      // 420
 		std::uint32_t                                skinToneIndex;    // 430
 		std::uint32_t                                unk434;           // 434
 		BSFixedString                                teeth;            // 438
