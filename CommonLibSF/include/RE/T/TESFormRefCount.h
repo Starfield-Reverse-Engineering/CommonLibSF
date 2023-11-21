@@ -14,6 +14,7 @@ namespace RE
 			kRefCountMask = 0x3FFFFF,
 		};
 
+		std::uint64_t               IncExternalRefCount() const;
 		std::uint64_t               IncRefCount() const;
 		[[nodiscard]] std::uint64_t QRefCount() const;
 

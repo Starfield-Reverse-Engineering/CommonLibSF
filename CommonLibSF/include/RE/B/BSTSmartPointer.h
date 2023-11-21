@@ -32,6 +32,22 @@ namespace RE
 		static void           Release(stl::not_null<T*> a_ptr) { a_ptr->DecRefCount(); }
 	};
 
+	template <class T>
+	struct TESFormPolicy
+	{
+	public:
+		constexpr static void Acquire(stl::not_null<T*> a_ptr) { a_ptr->IncRefCount(); }
+		static void           Release(stl::not_null<T*> a_ptr) { a_ptr->DecRefCount(); }
+	};
+
+	template <class T>
+	struct TESFormExternalPolicy
+	{
+	public:
+		constexpr static void Acquire(stl::not_null<T*> a_ptr) { a_ptr->IncExternalRefCount(); }
+		static void           Release(stl::not_null<T*> a_ptr) { a_ptr->DecExternalRefCount(); }
+	};
+
 	template <class T, template <class> class RefManager = BSTSmartPointerIntrusiveRefCount>
 	class BSTSmartPointer
 	{
