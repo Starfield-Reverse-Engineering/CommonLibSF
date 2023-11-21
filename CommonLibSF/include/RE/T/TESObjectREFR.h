@@ -386,17 +386,15 @@ namespace RE
 		void                                Unlock();
 
 		// members
-		OBJ_REFR                       data;               // 0A0
-		BGSInventoryList*              inventoryList;      // 0D0 - this + lock is one struct?
-		mutable BSReadWriteLock        inventoryListLock;  // 0D8
-		TESObjectCELL*                 parentCell;         // 0E0
-		LOADED_REF_DATA*               loadedData;         // 0E8 - same as above
-		mutable BSReadWriteLock        loadedDataLock;     // 0F0
-		BSTSmartPointer<ExtraDataList> extraDataList;      // 0F8
-		BGSLocalizedString             unk100;             // 100 - empty?
-		std::uint16_t                  scale;              // 108
-		bool                           unk10A;             // 10A
-		std::uint8_t                   flags;              // 10B
+		OBJ_REFR                                      data;           // 0A0
+		BSGuarded<BGSInventoryList*, BSReadWriteLock> inventoryList;  // 0D0
+		TESObjectCELL*                                parentCell;     // 0E0
+		BSGuarded<LOADED_REF_DATA*, BSReadWriteLock>  loadedData;     // 0E8
+		BSTSmartPointer<ExtraDataList>                extraDataList;  // 0F8
+		BGSLocalizedString                            unk100;         // 100 - empty?
+		std::uint16_t                                 scale;          // 108
+		std::uint8_t                                  unk10A;         // 10A
+		std::uint8_t                                  flags;          // 10B
 
 	private:
 		void AddLockChange();

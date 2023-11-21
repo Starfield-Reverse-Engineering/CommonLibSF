@@ -17,7 +17,7 @@ namespace RE
 		public:
 			// members
 			BSTSmartPointer<ExtraDataList> extra;  // 00
-			std::uint32_t                  unk10;  // 10
+			std::uint32_t                  count;  // 10
 		};
 		static_assert(sizeof(Stack) == 0x10);
 
