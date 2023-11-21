@@ -17,6 +17,7 @@ namespace RE
 
 	class bhkNPCollisionObject;
 	class ActorCause;
+	class AlchemyItem;
 	class BGSExplosion;
 	class BGSMaterialType;
 	class BGSProjectile;
