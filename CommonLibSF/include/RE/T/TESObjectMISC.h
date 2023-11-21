@@ -33,6 +33,9 @@ namespace RE
 
 		~TESObjectMISC() override;  // 00
 
+		// add
+		virtual void Unk_82();  // 82 - { return; }
+
 		// members
 		BGSLocalizedString shortName;  // 280
 		std::uint32_t      flags;      // 288

@@ -18,7 +18,7 @@ namespace RE
 		virtual void SetAutoCalc(bool a_autoCalc);  // 65
 		virtual void Unk_66();                      // 66
 		virtual void Unk_67();                      // 67
-		virtual void Unk_68();                      // 68
+		virtual bool IsMarker();                    // 68
 		virtual void Unk_69();                      // 69
 		virtual void Unk_6A();                      // 6A
 		virtual void Unk_6B();                      // 6B
