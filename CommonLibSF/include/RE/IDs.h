@@ -223,6 +223,11 @@ namespace RE::ID
 		inline constexpr REL::ID PlayMenuSound{ 167344 };
 	}
 
+	namespace NiMatrix3
+	{
+		inline constexpr REL::ID ToEulerAnglesXYZ{ 210095 };
+	}
+
 	namespace ObjectBindPolicy
 	{
 		inline constexpr REL::ID BindObject{ 195981 };
@@ -315,6 +320,7 @@ namespace RE::ID
 
 	namespace TESForm
 	{
+		inline constexpr REL::ID DecExternalRefCount{ 34165 };
 		inline constexpr REL::ID DecRefCount{ 35164 };
 		inline constexpr REL::ID LookupByID{ 86125 };
 		inline constexpr REL::ID LookupByEditorID{ 86127 };
