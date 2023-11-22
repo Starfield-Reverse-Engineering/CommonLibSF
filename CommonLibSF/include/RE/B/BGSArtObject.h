@@ -10,8 +10,8 @@ namespace RE
 
 	class BGSArtObject :
 		public TESBoundObject,       // 000
-		public BGSKeywordForm,       // 118
-		public BGSModelMaterialSwap  // 148
+		public BGSKeywordForm,       // 0E0
+		public BGSModelMaterialSwap  // 110
 	{
 	public:
 		SF_RTTI_VTABLE(BGSArtObject);
@@ -36,8 +36,8 @@ namespace RE
 		~BGSArtObject() override;  // 00
 
 		// members
-		Data          data;          // 170
-		EffectShader* effectShader;  // 178
+		Data          data;          // 138
+		EffectShader* effectShader;  // 140
 	};
-	static_assert(sizeof(BGSArtObject) == 0x180);
+	static_assert(sizeof(BGSArtObject) == 0x148);
 }

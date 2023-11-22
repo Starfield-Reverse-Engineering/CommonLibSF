@@ -12,10 +12,10 @@ namespace RE
 
 	class SpellItem :
 		public MagicItem,               // 000
-		public BGSEquipType,            // 188
-		public BGSMenuDisplayObject,    // 198
-		public BGSPickupPutdownSounds,  // 1A8
-		public TESDescription           // 210
+		public BGSEquipType,            // 150
+		public BGSMenuDisplayObject,    // 160
+		public BGSPickupPutdownSounds,  // 170
+		public TESDescription           // 1D8
 	{
 	public:
 		SF_RTTI_VTABLE(SpellItem);
@@ -43,7 +43,7 @@ namespace RE
 		virtual void SetSpellType(MagicSystem::SpellType a_spellType);  // 9F
 
 		// members
-		Data data;  // 228
+		Data data;  // 1F0
 	};
-	static_assert(sizeof(SpellItem) == 0x250);
+	static_assert(sizeof(SpellItem) == 0x218);
 }

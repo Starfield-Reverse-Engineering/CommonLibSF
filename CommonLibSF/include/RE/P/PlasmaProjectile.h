@@ -12,5 +12,5 @@ namespace RE
 
 		~PlasmaProjectile() override;  // 00
 	};
-	static_assert(sizeof(PlasmaProjectile) == 0x2C0);
+	static_assert(sizeof(PlasmaProjectile) == 0x2A0);
 }

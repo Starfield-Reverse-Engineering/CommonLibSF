@@ -36,22 +36,22 @@ namespace RE
 
 	class PlayerCharacter :
 		public Actor,                                                 // 000
-		public BSTEventSource<BGSActorCellEvent>,                     // 550
-		public BSTEventSource<BGSActorDeathEvent>,                    // 578
-		public BSTEventSource<PositionPlayerEvent>,                   // 5A0
-		public BSTEventSource<PickRefUpdateEvent>,                    // 5C8
-		public BSTEventSource<TargetHitEvent>,                        // 5F0
-		public BSTEventSink<MenuOpenCloseEvent>,                      // 618
-		public BSTEventSink<MenuModeChangeEvent>,                     // 620
-		public BSTEventSink<UserEventEnabledEvent>,                   // 628
-		public BSTEventSink<OtherEventEnabledEvent>,                  // 630
-		public BSTEventSink<TESFormDeleteEvent>,                      // 638
-		public BSTEventSink<TESHitEvent>,                             // 640
-		public BSTEventSink<PerkValueEvents::PerkEntryUpdatedEvent>,  // 648
-		public BSTEventSink<AnimationGraphDependentEvent>,            // 650
-		public BSTEventSink<TESQuestEvent::Event>,                    // 658
-		public BSTEventSink<QuestStatus::Event>,                      // 660
-		public IMovementPlayerControlsFilter                          // 668
+		public BSTEventSource<BGSActorCellEvent>,                     // 530
+		public BSTEventSource<BGSActorDeathEvent>,                    // 558
+		public BSTEventSource<PositionPlayerEvent>,                   // 580
+		public BSTEventSource<PickRefUpdateEvent>,                    // 5A8
+		public BSTEventSource<TargetHitEvent>,                        // 5D0
+		public BSTEventSink<MenuOpenCloseEvent>,                      // 5F8
+		public BSTEventSink<MenuModeChangeEvent>,                     // 0600
+		public BSTEventSink<UserEventEnabledEvent>,                   // 0608
+		public BSTEventSink<OtherEventEnabledEvent>,                  // 0610
+		public BSTEventSink<TESFormDeleteEvent>,                      // 0618
+		public BSTEventSink<TESHitEvent>,                             // 0620
+		public BSTEventSink<PerkValueEvents::PerkEntryUpdatedEvent>,  // 0628
+		public BSTEventSink<AnimationGraphDependentEvent>,            // 0630
+		public BSTEventSink<TESQuestEvent::Event>,                    // 0638
+		public BSTEventSink<QuestStatus::Event>,                      // 0640
+		public IMovementPlayerControlsFilter                          // 0648
 	{
 	public:
 		SF_RTTI_VTABLE(PlayerCharacter);
@@ -59,7 +59,7 @@ namespace RE
 
 		~PlayerCharacter() override;  // 00
 
-		// add
+		// 0Add
 		virtual void Unk_1A2();  // 1A2
 		virtual void Unk_1A3();  // 1A3
 		virtual void Unk_1A4();  // 1A4
@@ -70,6 +70,10 @@ namespace RE
 		bool IsInChargen();
 
 		// members
+		std::uint64_t  unk0650;          // 0650
+		std::uint64_t  unk0658;          // 0658
+		std::uint64_t  unk0660;          // 0660
+		std::uint64_t  unk0668;          // 0668
 		std::uint64_t  unk0670;          // 0670
 		std::uint64_t  unk0678;          // 0678
 		std::uint64_t  unk0680;          // 0680
@@ -339,22 +343,22 @@ namespace RE
 		std::uint64_t  unk0EC0;          // 0EC0
 		std::uint64_t  unk0EC8;          // 0EC8
 		std::uint64_t  unk0ED0;          // 0ED0
-		std::uint64_t  unk0ED8;          // 0ED8
+		BGSLocation*   currentLocation;  // 0ED8
 		std::uint64_t  unk0EE0;          // 0EE0
 		std::uint64_t  unk0EE8;          // 0EE8
 		std::uint64_t  unk0EF0;          // 0EF0
-		BGSLocation*   currentLocation;  // 0EF8
+		std::uint64_t  unk0EF8;          // 0EF8
 		std::uint64_t  unk0F00;          // 0F00
 		std::uint64_t  unk0F08;          // 0F08
 		std::uint64_t  unk0F10;          // 0F10
 		std::uint64_t  unk0F18;          // 0F18
 		std::uint64_t  unk0F20;          // 0F20
 		std::uint64_t  unk0F28;          // 0F28
-		std::uint64_t  unk0F30;          // 0F30
+		TESObjectREFR* crosshairRef;     // 0F30 - NiPointer?
 		std::uint64_t  unk0F38;          // 0F38
 		std::uint64_t  unk0F40;          // 0F40
 		std::uint64_t  unk0F48;          // 0F48
-		TESObjectREFR* crosshairRef;     // 0F50 - NiPointer?
+		std::uint64_t  unk0F50;          // 0F50
 		std::uint64_t  unk0F58;          // 0F58
 		std::uint64_t  unk0F60;          // 0F60
 		std::uint64_t  unk0F68;          // 0F68
@@ -402,13 +406,9 @@ namespace RE
 		std::uint64_t  unk10B8;          // 10B8
 		std::uint64_t  unk10C0;          // 10C0
 		std::uint64_t  unk10C8;          // 10C8
-		std::uint64_t  unk10D0;          // 10D0
+		float          playerGravity;    // 10D0
+		std::uint32_t  unk10D4;          // 10D4
 		std::uint64_t  unk10D8;          // 10D8
-		std::uint64_t  unk10E0;          // 10E0
-		std::uint64_t  unk10E8;          // 10E8
-		float          playerGravity;    // 10F0
-		std::uint32_t  unk10F4;          // 10F4
-		std::uint64_t  unk10F8;          // 10F8
 	};
-	static_assert(sizeof(PlayerCharacter) == 0x1100);
+	static_assert(sizeof(PlayerCharacter) == 0x10E0);
 }

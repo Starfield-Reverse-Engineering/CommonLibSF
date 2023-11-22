@@ -18,16 +18,16 @@ namespace RE
 {
 	class TESObjectDOOR :
 		public TESBoundAnimObject,         // 000
-		public TESFullName,                // 118
-		public BGSModelMaterialSwap,       // 128
-		public TESMagicTargetForm,         // 150
-		public BGSDestructibleObjectForm,  // 158
-		public BGSOpenCloseForm,           // 168
-		public BGSKeywordForm,             // 170
-		public BGSNativeTerminalForm,      // 1A0
-		public BGSForcedLocRefType,        // 1B0
-		public BGSPropertySheet,           // 1C8
-		public BGSNavmeshableObject        // 1D8
+		public TESFullName,                // 0E0
+		public BGSModelMaterialSwap,       // 0F0
+		public TESMagicTargetForm,         // 118
+		public BGSDestructibleObjectForm,  // 120
+		public BGSOpenCloseForm,           // 130
+		public BGSKeywordForm,             // 138
+		public BGSNativeTerminalForm,      // 168
+		public BGSForcedLocRefType,        // 178
+		public BGSPropertySheet,           // 190
+		public BGSNavmeshableObject        // 1A0
 	{
 	public:
 		SF_RTTI_VTABLE(TESObjectDOOR);
@@ -47,15 +47,15 @@ namespace RE
 		~TESObjectDOOR() override;  // 00
 
 		// members
-		BGSLocalizedString                   altOpenText;      // 1E0
-		BGSLocalizedString                   altCloseText;     // 1E8
-		BGSAudio::WwiseSoundHook             openSound;        // 1F0
-		BGSAudio::WwiseSoundHook             closeSound;       // 220
-		BGSAudio::WwiseSoundHook             lockSound;        // 250
-		std::uint32_t                        unk280;           // 280
-		std::uint32_t                        unk284;           // 284
-		stl::enumeration<Flag, std::uint8_t> flags;            // 288
-		BSTArray<TESForm*>                   randomTeleports;  // 290
+		BGSLocalizedString                   altOpenText;      // 1A8
+		BGSLocalizedString                   altCloseText;     // 1B0
+		BGSAudio::WwiseSoundHook             openSound;        // 1B8
+		BGSAudio::WwiseSoundHook             closeSound;       // 1E8
+		BGSAudio::WwiseSoundHook             lockSound;        // 218
+		std::uint32_t                        unk248;           // 248
+		std::uint32_t                        unk24C;           // 24C
+		stl::enumeration<Flag, std::uint8_t> flags;            // 250
+		BSTArray<TESForm*>                   randomTeleports;  // 258
 	};
-	static_assert(sizeof(TESObjectDOOR) == 0x2A0);
+	static_assert(sizeof(TESObjectDOOR) == 0x268);
 }

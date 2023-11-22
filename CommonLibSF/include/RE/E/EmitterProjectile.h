@@ -18,17 +18,17 @@ namespace RE
 		~EmitterProjectile() override;  // 00
 
 		// members
-		std::int32_t                              unk280;  // 280
-		BSTSmartPointer<Particles::SystemBinding> unk288;  // 288
-		BSTSmartPointer<Particles::SystemBinding> unk290;  // 290
-		BSTSmartPointer<Particles::SystemBinding> unk298;  // 298
-		bool                                      unk2A0;  // 2A0
-		bool                                      unk2A1;  // 2A1
+		std::int32_t                              unk260;  // 260
+		BSTSmartPointer<Particles::SystemBinding> unk268;  // 268
+		BSTSmartPointer<Particles::SystemBinding> unk270;  // 270
+		BSTSmartPointer<Particles::SystemBinding> unk278;  // 278
+		bool                                      unk280;  // 280
+		bool                                      unk281;  // 281
+		std::uint64_t                             unk288;  // 288
+		std::uint64_t                             unk290;  // 290
+		std::uint64_t                             unk298;  // 298
+		std::uint64_t                             unk2A0;  // 2A0
 		std::uint64_t                             unk2A8;  // 2A8
-		std::uint64_t                             unk2B0;  // 2B0
-		std::uint64_t                             unk2B8;  // 2B8
-		std::uint64_t                             unk2C0;  // 2C0
-		std::uint64_t                             unk2C8;  // 2C8
 	};
-	static_assert(sizeof(EmitterProjectile) == 0x2D0);
+	static_assert(sizeof(EmitterProjectile) == 0x2B0);
 }

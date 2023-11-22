@@ -27,8 +27,8 @@ namespace RE
 		static_assert(sizeof(SplineData) == 0x1C);
 
 		// members
-		SplineData           data;          // 118
-		BGSMaterialPathForm* materialPath;  // 138
+		SplineData           data;          // 0E0
+		BGSMaterialPathForm* materialPath;  // 100
 	};
-	static_assert(sizeof(BGSBendableSpline) == 0x140);
+	static_assert(sizeof(BGSBendableSpline) == 0x108);
 }

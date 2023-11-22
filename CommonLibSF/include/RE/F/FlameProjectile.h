@@ -13,8 +13,8 @@ namespace RE
 		~FlameProjectile() override;  // 00
 
 		// members
-		float expirationTimer;  // 280
-		float coneAngle;        // 284
+		float expirationTimer;  // 260
+		float coneAngle;        // 264
 	};
-	static_assert(sizeof(FlameProjectile) == 0x290);
+	static_assert(sizeof(FlameProjectile) == 0x270);
 }

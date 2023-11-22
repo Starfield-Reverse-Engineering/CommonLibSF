@@ -28,8 +28,8 @@ namespace RE
 		~BGSProjectedDecal() override;  // 00
 
 		// members
-		BGSMaterialPathForm* material;  // 118
-		Data                 data;      // 120
+		BGSMaterialPathForm* material;  // E8
+		Data                 data;      // F0
 	};
-	static_assert(sizeof(BGSProjectedDecal) == 0x138);
+	static_assert(sizeof(BGSProjectedDecal) == 0x100);
 }

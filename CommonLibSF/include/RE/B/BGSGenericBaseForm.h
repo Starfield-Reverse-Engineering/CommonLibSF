@@ -9,16 +9,16 @@ namespace RE
 	class BGSGenericBaseFormTemplate;
 
 	class BGSGenericBaseForm :
-		public TESBoundObject,       // 000
-		public BGSNavmeshableObject  // 118
+		public TESBoundObject,       // 00
+		public BGSNavmeshableObject  // E8
 	{
 	public:
 		SF_RTTI_VTABLE(BGSGenericBaseForm);
 		SF_FORMTYPE(GBFM);
 
 		// members
-		BGSEditorID                 formEditorID;             // 120
-		BGSGenericBaseFormTemplate* genericBaseFormTemplate;  // 130
+		BGSEditorID                 formEditorID;             // E8
+		BGSGenericBaseFormTemplate* genericBaseFormTemplate;  // F8
 	};
-	static_assert(sizeof(BGSGenericBaseForm) == 0x138);
+	static_assert(sizeof(BGSGenericBaseForm) == 0x100);
 }

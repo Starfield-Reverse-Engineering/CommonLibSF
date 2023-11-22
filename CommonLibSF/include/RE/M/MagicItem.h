@@ -18,8 +18,8 @@ namespace RE
 
 	class MagicItem :
 		public TESBoundObject,  // 000
-		public TESFullName,     // 118
-		public BGSKeywordForm   // 128
+		public TESFullName,     // 0E0
+		public BGSKeywordForm   // 0F0
 	{
 	public:
 		SF_RTTI_VTABLE(MagicItem);
@@ -77,11 +77,11 @@ namespace RE
 		virtual void                     InitFromChunk(TESFile* a_file);                           // 9D
 
 		// members
-		BSTArray<EffectItem*>                                        listOfEffects;    // 158
-		std::int32_t                                                 hostileCount;     // 168
-		EffectSetting*                                               avEffectSetting;  // 170
-		std::uint32_t                                                preloadCount;     // 174
-		BSTSmartPointer<QueuedFile, BSTSmartPointerGamebryoRefCount> preloadedItem;    // 180
+		BSTArray<EffectItem*>                                        listOfEffects;    // 120
+		std::int32_t                                                 hostileCount;     // 130
+		EffectSetting*                                               avEffectSetting;  // 138
+		std::uint32_t                                                preloadCount;     // 13C
+		BSTSmartPointer<QueuedFile, BSTSmartPointerGamebryoRefCount> preloadedItem;    // 148
 	};
-	static_assert(sizeof(MagicItem) == 0x188);
+	static_assert(sizeof(MagicItem) == 0x150);
 }

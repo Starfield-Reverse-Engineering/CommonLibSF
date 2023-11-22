@@ -52,27 +52,27 @@ namespace RE
 
 	class TESObjectBOOK :
 		public TESBoundObject,             // 000
-		public TESFullName,                // 118
-		public BGSModelMaterialSwap,       // 128
-		public TESValueForm,               // 150
-		public TESWeightForm,              // 160
-		public TESDescription,             // 170
-		public BGSDestructibleObjectForm,  // 188
-		public BGSPickupPutdownSounds,     // 198
-		public BGSKeywordForm,             // 200
-		public BGSFeaturedItemMessage      // 230
+		public TESFullName,                // 0E0
+		public BGSModelMaterialSwap,       // 0F0
+		public TESValueForm,               // 118
+		public TESWeightForm,              // 128
+		public TESDescription,             // 138
+		public BGSDestructibleObjectForm,  // 150
+		public BGSPickupPutdownSounds,     // 160
+		public BGSKeywordForm,             // 1C8
+		public BGSFeaturedItemMessage      // 1F8
 	{
 	public:
 		SF_RTTI_VTABLE(TESObjectBOOK);
 		SF_FORMTYPE(BOOK);
 
 		// members
-		OBJ_BOOK           data;                 // 240
-		TESObjectSTAT*     inventoryModel;       // 260
-		TESDescription     itemCardDescription;  // 268
-		BGSScene*          scene;                // 280
-		BGSLocalizedString unk288;               // 288
-		BGSLocalizedString unk290;               // 290
+		OBJ_BOOK           data;                 // 208
+		TESObjectSTAT*     inventoryModel;       // 228
+		TESDescription     itemCardDescription;  // 230
+		BGSScene*          scene;                // 248
+		BGSLocalizedString unk250;               // 250
+		BGSLocalizedString unk258;               // 258
 	};
-	static_assert(sizeof(TESObjectBOOK) == 0x298);
+	static_assert(sizeof(TESObjectBOOK) == 0x260);
 }

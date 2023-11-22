@@ -19,8 +19,11 @@
 namespace RE
 {
 	enum class LOCK_LEVEL;
+	enum class IO_TASK_PRIORITY;
+
 	class TESContainer;
 	class Actor;
+	class ActorCause;
 	class BGSEquipSlot;
 	class BGSLocation;
 	class BGSObjectInstance;
@@ -128,16 +131,16 @@ namespace RE
 	static_assert(sizeof(LOADED_REF_DATA) == 0x28);
 
 	class TESObjectREFR :
-		public TESHandleForm,                                            // 00
-		public BSTEventSink<BSTransformDeltaEvent>,                      // 38
-		public IMovementProcessMessageInterface,                         // 40
-		public IPostAnimationChannelUpdateFunctor,                       // 48
-		public BSTEventSink<BSAnimationGraphEvent>,                      // 50
-		public BSTEventSink<BGSInventoryListEvent::Event>,               // 58
-		public IAnimationGraphManagerHolder,                             // 60
-		public IKeywordFormBase,                                         // 68
-		public ActorValueOwner,                                          // 70
-		public BSTEventSource<ActorValueEvents::ActorValueChangedEvent>  // 78
+		public TESHandleForm,                                                    // 00
+		public BSTEventSink<BSTransformDeltaEvent>,                              // 30
+		public IMovementProcessMessageInterface,                                 // 38
+		public IPostAnimationChannelUpdateFunctor,                               // 40
+		public BSTEventSink<BSAnimationGraphEvent>,                              // 48
+		public BSTEventSink<BGSInventoryListEvent::Event>,                       // 50
+		public IAnimationGraphManagerHolder,                                     // 58
+		public IKeywordFormBase,                                                 // 60
+		public ActorValueOwner,                                                  // 68
+		public BSTEventSourceLazyInit<ActorValueEvents::ActorValueChangedEvent>  // 70
 	{
 	public:
 		SF_RTTI_VTABLE(TESObjectREFR);
@@ -157,7 +160,7 @@ namespace RE
 		virtual void         Unk_6A();                                                                                                                                                                                                                                                                    // 06A
 		virtual void         UpdateSoundCallBack(bool a_endSceneAction);                                                                                                                                                                                                                                  // 06B
 		virtual bool         SetDialoguewithPlayer(bool a_flag, bool a_forceGreet, TESTopicInfo* a_topicInfo);                                                                                                                                                                                            // 06C
-		virtual void         Unk_6D();                                                                                                                                                                                                                                                                    // 06D
+		virtual bool         IsInvulnerable() const;                                                                                                                                                                                                                                                      // 06D
 		virtual void         Unk_6E();                                                                                                                                                                                                                                                                    // 06E
 		virtual void         Unk_6F();                                                                                                                                                                                                                                                                    // 06F
 		virtual void         Unk_70();                                                                                                                                                                                                                                                                    // 070
@@ -180,8 +183,8 @@ namespace RE
 		virtual void         Unk_81();                                                                                                                                                                                                                                                                    // 081
 		virtual void         Unk_82();                                                                                                                                                                                                                                                                    // 082
 		virtual void         Unk_83();                                                                                                                                                                                                                                                                    // 083
-		virtual void         Unk_84();                                                                                                                                                                                                                                                                    // 084
-		virtual void         Unk_85();                                                                                                                                                                                                                                                                    // 085
+		virtual void         SetActorCause(ActorCause* a_actorCause);                                                                                                                                                                                                                                     // 084
+		virtual ActorCause*  GetActorCause();                                                                                                                                                                                                                                                             // 085
 		virtual void         SetScale(float a_scale);                                                                                                                                                                                                                                                     // 086
 		virtual void         Unk_87();                                                                                                                                                                                                                                                                    // 087
 		virtual void         Unk_88();                                                                                                                                                                                                                                                                    // 088
@@ -217,8 +220,8 @@ namespace RE
 		virtual void         Unk_A6();                                                                                                                                                                                                                                                                    // 0A6
 		virtual void         Unk_A7();                                                                                                                                                                                                                                                                    // 0A7
 		virtual void         Unk_A8();                                                                                                                                                                                                                                                                    // 0A8
-		virtual void         Unk_A9();                                                                                                                                                                                                                                                                    // 0A9
-		virtual void         Unk_AA();                                                                                                                                                                                                                                                                    // 0AA
+		virtual bool         ShouldBackgroundClone() const;                                                                                                                                                                                                                                               // 0A9
+		virtual bool         IsReadyForAttach([[maybe_unused]] const IO_TASK_PRIORITY& a_priority) const;                                                                                                                                                                                                 // 0AA
 		virtual void         Unk_AB();                                                                                                                                                                                                                                                                    // 0AB - { return Get3D(a_objectOut) };?
 		virtual void         Unk_AC();                                                                                                                                                                                                                                                                    // 0AC - Get3D(NiPointer<NiAVObject>&)?
 		virtual void         Unk_AD();                                                                                                                                                                                                                                                                    // 0AD
@@ -302,7 +305,7 @@ namespace RE
 		virtual void         Unk_FB();                                                                                                                                                                                                                                                                    // 0FB
 		virtual void         Unk_FC();                                                                                                                                                                                                                                                                    // 0FC
 		virtual void         Unk_FD();                                                                                                                                                                                                                                                                    // 0FD
-		virtual void         ResetInventory(bool a_leveledOnly, bool a_skipInitDefaultWorn);                                                                                                                                                                                                              // 0FE
+		virtual void         ResetInventory(bool a_leveledOnly, bool a_skipInitDefaultWorn, bool a_arg3);                                                                                                                                                                                                 // 0FE
 		virtual void         Unk_FF();                                                                                                                                                                                                                                                                    // 0FF
 		virtual void         Unk_100();                                                                                                                                                                                                                                                                   // 100
 		virtual void         Unk_101();                                                                                                                                                                                                                                                                   // 101
@@ -324,7 +327,7 @@ namespace RE
 		virtual void         Unk_111();                                                                                                                                                                                                                                                                   // 111
 		virtual void         Unk_112();                                                                                                                                                                                                                                                                   // 112
 		virtual void         Unk_113();                                                                                                                                                                                                                                                                   // 113
-		virtual void         InitDefaultWornImpl(bool a_weapon, bool a_allowChanges);                                                                                                                                                                                                                     // 114
+		virtual void         InitDefaultWornImpl(bool a_weapon);                                                                                                                                                                                                                                          // 114
 		virtual void         Unk_115();                                                                                                                                                                                                                                                                   // 115
 		virtual void         Unk_116();                                                                                                                                                                                                                                                                   // 116
 		virtual void         Unk_117();                                                                                                                                                                                                                                                                   // 117
@@ -386,18 +389,17 @@ namespace RE
 		void                                Unlock();
 
 		// members
-		OBJ_REFR                                      data;           // 0A0
-		BSGuarded<BGSInventoryList*, BSReadWriteLock> inventoryList;  // 0D0
-		TESObjectCELL*                                parentCell;     // 0E0
-		BSGuarded<LOADED_REF_DATA*, BSReadWriteLock>  loadedData;     // 0E8
-		BSTSmartPointer<ExtraDataList>                extraDataList;  // 0F8
-		BGSLocalizedString                            unk100;         // 100 - empty?
-		std::uint16_t                                 scale;          // 108
-		std::uint8_t                                  unk10A;         // 10A
-		std::uint8_t                                  flags;          // 10B
+		OBJ_REFR                                      data;           // 80
+		BSGuarded<BGSInventoryList*, BSReadWriteLock> inventoryList;  // B0
+		TESObjectCELL*                                parentCell;     // C0
+		BSGuarded<LOADED_REF_DATA*, BSReadWriteLock>  loadedData;     // C8
+		BSTSmartPointer<ExtraDataList>                extraDataList;  // D8
+		std::uint16_t                                 scale;          // E0
+		std::uint8_t                                  unkE2;          // E2
+		std::uint8_t                                  flags;          // E3
 
 	private:
 		void AddLockChange();
 	};
-	static_assert(sizeof(TESObjectREFR) == 0x110);
+	static_assert(sizeof(TESObjectREFR) == 0xF0);
 }

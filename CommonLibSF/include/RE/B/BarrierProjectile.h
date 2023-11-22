@@ -23,8 +23,8 @@ namespace RE
 		virtual void Unk_15D();  // 15D
 
 		// members
-		float                   width;          // 280
-		BSTArray<CollisionData> collisionData;  // 288
+		float                   width;          // 260
+		BSTArray<CollisionData> collisionData;  // 268
 	};
-	static_assert(sizeof(BarrierProjectile) == 0x2A0);
+	static_assert(sizeof(BarrierProjectile) == 0x280);
 }

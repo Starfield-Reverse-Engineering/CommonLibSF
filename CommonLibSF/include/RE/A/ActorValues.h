@@ -71,7 +71,7 @@ namespace RE
 		ActorValueInfo*           electromagneticHealth;                       // 0D0
 		ActorValueInfo*           electromagneticToDamageConversionRate;       // 0D8
 		ActorValueInfo*           electromagneticRecoverRateMult;              // 0E0
-		ActorValueInfo*           unkE8;                                       // 0E8	- null
+		ActorValueInfo*           enchanting;                                  // 0E8
 		ActorValueInfo*           endurance;                                   // 0F0
 		ActorValueInfo*           enduranceCondition;                          // 0F8
 		ActorValueInfo*           experience;                                  // 100

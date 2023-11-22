@@ -11,9 +11,9 @@ namespace RE
 
 	class BGSIdleMarker :
 		public TESBoundObject,    // 000
-		public BGSKeywordForm,    // 118
-		public TESModel,          // 148
-		public BGSIdleCollection  // 168
+		public BGSKeywordForm,    // 0E0
+		public TESModel,          // 110
+		public BGSIdleCollection  // 130
 	{
 	public:
 		SF_RTTI_VTABLE(BGSIdleMarker);
@@ -22,9 +22,9 @@ namespace RE
 		~BGSIdleMarker() override;  // 00
 
 		// members
-		BGSKeyword* animArchType;  // 188
-		BGSKeyword* flavorAnim;    // 190
-		BGSAction*  action;        // 198
+		BGSKeyword* animArchType;  // 150
+		BGSKeyword* flavorAnim;    // 158
+		BGSAction*  action;        // 160
 	};
-	static_assert(sizeof(BGSIdleMarker) == 0x1A0);
+	static_assert(sizeof(BGSIdleMarker) == 0x168);
 }

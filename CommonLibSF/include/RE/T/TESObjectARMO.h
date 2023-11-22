@@ -86,18 +86,18 @@ namespace RE
 		}
 
 		// members
-		BGSEditorID                            formEditorID;   // 2B0
-		BSTOptional<TESObjectARMOInstanceData> instanceData;   // 2C0
-		BSTArray<ArmorAddon>                   modelArray;     // 340
-		BGSAttachParentArray                   attachParents;  // 350
+		BGSEditorID                            formEditorID;   // 278
+		BSTOptional<TESObjectARMOInstanceData> instanceData;   // 288
+		BSTArray<ArmorAddon>                   modelArray;     // 308
+		BGSAttachParentArray                   attachParents;  // 318
+		std::uint64_t                          unk338;         // 338
+		std::uint64_t                          unk340;         // 340
+		std::uint64_t                          unk348;         // 348
+		std::uint64_t                          unk350;         // 350
+		std::uint64_t                          unk358;         // 358
+		std::uint64_t                          unk360;         // 360
+		std::uint64_t                          unk368;         // 368
 		std::uint64_t                          unk370;         // 370
-		std::uint64_t                          unk378;         // 378
-		std::uint64_t                          unk380;         // 380
-		std::uint64_t                          unk388;         // 388
-		std::uint64_t                          unk390;         // 390
-		std::uint64_t                          unk398;         // 398
-		std::uint64_t                          unk3A0;         // 3A0
-		std::uint64_t                          unk3A8;         // 3A8
 	};
-	static_assert(sizeof(TESObjectARMO) == 0x3B0);
+	static_assert(sizeof(TESObjectARMO) == 0x378);
 }

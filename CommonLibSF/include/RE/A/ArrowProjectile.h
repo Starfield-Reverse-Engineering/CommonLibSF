@@ -15,7 +15,7 @@ namespace RE
 		~ArrowProjectile() override;  // 00
 
 		// members
-		AlchemyItem* poison;  // 2D0
+		AlchemyItem* poison;  // 2B0
 	};
-	static_assert(sizeof(ArrowProjectile) == 0x2E0);
+	static_assert(sizeof(ArrowProjectile) == 0x2C0);
 }

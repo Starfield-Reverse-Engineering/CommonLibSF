@@ -29,8 +29,8 @@ namespace RE
 	}
 
 	class BGSTextureSet :
-		public TESBoundObject,             // 000
-		public TextureUtils::TextureIdSet  // 118
+		public TESBoundObject,             // 00
+		public TextureUtils::TextureIdSet  // E0
 	{
 	public:
 		SF_RTTI_VTABLE(BGSTextureSet);
@@ -39,10 +39,10 @@ namespace RE
 		~BGSTextureSet() override;  // 00
 
 		// members
-		BSFixedString materialName;  // 290
-		TESTexture    textures[19];  // 298
-		DecalData*    decalData;     // 3C8
-		std::uint16_t flags;         // 3D0
+		BSFixedString materialName;  // 258
+		TESTexture    textures[19];  // 260
+		DecalData*    decalData;     // 390
+		std::uint16_t flags;         // 398
 	};
-	static_assert(sizeof(BGSTextureSet) == 0x3D8);
+	static_assert(sizeof(BGSTextureSet) == 0x3A0);
 }

@@ -49,10 +49,10 @@ namespace RE
 
 	class BGSHazard :
 		public TESBoundObject,              // 000
-		public TESFullName,                 // 118
-		public TESModel,                    // 128
-		public BGSPreloadable,              // 148
-		public TESImageSpaceModifiableForm  // 150
+		public TESFullName,                 // 0E0
+		public TESModel,                    // 0F0
+		public BGSPreloadable,              // 110
+		public TESImageSpaceModifiableForm  // 118
 	{
 	public:
 		SF_RTTI_VTABLE(BGSHazard);
@@ -61,8 +61,8 @@ namespace RE
 		~BGSHazard() override;  // 00
 
 		// members
-		BGSHazardData data;        // 160
-		TESCondition  conditions;  // 1D0
+		BGSHazardData data;        // 128
+		TESCondition  conditions;  // 198
 	};
-	static_assert(sizeof(BGSHazard) == 0x1E0);
+	static_assert(sizeof(BGSHazard) == 0x1A8);
 }

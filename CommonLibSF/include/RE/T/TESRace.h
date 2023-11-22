@@ -101,15 +101,15 @@ namespace RE
 
 	class TESRace :
 		public TESForm,             // 00
-		public TESFullName,         // 38
-		public TESDescription,      // 48
-		public TESSpellList,        // 60
-		public BGSSkinForm,         // 78
-		public BGSBipedObjectForm,  // 88
-		public BGSKeywordForm,      // 98
-		public BGSAttackDataForm,   // C8
-		public BGSPropertySheet,    // D8
-		public BGSPreloadable       // E8
+		public TESFullName,         // 30
+		public TESDescription,      // 40
+		public TESSpellList,        // 58
+		public BGSSkinForm,         // 70
+		public BGSBipedObjectForm,  // 80
+		public BGSKeywordForm,      // 90
+		public BGSAttackDataForm,   // C0
+		public BGSPropertySheet,    // D0
+		public BGSPreloadable       // E0
 	{
 	public:
 		SF_RTTI_VTABLE(TESRace);
@@ -124,46 +124,46 @@ namespace RE
 		~TESRace() override;  // 00
 
 		// members
-		BGSEditorID                formEditorID;                     // 0F0
-		BGSMaterialType*           bloodImpactMaterial;              // 100
-		BGSAudio::WwiseSoundHook   corpseOpenSound;                  // 108
-		BGSAudio::WwiseSoundHook   corpseCloseSound;                 // 138
-		BSFixedString              bipedObjectNames[64];             // 168
-		ActorValueInfo*            bipedObjectConditions[64];        // 368
+		BGSEditorID                formEditorID;                     // 0E8
+		BGSMaterialType*           bloodImpactMaterial;              // 0F8
+		BGSAudio::WwiseSoundHook   corpseOpenSound;                  // 100
+		BGSAudio::WwiseSoundHook   corpseCloseSound;                 // 130
+		BSFixedString              bipedObjectNames[64];             // 160
+		ActorValueInfo*            bipedObjectConditions[64];        // 360
+		std::uint64_t              unk560;                           // 560
 		std::uint64_t              unk568;                           // 568
 		std::uint64_t              unk570;                           // 570
 		std::uint64_t              unk578;                           // 578
 		std::uint64_t              unk580;                           // 580
 		std::uint64_t              unk588;                           // 588
 		std::uint64_t              unk590;                           // 590
-		std::uint64_t              unk598;                           // 598
-		BSTArray<EquipSlotData>    equipSlotArray;                   // 5A0
-		std::uint64_t              unk5B0;                           // 5B0
-		TESRace*                   morphRace;                        // 5B8
-		TESRace*                   armorParentRace;                  // 5C0
-		BSTArray<BGSBoneModifier*> unk5C8[SEXES::kTotal];            // 5C8
-		TESQuest*                  dialogueQuest;                    // 5E8
-		TESModel                   unk5F0[4];                        // 5F0
-		TESModel                   faceBones[SEXES::kTotal];         // 670
-		RACE_DATA                  data;                             // 6B0
-		std::uint64_t              unk7B0;                           // 7B0
-		BGSTextureModel            unk7B8[SEXES::kTotal];            // 7B8
-		BGSAnimationGraphComponent unk7F8[4];                        // 7F8
-		BGSVoiceType*              defaultVoiceType[SEXES::kTotal];  // 8F8
-		BGSBodyPartInfo            bodyPartInfo;                     // 908
-		BGSAttachParentArray       attachParents;                    // 930
-		BSTArray<void*>            unk950;                           // 950
-		BGSMovementType*           baseMoveTypes[4];                 // 960
+		BSTArray<EquipSlotData>    equipSlotArray;                   // 598
+		std::uint64_t              unk5A8;                           // 5A8
+		TESRace*                   morphRace;                        // 5B0
+		TESRace*                   armorParentRace;                  // 5B8
+		BSTArray<BGSBoneModifier*> unk5C0[SEXES::kTotal];            // 5C0
+		TESQuest*                  dialogueQuest;                    // 5E0
+		TESModel                   unk5E8[4];                        // 5E8
+		TESModel                   faceBones[SEXES::kTotal];         // 668
+		RACE_DATA                  data;                             // 6A8
+		std::uint64_t              unk7A8;                           // 7A8
+		BGSTextureModel            unk7B0[SEXES::kTotal];            // 7B0
+		BGSAnimationGraphComponent unk7F0[4];                        // 7F0
+		BGSVoiceType*              defaultVoiceType[SEXES::kTotal];  // 8F0
+		BGSBodyPartInfo            bodyPartInfo;                     // 900
+		BGSAttachParentArray       attachParents;                    // 928
+		BSTArray<void*>            unk948;                           // 948
+		BGSMovementType*           baseMoveTypes[4];                 // 958
+		std::uint64_t              unk978;                           // 978
 		std::uint64_t              unk980;                           // 980
-		std::uint64_t              unk988;                           // 988
-		void*                      chargenData[SEXES::kTotal];       // 990
-		std::uint64_t              unk9A0;                           // 9A0
-		BSFixedString              handMaterials[SEXES::kTotal];     // 9A8
-		BSFixedString              skinMaterials[SEXES::kTotal];     // 9B8
-		BSFixedString              unk9C8[SEXES::kTotal];            // 9C8
-		BSTArray<BGSHeadPart*>     headparts[SEXES::kTotal];         // 9D8
-		Unk9F8                     unk9F8[SEXES::kTotal];            // 9F8
-		BGSLocalizedString         unkA18;                           // A18
+		void*                      chargenData[SEXES::kTotal];       // 988
+		std::uint64_t              unk998;                           // 998
+		BSFixedString              handMaterials[SEXES::kTotal];     // 9A0
+		BSFixedString              skinMaterials[SEXES::kTotal];     // 9B0
+		BSFixedString              unk9C0[SEXES::kTotal];            // 9C0
+		BSTArray<BGSHeadPart*>     headparts[SEXES::kTotal];         // 9D0
+		Unk9F8                     unk9F0[SEXES::kTotal];            // 9F0
+		BGSLocalizedString         unkA10;                           // A10
 	};
-	static_assert(sizeof(TESRace) == 0xA20);
+	static_assert(sizeof(TESRace) == 0xA18);
 }

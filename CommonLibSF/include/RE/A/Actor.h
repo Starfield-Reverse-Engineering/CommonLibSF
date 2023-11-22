@@ -11,6 +11,7 @@
 
 namespace RE
 {
+	class TESNPC;
 	class AIProcess;
 	class BGSPerk;
 	class CombatController;
@@ -58,21 +59,21 @@ namespace RE
 
 	class Actor :
 		public TESObjectREFR,                                           // 000
-		public MagicTarget,                                             // 110
-		public ActorState,                                              // 128
-		public IMovementStateStore,                                     // 138
-		public IStoreAnimationActions,                                  // 140
-		public BSTEventSink<BSNavmeshChangeEvent>,                      // 148
-		public BSTEventSink<BSMovementDataChangedEvent>,                // 150
-		public BSTEventSink<BSSubGraphActivationUpdate>,                // 158
-		public BSTEventSink<bhkCharacterMoveFinishEvent>,               // 160
-		public BSTEventSink<bhkNonSupportContactEvent>,                 // 168
-		public BSTEventSink<bhkCharacterStateChangeEvent>,              // 170
-		public BSTEventSource<MovementMessageUpdateRequestImmediate>,   // 178
-		public BSTEventSource<PerkValueEvents::PerkValueChangedEvent>,  // 1A0
-		public BSTEventSource<PerkValueEvents::PerkEntryUpdatedEvent>,  // 1C8
-		public BSTEventSource<ActorCPMEvent>,                           // 1F0
-		public BSTEventSource<ActorSprintEvent>                         // 218
+		public MagicTarget,                                             // 0F0
+		public ActorState,                                              // 108
+		public IMovementStateStore,                                     // 118
+		public IStoreAnimationActions,                                  // 120
+		public BSTEventSink<BSNavmeshChangeEvent>,                      // 128
+		public BSTEventSink<BSMovementDataChangedEvent>,                // 130
+		public BSTEventSink<BSSubGraphActivationUpdate>,                // 138
+		public BSTEventSink<bhkCharacterMoveFinishEvent>,               // 140
+		public BSTEventSink<bhkNonSupportContactEvent>,                 // 148
+		public BSTEventSink<bhkCharacterStateChangeEvent>,              // 150
+		public BSTEventSource<MovementMessageUpdateRequestImmediate>,   // 158
+		public BSTEventSource<PerkValueEvents::PerkValueChangedEvent>,  // 180
+		public BSTEventSource<PerkValueEvents::PerkEntryUpdatedEvent>,  // 1A8
+		public BSTEventSource<ActorCPMEvent>,                           // 1D0
+		public BSTEventSource<ActorSprintEvent>                         // 1F8
 	{
 	public:
 		SF_RTTI_VTABLE(Actor);
@@ -170,7 +171,7 @@ namespace RE
 		virtual void         Unk_136();                                                                              // 136
 		virtual void         Unk_137();                                                                              // 137
 		virtual void         Unk_138();                                                                              // 138
-		virtual void         Unk_139();                                                                              // 139
+		virtual void         Resurrect(bool a_resetInventory, bool a_attach3D);                                      // 139
 		virtual void         Unk_13A();                                                                              // 13A
 		virtual void         Unk_13B();                                                                              // 13B
 		virtual void         Unk_13C();                                                                              // 13C
@@ -200,7 +201,7 @@ namespace RE
 		virtual void         Unk_154();                                                                              // 154
 		virtual void         Unk_155();                                                                              // 155
 		virtual void         Unk_156();                                                                              // 156
-		virtual void         Unk_157();                                                                              // 157
+		virtual void         SetRefraction(bool a_enable, float a_refractionPower);                                  // 157
 		virtual void         Unk_158();                                                                              // 158
 		virtual void         Unk_159();                                                                              // 159
 		virtual void         Unk_15A();                                                                              // 15A
@@ -218,7 +219,7 @@ namespace RE
 		virtual void         Unk_166();                                                                              // 166
 		virtual void         Unk_167();                                                                              // 167
 		virtual void         Unk_168();                                                                              // 168
-		virtual void         Unk_169();                                                                              // 169
+		virtual void         UpdateAlpha();                                                                          // 169
 		virtual void         Unk_16A();                                                                              // 16A
 		virtual void         Unk_16B();                                                                              // 16B
 		virtual bool         IsInCombat() const;                                                                     // 16C
@@ -279,31 +280,33 @@ namespace RE
 		[[nodiscard]] bool IsHostileToActor(Actor* a_actor);
 
 		// members
-		stl::enumeration<BOOL_BITS, std::uint32_t>           boolBits;                 // 240
-		std::uint32_t                                        unk244;                   // 244
+		stl::enumeration<BOOL_BITS, std::uint32_t>           boolBits;                 // 220
+		float                                                unk224;                   // 224
+		BSGuarded<BSTArray<void*>, BSSpinLock>               unk228;                   // 228 - BGSBody?
+		AIProcess*                                           currentProcess;           // 240
 		std::uint64_t                                        unk248;                   // 248
 		std::uint64_t                                        unk250;                   // 250
 		std::uint64_t                                        unk258;                   // 258
-		AIProcess*                                           currentProcess;           // 260
-		std::uint64_t                                        unk268;                   // 268
+		std::uint64_t                                        unk260;                   // 260
+		CombatController*                                    combatController;         // 268
 		std::uint64_t                                        unk270;                   // 270
-		std::uint64_t                                        unk278;                   // 278
-		std::uint64_t                                        unk280;                   // 280
-		CombatController*                                    combatController;         // 288
-		std::uint64_t                                        unk290;                   // 290
-		ActorValueStorage                                    avStorage;                // 298
+		ActorValueStorage                                    avStorage;                // 278
+		std::uint64_t                                        unk2A0;                   // 2A0
+		stl::enumeration<ACTOR_CRITICAL_STAGE, std::int32_t> criticalStage;            // 2A8
+		std::uint32_t                                        dialogueItemTarget;       // 2AC - TESPointerHandle
+		std::uint32_t                                        currentCombatTarget;      // 2B0 - TESPointerHandle
+		std::uint32_t                                        myKiller;                 // 2B4 - TESPointerHandle
+		std::uint64_t                                        unk2B8;                   // 2B8
 		std::uint64_t                                        unk2C0;                   // 2C0
-		stl::enumeration<ACTOR_CRITICAL_STAGE, std::int32_t> criticalStage;            // 2C8
-		std::uint32_t                                        dialogueItemTarget;       // 2CC - TESPointerHandle
-		std::uint32_t                                        currentCombatTarget;      // 2D0 - TESPointerHandle
-		std::uint32_t                                        myKiller;                 // 2D4 - TESPointerHandle
-		std::uint64_t                                        unk2D8;                   // 2D8
+		std::uint32_t                                        actionValue;              // 2C8
+		float                                                timerOnAction;            // 2CC
+		std::uint64_t                                        unk2D0;                   // 2D0
+		std::uint32_t                                        intimidateBribeDayStamp;  // 2D8
+		std::uint32_t                                        unk2DC;                   // 2DC
 		std::uint64_t                                        unk2E0;                   // 2E0
-		std::uint32_t                                        actionValue;              // 2E8
-		float                                                timerOnAction;            // 2EC
+		std::uint64_t                                        unk2E8;                   // 2E8
 		std::uint64_t                                        unk2F0;                   // 2F0
-		std::uint32_t                                        intimidateBribeDayStamp;  // 2F8
-		std::uint32_t                                        unk2FC;                   // 2FC
+		std::uint64_t                                        unk2F8;                   // 2F8
 		std::uint64_t                                        unk300;                   // 300
 		std::uint64_t                                        unk308;                   // 308
 		std::uint64_t                                        unk310;                   // 310
@@ -317,17 +320,17 @@ namespace RE
 		std::uint64_t                                        unk350;                   // 350
 		std::uint64_t                                        unk358;                   // 358
 		std::uint64_t                                        unk360;                   // 360
-		std::uint64_t                                        unk368;                   // 368
-		std::uint64_t                                        unk370;                   // 370
-		std::uint64_t                                        unk378;                   // 378
-		std::uint64_t                                        unk380;                   // 380
-		TESRace*                                             race;                     // 388
-		Perks*                                               perks;                    // 390
-		std::uint32_t                                        unk398;                   // 398
-		mutable BSReadWriteLock                              perkArrayLock;            // 39C
-		std::uint32_t                                        unk3A4;                   // 394
-		stl::enumeration<BOOL_FLAGS, std::uint32_t>          boolFlags;                // 3A8
-		stl::enumeration<BOOL_FLAGS2, std::uint32_t>         boolFlags2;               // 3AC
+		TESRace*                                             race;                     // 368
+		Perks*                                               perks;                    // 370
+		std::uint32_t                                        unk378;                   // 378
+		mutable BSReadWriteLock                              perkArrayLock;            // 37C
+		std::uint32_t                                        unk384;                   // 374
+		stl::enumeration<BOOL_FLAGS, std::uint32_t>          boolFlags;                // 388
+		stl::enumeration<BOOL_FLAGS2, std::uint32_t>         boolFlags2;               // 38C
+		std::uint64_t                                        unk390;                   // 390
+		std::uint64_t                                        unk398;                   // 398
+		std::uint64_t                                        unk3A0;                   // 3A0
+		std::uint64_t                                        unk3A8;                   // 3A8
 		std::uint64_t                                        unk3B0;                   // 3B0
 		std::uint64_t                                        unk3B8;                   // 3B8
 		std::uint64_t                                        unk3C0;                   // 3C0
@@ -376,10 +379,6 @@ namespace RE
 		std::uint64_t                                        unk518;                   // 518
 		std::uint64_t                                        unk520;                   // 520
 		std::uint64_t                                        unk528;                   // 528
-		std::uint64_t                                        unk530;                   // 530
-		std::uint64_t                                        unk538;                   // 538
-		std::uint64_t                                        unk540;                   // 540
-		std::uint64_t                                        unk548;                   // 548
 	};
-	static_assert(sizeof(Actor) == 0x550);
+	static_assert(sizeof(Actor) == 0x530);
 }

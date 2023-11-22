@@ -34,16 +34,16 @@ namespace RE
 
 	class TESObjectCONT :
 		public TESBoundAnimObject,         // 000
-		public TESContainer,               // 118
-		public TESFullName,                // 130
-		public BGSModelMaterialSwap,       // 140
-		public TESMagicTargetForm,         // 168
-		public BGSDestructibleObjectForm,  // 170
-		public BGSOpenCloseForm,           // 180
-		public BGSKeywordForm,             // 188
-		public BGSForcedLocRefType,        // 1B8
-		public BGSPropertySheet,           // 1D0
-		public BGSNativeTerminalForm       // 1E0
+		public TESContainer,               // 0E0
+		public TESFullName,                // 0F8
+		public BGSModelMaterialSwap,       // 108
+		public TESMagicTargetForm,         // 130
+		public BGSDestructibleObjectForm,  // 138
+		public BGSOpenCloseForm,           // 148
+		public BGSKeywordForm,             // 150
+		public BGSForcedLocRefType,        // 180
+		public BGSPropertySheet,           // 198
+		public BGSNativeTerminalForm       // 1A8
 	{
 	public:
 		SF_RTTI_VTABLE(TESObjectCONT);
@@ -52,13 +52,13 @@ namespace RE
 		~TESObjectCONT() override;  // 00
 
 		// members
-		CONT_DATA                data;              // 1F0
-		BGSAudio::WwiseSoundHook openSound;         // 1F8
-		BGSAudio::WwiseSoundHook closeSound;        // 228
-		BGSAudio::WwiseSoundHook takeAllSound;      // 258
-		BGSListForm*             containsOnlyList;  // 288
-		BGSAttachParentArray     attachParents;     // 290
-		std::uint8_t             unk2B0;            // 2B0
+		CONT_DATA                data;              // 1B8
+		BGSAudio::WwiseSoundHook openSound;         // 1C0
+		BGSAudio::WwiseSoundHook closeSound;        // 1F0
+		BGSAudio::WwiseSoundHook takeAllSound;      // 220
+		BGSListForm*             containsOnlyList;  // 250
+		BGSAttachParentArray     attachParents;     // 258
+		std::uint8_t             unk278;            // 278
 	};
-	static_assert(sizeof(TESObjectCONT) == 0x2B8);
+	static_assert(sizeof(TESObjectCONT) == 0x280);
 }

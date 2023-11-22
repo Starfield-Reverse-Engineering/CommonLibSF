@@ -7,7 +7,7 @@ namespace RE
 {
 	class BGSLevSpaceCell :
 		public TESForm,        // 00
-		public TESLeveledList  // 38
+		public TESLeveledList  // 30
 	{
 	public:
 		SF_RTTI_VTABLE(BGSLevSpaceCell);
@@ -15,5 +15,5 @@ namespace RE
 
 		~BGSLevSpaceCell() override;  // 00
 	};
-	static_assert(sizeof(BGSLevSpaceCell) == 0x98);
+	static_assert(sizeof(BGSLevSpaceCell) == 0x90);
 }

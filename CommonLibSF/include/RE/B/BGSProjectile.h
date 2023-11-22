@@ -85,10 +85,10 @@ namespace RE
 
 	class BGSProjectile :
 		public TESBoundObject,            // 000
-		public TESFullName,               // 118
-		public TESModel,                  // 128
-		public BGSPreloadable,            // 148
-		public BGSDestructibleObjectForm  // 150
+		public TESFullName,               // 0E0
+		public TESModel,                  // 0F0
+		public BGSPreloadable,            // 110
+		public BGSDestructibleObjectForm  // 118
 	{
 	public:
 		SF_RTTI_VTABLE(BGSProjectile);
@@ -97,13 +97,13 @@ namespace RE
 		~BGSProjectile() override;  // 00
 
 		// members
-		BGSProjectileData        data;              // 160
-		TESModel                 muzzleFlashModel;  // 1F8
-		BGSCurveForm*            curveTable;        // 218
-		BGSAudio::WwiseSoundHook activeSoundLoop;   // 220
-		BGSAudio::WwiseSoundHook countdownSound;    // 250
-		BGSAudio::WwiseSoundHook deactivateSound;   // 280
-		std::uint32_t            unk2B0;            // 2B0
+		BGSProjectileData        data;              // 128
+		TESModel                 muzzleFlashModel;  // 1C0
+		BGSCurveForm*            curveTable;        // 1E0
+		BGSAudio::WwiseSoundHook activeSoundLoop;   // 1E8
+		BGSAudio::WwiseSoundHook countdownSound;    // 218
+		BGSAudio::WwiseSoundHook deactivateSound;   // 248
+		std::uint32_t            unk278;            // 278
 	};
-	static_assert(sizeof(BGSProjectile) == 0x2B8);
+	static_assert(sizeof(BGSProjectile) == 0x280);
 }

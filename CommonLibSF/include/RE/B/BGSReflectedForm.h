@@ -23,5 +23,5 @@ namespace RE
 		virtual void Unk_6A();  // 6A
 		virtual void Unk_6B();  // 6B
 	};
-	static_assert(sizeof(BGSReflectedForm) == 0x38);
+	static_assert(sizeof(BGSReflectedForm) == 0x30);
 }

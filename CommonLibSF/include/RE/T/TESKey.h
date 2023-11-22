@@ -12,5 +12,5 @@ namespace RE
 
 		~TESKey() override;  // 00
 	};
-	static_assert(sizeof(TESKey) == 0x290);
+	static_assert(sizeof(TESKey) == 0x258);
 }

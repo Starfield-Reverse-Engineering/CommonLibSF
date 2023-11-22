@@ -11,7 +11,7 @@ namespace RE
 
 	class ActorValueInfo :
 		public TESForm,     // 00
-		public TESFullName  // 38
+		public TESFullName  // 30
 	{
 	public:
 		SF_RTTI_VTABLE(ActorValueInfo);
@@ -19,7 +19,9 @@ namespace RE
 		~ActorValueInfo() override;  // 00
 
 		// members
-		BGSEditorID                                         editorID;             // 048
+
+		BGSEditorID                                         editorID;             // 040
+		std::uint64_t                                       unk050;               // 050
 		std::uint64_t                                       unk058;               // 058
 		std::uint64_t                                       unk060;               // 060
 		std::uint64_t                                       unk068;               // 068
@@ -49,18 +51,17 @@ namespace RE
 		std::uint64_t                                       unk128;               // 128
 		std::uint64_t                                       unk130;               // 130
 		std::uint64_t                                       unk138;               // 138
-		std::uint64_t                                       unk140;               // 140
-		BGSResource*                                        resource;             // 148
-		BSFixedString                                       abbreviation;         // 150
-		std::uint32_t                                       index;                // 158
-		std::uint32_t                                       flags;                // 15C
-		stl::enumeration<ActorValue::AVType, std::uint32_t> avType;               // 160
-		std::uint32_t                                       unk164;               // 164
-		std::uint32_t                                       fullCacheIndex;       // 168
-		std::uint32_t                                       permanentCacheIndex;  // 16C
-		std::uint64_t                                       unk170;               // 170
-		std::uint32_t                                       unk178;               // 178
-		std::uint32_t                                       sortIndex;            // 17C
+		BGSResource*                                        resource;             // 140
+		BSFixedString                                       abbreviation;         // 148
+		std::uint32_t                                       index;                // 150
+		std::uint32_t                                       flags;                // 154
+		stl::enumeration<ActorValue::AVType, std::uint32_t> avType;               // 158
+		std::uint32_t                                       unk15C;               // 15C
+		std::uint32_t                                       fullCacheIndex;       // 160
+		std::uint32_t                                       permanentCacheIndex;  // 164
+		std::uint64_t                                       unk168;               // 168
+		std::uint32_t                                       unk170;               // 170
+		std::uint32_t                                       sortIndex;            // 174
 	};
-	static_assert(sizeof(ActorValueInfo) == 0x180);
+	static_assert(sizeof(ActorValueInfo) == 0x178);
 }

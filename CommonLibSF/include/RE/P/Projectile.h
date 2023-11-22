@@ -169,59 +169,59 @@ namespace RE
 		virtual bool          ShouldUseDesiredTarget();                      // 15C
 
 		// members
-		BSTArray<ImpactData>                                       impacts;              // 110
-		NiPointer<bhkNPCollisionObject>                            collisionObject;      // 120
-		NiPointer<TESObjectREFR>                                   droppedRefr;          // 128
-		NiTransform                                                followOffset;         // 130
-		BSSpinLock                                                 lock;                 // 170
-		NiPoint3                                                   movementDirection;    // 178
-		NiPoint3                                                   velocity;             // 184
-		void*                                                      unk190;               // 190 - smart ptr
-		NiPointer<ActorCause>                                      actorCause;           // 198
-		std::uint32_t                                              shooterHandle;        // 1A0 - TESPointerHandle
-		std::uint32_t                                              desiredTargetHandle;  // 1A4 - TESPointerHandle
-		std::uint32_t                                              unk1A8;               // 1A8
-		std::uint32_t                                              unk1AC;               // 1AC
-		std::uint32_t                                              unk1B0;               // 1B0
-		std::uint32_t                                              unk1B4;               // 1B4
-		BGSExplosion*                                              explosion;            // 1B8
-		MagicItem*                                                 spell;                // 1C0
-		EffectSetting*                                             avEffect;             // 1C8
-		void*                                                      unk1D0;               // 1D0 - smart ptr
-		void*                                                      unk1D8;               // 1D8 - smart ptr
-		void*                                                      unk1E0;               // 1E0 - smart ptr
-		void*                                                      unk1E8;               // 1E8 - smart ptr
-		std::uint64_t                                              unk1F0;               // 1F0
-		BGSEquipIndex                                              equipIndex;           // 1F8
-		stl::enumeration<BGSBodyPartDefs::LIMB_ENUM, std::int32_t> targetLimbEnum;       // 1FC
-		NiPointer<NiAVObject>                                      targetLimbObj;        // 200
-		std::uint64_t                                              unk208;               // 208
-		BGSObjectInstanceT<TESObjectWEAP>                          weaponSource;         // 210
-		TESAmmo*                                                   ammoSource;           // 220
-		std::uint64_t                                              flags;                // 228
-		std::uint32_t                                              unk230;               // 230
-		float                                                      power;                // 234
-		float                                                      speedMult;            // 238
-		float                                                      range;                // 23C
-		float                                                      age;                  // 240
-		float                                                      damage;               // 244
-		float                                                      alpha;                // 248
-		float                                                      explosionTimer;       // 24C
-		float                                                      blinkTimer;           // 250
-		float                                                      distanceMoved;        // 254
-		std::uint32_t                                              unk258;               // 258
-		float                                                      scale;                // 25C
-		float                                                      unk260;               // 260
-		float                                                      unk264;               // 264
-		std::uint32_t                                              unk268;               // 268
-		std::uint32_t                                              unk26C;               // 26C
-		std::uint32_t                                              unk270;               // 270
-		std::uint32_t                                              unk274;               // 274
-		stl::enumeration<MagicSystem::CastingSource, std::uint8_t> castingSource;        // 278
-		std::uint8_t                                               unk279;               // 279
-		bool                                                       artRequested;         // 27A
-		bool                                                       animationsLoaded;     // 27B
-		std::uint8_t                                               unk27C;               // 27C
+		BSTArray<ImpactData>                                       impacts;              // 0F0
+		NiPointer<bhkNPCollisionObject>                            collisionObject;      // 100
+		NiPointer<TESObjectREFR>                                   droppedRefr;          // 108
+		NiTransform                                                followOffset;         // 110
+		BSSpinLock                                                 lock;                 // 150
+		NiPoint3                                                   movementDirection;    // 158
+		NiPoint3                                                   velocity;             // 164
+		void*                                                      unk170;               // 170 - smart ptr
+		NiPointer<ActorCause>                                      actorCause;           // 178
+		std::uint32_t                                              shooterHandle;        // 180 - TESPointerHandle
+		std::uint32_t                                              desiredTargetHandle;  // 184 - TESPointerHandle
+		std::uint32_t                                              unk188;               // 188
+		std::uint32_t                                              unk18C;               // 18C
+		std::uint32_t                                              unk190;               // 190
+		std::uint32_t                                              unk194;               // 194
+		BGSExplosion*                                              explosion;            // 198
+		MagicItem*                                                 spell;                // 1A0
+		EffectSetting*                                             avEffect;             // 1A8
+		void*                                                      unk1B0;               // 1B0 - smart ptr
+		void*                                                      unk1B8;               // 1B8 - smart ptr
+		void*                                                      unk1C0;               // 1C0 - smart ptr
+		void*                                                      unk1C8;               // 1C8 - smart ptr
+		std::uint64_t                                              unk1D0;               // 1D0
+		BGSEquipIndex                                              equipIndex;           // 1D8
+		stl::enumeration<BGSBodyPartDefs::LIMB_ENUM, std::int32_t> targetLimbEnum;       // 1DC
+		NiPointer<NiAVObject>                                      targetLimbObj;        // 1E0
+		std::uint64_t                                              unk1E8;               // 1E8
+		BGSObjectInstanceT<TESObjectWEAP>                          weaponSource;         // 1F0
+		TESAmmo*                                                   ammoSource;           // 200
+		std::uint64_t                                              flags;                // 208
+		std::uint32_t                                              unk210;               // 210
+		float                                                      power;                // 214
+		float                                                      speedMult;            // 218
+		float                                                      range;                // 21C
+		float                                                      age;                  // 220
+		float                                                      damage;               // 224
+		float                                                      alpha;                // 228
+		float                                                      explosionTimer;       // 22C
+		float                                                      blinkTimer;           // 230
+		float                                                      distanceMoved;        // 234
+		std::uint32_t                                              unk238;               // 238
+		float                                                      scale;                // 23C
+		float                                                      unk240;               // 240
+		float                                                      unk244;               // 244
+		std::uint32_t                                              unk248;               // 248
+		std::uint32_t                                              unk24C;               // 24C
+		std::uint32_t                                              unk250;               // 250
+		std::uint32_t                                              unk254;               // 254
+		stl::enumeration<MagicSystem::CastingSource, std::uint8_t> castingSource;        // 258
+		std::uint8_t                                               unk259;               // 259
+		bool                                                       artRequested;         // 25A
+		bool                                                       animationsLoaded;     // 25B
+		std::uint8_t                                               unk25C;               // 25C    
 	};
-	static_assert(sizeof(Projectile) == 0x280);
+	static_assert(sizeof(Projectile) == 0x260);
 }

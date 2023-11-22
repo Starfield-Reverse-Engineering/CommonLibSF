@@ -8,8 +8,8 @@ namespace RE
 {
 	class TESLevCharacter :
 		public TESBoundAnimObject,   // 000
-		public TESLeveledList,       // 118
-		public BGSModelMaterialSwap  // 178
+		public TESLeveledList,       // 0E8
+		public BGSModelMaterialSwap  // 140
 	{
 	public:
 		SF_RTTI_VTABLE(TESLevCharacter);
@@ -17,5 +17,5 @@ namespace RE
 
 		~TESLevCharacter() override;  // 00
 	};
-	static_assert(sizeof(TESLevCharacter) == 0x1A0);
+	static_assert(sizeof(TESLevCharacter) == 0x168);
 }

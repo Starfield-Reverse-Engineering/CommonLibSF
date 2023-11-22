@@ -27,11 +27,11 @@ namespace RE
 
 	class TESNPC :
 		public TESActorBase,                     // 000
-		public TESRaceForm,                      // 298
-		public BGSOverridePackCollection,        // 2A8
-		public BGSForcedLocRefType,              // 2F0
-		public BGSNativeTerminalForm,            // 308
-		public BSTEventSink<MenuOpenCloseEvent>  // 318
+		public TESRaceForm,                      // 260
+		public BGSOverridePackCollection,        // 270
+		public BGSForcedLocRefType,              // 2B8
+		public BGSNativeTerminalForm,            // 2D0
+		public BSTEventSink<MenuOpenCloseEvent>  // 2E0
 	{
 	public:
 		SF_RTTI_VTABLE(TESNPC);
@@ -55,50 +55,49 @@ namespace RE
 		[[nodiscard]] bool IsInFaction(TESFaction* a_faction) const;
 
 		// members
-		BGSAttachParentArray                         attachParents;    // 320
-		std::uint32_t                                unk340;           // 340
-		std::uint32_t                                unk344;           // 344
-		TESClass*                                    npcClass;         // 348
-		std::uint64_t                                unk350;           // 350
-		BGSListForm*                                 giftFilter;       // 358
-		TESCombatStyle*                              combatStyle;      // 360
-		std::uint32_t                                fileOffset;       // 368
-		std::uint32_t                                unk36C;           // 36C
-		TESRace*                                     originalRace;     // 370
-		TESNPC*                                      faceNPC;          // 378
-		NiPoint3                                     morphWeight;      // 380
-		float                                        height;           // 38C
-		float                                        heightMax;        // 390
-		std::uint32_t                                unk394;           // 394
-		TESNPC*                                      unk398;           // 398
-		std::uint64_t                                unk3A0;           // 3A0
-		std::uint64_t                                unk3A8;           // 3A8
-		BGSLocalizedString                           shortName;        // 3B0
-		TESObjectARMO*                               farSkin;          // 3B8
-		TESFurniture*                                powerArmorFurn;   // 3C0
-		BGSOutfit*                                   defaultOutfit;    // 3C8
-		BGSOutfit*                                   sleepOutfit;      // 3D0
-		BGSListForm*                                 defaultPackList;  // 3D8
-		TESFaction*                                  crimeFaction;     // 3E0
-		TESFaction*                                  unk3E8;           // 3E8
-		BSTArray<BGSHeadPart*>                       headparts;        // 3F0
-		BSNonReentrantSpinLock                       headpartsLock;    // 3F8
-		BSTArray<float>*                             unk408;           // 408
-		std::uint64_t                                unk410;           // 410
-		std::uint64_t                                unk418;           // 418
-		BSTArray<AVMData>                            tintAVMData;      // 420
-		std::uint32_t                                skinToneIndex;    // 430
-		std::uint32_t                                unk434;           // 434
-		BSFixedString                                teeth;            // 438
-		BSFixedString                                jewelryColor;     // 440
-		BSFixedString                                eyeColor;         // 448
-		BSFixedString                                hairColor;        // 450
-		BSFixedString                                facialColor;      // 458
-		BSFixedString                                eyebrowColor;     // 460
-		BSTArray<BGSRelationship*>*                  relationships;    // 468
-		BGSLocalizedString                           organization;     // 470 - faction?
-		std::uint64_t                                unk478;           // 478
-		stl::enumeration<PRONOUN_TYPE, std::uint8_t> pronoun;          // 480
+		BGSAttachParentArray                                      attachParents;    // 2E8
+		std::uint32_t                                             unk308;           // 308
+		std::uint32_t                                             unk30C;           // 30C
+		TESClass*                                                 npcClass;         // 310
+		std::uint64_t                                             unk318;           // 318
+		BGSListForm*                                              giftFilter;       // 320
+		TESCombatStyle*                                           combatStyle;      // 328
+		std::uint32_t                                             fileOffset;       // 330
+		std::uint32_t                                             unk334;           // 334
+		TESRace*                                                  originalRace;     // 338
+		TESNPC*                                                   faceNPC;          // 340
+		NiPoint3                                                  morphWeight;      // 348
+		float                                                     height;           // 354
+		float                                                     heightMax;        // 358
+		std::uint32_t                                             unk35C;           // 35C
+		TESNPC*                                                   unk360;           // 360
+		std::uint64_t                                             unk368;           // 368
+		std::uint64_t                                             unk370;           // 370
+		BGSLocalizedString                                        shortName;        // 378
+		TESObjectARMO*                                            farSkin;          // 380
+		TESFurniture*                                             powerArmorFurn;   // 388
+		BGSOutfit*                                                defaultOutfit;    // 390
+		BGSOutfit*                                                sleepOutfit;      // 398
+		BGSListForm*                                              defaultPackList;  // 3A0
+		TESFaction*                                               crimeFaction;     // 3A8
+		TESFaction*                                               unk3B0;           // 3B0
+		BSGuarded<BSTArray<BGSHeadPart*>, BSNonReentrantSpinLock> headparts;        // 3B8
+		BSTArray<float>*                                          unk3D0;           // 3D0
+		std::uint64_t                                             unk3D8;           // 3D8
+		std::uint64_t                                             unk3E0;           // 3E0
+		BSTArray<AVMData>                                         tintAVMData;      // 3E8
+		std::uint32_t                                             skinToneIndex;    // 3F8
+		std::uint32_t                                             unk3FC;           // 3FC
+		BSFixedString                                             teeth;            // 400
+		BSFixedString                                             jewelryColor;     // 408
+		BSFixedString                                             eyeColor;         // 410
+		BSFixedString                                             hairColor;        // 418
+		BSFixedString                                             facialColor;      // 420
+		BSFixedString                                             eyebrowColor;     // 428
+		BSTArray<BGSRelationship*>*                               relationships;    // 430
+		BGSLocalizedString                                        organization;     // 438 - faction?
+		std::uint64_t                                             unk440;           // 440
+		stl::enumeration<PRONOUN_TYPE, std::uint8_t>              pronoun;          // 448
 	};
-	static_assert(sizeof(TESNPC) == 0x488);
+	static_assert(sizeof(TESNPC) == 0x450);
 }

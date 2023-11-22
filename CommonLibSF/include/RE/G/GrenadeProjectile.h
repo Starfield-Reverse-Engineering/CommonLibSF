@@ -16,8 +16,8 @@ namespace RE
 		~GrenadeProjectile() override;  // 00
 
 		// members
-		BSTSmartPointer<BGSDecalGroup> decalGroup;           // 280 - NiPointer?
-		bool                           collisionGroupReset;  // 288
+		BSTSmartPointer<BGSDecalGroup> decalGroup;           // 260 - NiPointer?
+		bool                           collisionGroupReset;  // 268
 	};
-	static_assert(sizeof(GrenadeProjectile) == 0x290);
+	static_assert(sizeof(GrenadeProjectile) == 0x270);
 }

@@ -7,7 +7,7 @@ namespace RE
 {
 	class TESGrass :
 		public TESBoundObject,  // 00
-		public TESModel         // 30
+		public TESModel         // E0
 	{
 	public:
 		SF_RTTI_VTABLE(TESGrass);
@@ -69,7 +69,7 @@ namespace RE
 		virtual void         SetFitToSlope(bool a_set);                    // 99
 
 		// members
-		GRASS_DATA data;  // 138 - DATA
+		GRASS_DATA data;  // 100 - DATA
 	};
-	static_assert(sizeof(TESGrass) == 0x160);
+	static_assert(sizeof(TESGrass) == 0x128);
 }

@@ -13,13 +13,13 @@ namespace RE
 		~ConeProjectile() override;  // 00
 
 		// members
-		stl::enumeration<ImpactResult, std::int32_t> impactResult;                  // 280
-		float                                        environmentTimer;              // 284
-		float                                        coneSpreadTangent;             // 288
-		float                                        initialCollisionSphereRadius;  // 28C
-		Location                                     origin;                        // 290
-		void*                                        collisionShape;                // 2A8
-		BSTArray<std::int32_t>                       collisions;                    // 2B0
+		stl::enumeration<ImpactResult, std::int32_t> impactResult;                  // 260
+		float                                        environmentTimer;              // 264
+		float                                        coneSpreadTangent;             // 268
+		float                                        initialCollisionSphereRadius;  // 26C
+		Location                                     origin;                        // 270
+		void*                                        collisionShape;                // 288
+		BSTArray<std::int32_t>                       collisions;                    // 290
 	};
-	static_assert(sizeof(ConeProjectile) == 0x2C0);
+	static_assert(sizeof(ConeProjectile) == 0x2A0);
 }

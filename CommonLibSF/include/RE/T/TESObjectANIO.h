@@ -8,7 +8,7 @@ namespace RE
 {
 	class TESObjectANIO :
 		public TESForm,              // 00
-		public BGSModelMaterialSwap  // 38
+		public BGSModelMaterialSwap  // 30
 	{
 	public:
 		SF_RTTI_VTABLE(TESObjectANIO);
@@ -17,7 +17,7 @@ namespace RE
 		~TESObjectANIO() override;  // 00
 
 		// members
-		BGSEditorID formEditorID;  // 60
+		BGSEditorID formEditorID;  // 58
 	};
-	static_assert(sizeof(TESObjectANIO) == 0x70);
+	static_assert(sizeof(TESObjectANIO) == 0x68);
 }

@@ -20,18 +20,18 @@ namespace RE
 
 	class TESActorBase :
 		public TESBoundAnimObject,         // 000
-		public TESActorBaseData,           // 118
-		public TESContainer,               // 188
-		public TESSpellList,               // 1A0
-		public TESAIForm,                  // 1B8
-		public TESFullName,                // 1F8
-		public ActorValueOwner,            // 208
-		public BGSDestructibleObjectForm,  // 210
-		public BGSSkinForm,                // 220
-		public BGSKeywordForm,             // 230
-		public BGSAttackDataForm,          // 260
-		public BGSPerkRankArray,           // 270
-		public BGSPropertySheet            // 288
+		public TESActorBaseData,           // 0E0
+		public TESContainer,               // 150
+		public TESSpellList,               // 168
+		public TESAIForm,                  // 180
+		public TESFullName,                // 1C0
+		public ActorValueOwner,            // 1D0
+		public BGSDestructibleObjectForm,  // 1D8
+		public BGSSkinForm,                // 1E8
+		public BGSKeywordForm,             // 1F8
+		public BGSAttackDataForm,          // 228
+		public BGSPerkRankArray,           // 238
+		public BGSPropertySheet            // 250
 	{
 	public:
 		SF_RTTI_VTABLE(TESActorBase);
@@ -44,5 +44,5 @@ namespace RE
 		virtual void            SetCombatStyle(TESCombatStyle*);  // 84
 		virtual TESForm*        GetAsForm();                      // 85
 	};
-	static_assert(sizeof(TESActorBase) == 0x298);
+	static_assert(sizeof(TESActorBase) == 0x260);
 }
