@@ -11,9 +11,10 @@ namespace RE
 {
 	class BGSCurveForm;
 	class BGSBiome;
-	class ContainerItemExtra;
 	class TESForm;
 	class TESGlobal;
+
+	struct ContainerItemExtra;
 
 	struct LEVELED_OBJECT
 	{
