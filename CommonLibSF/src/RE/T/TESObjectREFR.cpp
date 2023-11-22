@@ -21,7 +21,7 @@ namespace RE
 
 	void TESObjectREFR::ForEachInventoryItem(std::function<BSContainer::ForEachResult(const BGSInventoryItem&)> a_callback) const
 	{
-        if (const auto invList = inventoryList.lock_read(); *invList) {
+		if (const auto invList = inventoryList.lock_read(); *invList) {
 			for (const auto& invItem : invList->data) {
 				if (invItem.object && a_callback(invItem) == BSContainer::ForEachResult::kStop) {
 					break;

@@ -160,7 +160,7 @@ namespace RE
 
 	private:
 		// members
-		T             _data{}; // ??
-		mutable Mutex _lock{}; // ??
+		T             _data{};  // ??
+		mutable Mutex _lock{};  // ??
 	};
 }
