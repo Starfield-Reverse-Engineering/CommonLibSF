@@ -29,6 +29,13 @@ namespace RE
 		const BSFixedString& GetFormComponentType() const override;  // 01 - { return "TESContainer_Component"; }
 		void                 InitializeDataComponent() override;     // 02 - { return; }
 
+		void AddObjectToContainer(TESForm* a_owner, TESBoundObject* a_obj, std::int32_t a_count, ContainerItemExtra* a_itemExtra)
+		{
+			using func_t = decltype(&TESContainer::AddObjectToContainer);
+			REL::Relocation<func_t> func{ REL::ID(85991) };
+			return func(this, a_owner, a_obj, a_count, a_itemExtra);
+		}
+
 		// members
 		BSTArray<ContainerObject> containerObjects;  // 08
 	};
