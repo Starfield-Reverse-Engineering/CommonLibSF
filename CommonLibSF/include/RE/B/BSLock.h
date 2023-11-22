@@ -116,4 +116,51 @@ namespace RE
 
 	using BSAutoWriteLock = BSAutoLock<BSReadWriteLock, BSAutoLockWriteLockPolicy>;
 	static_assert(sizeof(BSAutoWriteLock) == 0x8);
+
+	template <class T, class Mutex>
+	class BSGuarded
+	{
+	public:
+		template <class U, template <class> class Policy = BSAutoLockDefaultPolicy>
+		class Guard
+		{
+		public:
+			explicit Guard(U& a_data, Mutex& a_mutex) :
+				_guard(a_mutex),
+				_data(a_data)
+			{}
+
+			U&       operator*() { return _data; }
+			U&       operator->() { return _data; }
+			const U& operator*() const { return _data; }
+			const U& operator->() const { return _data; }
+
+		private:
+			// members
+			BSAutoLock<Mutex, Policy> _guard{};  // 0 - Lock guard is first here?
+			U&                        _data;     // 8
+		};
+
+		auto lock()
+		{
+			return Guard<T>(_data, _lock);
+		}
+
+		auto lock_read() const
+			requires std::is_same_v<Mutex, BSReadWriteLock>
+		{
+			return Guard<const T, BSAutoLockReadLockPolicy>(_data, _lock);
+		}
+
+		auto lock_write()
+			requires std::is_same_v<Mutex, BSReadWriteLock>
+		{
+			return Guard<T, BSAutoLockWriteLockPolicy>(_data, _lock);
+		}
+
+	private:
+		// members
+		T             _data{}; // ??
+		mutable Mutex _lock{}; // ??
+	};
 }
