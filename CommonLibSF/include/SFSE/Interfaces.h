@@ -106,7 +106,7 @@ namespace SFSE
 
 		enum Version : std::uint32_t
 		{
-			kVersion = 1
+			kVersion = 2
 		};
 
 		[[nodiscard]] std::uint32_t Version() const;
