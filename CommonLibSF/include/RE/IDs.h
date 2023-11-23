@@ -323,7 +323,7 @@ namespace RE::ID
 		inline constexpr REL::ID DecExternalRefCount{ 34165 };
 		inline constexpr REL::ID DecRefCount{ 35164 };
 		inline constexpr REL::ID LookupByID{ 86125 };
-		inline constexpr REL::ID LookupByEditorID{ 86127 };
+		inline constexpr REL::ID LookupByEditorID{ 86123 };
 	}
 
 	namespace TESObjectARMO
