@@ -18,7 +18,7 @@ namespace RE
 	class BGSBaseFormT :
 		public BGSBaseForm  // 00
 	{
-	public:	
+	public:
 		// members
 		T* ptr;   // 30
 		T  data;  // 38
