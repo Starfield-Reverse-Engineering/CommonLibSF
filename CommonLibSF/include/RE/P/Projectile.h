@@ -221,7 +221,7 @@ namespace RE
 		std::uint8_t                                               unk259;               // 259
 		bool                                                       artRequested;         // 25A
 		bool                                                       animationsLoaded;     // 25B
-		std::uint8_t                                               unk25C;               // 25C    
+		std::uint8_t                                               unk25C;               // 25C
 	};
 	static_assert(sizeof(Projectile) == 0x260);
 }

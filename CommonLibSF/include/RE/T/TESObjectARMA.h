@@ -30,9 +30,9 @@ namespace RE
 	static_assert(sizeof(OBJ_ARMA) == 0xC);
 
 	class TESObjectARMA :
-		public TESObject,                 // 00
-		public TESRaceForm,               // 48
-		public BGSBipedObjectForm         // 58
+		public TESObject,          // 00
+		public TESRaceForm,        // 48
+		public BGSBipedObjectForm  // 58
 	{
 	public:
 		SF_RTTI_VTABLE(TESObjectARMA);

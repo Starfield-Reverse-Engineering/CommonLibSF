@@ -14,7 +14,7 @@ namespace RE
 		return ++myRefCount;
 	}
 
-    std::uint64_t TESFormRefCount::QRefCount() const
+	std::uint64_t TESFormRefCount::QRefCount() const
 	{
 		return refCount & kRefCountMask;
 	}

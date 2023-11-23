@@ -12,7 +12,7 @@ namespace RE
 	public:
 		SF_RTTI_VTABLE(BGSSnapTemplateComponent);
 
-        ~BGSSnapTemplateComponent() override;
+		~BGSSnapTemplateComponent() override;
 
 		// override (BaseFormComponent)
 		const BSFixedString& GetFormComponentType() const override;  // 01 - { return "BGSSnapTemplateComponent_Component"; }
