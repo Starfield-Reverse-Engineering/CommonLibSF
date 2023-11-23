@@ -19,16 +19,16 @@ namespace RE
 
 	class TESObjectACTI :
 		public TESBoundAnimObject,         // 000
-		public TESFullName,                // 118
-		public BGSModelMaterialSwap,       // 128
-		public TESMagicTargetForm,         // 150
-		public BGSDestructibleObjectForm,  // 158
-		public BGSOpenCloseForm,           // 168
-		public BGSKeywordForm,             // 170
-		public BGSPropertySheet,           // 1A0
-		public BGSForcedLocRefType,        // 1B0
-		public BGSNativeTerminalForm,      // 1C8
-		public BGSNavmeshableObject        // 1D8
+		public TESFullName,                // 0E0
+		public BGSModelMaterialSwap,       // 0F0
+		public TESMagicTargetForm,         // 118
+		public BGSDestructibleObjectForm,  // 120
+		public BGSOpenCloseForm,           // 130
+		public BGSKeywordForm,             // 138
+		public BGSPropertySheet,           // 168
+		public BGSForcedLocRefType,        // 178
+		public BGSNativeTerminalForm,      // 190
+		public BGSNavmeshableObject        // 1A0
 	{
 	public:
 		SF_RTTI_VTABLE(TESObjectACTI);
@@ -37,13 +37,13 @@ namespace RE
 		~TESObjectACTI() override;  // 00
 
 		// members
-		BGSAudio::WwiseSoundHook soundLoop;        // 1E0
-		BGSAudio::WwiseSoundHook soundActivate;    // 210
-		TESWaterForm*            waterForm;        // 240
-		std::uint32_t            unk248;           // 248
-		std::uint16_t            flags;            // 24C
-		std::uint16_t            activationAngle;  // 24E
-		std::uint8_t             unk250;           // 250
+		BGSAudio::WwiseSoundHook soundLoop;        // 1A8
+		BGSAudio::WwiseSoundHook soundActivate;    // 1D8
+		TESWaterForm*            waterForm;        // 208
+		std::uint32_t            unk210;           // 210
+		std::uint16_t            flags;            // 214
+		std::uint16_t            activationAngle;  // 216
+		std::uint8_t             unk218;           // 218
 	};
-	static_assert(sizeof(TESObjectACTI) == 0x258);
+	static_assert(sizeof(TESObjectACTI) == 0x220);
 }

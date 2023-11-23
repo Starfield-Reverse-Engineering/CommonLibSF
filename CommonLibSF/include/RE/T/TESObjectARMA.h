@@ -31,9 +31,8 @@ namespace RE
 
 	class TESObjectARMA :
 		public TESObject,                 // 00
-		public BGSSnapTemplateComponent,  // 38
-		public TESRaceForm,               // 50
-		public BGSBipedObjectForm         // 60
+		public TESRaceForm,               // 48
+		public BGSBipedObjectForm         // 58
 	{
 	public:
 		SF_RTTI_VTABLE(TESObjectARMA);
@@ -42,24 +41,24 @@ namespace RE
 		~TESObjectARMA() override;  // 00
 
 		// members
-		BGSEditorID          formEditorID;                         // 070
-		OBJ_ARMA             data;                                 // 080
-		BGSModelMaterialSwap bipedModel[SEXES::kTotal];            // 090
-		BGSModelMaterialSwap bipedModelFacebones[SEXES::kTotal];   // 0E0
-		BGSModelMaterialSwap unk130[SEXES::kTotal];                // 130
-		TESModel             unk180[SEXES::kTotal];                // 180
-		BGSMorphableObject*  unk1C0[SEXES::kTotal];                // 1C0
-		BGSMorphableObject*  unk1D0[SEXES::kTotal];                // 1D0
-		BGSTextureSet*       skinTextures[SEXES::kTotal];          // 1E0
-		BGSListForm*         skinTextureSwapLists[SEXES::kTotal];  // 1F0
-		BSTArray<void*>      unk200[SEXES::kTotal];                // 200
+		BGSEditorID          formEditorID;                         // 068
+		OBJ_ARMA             data;                                 // 078
+		BGSModelMaterialSwap bipedModel[SEXES::kTotal];            // 088
+		BGSModelMaterialSwap bipedModelFacebones[SEXES::kTotal];   // 0D8
+		BGSModelMaterialSwap unk128[SEXES::kTotal];                // 128
+		TESModel             unk178[SEXES::kTotal];                // 178
+		BGSMorphableObject*  unk1B8[SEXES::kTotal];                // 1B8
+		BGSMorphableObject*  unk1C8[SEXES::kTotal];                // 1C8
+		BGSTextureSet*       skinTextures[SEXES::kTotal];          // 1D8
+		BGSListForm*         skinTextureSwapLists[SEXES::kTotal];  // 1E8
+		BSTArray<void*>      unk1F8[SEXES::kTotal];                // 1F8
+		std::uint64_t        unk218;                               // 218
 		std::uint64_t        unk220;                               // 220
-		std::uint64_t        unk228;                               // 228
-		BSTArray<TESRace*>   additionalRaces;                      // 230
-		BGSBodyPartData*     bodyPartData;                         // 240
-		BGSFootstepSet*      footstepSet;                          // 248
-		BGSArtObject*        artObject;                            // 250
-		AVMData              avmData;                              // 258
+		BSTArray<TESRace*>   additionalRaces;                      // 228
+		BGSBodyPartData*     bodyPartData;                         // 238
+		BGSFootstepSet*      footstepSet;                          // 240
+		BGSArtObject*        artObject;                            // 248
+		AVMData              avmData;                              // 250
 	};
-	static_assert(sizeof(TESObjectARMA) == 0x280);
+	static_assert(sizeof(TESObjectARMA) == 0x278);
 }

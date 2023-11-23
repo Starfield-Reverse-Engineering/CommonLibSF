@@ -11,13 +11,12 @@ namespace RE
 	{
 	public:
 		SF_RTTI_VTABLE(BGSFormFolderKeywordList);
-		SF_FORMTYPE(FFKW);
 
 		~BGSFormFolderKeywordList() override;  // 00
 
 		// members
-		BSTArray<BGSKeyword*> keywords;    // 38
-		BSFixedString         formFolder;  // 48
+		BSTArray<BGSKeyword*> keywords;        // 30
+		BSFixedString         formFolderPath;  // 40
 	};
-	static_assert(sizeof(BGSFormFolderKeywordList) == 0x50);
+	static_assert(sizeof(BGSFormFolderKeywordList) == 0x48);
 }

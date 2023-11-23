@@ -19,10 +19,10 @@ namespace RE
 
 	class TESClass :
 		public TESForm,          // 00
-		public TESFullName,      // 38
-		public TESDescription,   // 48
-		public TESTexture,       // 60
-		public BGSPropertySheet  // 70
+		public TESFullName,      // 30
+		public TESDescription,   // 38
+		public TESTexture,       // 58
+		public BGSPropertySheet  // 68
 	{
 	public:
 		SF_RTTI_VTABLE(TESClass);
@@ -31,7 +31,7 @@ namespace RE
 		~TESClass() override;  // 00
 
 		// members
-		CLASS_DATA data;  // 78 - DATA
+		CLASS_DATA data;  // 70 - DATA
 	};
-	static_assert(sizeof(TESClass) == 0x88);
+	static_assert(sizeof(TESClass) == 0x80);
 }

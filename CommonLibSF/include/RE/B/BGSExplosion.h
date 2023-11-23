@@ -49,11 +49,11 @@ namespace RE
 
 	class BGSExplosion :
 		public TESBoundObject,              // 000
-		public TESFullName,                 // 118
-		public TESModel,                    // 128
-		public TESEnchantableForm,          // 148
-		public BGSPreloadable,              // 160
-		public TESImageSpaceModifiableForm  // 168
+		public TESFullName,                 // 0E0
+		public TESModel,                    // 0F0
+		public TESEnchantableForm,          // 110
+		public BGSPreloadable,              // 128
+		public TESImageSpaceModifiableForm  // 130
 	{
 	public:
 		SF_RTTI_VTABLE(BGSExplosion);
@@ -62,7 +62,7 @@ namespace RE
 		~BGSExplosion() override;  // 00
 
 		// members
-		BGSExplosionData data;  // 178
+		BGSExplosionData data;  // 140
 	};
-	static_assert(sizeof(BGSExplosion) == 0x220);
+	static_assert(sizeof(BGSExplosion) == 0x1E8);
 }

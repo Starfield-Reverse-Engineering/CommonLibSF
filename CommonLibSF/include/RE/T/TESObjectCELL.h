@@ -5,6 +5,7 @@
 #include "RE/B/BSTArray.h"
 #include "RE/B/BSTSmartPointer.h"
 #include "RE/E/ExtraDataList.h"
+#include "RE/I/InteriorData.h"
 #include "RE/N/NiPoint3.h"
 #include "RE/N/NiSmartPointer.h"
 #include "RE/T/TESFullName.h"
@@ -14,40 +15,6 @@ namespace RE
 {
 	class TESObjectREFR;
 	class TESWorldSpace;
-
-	struct INTERIOR_DATA
-	{
-	public:
-		// members
-		std::uint64_t unk00;         // 00
-		std::uint32_t fogColorNear;  // 08
-		float         fogPlaneNear;  // 0C
-		float         fogPlaneFar;   // 10
-		std::uint32_t unk14;         // 14
-		std::uint32_t unk18;         // 18
-		float         gravity;       // 1C
-		std::uint32_t unk20;         // 20
-		std::uint32_t fogPower;      // 24
-		std::uint32_t fogColorFar;   // 28
-		std::uint32_t unk2C;         // 2C
-		std::uint32_t unk30;         // 30
-		std::uint32_t unk34;         // 34
-		float         unk38;         // 38
-		std::uint32_t unk3C;         // 3C
-		float         unk40;         // 40
-		std::uint32_t unk44;         // 44
-		std::uint32_t unk48;         // 48
-		float         unk50;         // 50
-		float         unk54;         // 54
-		float         unk58;         // 58
-		float         unk5C;         // 5C
-		std::uint32_t unk60;         // 60
-		std::uint32_t unk64;         // 64
-		std::int8_t   unk68;         // 68
-		std::uint32_t unk6C;         // 6C
-		std::uint64_t unk70;         // 70
-	};
-	static_assert(sizeof(INTERIOR_DATA) == 0x78);
 
 	struct EXTERIOR_DATA
 	{
@@ -69,7 +36,7 @@ namespace RE
 
 	class TESObjectCELL :
 		public TESHandleForm,  // 00
-		public TESFullName     // 20
+		public TESFullName     // 30
 	{
 	public:
 		SF_RTTI_VTABLE(TESObjectCELL);
@@ -130,23 +97,24 @@ namespace RE
 		void ForEachReferenceInRange(const NiPoint3A& a_origin, float a_radius, std::function<BSContainer::ForEachResult(const NiPointer<TESObjectREFR>&)> a_callback) const;
 
 		// members
-		stl::enumeration<Flag, std::uint32_t>      cellFlags;       // 048
-		std::uint16_t                              cellGameFlags;   // 04C
-		std::uint8_t                               unk4E;           // 04E
-		stl::enumeration<CELL_STATE, std::uint8_t> cellState;       // 04F
-		std::uint64_t                              unk50;           // 050
-		BSTSmartPointer<ExtraDataList>             extraDataList;   // 058
-		CellData                                   cellData;        // 060
-		std::uint32_t                              unk068;          // 068
+		stl::enumeration<Flag, std::uint32_t>      cellFlags;       // 040
+		std::uint16_t                              cellGameFlags;   // 044
+		std::uint8_t                               unk04E;          // 046
+		stl::enumeration<CELL_STATE, std::uint8_t> cellState;       // 047
+		std::uint64_t                              unk050;          // 048
+		BSTSmartPointer<ExtraDataList>             extraDataList;   // 050
+		CellData                                   cellData;        // 058
+		std::uint32_t                              unk060;          // 060
+		float                                      unk064;          // 064
+		float                                      unk068;          // 068
 		float                                      unk06C;          // 06C
-		float                                      unk070;          // 070
-		float                                      unk074;          // 074
-		std::uint8_t                               unk078;          // 078
-		std::uint8_t                               pad079;          // 079
-		std::uint16_t                              pad07A;          // 07A
-		std::uint32_t                              pad07C;          // 07C
-		std::uint64_t                              unk080;          // 080
-		BSTArray<NiPointer<TESObjectREFR>>         references;      // 088
+		std::uint8_t                               unk070;          // 070
+		std::uint8_t                               pad071;          // 071
+		std::uint16_t                              pad072;          // 072
+		std::uint32_t                              pad074;          // 074
+		std::uint64_t                              unk078;          // 078
+		BSTArray<NiPointer<TESObjectREFR>>         references;      // 080
+		std::uint64_t                              unk090;          // 090
 		std::uint64_t                              unk098;          // 098
 		std::uint64_t                              unk0A0;          // 0A0
 		std::uint64_t                              unk0A8;          // 0A8
@@ -157,22 +125,21 @@ namespace RE
 		std::uint64_t                              unk0D0;          // 0D0
 		std::uint64_t                              unk0D8;          // 0D8
 		std::uint64_t                              unk0E0;          // 0E0
-		std::uint64_t                              unk0E8;          // 0E8
-		std::uint8_t                               unk0F0;          // 0F0
-		std::uint8_t                               pad0F1;          // 0F1
-		std::uint16_t                              pad0F2;          // 0F2
-		std::uint32_t                              pad0F4;          // 0F4
+		std::uint8_t                               unk0E8;          // 0E8
+		std::uint8_t                               pad0E9;          // 0E9
+		std::uint16_t                              pad0EA;          // 0EA
+		std::uint32_t                              pad0EC;          // 0EC
+		std::uint64_t                              unk0F0;          // 0F0
 		std::uint64_t                              unk0F8;          // 0F8
 		std::uint64_t                              unk100;          // 100
 		std::uint64_t                              unk108;          // 108
 		std::uint64_t                              unk110;          // 110
-		std::uint64_t                              unk118;          // 118
-		TESWorldSpace*                             cellWorldspace;  // 120
-		mutable BSReadWriteLock                    lock;            // 128
+		TESWorldSpace*                             cellWorldspace;  // 118
+		mutable BSReadWriteLock                    lock;            // 120
+		std::uint64_t                              unk128;          // 128
 		std::uint64_t                              unk130;          // 130
-		std::uint64_t                              unk138;          // 138
-		std::uint32_t                              unk140;          // 140
-		std::uint64_t                              unk148;          // 148
+		std::uint32_t                              unk138;          // 138
+		std::uint64_t                              unk140;          // 140
 	};
-	static_assert(sizeof(TESObjectCELL) == 0x150);
+	static_assert(sizeof(TESObjectCELL) == 0x148);
 }

@@ -16,8 +16,8 @@ namespace RE
 		[[nodiscard]] float GetValue() const noexcept { return value; }
 
 		// members
-		BGSEditorID formEditorID;  // 38
-		float       value;         // 48
+		BGSEditorID formEditorID;  // 30
+		float       value;         // 40
 	};
-	static_assert(sizeof(TESGlobal) == 0x50);
+	static_assert(sizeof(TESGlobal) == 0x48);
 }

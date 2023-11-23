@@ -20,10 +20,10 @@ namespace RE
 
 	class TESObjectSTAT :
 		public TESBoundObject,        // 000
-		public BGSModelMaterialSwap,  // 118
-		public BGSPropertySheet,      // 140
-		public BGSForcedLocRefType,   // 150
-		public BGSNavmeshableObject   // 168
+		public BGSModelMaterialSwap,  // 0E0
+		public BGSPropertySheet,      // 108
+		public BGSForcedLocRefType,   // 118
+		public BGSNavmeshableObject   // 130
 	{
 	public:
 		SF_RTTI_VTABLE(TESObjectSTAT);
@@ -32,8 +32,8 @@ namespace RE
 		~TESObjectSTAT() override;  // 00
 
 		// members
-		TESObjectSTATData        data;          // 170
-		BGSAudio::WwiseSoundHook ambientSound;  // 178
+		TESObjectSTATData        data;          // 138
+		BGSAudio::WwiseSoundHook ambientSound;  // 140
 	};
-	static_assert(sizeof(TESObjectSTAT) == 0x1A8);
+	static_assert(sizeof(TESObjectSTAT) == 0x170);
 }

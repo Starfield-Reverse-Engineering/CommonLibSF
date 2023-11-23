@@ -26,9 +26,9 @@ namespace RE
 
 	class EffectSetting :
 		public TESForm,               // 000
-		public TESFullName,           // 038
-		public BGSMenuDisplayObject,  // 048
-		public BGSKeywordForm         // 058
+		public TESFullName,           // 030
+		public BGSMenuDisplayObject,  // 040
+		public BGSKeywordForm         // 050
 	{
 	public:
 		SF_RTTI_VTABLE(EffectSetting);
@@ -104,16 +104,16 @@ namespace RE
 		~EffectSetting() override;  // 00
 
 		// members
-		FilterValidationFunction_t* filterValidationFunction;  // 088
-		void*                       filterValidationItem;      // 090
-		EffectSettingData           data;                      // 098
-		BSTArray<TESForm*>          unk168;                    // 168
-		std::uint8_t                unk178[0x48];              // 178 - ESSH
+		FilterValidationFunction_t* filterValidationFunction;  // 080
+		void*                       filterValidationItem;      // 088
+		EffectSettingData           data;                      // 090
+		BSTArray<TESForm*>          unk160;                    // 160
+		std::uint8_t                unk170[0x48];              // 170 - ESSH
+		std::uint64_t               unk1B8;                    // 1B8
 		std::uint64_t               unk1C0;                    // 1C0
-		std::uint64_t               unk1C8;                    // 1C8
-		BGSLocalizedString          magicItemDescription;      // 1D0
-		std::uint64_t               unk1D8;                    // 1D8
-		TESCondition                conditions;                // 1E0
+		BGSLocalizedString          magicItemDescription;      // 1C8
+		std::uint64_t               unk1D0;                    // 1D0
+		TESCondition                conditions;                // 1D8
 	};
-	static_assert(sizeof(EffectSetting) == 0x1F0);
+	static_assert(sizeof(EffectSetting) == 0x1E8);
 }

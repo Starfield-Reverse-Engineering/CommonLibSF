@@ -28,7 +28,7 @@ namespace RE
 		static_assert(sizeof(Data) == 0x28);
 
 		// members
-		Data data;  // 188
+		Data data;  // 150
 	};
-	static_assert(sizeof(EnchantmentItem) == 0x1B0);
+	static_assert(sizeof(EnchantmentItem) == 0x178);
 }

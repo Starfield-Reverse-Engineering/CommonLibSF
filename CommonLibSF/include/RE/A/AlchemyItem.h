@@ -54,7 +54,7 @@ namespace RE
 		~AlchemyItem() override;  // 00
 
 		// members
-		Data data;  // 2B8
+		Data data;  // 280
 	};
-	static_assert(sizeof(AlchemyItem) == 0x308);
+	static_assert(sizeof(AlchemyItem) == 0x2D0);
 }

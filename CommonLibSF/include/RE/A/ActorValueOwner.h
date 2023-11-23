@@ -11,7 +11,7 @@ namespace RE
 	public:
 		SF_RTTI(ActorValueOwner);
 
-		virtual ~ActorValueOwner();
+		virtual ~ActorValueOwner(); // 00
 
 		// add
 		virtual float              GetActorValue(const ActorValueInfo& a_info);                                                                        // 01

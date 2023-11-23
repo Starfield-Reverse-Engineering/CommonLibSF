@@ -27,17 +27,17 @@ namespace RE
 
 	class TESObjectWEAP :
 		public TESBoundObject,             // 000
-		public TESFullName,                // 118
-		public BGSModelMaterialSwap,       // 128
-		public TESEnchantableForm,         // 150
-		public BGSDestructibleObjectForm,  // 168
-		public BGSEquipType,               // 178
-		public BGSPreloadable,             // 188
-		public BGSPickupPutdownSounds,     // 190
-		public BGSBlockBashData,           // 1F8
-		public BGSKeywordForm,             // 210
-		public TESDescription,             // 240
-		public BGSInstanceNamingRulesForm  // 258
+		public TESFullName,                // 0E0
+		public BGSModelMaterialSwap,       // 0F0
+		public TESEnchantableForm,         // 118
+		public BGSDestructibleObjectForm,  // 130
+		public BGSEquipType,               // 140
+		public BGSPreloadable,             // 150
+		public BGSPickupPutdownSounds,     // 158
+		public BGSBlockBashData,           // 1C0
+		public BGSKeywordForm,             // 1D8
+		public TESDescription,             // 208
+		public BGSInstanceNamingRulesForm  // 220
 	{
 	public:
 		SF_RTTI_VTABLE(TESObjectWEAP);
@@ -46,11 +46,11 @@ namespace RE
 		~TESObjectWEAP() override;  // 00
 
 		// members
-		BGSEditorID                                formEditorID;       // 268
-		BSTSmartPointer<TESObjectWEAPInstanceData> weaponData;         // 278
-		BGSAttachParentArray                       attachParents;      // 280
-		BGSMod::Attachment::Mod*                   embeddedWeaponMod;  // 2A0
-		std::uint8_t                               unk2A8;             // 2A8
+		BGSEditorID                                formEditorID;       // 230
+		BSTSmartPointer<TESObjectWEAPInstanceData> weaponData;         // 240
+		BGSAttachParentArray                       attachParents;      // 248
+		BGSMod::Attachment::Mod*                   embeddedWeaponMod;  // 268
+		std::uint8_t                               unk270;             // 270
 	};
-	static_assert(sizeof(TESObjectWEAP) == 0x2B0);
+	static_assert(sizeof(TESObjectWEAP) == 0x278);
 }

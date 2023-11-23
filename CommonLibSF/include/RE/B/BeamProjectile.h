@@ -21,16 +21,16 @@ namespace RE
 		~BeamProjectile() override;  // 00
 
 		// members
-		void*                unk2B0;      // 2B0 - smart ptr
-		std::uint64_t        unk2B8;      // 2B8
-		ProjectileLaunchData launchData;  // 2C0
-		std::uint64_t        unk3B0;      // 3B0
-		std::uint64_t        unk3C0;      // 3C0
-		void*                unk3C8;      // 3C8 - smart ptr
-		std::uint32_t        unk3D0;      // 3D0
-		std::uint8_t         unk3D4;      // 3D4
-		std::uint8_t         unk3D5;      // 3D5
-		std::uint8_t         unk3D6;      // 3D6
+		void*                unk290;      // 290 - smart ptr
+		std::uint64_t        unk298;      // 298
+		ProjectileLaunchData launchData;  // 2A0
+		std::uint64_t        unk390;      // 390
+		std::uint64_t        unk3A0;      // 3A0
+		void*                unk3A8;      // 3A8 - smart ptr
+		std::uint32_t        unk3B0;      // 3B0
+		std::uint8_t         unk3B4;      // 3B4
+		std::uint8_t         unk3B5;      // 3B5
+		std::uint8_t         unk3B6;      // 3B6
 	};
-	static_assert(sizeof(BeamProjectile) == 0x3E0);
+	static_assert(sizeof(BeamProjectile) == 0x3C0);
 }

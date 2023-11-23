@@ -11,8 +11,8 @@ namespace RE
 
 	class BGSLegendaryItem :
 		public TESBoundObject,        // 000
-		public BGSModelMaterialSwap,  // 118
-		public TESFullName            // 140
+		public BGSModelMaterialSwap,  // 0E0
+		public TESFullName            // 108
 	{
 	public:
 		SF_RTTI_VTABLE(BGSLegendaryItem);
@@ -21,9 +21,9 @@ namespace RE
 		~BGSLegendaryItem() override;  // 00
 
 		// members
-		TESLevItem*       applicableItemList;  // 150
-		BGSLegendaryItem* legendaryTemplate;   // 158
-		BSTArray<void*>   unk160[3];           // 160
+		TESLevItem*       applicableItemList;  // 118
+		BGSLegendaryItem* legendaryTemplate;   // 120
+		BSTArray<void*>   unk128[3];           // 128
 	};
-	static_assert(sizeof(BGSLegendaryItem) == 0x190);
+	static_assert(sizeof(BGSLegendaryItem) == 0x158);
 }

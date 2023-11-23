@@ -6,8 +6,8 @@
 namespace RE
 {
 	class TESLevSpell :
-		public TESBoundObject,  // 000
-		public TESLeveledList   // 118
+		public TESBoundObject,  // 00
+		public TESLeveledList   // E8
 	{
 	public:
 		SF_RTTI_VTABLE(TESLevSpell);
@@ -15,5 +15,5 @@ namespace RE
 
 		~TESLevSpell() override;  // 00
 	};
-	static_assert(sizeof(TESLevSpell) == 0x178);
+	static_assert(sizeof(TESLevSpell) == 0x140);
 }

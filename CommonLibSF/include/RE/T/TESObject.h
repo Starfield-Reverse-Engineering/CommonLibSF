@@ -1,5 +1,6 @@
 #pragma once
 
+#include "RE/B/BGSSnapTemplateComponent.h"
 #include "RE/T/TESForm.h"
 
 namespace RE
@@ -22,6 +23,9 @@ namespace RE
 		virtual void Unk_69();                      // 69
 		virtual void Unk_6A();                      // 6A
 		virtual void Unk_6B();                      // 6B
+
+		// members
+		BGSSnapTemplateComponent snapTemplate;  // 030
 	};
-	static_assert(sizeof(TESObject) == 0x38);
+	static_assert(sizeof(TESObject) == 0x48);
 }

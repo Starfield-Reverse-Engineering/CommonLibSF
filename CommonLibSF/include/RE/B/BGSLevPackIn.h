@@ -9,9 +9,9 @@ namespace RE
 {
 	class BGSLevPackIn :
 		public TESBoundAnimObject,    // 000
-		public TESLeveledList,        // 118
-		public BGSModelMaterialSwap,  // 178
-		public BGSForcedLocRefType    // 1A0
+		public TESLeveledList,        // 0E0
+		public BGSModelMaterialSwap,  // 140
+		public BGSForcedLocRefType    // 168
 	{
 	public:
 		SF_RTTI_VTABLE(BGSLevPackIn);
@@ -19,5 +19,5 @@ namespace RE
 
 		~BGSLevPackIn() override;  // 00
 	};
-	static_assert(sizeof(BGSLevPackIn) == 0x1B8);
+	static_assert(sizeof(BGSLevPackIn) == 0x180);
 }

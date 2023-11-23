@@ -16,16 +16,16 @@ namespace RE
 {
 	class TESObjectMISC :
 		public TESBoundObject,             // 000
-		public TESFullName,                // 118
-		public BGSModelMaterialSwap,       // 128
-		public TESValueForm,               // 150
-		public TESWeightForm,              // 160
-		public BGSDestructibleObjectForm,  // 170
-		public BGSCraftingUseSound,        // 180
-		public BGSPickupPutdownSounds,     // 1B8
-		public BGSKeywordForm,             // 220
-		public BGSFeaturedItemMessage,     // 250
-		public BGSCraftingResourceOwner    // 260
+		public TESFullName,                // 0E0
+		public BGSModelMaterialSwap,       // 0F0
+		public TESValueForm,               // 118
+		public TESWeightForm,              // 128
+		public BGSDestructibleObjectForm,  // 138
+		public BGSCraftingUseSound,        // 148
+		public BGSPickupPutdownSounds,     // 180
+		public BGSKeywordForm,             // 1E8
+		public BGSFeaturedItemMessage,     // 218
+		public BGSCraftingResourceOwner    // 228
 	{
 	public:
 		SF_RTTI_VTABLE(TESObjectMISC);
@@ -37,8 +37,8 @@ namespace RE
 		virtual void Unk_82();  // 82 - { return; }
 
 		// members
-		BGSLocalizedString shortName;  // 280
-		std::uint32_t      flags;      // 288
+		BGSLocalizedString shortName;  // 248
+		std::uint32_t      flags;      // 250
 	};
-	static_assert(sizeof(TESObjectMISC) == 0x290);
+	static_assert(sizeof(TESObjectMISC) == 0x258);
 }

@@ -13,8 +13,8 @@ namespace RE
 		~BGSAudioOcclusionPrimitive() override;  // 00
 
 		// members
-		float unk118;  // 118
-		float unk11C;  // 11C
+		float unkE0;  // E0
+		float unkE4;  // E4
 	};
-	static_assert(sizeof(BGSAudioOcclusionPrimitive) == 0x120);
+	static_assert(sizeof(BGSAudioOcclusionPrimitive) == 0xE8);
 }

@@ -36,14 +36,14 @@ namespace RE
 
 	class TESAmmo :
 		public TESBoundObject,             // 000
-		public TESFullName,                // 118
-		public BGSModelMaterialSwap,       // 128
-		public TESValueForm,               // 150
-		public BGSDestructibleObjectForm,  // 160
-		public BGSPickupPutdownSounds,     // 170
-		public TESDescription,             // 1D8
-		public BGSKeywordForm,             // 1F0
-		public TESWeightForm               // 220
+		public TESFullName,                // 0E0
+		public BGSModelMaterialSwap,       // 0F0
+		public TESValueForm,               // 118
+		public BGSDestructibleObjectForm,  // 128
+		public BGSPickupPutdownSounds,     // 138
+		public TESDescription,             // 1A0
+		public BGSKeywordForm,             // 1B8
+		public TESWeightForm               // 1E8
 	{
 	public:
 		SF_RTTI_VTABLE(TESAmmo);
@@ -52,9 +52,9 @@ namespace RE
 		~TESAmmo() override;  // 00
 
 		// members
-		AMMO_DATA          data;         // 230
-		BGSLocalizedString shortDesc;    // 248
-		TESModel           shellCasing;  // 250
+		AMMO_DATA          data;         // 1F8
+		BGSLocalizedString shortDesc;    // 210
+		TESModel           shellCasing;  // 218
 	};
-	static_assert(sizeof(TESAmmo) == 0x270);
+	static_assert(sizeof(TESAmmo) == 0x238);
 }

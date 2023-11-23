@@ -14,7 +14,7 @@ namespace RE
 		~BGSOutfit() override;  // 00
 
 		// members
-		BSTArray<TESForm*> outfitItems;  // 38
+		BSTArray<TESForm*> outfitItems;  // 30
 	};
-	static_assert(sizeof(BGSOutfit) == 0x48);
+	static_assert(sizeof(BGSOutfit) == 0x40);
 }

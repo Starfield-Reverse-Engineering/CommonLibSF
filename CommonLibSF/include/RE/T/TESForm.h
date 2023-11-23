@@ -21,6 +21,19 @@ namespace RE
 	struct FORM;
 	struct FORM_GROUP;
 
+	struct OBJ_ACTIVATE_DATA
+	{
+		TESObjectREFR* activatedRef;  // 00
+		TESObjectREFR* actionRef;     // 08
+		TESForm*       objectToGet;   // 10
+		std::int32_t   count;         // 18
+		bool           unk1C;         // 1C
+		bool           unk1D;         // 1D
+		bool           unk1E;         // 1E
+		bool           unk1F;         // 1F
+	};
+	static_assert(sizeof(OBJ_ACTIVATE_DATA) == 0x20);
+
 	class TESForm :
 		public TESFormRefCount,       // 00
 		public BSReflection::IObject  // 10
@@ -28,19 +41,6 @@ namespace RE
 	public:
 		SF_RTTI_VTABLE(TESForm);
 		SF_FORMTYPE(NONE);
-
-		struct ActivateData
-		{
-			TESObjectREFR* activatedRef;  // 00
-			TESObjectREFR* actionRef;     // 08
-			TESForm*       objectToGet;   // 10
-			std::int32_t   count;         // 18
-			bool           unk1C;         // 1C
-			bool           unk1D;         // 1D
-			bool           unk1E;         // 1E
-			bool           unk1F;         // 1F
-		};
-		static_assert(sizeof(ActivateData) == 0x20);
 
 		~TESForm() override;  // 00
 
@@ -101,7 +101,7 @@ namespace RE
 		virtual void                               Unk_3C();                                                                         // 3C
 		virtual bool                               IsBoundObject() const;                                                            // 3D
 		virtual void                               Unk_3E();                                                                         // 3E
-		virtual void                               Unk_3F();                                                                         // 3F
+		virtual bool                               IsMagicItem();                                                                    // 3F
 		virtual bool                               IsFurniture();                                                                    // 40 - new
 		virtual void                               Unk_41();                                                                         // 41
 		virtual void                               Unk_42();                                                                         // 42
@@ -122,7 +122,7 @@ namespace RE
 		virtual void                               Unk_51();                                                                         // 51
 		virtual void                               Unk_52();                                                                         // 52
 		virtual bool                               LoopingActivate(TESObjectREFR* a_itemActivated, TESObjectREFR* a_actionRef);      // 53
-		virtual bool                               Activate(const ActivateData& a_activateData);                                     // 54
+		virtual bool                               Activate(const OBJ_ACTIVATE_DATA& a_activateData);                                // 54
 		virtual const char*                        GetObjectTypeName() const;                                                        // 55
 		virtual void                               Unk_56();                                                                         // 56
 		virtual void                               Unk_57();                                                                         // 57
@@ -153,16 +153,30 @@ namespace RE
 
 		[[nodiscard]] static TESForm* LookupByID(std::uint32_t a_formID)
 		{
-			using func_t = decltype(&TESForm::LookupByID);
+			using func_t = TESForm* (*)(std::uint32_t);
 			REL::Relocation<func_t> func{ ID::TESForm::LookupByID };
 			return func(a_formID);
 		}
 
-		[[nodiscard]] static TESForm* LookupByEditorID(const char* a_editorID)
+		template <class T>
+		[[nodiscard]] static T* LookupByID(std::uint32_t a_formID)
 		{
-			using func_t = decltype(&TESForm::LookupByEditorID);
+			const auto form = LookupByID(a_formID);
+			return form ? form->As<T>() : nullptr;
+		}
+
+		[[nodiscard]] static TESForm* LookupByEditorID(const BSFixedString& a_editorID)
+		{
+			using func_t = TESForm* (*)(const BSFixedString&);
 			REL::Relocation<func_t> func{ ID::TESForm::LookupByEditorID };
 			return func(a_editorID);
+		}
+
+		template <class T>
+		[[nodiscard]] static T* LookupByEditorID(const BSFixedString& a_editorID)
+		{
+			const auto form = LookupByEditorID(a_editorID);
+			return form ? form->As<T>() : nullptr;
 		}
 
 		[[nodiscard]] TESObjectREFR*       AsReference() { return AsReference1(); }
@@ -212,16 +226,33 @@ namespace RE
 		[[nodiscard]] bool IsPlayerRef() const noexcept { return GetFormID() == 0x00000014; }
 		[[nodiscard]] bool IsWeapon() const noexcept { return Is(FormType::kWEAP); }
 
+		template <class T>
+		[[nodiscard]] T* As() noexcept
+			requires(std::derived_from<T, TESForm> &&
+					 !std::is_pointer_v<T> &&
+					 !std::is_reference_v<T>)
+		{
+			return Is<T>() ? static_cast<T*>(this) : nullptr;
+		}
+
+		template <class T>
+		[[nodiscard]] const T* As() const noexcept
+			requires(std::derived_from<T, TESForm> &&
+					 !std::is_pointer_v<T> &&
+					 !std::is_reference_v<T>)
+		{
+			return Is<T>() ? static_cast<const T*>(this) : nullptr;
+		}
+
 		// members
-		std::uint64_t                            sourceFiles;  // 18 - TESFileContainer
-		std::uint32_t                            unk20;        // 20
-		std::uint32_t                            unk24;        // 24
-		std::uint32_t                            formFlags;    // 28
-		std::uint32_t                            unk2C;        // 2C
-		std::uint32_t                            formID;       // 30
-		std::uint8_t                             unk34;        // 34 - also flag
-		std::uint8_t                             unk35;        // 35
-		stl::enumeration<FormType, std::uint8_t> formType;     // 36
+		std::uint64_t                            unk18;           // 18
+		std::uint32_t                            formFlags;       // 20
+		std::uint32_t                            unk24;           // 24
+		std::uint32_t                            formID;          // 28
+		std::uint8_t                             formFlags2;      // 2C
+		std::uint8_t                             unk2D;           // 2D
+		stl::enumeration<FormType, std::uint8_t> formType;        // 2E
+		std::uint8_t                             loadOrderIndex;  // 2F - init'd to 0xFF
 	};
-	static_assert(sizeof(TESForm) == 0x38);
+	static_assert(sizeof(TESForm) == 0x30);
 }

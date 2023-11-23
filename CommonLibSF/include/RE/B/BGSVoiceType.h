@@ -32,9 +32,9 @@ namespace RE
 		~BGSVoiceType() override;  // 00
 
 		// members
-		BGSEditorID     formEditorID;            // 38
-		BGSKeyword*     animationFaceArchetype;  // 48
-		VOICE_TYPE_DATA data;                    // 50
+		BGSEditorID     formEditorID;            // 30
+		BGSKeyword*     animationFaceArchetype;  // 40
+		VOICE_TYPE_DATA data;                    // 48
 	};
-	static_assert(sizeof(BGSVoiceType) == 0x58);
+	static_assert(sizeof(BGSVoiceType) == 0x50);
 }

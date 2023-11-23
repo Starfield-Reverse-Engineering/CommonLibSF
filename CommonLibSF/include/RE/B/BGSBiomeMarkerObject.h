@@ -11,8 +11,8 @@ namespace RE
 
 	class BGSBiomeMarkerObject :
 		public TESBoundObject,  // 000
-		public TESModel,        // 118
-		public BGSKeywordForm   // 138
+		public TESModel,        // 0E0
+		public BGSKeywordForm   // 100
 	{
 	public:
 		SF_RTTI_VTABLE(BGSBiomeMarkerObject);
@@ -21,9 +21,9 @@ namespace RE
 		~BGSBiomeMarkerObject() override;  // 00
 
 		// members
-		TESCondition conditions;  // 168
-		BGSKeyword*  type;        // 178
-		TESLevItem*  floraList;   // 180
+		TESCondition conditions;  // 130
+		BGSKeyword*  type;        // 140
+		TESLevItem*  floraList;   // 148
 	};
-	static_assert(sizeof(BGSBiomeMarkerObject) == 0x188);
+	static_assert(sizeof(BGSBiomeMarkerObject) == 0x150);
 }

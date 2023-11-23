@@ -3,7 +3,6 @@
 #include "RE/B/BGSMod.h"
 #include "RE/B/BGSObjectPlacementDefaults.h"
 #include "RE/B/BGSPreviewTransform.h"
-#include "RE/B/BGSSnapTemplateComponent.h"
 #include "RE/N/NiPoint3.h"
 #include "RE/T/TESObject.h"
 
@@ -44,21 +43,12 @@ namespace RE
 		virtual void          Unk_81();                                                             // 81
 
 		// members
-		BGSSnapTemplateComponent   snapTemplate;       // 038
-		NiPoint3                   boundMin;           // 050
-		NiPoint3                   boundMax;           // 05C
-		BGSMod::Template::Items    templateItems;      // 068
-		BGSPreviewTransform        previewTransform;   // 088
-		BGSObjectPlacementDefaults placementDefaults;  // 0D0
-		std::uint32_t              unk0E0;             // 0E0
-		std::uint32_t              unk0E4;             // 0E4
-		std::uint32_t              unk0E8;             // 0E8
-		std::uint32_t              unk0F0;             // 0F0
-		std::uint32_t              unk0F4;             // 0F4
-		std::uint64_t              unk0F8;             // 0F8
-		std::uint64_t              unk100;             // 100
-		std::uint64_t              unk108;             // 108
-		std::uint64_t              unk110;             // 110
+		NiPoint3                   boundMin;           // 048
+		NiPoint3                   boundMax;           // 054
+		BGSMod::Template::Items    templateItems;      // 060
+		BGSPreviewTransform        previewTransform;   // 080
+		BGSObjectPlacementDefaults placementDefaults;  // 0C8
+		std::uint32_t              unk0D8;             // 0D8
 	};
-	static_assert(sizeof(TESBoundObject) == 0x118);
+	static_assert(sizeof(TESBoundObject) == 0xE0);
 }
