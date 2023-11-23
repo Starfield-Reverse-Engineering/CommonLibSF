@@ -249,7 +249,7 @@ namespace RE
 		std::uint32_t                            formFlags;       // 20
 		std::uint32_t                            unk24;           // 24
 		std::uint32_t                            formID;          // 28
-		std::uint8_t                             flags2;          // 2C
+		std::uint8_t                             formFlags2;      // 2C
 		std::uint8_t                             unk2D;           // 2D
 		stl::enumeration<FormType, std::uint8_t> formType;        // 2E
 		std::uint8_t                             loadOrderIndex;  // 2F - init'd to 0xFF

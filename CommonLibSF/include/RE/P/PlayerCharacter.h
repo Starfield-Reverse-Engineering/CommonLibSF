@@ -42,16 +42,16 @@ namespace RE
 		public BSTEventSource<PickRefUpdateEvent>,                    // 5A8
 		public BSTEventSource<TargetHitEvent>,                        // 5D0
 		public BSTEventSink<MenuOpenCloseEvent>,                      // 5F8
-		public BSTEventSink<MenuModeChangeEvent>,                     // 0600
-		public BSTEventSink<UserEventEnabledEvent>,                   // 0608
-		public BSTEventSink<OtherEventEnabledEvent>,                  // 0610
-		public BSTEventSink<TESFormDeleteEvent>,                      // 0618
-		public BSTEventSink<TESHitEvent>,                             // 0620
-		public BSTEventSink<PerkValueEvents::PerkEntryUpdatedEvent>,  // 0628
-		public BSTEventSink<AnimationGraphDependentEvent>,            // 0630
-		public BSTEventSink<TESQuestEvent::Event>,                    // 0638
-		public BSTEventSink<QuestStatus::Event>,                      // 0640
-		public IMovementPlayerControlsFilter                          // 0648
+		public BSTEventSink<MenuModeChangeEvent>,                     // 600
+		public BSTEventSink<UserEventEnabledEvent>,                   // 608
+		public BSTEventSink<OtherEventEnabledEvent>,                  // 610
+		public BSTEventSink<TESFormDeleteEvent>,                      // 618
+		public BSTEventSink<TESHitEvent>,                             // 620
+		public BSTEventSink<PerkValueEvents::PerkEntryUpdatedEvent>,  // 628
+		public BSTEventSink<AnimationGraphDependentEvent>,            // 630
+		public BSTEventSink<TESQuestEvent::Event>,                    // 638
+		public BSTEventSink<QuestStatus::Event>,                      // 640
+		public IMovementPlayerControlsFilter                          // 648
 	{
 	public:
 		SF_RTTI_VTABLE(PlayerCharacter);
