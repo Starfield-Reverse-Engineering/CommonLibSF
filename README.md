@@ -91,6 +91,11 @@ The main requirement of this license is: if you link your mod against CommonLibS
     </a>
   </td>
   <td align="center">
+    <a href="https://github.com/shad0wshayd3" title="shad0wshayd3">
+      <img src="https://avatars.githubusercontent.com/u/2724172?v=4" width="50;" alt="shad0wshayd3"/>
+    </a>
+  </td>
+  <td align="center">
     <a href="https://github.com/alandtse" title="Alan Tse">
       <img src="https://avatars.githubusercontent.com/u/7086117?v=4" width="50;" alt="Alan Tse"/>
     </a>
@@ -98,6 +103,11 @@ The main requirement of this license is: if you link your mod against CommonLibS
   <td align="center">
     <a href="https://github.com/FlayaN" title="FlayaN">
       <img src="https://avatars.githubusercontent.com/u/964655?v=4" width="50;" alt="FlayaN"/>
+    </a>
+  </td>
+  <td align="center">
+    <a href="https://github.com/ianpatt" title="Ian Patterson">
+      <img src="https://avatars.githubusercontent.com/u/292795?v=4" width="50;" alt="Ian Patterson"/>
     </a>
   </td>
   <td align="center">
@@ -111,18 +121,8 @@ The main requirement of this license is: if you link your mod against CommonLibS
     </a>
   </td>
   <td align="center">
-    <a href="https://github.com/ianpatt" title="Ian Patterson">
-      <img src="https://avatars.githubusercontent.com/u/292795?v=4" width="50;" alt="Ian Patterson"/>
-    </a>
-  </td>
-  <td align="center">
     <a href="https://github.com/lStewieAl" title="lStewieAl">
       <img src="https://avatars.githubusercontent.com/u/16544747?v=4" width="50;" alt="lStewieAl"/>
-    </a>
-  </td>
-  <td align="center">
-    <a href="https://github.com/shad0wshayd3" title="shad0wshayd3">
-      <img src="https://avatars.githubusercontent.com/u/2724172?v=4" width="50;" alt="shad0wshayd3"/>
     </a>
   </td>
 </tr></table><!--CONTRIBUTORS_END-->
