@@ -1,8 +1,9 @@
 #pragma once
+#include "RE/T/TESForm.h"
 
 namespace RE
 {
-	class TESQuest
+	class TESQuest : public TESForm
 	{
 	public:
 		SF_RTTI_VTABLE(TESQuest);
