@@ -6,7 +6,7 @@
 
 namespace RE
 {
-	class EffectShader;
+	class TESEffectShader;
 
 	class BGSArtObject :
 		public TESBoundObject,       // 000
@@ -36,8 +36,8 @@ namespace RE
 		~BGSArtObject() override;  // 00
 
 		// members
-		Data          data;          // 138
-		EffectShader* effectShader;  // 140
+		Data             data;          // 138
+		TESEffectShader* effectShader;  // 140
 	};
 	static_assert(sizeof(BGSArtObject) == 0x148);
 }

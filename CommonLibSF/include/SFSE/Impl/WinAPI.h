@@ -1403,6 +1403,45 @@ namespace SFSE::WinAPI
 
 namespace RE::DirectX
 {
+	struct XMCOLOR
+	{
+	public:
+		// members
+		union
+		{
+			struct
+			{
+				uint8_t b;
+				uint8_t g;
+				uint8_t r;
+				uint8_t a;
+			};
+			uint32_t c;
+		};
+	};
+	static_assert(sizeof(XMCOLOR) == 0x4);
+
+	struct XMFLOAT3
+	{
+	public:
+		// members
+		float x;
+		float y;
+		float z;
+	};
+	static_assert(sizeof(XMFLOAT3) == 0xC);
+
+	struct XMFLOAT4
+	{
+	public:
+		// members
+		float x;
+		float y;
+		float z;
+		float w;
+	};
+	static_assert(sizeof(XMFLOAT4) == 0x10);
+
 	struct XMFLOAT4X4
 	{
 	public:
