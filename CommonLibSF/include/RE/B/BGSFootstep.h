@@ -5,7 +5,7 @@
 namespace RE
 {
 	class BGSImpactDataSet;
-	
+
 	class BGSFootstep : public TESForm
 	{
 	public:

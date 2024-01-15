@@ -28,7 +28,7 @@ namespace RE
 		static_assert(sizeof(Directional) == 0x18);
 
 		// members
-		Directional directional;   // 00
+		Directional directional;  // 00
 	};
 	static_assert(sizeof(BGSDirectionalAmbientLightingColors) == 0x18);
 }

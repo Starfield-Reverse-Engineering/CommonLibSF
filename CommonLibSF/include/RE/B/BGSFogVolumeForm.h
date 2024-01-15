@@ -23,7 +23,7 @@ namespace RE
 		float             noiseScale;              // 54
 		float             noiseBias;               // 58
 		DirectX::XMFLOAT3 noiseScrollingVelocity;  // 5C
-		std::uint32_t     pad68;                   // 68    
+		std::uint32_t     pad68;                   // 68
 	};
 	static_assert(sizeof(BGSFogVolumeForm) == 0x70);
 }

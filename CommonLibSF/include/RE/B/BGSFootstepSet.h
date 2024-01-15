@@ -6,7 +6,7 @@
 namespace RE
 {
 	class BGSFootstep;
-	
+
 	struct ACTOR_MOVEMENT_TYPES
 	{
 		enum ACTOR_MOVEMENT_TYPE : std::uint32_t
