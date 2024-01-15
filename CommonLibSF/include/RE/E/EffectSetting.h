@@ -19,7 +19,7 @@ namespace RE
 	class BGSImpactDataSet;
 	class BGSPerk;
 	class BGSProjectile;
-	class EffectShader;
+	class TESEffectShader;
 	class SpellItem;
 	class TESImageSpaceModifier;
 	class TESObjectLIGH;
@@ -67,8 +67,8 @@ namespace RE
 			ActorValueInfo*                                                associatedSkill;        // 08
 			BGSArtObject*                                                  castingArt;             // 10
 			BGSDualCastData*                                               dualCastData;           // 18
-			EffectShader*                                                  effectShader;           // 20
-			EffectShader*                                                  enchantShader;          // 28
+			TESEffectShader*                                               effectShader;           // 20
+			TESEffectShader*                                               enchantShader;          // 28
 			BGSArtObject*                                                  enchantEffectArt;       // 30
 			SpellItem*                                                     equipAbility;           // 38
 			BGSExplosion*                                                  explosion;              // 40
