@@ -1,6 +1,7 @@
 #pragma once
 
 #include "RE/B/BGSAttachParentArray.h"
+#include "RE/B/BGSModelMaterialSwap.h"
 #include "RE/B/BSTArray.h"
 #include "RE/B/BaseFormComponent.h"
 #include "RE/T/TESDescription.h"
