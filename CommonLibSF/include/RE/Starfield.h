@@ -228,6 +228,7 @@
 #include "RE/G/GrenadeProjectile.h"
 #include "RE/H/HandlePolicy.h"
 #include "RE/H/Hazard.h"
+#include "RE/I/IAddressControllerStore.h"
 #include "RE/I/IAnimationGraphManagerHolder.h"
 #include "RE/I/IBGSBaseFormData.h"
 #include "RE/I/ICachedErrorMessage.h"
