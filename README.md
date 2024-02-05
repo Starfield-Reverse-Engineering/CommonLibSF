@@ -86,13 +86,13 @@ The main requirement of this license is: if you link your mod against CommonLibS
     </a>
   </td>
   <td align="center">
-    <a href="https://github.com/shadeMe" title="Madeesh Kannan">
-      <img src="https://avatars.githubusercontent.com/u/214450?v=4" width="50;" alt="Madeesh Kannan"/>
+    <a href="https://github.com/shad0wshayd3" title="shad0wshayd3">
+      <img src="https://avatars.githubusercontent.com/u/2724172?v=4" width="50;" alt="shad0wshayd3"/>
     </a>
   </td>
   <td align="center">
-    <a href="https://github.com/shad0wshayd3" title="shad0wshayd3">
-      <img src="https://avatars.githubusercontent.com/u/2724172?v=4" width="50;" alt="shad0wshayd3"/>
+    <a href="https://github.com/shadeMe" title="Madeesh Kannan">
+      <img src="https://avatars.githubusercontent.com/u/214450?v=4" width="50;" alt="Madeesh Kannan"/>
     </a>
   </td>
   <td align="center">
