@@ -30,6 +30,8 @@ namespace RE
 		struct MESSAGEBOX_BUTTON
 		{
 		public:
+			SF_HEAP_REDEFINE_NEW(MESSAGEBOX_BUTTON);
+
 			// members
 			BSFixedString  text;        // 00
 			BSFixedString  unk08;       // 08
