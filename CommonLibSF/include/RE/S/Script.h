@@ -171,7 +171,7 @@ namespace RE
 		inline static SCRIPT_FUNCTION* LocateConsoleCommand(const std::string_view a_longName)
 		{
 			for (auto& command : GetConsoleCommands()) {
-				if (std::strlen(command.functionName) == a_longName.size())
+				if (command.functionName && std::strlen(command.functionName) == a_longName.size())
 					if (_strnicmp(command.functionName, a_longName.data(), a_longName.size()) == 0)
 						return std::addressof(command);
 			}
@@ -182,7 +182,7 @@ namespace RE
 		inline static SCRIPT_FUNCTION* LocateScriptCommand(const std::string_view a_longName)
 		{
 			for (auto& command : GetScriptCommands()) {
-				if (std::strlen(command.functionName) == a_longName.size())
+				if (command.functionName && std::strlen(command.functionName) == a_longName.size())
 					if (_strnicmp(command.functionName, a_longName.data(), a_longName.size()) == 0)
 						return std::addressof(command);
 			}
