@@ -20,6 +20,8 @@ namespace RE
 	class EffectItem
 	{
 	public:
+		SF_HEAP_REDEFINE_NEW(EffectItem);
+
 		// members
 		EffectItemData data;            // 00
 		EffectSetting* effectSetting;   // 10
