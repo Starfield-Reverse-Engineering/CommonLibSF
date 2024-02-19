@@ -25,7 +25,7 @@ namespace RE
 		TESCondition*       conditions;  // 10
 		std::uint16_t       count;       // 18
 		std::uint16_t       level;       // 1A
-		std::uint8_t        unk1C;       // 1C
+		std::uint8_t        chanceNone;  // 1C
 		std::uint8_t        unk1D;       // 1D
 	};
 	static_assert(sizeof(LEVELED_OBJECT) == 0x20);
