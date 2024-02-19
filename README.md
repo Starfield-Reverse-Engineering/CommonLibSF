@@ -121,6 +121,11 @@ The main requirement of this license is: if you link your mod against CommonLibS
     </a>
   </td>
   <td align="center">
+    <a href="https://github.com/Meridiano" title="Meridiano">
+      <img src="https://avatars.githubusercontent.com/u/25160065?v=4" width="50;" alt="Meridiano"/>
+    </a>
+  </td>
+  <td align="center">
     <a href="https://github.com/lStewieAl" title="lStewieAl">
       <img src="https://avatars.githubusercontent.com/u/16544747?v=4" width="50;" alt="lStewieAl"/>
     </a>
