@@ -19,6 +19,8 @@ namespace RE
 	struct LEVELED_OBJECT
 	{
 	public:
+		SF_HEAP_REDEFINE_NEW(LEVELED_OBJECT);
+
 		// members
 		TESForm*            form;        // 00
 		ContainerItemExtra* itemExtra;   // 08
