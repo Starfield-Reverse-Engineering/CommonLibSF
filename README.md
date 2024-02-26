@@ -71,8 +71,8 @@ The main requirement of this license is: if you link your mod against CommonLibS
     </a>
   </td>
   <td align="center">
-    <a href="https://github.com/Qudix" title="Qudix">
-      <img src="https://avatars.githubusercontent.com/u/17361645?v=4" width="50;" alt="Qudix"/>
+    <a href="https://github.com/qudix" title="qudix">
+      <img src="https://avatars.githubusercontent.com/u/17361645?v=4" width="50;" alt="qudix"/>
     </a>
   </td>
   <td align="center">
