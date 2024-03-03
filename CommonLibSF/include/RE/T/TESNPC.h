@@ -54,6 +54,13 @@ namespace RE
 		[[nodiscard]] bool HasKeyword(std::string_view a_editorID);
 		[[nodiscard]] bool IsInFaction(TESFaction* a_faction) const;
 
+		struct MorphWeight
+		{
+			float thin;
+			float muscular;
+			float fat;
+		};
+
 		// members
 		BGSAttachParentArray                                      attachParents;    // 2E8
 		std::uint32_t                                             unk308;           // 308
@@ -66,7 +73,7 @@ namespace RE
 		std::uint32_t                                             unk334;           // 334
 		TESRace*                                                  originalRace;     // 338
 		TESNPC*                                                   faceNPC;          // 340
-		NiPoint3                                                  morphWeight;      // 348
+		MorphWeight                                               morphWeight;      // 348
 		float                                                     height;           // 354
 		float                                                     heightMax;        // 358
 		std::uint32_t                                             unk35C;           // 35C
