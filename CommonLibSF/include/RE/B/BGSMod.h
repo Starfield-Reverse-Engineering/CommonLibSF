@@ -31,7 +31,22 @@ namespace RE::BGSMod
 			{
 			public:
 				// members
-				BSTArray<void*> includes;    // 00
+				enum class IncludesFlag
+				{
+					kNone = 0,
+					kOptional = 1 << 0,
+					kDontUseAll = 1 << 1
+				};
+
+				struct Include
+				{
+					RE::BGSMod::Attachment::Mod* Mod;
+					std::uint8_t                level;
+					stl::enumeration<IncludesFlag, std::uint8_t> flags;
+				};
+				static_assert(sizeof(Include) == 0x10);
+
+				BSTArray<Include> includes;    // 00
 				BSTArray<void*> properties;  // 10
 			};
 			static_assert(sizeof(Data) == 0x20);
