@@ -40,9 +40,9 @@ namespace RE::BGSMod
 
 				struct Include
 				{
-					RE::BGSMod::Attachment::Mod* Mod;
-					std::uint8_t                level;
-					stl::enumeration<IncludesFlag, std::uint8_t> flags;
+					RE::BGSMod::Attachment::Mod* 					mod;
+					std::uint8_t                					level;
+					stl::enumeration<IncludesFlag, std::uint8_t> 	flags;
 				};
 				static_assert(sizeof(Include) == 0x10);
 
