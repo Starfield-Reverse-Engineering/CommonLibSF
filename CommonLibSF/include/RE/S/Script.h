@@ -149,8 +149,8 @@ namespace RE
 
 		enum
 		{
-			kNumConsoleCommands = 0x0245,
-			kNumScriptCommands = 0x03C0,
+			kNumConsoleCommands = 0x0244,
+			kNumScriptCommands = 0x03C1,
 
 			kConsoleOpBase = 0x0100,
 			kScriptOpBase = 0x1000,
