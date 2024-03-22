@@ -410,5 +410,5 @@ namespace RE
 		std::uint32_t  unk10D4;          // 10D4
 		std::uint64_t  unk10D8;          // 10D8
 	};
-	static_assert(sizeof(PlayerCharacter) == 0x10E0);
+	static_assert(sizeof(PlayerCharacter) == 0x1120);
 }

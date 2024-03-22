@@ -223,5 +223,5 @@ namespace RE
 		bool                                                       animationsLoaded;     // 25B
 		std::uint8_t                                               unk25C;               // 25C
 	};
-	static_assert(sizeof(Projectile) == 0x260);
+	static_assert(sizeof(Projectile) == 0x240);
 }

@@ -110,11 +110,11 @@ namespace RE
 	{
 	public:
 		// members
-		NiPoint3A                 angle;            // 00
-		NiPoint3A                 location;         // 10
-		NiPointer<TESBoundObject> objectReference;  // 20 - ref counted in SetObjectReference vfunc
+		NiPoint3                  angle;            // 00
+		NiPoint3                  location;         // 0C
+		NiPointer<TESBoundObject> objectReference;  // 18 - ref counted in SetObjectReference vfunc
 	};
-	static_assert(sizeof(OBJ_REFR) == 0x30);
+	static_assert(sizeof(OBJ_REFR) == 0x20);
 
 	struct LOADED_REF_DATA
 	{
@@ -359,7 +359,7 @@ namespace RE
 		void ForEachEquippedItem(std::function<BSContainer::ForEachResult(const BGSInventoryItem&)> a_callback) const;
 		void ForEachInventoryItem(std::function<BSContainer::ForEachResult(const BGSInventoryItem&)> a_callback) const;
 
-		[[nodiscard]] constexpr NiPoint3A   GetAngle() const { return data.angle; }
+		[[nodiscard]] constexpr NiPoint3    GetAngle() const { return data.angle; }
 		[[nodiscard]] constexpr float       GetAngleX() const { return data.angle.x; }
 		[[nodiscard]] constexpr float       GetAngleY() const { return data.angle.y; }
 		[[nodiscard]] constexpr float       GetAngleZ() const { return data.angle.z; }
@@ -370,7 +370,7 @@ namespace RE
 		[[nodiscard]] REFR_LOCK*            GetLock() const;
 		[[nodiscard]] LOCK_LEVEL            GetLockLevel() const;
 		[[nodiscard]] TESWorldSpace*        GetParentWorldSpace();
-		[[nodiscard]] constexpr NiPoint3A   GetPosition() const noexcept { return data.location; }
+		[[nodiscard]] constexpr NiPoint3    GetPosition() const noexcept { return data.location; }
 		[[nodiscard]] constexpr float       GetPositionX() const noexcept { return data.location.x; }
 		[[nodiscard]] constexpr float       GetPositionY() const noexcept { return data.location.y; }
 		[[nodiscard]] constexpr float       GetPositionZ() const noexcept { return data.location.z; }
@@ -389,17 +389,17 @@ namespace RE
 		void                                Unlock();
 
 		// members
-		OBJ_REFR                                      data;           // 80
-		BSGuarded<BGSInventoryList*, BSReadWriteLock> inventoryList;  // B0
-		TESObjectCELL*                                parentCell;     // C0
-		BSGuarded<LOADED_REF_DATA*, BSReadWriteLock>  loadedData;     // C8
-		BSTSmartPointer<ExtraDataList>                extraDataList;  // D8
-		std::uint16_t                                 scale;          // E0
-		std::uint8_t                                  unkE2;          // E2
-		std::uint8_t                                  flags;          // E3
+		OBJ_REFR                                      data;           // 78
+		BSGuarded<BGSInventoryList*, BSReadWriteLock> inventoryList;  // 98
+		TESObjectCELL*                                parentCell;     // A8
+		BSGuarded<LOADED_REF_DATA*, BSReadWriteLock>  loadedData;     // B0
+		BSTSmartPointer<ExtraDataList>                extraDataList;  // C0
+		std::uint16_t                                 scale;          // C8
+		std::uint8_t                                  unkE2;          // CA
+		std::uint8_t                                  flags;          // CB
 
 	private:
 		void AddLockChange();
 	};
-	static_assert(sizeof(TESObjectREFR) == 0xF0);
+	static_assert(sizeof(TESObjectREFR) == 0xD0);
 }
