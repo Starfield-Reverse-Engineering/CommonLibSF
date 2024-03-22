@@ -22,6 +22,17 @@ namespace RE
 			NiPoint4Struct v;
 			float          pt[4]{ 0.0F };
 		};  // 00
+
+		float& operator[](size_t i) {
+			assert(i < 4);
+			return pt[i];
+		}
+
+		const float& operator[](size_t i) const
+		{
+			assert(i < 4);
+			return pt[i];
+		}
 	};
 	static_assert(sizeof(NiPoint4) == 0x10);
 }

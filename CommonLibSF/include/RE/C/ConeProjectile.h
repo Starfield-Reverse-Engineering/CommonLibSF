@@ -21,5 +21,5 @@ namespace RE
 		void*                                        collisionShape;                // 288
 		BSTArray<std::int32_t>                       collisions;                    // 290
 	};
-	static_assert(sizeof(ConeProjectile) == 0x2A0);
+	static_assert(sizeof(ConeProjectile) == 0x280);
 }

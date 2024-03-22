@@ -26,5 +26,5 @@ namespace RE
 		float                   width;          // 260
 		BSTArray<CollisionData> collisionData;  // 268
 	};
-	static_assert(sizeof(BarrierProjectile) == 0x280);
+	static_assert(sizeof(BarrierProjectile) == 0x260);
 }
