@@ -46,8 +46,8 @@ namespace RE::BGSMod
 				};
 				static_assert(sizeof(Include) == 0x10);
 
-				BSTArray<Include> includes;    // 00
-				BSTArray<void*> properties;  // 10
+				BSTArray<Include> 	includes;    // 00
+				BSTArray<void*> 	properties;  // 10
 			};
 			static_assert(sizeof(Data) == 0x20);
 
