@@ -32,6 +32,13 @@ namespace RE
 	class TESObjectWEAP;
 	class TESQuest;
 
+	struct MorphWeight
+	{
+		float thin;
+		float muscular;
+		float fat;
+	};
+
 	struct RACE_DATA
 	{
 		std::uint32_t     unk00;                  // 00
@@ -58,7 +65,7 @@ namespace RE
 		std::uint32_t     unk58;                  // 58
 		std::uint32_t     unk5C;                  // 5C
 		float             height[SEXES::kTotal];  // 60
-		NiPoint3          weight[SEXES::kTotal];  // 68
+		MorphWeight       weight[SEXES::kTotal];  // 68
 		std::uint64_t     unk80;                  // 80
 		std::int32_t      unk88;                  // 88
 		std::int32_t      unk8C;                  // 8C

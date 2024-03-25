@@ -20,12 +20,12 @@ namespace RE
 			~PlanetData() override;  // 00
 
 			// members
-			BGSSurface::Tree* surfaceTree;  // 30
-			std::uint64_t     unk38;        // 38
-			std::uint32_t     unk40;        // 40
-			std::uint32_t     unk44;        // 44
-			std::uint32_t     unk48;        // 48
-			std::uint32_t     unk4C;        // 4C
+			BGSSurface::Tree* surfaceTree;  			// 30
+			float			  unk38;        			// 38
+			float             temperatureCelcius; 		// 3C
+			float             density; 					// 40
+			float             periAngleInDegrees;		// 44
+			std::uint32_t     resourceCreationSpeed;	// 48
 		};
 		static_assert(sizeof(PlanetData) == 0x50);
 	}

@@ -1,10 +1,12 @@
 #pragma once
 
 #include "RE/B/BSTArray.h"
+#include "RE/M/MemoryManager.h"
 #include "RE/T/TESCondition.h"
 #include "RE/T/TESDescription.h"
 #include "RE/T/TESForm.h"
 #include "RE/T/TESFullName.h"
+
 
 namespace RE
 {
@@ -30,6 +32,8 @@ namespace RE
 		struct MESSAGEBOX_BUTTON
 		{
 		public:
+			SF_HEAP_REDEFINE_NEW(MESSAGEBOX_BUTTON);
+
 			// members
 			BSFixedString  text;        // 00
 			BSFixedString  unk08;       // 08
