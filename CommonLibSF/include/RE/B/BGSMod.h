@@ -30,7 +30,7 @@ namespace RE::BGSMod
 			struct Data
 			{
 			public:
-				// members
+
 				enum class IncludesFlag
 				{
 					kNone = 0,
@@ -46,6 +46,7 @@ namespace RE::BGSMod
 				};
 				static_assert(sizeof(Include) == 0x10);
 
+				// members
 				BSTArray<Include> 	includes;    // 00
 				BSTArray<void*> 	properties;  // 10
 			};
