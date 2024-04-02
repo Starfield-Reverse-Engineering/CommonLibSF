@@ -7,7 +7,7 @@ namespace RE
 	public:
 		SF_RTTI_VTABLE(TESFile);
 
-		std::uint8_t pad0[0x38];	//0
-		char fileName[260];			//38
+		std::uint8_t pad0[0x38];     //0
+		char         fileName[260];  //38
 	};
 }

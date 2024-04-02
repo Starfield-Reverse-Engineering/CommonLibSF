@@ -67,7 +67,7 @@ namespace RE
 		BSTArray<BSTTuple3<TESForm*, BGSCurveForm, BGSTypedFormValuePair::SharedVal>>* keywordChances;    // 30
 		LEVELED_OBJECT*                                                                leveledLists;      // 38
 		LEVELED_OBJECT**                                                               scriptAddedLists;  // 40
-		std::int8_t                                                                    scriptListCount;   // 48 
+		std::int8_t                                                                    scriptListCount;   // 48
 		std::uint32_t                                                                  unk4C;             // 4C
 		stl::enumeration<Flag, std::uint8_t>                                           flags;             // 50
 		std::uint8_t                                                                   unk51;             // 51

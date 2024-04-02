@@ -30,7 +30,6 @@ namespace RE::BGSMod
 			struct Data
 			{
 			public:
-
 				enum class IncludesFlag
 				{
 					kNone = 0,
@@ -40,15 +39,15 @@ namespace RE::BGSMod
 
 				struct Include
 				{
-					RE::BGSMod::Attachment::Mod* 					mod;
-					std::uint8_t                					level;
-					stl::enumeration<IncludesFlag, std::uint8_t> 	flags;
+					RE::BGSMod::Attachment::Mod*                 mod;
+					std::uint8_t                                 level;
+					stl::enumeration<IncludesFlag, std::uint8_t> flags;
 				};
 				static_assert(sizeof(Include) == 0x10);
 
 				// members
-				BSTArray<Include> 	includes;    // 00
-				BSTArray<void*> 	properties;  // 10
+				BSTArray<Include> includes;    // 00
+				BSTArray<void*>   properties;  // 10
 			};
 			static_assert(sizeof(Data) == 0x20);
 
