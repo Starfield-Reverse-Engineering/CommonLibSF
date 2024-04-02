@@ -11,6 +11,8 @@ namespace RE
 	struct ContainerObject
 	{
 	public:
+		SF_HEAP_REDEFINE_NEW(ContainerObject);
+
 		// members
 		std::int32_t        count;      // 00
 		TESBoundObject*     obj;        // 08
