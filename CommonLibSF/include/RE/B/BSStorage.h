@@ -97,11 +97,8 @@ namespace RE
 		}
 
 		// members
-		bool                         unk0C;              // 0C
-		bool                         unk0D;              // 0D
-		uint16_t                     unk0E;              // 0E
-		BSStorageDefs::StreamBuffer* buf;                // 10
-		bool                         usingStreambuffer;  // 18
+		msvc::unique_ptr<BSStorageDefs::StreamBuffer> buf{ nullptr };          // 10
+		bool                                          usingStreambuffer{ 0 };  // 18
 	};
 	static_assert(sizeof(BSStorage) == 0x20);
 }
