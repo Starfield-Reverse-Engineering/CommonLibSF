@@ -323,6 +323,8 @@
 #include "RE/S/SpellItem.h"
 #include "RE/S/Stack.h"
 #include "RE/S/StackFrame.h"
+#include "RE/S/Stream.h"
+#include "RE/S/StreamBase.h"
 #include "RE/S/Struct.h"
 #include "RE/S/StructTypeInfo.h"
 #include "RE/T/TBO_InstanceData.h"
