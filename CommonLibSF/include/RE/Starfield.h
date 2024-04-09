@@ -304,6 +304,7 @@
 #include "RE/P/PropertyTypeInfo.h"
 #include "RE/R/RawFuncCallQuery.h"
 #include "RE/R/ReadableStringTable.h"
+#include "RE/R/ReadableTypeTable.h"
 #include "RE/R/RegSettingCollection.h"
 #include "RE/R/RemoteDebugger.h"
 #include "RE/RTTI.h"
@@ -414,3 +415,5 @@
 #include "RE/V/Variable.h"
 #include "RE/W/WwiseGUID.h"
 #include "RE/W/WwiseSoundHook.h"
+#include "RE/W/WritableStringTable.h"
+#include "RE/W/WritableTypeTable.h"
