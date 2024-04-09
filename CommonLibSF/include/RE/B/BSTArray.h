@@ -82,6 +82,18 @@ namespace RE
 
 	class BSScrapArrayAllocator
 	{
+	public:
+		void* allocate(std::size_t a_size)
+		{
+			const auto mem = _allocator->Allocate(a_size, 0);
+			if (!mem) {
+				stl::report_and_fail("out of memory"sv);
+			}
+			std::memset(mem, 0, a_size);
+			return mem;
+		}
+		void deallocate(void* a_ptr) { _allocator->Deallocate(a_ptr, 0); }
+
 	protected:
 		// members
 		ScrapHeap* _allocator{ nullptr };  // 00
@@ -301,4 +313,5 @@ namespace RE
 
 	template <class T>
 	using BSScrapArray = BSTArray<T, BSScrapArrayAllocator>;
+	static_assert(sizeof(BSScrapArray<void*>) == 0x18);
 }
