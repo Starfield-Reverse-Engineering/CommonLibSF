@@ -17,6 +17,7 @@
       "host": true
     },
     "spdlog",
-    "xbyak"
+    "xbyak",
+    "boost-stl-interfaces"
   ]
 }
