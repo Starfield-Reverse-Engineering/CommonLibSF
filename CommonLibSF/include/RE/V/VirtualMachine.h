@@ -1,11 +1,11 @@
 #pragma once
 
+#include "RE/B/BSContainer.h"
 #include "RE/B/BSFixedString.h"
 #include "RE/B/BSLock.h"
-// #include "RE/I/IClientVM.h"
-#include "RE/B/BSContainer.h"
 #include "RE/B/BSTEvent.h"
 #include "RE/E/ErrorLogger.h"
+#include "RE/I/IClientVM.h"
 #include "RE/I/IVMDebugInterface.h"
 #include "RE/I/IVMFunctionMessageDispatch.h"
 #include "RE/I/IVMObjectBindInterface.h"
@@ -33,7 +33,6 @@ namespace RE
 		class ObjectBindPolicy;
 		class Stack;
 		class IRemoteDebugger;
-		class IClientVM;
 
 		struct IMemoryPagePolicy;
 		struct IObjectHandlePolicy;
