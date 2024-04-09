@@ -195,6 +195,7 @@
 #include "RE/B/BSTEvent.h"
 #include "RE/B/BSTList.h"
 #include "RE/B/BSTOptional.h"
+#include "RE/B/BSTObjectArena.h"
 #include "RE/B/BSTSingleton.h"
 #include "RE/B/BSTSmartPointer.h"
 #include "RE/B/BSTTuple.h"
