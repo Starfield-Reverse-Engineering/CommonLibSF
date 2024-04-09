@@ -256,6 +256,7 @@
 #include "RE/I/IPostAnimationChannelUpdateFunctor.h"
 #include "RE/I/IRemoteDebugger.h"
 #include "RE/I/ISavePatcherInterface.h"
+#include "RE/I/IStackCallbackSaveInterface.h"
 #include "RE/I/IStore.h"
 #include "RE/I/IStoreAnimationActions.h"
 #include "RE/I/IVMDebugInterface.h"
