@@ -416,5 +416,6 @@
 #include "RE/V/Variable.h"
 #include "RE/W/WwiseGUID.h"
 #include "RE/W/WwiseSoundHook.h"
+#include "RE/V/VirtualMachine.h"
 #include "RE/W/WritableStringTable.h"
 #include "RE/W/WritableTypeTable.h"
