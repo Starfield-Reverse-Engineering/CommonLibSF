@@ -228,6 +228,12 @@ namespace RE::ID
 
 	namespace MemoryManager
 	{
+
+		namespace AutoScrapBuffer
+		{
+			inline constexpr REL::ID ctor{ 178513 };
+			inline constexpr REL::ID dtor{ 178516 };
+		}
 		inline constexpr REL::ID GetSingleton{ 33961 };
 		inline constexpr REL::ID Allocate{ 33962 };
 		inline constexpr REL::ID Free{ 34032 };
