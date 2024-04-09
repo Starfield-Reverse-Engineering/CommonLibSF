@@ -203,6 +203,7 @@
 #include "RE/B/BSTTuple.h"
 #include "RE/B/BSTTuple3.h"
 #include "RE/B/BarrierProjectile.h"
+#include "RE/B/BSTimer.h"
 #include "RE/B/BaseFormComponent.h"
 #include "RE/B/BeamProjectile.h"
 #include "RE/C/CodeTasklet.h"
