@@ -195,6 +195,7 @@
 #include "RE/B/BSSystemFile.h"
 #include "RE/B/BSTArray.h"
 #include "RE/B/BSTEvent.h"
+#include "RE/B/BSTFreeList.h"
 #include "RE/B/BSTList.h"
 #include "RE/B/BSTOptional.h"
 #include "RE/B/BSTObjectArena.h"
