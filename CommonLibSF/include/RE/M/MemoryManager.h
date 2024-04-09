@@ -2,6 +2,9 @@
 
 namespace RE
 {
+
+	class ScrapHeap;
+
 	class MemoryManager
 	{
 	public:
@@ -24,6 +27,13 @@ namespace RE
 			using func_t = decltype(&MemoryManager::Free);
 			const REL::Relocation<func_t> func{ ID::MemoryManager::Free };
 			return func(this, a_ptr, a_alignmentRequired);
+		}
+
+		ScrapHeap* GetThreadScrapHeap()
+		{
+			using func_t = decltype(&MemoryManager::GetThreadScrapHeap);
+			const REL::Relocation<func_t> func{ ID::MemoryManager::GetThreadScrapHeap };
+			return func(this);
 		}
 	};
 
