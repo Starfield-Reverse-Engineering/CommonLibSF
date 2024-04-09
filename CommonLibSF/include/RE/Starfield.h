@@ -232,6 +232,7 @@
 #include "RE/F/FormTypes.h"
 #include "RE/G/GameMenuBase.h"
 #include "RE/G/GrenadeProjectile.h"
+#include "RE/G/GameVM.h"
 #include "RE/H/HandlePolicy.h"
 #include "RE/H/Hazard.h"
 #include "RE/I/IAddressControllerStore.h"
