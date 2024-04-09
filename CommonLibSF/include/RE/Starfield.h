@@ -333,6 +333,7 @@
 #include "RE/S/StreamBase.h"
 #include "RE/S/Struct.h"
 #include "RE/S/StructTypeInfo.h"
+#include "RE/S/SuspendedStack.h"
 #include "RE/T/TBO_InstanceData.h"
 #include "RE/T/TESAIForm.h"
 #include "RE/T/TESActorBase.h"
