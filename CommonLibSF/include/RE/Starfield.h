@@ -296,6 +296,7 @@
 #include "RE/P/PropertyGroupInfo.h"
 #include "RE/P/PropertyTypeInfo.h"
 #include "RE/R/RawFuncCallQuery.h"
+#include "RE/R/ReadableStringTable.h"
 #include "RE/R/RegSettingCollection.h"
 #include "RE/R/RemoteDebugger.h"
 #include "RE/RTTI.h"
