@@ -2,6 +2,7 @@
 
 #include "RE/B/BSFixedString.h"
 #include "RE/B/BSLog.h"
+#include "RE/F/FormTypes.h"
 
 static_assert(sizeof(std::string) == 0x20);  // If this fails, _ITERATOR_DEBUG_LEVEL is greater than 0
 static_assert(sizeof(std::vector<int>) == 0x18);

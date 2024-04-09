@@ -180,6 +180,22 @@ namespace RE::ID
 		inline constexpr REL::ID HasType{ 83208 };
 	}
 
+	namespace GameScript
+	{
+		namespace RemoteDebugger
+		{
+			inline constexpr REL::ID HandleContinueRequest{ 167579 };
+			inline constexpr REL::ID HandleDisconnectRequest{ 167580 };
+			inline constexpr REL::ID HandlePauseRequest{ 167581 };
+			inline constexpr REL::ID HandleSetBreakpointsRequest{ 167582 };
+			inline constexpr REL::ID HandleStackTraceRequest{ 167583 };
+			inline constexpr REL::ID HandleThreadsRequest{ 167584 };
+			inline constexpr REL::ID HandleValueRequest{ 167585 };
+			inline constexpr REL::ID HandleVariablesRequest{ 167586 };
+			inline constexpr REL::ID HandleStepRequest{ 167587 };
+		}
+	}
+
 	namespace idLogging
 	{
 		inline constexpr REL::ID singleton{ 895197 };
