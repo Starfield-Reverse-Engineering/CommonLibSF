@@ -188,6 +188,7 @@
 #include "RE/B/BSLock.h"
 #include "RE/B/BSLog.h"
 #include "RE/B/BSReflection.h"
+#include "RE/B/BSStorage.h"
 #include "RE/B/BSStringPool.h"
 #include "RE/B/BSStringT.h"
 #include "RE/B/BSSystemFile.h"
