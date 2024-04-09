@@ -237,6 +237,7 @@
 #include "RE/I/IAnimationGraphManagerHolder.h"
 #include "RE/I/IBGSBaseFormData.h"
 #include "RE/I/ICachedErrorMessage.h"
+#include "RE/I/IClientVM.h"
 #include "RE/I/IComplexType.h"
 #include "RE/I/IFuncCallQuery.h"
 #include "RE/I/IFunction.h"
