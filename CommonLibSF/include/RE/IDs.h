@@ -365,7 +365,7 @@ namespace RE::ID
 	namespace UI
 	{
 		inline constexpr REL::ID singleton{ 878339 };
-		inline constexpr REL::ID IsMenuOpen{ 187049 };
+		inline constexpr REL::ID IsMenuOpen{ 1870208 };
 	}
 
 	// global functions/ ids
