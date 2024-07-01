@@ -1,7 +1,10 @@
 #pragma once
 
+#include "RE/B/BSFixedString.h"
 #include "RE/B/BSIntrusiveRefCounted.h"
+#include "RE/B/BSLock.h"
 #include "RE/B/BSTSmartPointer.h"
+#include "RE/T/TypeInfo.h"
 
 namespace RE
 {
@@ -42,6 +45,19 @@ namespace RE
 		{
 		public:
 			SF_RTTI_VTABLE(BSScript__IVirtualMachine);
+
+			struct GlobalGuardData
+			{
+				std::byte              unk00[0x108];  // 00
+				BSNonReentrantSpinLock guardlock;     // 108
+			};
+
+			struct GuardDataIFace
+			{
+				IVirtualMachine* thisVMInterface;  // 000
+				GlobalGuardData  globalGuardData;  // 008
+			};
+			static_assert(sizeof(GuardDataIFace) == 0x118);
 
 			virtual ~IVirtualMachine() = default;  // 00
 
@@ -97,15 +113,15 @@ namespace RE
 			virtual bool                                     DispatchMethodCall(const BSTSmartPointer<Object>& a_self, const BSFixedString& a_funcName, const BSTThreadScrapFunction<bool(BSScrapArray<Variable>&)>& a_arguments, const BSTSmartPointer<IStackCallbackFunctor>& a_callback, int a_unk0) = 0;                                                            // 31
 			virtual bool                                     DispatchUnboundMethodCall(std::uint64_t a_objHandle, const BSTSmartPointer<BoundScript>& a_script, const BSFixedString& a_funcName, const BSTThreadScrapFunction<bool(BSScrapArray<Variable>&)>& a_arguments, const BSTSmartPointer<IStackCallbackFunctor>& a_callback, int a_unk0) = 0;                   // 32
 			virtual void                                     ReturnFromLatent(std::uint32_t a_stackID, const Variable& a_retValue) = 0;                                                                                                                                                                                                                                 // 33 -- IsWaitingOnLatent was removed
-			virtual void                                     UnkGuardFunction(void) = 0;                                                                                                                                                                                                                                                                                // 34
+			virtual void                                     ReattemptGuardLock(std::uint32_t a_stackID) = 0;                                                                                                                                                                                                                                                           // 34
 			[[nodiscard]] virtual ErrorLogger&               GetErrorLogger() const = 0;                                                                                                                                                                                                                                                                                // 35
 			[[nodiscard]] virtual const IObjectHandlePolicy& GetObjectHandlePolicy() const = 0;                                                                                                                                                                                                                                                                         // 36
 			[[nodiscard]] virtual IObjectHandlePolicy&       GetObjectHandlePolicy() = 0;                                                                                                                                                                                                                                                                               // 37
 			[[nodiscard]] virtual const ObjectBindPolicy&    GetObjectBindPolicy() const = 0;                                                                                                                                                                                                                                                                           // 38
 			[[nodiscard]] virtual ObjectBindPolicy&          GetObjectBindPolicy() = 0;                                                                                                                                                                                                                                                                                 // 39
 			[[nodiscard]] virtual ISavePatcherInterface&     GetSavePatcherInterface() = 0;                                                                                                                                                                                                                                                                             // 3A
-			[[nodiscard]] virtual const IVirtualMachine&     GetVMInterface() const = 0;                                                                                                                                                                                                                                                                                // 3B
-			[[nodiscard]] virtual IVirtualMachine&           GetVMInterface() = 0;                                                                                                                                                                                                                                                                                      // 3C
+			[[nodiscard]] virtual const GuardDataIFace       GetGlobalGuardDataInterface() const = 0;                                                                                                                                                                                                                                                                   // 3B
+			[[nodiscard]] virtual GuardDataIFace             GetGlobalGuardDataInterface() = 0;                                                                                                                                                                                                                                                                         // 3C
 			virtual void                                     RegisterForLogEvent(BSTEventSink<LogEvent>* a_sink) = 0;                                                                                                                                                                                                                                                   // 3D
 			virtual void                                     UnregisterForLogEvent(BSTEventSink<LogEvent>* a_sink) = 0;                                                                                                                                                                                                                                                 // 3E
 			virtual void                                     RegisterForStatsEvent(BSTEventSink<StatsEvent>* a_sink) = 0;                                                                                                                                                                                                                                               // 3F
