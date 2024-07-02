@@ -32,5 +32,5 @@ namespace RE
 		std::uint8_t         unk3B5;      // 3B5
 		std::uint8_t         unk3B6;      // 3B6
 	};
-	static_assert(sizeof(BeamProjectile) == 0x3C0);
+	static_assert(sizeof(BeamProjectile) == 0x3A0);
 }

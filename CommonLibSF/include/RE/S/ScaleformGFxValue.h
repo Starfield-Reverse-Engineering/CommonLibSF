@@ -322,8 +322,9 @@ namespace RE::Scaleform::GFx
 
 			// members
 			MovieImpl* movieRoot;  // 08
+			Value* lastValue;
 		};
-		static_assert(sizeof(ObjectInterface) == 0x10);
+		static_assert(sizeof(ObjectInterface) == 0x18);
 
 		using ArrayVisitor = ObjectInterface::ArrVisitor;
 		using ObjectVisitor = ObjectInterface::ObjVisitor;
@@ -340,14 +341,19 @@ namespace RE::Scaleform::GFx
 			}
 		}
 
-		Value(Value&& a_rhs) noexcept :
-			_objectInterface(a_rhs._objectInterface),
-			_type(a_rhs._type),
-			_value(std::move(a_rhs._value)),
-			_dataAux(a_rhs._dataAux)
+		Value(Value&& a_rhs) noexcept
 		{
-			a_rhs._objectInterface = nullptr;
+			_type = a_rhs._type;
+			_value = a_rhs._value;
+			_dataAux = a_rhs._dataAux;
+
+			if (a_rhs.IsManagedValue()) {
+				AcquireManagedValue(a_rhs);
+				a_rhs.ReleaseManagedValue();
+			}
+
 			a_rhs._type = ValueType::kUndefined;
+			a_rhs._value = 0;
 			a_rhs._dataAux = 0;
 		}
 
@@ -419,15 +425,17 @@ namespace RE::Scaleform::GFx
 					ReleaseManagedValue();
 				}
 
-				_objectInterface = a_rhs._objectInterface;
-				a_rhs._objectInterface = nullptr;
-
 				_type = a_rhs._type;
-				a_rhs._type = ValueType::kUndefined;
-
-				_value = std::move(a_rhs._value);
-
+				_value = a_rhs._value;
 				_dataAux = a_rhs._dataAux;
+
+				if (a_rhs.IsManagedValue()) {
+					AcquireManagedValue(a_rhs);
+					a_rhs.ReleaseManagedValue();
+				}
+
+				a_rhs._type = ValueType::kUndefined;
+				a_rhs._value = 0;
 				a_rhs._dataAux = 0;
 			}
 			return *this;
@@ -733,8 +741,8 @@ namespace RE::Scaleform::GFx
 		}
 
 		// members
-		void*                                     _unk00{};                        // 00
-		void*                                     _unk08{};                        // 08
+		Value*                                    _prev{};                         // 00
+		Value*                                    _next{};                         // 08
 		ObjectInterface*                          _objectInterface{};              // 10
 		stl::enumeration<ValueType, std::int32_t> _type{ ValueType::kUndefined };  // 18
 		ValueUnion                                _value{};                        // 20

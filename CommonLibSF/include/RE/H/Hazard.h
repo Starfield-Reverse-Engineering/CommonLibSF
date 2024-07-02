@@ -27,6 +27,7 @@ namespace RE
 		float                          radius;       // 12C
 		float                          magnitude;    // 130
 		std::uint32_t                  flags;        // 134
+		void*                          unk280;		 // 280
 	};
-	static_assert(sizeof(Hazard) == 0x140);
+	static_assert(sizeof(Hazard) == 0x120);
 }
