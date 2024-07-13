@@ -30,5 +30,5 @@ namespace RE
 		std::uint64_t                             unk2A0;  // 2A0
 		std::uint64_t                             unk2A8;  // 2A8
 	};
-	static_assert(sizeof(EmitterProjectile) == 0x2B0);
+	static_assert(sizeof(EmitterProjectile) == 0x290);
 }

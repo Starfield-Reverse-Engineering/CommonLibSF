@@ -102,7 +102,6 @@ namespace RE
 	public:
 		// members
 		BSTEventSource<Event>* eventSource;  // 00
-		std::uint64_t          unk08;        // 08
 	};
-	static_assert(sizeof(BSTEventSourceLazyInit<void*>) == 0x10);
+	static_assert(sizeof(BSTEventSourceLazyInit<void*>) == 0x8);
 }
