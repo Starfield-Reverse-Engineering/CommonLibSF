@@ -380,7 +380,7 @@ namespace RE
 		std::uint64_t                                        unk518;                   // 518
 		std::uint64_t                                        unk520;                   // 520
 		std::uint64_t                                        unk528;                   // 528
-		std::uint8_t                                         unk530[88];			   // 530
+		std::uint8_t                                         unk530[88];               // 530
 	};
 	static_assert(sizeof(Actor) == 0x570);
 }

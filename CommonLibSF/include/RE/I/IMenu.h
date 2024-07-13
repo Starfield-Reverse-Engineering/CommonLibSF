@@ -36,9 +36,9 @@ namespace RE
 			Flag27 = 1 << 27,
 		};
 
-		virtual ~IMenu() // 00
+		virtual ~IMenu()  // 00
 		{
-			using func_t = void(*)(IMenu*);
+			using func_t = void (*)(IMenu*);
 			REL::Relocation<func_t> func(REL::ID(187216));
 			func(this);
 		}
@@ -74,122 +74,122 @@ namespace RE
 		}
 
 		// add
-		virtual const char* GetName() const = 0;                                // 03
-		virtual const char* GetRootPath() const = 0;                            // 04
-		virtual uint64_t    GetUnk05() = 0;                                     // 05
+		virtual const char* GetName() const = 0;      // 03
+		virtual const char* GetRootPath() const = 0;  // 04
+		virtual uint64_t    GetUnk05() = 0;           // 05
 
-		virtual bool LoadMovie(bool a_addEventDispatcher, bool a_arg2)			// 06
+		virtual bool LoadMovie(bool a_addEventDispatcher, bool a_arg2)  // 06
 		{
 			using func_t = decltype(&IMenu::LoadMovie);
 			REL::Relocation<func_t> func(REL::ID(187240));
 			return func(this, a_addEventDispatcher, a_arg2);
-		} 
+		}
 
-		virtual void Unk07() {}													// 07
+		virtual void Unk07() {}  // 07
 
-		virtual UI_MESSAGE_RESULT ProcessMessage(UIMessageData& a_message)		// 08
+		virtual UI_MESSAGE_RESULT ProcessMessage(UIMessageData& a_message)  // 08
 		{
 			using func_t = decltype(&IMenu::ProcessMessage);
 			REL::Relocation<func_t> func(REL::ID(187247));
 			return func(this, a_message);
 		}
-		
-		virtual bool Unk09()													// 09
+
+		virtual bool Unk09()  // 09
 		{
 			using func_t = decltype(&IMenu::Unk09);
 			REL::Relocation<func_t> func(REL::ID(80440));
-			return func(this); 
+			return func(this);
 		}
 
-		virtual bool Unk0A()													// 0A
+		virtual bool Unk0A()  // 0A
 		{
 			using func_t = decltype(&IMenu::Unk0A);
 			REL::Relocation<func_t> func(REL::ID(187238));
 			return func(this);
 		}
 
-		virtual void        Unk_0B(void) {}                                     // 0B
-		virtual void        Unk_0C(void) {}                                     // 0C
-		virtual void        Unk_0D(void) {}                                     // 0D
+		virtual void Unk_0B(void) {}  // 0B
+		virtual void Unk_0C(void) {}  // 0C
+		virtual void Unk_0D(void) {}  // 0D
 
-		virtual bool Unk0E(void* a, bool b)										// 0E
+		virtual bool Unk0E(void* a, bool b)  // 0E
 		{
 			using func_t = decltype(&IMenu::Unk0E);
 			REL::Relocation<func_t> func(REL::ID(187242));
 			return func(this, a, b);
 		}
 
-		virtual void Unk0F() {};												// 0F
+		virtual void Unk0F(){};  // 0F
 
-		virtual uint64_t Unk10()												// 10
-		{												
+		virtual uint64_t Unk10()  // 10
+		{
 			using func_t = decltype(&IMenu::Unk10);
 			REL::Relocation<uint64_t(IMenu*)> func(REL::ID(187241));
 			return func(this);
 		};
 
-		virtual uint64_t Unk11()												// 11
-		{ 
+		virtual uint64_t Unk11()  // 11
+		{
 			using func_t = decltype(&IMenu::Unk11);
 			REL::Relocation<func_t> func(REL::ID(187243));
 			return func(this);
 		};
 
-		virtual uint64_t Unk12()												// 12
+		virtual uint64_t Unk12()  // 12
 		{
 			using func_t = decltype(&IMenu::Unk12);
 			REL::Relocation<func_t> func(REL::ID(80451));
-			return func(this); 
+			return func(this);
 		};
 
-		virtual BSFixedString* Unk13()											// 13
+		virtual BSFixedString* Unk13()  // 13
 		{
 			using func_t = decltype(&IMenu::Unk13);
 			REL::Relocation<func_t> func(REL::ID(76183));
 			return func(this);
 		};
 
-		virtual bool Unk14()													// 14
-		{ 
-			return true; 
+		virtual bool Unk14()  // 14
+		{
+			return true;
 		};
 
-		virtual bool Unk15(void* a)												// 15
+		virtual bool Unk15(void* a)  // 15
 		{
 			using func_t = decltype(&IMenu::Unk15);
 			REL::Relocation<func_t> func(REL::ID(187225));
-			return func(this, a); 
+			return func(this, a);
 		};
 
-		virtual bool Unk16()													// 16
-		{ 
-			return false;
-		
-		};
-
-		virtual bool ProcessInputUserEvent()									// 17
+		virtual bool Unk16()  // 16
 		{
 			return false;
 		};
 
-		virtual uint64_t Unk18(void* a, uint64_t b)								// 18
+		virtual bool ProcessInputUserEvent()  // 17
+		{
+			return false;
+		};
+
+		virtual uint64_t Unk18(void* a, uint64_t b)  // 18
 		{
 			using func_t = decltype(&IMenu::Unk18);
 			REL::Relocation<func_t> func(REL::ID(1275268));
 			return func(this, a, b);
 		}
 
-		virtual uint64_t Unk19(void* a, int b, int c) {							// 19
+		virtual uint64_t Unk19(void* a, int b, int c)
+		{  // 19
 			using func_t = decltype(&IMenu::Unk19);
 			REL::Relocation<func_t> func(REL::ID(187245));
-			return func(this, a, b, c); 
+			return func(this, a, b, c);
 		}
 
-		virtual float Unk1A()													// 1A
-		{ 
+		virtual float Unk1A()  // 1A
+		{
 			using func_t = decltype(&IMenu::Unk1A);
 			REL::Relocation<func_t> func(REL::ID(187232));
-			return func(this); 
+			return func(this);
 		};
 
 		void SetFlags(uint32_t _flags)
@@ -204,35 +204,35 @@ namespace RE
 			flagsUpdated = true;
 		}
 
-		Scaleform::GFx::Value                 menuObj;		 // 058
-		Scaleform::Ptr<Scaleform::GFx::Movie> uiMovie;		 // 088
-		std::uint64_t                         unk090;		 // 090
-		std::uint64_t                         unk098;		 // 098
-		std::uint64_t                         unk0A0;		 // 0A0
-		std::uint32_t                         unk0A8;		 // 0A8
-		std::uint32_t                         unk0AC;		 // 0AC
-		BSFixedString                         menuName;		 // 0B0
-		BSFixedString                         unk0B8;		 // 0B8
-		std::uint32_t                         flags;		 // 0C0
-		std::uint32_t						  unk0C4;		 // 0C4
+		Scaleform::GFx::Value                 menuObj;       // 058
+		Scaleform::Ptr<Scaleform::GFx::Movie> uiMovie;       // 088
+		std::uint64_t                         unk090;        // 090
+		std::uint64_t                         unk098;        // 098
+		std::uint64_t                         unk0A0;        // 0A0
+		std::uint32_t                         unk0A8;        // 0A8
+		std::uint32_t                         unk0AC;        // 0AC
+		BSFixedString                         menuName;      // 0B0
+		BSFixedString                         unk0B8;        // 0B8
+		std::uint32_t                         flags;         // 0C0
+		std::uint32_t                         unk0C4;        // 0C4
 		std::uint32_t                         unk0C8;        // 0C8
 		std::uint32_t                         unk0CC;        // 0CC
 		std::uint16_t                         unk0D0;        // 0D0
 		bool                                  flagsUpdated;  // 0D2
 		std::uint8_t                          unk0D3;        // 0D3
-		std::uint32_t                         unk0D4;		 // 0D4
-		std::uint64_t                         unk0D8;		 // 0D8
-		std::uint64_t                         unk0E0;		 // 0E0
-		std::uint64_t                         unk0E8;		 // 0E8
-		std::uint64_t                         unk0F0;		 // 0F0
-		std::uint64_t                         unk0F8;		 // 0F8
-		std::uint64_t                         unk100;		 // 100
-		std::uint32_t                         unk108;		 // 108
-		std::uint32_t                         unk10C;		 // 10C
-		std::uint64_t                         unk110;		 // 110
-		std::uint64_t                         unk118;		 // 118
-		std::uint64_t                         unk120;		 // 120
-		std::uint64_t                         unk128;		 // 128
+		std::uint32_t                         unk0D4;        // 0D4
+		std::uint64_t                         unk0D8;        // 0D8
+		std::uint64_t                         unk0E0;        // 0E0
+		std::uint64_t                         unk0E8;        // 0E8
+		std::uint64_t                         unk0F0;        // 0F0
+		std::uint64_t                         unk0F8;        // 0F8
+		std::uint64_t                         unk100;        // 100
+		std::uint32_t                         unk108;        // 108
+		std::uint32_t                         unk10C;        // 10C
+		std::uint64_t                         unk110;        // 110
+		std::uint64_t                         unk118;        // 118
+		std::uint64_t                         unk120;        // 120
+		std::uint64_t                         unk128;        // 128
 	};
 	static_assert(offsetof(IMenu, uiMovie) == 0x088);
 	static_assert(offsetof(IMenu, menuName) == 0x0B0);

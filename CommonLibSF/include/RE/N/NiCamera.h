@@ -49,11 +49,10 @@ namespace RE
 		NiPoint3 WorldToScreen(const NiPoint3& worldPt)
 		{
 			NiPoint3 result{ 0.0f, 0.0f, -1.0f };
-			float worldDiffRotated = (
-				((worldPt.y - world.translate.y) * world.rotate[0][1]) +
-				((worldPt.x - world.translate.x) * world.rotate[0][0]) +
-				((worldPt.z - world.translate.z) * world.rotate[0][2])
-			) - viewFrustum._near;
+			float    worldDiffRotated = (((worldPt.y - world.translate.y) * world.rotate[0][1]) +
+                                         ((worldPt.x - world.translate.x) * world.rotate[0][0]) +
+                                         ((worldPt.z - world.translate.z) * world.rotate[0][2])) -
+			                         viewFrustum._near;
 
 			result.z = worldDiffRotated * (1.0f / (viewFrustum._far - viewFrustum._near));
 

@@ -20,8 +20,8 @@ namespace RE
 	public:
 		virtual ~UIMessageData() = default;
 
-		UIMessage type; //08
-		//...more?
+		UIMessage type;  //08
+						 //...more?
 	};
 
 	enum UI_MESSAGE_RESULT : int64_t

@@ -1,7 +1,7 @@
 #pragma once
+#include "RE/B/BSInputEventReceiver.h"
 #include "RE/B/BSTArray.h"
 #include "RE/B/BSTEvent.h"
-#include "RE/B/BSInputEventReceiver.h"
 #include "RE/B/BSTScatterTable.h"
 #include "RE/I/IMenu.h"
 
@@ -48,8 +48,8 @@ namespace RE
 			Scaleform::Ptr<IMenu> menu;
 			Create_t*             initFunc;
 			void*                 unk18 = nullptr;
-			uint64_t			  unk20 = 1;
-			uint64_t			  unk28 = 0;
+			uint64_t              unk20 = 1;
+			uint64_t              unk28 = 0;
 		};
 
 		template <class T>
@@ -85,7 +85,7 @@ namespace RE
 
 			auto& entry = menuMap[a_name];
 			entry.initFunc = [](Scaleform::Ptr<IMenu>* menu) {
-				auto createdMenu = new T();
+				auto                                                                createdMenu = new T();
 				REL::Relocation<Scaleform::Ptr<IMenu>*(Scaleform::Ptr<IMenu>*, T*)> CopyRef(REL::ID(80375));
 				CopyRef(menu, createdMenu);
 				return menu;

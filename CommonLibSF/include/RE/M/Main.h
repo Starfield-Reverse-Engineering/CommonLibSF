@@ -10,9 +10,9 @@ namespace RE
 	public:
 		struct SceneGraphRoot
 		{
-			std::byte unk[120];
-			NiAVObject* worldCameraRoot; //NiNode
-			NiCamera* worldCamera;
+			std::byte   unk[120];
+			NiAVObject* worldCameraRoot;  //NiNode
+			NiCamera*   worldCamera;
 		};
 		static_assert(offsetof(SceneGraphRoot, SceneGraphRoot::worldCamera) == 0x80);
 

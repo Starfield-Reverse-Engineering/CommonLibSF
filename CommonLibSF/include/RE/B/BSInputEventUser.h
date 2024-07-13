@@ -1,7 +1,7 @@
 #pragma once
 
-#include "RE/M/MemoryManager.h"
 #include "RE/B/BSFixedString.h"
+#include "RE/M/MemoryManager.h"
 
 namespace RE
 {
@@ -98,8 +98,8 @@ namespace RE
 		{
 			using func_t = decltype(&BSInputEventUser::InputEventUser_Unk_09);
 			REL::Relocation<func_t> func(REL::ID(178899));
-			return func(this, a_event); 
-		}  
+			return func(this, a_event);
+		}
 
 		SF_HEAP_REDEFINE_NEW(BSInputEventUser);
 

@@ -322,7 +322,7 @@ namespace RE::Scaleform::GFx
 
 			// members
 			MovieImpl* movieRoot;  // 08
-			Value* lastValue;
+			Value*     lastValue;
 		};
 		static_assert(sizeof(ObjectInterface) == 0x18);
 

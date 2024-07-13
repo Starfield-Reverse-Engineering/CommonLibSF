@@ -21,7 +21,7 @@ namespace RE
 			func(this);
 		}
 
-		virtual ~GameMenuBase() = default;	// 00
+		virtual ~GameMenuBase() = default;  // 00
 
 		//override
 		virtual uint64_t Unk10() override

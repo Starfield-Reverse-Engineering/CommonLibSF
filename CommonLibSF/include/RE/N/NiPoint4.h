@@ -23,7 +23,8 @@ namespace RE
 			float          pt[4]{ 0.0F };
 		};  // 00
 
-		float& operator[](size_t i) {
+		float& operator[](size_t i)
+		{
 			assert(i < 4);
 			return pt[i];
 		}

@@ -19,7 +19,7 @@ namespace RE
 		{
 			using func_t = decltype(&BSInputEnableManager::CreateLayer);
 			REL::Relocation<func_t> func(REL::ID(179101));
-			return func(this, a_layer, a_layerName); 
+			return func(this, a_layer, a_layerName);
 		}
 	};
 }
