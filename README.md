@@ -91,13 +91,13 @@ The main requirement of this license is: if you link your mod against CommonLibS
     </a>
   </td>
   <td align="center">
-    <a href="https://github.com/shadeMe" title="Madeesh Kannan">
-      <img src="https://avatars.githubusercontent.com/u/214450?v=4" width="50;" alt="Madeesh Kannan"/>
+    <a href="https://github.com/alandtse" title="Alan Tse">
+      <img src="https://avatars.githubusercontent.com/u/7086117?v=4" width="50;" alt="Alan Tse"/>
     </a>
   </td>
   <td align="center">
-    <a href="https://github.com/alandtse" title="Alan Tse">
-      <img src="https://avatars.githubusercontent.com/u/7086117?v=4" width="50;" alt="Alan Tse"/>
+    <a href="https://github.com/shadeMe" title="Madeesh Kannan">
+      <img src="https://avatars.githubusercontent.com/u/214450?v=4" width="50;" alt="Madeesh Kannan"/>
     </a>
   </td>
   <td align="center">
@@ -123,6 +123,11 @@ The main requirement of this license is: if you link your mod against CommonLibS
   <td align="center">
     <a href="https://github.com/gazzamc" title="Gary McGovern">
       <img src="https://avatars.githubusercontent.com/u/7975925?v=4" width="50;" alt="Gary McGovern"/>
+    </a>
+  </td>
+  <td align="center">
+    <a href="https://github.com/Deweh" title="V">
+      <img src="https://avatars.githubusercontent.com/u/76853940?v=4" width="50;" alt="V"/>
     </a>
   </td>
   <td align="center">
