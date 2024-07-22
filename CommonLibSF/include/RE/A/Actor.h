@@ -168,8 +168,8 @@ namespace RE
 		virtual void         Unk_133();                                                                              // 133
 		virtual void         Unk_134();                                                                              // 134
 		virtual void         Unk_135();                                                                              // 135
-		virtual void         Unk_136();                                                                              // 136
-		virtual void         Unk_137();                                                                              // 137
+		virtual void         DrawWeaponMagicHands(bool a_draw);                                                      // 136
+		virtual void         SetPosition(const NiPoint3& a_pos, bool a_updateCharController);                        // 137
 		virtual void         Unk_138();                                                                              // 138
 		virtual void         Resurrect(bool a_resetInventory, bool a_attach3D);                                      // 139
 		virtual void         Unk_13A();                                                                              // 13A
@@ -320,6 +320,7 @@ namespace RE
 		std::uint64_t                                        unk350;                   // 350
 		std::uint64_t                                        unk358;                   // 358
 		std::uint64_t                                        unk360;                   // 360
+		std::uint64_t                                        unk368;                   // 368
 		TESRace*                                             race;                     // 368
 		Perks*                                               perks;                    // 370
 		std::uint32_t                                        unk378;                   // 378
@@ -379,6 +380,7 @@ namespace RE
 		std::uint64_t                                        unk518;                   // 518
 		std::uint64_t                                        unk520;                   // 520
 		std::uint64_t                                        unk528;                   // 528
+		std::uint8_t                                         unk530[88];               // 530
 	};
-	static_assert(sizeof(Actor) == 0x530);
+	static_assert(sizeof(Actor) == 0x570);
 }

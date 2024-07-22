@@ -5,7 +5,7 @@
 [![C++23](https://img.shields.io/static/v1?label=standard&message=c%2B%2B23&color=blue&logo=c%2B%2B&&logoColor=red&style=flat)](https://en.cppreference.com/w/cpp/compiler_support)
 ![Platform](https://img.shields.io/static/v1?label=platform&message=windows&color=dimgray&style=flat&logo=windows)
 [![Game version](https://img.shields.io/badge/game%20version-1.8.86-orange)](#Developing-with-CommonLibSF)
-[![VCPKG_VER](https://img.shields.io/static/v1?label=vcpkg%20registry&message=2024-04-02.1&color=green&style=flat)](https://github.com/Starfield-Reverse-Engineering/Starfield-RE-vcpkg)
+[![VCPKG_VER](https://img.shields.io/static/v1?label=vcpkg%20registry&message=2024-07-13&color=green&style=flat)](https://github.com/Starfield-Reverse-Engineering/Starfield-RE-vcpkg)
 [![Main CI](https://img.shields.io/github/actions/workflow/status/Starfield-Reverse-Engineering/CommonLibSF/main_ci.yml)](https://github.com/Starfield-Reverse-Engineering/CommonLibSF/actions/workflows/main_ci.yml)
 
 ## Build Dependencies
@@ -91,13 +91,13 @@ The main requirement of this license is: if you link your mod against CommonLibS
     </a>
   </td>
   <td align="center">
-    <a href="https://github.com/shadeMe" title="Madeesh Kannan">
-      <img src="https://avatars.githubusercontent.com/u/214450?v=4" width="50;" alt="Madeesh Kannan"/>
+    <a href="https://github.com/alandtse" title="Alan Tse">
+      <img src="https://avatars.githubusercontent.com/u/7086117?v=4" width="50;" alt="Alan Tse"/>
     </a>
   </td>
   <td align="center">
-    <a href="https://github.com/alandtse" title="Alan Tse">
-      <img src="https://avatars.githubusercontent.com/u/7086117?v=4" width="50;" alt="Alan Tse"/>
+    <a href="https://github.com/shadeMe" title="Madeesh Kannan">
+      <img src="https://avatars.githubusercontent.com/u/214450?v=4" width="50;" alt="Madeesh Kannan"/>
     </a>
   </td>
   <td align="center">
@@ -111,6 +111,11 @@ The main requirement of this license is: if you link your mod against CommonLibS
     </a>
   </td>
   <td align="center">
+    <a href="https://github.com/Meridiano" title="Meridiano">
+      <img src="https://avatars.githubusercontent.com/u/25160065?v=4" width="50;" alt="Meridiano"/>
+    </a>
+  </td>
+  <td align="center">
     <a href="https://github.com/Bobbyclue" title="Bobbyclue">
       <img src="https://avatars.githubusercontent.com/u/97621924?v=4" width="50;" alt="Bobbyclue"/>
     </a>
@@ -121,8 +126,8 @@ The main requirement of this license is: if you link your mod against CommonLibS
     </a>
   </td>
   <td align="center">
-    <a href="https://github.com/Meridiano" title="Meridiano">
-      <img src="https://avatars.githubusercontent.com/u/25160065?v=4" width="50;" alt="Meridiano"/>
+    <a href="https://github.com/Deweh" title="V">
+      <img src="https://avatars.githubusercontent.com/u/76853940?v=4" width="50;" alt="V"/>
     </a>
   </td>
   <td align="center">

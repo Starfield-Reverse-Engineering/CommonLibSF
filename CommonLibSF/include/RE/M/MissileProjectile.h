@@ -24,6 +24,8 @@ namespace RE
 		bool                                         waitingToInitialize3D;  // 2AC
 		bool                                         unk2AD;                 // 2AD
 		bool                                         unk2AE;                 // 2AE
+		void*                                        unk2AF;
+		void*                                        unk2B7;
 	};
-	static_assert(sizeof(MissileProjectile) == 0x2B0);
+	static_assert(sizeof(MissileProjectile) == 0x2A0);
 }

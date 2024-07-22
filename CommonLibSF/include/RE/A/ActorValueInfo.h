@@ -15,6 +15,7 @@ namespace RE
 	{
 	public:
 		SF_RTTI_VTABLE(ActorValueInfo);
+		SF_FORMTYPE(AVIF);
 
 		~ActorValueInfo() override;  // 00
 
