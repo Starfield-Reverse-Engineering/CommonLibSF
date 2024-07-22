@@ -101,8 +101,8 @@ The main requirement of this license is: if you link your mod against CommonLibS
     </a>
   </td>
   <td align="center">
-    <a href="https://github.com/FlayaN" title="FlayaN">
-      <img src="https://avatars.githubusercontent.com/u/964655?v=4" width="50;" alt="FlayaN"/>
+    <a href="https://github.com/FlayaN" title="Flayan">
+      <img src="https://avatars.githubusercontent.com/u/964655?v=4" width="50;" alt="Flayan"/>
     </a>
   </td>
   <td align="center">
