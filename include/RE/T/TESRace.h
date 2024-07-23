@@ -16,7 +16,7 @@
 #include "RE/T/TESForm.h"
 #include "RE/T/TESFullName.h"
 #include "RE/T/TESSpellList.h"
-#include "RE/W/WWiseSoundHook.h"
+#include "RE/W/WwiseSoundHook.h"
 
 namespace RE
 {

@@ -1,7 +1,7 @@
 #pragma once
 
 #include "RE/B/BaseFormComponent.h"
-#include "RE/W/WWiseSoundHook.h"
+#include "RE/W/WwiseSoundHook.h"
 
 namespace RE
 {

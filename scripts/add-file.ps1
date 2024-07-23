@@ -22,8 +22,8 @@ use ctrl ^ c to exit
 
 $workspace = Resolve-Path "$PSScriptRoot/../"
 Push-Location $workspace
-$include = "$workspace/CommonLibSF/include/RE"
-$src = "$workspace/CommonLibSF/src/RE"
+$include = "$workspace/include/RE"
+$src = "$workspace/src/RE"
 
 
 function Modify-File {
@@ -72,9 +72,9 @@ while ($true) {
                 }
                 'r' {
                     # refresh
-                    & "$workspace/.github/make-directives.ps1" "$workspace/CommonLibSF"
+                    & "$workspace/.github/make-directives.ps1" "$workspace"
 
-                    $cmake = "$workspace/CommonLibSF/CMakeLists.txt"
+                    $cmake = "$workspace/CMakeLists.txt"
                     [IO.File]::WriteAllText($cmake, [IO.File]::ReadAllText($cmake))
                     break
                 }

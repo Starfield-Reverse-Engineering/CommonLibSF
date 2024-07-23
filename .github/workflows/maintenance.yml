@@ -4,7 +4,9 @@ on:
   push:
     branches: main
     paths:
-      - "CommonLibSF/**"
+      - "src/**"
+      - "include/**"
+      - ".github/workflows/**"
   workflow_dispatch:
 
 concurrency:
@@ -21,7 +23,7 @@ jobs:
 
       - name: Update Starfield.h
         shell: pwsh
-        run: "& ${{ github.workspace }}/.github/make-directives.ps1 ${{ github.workspace }}/CommonLibSF"
+        run: "& ${{ github.workspace }}/.github/make-directives.ps1 ${{ github.workspace }}"
 
       - name: Run clang-format
         uses: DoozyX/clang-format-lint-action@v0.17

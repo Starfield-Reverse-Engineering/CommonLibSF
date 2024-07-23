@@ -4,7 +4,9 @@ on:
   pull_request:
     branches: [main, feature/*, fix/*]
     paths:
-      - "CommonLibSF/**"
+      - "src/**"
+      - "include/**"
+      - ".github/workflows/**"
       - "xmake.lua"
   workflow_dispatch:
 
