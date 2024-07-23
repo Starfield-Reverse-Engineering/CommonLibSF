@@ -5,7 +5,6 @@
 #include "RE/B/BSLock.h"
 #include "RE/B/BSTArray.h"
 #include "RE/B/BSTEvent.h"
-#include "RE/B/BSTHashMap.h"
 #include "RE/B/BSTObjectArena.h"
 #include "RE/B/BSTSmartPointer.h"
 #include "RE/B/BSTTuple.h"
