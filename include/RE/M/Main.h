@@ -14,7 +14,7 @@ namespace RE
 			NiAVObject* worldCameraRoot;  //NiNode
 			NiCamera*   worldCamera;
 		};
-		// static_assert(offsetof(SceneGraphRoot, SceneGraphRoot::worldCamera) == 0x80);
+		// static_assert(offsetof(SceneGraphRoot, SceneGraphRoot::worldCamera) == 0x80); // FIXME: clang-cl chokes on this assertion
 
 		static SceneGraphRoot* WorldRoot()
 		{
