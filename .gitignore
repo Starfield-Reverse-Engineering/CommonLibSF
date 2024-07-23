@@ -15,3 +15,6 @@ graph_info.json
 /CommonLibSF/.vs
 /CommonLibSF/out
 /vsxmake*
+
+.idea
+*ReSharper*
