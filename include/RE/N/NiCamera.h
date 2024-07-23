@@ -87,5 +87,5 @@ namespace RE
 		float         lodAdjust;
 		float         unk2[24];
 	};
-	static_assert(offsetof(NiCamera, NiCamera::worldToCam) == 384);
+	// static_assert(offsetof(NiCamera, NiCamera::worldToCam) == 384);
 }

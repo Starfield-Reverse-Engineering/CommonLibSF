@@ -5,7 +5,7 @@
 
 namespace RE
 {
-	class DecalData;
+	struct DecalData;
 
 	namespace TextureUtils
 	{

@@ -2,7 +2,7 @@
 
 #include "RE/B/BGSKeywordForm.h"
 #include "RE/T/TESBoundAnimObject.h"
-#include "RE/W/WWiseSoundHook.h"
+#include "RE/W/WwiseSoundHook.h"
 
 namespace RE
 {

@@ -8,6 +8,8 @@
 namespace RE
 {
 	class IMenu;
+	class MenuOpenCloseEvent;
+	class MenuModeChangeEvent;
 
 	namespace Scaleform
 	{
@@ -22,8 +24,6 @@ namespace RE
 	struct MenuPauseChangeEvent;
 	struct MenuPauseCounterChangeEvent;
 	struct TutorialEvent;
-	struct MenuOpenCloseEvent;
-	struct MenuModeChangeEvent;
 
 	class UI :
 		//public BSTSingletonSDM<UI>,

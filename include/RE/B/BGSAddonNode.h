@@ -2,7 +2,7 @@
 
 #include "RE/B/BGSModelMaterialSwap.h"
 #include "RE/T/TESBoundObject.h"
-#include "RE/W/WWiseSoundHook.h"
+#include "RE/W/WwiseSoundHook.h"
 
 namespace RE
 {
