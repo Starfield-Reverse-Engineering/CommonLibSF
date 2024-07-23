@@ -298,7 +298,7 @@ namespace RE
 		[[nodiscard]] constexpr value_type&&       operator*() && noexcept { return std::move(*this).value(); }
 
 		[[nodiscard]] constexpr explicit operator bool() const noexcept { return has_value(); }
-		[[nodiscard]] constexpr bool has_value() const noexcept { return _active; }
+		[[nodiscard]] constexpr bool     has_value() const noexcept { return _active; }
 
 		[[nodiscard]] constexpr value_type& value() & noexcept
 		{
@@ -328,7 +328,7 @@ namespace RE
 		template <class U>
 		[[nodiscard]] constexpr value_type value_or(U&& a_default) const&  //
 			requires((std::is_copy_constructible_v<value_type> &&
-					  std::convertible_to<U&&, value_type>))
+					  std::convertible_to<U &&, value_type>))
 		{
 			return has_value() ? value() : static_cast<T>(std::forward<U>(a_default));
 		}

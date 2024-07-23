@@ -46,7 +46,7 @@ namespace RE
 		constexpr Color(std::uint32_t a_hexValue) noexcept :
 			red((a_hexValue >> 16) & 0xFF),
 			green((a_hexValue >> 8) & 0xFF),
-			blue((a_hexValue)&0xFF),
+			blue((a_hexValue) & 0xFF),
 			alpha(0)
 		{}
 
