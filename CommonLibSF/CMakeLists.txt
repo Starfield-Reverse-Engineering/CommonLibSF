@@ -10,6 +10,8 @@ endif()
 option(SFSE_SUPPORT_XBYAK "Enables trampoline support for Xbyak." OFF)
 option(SFSE_BUILD_TESTS "Builds the tests." OFF)
 
+set(Boost_USE_STATIC_RUNTIME OFF CACHE BOOL "")
+
 # info
 project(
   CommonLibSF
@@ -22,6 +24,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_INTERPROCEDURAL_OPTIMIZATION ON)
 set(CMAKE_INTERPROCEDURAL_OPTIMIZATION_DEBUG OFF)
 set(CMAKE_OPTIMIZE_DEPENDENCIES ON)
+set(Boost_USE_STATIC_LIBS ON)
 
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 
@@ -35,6 +38,7 @@ endif()
 # dependencies
 if(USING_VCPKG)
   find_package(spdlog CONFIG REQUIRED)
+  find_package(boost MODULE REQUIRED)
 else()
   include("${CMAKE_CURRENT_SOURCE_DIR}/cmake/CPM.cmake")
 
@@ -44,6 +48,11 @@ else()
     GITHUB_REPOSITORY gabime/spdlog
     VERSION 1.12.0
     OPTIONS "SPDLOG_USE_STD_FORMAT ON"
+  )
+  
+  CPMAddPackage(
+    GITHUB_REPOSITORY boostorg/boost
+	GIT_TAG boost-1.85.0
   )
 endif()
 
@@ -63,6 +72,7 @@ function (configure_target TARGET_NAME)
   target_compile_definitions(
     ${TARGET_NAME}
     PUBLIC
+      BOOST_STL_INTERFACES_DISABLE_CONCEPTS
       WINVER=0x0A00	# windows 10, minimum supported version by starfield
       _WIN32_WINNT=0x0A00
       "$<$<BOOL:${SFSE_SUPPORT_XBYAK}>:SFSE_SUPPORT_XBYAK=1>"
@@ -124,6 +134,7 @@ function (configure_target TARGET_NAME)
   target_link_libraries(
     ${TARGET_NAME}
     PUBLIC
+      Boost::headers
       spdlog::spdlog
       Version.lib
       Dbghelp.lib
@@ -180,7 +191,7 @@ if(USING_VCPKG)
   )
 else()
   install(
-    TARGETS ${PROJECT_NAME} spdlog
+    TARGETS ${PROJECT_NAME} spdlog boost_headers
     EXPORT ${PROJECT_NAME}-targets
   )
 endif()
