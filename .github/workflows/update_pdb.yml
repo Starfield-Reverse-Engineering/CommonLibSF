@@ -36,7 +36,7 @@ jobs:
           "PDB_PATH=$pdb" >> $env:GITHUB_ENV
 
       - name: Upload Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: CommonLibSF.pdb
           path: ${{ env.PDB_PATH }}
