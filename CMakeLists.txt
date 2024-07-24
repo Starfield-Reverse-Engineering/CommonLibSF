@@ -10,8 +10,6 @@ endif()
 option(SFSE_SUPPORT_XBYAK "Enables trampoline support for Xbyak." OFF)
 option(SFSE_BUILD_TESTS "Builds the tests." OFF)
 
-set(Boost_USE_STATIC_RUNTIME OFF CACHE BOOL "")
-
 # info
 project(
   CommonLibSF
@@ -24,7 +22,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_INTERPROCEDURAL_OPTIMIZATION ON)
 set(CMAKE_INTERPROCEDURAL_OPTIMIZATION_DEBUG OFF)
 set(CMAKE_OPTIMIZE_DEPENDENCIES ON)
-set(Boost_USE_STATIC_LIBS ON)
 
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 
@@ -37,11 +34,10 @@ endif()
 
 # dependencies
 find_package(spdlog CONFIG REQUIRED)
-find_package(boost MODULE REQUIRED)
 
-file(GLOB_RECURSE SOURCES CONFIGURE_DEPENDS 
-    "${CMAKE_CURRENT_SOURCE_DIR}/include/*"
-    "${CMAKE_CURRENT_SOURCE_DIR}/src/*"
+file(GLOB_RECURSE SOURCES CONFIGURE_DEPENDS
+  "${CMAKE_CURRENT_SOURCE_DIR}/include/*"
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/*"
 )
 
 source_group(
@@ -53,7 +49,6 @@ function(configure_target TARGET_NAME)
   target_compile_definitions(
     ${TARGET_NAME}
     PUBLIC
-    BOOST_STL_INTERFACES_DISABLE_CONCEPTS
     WINVER=0x0A00 # windows 10, minimum supported version by starfield
     _WIN32_WINNT=0x0A00
     "$<$<BOOL:${SFSE_SUPPORT_XBYAK}>:SFSE_SUPPORT_XBYAK=1>"
@@ -115,7 +110,6 @@ function(configure_target TARGET_NAME)
   target_link_libraries(
     ${TARGET_NAME}
     PUBLIC
-	Boost::headers
     spdlog::spdlog
     Version.lib
     Dbghelp.lib
