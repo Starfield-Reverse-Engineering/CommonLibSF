@@ -13,8 +13,8 @@
   - Add this to your `PATH`
 - [vcpkg](https://github.com/microsoft/vcpkg)
   - Create a Windows environment variable called `VCPKG_ROOT` with the value as the path to your vcpkg install directory
-- [Visual Studio 2022](https://visualstudio.microsoft.com/) with "Desktop development with C++" workload
-  - clang-cl toolset and build support if using `clang-cl` configurations
+- [Visual Studio 2022 Build Tools](https://visualstudio.microsoft.com/downloads)
+  - [LLVM](https://releases.llvm.org/) if using `clang-cl` presets
 - [PowerShell](https://github.com/PowerShell/PowerShell/releases)
 
 ## Developing with CommonLibSF
