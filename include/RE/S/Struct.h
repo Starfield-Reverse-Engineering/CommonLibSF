@@ -24,6 +24,7 @@ namespace RE::BSScript
 		Variable                        variables[0];         // 18
 	};
 	static_assert(sizeof(Struct) == 0x18);
-	static_assert(offsetof(Struct, Struct::type) == 0x10);
-	static_assert(offsetof(Struct, Struct::variables) == 0x18);
+	// FIXME: clang-cl chokes on these assertions
+	// static_assert(offsetof(Struct, Struct::type) == 0x10);
+	// static_assert(offsetof(Struct, Struct::variables) == 0x18);
 }
