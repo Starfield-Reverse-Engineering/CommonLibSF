@@ -8,6 +8,7 @@ namespace RE::BSScript
 	{
 	public:
 		NativeFunction() = delete;
+
 		NativeFunction(const char* a_name, const char* a_className, bool a_isStatic, std::uint32_t a_numParams)
 		{
 			using func_t = std::add_pointer_t<NativeFunction*(NativeFunction*, const char*, const char*, bool, std::uint32_t)>;
@@ -23,7 +24,7 @@ namespace RE::BSScript
 		}
 
 		virtual bool HasCallback(void) override { return _callback != 0; }
-		virtual bool Run(VMValue* a_baseValue, VMClassRegistry* a_registry, std::uint32_t a_arg2, VMValue* a_resultValue, VMState* a_state) = 0;
+		virtual bool Run(Variable* a_selfValue, IVirtualMachine* a_vm, std::uint32_t a_arg2, Variable* a_resultValue, StackFrame* a_frame) = 0;
 
 	protected:
 		void* _callback;  // 50

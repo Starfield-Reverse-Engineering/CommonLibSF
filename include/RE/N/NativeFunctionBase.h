@@ -1,6 +1,7 @@
 #pragma once
 
 #include "RE/I/IFunction.h"
+#include "RE/t/TypeInfo.h"
 
 namespace RE::BSScript
 {
@@ -11,6 +12,7 @@ namespace RE::BSScript
 
 	class StackFrame;
 	class Variable;
+	class IVirtualMachine;
 
 	namespace NF_util
 	{
@@ -30,12 +32,7 @@ namespace RE::BSScript
 				public:
 					// members
 					BSFixedString name;  // 00
-
-					union
-					{
-						std::uint64_t type;     // 08 - shared with VMValue::type
-						VMClassInfo*  typePtr;  // 08
-					};
+					TypeInfo type;       // 08
 				};
 
 				// members
@@ -48,7 +45,7 @@ namespace RE::BSScript
 			virtual BSFixedString* GetName(void) override { return &_name; }
 			virtual BSFixedString* GetClassName(void) override { return &_className; }
 			virtual BSFixedString* GetStateName(void) override { return &_stateName; }
-			virtual std::uint64_t* GetReturnType(std::uint64_t* a_dst) override
+			virtual TypeInfo*      GetReturnType(TypeInfo* a_dst)
 			{
 				*a_dst = _retType;
 				return a_dst;
@@ -68,11 +65,11 @@ namespace RE::BSScript
 			virtual std::uint32_t  GetUserFlags(void) override { return _userFlags; }
 			virtual BSFixedString* GetDocString(void) override { return &_docString; }
 			virtual void           Unk_0E(std::uint32_t a_unk) override { (void)a_unk; }  // always nop?
-			virtual std::uint32_t  Invoke(std::uint64_t a_unk0, std::uint64_t a_unk1, VMClassRegistry* a_registry, VMState* a_unk3) override
+			virtual std::uint32_t  Invoke(std::uint64_t a_unk0, std::uint64_t a_unk1, IVirtualMachine* a_vm, StackFrame* a_frame) override
 			{
 				using func_t = decltype(&NativeFunctionBase::Invoke);
 				REL::Relocation<func_t> func{ ID::BSScript::Internal::NF_util::NativeFunctionBase::Invoke };
-				return func(this, a_unk0, a_unk1, a_registry, a_unk3);
+				return func(this, a_unk0, a_unk1, a_vm, a_frame);
 			}
 			virtual BSFixedString* Unk_10(void) override
 			{
@@ -93,10 +90,11 @@ namespace RE::BSScript
 
 				return a_out;
 			}
-			virtual Unk13 Unk_13(Unk13* a_out) override
+			virtual Unk13* Unk_13(Unk13* a_out) override
 			{
 				a_out->unk00 = 0;
 				a_out->unk08 = 0;
+				return a_out;
 				// a_out[8] = 0; // as std::uint8_t?
 			}
 			virtual bool GetParamInfo(std::uint32_t a_idx, void* a_out) override
@@ -114,13 +112,13 @@ namespace RE::BSScript
 			virtual bool GetUnk41(void) override { return _isCallableFromTasklet; }
 			virtual void SetUnk41(bool a_arg) override { _isCallableFromTasklet = a_arg; }
 			virtual bool HasCallback() = 0;
-			virtual void Run() = 0;
+			virtual bool Run(Variable* a_selfValue, IVirtualMachine* a_vm, std::uint32_t a_arg2, Variable* a_resultValue, StackFrame* a_frame) = 0;
 
 		protected:
 			BSFixedString _name;                     // 10
 			BSFixedString _className;                // 18
 			BSFixedString _stateName{ "" };          // 20
-			std::uint64_t _retType;                  // 28 TypeInfo
+			TypeInfo      _retType;                  // 28
 			ParameterInfo _params;                   // 30
 			bool          _isStatic;                 // 40
 			bool          _isCallableFromTasklet{};  // 41
