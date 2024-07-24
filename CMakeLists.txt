@@ -35,12 +35,10 @@ endif()
 # dependencies
 find_package(spdlog CONFIG REQUIRED)
 
-# source files
-execute_process(
-  COMMAND powershell -ExecutionPolicy Bypass -File "${CMAKE_CURRENT_SOURCE_DIR}/cmake/make-sourcelist.ps1" "${CMAKE_CURRENT_SOURCE_DIR}" "${CMAKE_CURRENT_BINARY_DIR}"
+file(GLOB_RECURSE SOURCES CONFIGURE_DEPENDS 
+    "${CMAKE_CURRENT_SOURCE_DIR}/include/*"
+    "${CMAKE_CURRENT_SOURCE_DIR}/src/*"
 )
-
-include(${CMAKE_CURRENT_BINARY_DIR}/sourcelist.cmake)
 
 source_group(
   TREE ${CMAKE_CURRENT_SOURCE_DIR}
