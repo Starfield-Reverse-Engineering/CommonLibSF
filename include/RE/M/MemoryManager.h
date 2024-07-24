@@ -73,7 +73,7 @@ namespace RE
 	[[nodiscard]] inline void* malloc(std::size_t a_size, std::size_t a_alignment = 0)
 	{
 		auto mem = MemoryManager::GetSingleton();
-		return mem->Allocate(a_size, a_alignment, a_alignment > 0);
+		return mem->Allocate(a_size, static_cast<uint32_t>(a_alignment), a_alignment > 0);
 	}
 
 	template <class T>
