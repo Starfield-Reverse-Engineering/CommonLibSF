@@ -18,10 +18,12 @@ namespace RE::BSScript
 
 		// members
 		BSSpinLock                      structLock;           // 04
+		bool                            constructed{ true };  // 0C
+		bool                            valid{ false };       // 0D
 		BSTSmartPointer<StructTypeInfo> type;                 // 10
-		bool                            constructed{ true };  // 18
-		bool                            valid{ false };       // 19
-		Variable                        variables[0];         // 20
+		Variable                        variables[0];         // 18
 	};
-	static_assert(sizeof(Struct) == 0x20);
+	static_assert(sizeof(Struct) == 0x18);
+	static_assert(offsetof(Struct, Struct::type) == 0x10);
+	static_assert(offsetof(Struct, Struct::variables) == 0x18);
 }

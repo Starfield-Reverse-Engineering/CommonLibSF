@@ -1,7 +1,7 @@
 #pragma once
 #include "RE/B/BSFixedString.h"
-#include "RE/N/NiBound.h"
 #include "RE/N/NiTransform.h"
+#include "RE/N/NiBound.h"
 
 namespace RE
 {
@@ -126,12 +126,24 @@ namespace RE
 		virtual void*   Unk82();
 		virtual void*   Unk83();
 
-		BSFixedString name;
-		uint32_t      refcount;
+		void IncRefCount()
+		{
+			_InterlockedExchangeAdd(&refcount, 1);
+		}
+		
+		void DecRefCount()
+		{
+			if (_InterlockedExchangeAdd(&refcount, -1) == 1)
+				DeleteThis();
+		}
+
+		volatile long refcount;
 		uint32_t      pad0C;
+		BSFixedString name;
 		void*         controller;
 		void*         unk28;
 		void*         unk30;
+		void*         unk38;
 		NiNode*       parent;         //38
 		NiTransform   local;          //40
 		NiTransform   world;          //80
@@ -143,4 +155,7 @@ namespace RE
 		void*         unk128;
 	};
 	static_assert(sizeof(NiAVObject) == 0x130);
+	static_assert(offsetof(NiAVObject, NiAVObject::parent) == 0x38);
+	static_assert(offsetof(NiAVObject, NiAVObject::local) == 0x40);
+	static_assert(offsetof(NiAVObject, NiAVObject::world) == 0x80);
 }

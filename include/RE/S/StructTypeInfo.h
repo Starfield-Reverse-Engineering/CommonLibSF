@@ -7,6 +7,7 @@
 #include "RE/O/ObjectTypeInfo.h"
 #include "RE/T/TypeInfo.h"
 #include "RE/V/Variable.h"
+#include "RE/B/BSTScatterTable.h"
 
 namespace RE::BSScript
 {
@@ -54,7 +55,7 @@ namespace RE::BSScript
 		BSFixedString                                     name;                   // 10
 		BSTSmartPointer<ObjectTypeInfo>                   containingObjTypeInfo;  // 18
 		BSTArray<StructVar>                               variables;              // 20
-		/*BSTHashMap<BSFixedString, std::uint32_t>*/ char varNameIndexMap[0x38];  // 30
+		BSTHashMap<BSFixedString, std::uint32_t>          varNameIndexMap;        // 30
 		stl::enumeration<LinkValidState, std::int32_t>    linkedValid;            // 68
 	};
 	static_assert(sizeof(StructTypeInfo) == 0x70);
