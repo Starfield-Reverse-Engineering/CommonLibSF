@@ -1,7 +1,7 @@
 #pragma once
 #include "RE/B/BSFixedString.h"
-#include "RE/N/NiTransform.h"
 #include "RE/N/NiBound.h"
+#include "RE/N/NiTransform.h"
 
 namespace RE
 {
@@ -130,7 +130,7 @@ namespace RE
 		{
 			_InterlockedExchangeAdd(&refcount, 1);
 		}
-		
+
 		void DecRefCount()
 		{
 			if (_InterlockedExchangeAdd(&refcount, -1) == 1)

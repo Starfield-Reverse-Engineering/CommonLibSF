@@ -164,12 +164,12 @@ namespace SFSE
 			if (!allocated) {
 				trampoline.create(hookSize);
 			}
-			
+
 			// Call to GameVM::BindEverythingToScript(IVirtualMachine**) from GameVM::GameVM()
 			REL::Relocation<uintptr_t> hookLoc{ REL::ID(169912), 0x514 };
 			func = reinterpret_cast<call_t>(trampoline.write_call<5>(hookLoc.address(), &thunk));
 		}
-		
+
 		static void thunk(RE::BSScript::IVirtualMachine** a_vm)
 		{
 			func(a_vm);

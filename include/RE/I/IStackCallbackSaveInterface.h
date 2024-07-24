@@ -1,7 +1,7 @@
 #pragma once
 
-#include "RE/B/BSTSmartPointer.h"
 #include "RE/B/BSIntrusiveRefCounted.h"
+#include "RE/B/BSTSmartPointer.h"
 
 namespace RE
 {
@@ -18,12 +18,12 @@ namespace RE
 			virtual ~IStackCallbackFunctor(){};  // 00
 
 			// add
-			virtual void CallQueued() = 0;                        // 01
-			virtual void CallCanceled() = 0;                      // 02
-			virtual void StartMultiDispatch() = 0;                // 03
-			virtual void EndMultiDispatch() = 0;                  // 04
-			virtual void operator()(Variable) = 0;				  // 05
-			virtual bool CanSave() { return false; };             // 06
+			virtual void CallQueued() = 0;             // 01
+			virtual void CallCanceled() = 0;           // 02
+			virtual void StartMultiDispatch() = 0;     // 03
+			virtual void EndMultiDispatch() = 0;       // 04
+			virtual void operator()(Variable) = 0;     // 05
+			virtual bool CanSave() { return false; };  // 06
 		};
 		static_assert(sizeof(IStackCallbackFunctor) == 0x10);
 

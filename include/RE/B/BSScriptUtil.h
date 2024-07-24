@@ -1,19 +1,19 @@
 #pragma once
 
 #include "RE/B/BSFixedString.h"
-#include "RE/B/BSTSmartPointer.h"
-#include "RE/I/IVirtualMachine.h"
-#include "RE/V/VirtualMachine.h"
 #include "RE/B/BSTScatterTable.h"
-#include "RE/T/TESForm.h"
+#include "RE/B/BSTSmartPointer.h"
 #include "RE/G/GameVM.h"
-#include "SFSE/Logger.h"
-#include "SFSE/SFSE.h"
-#include "RE/O/ObjectTypeInfo.h"
+#include "RE/I/IVirtualMachine.h"
+#include "RE/N/NativeFunctionBase.h"
 #include "RE/O/Object.h"
+#include "RE/O/ObjectTypeInfo.h"
 #include "RE/S/StackFrame.h"
 #include "RE/S/Struct.h"
-#include "RE/N/NativeFunctionBase.h"
+#include "RE/T/TESForm.h"
+#include "RE/V/VirtualMachine.h"
+#include "SFSE/Logger.h"
+#include "SFSE/SFSE.h"
 
 namespace RE::BSScript
 {
@@ -83,7 +83,7 @@ namespace RE::BSScript
 		{
 			if (_proxy && _proxy->type) {
 				const auto& mappings = _proxy->type->varNameIndexMap;
-				const auto it = mappings.find(a_name);
+				const auto  it = mappings.find(a_name);
 				if (it != mappings.end()) {
 					const auto& var = _proxy->variables[it->Value];
 					return detail::UnpackVariable<T>(var);
@@ -104,7 +104,7 @@ namespace RE::BSScript
 		bool insert(std::string_view a_name, T&& a_val)
 		{
 			if (_proxy && _proxy->type) {
-				auto& mappings = _proxy->type->varNameIndexMap;
+				auto&      mappings = _proxy->type->varNameIndexMap;
 				const auto it = mappings.find(a_name);
 				if (it != mappings.end()) {
 					auto& var = _proxy->variables[it->Value];
@@ -303,13 +303,12 @@ namespace RE::BSScript
 				std::true_type> &&
 			std::is_default_constructible_v<T> &&
 			((array<typename T::value_type> || wrapper<typename T::value_type>)) &&  //
-			requires(T a_nullable)
-		{
-			// clang-format off
+			requires(T a_nullable) {
+				// clang-format off
 			static_cast<bool>(a_nullable);
 			{ *static_cast<T&&>(a_nullable) } -> decays_to<typename T::value_type>;
-			// clang-format on
-		};
+				// clang-format on
+			};
 
 		template <class T>
 		concept valid_self =
@@ -377,8 +376,8 @@ namespace RE::BSScript
 	template <detail::object T>
 	[[nodiscard]] std::optional<TypeInfo> GetTypeInfo()
 	{
-		const auto game = GameVM::GetSingleton();
-		const auto vm = game ? game->GetVM() : nullptr;
+		const auto                      game = GameVM::GetSingleton();
+		const auto                      vm = game ? game->GetVM() : nullptr;
 		BSTSmartPointer<ObjectTypeInfo> typeInfo;
 		if (!vm ||
 			!vm->GetScriptObjectType(GetVMTypeID<T>(), typeInfo) ||
@@ -394,10 +393,10 @@ namespace RE::BSScript
 	template <detail::vmobject T>
 	[[nodiscard]] std::optional<TypeInfo> GetTypeInfo()
 	{
-		const auto game = GameVM::GetSingleton();
-		const auto vm = game ? game->GetVM() : nullptr;
+		const auto                          game = GameVM::GetSingleton();
+		const auto                          vm = game ? game->GetVM() : nullptr;
 		REL::Relocation<RE::BSFixedString*> baseObjectName{ REL::ID(648543) };
-		BSTSmartPointer<ObjectTypeInfo> typeInfo;
+		BSTSmartPointer<ObjectTypeInfo>     typeInfo;
 		if (!vm ||
 			!vm->GetScriptObjectType(*baseObjectName, typeInfo) ||
 			!typeInfo) {
@@ -498,8 +497,8 @@ namespace RE::BSScript
 		}
 
 		const auto success = [&]() {
-			const auto game = GameVM::GetSingleton();
-			const auto vm = game ? game->GetVM() : nullptr;
+			const auto                      game = GameVM::GetSingleton();
+			const auto                      vm = game ? game->GetVM() : nullptr;
 			BSTSmartPointer<ObjectTypeInfo> typeInfo;
 			if (!vm ||
 				!vm->GetScriptObjectType(GetVMTypeID<T>(), typeInfo) ||
@@ -508,10 +507,10 @@ namespace RE::BSScript
 			}
 
 			const auto& handles = vm->GetObjectHandlePolicy();
-			const auto handle = handles.GetHandleForObject(
-				GetVMTypeID<T>(),
-				const_cast<const void*>(
-					static_cast<const volatile void*>(a_val)));
+			const auto  handle = handles.GetHandleForObject(
+                GetVMTypeID<T>(),
+                const_cast<const void*>(
+                    static_cast<const volatile void*>(a_val)));
 			if (handle == handles.EmptyHandle()) {
 				return false;
 			}
@@ -594,10 +593,10 @@ namespace RE::BSScript
 				typename std::remove_cvref_t<T>::value_type&&>;
 
 		const auto success = [&]() {
-			const auto game = GameVM::GetSingleton();
-			const auto vm = game ? game->GetVM() : nullptr;
-			const auto typeInfo = GetTypeInfo<std::remove_cvref_t<T>>();
-			const auto size = a_val.size();
+			const auto             game = GameVM::GetSingleton();
+			const auto             vm = game ? game->GetVM() : nullptr;
+			const auto             typeInfo = GetTypeInfo<std::remove_cvref_t<T>>();
+			const auto             size = a_val.size();
 			BSTSmartPointer<Array> out;
 			if (!typeInfo ||
 				!vm ||
@@ -643,7 +642,7 @@ namespace RE::BSScript
 	namespace detail
 	{
 		template <class T>
-		__forceinline void PackVariable(Variable & a_var, T && a_val)
+		__forceinline void PackVariable(Variable& a_var, T&& a_val)
 		{
 			BSScript::PackVariable(a_var, std::forward<T>(a_val));
 		}
@@ -677,7 +676,7 @@ namespace RE::BSScript
 			}
 
 			const auto& handles = vm->GetObjectHandlePolicy();
-			const auto handle = object->GetHandle();
+			const auto  handle = object->GetHandle();
 			if (!handles.IsHandleLoaded(handle)) {
 				return nullptr;
 			}
@@ -776,7 +775,7 @@ namespace RE::BSScript
 
 		using value_type = typename T::value_type;
 
-		T out;
+		T          out;
 		const auto in = get<Array>(a_var);
 		for (const auto& var : in->elements) {
 			out.push_back(detail::UnpackVariable<value_type>(var));
@@ -905,12 +904,12 @@ namespace RE::BSScript
 			class F,
 			std::size_t... I>
 		decltype(auto) DispatchHelper(
-			Variable& a_self,
+			Variable&                 a_self,
 			Internal::VirtualMachine& a_vm,
-			std::uint32_t a_stackID,
-			const StackFrame& a_stackFrame,
-			Stack& a_stack,
-			const std::function<F>& a_callback,
+			std::uint32_t             a_stackID,
+			const StackFrame&         a_stackFrame,
+			Stack&                    a_stack,
+			const std::function<F>&   a_callback,
 			std::index_sequence<I...>)
 		{
 			const auto self = [&]() -> S {
@@ -986,7 +985,8 @@ namespace RE::BSScript
 		template <class Fn>
 		NativeFunction(std::string_view a_object, std::string_view a_function, Fn a_func, bool a_isLatent)  //
 			requires(detail::invocable_r<Fn, R, S, Args...> ||
-					 detail::invocable_r<Fn, R, IVirtualMachine&, std::uint32_t, S, Args...>) :
+						detail::invocable_r<Fn, R, IVirtualMachine&, std::uint32_t, S, Args...>)
+			:
 			super(a_object, a_function, sizeof...(Args), detail::static_tag<S>, a_isLatent),
 			_stub(std::move(a_func))
 		{
@@ -1060,11 +1060,11 @@ namespace RE::BSScript
 
 	template <class F>
 	void IVirtualMachine::BindNativeMethod(
-		stl::zstring a_object,
-		stl::zstring a_function,
-		F a_func,
+		stl::zstring        a_object,
+		stl::zstring        a_function,
+		F                   a_func,
 		std::optional<bool> a_taskletCallable,
-		bool a_isLatent)
+		bool                a_isLatent)
 	{
 		NF_util::NativeFunctionBase* func = new NativeFunction(
 			a_object,

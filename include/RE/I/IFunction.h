@@ -2,9 +2,9 @@
 
 #include "RE/B/BSFixedString.h"
 #include "RE/B/BSIntrusiveRefCounted.h"
-#include "RE/T/TypeInfo.h"
-#include "RE/S/StackFrame.h"
 #include "RE/E/ErrorLogger.h"
+#include "RE/S/StackFrame.h"
+#include "RE/T/TypeInfo.h"
 
 namespace RE::BSScript
 {

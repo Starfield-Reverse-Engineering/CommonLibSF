@@ -1,8 +1,8 @@
 #pragma once
 
+#include "RE/B/BSTTuple.h"
 #include "RE/I/IFunction.h"
 #include "RE/T/TypeInfo.h"
-#include "RE/B/BSTTuple.h"
 
 namespace RE::BSScript
 {
@@ -49,9 +49,9 @@ namespace RE::BSScript
 			NativeFunctionBase(
 				std::string_view a_object,
 				std::string_view a_function,
-				std::uint16_t a_paramCount,
-				bool a_isStatic,
-				bool a_isLatent) :
+				std::uint16_t    a_paramCount,
+				bool             a_isStatic,
+				bool             a_isLatent) :
 				_name(a_function),
 				_className(a_object),
 				_params(a_paramCount, 0),
@@ -74,7 +74,7 @@ namespace RE::BSScript
 				return a_dst;
 			}
 
-			virtual std::uint64_t  GetParamCount() override { return _params.paramCount; }
+			virtual std::uint64_t GetParamCount() override { return _params.paramCount; }
 
 			virtual TypeInfo* GetParam(std::uint32_t a_idx, BSFixedString* a_nameOut, TypeInfo* a_typeOut) override
 			{

@@ -2,12 +2,12 @@
 
 #include "RE/B/BSFixedString.h"
 #include "RE/B/BSTArray.h"
+#include "RE/B/BSTScatterTable.h"
 #include "RE/B/BSTSmartPointer.h"
 #include "RE/I/IComplexType.h"
 #include "RE/O/ObjectTypeInfo.h"
 #include "RE/T/TypeInfo.h"
 #include "RE/V/Variable.h"
-#include "RE/B/BSTScatterTable.h"
 
 namespace RE::BSScript
 {
@@ -52,11 +52,11 @@ namespace RE::BSScript
 		virtual TypeInfo::RawType GetRawType() const override { return TypeInfo::RawType::kStruct; }  // 01
 
 		// members
-		BSFixedString                                     name;                   // 10
-		BSTSmartPointer<ObjectTypeInfo>                   containingObjTypeInfo;  // 18
-		BSTArray<StructVar>                               variables;              // 20
-		BSTHashMap<BSFixedString, std::uint32_t>          varNameIndexMap;        // 30
-		stl::enumeration<LinkValidState, std::int32_t>    linkedValid;            // 68
+		BSFixedString                                  name;                   // 10
+		BSTSmartPointer<ObjectTypeInfo>                containingObjTypeInfo;  // 18
+		BSTArray<StructVar>                            variables;              // 20
+		BSTHashMap<BSFixedString, std::uint32_t>       varNameIndexMap;        // 30
+		stl::enumeration<LinkValidState, std::int32_t> linkedValid;            // 68
 	};
 	static_assert(sizeof(StructTypeInfo) == 0x70);
 }
