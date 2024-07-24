@@ -178,10 +178,10 @@ namespace SFSE
 			}
 		}
 
-		inline static bool                                          allocated{ false };
-		static call_t                                               func;
-		static std::function<void(RE::BSScript::IVirtualMachine**)> callback;
-		Trampoline                                                  trampoline;
+		inline static bool                                                 allocated{ false };
+		inline static call_t                                               func;
+		inline static std::function<void(RE::BSScript::IVirtualMachine**)> callback;
+		Trampoline                                                         trampoline;
 	};
 
 	void SetPapyrusCallback(const std::function<void(RE::BSScript::IVirtualMachine**)> a_callback, bool a_trySFSEReserve)
