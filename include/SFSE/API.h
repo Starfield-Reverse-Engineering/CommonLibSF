@@ -6,6 +6,11 @@
 
 #define SFSEAPI __cdecl
 
+namespace RE::BSScript
+{
+	class IVirtualMachine;
+}
+
 namespace SFSE
 {
 	void Init(const LoadInterface* a_intfc, bool a_log = true) noexcept;
@@ -25,4 +30,6 @@ namespace SFSE
 	Trampoline& GetTrampoline();
 
 	void AllocTrampoline(std::size_t a_size, bool a_trySFSEReserve = true);
+
+	void SetPapyrusCallback(const std::function<void(RE::BSScript::IVirtualMachine**)> a_callback, bool a_trySFSEReserve = true);
 }
