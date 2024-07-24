@@ -1,6 +1,7 @@
 #pragma once
 
 #include "RE/B/BSFixedString.h"
+#include "RE/B/BSTSmartPointer.h"
 #include "RE/I/IVirtualMachine.h"
 #include "RE/V/VirtualMachine.h"
 #include "RE/B/BSTScatterTable.h"
@@ -11,6 +12,7 @@
 #include "RE/O/ObjectTypeInfo.h"
 #include "RE/O/Object.h"
 #include "RE/S/StackFrame.h"
+#include "RE/S/Struct.h"
 #include "RE/N/NativeFunctionBase.h"
 
 namespace RE::BSScript
