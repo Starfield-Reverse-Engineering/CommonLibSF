@@ -1,7 +1,7 @@
 #pragma once
 
 #include "RE/I/IFunction.h"
-#include "RE/t/TypeInfo.h"
+#include "RE/T/TypeInfo.h"
 
 namespace RE::BSScript
 {
