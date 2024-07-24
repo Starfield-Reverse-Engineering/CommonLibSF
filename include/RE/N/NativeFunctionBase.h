@@ -32,7 +32,7 @@ namespace RE::BSScript
 				public:
 					// members
 					BSFixedString name;  // 00
-					TypeInfo type;       // 08
+					TypeInfo      type;  // 08
 				};
 
 				// members
