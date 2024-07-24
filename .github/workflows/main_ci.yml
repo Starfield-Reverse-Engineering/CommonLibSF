@@ -4,8 +4,11 @@ on:
   pull_request:
     branches: [main, feature/*, fix/*, maintenance]
     paths:
-      - "CommonLibSF/**"
+      - "src/**"
+      - "include/**"
       - ".github/workflows/main_ci.yml"
+      - "CMakeLists.txt"
+      - "CMakePresets.json"
   workflow_dispatch:
 
 jobs:
@@ -28,8 +31,8 @@ jobs:
         uses: TheMrMilchmann/setup-msvc-dev@v3
         with:
           arch: x64
-          toolset: 14.37
+          toolset: 14.40
 
       - name: Build
         run: |
-          ${{ github.workspace }}/scripts/build-release-${{ matrix.compiler }}-cpm-test.bat
+          ${{ github.workspace }}/scripts/build-release-${{ matrix.compiler }}-test.bat

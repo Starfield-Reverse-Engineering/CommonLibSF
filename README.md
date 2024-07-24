@@ -4,18 +4,17 @@
 
 [![C++23](https://img.shields.io/static/v1?label=standard&message=c%2B%2B23&color=blue&logo=c%2B%2B&&logoColor=red&style=flat)](https://en.cppreference.com/w/cpp/compiler_support)
 ![Platform](https://img.shields.io/static/v1?label=platform&message=windows&color=dimgray&style=flat&logo=windows)
-[![Game version](https://img.shields.io/badge/game%20version-1.8.86-orange)](#Developing-with-CommonLibSF)
-[![VCPKG_VER](https://img.shields.io/static/v1?label=vcpkg%20registry&message=2024-07-13&color=green&style=flat)](https://github.com/Starfield-Reverse-Engineering/Starfield-RE-vcpkg)
+[![Game version](https://img.shields.io/badge/game%20version-1.12.36-orange)](#Developing-with-CommonLibSF)
 [![Main CI](https://img.shields.io/github/actions/workflow/status/Starfield-Reverse-Engineering/CommonLibSF/main_ci.yml)](https://github.com/Starfield-Reverse-Engineering/CommonLibSF/actions/workflows/main_ci.yml)
 
 ## Build Dependencies
 
 - [CMake v3.26+](https://cmake.org/) or [XMake v2.8.2+](https://github.com/xmake-io/xmake/releases)
   - Add this to your `PATH`
-- [vcpkg](https://github.com/microsoft/vcpkg) (optional, non-vcpkg build presets are provided which use [CPM.cmake](https://github.com/cpm-cmake/CPM.cmake) instead)
+- [vcpkg](https://github.com/microsoft/vcpkg)
   - Create a Windows environment variable called `VCPKG_ROOT` with the value as the path to your vcpkg install directory
-- [Visual Studio 2022](https://visualstudio.microsoft.com/) with "Desktop development with C++" workload
-  - clang-cl toolset and build support if using `clang-cl` configurations
+- [Visual Studio 2022 Build Tools](https://visualstudio.microsoft.com/downloads)
+  - [LLVM](https://releases.llvm.org/) if using `clang-cl` presets
 - [PowerShell](https://github.com/PowerShell/PowerShell/releases)
 
 ## Developing with CommonLibSF
@@ -23,7 +22,7 @@
 ### Using the CommonLibSF plugin templates
 
 - [CLibSFPluginTemplate](https://github.com/Starfield-Reverse-Engineering/CLibSFPluginTemplate)
-  - Uses **CMake**. Consumes CommonLibSF as a [CPM](https://github.com/cpm-cmake/CPM.cmake) package, a git submodule, or a local fork.
+  - Uses **CMake**. Consumes CommonLibSF as a git submodule or a local fork.
 - [SF_PluginTemplate](https://github.com/gottyduke/SF_PluginTemplate)
   - Uses **CMake**. Consumes CommonLibSF as a git submodule or a local fork.
 - [commonlibsf-template-xmake](https://github.com/Starfield-Reverse-Engineering/commonlibsf-template-xmake)
@@ -101,8 +100,8 @@ The main requirement of this license is: if you link your mod against CommonLibS
     </a>
   </td>
   <td align="center">
-    <a href="https://github.com/FlayaN" title="FlayaN">
-      <img src="https://avatars.githubusercontent.com/u/964655?v=4" width="50;" alt="FlayaN"/>
+    <a href="https://github.com/FlayaN" title="Flayan">
+      <img src="https://avatars.githubusercontent.com/u/964655?v=4" width="50;" alt="Flayan"/>
     </a>
   </td>
   <td align="center">

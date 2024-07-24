@@ -4,7 +4,9 @@ on:
   push:
     branches: main
     paths:
-      - "CommonLibSF/**"
+      - "src/**"
+      - "include/**"
+      - ".github/workflows/**"
   workflow_dispatch:
 
 concurrency:
@@ -21,37 +23,20 @@ jobs:
 
       - name: Update Starfield.h
         shell: pwsh
-        run: "& ${{ github.workspace }}/.github/make-directives.ps1 ${{ github.workspace }}/CommonLibSF"
+        run: "& ${{ github.workspace }}/.github/make-directives.ps1 ${{ github.workspace }}"
 
       - name: Run clang-format
-        uses: DoozyX/clang-format-lint-action@v0.16.2
+        uses: DoozyX/clang-format-lint-action@v0.17
         with:
           source: "."
           exclude: "./docs"
           extensions: "c,cc,cpp,cppm,cxx,h,hpp,hxx,inl,inc,ixx,mxx"
-          clangFormatVersion: 16
+          clangFormatVersion: 17
           inplace: True
-
-      - name: Update vcpkg port version
-        id: versioning
-        shell: pwsh
-        run: "& ${{ github.workspace }}/.github/update-registry.ps1 ${{ github.workspace }}"
-
-      - name: Check failure
-        run: exit 1
-        if: ${{ steps.versioning.outputs.VCPKG_SUCCESS == 'false' }}
 
       - name: Add & Commit
         id: registry
         uses: EndBug/add-and-commit@v9
         with:
           default_author: github_actions
-          message: "ci: maintenance `${{ steps.versioning.outputs.VCPKG_VERSION }}`"
-
-      - name: Repository Dispatch
-        uses: peter-evans/repository-dispatch@v2
-        with:
-          token: ${{ secrets.VCPKG_HELPER_TOKEN }}
-          repository: ${{ github.repository_owner }}/Starfield-RE-vcpkg
-          event-type: update-event
-          client-payload: '{"sha": "${{ steps.registry.outputs.commit_long_sha }}", "vcpkg-version": "${{ steps.versioning.outputs.VCPKG_VERSION }}"}'
+          message: "ci: maintenance"
