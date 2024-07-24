@@ -114,7 +114,8 @@
         "buildtype-debug-msvc",
         "generator-msvc",
         "compiler-msvc"
-      ]
+      ],
+      "binaryDir": "${sourceDir}/build/debug-msvc-msvc"
     },
     {
       "name": "build-debug-msvc-ninja",
@@ -124,7 +125,8 @@
         "buildtype-debug-msvc",
         "generator-ninja",
         "compiler-msvc"
-      ]
+      ],
+      "binaryDir": "${sourceDir}/build/debug-msvc-ninja"
     },
     {
       "name": "build-debug-clang-cl-msvc",
@@ -135,7 +137,8 @@
         "buildtype-debug-clang-cl",
         "generator-msvc",
         "compiler-clang-cl"
-      ]
+      ],
+      "binaryDir": "${sourceDir}/build/debug-clang-cl-msvc"
     },
     {
       "name": "build-debug-clang-cl-ninja",
@@ -145,7 +148,8 @@
         "buildtype-debug-clang-cl",
         "generator-ninja",
         "compiler-clang-cl"
-      ]
+      ],
+      "binaryDir": "${sourceDir}/build/debug-clang-cl-ninja"
     },
     {
       "name": "build-release-msvc-msvc",
@@ -155,7 +159,8 @@
         "buildtype-release-msvc",
         "generator-msvc",
         "compiler-msvc"
-      ]
+      ],
+      "binaryDir": "${sourceDir}/build/release-msvc-msvc"
     },
     {
       "name": "build-release-msvc-ninja",
@@ -165,7 +170,8 @@
         "buildtype-release-msvc",
         "generator-ninja",
         "compiler-msvc"
-      ]
+      ],
+      "binaryDir": "${sourceDir}/build/release-msvc-ninja"
     },
     {
       "name": "build-release-clang-cl-msvc",
@@ -176,7 +182,8 @@
         "buildtype-release-clang-cl",
         "generator-msvc",
         "compiler-clang-cl"
-      ]
+      ],
+      "binaryDir": "${sourceDir}/build/release-clang-cl-msvc"
     },
     {
       "name": "build-release-clang-cl-ninja",
@@ -186,7 +193,8 @@
         "buildtype-release-clang-cl",
         "generator-ninja",
         "compiler-clang-cl"
-      ]
+      ],
+      "binaryDir": "${sourceDir}/build/release-clang-cl-ninja"
     }
   ],
   "buildPresets": [
