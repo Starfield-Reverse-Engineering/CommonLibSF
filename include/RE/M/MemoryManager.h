@@ -2,7 +2,6 @@
 
 namespace RE
 {
-
 	class ScrapHeap;
 	struct HeapStats;
 	struct MemoryStats;

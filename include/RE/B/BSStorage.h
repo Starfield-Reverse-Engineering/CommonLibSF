@@ -13,7 +13,9 @@ namespace RE
 			kError = 1,
 			kNotImplemented = 2,
 		};
+
 		enum class SeekMode;
+
 		struct StreamBuffer
 		{
 			void Reset()

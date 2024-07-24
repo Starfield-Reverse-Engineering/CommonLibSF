@@ -8,7 +8,6 @@ namespace RE
 	class MenuModeChangeEvent;
 	class MenuOpenCloseEvent;
 	class OtherEventEnabledEvent;
-	struct TESFormDeleteEvent;
 	class TESHitEvent;
 	class UserEventEnabledEvent;
 
@@ -18,6 +17,7 @@ namespace RE
 	struct PickRefUpdateEvent;
 	struct PositionPlayerEvent;
 	struct TargetHitEvent;
+	struct TESFormDeleteEvent;
 
 	struct QuestStatus
 	{

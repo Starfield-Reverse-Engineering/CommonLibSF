@@ -1,3 +1,5 @@
+#pragma once
+
 #include "RE/I/IHandleReaderWriter.h"
 #include "RE/I/IObjectHandlePolicy.h"
 #include "RE/T/TESFile.h"
@@ -62,5 +64,4 @@ namespace RE::GameScript
 		TESFile* file;  //10
 	};
 	static_assert(sizeof(DataFileHandleReaderWriter) == 0x18);
-
 }

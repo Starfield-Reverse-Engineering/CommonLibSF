@@ -15,8 +15,8 @@ namespace RE
 		namespace Internal
 		{
 			class ReadableStringTable;
-
 		}
+
 		namespace UnlinkedTypes
 		{
 			struct Object;  // stub

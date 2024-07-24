@@ -41,5 +41,4 @@ namespace RE
 		std::uintptr_t socket;   // 18
 	};
 	static_assert(sizeof(idTCP) == 0x20);
-
 }

@@ -3,22 +3,19 @@
 #include "RE/I/IFuncCallQuery.h"
 #include "RE/S/Stack.h"
 
-namespace RE
+namespace RE::BSScript
 {
-	namespace BSScript
-	{
-		class Stack;
+	class Stack;
 
-		namespace Internal
+	namespace Internal
+	{
+		struct SuspendedStack
 		{
-			struct SuspendedStack
-			{
-			public:
-				// members
-				BSTSmartPointer<Stack>          stack;          // 00
-				BSTSmartPointer<IFuncCallQuery> funcCallQuery;  // 08
-			};
-			static_assert(sizeof(SuspendedStack) == 0x10);
-		}
+		public:
+			// members
+			BSTSmartPointer<Stack>          stack;          // 00
+			BSTSmartPointer<IFuncCallQuery> funcCallQuery;  // 08
+		};
+		static_assert(sizeof(SuspendedStack) == 0x10);
 	}
 }

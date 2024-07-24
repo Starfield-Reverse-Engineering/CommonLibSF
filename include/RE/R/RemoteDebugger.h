@@ -4,9 +4,9 @@
 #include "RE/D/DebuggerMessages.h"
 #include "RE/I/IRemoteDebugger.h"
 #include "RE/I/idTCP.h"
+
 namespace RE::GameScript
 {
-
 	class RemoteDebugger : BSScript::IRemoteDebugger
 	{
 	public:

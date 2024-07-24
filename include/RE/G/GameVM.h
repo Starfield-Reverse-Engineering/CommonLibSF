@@ -18,7 +18,6 @@
 
 namespace RE
 {
-
 	struct InputEnableLayerDestroyedEvent;
 	struct PositionPlayerEvent;
 	struct TESFormDeleteEvent;
@@ -26,16 +25,19 @@ namespace RE
 	struct TESInitScriptEvent;
 	struct TESResolveNPCTemplatesEvent;
 	struct TESUniqueIDChangeEvent;
+
 	namespace ModelReferenceEffectEvents
 	{
 		struct ReferenceEffectFinished;
 	}
+
 	namespace BSScript
 	{
 		struct StatsEvent;
 		class IVMSaveLoadInterface;
 		class IVMDebugInterface;
 	}
+
 	namespace GameScript
 	{
 		struct StatsEvent;
@@ -215,5 +217,4 @@ namespace RE
 		std::uint32_t                                                                    overflowFlags;                  // 8968
 	};
 	static_assert(sizeof(GameVM) == 0x8970);
-
 }

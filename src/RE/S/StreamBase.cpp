@@ -1,62 +1,59 @@
 #include "RE/S/StreamBase.h"
 
-namespace RE
+namespace RE::BSResource
 {
-	namespace BSResource
+	StreamBase::StreamBase() :
+		totalSize(0),
+		flags(0)
+	{}
+
+	StreamBase::StreamBase(const StreamBase& a_rhs) :
+		totalSize(a_rhs.totalSize),
+		flags(a_rhs.flags & ~kRefCountMask)
+	{}
+
+	StreamBase::StreamBase(StreamBase&& a_rhs) :
+		totalSize(a_rhs.totalSize),
+		flags(a_rhs.flags & ~kRefCountMask)
+	{}
+
+	StreamBase::StreamBase(std::uint32_t a_totalSize, bool writable) :
+		totalSize(a_totalSize),
+		flags(writable ? 1 : 0)
+	{}
+
+	std::uint64_t StreamBase::DoGetKey() const
 	{
-		StreamBase::StreamBase() :
-			totalSize(0),
-			flags(0)
-		{}
+		return 0xFFFFFFFF00000000;
+	}
 
-		StreamBase::StreamBase(const StreamBase& a_rhs) :
-			totalSize(a_rhs.totalSize),
-			flags(a_rhs.flags & ~kRefCountMask)
-		{}
+	ErrorCode StreamBase::DoGetInfo(Info&)
+	{
+		return ErrorCode::kUnsupported;
+	}
 
-		StreamBase::StreamBase(StreamBase&& a_rhs) :
-			totalSize(a_rhs.totalSize),
-			flags(a_rhs.flags & ~kRefCountMask)
-		{}
+	std::uint32_t StreamBase::DecRef()
+	{
+		stl::atomic_ref myFlags{ flags };
+		std::uint32_t   expected;
+		do {
+			expected = myFlags;
+		} while (!myFlags.compare_exchange_weak(expected, expected - kRefCountBeg));
+		return (expected - kRefCountBeg) & kRefCountMask;
+	}
 
-		StreamBase::StreamBase(std::uint32_t a_totalSize, bool writable) :
-			totalSize(a_totalSize),
-			flags(writable ? 1 : 0)
-		{}
+	std::uint32_t StreamBase::IncRef()
+	{
+		stl::atomic_ref myFlags{ flags };
+		std::uint32_t   expected;
+		do {
+			expected = myFlags;
+		} while (!myFlags.compare_exchange_weak(expected, expected + kRefCountBeg));
+		return (expected - kRefCountBeg) & kRefCountMask;
+	}
 
-		std::uint64_t StreamBase::DoGetKey() const
-		{
-			return 0xFFFFFFFF00000000;
-		}
-
-		ErrorCode StreamBase::DoGetInfo(Info&)
-		{
-			return ErrorCode::kUnsupported;
-		}
-
-		std::uint32_t StreamBase::DecRef()
-		{
-			stl::atomic_ref myFlags{ flags };
-			std::uint32_t   expected;
-			do {
-				expected = myFlags;
-			} while (!myFlags.compare_exchange_weak(expected, expected - kRefCountBeg));
-			return (expected - kRefCountBeg) & kRefCountMask;
-		}
-
-		std::uint32_t StreamBase::IncRef()
-		{
-			stl::atomic_ref myFlags{ flags };
-			std::uint32_t   expected;
-			do {
-				expected = myFlags;
-			} while (!myFlags.compare_exchange_weak(expected, expected + kRefCountBeg));
-			return (expected - kRefCountBeg) & kRefCountMask;
-		}
-
-		bool StreamBase::IsWritable() const
-		{
-			return static_cast<bool>(flags & kWritable);
-		}
+	bool StreamBase::IsWritable() const
+	{
+		return static_cast<bool>(flags & kWritable);
 	}
 }
