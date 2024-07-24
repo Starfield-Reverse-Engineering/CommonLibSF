@@ -140,4 +140,53 @@ namespace SFSE
 
 		trampoline.create(a_size);
 	}
+
+	struct PapyrusRegistrationHook
+	{
+		typedef void (*call_t)(RE::BSScript::IVirtualMachine**);
+
+		PapyrusRegistrationHook(bool a_trySFSEReserve)
+		{
+			static constexpr size_t hookSize{ 14 };
+
+			if (allocated) {
+				return;
+			}
+
+			if (const auto intfc = GetTrampolineInterface(); intfc && a_trySFSEReserve) {
+				const auto memory = intfc->AllocateFromBranchPool(hookSize);
+				if (memory) {
+					trampoline.set_trampoline(memory, hookSize);
+					allocated = true;
+				}
+			}
+
+			if (!allocated) {
+				trampoline.create(hookSize);
+			}
+			
+			// Call to GameVM::BindEverythingToScript(IVirtualMachine**) from GameVM::GameVM()
+			REL::Relocation<uintptr_t> hookLoc{ REL::ID(169912), 0x514 };
+			func = reinterpret_cast<call_t>(trampoline.write_call<5>(hookLoc.address(), &thunk));
+		}
+		
+		static void thunk(RE::BSScript::IVirtualMachine** a_vm)
+		{
+			func(a_vm);
+			if (callback != nullptr) {
+				callback(a_vm);
+			}
+		}
+
+		inline static bool                                                 allocated{ false };
+		inline static call_t                                               func;
+		inline static std::function<void(RE::BSScript::IVirtualMachine**)> callback;
+		Trampoline                                                         trampoline;
+	};
+
+	void SetPapyrusCallback(const std::function<void(RE::BSScript::IVirtualMachine**)> a_callback, bool a_trySFSEReserve)
+	{
+		static PapyrusRegistrationHook hook{ a_trySFSEReserve };
+		PapyrusRegistrationHook::callback = a_callback;
+	}
 }

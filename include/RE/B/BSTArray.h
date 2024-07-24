@@ -58,6 +58,8 @@ namespace RE
 	class BSTArrayAllocatorFunctor : public BSTArrayBase::IAllocatorFunctor
 	{
 	public:
+		using propagate_on_container_move_assignment = std::true_type;
+
 		// members
 		Allocator* _allocator;  // 00
 	};
@@ -66,6 +68,8 @@ namespace RE
 	class BSTArrayHeapAllocator
 	{
 	public:
+		using propagate_on_container_move_assignment = std::true_type;
+
 		[[nodiscard]] void* allocate(std::size_t a_size)
 		{
 			const auto mem = malloc(a_size);
@@ -83,16 +87,43 @@ namespace RE
 	class BSScrapArrayAllocator
 	{
 	public:
+		using propagate_on_container_move_assignment = std::false_type;
+
+		BSScrapArrayAllocator() noexcept = default;
+		BSScrapArrayAllocator(const BSScrapArrayAllocator&) = delete;
+		BSScrapArrayAllocator(BSScrapArrayAllocator&&) = delete;
+
+		~BSScrapArrayAllocator() noexcept = default;
+
+		BSScrapArrayAllocator& operator=(const BSScrapArrayAllocator&) = delete;
+		BSScrapArrayAllocator& operator=(BSScrapArrayAllocator&&) = delete;
+
 		void* allocate(std::size_t a_size)
 		{
-			const auto mem = _allocator->Allocate(a_size, 0);
-			if (!mem) {
-				stl::report_and_fail("out of memory"sv);
+			if (!_allocator) {
+				_allocator = MemoryManager::GetSingleton()->GetThreadScrapHeap();
 			}
-			std::memset(mem, 0, a_size);
-			return mem;
+
+			if (!_allocator) {
+				stl::report_and_fail("failed to get thread scrap heap"sv);
+			}
+
+			const auto mem = _allocator->Allocate(a_size, alignof(void*));
+			if (!mem) {
+				stl::report_and_fail("failed to handle allocation request"sv);
+			} else {
+				return mem;
+			}
 		}
-		void deallocate(void* a_ptr) { _allocator->Deallocate(a_ptr, 0); }
+
+		void deallocate(void* a_ptr)
+		{
+			if (_allocator) {
+				_allocator->Deallocate(a_ptr, 0);
+			} else {
+				stl::report_and_fail("failed to deallocate block"sv);
+			}
+		}
 
 	protected:
 		// members
@@ -125,11 +156,49 @@ namespace RE
 		// 4)
 		explicit BSTArray(size_type a_count) { resize(a_count); }
 
+		BSTArray(const BSTArray& a_rhs)
+		{
+			clear();
+			reserve_exact(a_rhs.size());
+			for (const auto& i : a_rhs) {
+				emplace_back(i);
+			}
+		}
+
+		BSTArray(BSTArray&& a_rhs)
+		{
+			clear();
+			reserve_exact(a_rhs.size());
+			for (const auto& i : a_rhs) {
+				emplace_back(i);
+			}
+			a_rhs.clear();
+		}
+
+		BSTArray& operator=(const BSTArray& a_rhs)
+		{
+			clear();
+			reserve_exact(a_rhs.size());
+			for (const auto& i : a_rhs) {
+				emplace_back(i);
+			}
+		}
+
+		BSTArray& operator=(BSTArray&& a_rhs)
+		{
+			clear();
+			reserve_exact(a_rhs.size());
+			for (const auto& i : a_rhs) {
+				emplace_back(i);
+			}
+			a_rhs.clear();
+		}
+
 		~BSTArray()
 		{
 			if (capacity() > 0) {
 				clear();
-				allocator_type().deallocate(data());
+				allocator_type::deallocate(data());
 				set_data(nullptr);
 				set_capacity(0, 0);
 			}
@@ -270,12 +339,12 @@ namespace RE
 
 			const auto ndata =
 				static_cast<pointer>(
-					allocator_type().allocate(a_capacity * sizeof(value_type)));
+					allocator_type::allocate(a_capacity * sizeof(value_type)));
 			const auto odata = data();
 			if (ndata != odata) {
 				std::uninitialized_move_n(odata, size(), ndata);
 				std::destroy_n(odata, size());
-				allocator_type().deallocate(odata);
+				allocator_type::deallocate(odata);
 				set_data(ndata);
 				set_capacity(a_capacity, a_capacity * sizeof(value_type));
 			}
