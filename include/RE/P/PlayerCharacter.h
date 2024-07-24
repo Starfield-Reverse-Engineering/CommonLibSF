@@ -8,7 +8,7 @@ namespace RE
 	class MenuModeChangeEvent;
 	class MenuOpenCloseEvent;
 	class OtherEventEnabledEvent;
-	class TESFormDeleteEvent;
+	struct TESFormDeleteEvent;
 	class TESHitEvent;
 	class UserEventEnabledEvent;
 

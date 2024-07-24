@@ -54,7 +54,7 @@ namespace RE
 			virtual void                                 SetSaveHandleForArray(const Array* a_Array, std::uint64_t) = 0;                                                                                           // 14
 			virtual bool                                 GetArrayBySaveHandle(std::uint64_t handle, BSTSmartPointer<Array, BSTSmartPointerIntrusiveRefCount>& a_array_pointer) const = 0;                          // 15
 			virtual bool                                 GetStackByID(unsigned int, BSTSmartPointer<Stack, BSTSmartPointerIntrusiveRefCount>& a_stack_pointer) const = 0;                                          // 16
-			virtual void                                 unk_17(void) = 0;                                                                                                                                         // 17
+			virtual bool                                 IsStackRunning(std::uint32_t a_stackid) = 0;                                                                                                              // 17
 			virtual const Internal::WritableStringTable& GetWritableStringTable() const = 0;                                                                                                                       // 18
 			virtual const Internal::WritableStringTable& GetWritableStringTable() = 0;                                                                                                                             // 19
 			virtual Internal::ReadableStringTable&       GetReadableStringTable() const = 0;                                                                                                                       // 1A

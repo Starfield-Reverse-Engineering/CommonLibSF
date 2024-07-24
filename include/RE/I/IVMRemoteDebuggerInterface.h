@@ -11,9 +11,9 @@ namespace RE::BSScript
 
 		~IVMRemoteDebuggerInterface() = delete;
 
-		virtual void Unk00();  // 00 -- calls Unk05 in IVirtualMachine
-		virtual void Unk01();  // 01
-		virtual void Unk02();  // 02
+		virtual bool IsCompletelyFrozen() = 0;  // 00 -- just calls IsCompletelyFrozen on the VM
+		virtual void Unk01() = 0;  // 01
+		virtual void Unk02() = 0;  // 02
 	};
 	static_assert(sizeof(IVMRemoteDebuggerInterface) == 0x8);
 }

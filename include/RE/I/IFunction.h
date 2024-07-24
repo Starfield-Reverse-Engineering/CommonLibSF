@@ -43,7 +43,7 @@ namespace RE::BSScript
 		virtual void           Unk_0E(std::uint32_t a_unk) = 0;
 		virtual std::uint32_t  Invoke(std::uint64_t a_unk0, std::uint64_t a_unk1, VMClassRegistry* a_registry, VMState* a_unk3) = 0;
 		virtual BSFixedString* Unk_10(void) = 0;  // file/line number?
-		virtual bool           Unk_11(std::uint32_t a_unk0, std::uint32_t* a_unk1) = 0;
+		virtual bool           TranslateIPToLineNumber(std::uint32_t a_instructionPointer, std::uint32_t* r_lineNumber) = 0;
 		virtual std::uint64_t* Unk_12(std::uint64_t* a_out) = 0;                        // new, might be type reflection
 		virtual Unk13          Unk_13(Unk13* a_out) = 0;                                // new, might be type reflection
 		virtual bool           GetParamInfo(std::uint32_t a_idx, void* a_out) = 0;      // param list stuff

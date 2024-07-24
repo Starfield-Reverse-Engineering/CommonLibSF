@@ -25,6 +25,7 @@ namespace RE
 
 	class idTCP
 	{
+	public:
 		SF_RTTI_VTABLE(idTCP);
 
 		virtual ~idTCP();  // 00
