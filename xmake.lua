@@ -14,6 +14,7 @@ add_rules("mode.debug", "mode.release")
 -- require packages
 add_requires("xbyak")
 add_requires("spdlog", { configs = { header_only = false, std_format = true } })
+add_requires("boost", { configs = { header_only = false, std_format = true } })
 
 -- make extras available
 includes("xmake-extra.lua")
@@ -32,6 +33,7 @@ target("commonlibsf")
 
     -- add packages
     add_packages("spdlog", { public = true })
+    add_packages("boost", { public = true })
 
     if has_config("sfse_xbyak") then
         add_packages("xbyak")
