@@ -71,7 +71,7 @@ namespace RE::BSScript
 					!vm->CreateStruct(name, _proxy) ||
 					!_proxy) {
 					SFSE::log::error(
-						FMT_STRING("failed to create structure of type \"{}\""),
+						"failed to create structure of type \"{}\"",
 						name);
 					assert(false);
 				}
@@ -92,7 +92,7 @@ namespace RE::BSScript
 
 			if (!a_quiet) {
 				SFSE::log::warn(
-					FMT_STRING("failed to find var \"{}\" on structure \"{}\""),
+					"failed to find var \"{}\" on structure \"{}\"",
 					a_name,
 					name);
 			}
@@ -114,7 +114,7 @@ namespace RE::BSScript
 			}
 
 			SFSE::log::warn(
-				FMT_STRING("failed to pack var \"{}\" on structure \"{}\""),
+				"failed to pack var \"{}\" on structure \"{}\"",
 				a_name,
 				name);
 			return false;
@@ -1077,7 +1077,7 @@ namespace RE::BSScript
 
 		if (!success) {
 			SFSE::log::warn(
-				FMT_STRING("failed to register method \"{}\" on object \"{}\""),
+				"failed to register method \"{}\" on object \"{}\"",
 				a_function,
 				a_object);
 		}
