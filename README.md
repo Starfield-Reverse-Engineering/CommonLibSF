@@ -7,7 +7,7 @@
 [![Game version](https://img.shields.io/badge/game%20version-1.12.36-orange)](#Developing-with-CommonLibSF)
 [![Main CI](https://img.shields.io/github/actions/workflow/status/Starfield-Reverse-Engineering/CommonLibSF/main_ci.yml)](https://github.com/Starfield-Reverse-Engineering/CommonLibSF/actions/workflows/main_ci.yml)
 
-## Build Dependencies
+## Requirements
 
 - [CMake v3.26+](https://cmake.org/) or [XMake v2.8.2+](https://github.com/xmake-io/xmake/releases)
   - Add this to your `PATH`
@@ -23,14 +23,12 @@
 
 - [CLibSFPluginTemplate](https://github.com/Starfield-Reverse-Engineering/CLibSFPluginTemplate)
   - Uses **CMake**. Consumes CommonLibSF as a git submodule or a local fork.
-- [SF_PluginTemplate](https://github.com/gottyduke/SF_PluginTemplate)
-  - Uses **CMake**. Consumes CommonLibSF as a git submodule or a local fork.
 - [commonlibsf-template-xmake](https://github.com/Starfield-Reverse-Engineering/commonlibsf-template-xmake)
   - Uses **XMake**. Consumes CommonLibSF as an [xrepo package](https://github.com/Starfield-Reverse-Engineering/commonlibsf-xrepo), a git submodule, or a local fork.
 
 ### Please see the [Using CommonLibSF wiki page](https://github.com/Starfield-Reverse-Engineering/CommonLibSF/wiki/Using-CommonLibSF) for more information about using CommonLibSF.
 
-## End-User Dependencies
+## End-User Requirements
 
 - [Starfield Script Extender](https://www.nexusmods.com/starfield/mods/106)
 - [Address Library for SFSE Plugins](https://www.nexusmods.com/starfield/mods/3256)
@@ -39,7 +37,7 @@
 
 CommonLibSF is intended to replace SFSE as a static dependency. However, the runtime component of SFSE is still required.
 
-You may download the PDB for the latest build of CommonLibSF via the [Update PDB](https://github.com/Starfield-Reverse-Engineering/CommonLibSF/actions/workflows/update_pdb.yml) workflow. This is useful for importing the latest type information into IDA using the "import PDB" feature.
+You may download the PDB for the latest build of CommonLibSF via the [Update PDB](https://github.com/Starfield-Reverse-Engineering/CommonLibSF/actions/workflows/update_pdb.yml) workflow. This is useful for importing the latest type information into IDA using the "Import PDB" feature.
 
 ## License
 
