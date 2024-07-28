@@ -59,21 +59,21 @@ namespace RE
 
 	class Actor :
 		public TESObjectREFR,                                           // 000
-		public MagicTarget,                                             // 0F0
-		public ActorState,                                              // 108
-		public IMovementStateStore,                                     // 118
-		public IStoreAnimationActions,                                  // 120
-		public BSTEventSink<BSNavmeshChangeEvent>,                      // 128
-		public BSTEventSink<BSMovementDataChangedEvent>,                // 130
-		public BSTEventSink<BSSubGraphActivationUpdate>,                // 138
-		public BSTEventSink<bhkCharacterMoveFinishEvent>,               // 140
-		public BSTEventSink<bhkNonSupportContactEvent>,                 // 148
-		public BSTEventSink<bhkCharacterStateChangeEvent>,              // 150
-		public BSTEventSource<MovementMessageUpdateRequestImmediate>,   // 158
-		public BSTEventSource<PerkValueEvents::PerkValueChangedEvent>,  // 180
-		public BSTEventSource<PerkValueEvents::PerkEntryUpdatedEvent>,  // 1A8
-		public BSTEventSource<ActorCPMEvent>,                           // 1D0
-		public BSTEventSource<ActorSprintEvent>                         // 1F8
+		public MagicTarget,                                             // 0D0
+		public ActorState,                                              // 0E8
+		public IMovementStateStore,                                     // 0F8
+		public IStoreAnimationActions,                                  // 100
+		public BSTEventSink<BSNavmeshChangeEvent>,                      // 108
+		public BSTEventSink<BSMovementDataChangedEvent>,                // 110
+		public BSTEventSink<BSSubGraphActivationUpdate>,                // 118
+		public BSTEventSink<bhkCharacterMoveFinishEvent>,               // 120
+		public BSTEventSink<bhkNonSupportContactEvent>,                 // 128
+		public BSTEventSink<bhkCharacterStateChangeEvent>,              // 130
+		public BSTEventSource<MovementMessageUpdateRequestImmediate>,   // 138
+		public BSTEventSource<PerkValueEvents::PerkValueChangedEvent>,  // 160
+		public BSTEventSource<PerkValueEvents::PerkEntryUpdatedEvent>,  // 188
+		public BSTEventSource<ActorCPMEvent>,                           // 1B0
+		public BSTEventSource<ActorSprintEvent>                         // 1D8
 	{
 	public:
 		SF_RTTI_VTABLE(Actor);
@@ -280,29 +280,33 @@ namespace RE
 		[[nodiscard]] bool IsHostileToActor(Actor* a_actor);
 
 		// members
-		stl::enumeration<BOOL_BITS, std::uint32_t>           boolBits;                 // 220
-		float                                                unk224;                   // 224
-		BSGuarded<BSTArray<void*>, BSSpinLock>               unk228;                   // 228 - BGSBody?
-		AIProcess*                                           currentProcess;           // 240
-		std::uint64_t                                        unk248;                   // 248
+		stl::enumeration<BOOL_BITS, std::uint32_t>           boolBits;                 // 200
+		float                                                unk204;                   // 204
+		BSGuarded<BSTArray<void*>, BSSpinLock>               unk208;                   // 208 - BGSBody?
+		AIProcess*                                           currentProcess;           // 220
+		std::uint64_t                                        unk228;                   // 228
+		std::uint64_t                                        unk230;                   // 230
+		std::uint64_t                                        unk238;                   // 238
+		std::uint64_t                                        unk240;                   // 240
+		CombatController*                                    combatController;         // 248
 		std::uint64_t                                        unk250;                   // 250
-		std::uint64_t                                        unk258;                   // 258
-		std::uint64_t                                        unk260;                   // 260
-		CombatController*                                    combatController;         // 268
-		std::uint64_t                                        unk270;                   // 270
-		ActorValueStorage                                    avStorage;                // 278
+		ActorValueStorage                                    avStorage;                // 258
+		std::uint64_t                                        unk280;                   // 280
+		stl::enumeration<ACTOR_CRITICAL_STAGE, std::int32_t> criticalStage;            // 288
+		std::uint32_t                                        dialogueItemTarget;       // 28C - TESPointerHandle
+		std::uint32_t                                        currentCombatTarget;      // 290 - TESPointerHandle
+		std::uint32_t                                        myKiller;                 // 294 - TESPointerHandle
+		std::uint64_t                                        unk298;                   // 298
 		std::uint64_t                                        unk2A0;                   // 2A0
-		stl::enumeration<ACTOR_CRITICAL_STAGE, std::int32_t> criticalStage;            // 2A8
-		std::uint32_t                                        dialogueItemTarget;       // 2AC - TESPointerHandle
-		std::uint32_t                                        currentCombatTarget;      // 2B0 - TESPointerHandle
-		std::uint32_t                                        myKiller;                 // 2B4 - TESPointerHandle
-		std::uint64_t                                        unk2B8;                   // 2B8
+		std::uint32_t                                        actionValue;              // 2A8
+		float                                                timerOnAction;            // 2AC
+		std::uint64_t                                        unk2B0;                   // 2B0
+		std::uint32_t                                        intimidateBribeDayStamp;  // 2B8
+		std::uint32_t                                        unk2BC;                   // 2BC
 		std::uint64_t                                        unk2C0;                   // 2C0
-		std::uint32_t                                        actionValue;              // 2C8
-		float                                                timerOnAction;            // 2CC
+		std::uint64_t                                        unk2C8;                   // 2C8
 		std::uint64_t                                        unk2D0;                   // 2D0
-		std::uint32_t                                        intimidateBribeDayStamp;  // 2D8
-		std::uint32_t                                        unk2DC;                   // 2DC
+		std::uint64_t                                        unk2D8;                   // 2D8
 		std::uint64_t                                        unk2E0;                   // 2E0
 		std::uint64_t                                        unk2E8;                   // 2E8
 		std::uint64_t                                        unk2F0;                   // 2F0
@@ -317,17 +321,16 @@ namespace RE
 		std::uint64_t                                        unk338;                   // 338
 		std::uint64_t                                        unk340;                   // 340
 		std::uint64_t                                        unk348;                   // 348
-		std::uint64_t                                        unk350;                   // 350
-		std::uint64_t                                        unk358;                   // 358
-		std::uint64_t                                        unk360;                   // 360
-		std::uint64_t                                        unk368;                   // 368
-		TESRace*                                             race;                     // 368
-		Perks*                                               perks;                    // 370
-		std::uint32_t                                        unk378;                   // 378
-		mutable BSReadWriteLock                              perkArrayLock;            // 37C
-		std::uint32_t                                        unk384;                   // 374
-		stl::enumeration<BOOL_FLAGS, std::uint32_t>          boolFlags;                // 388
-		stl::enumeration<BOOL_FLAGS2, std::uint32_t>         boolFlags2;               // 38C
+		TESRace*                                             race;                     // 350
+		Perks*                                               perks;                    // 358
+		std::uint32_t                                        unk360;                   // 360
+		mutable BSReadWriteLock                              perkArrayLock;            // 364
+		std::uint32_t                                        unk35C;                   // 35C
+		stl::enumeration<BOOL_FLAGS, std::uint32_t>          boolFlags;                // 370
+		stl::enumeration<BOOL_FLAGS2, std::uint32_t>         boolFlags2;               // 374
+		std::uint64_t                                        unk378;                   // 378
+		std::uint64_t                                        unk380;                   // 380
+		std::uint64_t                                        unk388;                   // 388
 		std::uint64_t                                        unk390;                   // 390
 		std::uint64_t                                        unk398;                   // 398
 		std::uint64_t                                        unk3A0;                   // 3A0
@@ -377,10 +380,7 @@ namespace RE
 		std::uint64_t                                        unk500;                   // 500
 		std::uint64_t                                        unk508;                   // 508
 		std::uint64_t                                        unk510;                   // 510
-		std::uint64_t                                        unk518;                   // 518
-		std::uint64_t                                        unk520;                   // 520
-		std::uint64_t                                        unk528;                   // 528
-		std::uint8_t                                         unk530[88];               // 530
+		std::uint8_t                                         unk518[88];               // 518
 	};
 	static_assert(sizeof(Actor) == 0x570);
 }
