@@ -183,7 +183,7 @@ namespace RE::BSScript
 			virtual unsigned short                       GetSaveGameVersion() const override;                                                                                                                           // 04
 			virtual void                                 CleanupSave() override;                                                                                                                                        // 05
 			virtual void                                 CleanupLoad() override;                                                                                                                                        // 06
-			virtual void                                 DropAllRunningData() override;                                                                                                                                 // 07
+			virtual void*                                DropAllRunningData() override;                                                                                                                                 // 07
 			virtual std::uint64_t                        GetSaveHandleForObject(const Object* a_Object) const override;                                                                                                 // 08
 			virtual void                                 SetSaveHandleForObject(const Object* a_Object, std::uint64_t) override;                                                                                        // 09
 			virtual bool                                 GetObjectBySaveHandle(std::uint64_t, const TypeInfo& a_TypeInfo, BSTSmartPointer<Object, BSTSmartPointerIntrusiveRefCount>& a_object_pointer) const override;  // 0A

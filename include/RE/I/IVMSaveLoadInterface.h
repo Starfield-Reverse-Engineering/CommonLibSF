@@ -38,7 +38,7 @@ namespace RE
 			virtual unsigned short                       GetSaveGameVersion() const = 0;                                                                                                                           // 04
 			virtual void                                 CleanupSave() = 0;                                                                                                                                        // 05
 			virtual void                                 CleanupLoad() = 0;                                                                                                                                        // 06
-			virtual void                                 DropAllRunningData() = 0;                                                                                                                                 // 07
+			virtual void*                                DropAllRunningData() = 0;                                                                                                                                 // 07
 			virtual std::uint64_t                        GetSaveHandleForObject(const Object* a_Object) const = 0;                                                                                                 // 08
 			virtual void                                 SetSaveHandleForObject(const Object* a_Object, std::uint64_t) = 0;                                                                                        // 09
 			virtual bool                                 GetObjectBySaveHandle(std::uint64_t, const TypeInfo& a_TypeInfo, BSTSmartPointer<Object, BSTSmartPointerIntrusiveRefCount>& a_object_pointer) const = 0;  // 0A

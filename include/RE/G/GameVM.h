@@ -171,6 +171,13 @@ namespace RE
 			return impl.get();
 		}
 
+		static void BindEverythingToScript(BSScript::IVirtualMachine** a_vm)
+		{
+			using func_t = decltype(&BindEverythingToScript);
+			REL::Relocation<func_t> func{ REL::ID(171438) };
+			return func(a_vm);
+		}
+
 		// members
 		std::uint64_t                                                                    unkB0;                          // 00B0
 		std::uint64_t                                                                    unkB8;                          // 00B8
