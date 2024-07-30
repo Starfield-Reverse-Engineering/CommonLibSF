@@ -401,10 +401,10 @@ namespace RE::BSScript
 	template <detail::vmobject_ptr T>
 	[[nodiscard]] std::optional<TypeInfo> GetTypeInfo()
 	{
-		const auto                          game = GameVM::GetSingleton();
-		const auto                          vm = game ? game->GetVM() : nullptr;
-		static RE::BSFixedString baseObjectName{ "ScriptObject" };
-		BSTSmartPointer<ObjectTypeInfo>     typeInfo;
+		const auto                      game = GameVM::GetSingleton();
+		const auto                      vm = game ? game->GetVM() : nullptr;
+		static RE::BSFixedString        baseObjectName{ "ScriptObject" };
+		BSTSmartPointer<ObjectTypeInfo> typeInfo;
 		if (!vm ||
 			!vm->GetScriptObjectType(baseObjectName, typeInfo) ||
 			!typeInfo) {
