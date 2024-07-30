@@ -2,22 +2,24 @@ name: Main CI [XMake]
 
 on:
   pull_request:
-    branches: [main, feature/*, fix/*]
+    branches: main
     paths:
       - "src/**"
       - "include/**"
-      - ".github/workflows/**"
+      - ".github/workflows/main_ci_xmake.yml"
       - "xmake.lua"
+      - "xmake-extra.lua"
   workflow_dispatch:
 
 jobs:
-  build:
+  build-xmake:
     runs-on: windows-latest
     strategy:
       fail-fast: false
       matrix:
-        mode: [release]
-
+        mode:
+          - debug
+          - release
     steps:
       - name: Checkout
         uses: actions/checkout@v4

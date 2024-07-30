@@ -2,17 +2,18 @@ name: Main CI [CMake]
 
 on:
   pull_request:
-    branches: [main, feature/*, fix/*, maintenance]
+    branches: main
     paths:
       - "src/**"
       - "include/**"
       - ".github/workflows/main_ci.yml"
       - "CMakeLists.txt"
       - "CMakePresets.json"
+      - "vcpkg.json"
   workflow_dispatch:
 
 jobs:
-  build:
+  build-cmake:
     runs-on: windows-latest
     strategy:
       fail-fast: false

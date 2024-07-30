@@ -6,7 +6,6 @@ on:
     paths:
       - "src/**"
       - "include/**"
-      - ".github/workflows/**"
   workflow_dispatch:
 
 concurrency:
