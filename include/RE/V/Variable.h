@@ -187,6 +187,8 @@ namespace RE::BSScript
 			return varType;
 		}
 
+		void SetComplexType(IComplexType* a_type);
+
 		void reset();
 
 	private:

@@ -51,6 +51,11 @@ namespace RE::BSScript
 		return *this;
 	}
 
+	void Variable::SetComplexType(IComplexType* a_type)
+	{
+		varType.data.complexTypeInfo = a_type;
+	}
+
 	void Variable::reset()
 	{
 		switch (varType.GetRawType()) {

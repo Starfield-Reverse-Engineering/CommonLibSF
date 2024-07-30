@@ -172,6 +172,14 @@ namespace RE::BSScript
 		using is_string = std::true_type;
 	};
 
+	template <class CharT, bool CS>
+	struct script_traits<
+		RE::detail::BSFixedString<CharT, CS>>
+		final
+	{
+		using is_string = std::true_type;
+	};
+
 	template <class T>
 	struct script_traits<
 		std::optional<T>>
@@ -390,15 +398,15 @@ namespace RE::BSScript
 		}
 	}
 
-	template <detail::vmobject T>
+	template <detail::vmobject_ptr T>
 	[[nodiscard]] std::optional<TypeInfo> GetTypeInfo()
 	{
 		const auto                          game = GameVM::GetSingleton();
 		const auto                          vm = game ? game->GetVM() : nullptr;
-		REL::Relocation<RE::BSFixedString*> baseObjectName{ REL::ID(648543) };
+		static RE::BSFixedString baseObjectName{ "ScriptObject" };
 		BSTSmartPointer<ObjectTypeInfo>     typeInfo;
 		if (!vm ||
-			!vm->GetScriptObjectType(*baseObjectName, typeInfo) ||
+			!vm->GetScriptObjectType(baseObjectName, typeInfo) ||
 			!typeInfo) {
 			assert(false);
 			SFSE::log::error("failed to get type info for vm object"sv);
@@ -528,6 +536,7 @@ namespace RE::BSScript
 			}
 
 			a_var = std::move(object);
+			a_var.SetComplexType(typeInfo.get());
 			return true;
 		}();
 

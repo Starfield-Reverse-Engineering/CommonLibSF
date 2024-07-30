@@ -4,6 +4,7 @@ namespace RE
 {
 	class BGSSaveLoadManager
 	{
+	public:
 		static BGSSaveLoadManager* GetSingleton()
 		{
 			static REL::Relocation<BGSSaveLoadManager**> singleton{ REL::ID(880997) };
