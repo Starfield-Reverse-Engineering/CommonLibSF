@@ -182,6 +182,7 @@
 #include "RE/B/BGSWeatherSettingsForm.h"
 #include "RE/B/BGSWwiseEventForm.h"
 #include "RE/B/BGSWwiseKeywordMapping.h"
+#include "RE/B/BSAnimationGraph.h"
 #include "RE/B/BSBlendable.h"
 #include "RE/B/BSColorCurve.h"
 #include "RE/B/BSContainer.h"
