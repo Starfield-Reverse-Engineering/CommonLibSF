@@ -1,4 +1,5 @@
 #pragma once
+#include "RE/B/BSTSmartPointer.h"
 
 #include "RE/B/BSFixedString.h"
 #include "RE/B/BSTSmartPointer.h"
@@ -17,11 +18,11 @@ namespace RE
 		// add
 		virtual bool          NotifyAnimationGraphImpl(const BSFixedString& a_eventName);                                                                         // 01
 		virtual void          Unk_02();                                                                                                                           // 02
-		virtual void          Unk_03();                                                                                                                           // 03
+		virtual bool          GetAnimationGraphManagerImpl(BSTSmartPointer<BSAnimationGraphManager>& a_animGraphMgr);                                             // 03
 		virtual void          Unk_04();                                                                                                                           // 04
 		virtual void          Unk_05();                                                                                                                           // 05
 		virtual void          Unk_06();                                                                                                                           // 06
-		virtual void          Unk_07();                                                                                                                           // 07
+		virtual bool          UnkFlag();                                                                                                                          // 07 - [Actor/Player: checks that flag 128 is not set on *(this + 0x448)] [Ref: Always False]
 		virtual void          Unk_08();                                                                                                                           // 08
 		virtual void          Unk_09();                                                                                                                           // 09
 		virtual void          Unk_0A();                                                                                                                           // 0A
@@ -31,7 +32,7 @@ namespace RE
 		virtual std::uint32_t GetGraphVariableCacheSize() const { return 0; }                                                                                     // 0E
 		virtual void          Unk_0F();                                                                                                                           // 0F
 		virtual void          Unk_10();                                                                                                                           // 10
-		virtual void          Unk_11();                                                                                                                           // 11
+		virtual bool          ShouldUpdateAnimation();                                                                                                            // 11
 		virtual bool          GetGraphVariableImplFloat(const BSFixedString& a_variable, float& a_out) const;                                                     // 12
 		virtual bool          GetGraphVariableImplInt(const BSFixedString& a_variable, std::int32_t& a_out) const;                                                // 13
 		virtual bool          GetGraphVariableImplBool(const BSFixedString& a_variable, bool& a_out) const;                                                       // 14
