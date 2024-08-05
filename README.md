@@ -88,6 +88,11 @@ The main requirement of this license is: if you link your mod against CommonLibS
     </a>
   </td>
   <td align="center">
+    <a href="https://github.com/Deweh" title="V">
+      <img src="https://avatars.githubusercontent.com/u/76853940?v=4" width="50;" alt="V"/>
+    </a>
+  </td>
+  <td align="center">
     <a href="https://github.com/BrodyHiggerson" title="BrodyHiggerson">
       <img src="https://avatars.githubusercontent.com/u/7245990?v=4" width="50;" alt="BrodyHiggerson"/>
     </a>
@@ -95,11 +100,6 @@ The main requirement of this license is: if you link your mod against CommonLibS
   <td align="center">
     <a href="https://github.com/shadeMe" title="Madeesh Kannan">
       <img src="https://avatars.githubusercontent.com/u/214450?v=4" width="50;" alt="Madeesh Kannan"/>
-    </a>
-  </td>
-  <td align="center">
-    <a href="https://github.com/Deweh" title="V">
-      <img src="https://avatars.githubusercontent.com/u/76853940?v=4" width="50;" alt="V"/>
     </a>
   </td>
   <td align="center">
