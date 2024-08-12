@@ -100,6 +100,59 @@ function(configure_target TARGET_NAME)
     )
   endif()
 
+  if(CMAKE_CXX_COMPILER_FRONTEND_VARIANT STREQUAL "MSVC" AND CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
+    set(CLIBSF_COMPILEFLAGS_RELEASE /fp:fast /GR- /Gw /O2)
+
+    target_compile_options(${TARGET_NAME} PRIVATE
+      /D_ITERATOR_DEBUG_LEVEL=0
+      /cgthreads8
+      /diagnostics:caret
+      /EHsc
+      /fp:contract
+      /fp:except-
+      /guard:cf-
+      /permissive-
+      /Zc:__cplusplus
+      /Zc:rvalueCast
+      /Zc:ternary
+      /external:W0
+      -Wno-overloaded-virtual
+      -Wno-delete-non-abstract-non-virtual-dtor
+      -Wno-inconsistent-missing-override
+      -Wno-reinterpret-base-class
+      -Wno-return-type
+      -Wno-invalid-offsetof
+      -Wno-switch)
+
+      target_compile_options(${TARGET_NAME} PRIVATE $<$<CONFIG:Release>:${CLIBSF_COMPILEFLAGS_RELEASE}>)
+  elseif(CMAKE_CXX_COMPILER_FRONTEND_VARIANT STREQUAL "MSVC" AND CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
+    set(CLIBSF_COMPILEFLAGS_RELEASE /fp:fast /GR- /Gw /O2 /Ob3 /Qpar)
+
+    target_compile_options(${TARGET_NAME} PRIVATE
+        /D_ITERATOR_DEBUG_LEVEL=0
+        /cgthreads8
+        /diagnostics:caret
+        /EHsc
+        /fp:contract
+        /fp:except-
+        /guard:cf-
+        /MP
+        /permissive-
+        /W4
+        /Zc:__cplusplus
+        /Zc:enumTypes
+        /Zc:lambda
+        /Zc:preprocessor
+        /Zc:referenceBinding
+        /Zc:rvalueCast
+        /Zc:templateScope
+        /Zc:ternary
+        /external:anglebrackets
+        /external:W0)
+
+        target_compile_options(${TARGET_NAME} PRIVATE $<$<CONFIG:Release>:${CLIBSF_COMPILEFLAGS_RELEASE}>)
+  endif()
+
   target_include_directories(
     ${TARGET_NAME}
     PUBLIC

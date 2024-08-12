@@ -10,7 +10,6 @@
       "name": "common",
       "hidden": true,
       "cacheVariables": {
-        "CMAKE_CXX_FLAGS": "$env{PROJECT_COMPILER_FLAGS} $penv{CXXFLAGS}",
         "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreaded$<$<CONFIG:Debug>:Debug>DLL"
       }
     },
@@ -36,7 +35,6 @@
       "hidden": true,
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Release",
-        "CMAKE_CXX_FLAGS_RELEASE": "/fp:fast /GR- /Gw /O2 /Ob3 /Qpar",
         "CMAKE_CONFIGURATION_TYPES": "Release"
       }
     },
@@ -53,7 +51,6 @@
       "hidden": true,
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Release",
-        "CMAKE_CXX_FLAGS_RELEASE": "/fp:fast /GR- /Gw /O2",
         "CMAKE_CONFIGURATION_TYPES": "Release"
       }
     },
@@ -79,9 +76,6 @@
     {
       "name": "compiler-msvc",
       "hidden": true,
-      "environment": {
-        "PROJECT_COMPILER_FLAGS": "/D_ITERATOR_DEBUG_LEVEL=0 /cgthreads8 /diagnostics:caret /EHsc /fp:contract /fp:except- /guard:cf- /MP /permissive- /W4 /Zc:__cplusplus /Zc:enumTypes /Zc:lambda /Zc:preprocessor /Zc:referenceBinding /Zc:rvalueCast /Zc:templateScope /Zc:ternary /external:anglebrackets /external:W0"
-      },
       "vendor": {
         "microsoft.com/VisualStudioSettings/CMake/1.0": {
           "intelliSenseMode": "windows-msvc-x64",
@@ -94,9 +88,6 @@
       "hidden": true,
       "cacheVariables": {
         "CMAKE_CXX_COMPILER": "clang-cl"
-      },
-      "environment": {
-        "PROJECT_COMPILER_FLAGS": "/D_ITERATOR_DEBUG_LEVEL=0 /cgthreads8 /diagnostics:caret /EHsc /fp:contract /fp:except- /guard:cf- /permissive- /Zc:__cplusplus /Zc:rvalueCast /Zc:ternary /external:W0 -Wno-overloaded-virtual -Wno-delete-non-abstract-non-virtual-dtor -Wno-inconsistent-missing-override -Wno-reinterpret-base-class -Wno-return-type -Wno-invalid-offsetof -Wno-switch"
       },
       "vendor": {
         "microsoft.com/VisualStudioSettings/CMake/1.0": {
