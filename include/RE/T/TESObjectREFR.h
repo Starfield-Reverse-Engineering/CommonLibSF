@@ -385,6 +385,13 @@ namespace RE
 		[[nodiscard]] bool                  IsObjectEquipped(TESBoundObject* a_object);
 		[[nodiscard]] bool                  IsSpaceshipDocked();
 		[[nodiscard]] bool                  IsSpaceshipLanded();
+		[[nodiscard]] static TESObjectREFR* GetReferenceByHandle(std::uint32_t a_handle);
+		[[nodiscard]] bool                  IsPersistent() const;
+		[[nodiscard]] void                  SetPersistent(bool a_set);
+		[[nodiscard]] void                  MoveToReference(TESObjectREFR* a_targetRef, double a_offsetX, double a_offsetY, double a_offsetZ);
+		[[nodiscard]] bool                  IsTemporaryReference() const;
+		[[nodiscard]] bool                  Is3DLoaded();
+		[[nodiscard]] void                  SetDisplayName(const char* a_name) const;
 		void                                Lock();
 		void                                Unlock();
 
