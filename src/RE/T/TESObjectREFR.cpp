@@ -154,4 +154,67 @@ namespace RE
 			AddLockChange();
 		}
 	}
+
+	TESObjectREFR* TESObjectREFR::GetReferenceByHandle(std::uint32_t handle)
+	{
+		if (handle == 0)
+			return nullptr;
+		TESObjectREFR*           Ref = nullptr;
+		NiPointer<TESObjectREFR> refPtr = NiPointer<TESObjectREFR>(Ref);
+		if (handle != 0 && !Ref) {
+			REL::Relocation<uintptr_t> funcPtr{ REL::ID(72986) };
+			uintptr_t                  addr = funcPtr.address();
+			const auto                 func = reinterpret_cast<void (*)(uint32_t&, RE::NiPointer<RE::TESObjectREFR>&)>(addr);
+			func(handle, refPtr);
+		}
+		return refPtr.get();
+	}
+
+	bool TESObjectREFR::IsPersistent() const
+	{
+		return ((formFlags & 0x00000400) != 0);
+	}
+
+	void TESObjectREFR::SetPersistent(bool a_set)
+	{
+		if (a_set)
+			formFlags |= 0x00000400;
+		else
+			formFlags &= ~0x00000400;
+	}
+
+	void TESObjectREFR::MoveToReference(TESObjectREFR* a_targetRef, double a_offsetX, double a_offsetY, double a_offsetZ)
+	{
+		using func_t = void(*)(uintptr_t, int, TESObjectREFR*, TESObjectREFR*, double, double, double);
+		REL::Relocation<func_t>    func{ REL::ID(149852) };
+		REL::Relocation<uintptr_t> queue{ REL::ID(891179) };
+		REL::Relocation<uintptr_t> iQueuedReloc{ REL::ID(881136) };
+		auto                       iQueued = reinterpret_cast<int*>(iQueuedReloc.address());
+		func(queue.address(), 4254, this, a_targetRef, a_offsetX, a_offsetY, a_offsetZ);
+		if (iQueued)
+			*iQueued = 1;
+	}
+
+	bool TESObjectREFR::IsTemporaryReference() const
+	{
+		return (formChangeFlags & 0x00000001) == 1;
+	}
+
+	bool TESObjectREFR::Is3DLoaded()
+	{
+		using func_t = bool (*)(int64_t, int64_t, TESObjectREFR**);
+		REL::Relocation<func_t> func{ REL::ID(172492) };
+		auto                    self = this;
+		return func(0, 0, &self);
+	}
+
+	void TESObjectREFR::SetDisplayName(const char* a_name) const
+	{
+		auto extra = this->extraDataList.get();
+		if (!extra)
+			return;
+		using func_t = void (*)(ExtraDataList*, const char*);
+		REL::Relocation<func_t> func{ REL::ID(83539) };
+		func(extra, a_name);
+	}
 }
