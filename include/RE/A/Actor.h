@@ -278,6 +278,7 @@ namespace RE
 		virtual void         Unk_1A1();                                                                              // 1A1
 
 		[[nodiscard]] bool IsHostileToActor(Actor* a_actor);
+		[[nodiscard]] void SetHelmetFlashlight(bool a_on);
 
 		// members
 		stl::enumeration<BOOL_BITS, std::uint32_t>           boolBits;                 // 200
