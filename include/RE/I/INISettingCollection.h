@@ -2,6 +2,7 @@
 
 #include "RE/S/Setting.h"
 #include "RE/S/SettingCollectionList.h"
+#include "RE/S/SettingCollectionMap.h"
 
 namespace RE
 {
@@ -19,14 +20,28 @@ namespace RE
 			return *singleton;
 		}
 
-		[[nodiscard]] Setting* GetSetting(const std::string_view a_name)
+		std::string ToLowerStrV(std::string_view _sourceStringView)
 		{
-			for (const auto& setting : settings) {
-				if (setting->GetKey() == a_name) {
+			std::string _sourceString = "";
+			if (_sourceStringView.empty()) {
+				return _sourceString;
+			}
+			_sourceString = { _sourceStringView.begin(), _sourceStringView.end() };
+			if (_sourceString.length() <= 0) {
+				return "";
+			}
+			std::transform(_sourceString.begin(), _sourceString.end(), _sourceString.begin(),
+				[](unsigned char c) -> char { return static_cast<char>(::tolower(c)); });
+			return _sourceString;
+		}
+
+		[[nodiscard]] Setting* GetSetting(std::string_view a_name)
+		{
+			for (auto& setting : settings) {
+				if (ToLowerStrV(setting->GetKey()) == ToLowerStrV(a_name)) {
 					return setting;
 				}
 			}
-
 			return nullptr;
 		}
 
@@ -49,5 +64,22 @@ namespace RE
 
 			return false;
 		}
+	};
+
+	class GameSettingCollection :
+		public SettingCollectionMap<Setting>  // 000
+	{
+	public:
+		SF_RTTI_VTABLE(GameSettingCollection);
+
+		virtual ~GameSettingCollection();  // 000
+
+
+		[[nodiscard]] static GameSettingCollection* GetSingleton()
+		{
+			REL::Relocation<GameSettingCollection**> singleton{ REL::ID(879099) };
+			return *singleton;
+		}
+
 	};
 }
