@@ -532,25 +532,13 @@ inline static RE::TESRace* GetRace(RE::TESNPC* theActorBase)
 	return result;
 }
 
-inline static bool IsFlashlightOn()
+inline static bool IsPlayerFlashlightOn()
 {                                                                    // v1.1     // returns whether the player's flashlight is supposed to be on/off, not whether the light node actually exists
 	const REL::Relocation<std::uintptr_t> reloc{ REL::ID(881141) };  // 0x6889242 in v1.12.36
 	uintptr_t                             addr = reloc.address();
 	const auto                            uint8_tPtr = reinterpret_cast<uint8_t*>(addr);
 	bool                                  result = (uint8_tPtr && *uint8_tPtr == 1);
 	return result;
-}
-
-inline static bool SetFlashlightState(RE::TESObjectREFR* akRef, bool bOn)  // v1.1
-{
-	if (!akRef)
-		return false;
-	REL::Relocation<uintptr_t> funcPtr{ REL::ID(153762) };  // 0x26D3A34 in v1.12.36
-	uintptr_t                  addr = funcPtr.address();
-	const auto                 func = reinterpret_cast<uintptr_t (*)(RE::TESObjectREFR*, bool)>(addr);
-	int64_t                    unk = 0;
-	auto                       result = func(akRef, bOn);
-	return true;
 }
 
 inline static bool IsSpacesuitHelmetVisible(RE::Actor* theActor)
