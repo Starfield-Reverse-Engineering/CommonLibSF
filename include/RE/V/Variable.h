@@ -191,7 +191,7 @@ namespace RE::BSScript
 
 		void reset();
 
-	private:
+	public:
 		friend detail::variable_raw_accessor;
 
 		using RawType = TypeInfo::RawType;
