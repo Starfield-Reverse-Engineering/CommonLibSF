@@ -8,6 +8,13 @@ namespace RE
 	class Main
 	{
 	public:
+
+		[[nodiscard]] static Main* GetSingleton()
+		{
+			REL::Relocation<Main**> singleton{ REL::ID(881027) };
+			return *singleton;
+		}
+
 		struct SceneGraphRoot
 		{
 			std::byte   unk[120];
