@@ -1,5 +1,23 @@
+-- Local Usage:
+--
+-- add_deps("commonlibsf")
+-- add_rules("commonlibsf.plugin", {
+--     name = "Plugin Name",
+--     author = "Author Name",
+--     description = "Plugin Description",
+--     email = "user@site.com"
+--     options = {
+--         -- disable all compatibility checks completely
+--         sig_scanning = true,
+--         no_struct_use = true
+--     }
+-- })
+
 local PLUGIN_FILE = [[
 #include <SFSE/SFSE.h>
+#include <REL/Relocation.h>
+
+using namespace std::literals;
 
 extern "C" __declspec(dllexport)
 constinit auto SFSEPlugin_Version = []() noexcept {
@@ -7,8 +25,10 @@ constinit auto SFSEPlugin_Version = []() noexcept {
     v.PluginVersion({ ${PLUGIN_VERSION_MAJOR}, ${PLUGIN_VERSION_MINOR}, ${PLUGIN_VERSION_PATCH} });
     v.PluginName("${PLUGIN_NAME}");
     v.AuthorName("${PLUGIN_AUTHOR}");
-    v.UsesAddressLibrary(true);
-    v.IsLayoutDependent(true);
+    v.UsesSigScanning(${OPTION_SIG_SCANNING});
+    v.UsesAddressLibrary(${OPTION_ADDRESS_LIBRARY});
+    v.HasNoStructUse(${OPTION_NO_STRUCT_USE});
+    v.IsLayoutDependent(${OPTION_LAYOUT_DEPENDENT});
     return v;
 }();]]
 
@@ -46,15 +66,6 @@ BEGIN
     END
 END]]
 
--- Local Usage:
---
--- add_deps("commonlibsf")
--- add_rules("commonlibsf.plugin", {
---     name = "Plugin Name",
---     author = "Author Name",
---     description = "Plugin Description"
--- })
-
 rule("commonlibsf.plugin")
     add_deps("win.sdk.resource")
 
@@ -68,21 +79,52 @@ rule("commonlibsf.plugin")
 
         local conf = target:extraconf("rules", "commonlibsf.plugin")
         local conf_dir = path.join(target:autogendir(), "rules", "commonlibsf", "plugin")
+        
+        if conf.options then
+            if conf.options.sig_scanning then
+                conf.options.address_library = false
+            else
+                conf.options.sig_scanning = false
+                if conf.options.address_library == nil then
+                    conf.options.address_library = true
+                end
+            end
+            if conf.options.no_struct_use then
+                conf.options.layout_dependent = false
+            else
+                conf.options.no_struct_use = false
+                if conf.options.layout_dependent == nil then
+                    conf.options.layout_dependent = true
+                end
+            end
+        else
+            conf.options = {
+                sig_scanning = false,
+                address_library = true,
+                no_struct_use = false,
+                layout_dependent = true
+            }
+        end
 
         local conf_map = {
-            PLUGIN_AUTHOR         = conf.author or "",
-            PLUGIN_DESCRIPTION    = conf.description or "",
-            PLUGIN_LICENSE        = (target:license() or "Unknown") .. " License",
-            PLUGIN_NAME           = conf.name or target:name(),
-            PLUGIN_VERSION        = target:version() or "0.0.0",
-            PLUGIN_VERSION_MAJOR  = semver.new(target:version() or "0.0.0"):major(),
-            PLUGIN_VERSION_MINOR  = semver.new(target:version() or "0.0.0"):minor(),
-            PLUGIN_VERSION_PATCH  = semver.new(target:version() or "0.0.0"):patch(),
-            PROJECT_NAME          = project.name() or "",
-            PROJECT_VERSION       = project.version() or "0.0.0",
-            PROJECT_VERSION_MAJOR = semver.new(project.version() or "0.0.0"):major(),
-            PROJECT_VERSION_MINOR = semver.new(project.version() or "0.0.0"):minor(),
-            PROJECT_VERSION_PATCH = semver.new(project.version() or "0.0.0"):patch(),
+            PLUGIN_AUTHOR           = conf.author or "",
+            PLUGIN_DESCRIPTION      = conf.description or "",
+            PLUGIN_EMAIL            = conf.email or "",
+            PLUGIN_LICENSE          = (target:license() or "Unknown") .. " License",
+            PLUGIN_NAME             = conf.name or target:name(),
+            PLUGIN_VERSION          = target:version() or "0.0.0",
+            PLUGIN_VERSION_MAJOR    = semver.new(target:version() or "0.0.0"):major(),
+            PLUGIN_VERSION_MINOR    = semver.new(target:version() or "0.0.0"):minor(),
+            PLUGIN_VERSION_PATCH    = semver.new(target:version() or "0.0.0"):patch(),
+            PROJECT_NAME            = project.name() or "",
+            PROJECT_VERSION         = project.version() or "0.0.0",
+            PROJECT_VERSION_MAJOR   = semver.new(project.version() or "0.0.0"):major(),
+            PROJECT_VERSION_MINOR   = semver.new(project.version() or "0.0.0"):minor(),
+            PROJECT_VERSION_PATCH   = semver.new(project.version() or "0.0.0"):patch(),
+            OPTION_SIG_SCANNING     = conf.options.sig_scanning,
+            OPTION_ADDRESS_LIBRARY  = conf.options.address_library,
+            OPTION_NO_STRUCT_USE    = conf.options.no_struct_use,
+            OPTION_LAYOUT_DEPENDENT = conf.options.layout_dependent
         }
 
         local conf_parse = function(a_str)
