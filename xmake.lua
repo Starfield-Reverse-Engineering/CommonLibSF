@@ -34,11 +34,11 @@ target("commonlibsf")
     add_packages("spdlog", { public = true })
 
     if has_config("sfse_xbyak") then
-        add_packages("xbyak")
+        add_packages("xbyak", { public = true })
     end
 
     -- add options
-    add_options("sfse_xbyak")
+    add_options("sfse_xbyak", { public = true })
 
     -- add system links
     add_syslinks("advapi32", "dbghelp", "ole32", "shell32", "user32", "version", "Ws2_32")
