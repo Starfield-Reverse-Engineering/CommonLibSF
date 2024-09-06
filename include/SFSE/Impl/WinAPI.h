@@ -1061,6 +1061,10 @@ namespace SFSE::WinAPI
 	bool FreeLibrary(
 		HMODULE a_module) noexcept;
 
+	[[nodiscard]] std::uint32_t GetCurrentDirectory(
+		std::uint32_t a_size,
+		char*         a_buffer) noexcept;
+
 	[[nodiscard]] void* GetCurrentModule() noexcept;
 
 	[[nodiscard]] void* GetCurrentProcess() noexcept;
