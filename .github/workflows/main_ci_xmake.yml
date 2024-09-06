@@ -30,7 +30,7 @@ jobs:
           xmake-version: "latest"
 
       - name: Configure
-        run: xmake config -y --mode=${{ matrix.mode }} --vs_toolset=14.40
+        run: xmake config -y --mode=${{ matrix.mode }} --vs_toolset=14.41
 
       - name: Build
         run: xmake build -y -vD
