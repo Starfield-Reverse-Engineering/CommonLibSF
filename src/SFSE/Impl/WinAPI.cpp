@@ -15,6 +15,7 @@
 #undef ExpandEnvironmentStrings
 #undef FindFirstFile
 #undef FindNextFile
+#undef GetCurrentDirectory
 #undef GetEnvironmentVariable
 #undef GetFileVersionInfo
 #undef GetFileVersionInfoSize
@@ -262,6 +263,16 @@ namespace SFSE::WinAPI
 		return static_cast<bool>(
 			::FreeLibrary(
 				reinterpret_cast<::HMODULE>(a_module)));
+	}
+
+	std::uint32_t GetCurrentDirectory(
+		std::uint32_t a_bufferLen,
+		char*         a_buffer) noexcept
+	{
+		return static_cast<std::uint32_t>(
+			GetCurrentDirectoryA(
+				a_bufferLen,
+				a_buffer));
 	}
 
 	void* GetCurrentModule() noexcept
