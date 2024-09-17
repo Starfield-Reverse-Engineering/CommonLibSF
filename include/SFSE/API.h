@@ -24,9 +24,9 @@ namespace SFSE
 	PluginHandle GetPluginHandle() noexcept;
 
 	const TrampolineInterface* GetTrampolineInterface() noexcept;
-	const MessagingInterface* GetMessagingInterface() noexcept;
-	const MenuInterface* GetMenuInterface() noexcept;
-	const TaskInterface* GetTaskInterface() noexcept;
+	const MessagingInterface*  GetMessagingInterface() noexcept;
+	const MenuInterface*       GetMenuInterface() noexcept;
+	const TaskInterface*       GetTaskInterface() noexcept;
 
 	Trampoline& GetTrampoline();
 
