@@ -28,15 +28,14 @@ namespace SFSE::log
 		if (!path)
 			return;
 
-		const auto data = PluginVersionData::GetSingleton();
-		*path /= std::format("{}.log", data->GetPluginName());
+		*path /= std::format("{}.log", SFSE::GetPluginName());
 
 		std::vector<spdlog::sink_ptr> sinks{
 			std::make_shared<spdlog::sinks::basic_file_sink_mt>(path->string(), true),
 			std::make_shared<spdlog::sinks::msvc_sink_mt>()
 		};
 
-		auto logger = std::make_shared<spdlog::logger>("Global", sinks.begin(), sinks.end());
+		auto logger = std::make_shared<spdlog::logger>("global", sinks.begin(), sinks.end());
 #ifndef NDEBUG
 		logger->set_level(spdlog::level::debug);
 		logger->flush_on(spdlog::level::debug);

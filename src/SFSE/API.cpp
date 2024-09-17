@@ -15,6 +15,10 @@ namespace SFSE
 				return singleton;
 			}
 
+			std::string_view pluginName{};
+			std::string_view pluginAuthor{};
+			REL::Version     pluginVersion{};
+
 			PluginHandle pluginHandle{ static_cast<PluginHandle>(-1) };
 
 			TrampolineInterface* trampolineInterface{};
@@ -55,15 +59,23 @@ namespace SFSE
 	{
 		stl_assert(a_intfc, "interface is null"sv);
 
-		if (a_log)
-			log::init();
-
 		(void)REL::Module::get();
 
 		auto&       storage = detail::APIStorage::get();
 		const auto& intfc = *a_intfc;
 
 		const std::scoped_lock l(storage.apiLock);
+		if (const auto pluginVersionData = PluginVersionData::GetSingleton()) {
+			storage.pluginName = pluginVersionData->GetPluginName();
+			storage.pluginAuthor = pluginVersionData->GetAuthorName();
+			storage.pluginVersion = pluginVersionData->GetPluginVersion();
+		}
+
+		if (a_log) {
+			log::init();
+			log::info("{} v{}", GetPluginName(), GetPluginVersion());
+		}
+
 		if (!storage.apiInit) {
 			storage.pluginHandle = intfc.GetPluginHandle();
 
@@ -94,6 +106,21 @@ namespace SFSE
 		}
 
 		a_fn();
+	}
+
+	std::string_view GetPluginName() noexcept
+	{
+		return detail::APIStorage::get().pluginName;
+	}
+
+	std::string_view GetPluginAuthor() noexcept
+	{
+		return detail::APIStorage::get().pluginAuthor;
+	}
+
+	REL::Version GetPluginVersion() noexcept
+	{
+		return detail::APIStorage::get().pluginVersion;
 	}
 
 	PluginHandle GetPluginHandle() noexcept

@@ -17,14 +17,15 @@ namespace SFSE
 
 	void RegisterForAPIInitEvent(const std::function<void()>& a_fn);
 
+	std::string_view GetPluginName() noexcept;
+	std::string_view GetPluginAuthor() noexcept;
+	REL::Version     GetPluginVersion() noexcept;
+
 	PluginHandle GetPluginHandle() noexcept;
 
 	const TrampolineInterface* GetTrampolineInterface() noexcept;
-
 	const MessagingInterface* GetMessagingInterface() noexcept;
-
 	const MenuInterface* GetMenuInterface() noexcept;
-
 	const TaskInterface* GetTaskInterface() noexcept;
 
 	Trampoline& GetTrampoline();
