@@ -782,6 +782,12 @@ namespace RE::BSScript
 			return T();
 		}
 
+		if (!a_var.value.v) {
+			a_var.~Variable();
+			assert(false);
+			return T();
+		}
+
 		using value_type = typename T::value_type;
 
 		T          out;
