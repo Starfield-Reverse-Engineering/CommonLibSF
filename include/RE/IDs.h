@@ -299,8 +299,8 @@ namespace RE::ID
 			inline constexpr REL::ID ObjectRelease{ 57289 };
 			inline constexpr REL::ID HasMember{ 57290 };
 			inline constexpr REL::ID GetMember{ 57291 };
-			inline constexpr REL::ID SetMember{ 57292 };
-			inline constexpr REL::ID Invoke{ 57293 };
+			inline constexpr REL::ID SetMember{ 1867815 };
+			inline constexpr REL::ID Invoke{ 1867816 };
 			inline constexpr REL::ID VisitMembers{ 57296 };
 			inline constexpr REL::ID GetArraySize{ 57297 };
 			inline constexpr REL::ID SetArraySize{ 57298 };
