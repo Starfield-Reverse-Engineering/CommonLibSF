@@ -59,14 +59,14 @@ namespace RE
 			return func(this, a_event);
 		}
 
-		virtual void HandleEvent(const ThumbstickEvent* a_event) override
+		virtual void OnThumbstickEvent(const ThumbstickEvent* a_event) override
 		{
 			using func_t = void (*)(BSInputEventUser*, const ThumbstickEvent*);
 			static REL::Relocation<func_t> func(REL::ID(187235));
 			return func(this, a_event);
 		}
 
-		virtual void HandleEvent(const ButtonEvent* a_event) override
+		virtual void OnButtonEvent(const ButtonEvent* a_event) override
 		{
 			using func_t = void (*)(BSInputEventUser*, const ButtonEvent*);
 			static REL::Relocation<func_t> func(REL::ID(187234));
