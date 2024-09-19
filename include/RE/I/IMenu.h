@@ -21,7 +21,7 @@ namespace RE
 	public:
 		SF_RTTI_VTABLE(IMenu);
 
-		enum Flag : uint32_t
+		enum Flag : std::uint32_t
 		{
 			Flag0 = 1 << 0,
 			Flag1 = 1 << 1,
@@ -74,9 +74,9 @@ namespace RE
 		}
 
 		// add
-		virtual const char* GetName() const = 0;      // 03
-		virtual const char* GetRootPath() const = 0;  // 04
-		virtual uint64_t    GetUnk05() = 0;           // 05
+		virtual const char*   GetName() const = 0;      // 03
+		virtual const char*   GetRootPath() const = 0;  // 04
+		virtual std::uint64_t GetUnk05() = 0;           // 05
 
 		virtual bool LoadMovie(bool a_addEventDispatcher, bool a_arg2)  // 06
 		{
@@ -112,30 +112,30 @@ namespace RE
 		virtual void Unk_0C(void) {}  // 0C
 		virtual void Unk_0D(void) {}  // 0D
 
-		virtual bool Unk0E(void* a, bool b)  // 0E
+		virtual bool Unk0E(void* a_arg1, bool a_arg2)  // 0E
 		{
 			using func_t = decltype(&IMenu::Unk0E);
 			static REL::Relocation<func_t> func(REL::ID(187242));
-			return func(this, a, b);
+			return func(this, a_arg1, a_arg2);
 		}
 
 		virtual void Unk0F(){};  // 0F
 
-		virtual uint64_t Unk10()  // 10
+		virtual std::uint64_t Unk10()  // 10
 		{
 			using func_t = decltype(&IMenu::Unk10);
 			static REL::Relocation<uint64_t(IMenu*)> func(REL::ID(187241));
 			return func(this);
 		};
 
-		virtual uint64_t Unk11()  // 11
+		virtual std::uint64_t Unk11()  // 11
 		{
 			using func_t = decltype(&IMenu::Unk11);
 			static REL::Relocation<func_t> func(REL::ID(187243));
 			return func(this);
 		};
 
-		virtual uint64_t Unk12()  // 12
+		virtual std::uint64_t Unk12()  // 12
 		{
 			using func_t = decltype(&IMenu::Unk12);
 			static REL::Relocation<func_t> func(REL::ID(80451));
@@ -154,11 +154,11 @@ namespace RE
 			return true;
 		};
 
-		virtual bool Unk15(void* a)  // 15
+		virtual bool Unk15(void* a_arg1)  // 15
 		{
 			using func_t = decltype(&IMenu::Unk15);
 			static REL::Relocation<func_t> func(REL::ID(187225));
-			return func(this, a);
+			return func(this, a_arg1);
 		};
 
 		virtual bool Unk16()  // 16
@@ -171,18 +171,18 @@ namespace RE
 			return false;
 		};
 
-		virtual uint64_t Unk18(void* a, uint64_t b)  // 18
+		virtual std::uint64_t Unk18(void* a_arg1, std::uint64_t a_arg2)  // 18
 		{
 			using func_t = decltype(&IMenu::Unk18);
 			static REL::Relocation<func_t> func(REL::ID(1275268));
-			return func(this, a, b);
+			return func(this, a_arg1, a_arg2);
 		}
 
-		virtual uint64_t Unk19(void* a, int b, int c)
-		{  // 19
+		virtual std::uint64_t Unk19(void* a_arg1, std::int32_t a_arg2, std::int32_t a_arg3)  // 19
+		{
 			using func_t = decltype(&IMenu::Unk19);
 			static REL::Relocation<func_t> func(REL::ID(187245));
-			return func(this, a, b, c);
+			return func(this, a_arg1, a_arg2, a_arg3);
 		}
 
 		virtual float Unk1A()  // 1A
@@ -192,18 +192,20 @@ namespace RE
 			return func(this);
 		};
 
-		void SetFlags(uint32_t _flags)
+		void SetFlags(std::uint32_t a_flags)
 		{
-			flags |= _flags;
+			flags |= a_flags;
 			flagsUpdated = true;
 		}
 
-		void RemoveFlags(uint32_t _flags)
+		void RemoveFlags(std::uint32_t a_flags)
 		{
-			flags &= ~_flags;
+			flags &= ~a_flags;
 			flagsUpdated = true;
 		}
 
+
+		// members
 		Scaleform::GFx::Value                 menuObj;       // 058
 		Scaleform::Ptr<Scaleform::GFx::Movie> uiMovie;       // 088
 		std::uint64_t                         unk090;        // 090

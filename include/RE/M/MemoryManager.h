@@ -108,8 +108,7 @@ namespace RE
 	class __declspec(novtable) IMemoryStoreBase
 	{
 	public:
-		static constexpr auto RTTI{ RTTI::IMemoryStoreBase };
-		static constexpr auto VTABLE{ VTABLE::IMemoryStoreBase };
+		SF_RTTI_VTABLE(IMemoryStoreBase);
 
 		virtual ~IMemoryStoreBase() = default;  // 00
 
@@ -121,11 +120,10 @@ namespace RE
 	static_assert(sizeof(IMemoryStoreBase) == 0x8);
 
 	class __declspec(novtable) IMemoryStore :
-		public IMemoryStoreBase  // 0
+		public IMemoryStoreBase  // 00
 	{
 	public:
-		static constexpr auto RTTI{ RTTI::IMemoryStore };
-		static constexpr auto VTABLE{ VTABLE::IMemoryStore };
+		SF_RTTI_VTABLE(IMemoryStore);
 
 		// NOLINTNEXTLINE(modernize-use-override)
 		virtual ~IMemoryStore() = default;  // 00
@@ -141,8 +139,7 @@ namespace RE
 		public IMemoryStore  // 00
 	{
 	public:
-		static constexpr auto RTTI{ RTTI::IMemoryHeap };
-		//static constexpr auto VTABLE{ VTABLE::IMemoryHeap }; -- optimized out?
+		SF_RTTI(IMemoryHeap);
 
 		// NOLINTNEXTLINE(modernize-use-override)
 		virtual ~IMemoryHeap() = default;
@@ -191,6 +188,7 @@ namespace RE
 
 		// NOLINTNEXTLINE(modernize-use-override)
 		virtual ~HeapAllocator();  // 00
+
 		// override (IMemoryStoreBase)
 		std::size_t Size(void const* a_mem) const override;                 // 01
 		void        GetMemoryStats(MemoryStats* a_stats) override;          // 02
@@ -343,7 +341,6 @@ namespace RE
 		void  Deallocate(void* a_mem, std::uint32_t) override;                   // 0B
 
 		// members
-
 		std::uint64_t  unk_410;      // 410
 		std::byte      unk_418;      // 418
 		std::byte      gap_419[31];  // 419
