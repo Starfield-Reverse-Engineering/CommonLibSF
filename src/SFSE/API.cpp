@@ -60,6 +60,7 @@ namespace SFSE
 		stl_assert(a_intfc, "interface is null"sv);
 
 		(void)REL::Module::get();
+		(void)REL::IDDatabase::get();
 
 		auto&       storage = detail::APIStorage::get();
 		const auto& intfc = *a_intfc;
