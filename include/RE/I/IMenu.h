@@ -39,7 +39,7 @@ namespace RE
 		virtual ~IMenu()  // 00
 		{
 			using func_t = void (*)(IMenu*);
-			REL::Relocation<func_t> func(REL::ID(187216));
+			static REL::Relocation<func_t> func(REL::ID(187216));
 			func(this);
 		}
 
@@ -55,21 +55,21 @@ namespace RE
 		virtual bool ShouldHandleEvent(const InputEvent* a_event) override
 		{
 			using func_t = bool (*)(BSInputEventUser*, const InputEvent*);
-			REL::Relocation<func_t> func(REL::ID(187262));
+			static REL::Relocation<func_t> func(REL::ID(187262));
 			return func(this, a_event);
 		}
 
 		virtual void HandleEvent(const ThumbstickEvent* a_event) override
 		{
 			using func_t = void (*)(BSInputEventUser*, const ThumbstickEvent*);
-			REL::Relocation<func_t> func(REL::ID(187235));
+			static REL::Relocation<func_t> func(REL::ID(187235));
 			return func(this, a_event);
 		}
 
 		virtual void HandleEvent(const ButtonEvent* a_event) override
 		{
 			using func_t = void (*)(BSInputEventUser*, const ButtonEvent*);
-			REL::Relocation<func_t> func(REL::ID(187234));
+			static REL::Relocation<func_t> func(REL::ID(187234));
 			return func(this, a_event);
 		}
 
@@ -81,7 +81,7 @@ namespace RE
 		virtual bool LoadMovie(bool a_addEventDispatcher, bool a_arg2)  // 06
 		{
 			using func_t = decltype(&IMenu::LoadMovie);
-			REL::Relocation<func_t> func(REL::ID(187240));
+			static REL::Relocation<func_t> func(REL::ID(187240));
 			return func(this, a_addEventDispatcher, a_arg2);
 		}
 
@@ -90,21 +90,21 @@ namespace RE
 		virtual UI_MESSAGE_RESULT ProcessMessage(UIMessageData& a_message)  // 08
 		{
 			using func_t = decltype(&IMenu::ProcessMessage);
-			REL::Relocation<func_t> func(REL::ID(187247));
+			static REL::Relocation<func_t> func(REL::ID(187247));
 			return func(this, a_message);
 		}
 
 		virtual bool Unk09()  // 09
 		{
 			using func_t = decltype(&IMenu::Unk09);
-			REL::Relocation<func_t> func(REL::ID(80440));
+			static REL::Relocation<func_t> func(REL::ID(80440));
 			return func(this);
 		}
 
 		virtual bool Unk0A()  // 0A
 		{
 			using func_t = decltype(&IMenu::Unk0A);
-			REL::Relocation<func_t> func(REL::ID(187238));
+			static REL::Relocation<func_t> func(REL::ID(187238));
 			return func(this);
 		}
 
@@ -115,7 +115,7 @@ namespace RE
 		virtual bool Unk0E(void* a, bool b)  // 0E
 		{
 			using func_t = decltype(&IMenu::Unk0E);
-			REL::Relocation<func_t> func(REL::ID(187242));
+			static REL::Relocation<func_t> func(REL::ID(187242));
 			return func(this, a, b);
 		}
 
@@ -124,28 +124,28 @@ namespace RE
 		virtual uint64_t Unk10()  // 10
 		{
 			using func_t = decltype(&IMenu::Unk10);
-			REL::Relocation<uint64_t(IMenu*)> func(REL::ID(187241));
+			static REL::Relocation<uint64_t(IMenu*)> func(REL::ID(187241));
 			return func(this);
 		};
 
 		virtual uint64_t Unk11()  // 11
 		{
 			using func_t = decltype(&IMenu::Unk11);
-			REL::Relocation<func_t> func(REL::ID(187243));
+			static REL::Relocation<func_t> func(REL::ID(187243));
 			return func(this);
 		};
 
 		virtual uint64_t Unk12()  // 12
 		{
 			using func_t = decltype(&IMenu::Unk12);
-			REL::Relocation<func_t> func(REL::ID(80451));
+			static REL::Relocation<func_t> func(REL::ID(80451));
 			return func(this);
 		};
 
 		virtual BSFixedString* Unk13()  // 13
 		{
 			using func_t = decltype(&IMenu::Unk13);
-			REL::Relocation<func_t> func(REL::ID(76183));
+			static REL::Relocation<func_t> func(REL::ID(76183));
 			return func(this);
 		};
 
@@ -157,7 +157,7 @@ namespace RE
 		virtual bool Unk15(void* a)  // 15
 		{
 			using func_t = decltype(&IMenu::Unk15);
-			REL::Relocation<func_t> func(REL::ID(187225));
+			static REL::Relocation<func_t> func(REL::ID(187225));
 			return func(this, a);
 		};
 
@@ -174,21 +174,21 @@ namespace RE
 		virtual uint64_t Unk18(void* a, uint64_t b)  // 18
 		{
 			using func_t = decltype(&IMenu::Unk18);
-			REL::Relocation<func_t> func(REL::ID(1275268));
+			static REL::Relocation<func_t> func(REL::ID(1275268));
 			return func(this, a, b);
 		}
 
 		virtual uint64_t Unk19(void* a, int b, int c)
 		{  // 19
 			using func_t = decltype(&IMenu::Unk19);
-			REL::Relocation<func_t> func(REL::ID(187245));
+			static REL::Relocation<func_t> func(REL::ID(187245));
 			return func(this, a, b, c);
 		}
 
 		virtual float Unk1A()  // 1A
 		{
 			using func_t = decltype(&IMenu::Unk1A);
-			REL::Relocation<func_t> func(REL::ID(187232));
+			static REL::Relocation<func_t> func(REL::ID(187232));
 			return func(this);
 		};
 

@@ -81,7 +81,7 @@ namespace RE
 		bool CanUseArmor(TESRace* a_race) const
 		{
 			using func_t = decltype(&TESObjectARMO::CanUseArmor);
-			REL::Relocation<func_t> func{ ID::TESObjectARMO::CanUseArmor };
+			static REL::Relocation<func_t> func{ ID::TESObjectARMO::CanUseArmor };
 			return func(this, a_race);
 		}
 

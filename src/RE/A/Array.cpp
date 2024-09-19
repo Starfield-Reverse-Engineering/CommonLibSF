@@ -15,14 +15,14 @@ namespace RE::BSScript
 	Array* Array::ctor(const TypeInfo* type_info, std::uint32_t initial_size)
 	{
 		using func_t = decltype(&Array::ctor);
-		REL::Relocation<func_t> func{ ID::BSScript::Array::ctor };
+		static REL::Relocation<func_t> func{ ID::BSScript::Array::ctor };
 		return func(this, type_info, initial_size);
 	}
 
 	void Array::dtor()
 	{
 		using func_t = decltype(&Array::dtor);
-		REL::Relocation<func_t> func{ ID::BSScript::Array::dtor };
+		static REL::Relocation<func_t> func{ ID::BSScript::Array::dtor };
 		return func(this);
 	}
 

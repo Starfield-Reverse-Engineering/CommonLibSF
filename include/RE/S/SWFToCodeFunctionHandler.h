@@ -21,7 +21,7 @@ namespace RE
 		void RegisterNativeFunction(const char* name, uint64_t idx)
 		{
 			using func_t = decltype(&SWFToCodeFunctionHandler::RegisterNativeFunction);
-			REL::Relocation<func_t> func(REL::ID(187274));
+			static REL::Relocation<func_t> func(REL::ID(187274));
 			func(this, name, idx);
 		}
 	};

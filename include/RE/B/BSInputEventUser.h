@@ -97,7 +97,7 @@ namespace RE
 		virtual void InputEventUser_Unk_09(const InputEvent* a_event)        // 09
 		{
 			using func_t = decltype(&BSInputEventUser::InputEventUser_Unk_09);
-			REL::Relocation<func_t> func(REL::ID(178899));
+			static REL::Relocation<func_t> func(REL::ID(178899));
 			return func(this, a_event);
 		}
 

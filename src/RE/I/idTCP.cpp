@@ -124,49 +124,49 @@ namespace RE
 	bool NET_WaitForData(std::uintptr_t socket, std::uint32_t timeoutMs)
 	{
 		using func_t = decltype(&NET_WaitForData);
-		REL::Relocation<func_t> func{ ID::NET_WaitForData };
+		static REL::Relocation<func_t> func{ ID::NET_WaitForData };
 		return func(socket, timeoutMs);
 	}
 
 	void Sys_InitNetworking()
 	{
 		using func_t = decltype(&Sys_InitNetworking);
-		REL::Relocation<func_t> func{ ID::Sys_InitNetworking };
+		static REL::Relocation<func_t> func{ ID::Sys_InitNetworking };
 		return func();
 	}
 
 	bool idTCP::Listen(std::uint16_t port, bool blocking)
 	{
 		using func_t = decltype(&idTCP::Listen);
-		REL::Relocation<func_t> func{ ID::idTCP::Listen };
+		static REL::Relocation<func_t> func{ ID::idTCP::Listen };
 		return func(this, port, blocking);
 	}
 
 	bool idTCP::Accept(const idTCP& listener)
 	{
 		using func_t = decltype(&idTCP::Accept);
-		REL::Relocation<func_t> func{ ID::idTCP::Accept };
+		static REL::Relocation<func_t> func{ ID::idTCP::Accept };
 		return func(this, listener);
 	}
 
 	std::int32_t idTCP::Close()
 	{
 		using func_t = decltype(&idTCP::Close);
-		REL::Relocation<func_t> func{ ID::idTCP::Close };
+		static REL::Relocation<func_t> func{ ID::idTCP::Close };
 		return func(this);
 	}
 
 	std::int32_t idTCP::Read(void* buffer, std::uint32_t size)
 	{
 		using func_t = decltype(&idTCP::Read);
-		REL::Relocation<func_t> func{ ID::idTCP::Read };
+		static REL::Relocation<func_t> func{ ID::idTCP::Read };
 		return func(this, buffer, size);
 	}
 
 	std::int32_t idTCP::Write(const void* buffer, std::uint32_t size, std::uint32_t timeoutMs)
 	{
 		using func_t = decltype(&idTCP::Write);
-		REL::Relocation<func_t> func{ ID::idTCP::Write };
+		static REL::Relocation<func_t> func{ ID::idTCP::Write };
 		return func(this, buffer, size, timeoutMs);
 	}
 }

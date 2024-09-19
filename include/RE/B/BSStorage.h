@@ -80,21 +80,21 @@ namespace RE
 		BSStorageDefs::ErrorCode WriteString(const char* a_string, bool use32bitLength)
 		{
 			using func_t = decltype(&BSStorage::WriteString);
-			REL::Relocation<func_t> func{ ID::BSStorage::WriteString };
+			static REL::Relocation<func_t> func{ ID::BSStorage::WriteString };
 			return func(this, a_string, use32bitLength);
 		}
 
 		BSStorageDefs::ErrorCode PrepareStreamBuffer(std::size_t a_size)
 		{
 			using func_t = decltype(&BSStorage::PrepareStreamBuffer);
-			REL::Relocation<func_t> func{ ID::BSStorage::PrepareStreamBuffer };
+			static REL::Relocation<func_t> func{ ID::BSStorage::PrepareStreamBuffer };
 			return func(this, a_size);
 		}
 
 		BSStorageDefs::ErrorCode FlushStreamBuffer()
 		{
 			using func_t = decltype(&BSStorage::FlushStreamBuffer);
-			REL::Relocation<func_t> func{ ID::BSStorage::FlushStreamBuffer };
+			static REL::Relocation<func_t> func{ ID::BSStorage::FlushStreamBuffer };
 			return func(this);
 		}
 

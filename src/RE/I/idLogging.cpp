@@ -4,7 +4,7 @@ namespace RE::idLogging
 {
 	ILogger* GetLoggerSingleton()
 	{
-		REL::Relocation<ILogger**> singleton{ ID::idLogging::singleton };
+		static REL::Relocation<ILogger**> singleton{ ID::idLogging::singleton };
 		return *singleton;
 	}
 }

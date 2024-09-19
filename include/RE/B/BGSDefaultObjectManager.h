@@ -404,7 +404,7 @@ namespace RE
 
 	[[nodiscard]] inline std::span<DEFAULT_OBJECT_DATA, DEFAULT_OBJECT::kTotal> GetDefaultObjectData()
 	{
-		REL::Relocation<DEFAULT_OBJECT_DATA(*)[DEFAULT_OBJECT::kTotal]> data{ REL::ID(761776) };
+		static REL::Relocation<DEFAULT_OBJECT_DATA(*)[DEFAULT_OBJECT::kTotal]> data{ REL::ID(761776) };
 		return { *data };
 	}
 
@@ -419,7 +419,7 @@ namespace RE
 		[[nodiscard]] static BGSDefaultObjectManager* GetSingleton()
 		{
 			using func_t = decltype(&BGSDefaultObjectManager::GetSingleton);
-			REL::Relocation<func_t> func{ REL::ID(82283) };
+			static REL::Relocation<func_t> func{ REL::ID(82283) };
 			return func();
 		}
 

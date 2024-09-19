@@ -193,7 +193,7 @@ namespace SFSE
 			}
 
 			// Call to GameVM::BindEverythingToScript(IVirtualMachine**) from GameVM::GameVM()
-			REL::Relocation<uintptr_t> hookLoc{ REL::ID(169912), 0x514 };
+			static REL::Relocation<uintptr_t> hookLoc{ REL::ID(169912), 0x514 };
 			func = reinterpret_cast<call_t>(trampoline.write_call<5>(hookLoc.address(), &thunk));
 		}
 

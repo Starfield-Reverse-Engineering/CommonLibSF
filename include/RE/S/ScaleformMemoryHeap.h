@@ -56,7 +56,7 @@ namespace RE::Scaleform
 	public:
 		static MemoryHeapPT* GetSingleton()
 		{
-			REL::Relocation<MemoryHeapPT**> memoryHeapPT(REL::ID(820297));
+			static REL::Relocation<MemoryHeapPT**> memoryHeapPT(REL::ID(820297));
 			return *memoryHeapPT;
 		}
 	};

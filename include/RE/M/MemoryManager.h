@@ -27,14 +27,14 @@ namespace RE
 			AutoScrapBuffer* ctor(std::size_t a_size, std::size_t a_alignment)
 			{
 				using func_t = decltype(&AutoScrapBuffer::ctor);
-				REL::Relocation<func_t> func{ ID::MemoryManager::AutoScrapBuffer::ctor };
+				static REL::Relocation<func_t> func{ ID::MemoryManager::AutoScrapBuffer::ctor };
 				return func(this, a_size, a_alignment);
 			}
 
 			void dtor()
 			{
 				using func_t = decltype(&AutoScrapBuffer::dtor);
-				REL::Relocation<func_t> func{ ID::MemoryManager::AutoScrapBuffer::dtor };
+				static REL::Relocation<func_t> func{ ID::MemoryManager::AutoScrapBuffer::dtor };
 				return func(this);
 			}
 		};
@@ -43,28 +43,28 @@ namespace RE
 		[[nodiscard]] static MemoryManager* GetSingleton()
 		{
 			using func_t = decltype(&MemoryManager::GetSingleton);
-			const REL::Relocation<func_t> func{ ID::MemoryManager::GetSingleton };
+			static const REL::Relocation<func_t> func{ ID::MemoryManager::GetSingleton };
 			return func();
 		}
 
 		[[nodiscard]] void* Allocate(std::size_t a_size, std::uint32_t a_alignment, bool a_alignmentRequired)
 		{
 			using func_t = decltype(&MemoryManager::Allocate);
-			const REL::Relocation<func_t> func{ ID::MemoryManager::Allocate };
+			static const REL::Relocation<func_t> func{ ID::MemoryManager::Allocate };
 			return func(this, a_size, a_alignment, a_alignmentRequired);
 		}
 
 		void Free(void* a_ptr, bool a_alignmentRequired)
 		{
 			using func_t = decltype(&MemoryManager::Free);
-			const REL::Relocation<func_t> func{ ID::MemoryManager::Free };
+			static const REL::Relocation<func_t> func{ ID::MemoryManager::Free };
 			return func(this, a_ptr, a_alignmentRequired);
 		}
 
 		ScrapHeap* GetThreadScrapHeap()
 		{
 			using func_t = decltype(&MemoryManager::GetThreadScrapHeap);
-			const REL::Relocation<func_t> func{ ID::MemoryManager::GetThreadScrapHeap };
+			static const REL::Relocation<func_t> func{ ID::MemoryManager::GetThreadScrapHeap };
 			return func(this);
 		}
 	};

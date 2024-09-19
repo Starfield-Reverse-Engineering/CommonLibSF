@@ -12,7 +12,7 @@ namespace RE
 		[[nodiscard]] static BSTEventSource<TESFormIDRemapEvent>* GetEventSource()
 		{
 			using func_t = decltype(&TESFormIDRemapEvent::GetEventSource);
-			REL::Relocation<func_t> func{ REL::ID(107167) };
+			static REL::Relocation<func_t> func{ REL::ID(107167) };
 			return func();
 		}
 

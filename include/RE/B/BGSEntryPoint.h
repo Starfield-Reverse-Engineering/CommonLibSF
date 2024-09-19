@@ -267,7 +267,7 @@ namespace RE
 		inline void HandleEntryPoint(ENTRY_POINT a_entryPoint, Actor* a_perkOwner, Args... a_args)
 		{
 			using func_t = decltype(&BGSEntryPoint::HandleEntryPoint<Args...>);
-			REL::Relocation<func_t> func{ REL::ID(110912) };
+			static REL::Relocation<func_t> func{ REL::ID(110912) };
 			return func(a_entryPoint, a_perkOwner, a_args...);
 		}
 	}

@@ -17,7 +17,7 @@ namespace RE
 		void VPrint(const char* a_fmt, std::va_list a_args)
 		{
 			using func_t = decltype(&ConsoleLog::VPrint);
-			REL::Relocation<func_t> func{ ID::ConsoleLog::VPrint };
+			static REL::Relocation<func_t> func{ ID::ConsoleLog::VPrint };
 			func(this, a_fmt, a_args);
 		}
 

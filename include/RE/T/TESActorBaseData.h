@@ -97,14 +97,14 @@ namespace RE
 		[[nodiscard]] std::uint16_t GetLevel() const
 		{
 			using func_t = decltype(&TESActorBaseData::GetLevel);
-			REL::Relocation<func_t> func{ ID::TESActorBaseData::GetLevel };
+			static REL::Relocation<func_t> func{ ID::TESActorBaseData::GetLevel };
 			return func(this);
 		}
 
 		[[nodiscard]] bool GetUsesLeveledTemplate(std::uint32_t a_templateUseFlag = 0xFFFFFFFF)
 		{
 			using func_t = decltype(&TESActorBaseData::GetUsesLeveledTemplate);
-			REL::Relocation<func_t> func{ ID::TESActorBaseData::GetUsesLeveledTemplate };
+			static REL::Relocation<func_t> func{ ID::TESActorBaseData::GetUsesLeveledTemplate };
 			return func(this, a_templateUseFlag);
 		}
 
