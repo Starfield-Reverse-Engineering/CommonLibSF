@@ -69,4 +69,4 @@ namespace RE::Scaleform
 	void operator delete(void* a_ptr) { RE::Scaleform::MemoryHeapPT::GetSingleton()->Free(a_ptr); }                                         \
 	void operator delete(void* a_ptr, std::align_val_t) { RE::Scaleform::MemoryHeapPT::GetSingleton()->Free(a_ptr); }                       \
 	void operator delete(void* a_ptr, std::size_t) { RE::Scaleform::MemoryHeapPT::GetSingleton()->Free(a_ptr); }                            \
-	void operator delete(void* a_ptr, std::size_t, std::align_val_t) { RE::Scaleform::MemoryHeapPT::GetSingleton()->Free(a_ptr); }          \
+	void operator delete(void* a_ptr, std::size_t, std::align_val_t) { RE::Scaleform::MemoryHeapPT::GetSingleton()->Free(a_ptr); }\
