@@ -43,14 +43,6 @@ namespace RE
 			func(this);
 		}
 
-		void* operator new(std::size_t count) { return Scaleform::MemoryHeapPT::GetSingleton()->Allocate(count, 0); }
-		void* operator new(std::size_t count, std::align_val_t) { return Scaleform::MemoryHeapPT::GetSingleton()->Allocate(count, 0); }
-
-		void operator delete(void* a_ptr) { Scaleform::MemoryHeapPT::GetSingleton()->Free(a_ptr); }
-		void operator delete(void* a_ptr, std::align_val_t) { Scaleform::MemoryHeapPT::GetSingleton()->Free(a_ptr); }
-		void operator delete(void* a_ptr, std::size_t) { Scaleform::MemoryHeapPT::GetSingleton()->Free(a_ptr); }
-		void operator delete(void* a_ptr, std::size_t, std::align_val_t) { Scaleform::MemoryHeapPT::GetSingleton()->Free(a_ptr); }
-
 		// override
 		virtual bool ShouldHandleEvent(const InputEvent* a_event) override
 		{
@@ -204,6 +196,7 @@ namespace RE
 			flagsUpdated = true;
 		}
 
+		SF_SCALEFORM_HEAP_REDEFINE_NEW(IMenu);
 
 		// members
 		Scaleform::GFx::Value                 menuObj;       // 058
