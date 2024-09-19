@@ -9,6 +9,9 @@
 #include "RE/S/ScaleformMemoryHeap.h"
 #include "RE/U/UIMessageQueue.h"
 
+#define SF_MENU_NAME(NAME) \
+	static constexpr std::string_view MENU_NAME = NAME
+
 namespace RE
 {
 	struct UpdateSceneRectEvent;

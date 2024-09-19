@@ -9,5 +9,6 @@ namespace RE
 	{
 	public:
 		SF_RTTI_VTABLE(Console);
+		SF_MENU_NAME("Console");
 	};
 }
