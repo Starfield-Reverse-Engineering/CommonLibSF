@@ -74,7 +74,7 @@ namespace SFSE
 
 		if (a_log) {
 			log::init();
-			log::info("{} v{}", GetPluginName(), GetPluginVersion());
+			log::info("{} v{}"sv, GetPluginName(), GetPluginVersion());
 		}
 
 		if (!storage.apiInit) {
