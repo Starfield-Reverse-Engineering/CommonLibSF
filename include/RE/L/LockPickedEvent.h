@@ -15,14 +15,14 @@ namespace RE
 		[[nodiscard]] static BSTEventSource<LockPickedEvent>* GetEventSource()
 		{
 			using func_t = decltype(&LockPickedEvent::GetEventSource);
-			REL::Relocation<func_t> func{ ID::LockPickedEvent::GetEventSource };
+			static REL::Relocation<func_t> func{ ID::LockPickedEvent::GetEventSource };
 			return func();
 		}
 
 		static void Notify(const NiPointer<TESObjectREFR>& a_actionRef, const NiPointer<TESObjectREFR>& a_lock, bool a_succeeded, bool a_isOffLimits, LOCK_LEVEL lockLevel, std::uint32_t a_numDigiPicksUsed, float a_arg7 = 0.0f, float a_arg8 = 0.0f, BGSTerminalMenu* a_terminalMenu = nullptr, std::int32_t a_arg10 = -1)
 		{
 			using func_t = decltype(&LockPickedEvent::Notify);
-			REL::Relocation<func_t> func{ ID::LockPickedEvent::Notify };
+			static REL::Relocation<func_t> func{ ID::LockPickedEvent::Notify };
 			return func(a_actionRef, a_lock, a_succeeded, a_isOffLimits, lockLevel, a_numDigiPicksUsed, a_arg7, a_arg8, a_terminalMenu, a_arg10);
 		}
 

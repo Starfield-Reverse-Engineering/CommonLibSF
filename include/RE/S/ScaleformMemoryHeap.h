@@ -56,8 +56,17 @@ namespace RE::Scaleform
 	public:
 		static MemoryHeapPT* GetSingleton()
 		{
-			REL::Relocation<MemoryHeapPT**> memoryHeapPT(REL::ID(820297));
+			static REL::Relocation<MemoryHeapPT**> memoryHeapPT(REL::ID(820297));
 			return *memoryHeapPT;
 		}
 	};
 }
+
+#define SF_SCALEFORM_HEAP_REDEFINE_NEW(...)                                                                                                 \
+	void* operator new(std::size_t a_count) { return RE::Scaleform::MemoryHeapPT::GetSingleton()->Allocate(a_count, 0); }                   \
+	void* operator new(std::size_t a_count, std::align_val_t) { return RE::Scaleform::MemoryHeapPT::GetSingleton()->Allocate(a_count, 0); } \
+                                                                                                                                            \
+	void operator delete(void* a_ptr) { RE::Scaleform::MemoryHeapPT::GetSingleton()->Free(a_ptr); }                                         \
+	void operator delete(void* a_ptr, std::align_val_t) { RE::Scaleform::MemoryHeapPT::GetSingleton()->Free(a_ptr); }                       \
+	void operator delete(void* a_ptr, std::size_t) { RE::Scaleform::MemoryHeapPT::GetSingleton()->Free(a_ptr); }                            \
+	void operator delete(void* a_ptr, std::size_t, std::align_val_t) { RE::Scaleform::MemoryHeapPT::GetSingleton()->Free(a_ptr); }          \

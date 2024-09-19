@@ -13,7 +13,7 @@ namespace RE
 		[[nodiscard]] static BSTEventSource<TESDeathEvent>* GetEventSource()
 		{
 			using func_t = decltype(&TESDeathEvent::GetEventSource);
-			REL::Relocation<func_t> func{ ID::TESDeathEvent::GetEventSource };
+			static REL::Relocation<func_t> func{ ID::TESDeathEvent::GetEventSource };
 			return func();
 		}
 

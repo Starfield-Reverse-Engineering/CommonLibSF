@@ -15,7 +15,7 @@ namespace RE
 
 		[[nodiscard]] static INISettingCollection* GetSingleton()
 		{
-			REL::Relocation<INISettingCollection**> singleton{ REL::ID(885862) };
+			static REL::Relocation<INISettingCollection**> singleton{ REL::ID(885862) };
 			return *singleton;
 		}
 

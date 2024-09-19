@@ -94,7 +94,7 @@ namespace RE
 		bool ToEulerAnglesXYZ(float& a_x, float& a_y, float& a_z)
 		{
 			using func_t = decltype(&NiMatrix3::ToEulerAnglesXYZ);
-			REL::Relocation<func_t> func{ ID::NiMatrix3::ToEulerAnglesXYZ };
+			static REL::Relocation<func_t> func{ ID::NiMatrix3::ToEulerAnglesXYZ };
 			return func(this, a_x, a_y, a_z);
 		}
 

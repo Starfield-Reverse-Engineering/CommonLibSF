@@ -64,16 +64,33 @@ namespace RE
 			return *singleton;
 		}
 
-		bool IsMenuOpen(const BSFixedString& a_name)
+		Scaleform::Ptr<IMenu> GetMenu(const BSFixedString& a_menuName) const
+		{
+			auto it = menuMap.find(a_menuName);
+			return it != menuMap.end() ? it->Value.menu : nullptr;
+		}
+
+		Scaleform::Ptr<Scaleform::GFx::Movie> GetMenuMovie(const BSFixedString& a_menuName) const
+		{
+			auto menu = GetMenu(a_menuName);
+			return menu ? menu->uiMovie : nullptr;
+		}
+
+		bool IsMenuOpen(const BSFixedString& a_name) const
 		{
 			using func_t = decltype(&UI::IsMenuOpen);
-			REL::Relocation<func_t> func{ ID::UI::IsMenuOpen };
+			static REL::Relocation<func_t> func{ ID::UI::IsMenuOpen };
 			return func(this, a_name);
 		}
 
-		bool IsMenuRegistered(const BSFixedString& a_name)
+		bool IsMenuRegistered(const BSFixedString& a_name) const
 		{
 			return menuMap.contains(a_name);
+		}
+
+		bool IsMenusVisible() const
+		{
+			return menusVisible;
 		}
 
 		template <class T>
@@ -83,12 +100,11 @@ namespace RE
 			if (menuMap.contains(a_name))
 				return false;
 
-			auto& entry = menuMap[a_name];
-			entry.initFunc = [](Scaleform::Ptr<IMenu>* menu) {
-				auto                                                                createdMenu = new T();
-				REL::Relocation<Scaleform::Ptr<IMenu>*(Scaleform::Ptr<IMenu>*, T*)> CopyRef(REL::ID(80375));
-				CopyRef(menu, createdMenu);
-				return menu;
+			menuMap[a_name].initFunc = [](Scaleform::Ptr<IMenu>* a_menu) {
+				using func_t = Scaleform::Ptr<IMenu>*(Scaleform::Ptr<IMenu>*, T*);
+				static REL::Relocation<func_t> copyRef{ REL::ID(80375) };
+				copyRef(a_menu, new T());
+				return a_menu;
 			};
 
 			return true;
@@ -108,14 +124,14 @@ namespace RE
 
 		std::uint8_t                           pad178[0x278];  // 178
 		BSTArray<Scaleform::Ptr<IMenu>>        menuStack;      // 3F0
-		std::uint8_t                           pad02[0x18];
-		uint64_t                               unk418;
-		uint64_t                               unk420;
-		uint64_t                               unk428;
-		BSTHashMap<BSFixedString, UIMenuEntry> menuMap;  //430
-		void*                                  unk460_4F8[18];
-		uint16_t                               unk4F8;
-		bool                                   menusVisible;  // 4FA
+		std::uint8_t                           pad02[0x18];    // 400
+		uint64_t                               unk418;         // 418
+		uint64_t                               unk420;         // 420
+		uint64_t                               unk428;         // 428
+		BSTHashMap<BSFixedString, UIMenuEntry> menuMap;        // 430
+		void*                                  unk468[18];     // 468
+		uint16_t                               unk4F8;         // 4F8
+		bool                                   menusVisible;   // 4FA
 	};
 	static_assert(offsetof(UI, menuStack) == 0x3F0);
 	static_assert(offsetof(UI, menuMap) == 0x430);

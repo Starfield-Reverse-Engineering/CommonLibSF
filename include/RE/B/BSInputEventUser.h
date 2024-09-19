@@ -17,66 +17,112 @@ namespace RE
 	class InputEvent
 	{
 	public:
-		enum DeviceType : uint32_t
+		SF_RTTI(InputEvent);
+
+		enum class DeviceType : std::uint32_t
 		{
-			DeviceKeyboard = 0,
-			DeviceMouse,
-			DeviceGamepad,
-			DeviceKinect,
+			kNone = static_cast<std::underlying_type_t<DeviceType>>(-1),
+
+			kKeyboard = 0,
+			kMouse,
+			kGamepad,
+			kKinect,
 		};
 
-		enum EventType : uint32_t
+		enum class EventType : std::uint32_t
 		{
-			Button = 0,
-			MouseMove,
-			CursorMove,
-			Char,
-			Thumbstick,
-			DeviceConnect,
-			Kinect,
-			None,
+			kButton = 0,
+			kMouseMove,
+			kCursorMove,
+			kChar,
+			kThumbstick,
+			kDeviceConnect,
+			kKinect,
+			kNone,
 		};
 
-		enum Status : uint32_t
+		enum class Status : std::uint32_t
 		{
-			Unhandled = 0,
-			Continue,
-			Stop,
+			kUnhandled = 0,
+			kContinue,
+			kStop,
 		};
 
-		virtual ~InputEvent() = default;  //00
-		virtual bool          Unk01() { return false; }
-		virtual BSFixedString GetUserEventOrDisabled() { return ""; }
+		virtual ~InputEvent() = default;  // 00
 
-		uint32_t    deviceType;  //08
-		uint32_t    deviceId;
-		uint32_t    eventType;  //10
-		uint32_t    pad14;
-		InputEvent* next;      //18
-		uint32_t    timeCode;  //20
-		uint32_t    status;
+		// add
+		virtual bool                HasIDCode() const { return false; }
+		virtual const BSFixedString QUserEvent() const { return ""; }
+
+		// members
+		DeviceType    deviceType{ DeviceType::kNone };             // 08
+		std::uint32_t deviceID{ 0 };                               // 0C
+		EventType     eventType{ EventType::kNone };               // 10
+		std::uint32_t pad14;                                       // 14
+		InputEvent*   next{ nullptr };                             // 18
+		std::uint32_t timeCode{ static_cast<std::uint32_t>(-1) };  // 20
+		Status        status{ Status::kUnhandled };                // 24
 	};
+	static_assert(sizeof(InputEvent) == 0x28);
 
-	class IDEvent : public InputEvent
+	class IDEvent :
+		public InputEvent
 	{
 	public:
-		virtual ~IDEvent() = default;
-		BSFixedString userEvent;  //28
-		uint32_t      idCode;     //30
-		bool          disabled;   //34
-	};
+		SF_RTTI_VTABLE(IDEvent);
 
-	class ButtonEvent : public IDEvent
+		virtual ~IDEvent() = default;  // 00
+
+		// override (InputEvent)
+		virtual bool HasIDCode() const override { return true; }
+
+		virtual const BSFixedString QUserEvent() const override
+		{
+			return disabled ? "DISABLED" : strUserEvent;
+		}
+
+		// members
+		BSFixedString strUserEvent;       // 28
+		std::int32_t  idCode{ -1 };       // 30
+		bool          disabled{ false };  // 34
+	};
+	static_assert(sizeof(IDEvent) == 0x38);
+
+	class ICanBeChorded
 	{
 	public:
-		virtual ~ButtonEvent() = default;
-		void* iCanBeDebounced;  //38
-		void* iCanBeChorded;    //40
-		float value;            //48
-		float held;             //4C
-		void* unk50;
-		void* bsDebounceManager;
+		SF_RTTI(ICanBeChorded);
+
+		// members
+		std::uint64_t pad00;
 	};
+
+	class ICanBeDebounced :
+		public ICanBeChorded
+	{
+	public:
+		SF_RTTI(ICanBeDebounced);
+
+		// members
+		std::uint64_t pad00;
+	};
+
+	class ButtonEvent :
+		public IDEvent,
+		public ICanBeDebounced
+	{
+	public:
+		SF_RTTI_VTABLE(ButtonEvent);
+
+		virtual ~ButtonEvent() = default;  // 00
+
+		// members
+		float value{ 0.0f };         // 48
+		float heldDownSecs{ 0.0f };  // 4C
+		void* unk50;                 // 50
+		void* debounceManager;       // 58
+	};
+	static_assert(sizeof(ButtonEvent) == 0x60);
 
 	class BSInputEventUser
 	{
@@ -86,18 +132,19 @@ namespace RE
 		virtual ~BSInputEventUser() = default;  // 00
 
 		// add
-		virtual bool ShouldHandleEvent(const InputEvent*) { return false; }  // 01
-		virtual void HandleEvent(const KinectEvent*) { return; }             // 02
-		virtual void HandleEvent(const DeviceConnectEvent*) { return; }      // 03
-		virtual void HandleEvent(const ThumbstickEvent*) { return; }         // 04
-		virtual void HandleEvent(const CursorMoveEvent*) { return; }         // 05
-		virtual void HandleEvent(const MouseMoveEvent*) { return; }          // 06
-		virtual void HandleEvent(const CharacterEvent*) { return; }          // 07
-		virtual void HandleEvent(const ButtonEvent*) { return; }             // 08
-		virtual void InputEventUser_Unk_09(const InputEvent* a_event)        // 09
+		virtual bool ShouldHandleEvent(const InputEvent*) { return false; }       // 01
+		virtual void OnKinectEvent(const KinectEvent*) { return; }                // 02
+		virtual void OnDeviceConnectEvent(const DeviceConnectEvent*) { return; }  // 03
+		virtual void OnThumbstickEvent(const ThumbstickEvent*) { return; }        // 04
+		virtual void OnCursorMoveEvent(const CursorMoveEvent*) { return; }        // 05
+		virtual void OnMouseMoveEvent(const MouseMoveEvent*) { return; }          // 06
+		virtual void OnCharacterEvent(const CharacterEvent*) { return; }          // 07
+		virtual void OnButtonEvent(const ButtonEvent*) { return; }                // 08
+
+		virtual void InputEventUser_Unk_09(const InputEvent* a_event)  // 09
 		{
 			using func_t = decltype(&BSInputEventUser::InputEventUser_Unk_09);
-			REL::Relocation<func_t> func(REL::ID(178899));
+			static REL::Relocation<func_t> func(REL::ID(178899));
 			return func(this, a_event);
 		}
 

@@ -53,14 +53,14 @@ namespace RE
 		uint64_t SetUserFlags(uint64_t flags, bool enabled)
 		{
 			using func_t = decltype(&BSInputEnableLayer::SetUserFlags);
-			REL::Relocation<func_t> func(REL::ID(106486));
+			static REL::Relocation<func_t> func(REL::ID(106486));
 			return func(this, flags, enabled);
 		}
 
 		uint64_t SetOtherFlags(uint64_t flags, bool enabled)
 		{
 			using func_t = decltype(&BSInputEnableLayer::SetOtherFlags);
-			REL::Relocation<func_t> func(REL::ID(109447));
+			static REL::Relocation<func_t> func(REL::ID(109447));
 			return func(this, flags, enabled);
 		}
 	};
@@ -96,7 +96,7 @@ namespace RE
 			bool result = true;
 			if (data) {
 				using func_t = decltype(&InputEnableLayer::Free);
-				REL::Relocation<func_t> func(REL::ID(36626));
+				static REL::Relocation<func_t> func(REL::ID(36626));
 				result = func(this);
 				data = nullptr;
 			}

@@ -79,7 +79,7 @@ namespace RE::BSScript
 			virtual TypeInfo* GetParam(std::uint32_t a_idx, BSFixedString* a_nameOut, TypeInfo* a_typeOut) override
 			{
 				using func_t = std::add_pointer_t<TypeInfo*(Internal::VDescTable*, std::uint32_t, BSFixedString*, TypeInfo*)>;
-				REL::Relocation<func_t> func{ ID::BSScript::Internal::NF_util::NativeFunctionBase::GetParam };
+				static REL::Relocation<func_t> func{ ID::BSScript::Internal::NF_util::NativeFunctionBase::GetParam };
 				return func(&_params, a_idx, a_nameOut, a_typeOut);
 			}
 
@@ -95,14 +95,14 @@ namespace RE::BSScript
 			virtual CallResult Call(const BSTSmartPointer<Stack>& a_stack, ErrorLogger& a_errorLogger, Internal::VirtualMachine& a_vm, StackFrame* a_frame) override
 			{
 				using func_t = decltype(&NativeFunctionBase::Call);
-				REL::Relocation<func_t> func{ ID::BSScript::Internal::NF_util::NativeFunctionBase::Invoke };
+				static REL::Relocation<func_t> func{ ID::BSScript::Internal::NF_util::NativeFunctionBase::Invoke };
 				return func(this, a_stack, a_errorLogger, a_vm, a_frame);
 			}
 
 			virtual BSFixedString& GetSourceFilename() override
 			{
 				using func_t = decltype(&NativeFunctionBase::GetSourceFilename);
-				REL::Relocation<func_t> func{ ID::BSScript::Internal::NF_util::NativeFunctionBase::Unk_10 };
+				static REL::Relocation<func_t> func{ ID::BSScript::Internal::NF_util::NativeFunctionBase::Unk_10 };
 				return func(this);
 			}
 
@@ -131,14 +131,14 @@ namespace RE::BSScript
 			virtual bool GetVarNameForStackIndex(std::uint32_t a_idx, BSFixedString& a_variableName) override
 			{
 				using func_t = decltype(&NativeFunctionBase::GetVarNameForStackIndex);
-				REL::Relocation<func_t> func{ ID::BSScript::Internal::NF_util::NativeFunctionBase::GetParamInfo };
+				static REL::Relocation<func_t> func{ ID::BSScript::Internal::NF_util::NativeFunctionBase::GetParamInfo };
 				return func(this, a_idx, a_variableName);
 			}
 
 			virtual void* Unk_15(std::uint64_t a_arg0, std::uint64_t a_arg1) override
 			{
 				using func_t = decltype(&NativeFunctionBase::Unk_15);
-				REL::Relocation<func_t> func{ ID::BSScript::Internal::NF_util::NativeFunctionBase::Unk_15 };
+				static REL::Relocation<func_t> func{ ID::BSScript::Internal::NF_util::NativeFunctionBase::Unk_15 };
 				return func(this, a_arg0, a_arg1);
 			}
 

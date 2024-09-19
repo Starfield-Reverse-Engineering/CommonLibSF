@@ -9,6 +9,9 @@
 #include "RE/S/ScaleformMemoryHeap.h"
 #include "RE/U/UIMessageQueue.h"
 
+#define SF_MENU_NAME(NAME) \
+	static constexpr std::string_view MENU_NAME = NAME
+
 namespace RE
 {
 	struct UpdateSceneRectEvent;
@@ -21,7 +24,7 @@ namespace RE
 	public:
 		SF_RTTI_VTABLE(IMenu);
 
-		enum Flag : uint32_t
+		enum Flag : std::uint32_t
 		{
 			Flag0 = 1 << 0,
 			Flag1 = 1 << 1,
@@ -39,49 +42,41 @@ namespace RE
 		virtual ~IMenu()  // 00
 		{
 			using func_t = void (*)(IMenu*);
-			REL::Relocation<func_t> func(REL::ID(187216));
+			static REL::Relocation<func_t> func(REL::ID(187216));
 			func(this);
 		}
-
-		void* operator new(std::size_t count) { return Scaleform::MemoryHeapPT::GetSingleton()->Allocate(count, 0); }
-		void* operator new(std::size_t count, std::align_val_t) { return Scaleform::MemoryHeapPT::GetSingleton()->Allocate(count, 0); }
-
-		void operator delete(void* a_ptr) { Scaleform::MemoryHeapPT::GetSingleton()->Free(a_ptr); }
-		void operator delete(void* a_ptr, std::align_val_t) { Scaleform::MemoryHeapPT::GetSingleton()->Free(a_ptr); }
-		void operator delete(void* a_ptr, std::size_t) { Scaleform::MemoryHeapPT::GetSingleton()->Free(a_ptr); }
-		void operator delete(void* a_ptr, std::size_t, std::align_val_t) { Scaleform::MemoryHeapPT::GetSingleton()->Free(a_ptr); }
 
 		// override
 		virtual bool ShouldHandleEvent(const InputEvent* a_event) override
 		{
 			using func_t = bool (*)(BSInputEventUser*, const InputEvent*);
-			REL::Relocation<func_t> func(REL::ID(187262));
+			static REL::Relocation<func_t> func(REL::ID(187262));
 			return func(this, a_event);
 		}
 
-		virtual void HandleEvent(const ThumbstickEvent* a_event) override
+		virtual void OnThumbstickEvent(const ThumbstickEvent* a_event) override
 		{
 			using func_t = void (*)(BSInputEventUser*, const ThumbstickEvent*);
-			REL::Relocation<func_t> func(REL::ID(187235));
+			static REL::Relocation<func_t> func(REL::ID(187235));
 			return func(this, a_event);
 		}
 
-		virtual void HandleEvent(const ButtonEvent* a_event) override
+		virtual void OnButtonEvent(const ButtonEvent* a_event) override
 		{
 			using func_t = void (*)(BSInputEventUser*, const ButtonEvent*);
-			REL::Relocation<func_t> func(REL::ID(187234));
+			static REL::Relocation<func_t> func(REL::ID(187234));
 			return func(this, a_event);
 		}
 
 		// add
-		virtual const char* GetName() const = 0;      // 03
-		virtual const char* GetRootPath() const = 0;  // 04
-		virtual uint64_t    GetUnk05() = 0;           // 05
+		virtual const char*   GetName() const = 0;      // 03
+		virtual const char*   GetRootPath() const = 0;  // 04
+		virtual std::uint64_t GetUnk05() = 0;           // 05
 
 		virtual bool LoadMovie(bool a_addEventDispatcher, bool a_arg2)  // 06
 		{
 			using func_t = decltype(&IMenu::LoadMovie);
-			REL::Relocation<func_t> func(REL::ID(187240));
+			static REL::Relocation<func_t> func(REL::ID(187240));
 			return func(this, a_addEventDispatcher, a_arg2);
 		}
 
@@ -90,21 +85,21 @@ namespace RE
 		virtual UI_MESSAGE_RESULT ProcessMessage(UIMessageData& a_message)  // 08
 		{
 			using func_t = decltype(&IMenu::ProcessMessage);
-			REL::Relocation<func_t> func(REL::ID(187247));
+			static REL::Relocation<func_t> func(REL::ID(187247));
 			return func(this, a_message);
 		}
 
 		virtual bool Unk09()  // 09
 		{
 			using func_t = decltype(&IMenu::Unk09);
-			REL::Relocation<func_t> func(REL::ID(80440));
+			static REL::Relocation<func_t> func(REL::ID(80440));
 			return func(this);
 		}
 
 		virtual bool Unk0A()  // 0A
 		{
 			using func_t = decltype(&IMenu::Unk0A);
-			REL::Relocation<func_t> func(REL::ID(187238));
+			static REL::Relocation<func_t> func(REL::ID(187238));
 			return func(this);
 		}
 
@@ -112,40 +107,40 @@ namespace RE
 		virtual void Unk_0C(void) {}  // 0C
 		virtual void Unk_0D(void) {}  // 0D
 
-		virtual bool Unk0E(void* a, bool b)  // 0E
+		virtual bool Unk0E(void* a_arg1, bool a_arg2)  // 0E
 		{
 			using func_t = decltype(&IMenu::Unk0E);
-			REL::Relocation<func_t> func(REL::ID(187242));
-			return func(this, a, b);
+			static REL::Relocation<func_t> func(REL::ID(187242));
+			return func(this, a_arg1, a_arg2);
 		}
 
 		virtual void Unk0F(){};  // 0F
 
-		virtual uint64_t Unk10()  // 10
+		virtual std::uint64_t Unk10()  // 10
 		{
 			using func_t = decltype(&IMenu::Unk10);
-			REL::Relocation<uint64_t(IMenu*)> func(REL::ID(187241));
+			static REL::Relocation<uint64_t(IMenu*)> func(REL::ID(187241));
 			return func(this);
 		};
 
-		virtual uint64_t Unk11()  // 11
+		virtual std::uint64_t Unk11()  // 11
 		{
 			using func_t = decltype(&IMenu::Unk11);
-			REL::Relocation<func_t> func(REL::ID(187243));
+			static REL::Relocation<func_t> func(REL::ID(187243));
 			return func(this);
 		};
 
-		virtual uint64_t Unk12()  // 12
+		virtual std::uint64_t Unk12()  // 12
 		{
 			using func_t = decltype(&IMenu::Unk12);
-			REL::Relocation<func_t> func(REL::ID(80451));
+			static REL::Relocation<func_t> func(REL::ID(80451));
 			return func(this);
 		};
 
 		virtual BSFixedString* Unk13()  // 13
 		{
 			using func_t = decltype(&IMenu::Unk13);
-			REL::Relocation<func_t> func(REL::ID(76183));
+			static REL::Relocation<func_t> func(REL::ID(76183));
 			return func(this);
 		};
 
@@ -154,11 +149,11 @@ namespace RE
 			return true;
 		};
 
-		virtual bool Unk15(void* a)  // 15
+		virtual bool Unk15(void* a_arg1)  // 15
 		{
 			using func_t = decltype(&IMenu::Unk15);
-			REL::Relocation<func_t> func(REL::ID(187225));
-			return func(this, a);
+			static REL::Relocation<func_t> func(REL::ID(187225));
+			return func(this, a_arg1);
 		};
 
 		virtual bool Unk16()  // 16
@@ -171,39 +166,42 @@ namespace RE
 			return false;
 		};
 
-		virtual uint64_t Unk18(void* a, uint64_t b)  // 18
+		virtual std::uint64_t Unk18(void* a_arg1, std::uint64_t a_arg2)  // 18
 		{
 			using func_t = decltype(&IMenu::Unk18);
-			REL::Relocation<func_t> func(REL::ID(1275268));
-			return func(this, a, b);
+			static REL::Relocation<func_t> func(REL::ID(1275268));
+			return func(this, a_arg1, a_arg2);
 		}
 
-		virtual uint64_t Unk19(void* a, int b, int c)
-		{  // 19
+		virtual std::uint64_t Unk19(void* a_arg1, std::int32_t a_arg2, std::int32_t a_arg3)  // 19
+		{
 			using func_t = decltype(&IMenu::Unk19);
-			REL::Relocation<func_t> func(REL::ID(187245));
-			return func(this, a, b, c);
+			static REL::Relocation<func_t> func(REL::ID(187245));
+			return func(this, a_arg1, a_arg2, a_arg3);
 		}
 
 		virtual float Unk1A()  // 1A
 		{
 			using func_t = decltype(&IMenu::Unk1A);
-			REL::Relocation<func_t> func(REL::ID(187232));
+			static REL::Relocation<func_t> func(REL::ID(187232));
 			return func(this);
 		};
 
-		void SetFlags(uint32_t _flags)
+		void SetFlags(std::uint32_t a_flags)
 		{
-			flags |= _flags;
+			flags |= a_flags;
 			flagsUpdated = true;
 		}
 
-		void RemoveFlags(uint32_t _flags)
+		void RemoveFlags(std::uint32_t a_flags)
 		{
-			flags &= ~_flags;
+			flags &= ~a_flags;
 			flagsUpdated = true;
 		}
 
+		SF_SCALEFORM_HEAP_REDEFINE_NEW(IMenu);
+
+		// members
 		Scaleform::GFx::Value                 menuObj;       // 058
 		Scaleform::Ptr<Scaleform::GFx::Movie> uiMovie;       // 088
 		std::uint64_t                         unk090;        // 090

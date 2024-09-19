@@ -62,7 +62,7 @@ namespace RE
 	void BSSystemFile::Flush()
 	{
 		using func_t = decltype(&BSSystemFile::Flush);
-		REL::Relocation<func_t> func{ ID::BSSystemFile::Flush };
+		static REL::Relocation<func_t> func{ ID::BSSystemFile::Flush };
 		return func(this);
 	}
 
@@ -75,7 +75,7 @@ namespace RE
 	BSSystemFile::ErrorCode BSSystemFile::GetSize(std::uint64_t& r_size)
 	{
 		using func_t = decltype(&BSSystemFile::GetSize);
-		REL::Relocation<func_t> func{ ID::BSSystemFile::GetSize };
+		static REL::Relocation<func_t> func{ ID::BSSystemFile::GetSize };
 		return func(this, r_size);
 	}
 
@@ -87,7 +87,7 @@ namespace RE
 	BSSystemFile::ErrorCode BSSystemFile::Read(void* a_buffer, std::uint64_t a_toRead, std::uint64_t& r_read)
 	{
 		using func_t = decltype(&BSSystemFile::Read);
-		REL::Relocation<func_t> func{ ID::BSSystemFile::Read };
+		static REL::Relocation<func_t> func{ ID::BSSystemFile::Read };
 		return func(this, a_buffer, a_toRead, r_read);
 	}
 
@@ -108,35 +108,35 @@ namespace RE
 	BSSystemFile::ErrorCode BSSystemFile::Truncate(std::uint64_t a_bytesToTruncate)
 	{
 		using func_t = decltype(&BSSystemFile::Truncate);
-		REL::Relocation<func_t> func{ ID::BSSystemFile::Truncate };
+		static REL::Relocation<func_t> func{ ID::BSSystemFile::Truncate };
 		return func(this, a_bytesToTruncate);
 	}
 
 	BSSystemFile::ErrorCode BSSystemFile::Write(const void* a_buffer, std::uint64_t a_toWrite, std::uint64_t& r_written)
 	{
 		using func_t = decltype(&BSSystemFile::Write);
-		REL::Relocation<func_t> func{ ID::BSSystemFile::Write };
+		static REL::Relocation<func_t> func{ ID::BSSystemFile::Write };
 		return func(this, a_buffer, a_toWrite, r_written);
 	}
 
 	std::uint32_t BSSystemFile::RenameFile(const char* a_path, const char* a_replace)
 	{
 		using func_t = decltype(&BSSystemFile::RenameFile);
-		REL::Relocation<func_t> func{ ID::BSSystemFile::RenameFile };
+		static REL::Relocation<func_t> func{ ID::BSSystemFile::RenameFile };
 		return func(a_path, a_replace);
 	}
 
 	std::uint32_t BSSystemFile::DeleteFileA(const char* a_path)
 	{
 		using func_t = decltype(&BSSystemFile::DeleteFileA);
-		REL::Relocation<func_t> func{ ID::BSSystemFile::DeleteFileA };
+		static REL::Relocation<func_t> func{ ID::BSSystemFile::DeleteFileA };
 		return func(a_path);
 	}
 
 	void BSSystemFile::DoClose()
 	{
 		using func_t = decltype(&BSSystemFile::DoClose);
-		REL::Relocation<func_t> func{ ID::BSSystemFile::DoClose };
+		static REL::Relocation<func_t> func{ ID::BSSystemFile::DoClose };
 		return func(this);
 	}
 
@@ -147,14 +147,14 @@ namespace RE
 		ShareMode   a_shareMode)
 	{
 		using func_t = decltype(&BSSystemFile::DoOpen);
-		REL::Relocation<func_t> func{ ID::BSSystemFile::DoOpen };
+		static REL::Relocation<func_t> func{ ID::BSSystemFile::DoOpen };
 		return func(this, a_path, a_accessMode, a_openMode, a_shareMode);
 	}
 
 	BSSystemFile::ErrorCode BSSystemFile::DoSeek(std::int64_t a_offset, SeekMode a_seekMode, std::uint64_t& r_newPosition)
 	{
 		using func_t = decltype(&BSSystemFile::DoSeek);
-		REL::Relocation<func_t> func{ ID::BSSystemFile::DoSeek };
+		static REL::Relocation<func_t> func{ ID::BSSystemFile::DoSeek };
 		return func(this, a_offset, a_seekMode, r_newPosition);
 	}
 }

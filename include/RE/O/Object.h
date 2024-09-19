@@ -17,7 +17,7 @@ namespace RE::BSScript
 		void dtor()
 		{
 			using func_t = decltype(&Object::dtor);
-			REL::Relocation<func_t> func{ ID::BSScript::Object::dtor };
+			static REL::Relocation<func_t> func{ ID::BSScript::Object::dtor };
 			return func(this);
 		}
 
@@ -29,7 +29,7 @@ namespace RE::BSScript
 		Object* ctor(const BSTSmartPointer<ObjectTypeInfo>& a_type, const IObjectHandlePolicy& a_handlePolicy, std::uint32_t a_numProperties)
 		{
 			using func_t = decltype(&Object::ctor);
-			REL::Relocation<func_t> func{ ID::BSScript::Object::ctor };
+			static REL::Relocation<func_t> func{ ID::BSScript::Object::ctor };
 			return func(this, a_type, a_handlePolicy, a_numProperties);
 		}
 
@@ -47,21 +47,21 @@ namespace RE::BSScript
 		[[nodiscard]] std::uint32_t DecRef() const
 		{
 			using func_t = decltype(&Object::DecRef);
-			REL::Relocation<func_t> func{ ID::BSScript::Object::DecRef };
+			static REL::Relocation<func_t> func{ ID::BSScript::Object::DecRef };
 			return func(this);
 		}
 
 		[[nodiscard]] std::size_t GetHandle() const
 		{
 			using func_t = decltype(&Object::GetHandle);
-			REL::Relocation<func_t> func{ ID::BSScript::Object::GetHandle };
+			static REL::Relocation<func_t> func{ ID::BSScript::Object::GetHandle };
 			return func(this);
 		}
 
 		void IncRef() const
 		{
 			using func_t = decltype(&Object::IncRef);
-			REL::Relocation<func_t> func{ ID::BSScript::Object::IncRef };
+			static REL::Relocation<func_t> func{ ID::BSScript::Object::IncRef };
 			return func(this);
 		}
 

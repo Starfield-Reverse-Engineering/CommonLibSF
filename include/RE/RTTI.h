@@ -125,7 +125,7 @@ namespace RE
 	inline void* RTDynamicCast(void* a_inptr, std::int32_t a_vfDelta, void* a_srcType, void* a_targetType, std::int32_t a_isReference)
 	{
 		using func_t = decltype(&RTDynamicCast);
-		REL::Relocation<func_t> func{ ID::RTDynamicCast };
+		static REL::Relocation<func_t> func{ ID::RTDynamicCast };
 		return func(a_inptr, a_vfDelta, a_srcType, a_targetType, a_isReference);
 	}
 
@@ -178,8 +178,8 @@ namespace RE
 template <class To, class From, std::enable_if_t<RE::detail::cast_is_valid_v<To, From*>, int> = 0>
 To starfield_cast(From* a_from)
 {
-	REL::Relocation<void*> from{ RE::detail::remove_cvpr_t<From>::RTTI };
-	REL::Relocation<void*> to{ RE::detail::remove_cvpr_t<To>::RTTI };
+	static REL::Relocation<void*> from{ RE::detail::remove_cvpr_t<From>::RTTI };
+	static REL::Relocation<void*> to{ RE::detail::remove_cvpr_t<To>::RTTI };
 
 	if (!from.get() || !to.get()) {
 		return nullptr;

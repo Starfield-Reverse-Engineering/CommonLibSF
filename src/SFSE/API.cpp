@@ -60,6 +60,7 @@ namespace SFSE
 		stl_assert(a_intfc, "interface is null"sv);
 
 		(void)REL::Module::get();
+		(void)REL::IDDatabase::get();
 
 		auto&       storage = detail::APIStorage::get();
 		const auto& intfc = *a_intfc;
@@ -73,7 +74,7 @@ namespace SFSE
 
 		if (a_log) {
 			log::init();
-			log::info("{} v{}", GetPluginName(), GetPluginVersion());
+			log::info("{} v{}"sv, GetPluginName(), GetPluginVersion());
 		}
 
 		if (!storage.apiInit) {
@@ -193,7 +194,7 @@ namespace SFSE
 			}
 
 			// Call to GameVM::BindEverythingToScript(IVirtualMachine**) from GameVM::GameVM()
-			REL::Relocation<uintptr_t> hookLoc{ REL::ID(169912), 0x514 };
+			static REL::Relocation<uintptr_t> hookLoc{ REL::ID(169912), 0x514 };
 			func = reinterpret_cast<call_t>(trampoline.write_call<5>(hookLoc.address(), &thunk));
 		}
 

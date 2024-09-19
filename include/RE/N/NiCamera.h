@@ -37,7 +37,7 @@ namespace RE
 		NiPoint2 WorldToScreenInternal(const NiPoint4* worldPt, NiPoint3* leftBoundary, NiPoint3* rightBoundary)
 		{
 			using func_t = decltype(&NiCamera::WorldToScreenInternal);
-			REL::Relocation<func_t> func{ REL::ID(210415) };
+			static REL::Relocation<func_t> func{ REL::ID(210415) };
 			return func(this, worldPt, leftBoundary, rightBoundary);
 		}
 

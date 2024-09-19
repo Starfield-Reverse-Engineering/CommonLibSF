@@ -795,7 +795,7 @@ namespace RE::msvc
 		[[nodiscard]] const char* name() const noexcept
 		{
 			using func_t = const char* (*)(const type_info*, __type_info_node*) noexcept;
-			REL::Relocation<func_t*> func{ ID::msvc::type_info::name };
+			static REL::Relocation<func_t*> func{ ID::msvc::type_info::name };
 			return (*func)(this, std::addressof(get_root_node()));
 		}
 
@@ -808,13 +808,13 @@ namespace RE::msvc
 		[[nodiscard]] int compare(const type_info& a_rhs) const
 		{
 			using func_t = int (*)(const type_info*, const type_info*) noexcept;
-			REL::Relocation<func_t*> func{ ID::msvc::type_info::compare };
+			static REL::Relocation<func_t*> func{ ID::msvc::type_info::compare };
 			return (*func)(this, &a_rhs);
 		}
 
 		[[nodiscard]] static __type_info_node& get_root_node() noexcept
 		{
-			REL::Relocation<__type_info_node*> root{ ID::msvc::type_info::_RootNode };
+			static REL::Relocation<__type_info_node*> root{ ID::msvc::type_info::_RootNode };
 			return *root;
 		}
 

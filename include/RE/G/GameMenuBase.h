@@ -17,7 +17,7 @@ namespace RE
 		GameMenuBase()
 		{
 			using func_t = GameMenuBase* (*)(GameMenuBase*);
-			REL::Relocation<func_t> func(REL::ID(130577));
+			static REL::Relocation<func_t> func(REL::ID(130577));
 			func(this);
 		}
 
@@ -27,14 +27,14 @@ namespace RE
 		virtual uint64_t Unk10() override
 		{
 			using func_t = decltype(&GameMenuBase::Unk10);
-			REL::Relocation<func_t> func(REL::ID(141505));
+			static REL::Relocation<func_t> func(REL::ID(141505));
 			return func(this);
 		};
 
 		virtual uint64_t Unk11() override
 		{
 			using func_t = decltype(&GameMenuBase::Unk11);
-			REL::Relocation<func_t> func(REL::ID(141506));
+			static REL::Relocation<func_t> func(REL::ID(141506));
 			return func(this);
 		};
 

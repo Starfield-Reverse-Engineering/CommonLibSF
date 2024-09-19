@@ -10,6 +10,7 @@ namespace RE
 		kContinue,
 		kStop
 	};
+
 	using EventResult = BSEventNotifyControl;
 
 	namespace BSTEventDetail
@@ -53,19 +54,21 @@ namespace RE
 		void Notify(void* a_event)
 		{
 			using func_t = decltype(&BSTEventSource::Notify);
-			REL::Relocation<func_t> func{ ID::BSTEventSource::Notify };
+			static REL::Relocation<func_t> func{ ID::BSTEventSource::Notify };
 			return func(this, a_event);
 		}
+
 		void RegisterSink(BSTEventSink<Event>* a_sink)
 		{
 			using func_t = decltype(&BSTEventSource::RegisterSink);
-			REL::Relocation<func_t> func{ ID::BSTEventSource::RegisterSink };
+			static REL::Relocation<func_t> func{ ID::BSTEventSource::RegisterSink };
 			return func(this, a_sink);
 		}
+
 		void UnregisterSink(BSTEventSink<Event>* a_sink)
 		{
 			using func_t = decltype(&BSTEventSource::UnregisterSink);
-			REL::Relocation<func_t> func{ ID::BSTEventSource::UnregisterSink };
+			static REL::Relocation<func_t> func{ ID::BSTEventSource::UnregisterSink };
 			return func(this, a_sink);
 		}
 
