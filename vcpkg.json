@@ -7,16 +7,15 @@
   "license": "GPL-3.0-or-later",
   "supports": "windows & x64",
   "builtin-baseline": "7a57b42f959ad138a5283477fe2e6c97a7cb852f",
-  "dependencies": [
-    {
-      "name": "vcpkg-cmake",
-      "host": true
-    },
-    {
-      "name": "vcpkg-cmake-config",
-      "host": true
-    },
-    "spdlog",
-    "xbyak"
-  ]
+  "dependencies": ["spdlog", "xbyak"],
+  "vcpkg-configuration": {
+    "registries": [
+      {
+        "kind": "git",
+        "repository": "https://github.com/ThirdEyeSqueegee/vcpkg-ports",
+        "baseline": "4464251a08810053868f982a09db1f8cec4d9ee0",
+        "packages": ["spdlog"]
+      }
+    ]
+  }
 }
