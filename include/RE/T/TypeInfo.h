@@ -76,37 +76,54 @@ namespace RE::BSScript
 			}
 		}
 
-		[[nodiscard]] bool IsComplex() const noexcept { return data.rawType >= RawType::kArrayEnd; }
+		[[nodiscard]] bool IsComplex() const noexcept
+		{
+			// do not use GetRawType() here, may cause infinite recursion
+			return data.rawType >= RawType::kArrayEnd;
+		}
 
 		[[nodiscard]] bool IsObjectArray() const noexcept
 		{
 			return GetRawType() == RawType::kArrayObject;
 		}
+
 		[[nodiscard]] bool IsStructArray() const noexcept
 		{
 			return GetRawType() == RawType::kArrayStruct;
 		}
+
 		[[nodiscard]] bool IsComplexTypeArray() const noexcept
 		{
 			return (IsComplex() && IsArray());
 		}
+
+		[[nodiscard]] bool IsNone() const { return GetRawType() == RawType::kNone; }
 		[[nodiscard]] bool IsObject() const { return GetRawType() == RawType::kObject; }
+		[[nodiscard]] bool IsString() const { return GetRawType() == RawType::kString; }
+		[[nodiscard]] bool IsInt() const { return GetRawType() == RawType::kInt; }
+		[[nodiscard]] bool IsFloat() const { return GetRawType() == RawType::kFloat; }
+		[[nodiscard]] bool IsBool() const { return GetRawType() == RawType::kBool; }
+		[[nodiscard]] bool IsVar() const { return GetRawType() == RawType::kVar; }
 		[[nodiscard]] bool IsStruct() const { return GetRawType() == RawType::kStruct; }
-		IComplexType*      GetComplexType() const
+
+		IComplexType* GetComplexType() const
 		{
 			return IsComplex() ? reinterpret_cast<IComplexType*>(
 									 reinterpret_cast<std::uintptr_t>(data.complexTypeInfo) &
 									 ~static_cast<std::uintptr_t>(1)) :
 			                     nullptr;
 		}
+
 		ObjectTypeInfo* GetObjectTypeInfo() const
 		{
 			return IsObject() || IsObjectArray() ? reinterpret_cast<ObjectTypeInfo*>(GetComplexType()) : nullptr;
 		}
+
 		StructTypeInfo* GetStructTypeInfo() const
 		{
 			return IsStruct() || IsStructArray() ? reinterpret_cast<StructTypeInfo*>(GetComplexType()) : nullptr;
 		}
+
 		void SetArray(bool a_set) noexcept
 		{
 			if (IsComplex()) {

@@ -119,67 +119,67 @@ namespace RE::BSScript
 		SF_HEAP_REDEFINE_NEW(Variable);
 
 		template <class T>
-		[[nodiscard]] bool is() const  //
+		[[nodiscard]] bool is() const
 			requires(std::same_as<T, std::nullptr_t>)
 		{
-			return varType.GetRawType() == RawType::kNone;
+			return varType.IsNone();
 		}
 
 		template <class T>
-		[[nodiscard]] bool is() const  //
+		[[nodiscard]] bool is() const
 			requires(std::same_as<T, Object>)
 		{
-			return varType.GetRawType() == RawType::kObject;
+			return varType.IsObject();
 		}
 
 		template <class T>
-		[[nodiscard]] bool is() const  //
+		[[nodiscard]] bool is() const
 			requires(std::same_as<T, BSFixedString>)
 		{
-			return varType.GetRawType() == RawType::kString;
+			return varType.IsString();
 		}
 
 		template <class T>
-		[[nodiscard]] bool is() const  //
+		[[nodiscard]] bool is() const
 			requires(std::same_as<T, std::uint32_t> ||
 					 std::same_as<T, std::int32_t>)
 		{
-			return varType.GetRawType() == RawType::kInt;
+			return varType.IsInt();
 		}
 
 		template <class T>
-		[[nodiscard]] bool is() const  //
+		[[nodiscard]] bool is() const
 			requires(std::same_as<T, float>)
 		{
-			return varType.GetRawType() == RawType::kFloat;
+			return varType.IsFloat();
 		}
 
 		template <class T>
-		[[nodiscard]] bool is() const  //
+		[[nodiscard]] bool is() const
 			requires(std::same_as<T, bool>)
 		{
-			return varType.GetRawType() == RawType::kBool;
+			return varType.IsBool();
 		}
 
 		template <class T>
-		[[nodiscard]] bool is() const  //
+		[[nodiscard]] bool is() const
 			requires(std::same_as<T, Variable>)
 		{
-			return varType.GetRawType() == RawType::kVar;
+			return varType.IsVar();
 		}
 
 		template <class T>
-		[[nodiscard]] bool is() const  //
+		[[nodiscard]] bool is() const
 			requires(std::same_as<T, Struct>)
 		{
-			return varType.GetRawType() == RawType::kStruct;
+			return varType.IsStruct() && value.t;
 		}
 
 		template <class T>
-		[[nodiscard]] bool is() const  //
+		[[nodiscard]] bool is() const
 			requires(std::same_as<T, Array>)
 		{
-			return varType.IsArray();
+			return varType.IsArray() && value.a;
 		}
 
 		TypeInfo GetType() const

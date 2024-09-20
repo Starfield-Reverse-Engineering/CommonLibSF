@@ -782,12 +782,10 @@ namespace RE::BSScript
 			return T();
 		}
 
-		using value_type = typename T::value_type;
-
 		T          out;
 		const auto in = get<Array>(a_var);
 		for (const auto& var : in->elements) {
-			out.push_back(detail::UnpackVariable<value_type>(var));
+			out.push_back(detail::UnpackVariable<typename T::value_type>(var));
 		}
 
 		return out;
