@@ -9,7 +9,7 @@ set_warnings("allextra")
 set_encodings("utf-8")
 
 -- add rules
-add_rules("mode.debug", "mode.release")
+add_rules("mode.debug", "mode.releasedbg")
 
 -- require packages
 add_requires("xbyak")

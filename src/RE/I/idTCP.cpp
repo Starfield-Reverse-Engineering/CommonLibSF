@@ -4,119 +4,113 @@ namespace RE
 {
 	const char* NET_ErrorString()
 	{
-		using WSAError = WinAPI::WSAError;
-
-		const auto code = static_cast<WSAError>(WinAPI::WSAGetLastError());
-		switch (code) {
-		case WSAError::WSAEINTR:
+		switch (REX::W32::WSAGetLastError()) {
+		case REX::W32::WSAEINTR:
 			return "WSAEINTR";
-		case WSAError::WSAEBADF:
+		case REX::W32::WSAEBADF:
 			return "WSAEBADF";
-		case WSAError::WSAEACCES:
+		case REX::W32::WSAEACCES:
 			return "WSAEACCES";
-		case WSAError::WSAEDISCON:
+		case REX::W32::WSAEDISCON:
 			return "WSAEDISCON";
-		case WSAError::WSAEFAULT:
+		case REX::W32::WSAEFAULT:
 			return "WSAEFAULT";
-		case WSAError::WSAEINVAL:
+		case REX::W32::WSAEINVAL:
 			return "WSAEINVAL";
-		case WSAError::WSAEMFILE:
+		case REX::W32::WSAEMFILE:
 			return "WSAEMFILE";
-		case WSAError::WSAEWOULDBLOCK:
+		case REX::W32::WSAEWOULDBLOCK:
 			return "WSAEWOULDBLOCK";
-		case WSAError::WSAEINPROGRESS:
+		case REX::W32::WSAEINPROGRESS:
 			return "WSAEINPROGRESS";
-		case WSAError::WSAEALREADY:
+		case REX::W32::WSAEALREADY:
 			return "WSAEALREADY";
-		case WSAError::WSAENOTSOCK:
+		case REX::W32::WSAENOTSOCK:
 			return "WSAENOTSOCK";
-		case WSAError::WSAEDESTADDRREQ:
+		case REX::W32::WSAEDESTADDRREQ:
 			return "WSAEDESTADDRREQ";
-		case WSAError::WSAEMSGSIZE:
+		case REX::W32::WSAEMSGSIZE:
 			return "WSAEMSGSIZE";
-		case WSAError::WSAEPROTOTYPE:
+		case REX::W32::WSAEPROTOTYPE:
 			return "WSAEPROTOTYPE";
-		case WSAError::WSAENOPROTOOPT:
+		case REX::W32::WSAENOPROTOOPT:
 			return "WSAENOPROTOOPT";
-		case WSAError::WSAEPROTONOSUPPORT:
+		case REX::W32::WSAEPROTONOSUPPORT:
 			return "WSAEPROTONOSUPPORT";
-		case WSAError::WSAESOCKTNOSUPPORT:
+		case REX::W32::WSAESOCKTNOSUPPORT:
 			return "WSAESOCKTNOSUPPORT";
-		case WSAError::WSAEOPNOTSUPP:
+		case REX::W32::WSAEOPNOTSUPP:
 			return "WSAEOPNOTSUPP";
-		case WSAError::WSAEPFNOSUPPORT:
+		case REX::W32::WSAEPFNOSUPPORT:
 			return "WSAEPFNOSUPPORT";
-		case WSAError::WSAEAFNOSUPPORT:
+		case REX::W32::WSAEAFNOSUPPORT:
 			return "WSAEAFNOSUPPORT";
-		case WSAError::WSAEADDRINUSE:
+		case REX::W32::WSAEADDRINUSE:
 			return "WSAEADDRINUSE";
-		case WSAError::WSAEADDRNOTAVAIL:
+		case REX::W32::WSAEADDRNOTAVAIL:
 			return "WSAEADDRNOTAVAIL";
-		case WSAError::WSAENETDOWN:
+		case REX::W32::WSAENETDOWN:
 			return "WSAENETDOWN";
-		case WSAError::WSAENETUNREACH:
+		case REX::W32::WSAENETUNREACH:
 			return "WSAENETUNREACH";
-		case WSAError::WSAENETRESET:
+		case REX::W32::WSAENETRESET:
 			return "WSAENETRESET";
-		case WSAError::WSAECONNABORTED:
+		case REX::W32::WSAECONNABORTED:
 			return "WSWSAECONNABORTEDAEINTR";
-		case WSAError::WSAECONNRESET:
+		case REX::W32::WSAECONNRESET:
 			return "WSAECONNRESET";
-		case WSAError::WSAENOBUFS:
+		case REX::W32::WSAENOBUFS:
 			return "WSAENOBUFS";
-		case WSAError::WSAEISCONN:
+		case REX::W32::WSAEISCONN:
 			return "WSAEISCONN";
-		case WSAError::WSAENOTCONN:
+		case REX::W32::WSAENOTCONN:
 			return "WSAENOTCONN";
-		case WSAError::WSAESHUTDOWN:
+		case REX::W32::WSAESHUTDOWN:
 			return "WSAESHUTDOWN";
-		case WSAError::WSAETOOMANYREFS:
+		case REX::W32::WSAETOOMANYREFS:
 			return "WSAETOOMANYREFS";
-		case WSAError::WSAETIMEDOUT:
+		case REX::W32::WSAETIMEDOUT:
 			return "WSAETIMEDOUT";
-		case WSAError::WSAECONNREFUSED:
+		case REX::W32::WSAECONNREFUSED:
 			return "WSAECONNREFUSED";
-		case WSAError::WSAELOOP:
+		case REX::W32::WSAELOOP:
 			return "WSAELOOP";
-		case WSAError::WSAENAMETOOLONG:
+		case REX::W32::WSAENAMETOOLONG:
 			return "WSAENAMETOOLONG";
-		case WSAError::WSAEHOSTDOWN:
+		case REX::W32::WSAEHOSTDOWN:
 			return "WSAEHOSTDOWN";
-		case WSAError::WSASYSNOTREADY:
+		case REX::W32::WSASYSNOTREADY:
 			return "WSASYSNOTREADY";
-		case WSAError::WSAVERNOTSUPPORTED:
+		case REX::W32::WSAVERNOTSUPPORTED:
 			return "WSAVERNOTSUPPORTED";
-		case WSAError::WSANOTINITIALISED:
+		case REX::W32::WSANOTINITIALISED:
 			return "WSANOTINITIALISED";
-		case WSAError::WSAHOST_NOT_FOUND:
+		case REX::W32::WSAHOST_NOT_FOUND:
 			return "WSAHOST_NOT_FOUND";
-		case WSAError::WSATRY_AGAIN:
+		case REX::W32::WSATRY_AGAIN:
 			return "WSATRY_AGAIN";
-		case WSAError::WSANO_RECOVERY:
+		case REX::W32::WSANO_RECOVERY:
 			return "WSANO_RECOVERY";
-		case WSAError::WSANO_DATA:
+		case REX::W32::WSANO_DATA:
 			return "WSANO_DATA";
 		default:
 			return "NO ERROR";
 		}
 	}
 
-	void Net_SockadrToNetadr(WinAPI::sockaddr* s, netadr_t* a)
+	void Net_SockadrToNetadr(REX::W32::sockaddr* a_saddr, netadr_t* a_naddr)
 	{
-		using AFType = WinAPI::AFType;
-		using sockaddr_in = WinAPI::sockaddr_in;
-
-		if (s->sa_family == AFType::AF_INET) {
-			const auto sin = reinterpret_cast<sockaddr_in*>(s);
+		if (a_saddr->sa_family == REX::W32::AF_INET) {
+			const auto sin = reinterpret_cast<REX::W32::sockaddr_in*>(a_saddr);
 			auto       ip = sin->sin_addr.s_addr;
-			*reinterpret_cast<unsigned int*>(&a->ip) = ip;
-			a->port = WinAPI::htons(sin->sin_port);
-			ip = WinAPI::ntohl(ip);
+			*reinterpret_cast<unsigned int*>(&a_naddr->ip) = ip;
+			a_naddr->port = REX::W32::htons(sin->sin_port);
+			ip = REX::W32::ntohl(ip);
 
-			if (ip == WinAPI::INADDR_LOOPBACK) {
-				a->type = netadrtype_t::NA_LOOPBACK;
+			if (ip == REX::W32::INADDR_LOOPBACK) {
+				a_naddr->type = netadrtype_t::NA_LOOPBACK;
 			} else {
-				a->type = netadrtype_t::NA_IP;
+				a_naddr->type = netadrtype_t::NA_IP;
 			}
 		}
 	}

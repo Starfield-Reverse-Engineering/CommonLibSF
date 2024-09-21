@@ -1,5 +1,7 @@
 #pragma once
 
+#include "REX/W32/VERSION.h"
+
 namespace REL
 {
 	class Version
@@ -177,18 +179,18 @@ namespace REL
 	[[nodiscard]] inline std::optional<Version> get_file_version(const stl::zwstring a_filename)
 	{
 		std::uint32_t     dummy{};
-		std::vector<char> buf(WinAPI::GetFileVersionInfoSize(a_filename.data(), std::addressof(dummy)));
+		std::vector<char> buf(REX::W32::GetFileVersionInfoSizeW(a_filename.data(), std::addressof(dummy)));
 		if (buf.empty()) {
 			return std::nullopt;
 		}
 
-		if (!WinAPI::GetFileVersionInfo(a_filename.data(), 0, buf.size(), buf.data())) {
+		if (!REX::W32::GetFileVersionInfoW(a_filename.data(), 0, buf.size(), buf.data())) {
 			return std::nullopt;
 		}
 
 		void*         verBuf{};
 		std::uint32_t verLen{};
-		if (!WinAPI::VerQueryValue(buf.data(), L"\\StringFileInfo\\040904B0\\ProductVersion", std::addressof(verBuf), std::addressof(verLen))) {
+		if (!REX::W32::VerQueryValueW(buf.data(), L"\\StringFileInfo\\040904B0\\ProductVersion", std::addressof(verBuf), std::addressof(verLen))) {
 			return std::nullopt;
 		}
 

@@ -3,6 +3,8 @@
 #include "RE/B/BGSReflectedForm.h"
 #include "RE/B/BSTArray.h"
 
+#include "REX/W32/D3D.h"
+
 namespace RE
 {
 	class BGSResource;
@@ -36,20 +38,20 @@ namespace RE
 		public:
 			struct alignas(4) RayleighSettings
 			{
-				float             moleculesPerUnitVolume;           // 00
-				float             refractiveIndexOfAir;             // 04
-				float             depolarizationFactor;             // 08
-				bool              useOzoneAbsorptionApproximation;  // 0C
-				DirectX::XMFLOAT4 ozoneAbsorptionCoef;              // 10
-				DirectX::XMFLOAT4 rayleighCoef;                     // 20
+				float              moleculesPerUnitVolume;           // 00
+				float              refractiveIndexOfAir;             // 04
+				float              depolarizationFactor;             // 08
+				bool               useOzoneAbsorptionApproximation;  // 0C
+				REX::W32::XMFLOAT4 ozoneAbsorptionCoef;              // 10
+				REX::W32::XMFLOAT4 rayleighCoef;                     // 20
 			};
 			static_assert(sizeof(RayleighSettings) == 0x30);
 
 			struct alignas(4) MieSettings
 			{
-				float             aerosolDensity;     // 00
-				float             aerosolAbsorbtion;  // 04
-				DirectX::XMFLOAT4 mieCoef;            // 08
+				float              aerosolDensity;     // 00
+				float              aerosolAbsorbtion;  // 04
+				REX::W32::XMFLOAT4 mieCoef;            // 08
 			};
 			static_assert(sizeof(MieSettings) == 0x18);
 

@@ -1,5 +1,7 @@
 #pragma once
 
+#include "REX/W32/WS2_32.h"
+
 namespace RE
 {
 	enum class netadrtype_t
@@ -19,8 +21,8 @@ namespace RE
 	static_assert(sizeof(netadr_t) == 0xC);
 
 	const char* NET_ErrorString(void);
-	void        Net_SockadrToNetadr(WinAPI::sockaddr* s, netadr_t* a);  // They violated the naming convention here :(
-	bool        NET_WaitForData(std::uintptr_t socket, std::uint32_t timeoutMs);
+	void        Net_SockadrToNetadr(REX::W32::sockaddr* a_socket, netadr_t* a_addr);  // They violated the naming convention here :(
+	bool        NET_WaitForData(std::uintptr_t a_socket, std::uint32_t a_timeoutMs);
 	void        Sys_InitNetworking();
 
 	class idTCP
@@ -30,11 +32,11 @@ namespace RE
 
 		virtual ~idTCP();  // 00
 
-		bool         Listen(std::uint16_t port, bool blocking);  // 'blocking' is ignored
-		bool         Accept(const idTCP& listener);
+		bool         Listen(std::uint16_t a_port, bool a_blocking);  // 'blocking' is ignored
+		bool         Accept(const idTCP& a_listener);
 		std::int32_t Close();
-		std::int32_t Read(void* buffer, std::uint32_t size);
-		std::int32_t Write(const void* buffer, std::uint32_t size, std::uint32_t timeoutMs);
+		std::int32_t Read(void* a_buffer, std::uint32_t a_size);
+		std::int32_t Write(const void* a_buffer, std::uint32_t a_size, std::uint32_t a_timeoutMs);
 
 		// members
 		netadr_t       address;  // 08

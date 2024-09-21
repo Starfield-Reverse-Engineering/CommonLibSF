@@ -398,6 +398,20 @@ namespace REX::W32
 		return ::W32_IMPL_GetProcAddress(a_module, a_name);
 	}
 
+	std::string_view GetProcPath(HMODULE a_handle) noexcept
+	{
+		// I don't like this function...
+		static std::string fileName(MAX_PATH + 1, ' ');
+		auto               res = GetModuleFileNameA(a_handle, fileName.data(), MAX_PATH + 1);
+
+		if (res == 0) {
+			fileName = "[ProcessHost]";
+			res = 13;
+		}
+
+		return { fileName.c_str(), res };
+	}
+
 	void GetSystemInfo(SYSTEM_INFO* a_info) noexcept
 	{
 		return ::W32_IMPL_GetSystemInfo(a_info);
@@ -769,5 +783,29 @@ namespace REX::W32
 	bool VerQueryValueW(const void* a_block, const wchar_t* a_subBlock, void** a_buf, std::uint32_t* a_bufLen) noexcept
 	{
 		return ::W32_IMPL_VerQueryValueW(a_block, a_subBlock, a_buf, a_bufLen);
+	}
+}
+
+// WS2_32
+
+REX_W32_IMPORT(std::uint16_t, htons, std::uint16_t);
+REX_W32_IMPORT(std::uint32_t, ntohl, std::uint32_t);
+REX_W32_IMPORT(std::int32_t, WSAGetLastError);
+
+namespace REX::W32
+{
+	std::uint16_t htons(std::uint16_t a_host) noexcept
+	{
+		return ::W32_IMPL_htons(a_host);
+	}
+
+	std::uint32_t ntohl(std::uint32_t a_net) noexcept
+	{
+		return ::W32_IMPL_ntohl(a_net);
+	}
+
+	std::int32_t WSAGetLastError() noexcept
+	{
+		return ::W32_IMPL_WSAGetLastError();
 	}
 }

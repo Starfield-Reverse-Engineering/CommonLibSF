@@ -693,6 +693,42 @@ namespace REX::W32
 		const char* definition;
 	};
 
+	struct XMCOLOR
+	{
+	public:
+		union
+		{
+			struct
+			{
+				std::uint8_t b;
+				std::uint8_t g;
+				std::uint8_t r;
+				std::uint8_t a;
+			};
+			std::uint32_t c;
+		};
+	};
+	static_assert(sizeof(XMCOLOR) == 0x4);
+
+	struct XMFLOAT3
+	{
+	public:
+		float x;
+		float y;
+		float z;
+	};
+	static_assert(sizeof(XMFLOAT3) == 0xC);
+
+	struct XMFLOAT4
+	{
+	public:
+		float x;
+		float y;
+		float z;
+		float w;
+	};
+	static_assert(sizeof(XMFLOAT4) == 0x10);
+
 	struct XMFLOAT4X4
 	{
 		float m[4][4];

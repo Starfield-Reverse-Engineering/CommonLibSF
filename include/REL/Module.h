@@ -2,6 +2,8 @@
 
 #include "REL/Version.h"
 
+#include "REX/W32/KERNEL32.h"
+
 namespace REL
 {
 	class Segment
@@ -60,9 +62,9 @@ namespace REL
 
 			_base = a_base;
 
-			const auto dosHeader = reinterpret_cast<const WinAPI::IMAGE_DOS_HEADER*>(_base);
-			const auto ntHeader = stl::adjust_pointer<WinAPI::IMAGE_NT_HEADERS64>(dosHeader, dosHeader->lfanew);
-			const auto sections = WinAPI::IMAGE_FIRST_SECTION(ntHeader);
+			const auto dosHeader = reinterpret_cast<const REX::W32::IMAGE_DOS_HEADER*>(_base);
+			const auto ntHeader = stl::adjust_pointer<REX::W32::IMAGE_NT_HEADERS64>(dosHeader, dosHeader->lfanew);
+			const auto sections = REX::W32::IMAGE_FIRST_SECTION(ntHeader);
 			const auto size = std::min<std::size_t>(ntHeader->fileHeader.sectionCount, _segments.size());
 
 			for (std::size_t i = 0; i < size; ++i) {
@@ -78,13 +80,13 @@ namespace REL
 				}
 			}
 
-			_file = stl::utf8_to_utf16(WinAPI::GetProcPath(nullptr)).value();
+			_file = stl::utf8_to_utf16(REX::W32::GetProcPath(nullptr)).value();
 			_version = get_file_version(_file).value();
 		}
 
 		explicit constexpr Module(std::string_view a_filePath)
 		{
-			const auto base = AsAddress(WinAPI::GetModuleHandle(a_filePath.data())) & ~3;
+			const auto base = AsAddress(REX::W32::GetModuleHandleA(a_filePath.data())) & ~3;
 			stl_assert(base,
 				"failed to initializing module info with file {}",
 				a_filePath);
@@ -118,19 +120,19 @@ namespace REL
 
 		[[nodiscard]] static Module& get(const std::string_view a_filePath = {}) noexcept
 		{
-			const auto base = AsAddress(WinAPI::GetModuleHandle(a_filePath.empty() ? WinAPI::GetProcPath(nullptr).data() : a_filePath.data()));
+			const auto base = AsAddress(REX::W32::GetModuleHandleA(a_filePath.empty() ? REX::W32::GetProcPath(nullptr).data() : a_filePath.data()));
 			return get(base);
 		}
 
 	private:
 		static constexpr std::array SEGMENTS{
-			std::make_pair(".text"sv, WinAPI::IMAGE_SCN_MEM_EXECUTE),
+			std::make_pair(".text"sv, REX::W32::IMAGE_SCN_MEM_EXECUTE),
 			std::make_pair(".idata"sv, static_cast<std::uint32_t>(0)),
 			std::make_pair(".rdata"sv, static_cast<std::uint32_t>(0)),
 			std::make_pair(".data"sv, static_cast<std::uint32_t>(0)),
 			std::make_pair(".pdata"sv, static_cast<std::uint32_t>(0)),
 			std::make_pair(".tls"sv, static_cast<std::uint32_t>(0)),
-			std::make_pair(".text"sv, WinAPI::IMAGE_SCN_MEM_WRITE),
+			std::make_pair(".text"sv, REX::W32::IMAGE_SCN_MEM_WRITE),
 			std::make_pair(".gfids"sv, static_cast<std::uint32_t>(0))
 		};
 
