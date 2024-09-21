@@ -398,16 +398,14 @@ namespace REX::W32
 		return ::W32_IMPL_GetProcAddress(a_module, a_name);
 	}
 
-	std::string_view GetProcPath(HMODULE a_handle) noexcept
+	std::string_view GetProcPath(HMODULE a_handle)
 	{
 		// I don't like this function...
 		static std::string fileName(MAX_PATH + 1, ' ');
 		auto               res = GetModuleFileNameA(a_handle, fileName.data(), MAX_PATH + 1);
 
-		if (res == 0) {
-			fileName = "[ProcessHost]";
-			res = 13;
-		}
+		if (res == 0)
+			throw std::system_error(static_cast<int>(GetLastError()), std::system_category());
 
 		return { fileName.c_str(), res };
 	}
