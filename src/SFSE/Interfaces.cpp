@@ -160,6 +160,6 @@ namespace SFSE
 
 	const PluginVersionData* PluginVersionData::GetSingleton() noexcept
 	{
-		return reinterpret_cast<const PluginVersionData*>(WinAPI::GetProcAddress(WinAPI::GetCurrentModule(), "SFSEPlugin_Version"));
+		return reinterpret_cast<const PluginVersionData*>(REX::W32::GetProcAddress(REX::W32::GetCurrentModule(), "SFSEPlugin_Version"));
 	}
 }

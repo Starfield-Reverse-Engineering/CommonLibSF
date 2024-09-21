@@ -1,10 +1,12 @@
 #include "RE/B/BSSystemFile.h"
 
+#include "REX/W32/KERNEL32.h"
+
 namespace RE
 {
 	BSSystemFile::BSSystemFile() :
 		flags(1),
-		file(WinAPI::INVALID_HANDLE_VALUE)
+		file(REX::W32::INVALID_HANDLE_VALUE)
 	{}
 
 	BSSystemFile::~BSSystemFile()
@@ -20,14 +22,14 @@ namespace RE
 		[[maybe_unused]] std::uint64_t a_unk1,
 		bool                           a_write,
 		ShareMode                      a_shareMode) :
-		file(WinAPI::INVALID_HANDLE_VALUE)
+		file(REX::W32::INVALID_HANDLE_VALUE)
 	{
 		flags = 0;
 		if (a_read) {
-			flags |= WinAPI::GENERIC_READ;
+			flags |= REX::W32::GENERIC_READ;
 		}
 		if (a_write) {
-			flags |= WinAPI::GENERIC_WRITE;
+			flags |= REX::W32::GENERIC_WRITE;
 		}
 		auto ret = DoOpen(a_path, a_accessMode, a_openMode, a_shareMode);
 		SetErrorCode(ret);
@@ -50,7 +52,7 @@ namespace RE
 	BSSystemFile& BSSystemFile::operator=(BSSystemFile& a_lhs)
 	{
 		// close the file if the handle is valid
-		if (file != WinAPI::INVALID_HANDLE_VALUE) {
+		if (file != REX::W32::INVALID_HANDLE_VALUE) {
 			DoClose();
 		}
 		file = a_lhs.file;
@@ -68,7 +70,7 @@ namespace RE
 
 	void BSSystemFile::Invalidate()
 	{
-		file = WinAPI::INVALID_HANDLE_VALUE;
+		file = REX::W32::INVALID_HANDLE_VALUE;
 		flags = 1;
 	}
 
@@ -101,7 +103,7 @@ namespace RE
 
 	void BSSystemFile::SetErrorCode(ErrorCode a_errorCode)
 	{
-		flags &= WinAPI::GENERIC_READ;
+		flags &= REX::W32::GENERIC_READ;
 		flags |= static_cast<std::uint32_t>(a_errorCode);
 	}
 

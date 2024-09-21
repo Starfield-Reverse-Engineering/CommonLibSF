@@ -1,5 +1,7 @@
 #include "REL/ID.h"
 
+#include "REX/W32/KERNEL32.h"
+
 namespace REL
 {
 	namespace database
@@ -28,11 +30,11 @@ namespace REL
 		{
 			close();
 
-			WinAPI::ULARGE_INTEGER bytes;
+			REX::W32::ULARGE_INTEGER bytes;
 			bytes.value = a_size;
 
-			_mapping = WinAPI::OpenFileMapping(
-				WinAPI::FILE_MAP_READ | WinAPI::FILE_MAP_WRITE,
+			_mapping = REX::W32::OpenFileMappingW(
+				REX::W32::FILE_MAP_READ | REX::W32::FILE_MAP_WRITE,
 				false,
 				a_name.data());
 
@@ -41,9 +43,9 @@ namespace REL
 				return false;
 			}
 
-			_view = WinAPI::MapViewOfFile(
+			_view = REX::W32::MapViewOfFile(
 				_mapping,
-				WinAPI::FILE_MAP_READ | WinAPI::FILE_MAP_WRITE,
+				REX::W32::FILE_MAP_READ | REX::W32::FILE_MAP_WRITE,
 				0,
 				0,
 				bytes.value);
@@ -60,19 +62,19 @@ namespace REL
 		{
 			close();
 
-			WinAPI::ULARGE_INTEGER bytes;
+			REX::W32::ULARGE_INTEGER bytes;
 			bytes.value = a_size;
 
-			_mapping = WinAPI::OpenFileMapping(
-				WinAPI::FILE_MAP_READ | WinAPI::FILE_MAP_WRITE,
+			_mapping = REX::W32::OpenFileMappingW(
+				REX::W32::FILE_MAP_READ | REX::W32::FILE_MAP_WRITE,
 				false,
 				a_name.data());
 
 			if (!_mapping) {
-				_mapping = WinAPI::CreateFileMapping(
-					WinAPI::INVALID_HANDLE_VALUE,
+				_mapping = REX::W32::CreateFileMappingW(
+					REX::W32::INVALID_HANDLE_VALUE,
 					nullptr,
-					WinAPI::PAGE_READWRITE,
+					REX::W32::PAGE_READWRITE,
 					bytes.hi,
 					bytes.lo,
 					a_name.data());
@@ -82,9 +84,9 @@ namespace REL
 				}
 			}
 
-			_view = WinAPI::MapViewOfFile(
+			_view = REX::W32::MapViewOfFile(
 				_mapping,
-				WinAPI::FILE_MAP_READ | WinAPI::FILE_MAP_WRITE,
+				REX::W32::FILE_MAP_READ | REX::W32::FILE_MAP_WRITE,
 				0,
 				0,
 				bytes.value);
@@ -99,12 +101,12 @@ namespace REL
 		constexpr void memory_map::close()
 		{
 			if (_view) {
-				(void)WinAPI::UnmapViewOfFile(_view);
+				REX::W32::UnmapViewOfFile(_view);
 				_view = nullptr;
 			}
 
 			if (_mapping) {
-				(void)WinAPI::CloseHandle(_mapping);
+				REX::W32::CloseHandle(_mapping);
 				_mapping = nullptr;
 			}
 		}
@@ -169,7 +171,7 @@ namespace REL
 		file /= std::format("{}\\versionlib-{}", database::LookUpDir, version.string("-"));
 
 		_platform = Platform::kUnknown;
-		if (WinAPI::GetModuleHandle(L"steam_api64")) {
+		if (REX::W32::GetModuleHandleW(L"steam_api64")) {
 			_platform = Platform::kSteam;
 			_is_steam = true;
 		} else {

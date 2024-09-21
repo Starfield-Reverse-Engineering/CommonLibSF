@@ -2,6 +2,8 @@
 
 #include "RE/B/BGSReflectedForm.h"
 
+#include "REX/W32/D3D.h"
+
 namespace RE
 {
 	class BGSCurveForm;
@@ -36,7 +38,7 @@ namespace RE
 		float                                              verticalAngle;                 // 3C
 		float                                              speed;                         // 40
 		float                                              strength;                      // 44
-		DirectX::XMFLOAT3                                  vector;                        // 48
+		REX::W32::XMFLOAT3                                 vector;                        // 48
 		BGSCurveForm*                                      falloffCurve;                  // 58
 		float                                              turbulenceSpeedAmplitude;      // 60
 		float                                              turbulenceSpeedFrequency;      // 64

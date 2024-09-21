@@ -1,5 +1,7 @@
 #pragma once
 
+#include "REX/W32/D3D.h"
+
 namespace RE::BSBlendable
 {
 	enum class BlendOp
@@ -15,7 +17,7 @@ namespace RE::BSBlendable
 	public:
 		// members
 		stl::enumeration<BlendOp, std::uint32_t> op;           // 00
-		DirectX::XMFLOAT4                        value;        // 04
+		REX::W32::XMFLOAT4                       value;        // 04
 		float                                    blendAmount;  // 14
 	};
 	static_assert(sizeof(ColorValue) == 0x18);

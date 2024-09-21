@@ -34,13 +34,13 @@ def manip(pdb_file, new_pdb_file):
         data = f.read()
         data = re.sub(r"\bRE::DirectInput8::", "", data)
         data = re.sub(r"\bRE::DirectX::", "", data)
-        data = re.sub(r"\bSFSE::WinAPI::", "", data)
+        data = re.sub(r"\bREX::W32::", "", data)
         data = re.sub(r"\bSFSE::stl::", "stl::", data)
         data = re.sub(r"\bRE::", "", data)
         # get the mangled names too
         data = re.sub("@DirectInput8@RE@@", "@@", data)
         data = re.sub("@DirectX@RE@@", "@@", data)
-        data = re.sub("@WinAPI@SFSE@@", "@@", data)
+        data = re.sub("@W32@REX@@", "@@", data)
         data = re.sub("@stl@SFSE@@", "@stl@@", data)
         data = re.sub("@RE@@", "@@", data)
     with open(yaml_file, "w") as f:

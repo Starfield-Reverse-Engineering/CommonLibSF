@@ -1,5 +1,7 @@
 #pragma once
 
+#include "REX/W32/KERNEL32.h"
+
 namespace RE
 {
 	namespace idLogging
@@ -77,7 +79,7 @@ namespace RE
 				break;
 			}
 			snprintf(outputString, 1024, "%s: %s - [%s (%d)]\n", severitystr, msg, a_fileName, a_line_number);
-			WinAPI::OutputDebugString(outputString);
+			REX::W32::OutputDebugStringA(outputString);
 		}
 	};
 }

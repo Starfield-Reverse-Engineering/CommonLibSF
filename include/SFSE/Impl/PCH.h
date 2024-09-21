@@ -1,11 +1,7 @@
 #pragma once
 
 /* +++++++++++++++++++++++++ C++23 Standard Library +++++++++++++++++++++++++ */
-
-// Concepts library
 #include <concepts>
-
-// Utilities library
 #include <any>
 #include <bitset>
 #include <chrono>
@@ -28,30 +24,22 @@
 #include <utility>
 #include <variant>
 #include <version>
-
-// Dynamic memory management
 #include <memory>
 #include <memory_resource>
 #include <new>
 #include <scoped_allocator>
-
-// Numeric limits
 #include <cfloat>
 #include <cinttypes>
 #include <climits>
 #include <cstdint>
 #include <limits>
 #include <stdfloat>
-
-// Error handling
 #include <cassert>
 #include <cerrno>
 #include <exception>
 #include <stacktrace>
 #include <stdexcept>
 #include <system_error>
-
-// Strings library
 #include <cctype>
 #include <charconv>
 #include <cstring>
@@ -60,8 +48,6 @@
 #include <cwctype>
 #include <string>
 #include <string_view>
-
-// Containers library
 #include <array>
 #include <deque>
 #include <forward_list>
@@ -74,18 +60,10 @@
 #include <unordered_map>
 #include <unordered_set>
 #include <vector>
-
-// Iterators library
 #include <iterator>
-
-// Ranges library
 #include <ranges>
-
-// Algorithms library
 #include <algorithm>
 #include <execution>
-
-// Numerics library
 #include <bit>
 #include <cfenv>
 #include <cmath>
@@ -95,12 +73,8 @@
 #include <random>
 #include <ratio>
 #include <valarray>
-
-// Localization library
 #include <clocale>
 #include <locale>
-
-// Input/output library
 #include <cstdio>
 #include <fstream>
 #include <iomanip>
@@ -115,17 +89,9 @@
 #include <streambuf>
 #include <strstream>
 #include <syncstream>
-
-// Filesystem library
 #include <filesystem>
-
-// Regular Expressions library
 #include <regex>
-
-// Atomic Operations library
 #include <atomic>
-
-// Thread support library
 #include <barrier>
 #include <condition_variable>
 #include <future>
@@ -144,9 +110,9 @@ static_assert(std::is_integral_v<std::time_t> && sizeof(std::time_t) == sizeof(s
 #include <spdlog/spdlog.h>
 #pragma warning(pop)
 
-#include "SFSE/Impl/DInputAPI.h"
-#include "SFSE/Impl/WinAPI.h"
-#include "SFSE/Impl/XInputAPI.h"
+#include "REX/REX.h"
+#include "REX/W32/KERNEL32.h"
+#include "REX/W32/USER32.h"
 
 #define AsAddress(ptr) std::bit_cast<std::uintptr_t>(ptr)
 #define AsPointer(addr) std::bit_cast<void*>(addr)
@@ -608,8 +574,8 @@ namespace SFSE::stl
 	[[nodiscard]] inline auto utf8_to_utf16(const std::string_view a_in) noexcept -> std::optional<std::wstring>
 	{
 		const auto cvt = [&](wchar_t* a_dst, const std::size_t a_length) {
-			return WinAPI::MultiByteToWideChar(
-				WinAPI::CP_UTF8, 0, a_in.data(), static_cast<int>(a_in.length()), a_dst, static_cast<int>(a_length));
+			return REX::W32::MultiByteToWideChar(
+				REX::W32::CP_UTF8, 0, a_in.data(), static_cast<int>(a_in.length()), a_dst, static_cast<int>(a_length));
 		};
 
 		const auto len = cvt(nullptr, 0);
@@ -628,8 +594,8 @@ namespace SFSE::stl
 	[[nodiscard]] inline auto utf16_to_utf8(const std::wstring_view a_in) noexcept -> std::optional<std::string>
 	{
 		const auto cvt = [&](char* a_dst, const std::size_t a_length) {
-			return WinAPI::WideCharToMultiByte(
-				WinAPI::CP_UTF8, 0, a_in.data(), static_cast<int>(a_in.length()), a_dst, static_cast<int>(a_length), nullptr, nullptr);
+			return REX::W32::WideCharToMultiByte(
+				REX::W32::CP_UTF8, 0, a_in.data(), static_cast<int>(a_in.length()), a_dst, static_cast<int>(a_length), nullptr, nullptr);
 		};
 
 		const auto len = cvt(nullptr, 0);
@@ -661,14 +627,13 @@ namespace SFSE::stl
 		}();
 
 		const auto caption = []() {
-			const auto           maxPath = WinAPI::GetMaxPath();
 			std::vector<wchar_t> buf;
-			buf.reserve(maxPath);
-			buf.resize(maxPath / 2);
+			buf.reserve(REX::W32::MAX_PATH);
+			buf.resize(REX::W32::MAX_PATH / 2);
 			std::uint32_t result;
 			do {
 				buf.resize(buf.size() * 2);
-				result = WinAPI::GetModuleFileName(WinAPI::GetCurrentModule(), buf.data(), static_cast<std::uint32_t>(buf.size()));
+				result = REX::W32::GetModuleFileNameW(REX::W32::GetCurrentModule(), buf.data(), static_cast<std::uint32_t>(buf.size()));
 			} while (result && result == buf.size() && buf.size() <= (std::numeric_limits<std::uint32_t>::max)());
 
 			if (result && result != buf.size()) {
@@ -681,8 +646,8 @@ namespace SFSE::stl
 		spdlog::log(spdlog::source_loc{ a_loc.file_name(), static_cast<int>(a_loc.line()), a_loc.function_name() }, spdlog::level::critical, a_msg);
 
 		if (a_fail) {
-			WinAPI::MessageBox(nullptr, body.c_str(), (caption.empty() ? nullptr : caption.c_str()), 0);
-			WinAPI::TerminateProcess(WinAPI::GetCurrentProcess(), EXIT_FAILURE);
+			REX::W32::MessageBoxW(nullptr, body.c_str(), (caption.empty() ? nullptr : caption.c_str()), 0);
+			REX::W32::TerminateProcess(REX::W32::GetCurrentProcess(), EXIT_FAILURE);
 		}
 		return true;
 	}
@@ -741,14 +706,12 @@ namespace RE
 {
 	using namespace std::literals;
 	namespace stl = SFSE::stl;
-	namespace WinAPI = SFSE::WinAPI;
 }
 
 namespace REL
 {
 	using namespace std::literals;
 	namespace stl = SFSE::stl;
-	namespace WinAPI = SFSE::WinAPI;
 }
 
 #include "REL/REL.h"

@@ -153,10 +153,10 @@ namespace REL
 	inline void safe_write(const std::uintptr_t a_dst, const void* a_src, const std::size_t a_count)
 	{
 		std::uint32_t old{};
-		auto          success = WinAPI::VirtualProtect(reinterpret_cast<void*>(a_dst), a_count, WinAPI::PAGE_EXECUTE_READWRITE, std::addressof(old));
+		auto          success = REX::W32::VirtualProtect(reinterpret_cast<void*>(a_dst), a_count, REX::W32::PAGE_EXECUTE_READWRITE, std::addressof(old));
 		if (success) {
 			std::memcpy(reinterpret_cast<void*>(a_dst), a_src, a_count);
-			success = WinAPI::VirtualProtect(reinterpret_cast<void*>(a_dst), a_count, old, std::addressof(old));
+			success = REX::W32::VirtualProtect(reinterpret_cast<void*>(a_dst), a_count, old, std::addressof(old));
 		}
 
 		assert(success);
@@ -177,10 +177,10 @@ namespace REL
 	inline void safe_fill(const std::uintptr_t a_dst, const std::uint8_t a_value, const std::size_t a_count)
 	{
 		std::uint32_t old{};
-		auto          success = WinAPI::VirtualProtect(reinterpret_cast<void*>(a_dst), a_count, WinAPI::PAGE_EXECUTE_READWRITE, std::addressof(old));
+		auto          success = REX::W32::VirtualProtect(reinterpret_cast<void*>(a_dst), a_count, REX::W32::PAGE_EXECUTE_READWRITE, std::addressof(old));
 		if (success) {
 			std::fill_n(reinterpret_cast<std::uint8_t*>(a_dst), a_count, a_value);
-			success = WinAPI::VirtualProtect(reinterpret_cast<void*>(a_dst), a_count, old, std::addressof(old));
+			success = REX::W32::VirtualProtect(reinterpret_cast<void*>(a_dst), a_count, old, std::addressof(old));
 		}
 
 		assert(success);
