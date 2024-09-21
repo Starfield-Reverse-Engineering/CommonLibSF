@@ -202,5 +202,5 @@ namespace REX::W32
 {
 	std::uint16_t htons(std::uint16_t a_host) noexcept;
 	std::uint32_t ntohl(std::uint32_t a_net) noexcept;
-	std::int32_t WSAGetLastError() noexcept;
+	std::int32_t  WSAGetLastError() noexcept;
 }
