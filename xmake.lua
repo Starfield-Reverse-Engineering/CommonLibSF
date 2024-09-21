@@ -41,7 +41,7 @@ target("commonlibsf")
     add_options("sfse_xbyak", { public = true })
 
     -- add system links
-    add_syslinks("advapi32", "dbghelp", "ole32", "shell32", "user32", "version", "Ws2_32")
+    add_syslinks("advapi32", "bcrypt", "dbghelp", "dxgi", "ole32", "shell32", "user32", "version", "ws2_32")
 
     -- add source files
     add_files("src/**.cpp")
@@ -51,6 +51,7 @@ target("commonlibsf")
     add_headerfiles(
         "include/(RE/**.h)",
         "include/(REL/**.h)",
+        "include/(REX/**.h)",
         "include/(SFSE/**.h)"
     )
 

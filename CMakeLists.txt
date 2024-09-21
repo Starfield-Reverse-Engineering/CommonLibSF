@@ -165,10 +165,14 @@ function(configure_target TARGET_NAME)
   target_link_libraries(
     ${TARGET_NAME}
     PUBLIC
+    advapi32.lib
+    bcrypt.lib
+    dbghelp.lib
+    dxgi.lib
+    ole32.lib
     spdlog::spdlog
-    Version.lib
-    Dbghelp.lib
-    Ws2_32.lib
+    version.lib
+    ws2_32.lib
   )
 
   if(SFSE_SUPPORT_XBYAK)
@@ -233,6 +237,7 @@ install(
   DIRECTORY
   include/RE
   include/REL
+  include/REX
   include/SFSE
   DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
 )
