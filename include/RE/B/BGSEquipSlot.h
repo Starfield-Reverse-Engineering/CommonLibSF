@@ -25,10 +25,10 @@ namespace RE
 		~BGSEquipSlot() override;  // 00
 
 		// members
-		BGSEditorID                           formEditorID;         // 30
-		BSTArray<BGSEquipSlot*>               parentSlots;          // 40
-		ActorValueInfo*                       conditionActorValue;  // 50
-		stl::enumeration<Flag, std::uint32_t> flags;                // 58
+		BGSEditorID                       formEditorID;         // 30
+		BSTArray<BGSEquipSlot*>           parentSlots;          // 40
+		ActorValueInfo*                   conditionActorValue;  // 50
+		REX::EnumSet<Flag, std::uint32_t> flags;                // 58
 	};
 	static_assert(sizeof(BGSEquipSlot) == 0x60);
 }

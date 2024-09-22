@@ -73,7 +73,7 @@ namespace RE::BSScript
 				kTRY_LOCK_GUARDS,
 			};
 
-			enum class ResumeReason
+			enum class ResumeReason : std::uint32_t
 			{
 				kNotResuming = 0,
 				kNotResumingNoIncrement = 1,
@@ -96,20 +96,20 @@ namespace RE::BSScript
 			virtual BSTSmartPointer<Object> GetSelfAsObject() const override;  // 02
 
 			// members
-			Stack*                                        stack;                    // 10
-			VirtualMachine*                               vm;                       // 18
-			ErrorLogger*                                  errorLogger;              // 20
-			stl::enumeration<ResumeReason, std::uint32_t> resumeReason;             // 28
-			std::uint32_t                                 pad2C;                    // 2C
-			const void*                                   instructionDataStart;     // 30
-			StackFrame*                                   topFrame;                 // 38
-			std::uint32_t                                 frameMemoryPage;          // 40
-			std::uint32_t                                 instructionDataBitCount;  // 44
-			std::int8_t                                   jumpBitCount;             // 48
-			std::int8_t                                   localVarBitCount;         // 49
-			std::int8_t                                   memberVarBitCount;        // 4A
-			std::int8_t                                   unk4B;                    // 4B
-			std::uint32_t                                 pad4C;                    // 4C
+			Stack*          stack;                    // 10
+			VirtualMachine* vm;                       // 18
+			ErrorLogger*    errorLogger;              // 20
+			ResumeReason    resumeReason;             // 28
+			std::uint32_t   pad2C;                    // 2C
+			const void*     instructionDataStart;     // 30
+			StackFrame*     topFrame;                 // 38
+			std::uint32_t   frameMemoryPage;          // 40
+			std::uint32_t   instructionDataBitCount;  // 44
+			std::int8_t     jumpBitCount;             // 48
+			std::int8_t     localVarBitCount;         // 49
+			std::int8_t     memberVarBitCount;        // 4A
+			std::int8_t     unk4B;                    // 4B
+			std::uint32_t   pad4C;                    // 4C
 		};
 		static_assert(sizeof(CodeTasklet) == 0x50);
 	}

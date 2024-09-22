@@ -14,9 +14,9 @@ namespace RE
 		~BGSDefaultObject() override;  // 00
 
 		// members
-		BGSEditorID                              formEditorID;  // 30
-		TESForm*                                 object;        // 40
-		stl::enumeration<FormType, std::uint8_t> objectType;    // 48
+		BGSEditorID                          formEditorID;  // 30
+		TESForm*                             object;        // 40
+		REX::EnumSet<FormType, std::uint8_t> objectType;    // 48
 	};
 	static_assert(sizeof(BGSDefaultObject) == 0x50);
 }

@@ -42,11 +42,11 @@ namespace RE
 		static_assert(sizeof(Teaches) == 0x8);
 
 		// members
-		stl::enumeration<Flag, std::uint8_t> flags;        // 00
-		Teaches                              teaches;      // 08
-		std::uint32_t                        textOffsetX;  // 10
-		std::uint32_t                        textOffsetY;  // 14
-		std::uint64_t                        unk18;        // 18
+		REX::EnumSet<Flag, std::uint8_t> flags;        // 00
+		Teaches                          teaches;      // 08
+		std::uint32_t                    textOffsetX;  // 10
+		std::uint32_t                    textOffsetY;  // 14
+		std::uint64_t                    unk18;        // 18
 	};
 	static_assert(sizeof(OBJ_BOOK) == 0x20);
 

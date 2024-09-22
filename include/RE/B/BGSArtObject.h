@@ -17,7 +17,7 @@ namespace RE
 		SF_RTTI_VTABLE(BGSArtObject);
 		SF_FORMTYPE(ARTO);
 
-		enum class ArtType
+		enum class ArtType : std::uint32_t
 		{
 			kMagicCastingArt = 0,
 			kMagicHitEffect = 1,
@@ -26,10 +26,9 @@ namespace RE
 
 		struct Data  // DNAM
 		{
-		public:
 			// members
-			stl::enumeration<ArtType, std::uint32_t> artType;  // 0
-			std::uint32_t                            unk04;    // 4
+			ArtType       artType;  // 0
+			std::uint32_t unk04;    // 4
 		};
 		static_assert(sizeof(Data) == 0x8);
 

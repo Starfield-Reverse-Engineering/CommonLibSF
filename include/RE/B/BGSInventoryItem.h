@@ -35,11 +35,11 @@ namespace RE
 		[[nodiscard]] bool IsEquipped() const noexcept { return flags.any(Flag::kSlotMask); }
 
 		// members
-		TESBoundObject*                       object;        // 00
-		BSTSmartPointer<TBO_InstanceData>     instanceData;  // 08
-		BSTArray<Stack>                       stacks;        // 10
-		stl::enumeration<Flag, std::uint32_t> flags;         // 20
-		std::int8_t                           unk24;         // 24
+		TESBoundObject*                   object;        // 00
+		BSTSmartPointer<TBO_InstanceData> instanceData;  // 08
+		BSTArray<Stack>                   stacks;        // 10
+		REX::EnumSet<Flag, std::uint32_t> flags;         // 20
+		std::int8_t                       unk24;         // 24
 	};
 	static_assert(sizeof(BGSInventoryItem) == 0x28);
 }

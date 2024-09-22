@@ -18,8 +18,8 @@ namespace RE
 		};
 
 		// members
-		stl::enumeration<Flag, std::uint8_t> flags;  // 0
-		std::uint8_t                         unk01;  // 1
+		REX::EnumSet<Flag, std::uint8_t> flags;  // 0
+		std::uint8_t                     unk01;  // 1
 	};
 	static_assert(sizeof(VOICE_TYPE_DATA) == 0x2);
 

@@ -48,7 +48,7 @@ namespace RE
 		TESForm*                                            unk098;                  // 098
 		std::uint8_t                                        unk0A0;                  // 0A0
 		std::uint8_t                                        minLevel;                // 0A1
-		stl::enumeration<Flags, std::uint8_t>               flags;                   // 0A2
+		REX::EnumSet<Flags, std::uint8_t>                   flags;                   // 0A2
 		std::uint8_t                                        maxLevel;                // 0A3
 		std::uint8_t                                        unk0A4;                  // 0A4
 		std::uint64_t                                       unk0A8;                  // 0A8

@@ -23,20 +23,20 @@ namespace RE
 				kFitSlope = 1 << 2
 			};
 
-			std::uint32_t                        unk00;       // 00
-			float                                unk04;       // 04 - heightRange?
-			float                                unk08;       // 08 - positionRange?
-			float                                wavePeriod;  // 0C
-			std::uint32_t                        unk10;       // 10
-			std::uint32_t                        unk14;       // 14
-			std::uint32_t                        unk18;       // 18
-			std::uint32_t                        unk1C;       // 1C
-			std::uint8_t                         density;     // 20
-			std::uint8_t                         minSlope;    // 21
-			std::uint8_t                         maxSlope;    // 22
-			stl::enumeration<Flag, std::uint8_t> flags;       // 23
-			std::uint8_t                         unk24;       // 24
-			std::uint8_t                         unk25;       // 25
+			std::uint32_t                    unk00;       // 00
+			float                            unk04;       // 04 - heightRange?
+			float                            unk08;       // 08 - positionRange?
+			float                            wavePeriod;  // 0C
+			std::uint32_t                    unk10;       // 10
+			std::uint32_t                    unk14;       // 14
+			std::uint32_t                    unk18;       // 18
+			std::uint32_t                    unk1C;       // 1C
+			std::uint8_t                     density;     // 20
+			std::uint8_t                     minSlope;    // 21
+			std::uint8_t                     maxSlope;    // 22
+			REX::EnumSet<Flag, std::uint8_t> flags;       // 23
+			std::uint8_t                     unk24;       // 24
+			std::uint8_t                     unk25;       // 25
 		};
 		static_assert(sizeof(GRASS_DATA) == 0x28);
 

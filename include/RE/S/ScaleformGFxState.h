@@ -58,7 +58,7 @@ namespace RE::Scaleform::GFx
 
 	protected:
 		// members
-		stl::enumeration<StateType, std::int32_t> stateType;
+		REX::EnumSet<StateType, std::int32_t> stateType;
 	};
 	static_assert(sizeof(State) == 0x18);
 }

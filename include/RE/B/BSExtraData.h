@@ -21,9 +21,9 @@ namespace RE
 		virtual void Unk_06();  // 06
 
 		// members
-		BSExtraData*                                  next;   // 08
-		std::uint16_t                                 flags;  // 10
-		stl::enumeration<ExtraDataType, std::uint8_t> type;   // 12
+		BSExtraData*                              next;   // 08
+		std::uint16_t                             flags;  // 10
+		REX::EnumSet<ExtraDataType, std::uint8_t> type;   // 12
 	};
 	static_assert(sizeof(BSExtraData) == 0x18);
 }

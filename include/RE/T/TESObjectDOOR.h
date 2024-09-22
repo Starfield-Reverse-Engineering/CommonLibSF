@@ -47,15 +47,15 @@ namespace RE
 		~TESObjectDOOR() override;  // 00
 
 		// members
-		BGSLocalizedString                   altOpenText;      // 1A8
-		BGSLocalizedString                   altCloseText;     // 1B0
-		BGSAudio::WwiseSoundHook             openSound;        // 1B8
-		BGSAudio::WwiseSoundHook             closeSound;       // 1E8
-		BGSAudio::WwiseSoundHook             lockSound;        // 218
-		std::uint32_t                        unk248;           // 248
-		std::uint32_t                        unk24C;           // 24C
-		stl::enumeration<Flag, std::uint8_t> flags;            // 250
-		BSTArray<TESForm*>                   randomTeleports;  // 258
+		BGSLocalizedString               altOpenText;      // 1A8
+		BGSLocalizedString               altCloseText;     // 1B0
+		BGSAudio::WwiseSoundHook         openSound;        // 1B8
+		BGSAudio::WwiseSoundHook         closeSound;       // 1E8
+		BGSAudio::WwiseSoundHook         lockSound;        // 218
+		std::uint32_t                    unk248;           // 248
+		std::uint32_t                    unk24C;           // 24C
+		REX::EnumSet<Flag, std::uint8_t> flags;            // 250
+		BSTArray<TESForm*>               randomTeleports;  // 258
 	};
 	static_assert(sizeof(TESObjectDOOR) == 0x268);
 }

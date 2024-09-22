@@ -60,14 +60,14 @@ namespace RE
 		};
 
 		// members
-		stl::enumeration<Flag, std::uint32_t>              actorBaseFlags;    // 00
-		std::int16_t                                       xpValueOffset;     // 04
-		std::uint16_t                                      level;             // 06
-		std::uint16_t                                      calcLevelMin;      // 08
-		std::uint16_t                                      calcLevelMax;      // 0A
-		std::uint16_t                                      baseDisposition;   // 0C
-		stl::enumeration<TEMPLATE_USE_FLAG, std::uint16_t> templateUseFlags;  // 0E
-		std::int16_t                                       bleedoutOverride;  // 10
+		REX::EnumSet<Flag, std::uint32_t>              actorBaseFlags;    // 00
+		std::int16_t                                   xpValueOffset;     // 04
+		std::uint16_t                                  level;             // 06
+		std::uint16_t                                  calcLevelMin;      // 08
+		std::uint16_t                                  calcLevelMax;      // 0A
+		std::uint16_t                                  baseDisposition;   // 0C
+		REX::EnumSet<TEMPLATE_USE_FLAG, std::uint16_t> templateUseFlags;  // 0E
+		std::int16_t                                   bleedoutOverride;  // 10
 	};
 	static_assert(sizeof(ACTOR_BASE_DATA) == 0x14);
 

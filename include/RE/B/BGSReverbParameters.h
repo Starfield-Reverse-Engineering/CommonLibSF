@@ -24,8 +24,8 @@ namespace RE
 		~BGSReverbParameters() override;  // 00
 
 		// members
-		stl::enumeration<ReverbClass, std::uint32_t> reverbClass;  // 30
-		BGSAudio::WwiseGUID                          audioBus;     // 38
+		REX::EnumSet<ReverbClass, std::uint32_t> reverbClass;  // 30
+		BGSAudio::WwiseGUID                      audioBus;     // 38
 	};
 	static_assert(sizeof(BGSReverbParameters) == 0x48);
 }

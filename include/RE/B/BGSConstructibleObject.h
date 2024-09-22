@@ -38,7 +38,7 @@ namespace RE
 		BGSCurveForm*                                                                   unk168;       // 168
 		TESGlobal*                                                                      buildLimit;   // 170
 		BSTArray<BSTTuple3<TESForm*, BGSCurveForm*, BGSTypedFormValuePair::SharedVal>>* unk178;       // 178
-		stl::enumeration<LEARN_METHOD, std::uint8_t>                                    learnMethod;  // 180
+		REX::EnumSet<LEARN_METHOD, std::uint8_t>                                        learnMethod;  // 180
 		TESGlobal*                                                                      unk188;       // 188
 		BGSKeyword*                                                                     unk190;       // 190
 		std::uint32_t                                                                   unk198;       // 198

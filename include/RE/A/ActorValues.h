@@ -20,7 +20,7 @@ namespace RE
 		public BSTSingletonImplicit<ActorValue>  // 000
 	{
 	public:
-		enum class AVType
+		enum class Type : std::uint32_t
 		{
 			kDerivedAttribute,
 			kAttribute,

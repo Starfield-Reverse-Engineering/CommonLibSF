@@ -37,7 +37,7 @@ namespace RE::BSScript::Internal
 		// members
 		msvc::unique_ptr<BSTObjectArena<StringTableScrapPage, BSTObjectArenaScrapAlloc, 1>> scrapPages;  // 00
 		msvc::unique_ptr<BSScrapArray<StringEntry>>                                         entries;     // 08
-		stl::enumeration<StringIndexSize, std::int32_t>                                     indexSize;   // 10
+		REX::EnumSet<StringIndexSize, std::int32_t>                                         indexSize;   // 10
 	};
 	static_assert(sizeof(ReadableStringTable) == 0x18);
 }
