@@ -428,7 +428,7 @@ namespace RE
 		[[nodiscard]] TESForm* GetDefaultObject(DEFAULT_OBJECT a_obj) const noexcept
 		{
 			assert(a_obj < DEFAULT_OBJECT::kTotal);
-			return objectArray[stl::to_underlying(a_obj)];
+			return objectArray[std::to_underlying(a_obj)];
 		}
 
 		template <class T>

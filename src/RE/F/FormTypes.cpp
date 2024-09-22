@@ -6,7 +6,7 @@ namespace RE
 {
 	const char* FormTypeToString(FormType a_formType)
 	{
-		return FORM_ENUM_STRING::GetFormEnumString()[stl::to_underlying(a_formType)].formString;
+		return FORM_ENUM_STRING::GetFormEnumString()[std::to_underlying(a_formType)].formString;
 	}
 
 	FormType StringToFormType(std::string_view a_formType)

@@ -481,13 +481,6 @@ namespace SFSE::stl
 		std::unreachable();
 	}
 
-	template <class Enum>
-	[[nodiscard]] constexpr auto to_underlying(Enum a_val) noexcept
-		requires(std::is_enum_v<Enum>)
-	{
-		return static_cast<std::underlying_type_t<Enum>>(a_val);
-	}
-
 	template <class To, class From>
 	[[nodiscard]] To unrestricted_cast(From a_from) noexcept
 	{
