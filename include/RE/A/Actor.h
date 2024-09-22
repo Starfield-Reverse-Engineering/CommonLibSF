@@ -280,107 +280,107 @@ namespace RE
 		[[nodiscard]] bool IsHostileToActor(Actor* a_actor);
 
 		// members
-		stl::enumeration<BOOL_BITS, std::uint32_t>           boolBits;                 // 200
-		float                                                unk204;                   // 204
-		BSGuarded<BSTArray<void*>, BSSpinLock>               unk208;                   // 208 - BGSBody?
-		AIProcess*                                           currentProcess;           // 220
-		std::uint64_t                                        unk228;                   // 228
-		std::uint64_t                                        unk230;                   // 230
-		std::uint64_t                                        unk238;                   // 238
-		std::uint64_t                                        unk240;                   // 240
-		CombatController*                                    combatController;         // 248
-		std::uint64_t                                        unk250;                   // 250
-		ActorValueStorage                                    avStorage;                // 258
-		std::uint64_t                                        unk280;                   // 280
-		stl::enumeration<ACTOR_CRITICAL_STAGE, std::int32_t> criticalStage;            // 288
-		std::uint32_t                                        dialogueItemTarget;       // 28C - TESPointerHandle
-		std::uint32_t                                        currentCombatTarget;      // 290 - TESPointerHandle
-		std::uint32_t                                        myKiller;                 // 294 - TESPointerHandle
-		std::uint64_t                                        unk298;                   // 298
-		std::uint64_t                                        unk2A0;                   // 2A0
-		std::uint32_t                                        actionValue;              // 2A8
-		float                                                timerOnAction;            // 2AC
-		std::uint64_t                                        unk2B0;                   // 2B0
-		std::uint32_t                                        intimidateBribeDayStamp;  // 2B8
-		std::uint32_t                                        unk2BC;                   // 2BC
-		std::uint64_t                                        unk2C0;                   // 2C0
-		std::uint64_t                                        unk2C8;                   // 2C8
-		std::uint64_t                                        unk2D0;                   // 2D0
-		std::uint64_t                                        unk2D8;                   // 2D8
-		std::uint64_t                                        unk2E0;                   // 2E0
-		std::uint64_t                                        unk2E8;                   // 2E8
-		std::uint64_t                                        unk2F0;                   // 2F0
-		std::uint64_t                                        unk2F8;                   // 2F8
-		std::uint64_t                                        unk300;                   // 300
-		std::uint64_t                                        unk308;                   // 308
-		std::uint64_t                                        unk310;                   // 310
-		std::uint64_t                                        unk318;                   // 318
-		std::uint64_t                                        unk320;                   // 320
-		std::uint64_t                                        unk328;                   // 328
-		std::uint64_t                                        unk330;                   // 330
-		std::uint64_t                                        unk338;                   // 338
-		std::uint64_t                                        unk340;                   // 340
-		std::uint64_t                                        unk348;                   // 348
-		TESRace*                                             race;                     // 350
-		Perks*                                               perks;                    // 358
-		std::uint32_t                                        unk360;                   // 360
-		mutable BSReadWriteLock                              perkArrayLock;            // 364
-		std::uint32_t                                        unk35C;                   // 35C
-		stl::enumeration<BOOL_FLAGS, std::uint32_t>          boolFlags;                // 370
-		stl::enumeration<BOOL_FLAGS2, std::uint32_t>         boolFlags2;               // 374
-		std::uint64_t                                        unk378;                   // 378
-		std::uint64_t                                        unk380;                   // 380
-		std::uint64_t                                        unk388;                   // 388
-		std::uint64_t                                        unk390;                   // 390
-		std::uint64_t                                        unk398;                   // 398
-		std::uint64_t                                        unk3A0;                   // 3A0
-		std::uint64_t                                        unk3A8;                   // 3A8
-		std::uint64_t                                        unk3B0;                   // 3B0
-		std::uint64_t                                        unk3B8;                   // 3B8
-		std::uint64_t                                        unk3C0;                   // 3C0
-		std::uint64_t                                        unk3C8;                   // 3C8
-		std::uint64_t                                        unk3D0;                   // 3D0
-		std::uint64_t                                        unk3D8;                   // 3D8
-		std::uint64_t                                        unk3E0;                   // 3E0
-		std::uint64_t                                        unk3E8;                   // 3E8
-		std::uint64_t                                        unk3F0;                   // 3F0
-		std::uint64_t                                        unk3F8;                   // 3F8
-		std::uint64_t                                        unk400;                   // 400
-		std::uint64_t                                        unk408;                   // 408
-		std::uint64_t                                        unk410;                   // 410
-		std::uint64_t                                        unk418;                   // 418
-		std::uint64_t                                        unk420;                   // 420
-		std::uint64_t                                        unk428;                   // 428
-		std::uint64_t                                        unk430;                   // 430
-		std::uint64_t                                        unk438;                   // 438
-		std::uint64_t                                        unk440;                   // 440
-		std::uint64_t                                        unk448;                   // 448
-		std::uint64_t                                        unk450;                   // 450
-		std::uint64_t                                        unk458;                   // 458
-		std::uint64_t                                        unk460;                   // 460
-		std::uint64_t                                        unk468;                   // 468
-		std::uint64_t                                        unk470;                   // 470
-		std::uint64_t                                        unk478;                   // 478
-		std::uint64_t                                        unk480;                   // 480
-		std::uint64_t                                        unk488;                   // 488
-		std::uint64_t                                        unk490;                   // 490
-		std::uint64_t                                        unk498;                   // 498
-		std::uint64_t                                        unk4A0;                   // 4A0
-		std::uint64_t                                        unk4A8;                   // 4A8
-		std::uint64_t                                        unk4B0;                   // 4B0
-		std::uint64_t                                        unk4B8;                   // 4B8
-		std::uint64_t                                        unk4C0;                   // 4C0
-		std::uint64_t                                        unk4C8;                   // 4C8
-		std::uint64_t                                        unk4D0;                   // 4D0
-		std::uint64_t                                        unk4D8;                   // 4D8
-		std::uint64_t                                        unk4E0;                   // 4E0
-		std::uint64_t                                        unk4E8;                   // 4E8
-		std::uint64_t                                        unk4F0;                   // 4F0
-		std::uint64_t                                        unk4F8;                   // 4F8
-		std::uint64_t                                        unk500;                   // 500
-		std::uint64_t                                        unk508;                   // 508
-		std::uint64_t                                        unk510;                   // 510
-		std::uint8_t                                         unk518[88];               // 518
+		REX::EnumSet<BOOL_BITS, std::uint32_t>           boolBits;                 // 200
+		float                                            unk204;                   // 204
+		BSGuarded<BSTArray<void*>, BSSpinLock>           unk208;                   // 208 - BGSBody?
+		AIProcess*                                       currentProcess;           // 220
+		std::uint64_t                                    unk228;                   // 228
+		std::uint64_t                                    unk230;                   // 230
+		std::uint64_t                                    unk238;                   // 238
+		std::uint64_t                                    unk240;                   // 240
+		CombatController*                                combatController;         // 248
+		std::uint64_t                                    unk250;                   // 250
+		ActorValueStorage                                avStorage;                // 258
+		std::uint64_t                                    unk280;                   // 280
+		REX::EnumSet<ACTOR_CRITICAL_STAGE, std::int32_t> criticalStage;            // 288
+		std::uint32_t                                    dialogueItemTarget;       // 28C - TESPointerHandle
+		std::uint32_t                                    currentCombatTarget;      // 290 - TESPointerHandle
+		std::uint32_t                                    myKiller;                 // 294 - TESPointerHandle
+		std::uint64_t                                    unk298;                   // 298
+		std::uint64_t                                    unk2A0;                   // 2A0
+		std::uint32_t                                    actionValue;              // 2A8
+		float                                            timerOnAction;            // 2AC
+		std::uint64_t                                    unk2B0;                   // 2B0
+		std::uint32_t                                    intimidateBribeDayStamp;  // 2B8
+		std::uint32_t                                    unk2BC;                   // 2BC
+		std::uint64_t                                    unk2C0;                   // 2C0
+		std::uint64_t                                    unk2C8;                   // 2C8
+		std::uint64_t                                    unk2D0;                   // 2D0
+		std::uint64_t                                    unk2D8;                   // 2D8
+		std::uint64_t                                    unk2E0;                   // 2E0
+		std::uint64_t                                    unk2E8;                   // 2E8
+		std::uint64_t                                    unk2F0;                   // 2F0
+		std::uint64_t                                    unk2F8;                   // 2F8
+		std::uint64_t                                    unk300;                   // 300
+		std::uint64_t                                    unk308;                   // 308
+		std::uint64_t                                    unk310;                   // 310
+		std::uint64_t                                    unk318;                   // 318
+		std::uint64_t                                    unk320;                   // 320
+		std::uint64_t                                    unk328;                   // 328
+		std::uint64_t                                    unk330;                   // 330
+		std::uint64_t                                    unk338;                   // 338
+		std::uint64_t                                    unk340;                   // 340
+		std::uint64_t                                    unk348;                   // 348
+		TESRace*                                         race;                     // 350
+		Perks*                                           perks;                    // 358
+		std::uint32_t                                    unk360;                   // 360
+		mutable BSReadWriteLock                          perkArrayLock;            // 364
+		std::uint32_t                                    unk35C;                   // 35C
+		REX::EnumSet<BOOL_FLAGS, std::uint32_t>          boolFlags;                // 370
+		REX::EnumSet<BOOL_FLAGS2, std::uint32_t>         boolFlags2;               // 374
+		std::uint64_t                                    unk378;                   // 378
+		std::uint64_t                                    unk380;                   // 380
+		std::uint64_t                                    unk388;                   // 388
+		std::uint64_t                                    unk390;                   // 390
+		std::uint64_t                                    unk398;                   // 398
+		std::uint64_t                                    unk3A0;                   // 3A0
+		std::uint64_t                                    unk3A8;                   // 3A8
+		std::uint64_t                                    unk3B0;                   // 3B0
+		std::uint64_t                                    unk3B8;                   // 3B8
+		std::uint64_t                                    unk3C0;                   // 3C0
+		std::uint64_t                                    unk3C8;                   // 3C8
+		std::uint64_t                                    unk3D0;                   // 3D0
+		std::uint64_t                                    unk3D8;                   // 3D8
+		std::uint64_t                                    unk3E0;                   // 3E0
+		std::uint64_t                                    unk3E8;                   // 3E8
+		std::uint64_t                                    unk3F0;                   // 3F0
+		std::uint64_t                                    unk3F8;                   // 3F8
+		std::uint64_t                                    unk400;                   // 400
+		std::uint64_t                                    unk408;                   // 408
+		std::uint64_t                                    unk410;                   // 410
+		std::uint64_t                                    unk418;                   // 418
+		std::uint64_t                                    unk420;                   // 420
+		std::uint64_t                                    unk428;                   // 428
+		std::uint64_t                                    unk430;                   // 430
+		std::uint64_t                                    unk438;                   // 438
+		std::uint64_t                                    unk440;                   // 440
+		std::uint64_t                                    unk448;                   // 448
+		std::uint64_t                                    unk450;                   // 450
+		std::uint64_t                                    unk458;                   // 458
+		std::uint64_t                                    unk460;                   // 460
+		std::uint64_t                                    unk468;                   // 468
+		std::uint64_t                                    unk470;                   // 470
+		std::uint64_t                                    unk478;                   // 478
+		std::uint64_t                                    unk480;                   // 480
+		std::uint64_t                                    unk488;                   // 488
+		std::uint64_t                                    unk490;                   // 490
+		std::uint64_t                                    unk498;                   // 498
+		std::uint64_t                                    unk4A0;                   // 4A0
+		std::uint64_t                                    unk4A8;                   // 4A8
+		std::uint64_t                                    unk4B0;                   // 4B0
+		std::uint64_t                                    unk4B8;                   // 4B8
+		std::uint64_t                                    unk4C0;                   // 4C0
+		std::uint64_t                                    unk4C8;                   // 4C8
+		std::uint64_t                                    unk4D0;                   // 4D0
+		std::uint64_t                                    unk4D8;                   // 4D8
+		std::uint64_t                                    unk4E0;                   // 4E0
+		std::uint64_t                                    unk4E8;                   // 4E8
+		std::uint64_t                                    unk4F0;                   // 4F0
+		std::uint64_t                                    unk4F8;                   // 4F8
+		std::uint64_t                                    unk500;                   // 500
+		std::uint64_t                                    unk508;                   // 508
+		std::uint64_t                                    unk510;                   // 510
+		std::uint8_t                                     unk518[88];               // 518
 	};
 	static_assert(sizeof(Actor) == 0x570);
 }

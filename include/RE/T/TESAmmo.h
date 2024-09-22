@@ -27,10 +27,10 @@ namespace RE
 		};
 
 		// members
-		BGSProjectile*                       projectile;  // 00
-		std::uint32_t                        health;      // 08
-		float                                damage;      // 0C
-		stl::enumeration<Flag, std::uint8_t> flags;       // 10
+		BGSProjectile*                   projectile;  // 00
+		std::uint32_t                    health;      // 08
+		float                            damage;      // 0C
+		REX::EnumSet<Flag, std::uint8_t> flags;       // 10
 	};
 	static_assert(sizeof(AMMO_DATA) == 0x18);
 

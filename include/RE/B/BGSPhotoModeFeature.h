@@ -26,14 +26,14 @@ namespace RE
 
 		struct Feature
 		{
-			stl::enumeration<TYPE, std::uint8_t> type;     // 00
-			float                                offsetX;  // 04
-			float                                offsetY;  // 08
-			float                                unk0C;    // 0C
-			float                                unk10;    // 10
-			float                                width;    // 14
-			float                                height;   // 18
-			float                                unk1C;    // 1C
+			REX::Enum<TYPE, std::uint8_t> type;     // 00
+			float                         offsetX;  // 04
+			float                         offsetY;  // 08
+			float                         unk0C;    // 0C
+			float                         unk10;    // 10
+			float                         width;    // 14
+			float                         height;   // 18
+			float                         unk1C;    // 1C
 		};
 		static_assert(sizeof(Feature) == 0x20);
 

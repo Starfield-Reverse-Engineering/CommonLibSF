@@ -26,14 +26,14 @@ namespace RE
 		~BGSMaterialType() override;  // 00
 
 		// members
-		TESModel                              breakableFXModel;    // 30
-		BGSMaterialType*                      parentType;          // 50
-		BGSImpactDataSet*                     havokImpactDataSet;  // 58
-		BSFixedString                         materialName;        // 60
-		std::uint32_t                         materialID;          // 68
-		NiColor                               materialColor;       // 6C
-		float                                 buoyancy;            // 78
-		stl::enumeration<FLAG, std::uint32_t> flags;               // 7C
+		TESModel                          breakableFXModel;    // 30
+		BGSMaterialType*                  parentType;          // 50
+		BGSImpactDataSet*                 havokImpactDataSet;  // 58
+		BSFixedString                     materialName;        // 60
+		std::uint32_t                     materialID;          // 68
+		NiColor                           materialColor;       // 6C
+		float                             buoyancy;            // 78
+		REX::EnumSet<FLAG, std::uint32_t> flags;               // 7C
 	};
 	static_assert(sizeof(BGSMaterialType) == 0x80);
 }

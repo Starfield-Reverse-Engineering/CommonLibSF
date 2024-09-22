@@ -37,9 +37,9 @@ namespace RE
 		~BGSInstanceNamingRules() override;  // 00
 
 		// members
-		stl::enumeration<FormType, std::uint8_t> type;          // 30
-		RuleSet                                  rules[10];     // 38
-		BSTArray<const BGSInstanceNamingRules*>  mergeSources;  // D8
+		REX::Enum<FormType, std::uint8_t>       type;          // 30
+		RuleSet                                 rules[10];     // 38
+		BSTArray<const BGSInstanceNamingRules*> mergeSources;  // D8
 	};
 	static_assert(sizeof(BGSInstanceNamingRules) == 0xE8);
 }

@@ -9,7 +9,7 @@ namespace RE
 	struct WorkbenchData
 	{
 	public:
-		enum class Type
+		enum class Type : std::uint8_t
 		{
 			kNone = 0,
 			kCreateObject = 1,
@@ -26,7 +26,7 @@ namespace RE
 		};
 
 		// members
-		stl::enumeration<Type, std::uint8_t> type;  // 0
+		Type type;  // 0
 	};
 	static_assert(sizeof(WorkbenchData) == 0x1);
 

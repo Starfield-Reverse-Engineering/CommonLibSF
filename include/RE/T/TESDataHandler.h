@@ -54,7 +54,7 @@ namespace RE
 		std::uint64_t          unk0058;                                           // 0058
 		std::uint64_t          unk0060;                                           // 0060
 		std::uint64_t          unk0068;                                           // 0068
-		FormArray              formArrays[stl::to_underlying(FormType::kTotal)];  // 0070
+		FormArray              formArrays[std::to_underlying(FormType::kTotal)];  // 0070
 		TESRegionList*         regionList;                                        // 1498
 		std::uint64_t          unk14A0;                                           // 14A0
 		std::uint64_t          unk14A8;                                           // 14A8

@@ -51,22 +51,22 @@ namespace RE
 			};
 
 			// members
-			stl::enumeration<CAM_ACTION, std::int32_t> cameraAction;                // 00
-			stl::enumeration<CAM_OBJECT, std::int32_t> location;                    // 04
-			stl::enumeration<CAM_OBJECT, std::int32_t> target;                      // 08
-			std::uint32_t                              flags;                       // 0C
-			float                                      playerTimeMult;              // 10
-			float                                      targetTimeMult;              // 14
-			float                                      globalTimeMult;              // 18
-			float                                      maxTime;                     // 1C
-			float                                      minTime;                     // 20
-			float                                      targetPercentBetweenActors;  // 24
-			float                                      nearTargetDistance;          // 28
-			float                                      locationSpring;              // 2C
-			float                                      targetSpring;                // 30
-			float                                      rotationOffsetX;             // 34
-			float                                      rotationOffsetY;             // 38
-			float                                      rotationOffsetZ;             // 3C
+			REX::Enum<CAM_ACTION, std::int32_t> cameraAction;                // 00
+			REX::Enum<CAM_OBJECT, std::int32_t> location;                    // 04
+			REX::Enum<CAM_OBJECT, std::int32_t> target;                      // 08
+			std::uint32_t                       flags;                       // 0C
+			float                               playerTimeMult;              // 10
+			float                               targetTimeMult;              // 14
+			float                               globalTimeMult;              // 18
+			float                               maxTime;                     // 1C
+			float                               minTime;                     // 20
+			float                               targetPercentBetweenActors;  // 24
+			float                               nearTargetDistance;          // 28
+			float                               locationSpring;              // 2C
+			float                               targetSpring;                // 30
+			float                               rotationOffsetX;             // 34
+			float                               rotationOffsetY;             // 38
+			float                               rotationOffsetZ;             // 3C
 		};
 		static_assert(sizeof(CAMERA_SHOT_DATA) == 0x40);
 

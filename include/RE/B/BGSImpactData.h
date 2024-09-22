@@ -37,13 +37,13 @@ namespace RE
 				kNoDecalData = 1 << 0
 			};
 
-			float                                        effectDuration;   // 00
-			stl::enumeration<ORIENTATION, std::uint32_t> orient;           // 04
-			float                                        angleThreshold;   // 08
-			float                                        placementRadius;  // 0C
-			std::uint32_t                                soundLevel;       // 10
-			stl::enumeration<Flag, std::uint8_t>         flags;            // 14
-			stl::enumeration<ImpactResult, std::uint8_t> resultOverride;   // 15
+			float                                 effectDuration;   // 00
+			REX::Enum<ORIENTATION, std::uint32_t> orient;           // 04
+			float                                 angleThreshold;   // 08
+			float                                 placementRadius;  // 0C
+			std::uint32_t                         soundLevel;       // 10
+			REX::EnumSet<Flag, std::uint8_t>      flags;            // 14
+			REX::Enum<ImpactResult, std::uint8_t> resultOverride;   // 15
 		};
 		static_assert(sizeof(IMPACT_DATA_DATA) == 0x18);
 

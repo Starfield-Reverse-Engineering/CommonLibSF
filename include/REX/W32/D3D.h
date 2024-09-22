@@ -695,7 +695,6 @@ namespace REX::W32
 
 	struct XMCOLOR
 	{
-	public:
 		union
 		{
 			struct
@@ -712,7 +711,6 @@ namespace REX::W32
 
 	struct XMFLOAT3
 	{
-	public:
 		float x;
 		float y;
 		float z;
@@ -721,7 +719,6 @@ namespace REX::W32
 
 	struct XMFLOAT4
 	{
-	public:
 		float x;
 		float y;
 		float z;

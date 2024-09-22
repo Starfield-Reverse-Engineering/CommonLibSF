@@ -9,7 +9,7 @@ namespace RE
 	struct AVMData
 	{
 	public:
-		enum class TYPE
+		enum class Type : std::uint32_t
 		{
 			kNone,
 			kSimpleGroup,
@@ -28,9 +28,9 @@ namespace RE
 		};
 
 		// members
-		stl::enumeration<TYPE, std::uint32_t> type;      // 00
-		BSFixedString                         category;  // 08
-		Entry                                 unk10;     // 10
+		Type          type;      // 00
+		BSFixedString category;  // 08
+		Entry         unk10;     // 10
 	};
 	static_assert(sizeof(AVMData) == 0x28);
 }

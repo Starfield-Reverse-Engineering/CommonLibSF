@@ -93,11 +93,11 @@ namespace RE
 
 		struct MiscSettings
 		{
-			stl::enumeration<ATMOSPHERE_TYPE, std::uint32_t> atmosphereType;      // 00
-			BSTArray<BGSResource*>                           inorganicResources;  // 08
-			TESImageSpace*                                   imageSpaceDay;       // 18
-			TESImageSpace*                                   imageSpaceNight;     // 20
-			TESClimate*                                      climateOverride;     // 28
+			REX::Enum<ATMOSPHERE_TYPE, std::uint32_t> atmosphereType;      // 00
+			BSTArray<BGSResource*>                    inorganicResources;  // 08
+			TESImageSpace*                            imageSpaceDay;       // 18
+			TESImageSpace*                            imageSpaceNight;     // 20
+			TESClimate*                               climateOverride;     // 28
 		};
 		static_assert(sizeof(MiscSettings) == 0x30);
 

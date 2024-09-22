@@ -16,9 +16,9 @@ namespace RE::BSBlendable
 	{
 	public:
 		// members
-		stl::enumeration<BlendOp, std::uint32_t> op;           // 00
-		REX::W32::XMFLOAT4                       value;        // 04
-		float                                    blendAmount;  // 14
+		REX::Enum<BlendOp, std::uint32_t> op;           // 00
+		REX::W32::XMFLOAT4                value;        // 04
+		float                             blendAmount;  // 14
 	};
 	static_assert(sizeof(ColorValue) == 0x18);
 
@@ -26,9 +26,9 @@ namespace RE::BSBlendable
 	{
 	public:
 		// members
-		stl::enumeration<BlendOp, std::uint32_t> op;          // 0
-		float                                    value;       // 4
-		float                                    blendValue;  // 8
+		REX::Enum<BlendOp, std::uint32_t> op;          // 0
+		float                             value;       // 4
+		float                             blendValue;  // 8
 	};
 	static_assert(sizeof(FloatValue) == 0xC);
 }

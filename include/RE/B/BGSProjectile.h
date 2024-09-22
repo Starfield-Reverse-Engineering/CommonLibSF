@@ -50,36 +50,36 @@ namespace RE
 		};
 
 		// members
-		BSFixedString                                       unk00;                // 00
-		BSFixedString                                       unk08;                // 08
-		TESObjectLIGH*                                      light;                // 10
-		TESObjectLIGH*                                      muzzleFlashLight;     // 18
-		BGSExplosion*                                       explosionType;        // 20
-		TESObjectWEAP*                                      defaultWeaponSource;  // 28
-		BGSTextureSet*                                      decalData;            // 30
-		BGSCollisionLayer*                                  collisionLayer;       // 38
-		BGSProjectile*                                      vatsProjectile;       // 40
-		stl::enumeration<BGSProjectileFlags, std::uint32_t> flags;                // 48
-		float                                               gravity;              // 4C
-		float                                               speed;                // 50
-		float                                               range;                // 54
-		float                                               explosionProximity;   // 58
-		float                                               explosionTimer;       // 5C
-		float                                               muzzleFlashDuration;  // 60
-		float                                               fadeOutTime;          // 64
-		float                                               force;                // 68
-		float                                               coneSpread;           // 6C
-		float                                               collisionRadius;      // 70
-		float                                               lifetime;             // 74
-		float                                               relaunchInterval;     // 78
-		float                                               unk7C;                // 7C
-		std::uint32_t                                       unk80;                // 80
-		stl::enumeration<Type, std::uint8_t>                type;                 // 84
-		std::uint8_t                                        unk85;                // 85
-		float                                               unk88;                // 88
-		float                                               unk8C;                // 8C
-		float                                               unk90;                // 90
-		float                                               unk94;                // 94
+		BSFixedString                                   unk00;                // 00
+		BSFixedString                                   unk08;                // 08
+		TESObjectLIGH*                                  light;                // 10
+		TESObjectLIGH*                                  muzzleFlashLight;     // 18
+		BGSExplosion*                                   explosionType;        // 20
+		TESObjectWEAP*                                  defaultWeaponSource;  // 28
+		BGSTextureSet*                                  decalData;            // 30
+		BGSCollisionLayer*                              collisionLayer;       // 38
+		BGSProjectile*                                  vatsProjectile;       // 40
+		REX::EnumSet<BGSProjectileFlags, std::uint32_t> flags;                // 48
+		float                                           gravity;              // 4C
+		float                                           speed;                // 50
+		float                                           range;                // 54
+		float                                           explosionProximity;   // 58
+		float                                           explosionTimer;       // 5C
+		float                                           muzzleFlashDuration;  // 60
+		float                                           fadeOutTime;          // 64
+		float                                           force;                // 68
+		float                                           coneSpread;           // 6C
+		float                                           collisionRadius;      // 70
+		float                                           lifetime;             // 74
+		float                                           relaunchInterval;     // 78
+		float                                           unk7C;                // 7C
+		std::uint32_t                                   unk80;                // 80
+		REX::EnumSet<Type, std::uint8_t>                type;                 // 84
+		std::uint8_t                                    unk85;                // 85
+		float                                           unk88;                // 88
+		float                                           unk8C;                // 8C
+		float                                           unk90;                // 90
+		float                                           unk94;                // 94
 	};
 	static_assert(sizeof(BGSProjectileData) == 0x98);
 

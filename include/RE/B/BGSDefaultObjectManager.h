@@ -394,11 +394,11 @@ namespace RE
 	{
 	public:
 		// members
-		const char*                                          name;           // 00
-		stl::enumeration<FormType, std::uint8_t>             type;           // 08
-		char                                                 uniqueID[4];    // 0C
-		stl::enumeration<DEFAULT_OBJECT_TYPE, std::uint32_t> doType;         // 10
-		const char*                                          newObjectName;  // 18
+		const char*                                   name;           // 00
+		REX::Enum<FormType, std::uint8_t>             type;           // 08
+		char                                          uniqueID[4];    // 0C
+		REX::Enum<DEFAULT_OBJECT_TYPE, std::uint32_t> doType;         // 10
+		const char*                                   newObjectName;  // 18
 	};
 	static_assert(sizeof(DEFAULT_OBJECT_DATA) == 0x20);
 
@@ -428,7 +428,7 @@ namespace RE
 		[[nodiscard]] TESForm* GetDefaultObject(DEFAULT_OBJECT a_obj) const noexcept
 		{
 			assert(a_obj < DEFAULT_OBJECT::kTotal);
-			return objectArray[stl::to_underlying(a_obj)];
+			return objectArray[std::to_underlying(a_obj)];
 		}
 
 		template <class T>

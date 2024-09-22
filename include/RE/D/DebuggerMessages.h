@@ -195,17 +195,17 @@ namespace RE::GameScript
 
 		struct Root
 		{
-			enum class RootType
+			enum class RootType : std::uint8_t
 			{
 				kUnknown = 0,
 				kStackFrame = 1,
 				kValue = 2,
 			};
 
-			stl::enumeration<FormType, std::uint64_t> valuetype;        // 00
-			unsigned int                              threadId;         // 08
-			int                                       stackFrameIndex;  // 0C
-			stl::enumeration<RootType, std::uint8_t>  rootType;         // 10
+			REX::Enum<FormType, std::uint64_t> valueType;        // 00
+			std::uint32_t                      threadId;         // 08
+			std::int32_t                       stackFrameIndex;  // 0C
+			RootType                           rootType;         // 10
 		};
 		static_assert(sizeof(Root) == 0x18);
 

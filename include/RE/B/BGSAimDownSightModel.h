@@ -45,15 +45,15 @@ namespace RE
 		const BSFixedString& GetFormDataType() override;                                                // 06 - { return "AimDownSightData"; }
 
 		// members
-		TESImageSpaceModifier*                  imod;                         // 08
-		NiPoint3                                cameraOffset;                 // 10
-		float                                   distanceFromCameraOffsetADS;  // 1C
-		float                                   fovMult;                      // 20
-		bool                                    heightDelayEnabledADS;        // 24
-		float                                   heightDelayADS;               // 28
-		bool                                    depthEnabledADS;              // 2C
-		float                                   depthDelayADS;                // 30
-		stl::enumeration<OVERLAY, std::uint8_t> overlay;                      // 34
+		TESImageSpaceModifier*              imod;                         // 08
+		NiPoint3                            cameraOffset;                 // 10
+		float                               distanceFromCameraOffsetADS;  // 1C
+		float                               fovMult;                      // 20
+		bool                                heightDelayEnabledADS;        // 24
+		float                               heightDelayADS;               // 28
+		bool                                depthEnabledADS;              // 2C
+		float                               depthDelayADS;                // 30
+		REX::EnumSet<OVERLAY, std::uint8_t> overlay;                      // 34
 	};
 	static_assert(sizeof(AimDownSightData) == 0x38);
 

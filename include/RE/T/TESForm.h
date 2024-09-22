@@ -245,14 +245,14 @@ namespace RE
 		}
 
 		// members
-		std::uint64_t                            unk18;           // 18
-		std::uint32_t                            formFlags;       // 20
-		std::uint32_t                            unk24;           // 24
-		std::uint32_t                            formID;          // 28
-		std::uint8_t                             formFlags2;      // 2C
-		std::uint8_t                             unk2D;           // 2D
-		stl::enumeration<FormType, std::uint8_t> formType;        // 2E
-		std::uint8_t                             loadOrderIndex;  // 2F - init'd to 0xFF
+		std::uint64_t                     unk18;           // 18
+		std::uint32_t                     formFlags;       // 20
+		std::uint32_t                     unk24;           // 24
+		std::uint32_t                     formID;          // 28
+		std::uint8_t                      formFlags2;      // 2C
+		std::uint8_t                      unk2D;           // 2D
+		REX::Enum<FormType, std::uint8_t> formType;        // 2E
+		std::uint8_t                      loadOrderIndex;  // 2F - init'd to 0xFF
 	};
 	static_assert(sizeof(TESForm) == 0x30);
 }

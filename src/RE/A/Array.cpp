@@ -177,7 +177,7 @@ namespace RE::BSScript
 
 	[[nodiscard]] TypeInfo::RawType Array::type() const
 	{
-		const stl::enumeration typeID = elementType.GetRawType();
+		const REX::EnumSet typeID = elementType.GetRawType();
 		switch (*typeID) {
 		case TypeInfo::RawType::kNone:
 		case TypeInfo::RawType::kObject:

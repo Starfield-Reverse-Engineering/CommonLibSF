@@ -154,8 +154,8 @@ namespace RE::BSScript
 
 			~D() noexcept { complexTypeInfo = nullptr; }
 
-			stl::enumeration<RawType, std::uintptr_t> rawType;
-			IComplexType*                             complexTypeInfo;
+			REX::EnumSet<RawType, std::uintptr_t> rawType;
+			IComplexType*                         complexTypeInfo;
 		} data;  // 0
 	};
 	static_assert(sizeof(TypeInfo) == 0x8);

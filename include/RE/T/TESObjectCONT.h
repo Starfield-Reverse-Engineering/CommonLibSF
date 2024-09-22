@@ -28,7 +28,7 @@ namespace RE
 			kShowOwner = 1 << 2
 		};
 
-		stl::enumeration<Flag, std::uint8_t> contFlags;  // 0
+		REX::EnumSet<Flag, std::uint8_t> contFlags;  // 0
 	};
 	static_assert(sizeof(CONT_DATA) == 0x1);
 

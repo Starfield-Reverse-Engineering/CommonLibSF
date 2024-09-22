@@ -69,7 +69,7 @@ namespace RE
 		LEVELED_OBJECT**                                                               scriptAddedLists;  // 40
 		std::int8_t                                                                    scriptListCount;   // 48
 		std::uint32_t                                                                  unk4C;             // 4C
-		stl::enumeration<Flag, std::uint8_t>                                           flags;             // 50
+		REX::EnumSet<Flag, std::uint8_t>                                               flags;             // 50
 		std::uint8_t                                                                   unk51;             // 51
 		std::uint8_t                                                                   baseListCount;     // 52
 		std::uint8_t                                                                   unk53;             // 53
