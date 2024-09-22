@@ -81,24 +81,24 @@ namespace RE::BSScript
 		}
 
 		// members
-		IMemoryPagePolicy*                      policy;         // 08
-		void*                                   unk10;          // 10 - something to do with guards, guardPolicy maybe?
-		IProfilePolicy*                         profilePolicy;  // 18
-		void*                                   unk20;          // 20
-		char                                    pages[0x40];    // 28 - BSTSmallArray<MemoryPageData, 3>
-		StackFrame*                             top;            // 68
-		BSTSmartPointer<Internal::CodeTasklet>  owningTasklet;  // 70
-		BSTSmartPointer<IStackCallbackFunctor>  callback;       // 78
-		BSTSmartPointer<Object>                 objToUnbind;    // 80
-		BSTSmartPointer<Stack>                  nextStack;      // 88
-		Variable                                returnValue;    // 90
-		std::uint64_t                           unk98;          // A0
-		std::uint64_t                           unkA0;          // A8
-		std::uint32_t                           frames;         // B0
-		std::uint32_t                           stackID;        // B4
-		State                                   state;          // B8
-		FreezeState                             freezeState;    // BC
-		StackType                               stackType;      // C0
+		IMemoryPagePolicy*                     policy;         // 08
+		void*                                  unk10;          // 10 - something to do with guards, guardPolicy maybe?
+		IProfilePolicy*                        profilePolicy;  // 18
+		void*                                  unk20;          // 20
+		char                                   pages[0x40];    // 28 - BSTSmallArray<MemoryPageData, 3>
+		StackFrame*                            top;            // 68
+		BSTSmartPointer<Internal::CodeTasklet> owningTasklet;  // 70
+		BSTSmartPointer<IStackCallbackFunctor> callback;       // 78
+		BSTSmartPointer<Object>                objToUnbind;    // 80
+		BSTSmartPointer<Stack>                 nextStack;      // 88
+		Variable                               returnValue;    // 90
+		std::uint64_t                          unk98;          // A0
+		std::uint64_t                          unkA0;          // A8
+		std::uint32_t                          frames;         // B0
+		std::uint32_t                          stackID;        // B4
+		State                                  state;          // B8
+		FreezeState                            freezeState;    // BC
+		StackType                              stackType;      // C0
 	};
 	static_assert(sizeof(Stack) == 0xC8);
 }
