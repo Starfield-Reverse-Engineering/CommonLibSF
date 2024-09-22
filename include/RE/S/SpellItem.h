@@ -26,13 +26,13 @@ namespace RE
 		{
 		public:
 			// members
-			REX::EnumSet<MagicSystem::SpellType, std::uint8_t>   spellType;     // 08
-			float                                                chargeTime;    // 0C
-			REX::EnumSet<MagicSystem::CastingType, std::uint8_t> castingType;   // 10
-			REX::EnumSet<MagicSystem::Delivery, std::uint8_t>    delivery;      // 11
-			float                                                castDuration;  // 14
-			float                                                range;         // 18
-			BGSPerk*                                             castingPerk;   // 20
+			REX::Enum<MagicSystem::SpellType, std::uint8_t>   spellType;     // 08
+			float                                             chargeTime;    // 0C
+			REX::Enum<MagicSystem::CastingType, std::uint8_t> castingType;   // 10
+			REX::Enum<MagicSystem::Delivery, std::uint8_t>    delivery;      // 11
+			float                                             castDuration;  // 14
+			float                                             range;         // 18
+			BGSPerk*                                          castingPerk;   // 20
 		};
 		static_assert(sizeof(Data) == 0x28);
 

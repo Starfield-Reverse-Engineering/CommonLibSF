@@ -77,10 +77,10 @@ namespace RE
 				kThunder
 			};
 
-			BGSAudio::WwiseSoundHook               soundHook;  // 00
-			REX::EnumSet<SoundType, std::uint32_t> type;       // 30
-			float                                  minDelay;   // 34
-			float                                  maxDelay;   // 38
+			BGSAudio::WwiseSoundHook            soundHook;  // 00
+			REX::Enum<SoundType, std::uint32_t> type;       // 30
+			float                               minDelay;   // 34
+			float                               maxDelay;   // 38
 		};
 		static_assert(sizeof(WeatherSound) == 0x40);
 

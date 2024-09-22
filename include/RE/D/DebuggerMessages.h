@@ -202,10 +202,10 @@ namespace RE::GameScript
 				kValue = 2,
 			};
 
-			REX::EnumSet<FormType, std::uint64_t> valuetype;        // 00
-			std::uint32_t                         threadId;         // 08
-			std::int32_t                          stackFrameIndex;  // 0C
-			RootType                              rootType;         // 10
+			REX::Enum<FormType, std::uint64_t> valueType;        // 00
+			std::uint32_t                      threadId;         // 08
+			std::int32_t                       stackFrameIndex;  // 0C
+			RootType                           rootType;         // 10
 		};
 		static_assert(sizeof(Root) == 0x18);
 

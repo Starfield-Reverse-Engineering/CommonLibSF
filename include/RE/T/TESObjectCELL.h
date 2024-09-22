@@ -88,7 +88,7 @@ namespace RE
 
 		~TESObjectCELL() override;  // 00
 
-		[[nodiscard]] bool IsAttached() const noexcept { return cellState.all(CELL_STATE::kAttached); }
+		[[nodiscard]] bool IsAttached() const noexcept { return cellState == CELL_STATE::kAttached; }
 		[[nodiscard]] bool IsExterior() const noexcept { return !IsInterior(); }
 		[[nodiscard]] bool IsInterior() const noexcept { return cellFlags.any(Flag::kInterior); }
 		[[nodiscard]] bool UsesPlanetGravity() const noexcept { return cellFlags.any(Flag::kUsePlanetGravity); }
@@ -97,49 +97,49 @@ namespace RE
 		void ForEachReferenceInRange(const NiPoint3A& a_origin, float a_radius, std::function<BSContainer::ForEachResult(const NiPointer<TESObjectREFR>&)> a_callback) const;
 
 		// members
-		REX::EnumSet<Flag, std::uint32_t>      cellFlags;       // 040
-		std::uint16_t                          cellGameFlags;   // 044
-		std::uint8_t                           unk04E;          // 046
-		REX::EnumSet<CELL_STATE, std::uint8_t> cellState;       // 047
-		std::uint64_t                          unk050;          // 048
-		BSTSmartPointer<ExtraDataList>         extraDataList;   // 050
-		CellData                               cellData;        // 058
-		std::uint32_t                          unk060;          // 060
-		float                                  unk064;          // 064
-		float                                  unk068;          // 068
-		float                                  unk06C;          // 06C
-		std::uint8_t                           unk070;          // 070
-		std::uint8_t                           pad071;          // 071
-		std::uint16_t                          pad072;          // 072
-		std::uint32_t                          pad074;          // 074
-		std::uint64_t                          unk078;          // 078
-		BSTArray<NiPointer<TESObjectREFR>>     references;      // 080
-		std::uint64_t                          unk090;          // 090
-		std::uint64_t                          unk098;          // 098
-		std::uint64_t                          unk0A0;          // 0A0
-		std::uint64_t                          unk0A8;          // 0A8
-		std::uint64_t                          unk0B0;          // 0B0
-		std::uint64_t                          unk0B8;          // 0B8
-		std::uint64_t                          unk0C0;          // 0C0
-		std::uint64_t                          unk0C8;          // 0C8
-		std::uint64_t                          unk0D0;          // 0D0
-		std::uint64_t                          unk0D8;          // 0D8
-		std::uint64_t                          unk0E0;          // 0E0
-		std::uint8_t                           unk0E8;          // 0E8
-		std::uint8_t                           pad0E9;          // 0E9
-		std::uint16_t                          pad0EA;          // 0EA
-		std::uint32_t                          pad0EC;          // 0EC
-		std::uint64_t                          unk0F0;          // 0F0
-		std::uint64_t                          unk0F8;          // 0F8
-		std::uint64_t                          unk100;          // 100
-		std::uint64_t                          unk108;          // 108
-		std::uint64_t                          unk110;          // 110
-		TESWorldSpace*                         cellWorldspace;  // 118
-		mutable BSReadWriteLock                lock;            // 120
-		std::uint64_t                          unk128;          // 128
-		std::uint64_t                          unk130;          // 130
-		std::uint32_t                          unk138;          // 138
-		std::uint64_t                          unk140;          // 140
+		REX::EnumSet<Flag, std::uint32_t>   cellFlags;       // 040
+		std::uint16_t                       cellGameFlags;   // 044
+		std::uint8_t                        unk04E;          // 046
+		REX::Enum<CELL_STATE, std::uint8_t> cellState;       // 047
+		std::uint64_t                       unk050;          // 048
+		BSTSmartPointer<ExtraDataList>      extraDataList;   // 050
+		CellData                            cellData;        // 058
+		std::uint32_t                       unk060;          // 060
+		float                               unk064;          // 064
+		float                               unk068;          // 068
+		float                               unk06C;          // 06C
+		std::uint8_t                        unk070;          // 070
+		std::uint8_t                        pad071;          // 071
+		std::uint16_t                       pad072;          // 072
+		std::uint32_t                       pad074;          // 074
+		std::uint64_t                       unk078;          // 078
+		BSTArray<NiPointer<TESObjectREFR>>  references;      // 080
+		std::uint64_t                       unk090;          // 090
+		std::uint64_t                       unk098;          // 098
+		std::uint64_t                       unk0A0;          // 0A0
+		std::uint64_t                       unk0A8;          // 0A8
+		std::uint64_t                       unk0B0;          // 0B0
+		std::uint64_t                       unk0B8;          // 0B8
+		std::uint64_t                       unk0C0;          // 0C0
+		std::uint64_t                       unk0C8;          // 0C8
+		std::uint64_t                       unk0D0;          // 0D0
+		std::uint64_t                       unk0D8;          // 0D8
+		std::uint64_t                       unk0E0;          // 0E0
+		std::uint8_t                        unk0E8;          // 0E8
+		std::uint8_t                        pad0E9;          // 0E9
+		std::uint16_t                       pad0EA;          // 0EA
+		std::uint32_t                       pad0EC;          // 0EC
+		std::uint64_t                       unk0F0;          // 0F0
+		std::uint64_t                       unk0F8;          // 0F8
+		std::uint64_t                       unk100;          // 100
+		std::uint64_t                       unk108;          // 108
+		std::uint64_t                       unk110;          // 110
+		TESWorldSpace*                      cellWorldspace;  // 118
+		mutable BSReadWriteLock             lock;            // 120
+		std::uint64_t                       unk128;          // 128
+		std::uint64_t                       unk130;          // 130
+		std::uint32_t                       unk138;          // 138
+		std::uint64_t                       unk140;          // 140
 	};
 	static_assert(sizeof(TESObjectCELL) == 0x148);
 }

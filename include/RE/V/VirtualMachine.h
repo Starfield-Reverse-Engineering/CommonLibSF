@@ -273,7 +273,7 @@ namespace RE::BSScript
 			BSTArray<uint32_t>                              stacksWaitingOnGuard;        // 3D38
 			BSTSmartPointer<BSScript::Stack>                frozenStacksHead;            // 3D48
 			std::uint32_t                                   frozenStacksCount;           // 3D50
-			REX::EnumSet<FreezeState, std::uint32_t>        freezeState;                 // 3D54
+			REX::Enum<FreezeState, std::uint32_t>           freezeState;                 // 3D54
 			mutable BSSpinLock                              attachedScriptsLock;         // 3D58
 			std::byte                                       attachedScripts[0x38];       // 3D60 - BSTHashMap<uint64_t, BSTSmallSharedArray<AttachedScript>>
 			std::uint64_t                                   unk3D98;                     // 3D98

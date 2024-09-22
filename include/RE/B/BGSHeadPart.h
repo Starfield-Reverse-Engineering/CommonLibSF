@@ -48,18 +48,18 @@ namespace RE
 		};
 
 		// members
-		BGSEditorID                               formEditorID;       // 068
-		TESModel                                  chargenModel;       // 078
-		TESModelTri                               morphs[3];          // 098
-		TESCondition                              chargenConditions;  // 0F8
-		BSTArray<BGSHeadPart*>                    extraParts;         // 108
-		BGSMorphableObject*                       morphableObject;    // 118
-		BGSTextureSet*                            textureSet;         // 120
-		BGSListForm*                              validRaces;         // 128
-		BSFixedString                             colorMapping;       // 130
-		BSFixedString                             mask;               // 138
-		REX::EnumSet<HeadPartType, std::uint32_t> type;               // 140
-		std::uint32_t                             unk144;             // 144
+		BGSEditorID                            formEditorID;       // 068
+		TESModel                               chargenModel;       // 078
+		TESModelTri                            morphs[3];          // 098
+		TESCondition                           chargenConditions;  // 0F8
+		BSTArray<BGSHeadPart*>                 extraParts;         // 108
+		BGSMorphableObject*                    morphableObject;    // 118
+		BGSTextureSet*                         textureSet;         // 120
+		BGSListForm*                           validRaces;         // 128
+		BSFixedString                          colorMapping;       // 130
+		BSFixedString                          mask;               // 138
+		REX::Enum<HeadPartType, std::uint32_t> type;               // 140
+		std::uint32_t                          unk144;             // 144
 	};
 	static_assert(sizeof(BGSHeadPart) == 0x148);
 }

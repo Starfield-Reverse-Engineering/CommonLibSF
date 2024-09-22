@@ -27,16 +27,16 @@ namespace RE
 		}
 
 		// members
-		NiPointer<TESObjectREFR>                actionRef;         // 00
-		NiPointer<TESObjectREFR>                lock;              // 08
-		BGSTerminalMenu*                        terminalMenu;      // 10
-		std::int32_t                            unk18;             // 14 - terminalMenu related
-		std::uint32_t                           numDigiPicksUsed;  // 18
-		float                                   unk20;             // 20 - 0.0f
-		float                                   unk24;             // 24 - 0.0f
-		REX::EnumSet<LOCK_LEVEL, std::uint32_t> lockLevel;         // 28
-		bool                                    succeeded;         // 2C
-		bool                                    isOffLimits;       // 2D
+		NiPointer<TESObjectREFR>             actionRef;         // 00
+		NiPointer<TESObjectREFR>             lock;              // 08
+		BGSTerminalMenu*                     terminalMenu;      // 10
+		std::int32_t                         unk18;             // 14 - terminalMenu related
+		std::uint32_t                        numDigiPicksUsed;  // 18
+		float                                unk20;             // 20 - 0.0f
+		float                                unk24;             // 24 - 0.0f
+		REX::Enum<LOCK_LEVEL, std::uint32_t> lockLevel;         // 28
+		bool                                 succeeded;         // 2C
+		bool                                 isOffLimits;       // 2D
 	};
 	static_assert(sizeof(LockPickedEvent) == 0x30);
 }

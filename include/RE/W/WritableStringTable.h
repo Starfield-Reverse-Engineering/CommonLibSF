@@ -13,7 +13,7 @@ namespace RE::BSScript::Internal
 		// members
 		msvc::unique_ptr<BSTObjectArena<BSFixedString>> stringTable;         // 00
 		void*                                           stringReferenceMap;  // 08 - msvc::unique_ptr<BSTScrapHashMap<BSFixedString, std::uint32_t>>
-		REX::EnumSet<StringIndexSize, std::int32_t>     indexSize;           // 10
+		REX::Enum<StringIndexSize, std::int32_t>        indexSize;           // 10
 	};
 	static_assert(sizeof(WritableStringTable) == 0x18);
 }
