@@ -4,6 +4,8 @@
 #include "REL/Module.h"
 #include "REL/Offset.h"
 
+#include "SFSE/Trampoline.h"
+
 #define REL_MAKE_MEMBER_FUNCTION_POD_TYPE_HELPER_IMPL(a_nopropQual, a_propQual, ...)              \
 	template <class R, class Cls, class... Args>                                                  \
 	struct member_function_pod_type<R (Cls::*)(Args...) __VA_ARGS__ a_nopropQual a_propQual>      \
@@ -248,6 +250,67 @@ namespace REL
 			requires(std::invocable<const value_type&, Args...>)
 		{
 			return invoke(get(), std::forward<Args>(a_args)...);
+		}
+
+
+		void write(const void* a_src, std::size_t a_count)
+			requires(std::same_as<value_type, std::uintptr_t>)
+		{
+			safe_write(address(), a_src, a_count);
+		}
+
+		template <std::integral U>
+		void write(const U& a_data)
+			requires(std::same_as<value_type, std::uintptr_t>)
+		{
+			safe_write(address(), std::addressof(a_data), sizeof(U));
+		}
+
+		void write(const std::initializer_list<std::uint8_t> a_data)
+			requires(std::same_as<value_type, std::uintptr_t>)
+		{
+			safe_write(address(), a_data.begin(), a_data.size());
+		}
+
+		template <class U>
+		void write(const std::span<U> a_data)
+			requires(std::same_as<value_type, std::uintptr_t>)
+		{
+			safe_write(address(), a_data.data(), a_data.size_bytes());
+		}
+
+		template <std::size_t N>
+		std::uintptr_t write_branch(const std::uintptr_t a_dst)
+			requires(std::same_as<value_type, std::uintptr_t>)
+		{
+			return SFSE::GetTrampoline().write_branch<N>(address(), a_dst);
+		}
+
+		template <std::size_t N, class F>
+		std::uintptr_t write_branch(const F a_dst)
+			requires(std::same_as<value_type, std::uintptr_t>)
+		{
+			return SFSE::GetTrampoline().write_branch<N>(address(), stl::unrestricted_cast<std::uintptr_t>(a_dst));
+		}
+
+		template <std::size_t N>
+		std::uintptr_t write_call(const std::uintptr_t a_dst)
+			requires(std::same_as<value_type, std::uintptr_t>)
+		{
+			return SFSE::GetTrampoline().write_call<N>(address(), a_dst);
+		}
+
+		template <std::size_t N, class F>
+		std::uintptr_t write_call(const F a_dst)
+			requires(std::same_as<value_type, std::uintptr_t>)
+		{
+			return SFSE::GetTrampoline().write_call<N>(address(), stl::unrestricted_cast<std::uintptr_t>(a_dst));
+		}
+
+		void write_fill(const std::uint8_t a_value, const std::size_t a_count)
+			requires(std::same_as<value_type, std::uintptr_t>)
+		{
+			safe_fill(address(), a_value, a_count);
 		}
 
 		constexpr std::uintptr_t write_vfunc(const std::size_t a_idx, const std::uintptr_t a_newFunc)
