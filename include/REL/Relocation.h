@@ -222,16 +222,6 @@ namespace REL
 			return *this;
 		}
 
-		[[nodiscard]] constexpr value_type get() const  //
-			noexcept(std::is_nothrow_copy_constructible_v<value_type>)
-		{
-			return stl::unrestricted_cast<value_type>(_address);
-		}
-
-		[[nodiscard]] constexpr decltype(auto) address() const noexcept { return _address; }
-
-		[[nodiscard]] constexpr std::size_t offset() const noexcept { return _address - base(); }
-
 		[[nodiscard]] constexpr decltype(auto) operator*() const noexcept
 			requires(std::is_pointer_v<value_type>)
 		{
@@ -245,13 +235,21 @@ namespace REL
 		}
 
 		template <class... Args>
-		constexpr std::invoke_result_t<const value_type&, Args...> operator()(Args&&... a_args) const  //
+		constexpr std::invoke_result_t<const value_type&, Args...> operator()(Args&&... a_args) const
 			noexcept(std::is_nothrow_invocable_v<const value_type&, Args...>)
 			requires(std::invocable<const value_type&, Args...>)
 		{
 			return invoke(get(), std::forward<Args>(a_args)...);
 		}
 
+		[[nodiscard]] constexpr decltype(auto) address() const noexcept { return _address; }
+		[[nodiscard]] constexpr std::size_t    offset() const noexcept { return _address - base(); }
+
+		[[nodiscard]] constexpr value_type get() const
+			noexcept(std::is_nothrow_copy_constructible_v<value_type>)
+		{
+			return stl::unrestricted_cast<value_type>(_address);
+		}
 
 		void write(const void* a_src, std::size_t a_count)
 			requires(std::same_as<value_type, std::uintptr_t>)
@@ -330,7 +328,10 @@ namespace REL
 		}
 
 	private:
-		[[nodiscard]] static constexpr std::uintptr_t base() { return Module::get().base(); }
+		[[nodiscard]] static constexpr std::uintptr_t base()
+		{
+			return Module::get().base();
+		}
 
 		std::uintptr_t _address{};
 	};
