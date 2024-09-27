@@ -1,6 +1,7 @@
 #include "SFSE/API.h"
 
 #include "SFSE/Logger.h"
+#include "SFSE/Trampoline.h"
 
 namespace SFSE
 {
@@ -147,12 +148,6 @@ namespace SFSE
 	const TaskInterface* GetTaskInterface() noexcept
 	{
 		return detail::APIStorage::get().taskInterface;
-	}
-
-	Trampoline& GetTrampoline()
-	{
-		static Trampoline trampoline;
-		return trampoline;
 	}
 
 	void AllocTrampoline(const std::size_t a_size, const bool a_trySFSEReserve)
