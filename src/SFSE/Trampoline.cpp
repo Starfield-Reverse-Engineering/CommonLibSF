@@ -128,7 +128,7 @@ namespace SFSE
 		return nullptr;
 	}
 
-		void Trampoline::write_5branch(const std::uintptr_t a_src, std::uintptr_t a_dst, const std::uint8_t a_opcode)
+	void Trampoline::write_5branch(const std::uintptr_t a_src, std::uintptr_t a_dst, const std::uint8_t a_opcode)
 	{
 #pragma pack(push, 1)
 
