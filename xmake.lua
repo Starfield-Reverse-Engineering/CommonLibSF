@@ -11,10 +11,6 @@ set_encodings("utf-8")
 -- add rules
 add_rules("mode.debug", "mode.releasedbg")
 
--- require packages
-add_requires("xbyak")
-add_requires("spdlog", { configs = { header_only = false, std_format = true } })
-
 -- make extras available
 includes("xmake-extra.lua")
 
@@ -24,6 +20,13 @@ option("sfse_xbyak", function()
     set_description("Enable trampoline support for Xbyak")
     add_defines("SFSE_SUPPORT_XBYAK=1")
 end)
+
+-- require packages
+add_requires("spdlog", { configs = { header_only = false, std_format = true } })
+
+if has_config("sfse_xbyak") then
+    add_requires("xbyak")
+end
 
 -- define targets
 target("commonlibsf")
