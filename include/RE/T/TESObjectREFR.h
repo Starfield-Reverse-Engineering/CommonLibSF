@@ -356,6 +356,9 @@ namespace RE
 		virtual void         Unk_12E();                                                                                                                                                                                                                                                                   // 12E
 		virtual void         Unk_12F();                                                                                                                                                                                                                                                                   // 12F
 
+		static NiPointer<TESObjectREFR> LookupByHandle(RefHandle a_refHandle);
+		static bool                     LookupByHandle(RefHandle a_refHandle, NiPointer<TESObjectREFR>& a_refrOut);
+
 		void ForEachEquippedItem(std::function<BSContainer::ForEachResult(const BGSInventoryItem&)> a_callback) const;
 		void ForEachInventoryItem(std::function<BSContainer::ForEachResult(const BGSInventoryItem&)> a_callback) const;
 
