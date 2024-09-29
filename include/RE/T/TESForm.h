@@ -1,5 +1,6 @@
 #pragma once
 
+#include "RE/B/BSCoreTypes.h"
 #include "RE/B/BSReflection.h"
 #include "RE/F/FormTypes.h"
 #include "RE/T/TESFile.h"
@@ -151,15 +152,15 @@ namespace RE
 			return func(this);
 		}
 
-		[[nodiscard]] static TESForm* LookupByID(std::uint32_t a_formID)
+		[[nodiscard]] static TESForm* LookupByID(TESFormID a_formID)
 		{
-			using func_t = TESForm* (*)(std::uint32_t);
+			using func_t = TESForm* (*)(TESFormID);
 			static REL::Relocation<func_t> func{ ID::TESForm::LookupByID };
 			return func(a_formID);
 		}
 
 		template <class T>
-		[[nodiscard]] static T* LookupByID(std::uint32_t a_formID)
+		[[nodiscard]] static T* LookupByID(TESFormID a_formID)
 		{
 			const auto form = LookupByID(a_formID);
 			return form ? form->As<T>() : nullptr;

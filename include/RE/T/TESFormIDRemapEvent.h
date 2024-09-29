@@ -1,5 +1,6 @@
 #pragma once
 
+#include "RE/B/BSCoreTypes.h"
 #include "RE/B/BSTEvent.h"
 
 namespace RE
@@ -8,7 +9,6 @@ namespace RE
 
 	struct TESFormIDRemapEvent
 	{
-	public:
 		[[nodiscard]] static BSTEventSource<TESFormIDRemapEvent>* GetEventSource()
 		{
 			using func_t = decltype(&TESFormIDRemapEvent::GetEventSource);
@@ -17,8 +17,8 @@ namespace RE
 		}
 
 		// members
-		uint32_t oldId;
-		uint32_t newId;
+		TESFormID oldId;
+		TESFormID newId;
 	};
 	static_assert(sizeof(TESFormIDRemapEvent) == 0x8);
 }
