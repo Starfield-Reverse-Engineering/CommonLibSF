@@ -18,7 +18,7 @@ namespace RE
 	Setting* GetINISetting(const std::string_view a_name)
 	{
 		const auto iniPrefs = INIPrefSettingCollection::GetSingleton();
-		auto setting = iniPrefs ? iniPrefs->GetSetting(a_name) : nullptr;
+		auto       setting = iniPrefs ? iniPrefs->GetSetting(a_name) : nullptr;
 		if (!setting) {
 			const auto ini = INISettingCollection::GetSingleton();
 			setting = ini ? ini->GetSetting(a_name) : nullptr;

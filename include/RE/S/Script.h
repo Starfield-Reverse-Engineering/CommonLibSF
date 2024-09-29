@@ -118,7 +118,7 @@ namespace RE
 	};
 	static_assert(sizeof(ScriptVariable) == 0x20);
 
-	using ExecuteFunction = bool(*)(const SCRIPT_PARAMETER* a_paramInfo, const char*, TESObjectREFR* a_object, TESObjectREFR* a_objectContainer, Script* a_script, ScriptLocals* a_scriptLocals, float* a_result, std::uint32_t* a_opcodeOffsetPtr);
+	using ExecuteFunction = bool (*)(const SCRIPT_PARAMETER* a_paramInfo, const char*, TESObjectREFR* a_object, TESObjectREFR* a_objectContainer, Script* a_script, ScriptLocals* a_scriptLocals, float* a_result, std::uint32_t* a_opcodeOffsetPtr);
 
 	class Script
 	{

@@ -3651,7 +3651,6 @@ namespace RE::Events
 
 	struct TESObjectLoadedEvent
 	{
-
 		[[nodiscard]] static BSTEventSource<TESObjectLoadedEvent>* GetEventSource()
 		{
 			using func_t = decltype(&TESObjectLoadedEvent::GetEventSource);
@@ -3834,7 +3833,6 @@ namespace RE::Events
 		{
 			[[nodiscard]] static BSTEventSource<TerminalHacked::Event>* GetEventSource()
 			{
-
 				using func_t = decltype(&TerminalHacked::Event::GetEventSource);
 				static REL::Relocation<func_t> func{ REL::ID(153673) };
 				return func();
