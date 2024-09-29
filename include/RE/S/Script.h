@@ -7,36 +7,29 @@
 
 namespace RE
 {
+	class Script;
+
+	enum class SCRIPT_OUTPUT;
+
 	struct ACTION_OBJECT
 	{
-	public:
+		// members
 		TESForm*      form;   // 00
 		std::uint32_t flags;  // 08
 	};
 	static_assert(sizeof(ACTION_OBJECT) == 0x10);
 
-	struct alignas(4) SCRIPT_LOCAL
+	struct SCRIPT_EFFECT_DATA
 	{
-	public:
 		// members
-		std::uint32_t id;         // 00
-		float         value;      // 04
-		bool          isInteger;  // 08
+		bool  scriptEffectStart;   // 0
+		bool  scriptEffectFinish;  // 1
+		float secondsElapsed;      // 4
 	};
-	static_assert(sizeof(SCRIPT_LOCAL) == 0x0C);
-
-	struct ScriptVariable
-	{
-	public:
-		// members
-		SCRIPT_LOCAL    data;  // 00
-		BSStringT<char> name;  // 10
-	};
-	static_assert(sizeof(ScriptVariable) == 0x20);
+	static_assert(sizeof(SCRIPT_EFFECT_DATA) == 0x8);
 
 	struct alignas(4) SCRIPT_HEADER
 	{
-	public:
 		// members
 		std::uint32_t variableCount;        // 00
 		std::uint32_t refObjectCount;       // 04
@@ -48,28 +41,27 @@ namespace RE
 	};
 	static_assert(sizeof(SCRIPT_HEADER) == 0x14);
 
-	struct SCRIPT_REFERENCED_OBJECT
+	struct alignas(4) SCRIPT_LOCAL
 	{
-	public:
 		// members
-		BSStringT<char> editorID;
-		TESForm*        form;
-		std::uint32_t   variableID;
+		std::uint32_t id;         // 00
+		float         value;      // 04
+		bool          isInteger;  // 08
 	};
-	static_assert(sizeof(SCRIPT_REFERENCED_OBJECT) == 0x20);
+	static_assert(sizeof(SCRIPT_LOCAL) == 0x0C);
 
-	struct SCRIPT_EFFECT_DATA
+	struct SCRIPT_OPERATOR
 	{
-	public:
 		// members
-		bool  scriptEffectStart;   // 0
-		bool  scriptEffectFinish;  // 1
-		float secondsElapsed;      // 4
+		std::uint32_t code;        // 00
+		std::uint8_t  precedence;  // 04
+		std::uint8_t  op;          // 05
 	};
-	static_assert(sizeof(SCRIPT_EFFECT_DATA) == 0x8);
+	static_assert(sizeof(SCRIPT_OPERATOR) == 0x8);
 
 	struct SCRIPT_PARAMETER_DEF
 	{
+		// members
 		std::uint32_t paramType;         // 00
 		std::uint8_t  canBeVariable;     // 04
 		std::uint8_t  referencedObject;  // 05
@@ -78,7 +70,6 @@ namespace RE
 
 	struct SCRIPT_PARAMETER
 	{
-	public:
 		// members
 		const char*   paramName{ "" };  // 00
 		std::uint32_t paramType;        // 08 enumeration
@@ -86,21 +77,29 @@ namespace RE
 	};
 	static_assert(sizeof(SCRIPT_PARAMETER) == 0x10);
 
-	struct SCRIPT_OPERATOR
+	struct SCRIPT_REFERENCED_OBJECT
 	{
-	public:
 		// members
-		std::uint32_t code;        // 00
-		std::uint8_t  precedence;  // 04
-		std::uint8_t  op;          // 05
+		BSStringT<char> editorID;
+		TESForm*        form;
+		std::uint32_t   variableID;
 	};
-	static_assert(sizeof(SCRIPT_OPERATOR) == 0x8);
+	static_assert(sizeof(SCRIPT_REFERENCED_OBJECT) == 0x20);
 
-	class Script;
+	struct SCRIPT_WORD
+	{
+		// members
+		char          text[512];       // 000
+		std::uint32_t refObjectIndex;  // 200
+		char          variableType;    // 204
+		SCRIPT_OUTPUT functionCode;    // 208
+		std::uint32_t variableID;      // 20C
+		TESForm*      form;            // 210
+	};
+	static_assert(sizeof(SCRIPT_WORD) == 0x218);
 
 	struct ScriptLocals
 	{
-	public:
 		// members
 		Script*                       masterScript;      // 00
 		std::uint8_t                  flags;             // 08
@@ -111,7 +110,15 @@ namespace RE
 	};
 	static_assert(sizeof(ScriptLocals) == 0x28);
 
-	typedef bool (*ExecuteFunction)(const SCRIPT_PARAMETER* paramInfo, const char*, TESObjectREFR* thisObj, TESObjectREFR* containingObj, Script* script, ScriptLocals* locals, float* result, std::uint32_t* opcodeOffsetPtr);
+	struct ScriptVariable
+	{
+		// members
+		SCRIPT_LOCAL    data;  // 00
+		BSStringT<char> name;  // 10
+	};
+	static_assert(sizeof(ScriptVariable) == 0x20);
+
+	using ExecuteFunction = bool(*)(const SCRIPT_PARAMETER* a_paramInfo, const char*, TESObjectREFR* a_object, TESObjectREFR* a_objectContainer, Script* a_script, ScriptLocals* a_scriptLocals, float* a_result, std::uint32_t* a_opcodeOffsetPtr);
 
 	class Script
 	{
@@ -120,7 +127,6 @@ namespace RE
 
 		struct SCRIPT_FUNCTION
 		{
-		public:
 			// members
 			const char*       functionName;         // 00
 			const char*       shortName;            // 08

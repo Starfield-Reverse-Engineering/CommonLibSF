@@ -1,12 +1,12 @@
 #pragma once
 
+#include "RE/B/BSCoreTypes.h"
 #include "RE/B/BSTEvent.h"
 
 namespace RE
 {
 	struct TESObjectLoadedEvent
 	{
-	public:
 		[[nodiscard]] static BSTEventSource<TESObjectLoadedEvent>* GetEventSource()
 		{
 			using func_t = decltype(&TESObjectLoadedEvent::GetEventSource);
@@ -15,7 +15,7 @@ namespace RE
 		}
 
 		// members
-		std::uint32_t formID;  // 0
+		TESFormID     formID;  // 0
 		bool          loaded;  // 4
 		std::uint8_t  pad5;    // 5
 		std::uint16_t pad6;    // 6

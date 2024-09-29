@@ -131,6 +131,18 @@ namespace REX
 		}
 
 		template <class... Args>
+		constexpr EnumSet& set(bool a_set, Args... a_args) noexcept
+			requires(std::same_as<Args, E> && ...)
+		{
+			if (a_set)
+				_impl |= (static_cast<U>(a_args) | ...);
+			else
+				_impl &= ~(static_cast<U>(a_args) | ...);
+
+			return *this;
+		}
+
+		template <class... Args>
 		constexpr EnumSet& reset(Args... a_args) noexcept
 			requires(std::same_as<Args, E> && ...)
 		{

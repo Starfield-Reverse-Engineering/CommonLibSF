@@ -2,14 +2,20 @@
 
 #include "RE/B/BGSInventoryItem.h"
 #include "RE/E/ExtraLock.h"
+#include "RE/M/Misc.h"
 
 namespace RE
 {
-	void TESObjectREFR::AddLockChange()
+	NiPointer<TESObjectREFR> TESObjectREFR::LookupByHandle(RefHandle a_refHandle)
 	{
-		using func_t = decltype(&TESObjectREFR::AddLockChange);
-		static REL::Relocation<func_t> func{ ID::TESObjectREFR::AddLockChange };
-		return func(this);
+		NiPointer<TESObjectREFR> ref;
+		LookupReferenceByHandle(a_refHandle, ref);
+		return ref;
+	}
+
+	bool TESObjectREFR::LookupByHandle(RefHandle a_refHandle, NiPointer<TESObjectREFR>& a_refrOut)
+	{
+		return LookupReferenceByHandle(a_refHandle, a_refrOut);
 	}
 
 	void TESObjectREFR::ForEachEquippedItem(std::function<BSContainer::ForEachResult(const BGSInventoryItem&)> a_callback) const
@@ -153,5 +159,12 @@ namespace RE
 			lock->SetLocked(false);
 			AddLockChange();
 		}
+	}
+
+	void TESObjectREFR::AddLockChange()
+	{
+		using func_t = decltype(&TESObjectREFR::AddLockChange);
+		static REL::Relocation<func_t> func{ ID::TESObjectREFR::AddLockChange };
+		return func(this);
 	}
 }

@@ -1,5 +1,6 @@
 #pragma once
 
+#include "RE/B/BSCoreTypes.h"
 #include "RE/B/BSReflection.h"
 #include "RE/F/FormTypes.h"
 #include "RE/T/TESFile.h"
@@ -41,6 +42,12 @@ namespace RE
 	public:
 		SF_RTTI_VTABLE(TESForm);
 		SF_FORMTYPE(NONE);
+
+		enum class FormFlags : std::uint32_t
+		{
+			kDeleted = 1 << 5,
+			kPersistent = 1 << 10,
+		};
 
 		~TESForm() override;  // 00
 
@@ -151,15 +158,15 @@ namespace RE
 			return func(this);
 		}
 
-		[[nodiscard]] static TESForm* LookupByID(std::uint32_t a_formID)
+		[[nodiscard]] static TESForm* LookupByID(TESFormID a_formID)
 		{
-			using func_t = TESForm* (*)(std::uint32_t);
+			using func_t = TESForm* (*)(TESFormID);
 			static REL::Relocation<func_t> func{ ID::TESForm::LookupByID };
 			return func(a_formID);
 		}
 
 		template <class T>
-		[[nodiscard]] static T* LookupByID(std::uint32_t a_formID)
+		[[nodiscard]] static T* LookupByID(TESFormID a_formID)
 		{
 			const auto form = LookupByID(a_formID);
 			return form ? form->As<T>() : nullptr;
@@ -182,9 +189,9 @@ namespace RE
 		[[nodiscard]] TESObjectREFR*       AsReference() { return AsReference1(); }
 		[[nodiscard]] const TESObjectREFR* AsReference() const { return AsReference2(); }
 
-		[[nodiscard]] std::uint32_t GetFormFlags() const noexcept { return formFlags; }
-		[[nodiscard]] std::uint32_t GetFormID() const noexcept { return formID; }
-		[[nodiscard]] FormType      GetFormType() const noexcept { return *formType; }
+		[[nodiscard]] auto      GetFormFlags() const noexcept { return formFlags; }
+		[[nodiscard]] TESFormID GetFormID() const noexcept { return formID; }
+		[[nodiscard]] FormType  GetFormType() const noexcept { return *formType; }
 
 		[[nodiscard]] bool Is(FormType a_type) const noexcept { return GetFormType() == a_type; }
 
@@ -210,7 +217,7 @@ namespace RE
 		[[nodiscard]] bool IsBook() const noexcept { return Is(FormType::kBOOK); }
 		[[nodiscard]] bool IsCreated() const noexcept { return (GetFormID() + 0x1000000) <= 0xFFFFFE; }
 		[[nodiscard]] bool IsCredits() const noexcept { return GetFormID() == 0x0000000F; }
-		[[nodiscard]] bool IsDeleted() const noexcept { return (GetFormFlags() & 0x20) != 0; }
+		[[nodiscard]] bool IsDeleted() const noexcept { return GetFormFlags().all(FormFlags::kDeleted); }
 		[[nodiscard]] bool IsDigiPick() const noexcept { return GetFormID() == 0x0000000A; }
 
 		[[nodiscard]] bool IsNot(FormType a_type) const noexcept { return !Is(a_type); }
@@ -222,9 +229,12 @@ namespace RE
 			return (IsNot(a_args) && ...);
 		}
 
+		[[nodiscard]] bool IsPersistent() const noexcept { return GetFormFlags().all(FormFlags::kPersistent); }
 		[[nodiscard]] bool IsPlayer() const noexcept { return GetFormID() == 0x00000007; }
 		[[nodiscard]] bool IsPlayerRef() const noexcept { return GetFormID() == 0x00000014; }
 		[[nodiscard]] bool IsWeapon() const noexcept { return Is(FormType::kWEAP); }
+
+		void SetPersistent(bool a_set) { formFlags.set(a_set, FormFlags::kPersistent); }
 
 		template <class T>
 		[[nodiscard]] T* As() noexcept
@@ -245,14 +255,14 @@ namespace RE
 		}
 
 		// members
-		std::uint64_t                     unk18;           // 18
-		std::uint32_t                     formFlags;       // 20
-		std::uint32_t                     unk24;           // 24
-		std::uint32_t                     formID;          // 28
-		std::uint8_t                      formFlags2;      // 2C
-		std::uint8_t                      unk2D;           // 2D
-		REX::Enum<FormType, std::uint8_t> formType;        // 2E
-		std::uint8_t                      loadOrderIndex;  // 2F - init'd to 0xFF
+		std::uint64_t                          unk18;            // 18
+		REX::EnumSet<FormFlags, std::uint32_t> formFlags;        // 20
+		std::uint32_t                          nativeHandle;     // 24
+		TESFormID                              formID;           // 28
+		std::uint8_t                           formChangeFlags;  // 2C
+		std::uint8_t                           unk2D;            // 2D
+		REX::Enum<FormType, std::uint8_t>      formType;         // 2E
+		std::uint8_t                           loadOrderIndex;   // 2F - init'd to 0xFF
 	};
 	static_assert(sizeof(TESForm) == 0x30);
 }
