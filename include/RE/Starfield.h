@@ -230,6 +230,7 @@
 #include "RE/E/EmitterProjectile.h"
 #include "RE/E/EnchantmentItem.h"
 #include "RE/E/ErrorLogger.h"
+#include "RE/E/Events.h"
 #include "RE/E/ExtraDataList.h"
 #include "RE/E/ExtraDataTypes.h"
 #include "RE/E/ExtraLock.h"
