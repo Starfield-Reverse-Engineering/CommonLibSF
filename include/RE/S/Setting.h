@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/M/MemoryManager.h"
+
 namespace RE
 {
 	class __declspec(novtable) Setting

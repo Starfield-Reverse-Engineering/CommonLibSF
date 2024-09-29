@@ -254,6 +254,7 @@ namespace RE::ID
 	namespace Misc
 	{
 		inline constexpr REL::ID DebugNotification{ 138728 };
+		inline constexpr REL::ID LookupReferenceByHandle{ 72986 };
 		inline constexpr REL::ID PlayMenuSound{ 167344 };
 	}
 
