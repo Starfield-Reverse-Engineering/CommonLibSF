@@ -238,6 +238,7 @@
 #include "RE/F/FlameProjectile.h"
 #include "RE/F/FormTypes.h"
 #include "RE/G/GameMenuBase.h"
+#include "RE/G/GameSettingCollection.h"
 #include "RE/G/GameVM.h"
 #include "RE/G/GrenadeProjectile.h"
 #include "RE/H/HandlePolicy.h"
