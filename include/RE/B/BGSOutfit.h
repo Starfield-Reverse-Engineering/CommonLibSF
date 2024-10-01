@@ -16,5 +16,5 @@ namespace RE
 		// members
 		BSTArray<TESForm*> outfitItems;  // 30
 	};
-	static_assert(sizeof(BGSOutfit) == 0x40);
+	static_assert(sizeof(BGSOutfit) == 0x48);
 }

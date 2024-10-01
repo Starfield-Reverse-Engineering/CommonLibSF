@@ -24,5 +24,5 @@ namespace RE
 		BSTArray<SETTING_VALUE> data;             // 30
 		BSFixedString           particleTexture;  // 40
 	};
-	static_assert(sizeof(BGSShaderParticleGeometryData) == 0x48);
+	static_assert(sizeof(BGSShaderParticleGeometryData) == 0x50);
 }

@@ -22,5 +22,5 @@ namespace RE
 		NiPointer<Navmesh> navmesh;  // 108
 		std::uint64_t      unk110;   // 110 - BSTHashMap*
 	};
-	static_assert(sizeof(BGSStaticCollection) == 0x118);
+	static_assert(sizeof(BGSStaticCollection) == 0x120);
 }

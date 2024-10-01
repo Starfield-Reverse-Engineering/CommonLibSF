@@ -63,5 +63,5 @@ namespace RE
 		std::uint32_t    unk170;               // 170
 		std::uint32_t    sortIndex;            // 174
 	};
-	static_assert(sizeof(ActorValueInfo) == 0x178);
+	static_assert(sizeof(ActorValueInfo) == 0x180);
 }

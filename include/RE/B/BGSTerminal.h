@@ -18,5 +18,5 @@ namespace RE
 		BGSTerminalMenu* menu;    // 280
 		std::uint8_t     unk288;  // 288
 	};
-	static_assert(sizeof(BGSTerminal) == 0x290);
+	static_assert(sizeof(BGSTerminal) == 0x298);
 }

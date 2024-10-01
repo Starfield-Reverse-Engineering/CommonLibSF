@@ -25,5 +25,5 @@ namespace RE
 		BGSKeyword*  type;        // 140
 		TESLevItem*  floraList;   // 148
 	};
-	static_assert(sizeof(BGSBiomeMarkerObject) == 0x150);
+	static_assert(sizeof(BGSBiomeMarkerObject) == 0x158);
 }

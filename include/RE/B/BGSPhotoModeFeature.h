@@ -45,5 +45,5 @@ namespace RE
 		TESTexture             texture;     // 58
 		Feature                feature;     // 68
 	};
-	static_assert(sizeof(BGSPhotoModeFeature) == 0x88);
+	static_assert(sizeof(BGSPhotoModeFeature) == 0x90);
 }

@@ -20,5 +20,5 @@ namespace RE
 		// members
 		std::uint8_t unk50;  // 50
 	};
-	static_assert(sizeof(TESEyes) == 0x58);
+	static_assert(sizeof(TESEyes) == 0x60);
 }

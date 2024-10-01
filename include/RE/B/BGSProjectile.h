@@ -105,5 +105,5 @@ namespace RE
 		BGSAudio::WwiseSoundHook deactivateSound;   // 248
 		std::uint32_t            unk278;            // 278
 	};
-	static_assert(sizeof(BGSProjectile) == 0x280);
+	static_assert(sizeof(BGSProjectile) == 0x288);
 }

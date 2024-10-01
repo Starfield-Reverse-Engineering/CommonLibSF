@@ -20,5 +20,5 @@ namespace RE
 		// members
 		std::vector<ParticleSystemDefine*> defines;  // 30
 	};
-	static_assert(sizeof(BGSParticleSystemDefineCollection) == 0x48);
+	static_assert(sizeof(BGSParticleSystemDefineCollection) == 0x50);
 }

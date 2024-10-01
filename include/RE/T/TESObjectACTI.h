@@ -45,5 +45,5 @@ namespace RE
 		std::uint16_t            activationAngle;  // 216
 		std::uint8_t             unk218;           // 218
 	};
-	static_assert(sizeof(TESObjectACTI) == 0x220);
+	static_assert(sizeof(TESObjectACTI) == 0x228);
 }

@@ -24,5 +24,5 @@ namespace RE
 		BGSAudio::WwiseGUID end;           // 50
 		BGSConditionForm*   conditions;    // 60
 	};
-	static_assert(sizeof(BGSWwiseEventForm) == 0x68);
+	static_assert(sizeof(BGSWwiseEventForm) == 0x70);
 }

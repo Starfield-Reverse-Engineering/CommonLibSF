@@ -18,5 +18,5 @@ namespace RE
 		BSFixedString     tag;        // 30 - ANAM
 		BGSImpactDataSet* impactSet;  // 38 - DATA
 	};
-	static_assert(sizeof(BGSFootstep) == 0x40);
+	static_assert(sizeof(BGSFootstep) == 0x48);
 }

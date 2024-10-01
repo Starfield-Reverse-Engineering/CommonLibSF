@@ -19,5 +19,5 @@ namespace RE
 
 		~BGSLevPackIn() override;  // 00
 	};
-	static_assert(sizeof(BGSLevPackIn) == 0x180);
+	static_assert(sizeof(BGSLevPackIn) == 0x188);
 }

@@ -15,5 +15,5 @@ namespace RE
 		// members
 		BSFixedString material;  // 30 - Part of or full relative path to a material
 	};
-	static_assert(sizeof(BGSMaterialPathForm) == 0x38);
+	static_assert(sizeof(BGSMaterialPathForm) == 0x40);
 }

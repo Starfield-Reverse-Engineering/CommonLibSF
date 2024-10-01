@@ -16,5 +16,5 @@ namespace RE::TESDataHandlerPersistentCreatedUtil
 		std::uint64_t unk30;  // 30
 		std::uint64_t unk38;  // 38
 	};
-	static_assert(sizeof(BGSPersistentIDsForm) == 0x40);
+	static_assert(sizeof(BGSPersistentIDsForm) == 0x48);
 }

@@ -18,5 +18,5 @@ namespace RE
 		// members
 		std::uint8_t impactMap[0x28];  // 38
 	};
-	static_assert(sizeof(BGSImpactDataSet) == 0x60);
+	static_assert(sizeof(BGSImpactDataSet) == 0x68);
 }

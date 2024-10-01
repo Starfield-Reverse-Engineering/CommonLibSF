@@ -16,5 +16,5 @@ namespace RE
 		BGSKeyword*                       category;          // 98
 		BSTArray<BGSResearchProjectForm*> requiredProjects;  // A0
 	};
-	static_assert(sizeof(BGSResearchProjectForm) == 0xB0);
+	static_assert(sizeof(BGSResearchProjectForm) == 0xB8);
 }

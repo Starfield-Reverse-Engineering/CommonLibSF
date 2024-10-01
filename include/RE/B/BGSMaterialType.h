@@ -35,5 +35,5 @@ namespace RE
 		float                             buoyancy;            // 78
 		REX::EnumSet<FLAG, std::uint32_t> flags;               // 7C
 	};
-	static_assert(sizeof(BGSMaterialType) == 0x80);
+	static_assert(sizeof(BGSMaterialType) == 0x88);
 }

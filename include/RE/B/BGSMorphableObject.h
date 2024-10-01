@@ -20,5 +20,5 @@ namespace RE
 		BSFixedString unk50;             // 50
 		std::uint32_t unk58;             // 58
 	};
-	static_assert(sizeof(BGSMorphableObject) == 0x60);
+	static_assert(sizeof(BGSMorphableObject) == 0x68);
 }

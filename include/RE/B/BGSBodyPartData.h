@@ -58,5 +58,5 @@ namespace RE
 		BGSBodyPart*                     parts[BGSBodyPartDefs::LIMB_ENUM::kTotal];  // 058
 		BGSBodyPartDefs::HitReactionData defaultHitReactionData;                     // 128
 	};
-	static_assert(sizeof(BGSBodyPartData) == 0x150);
+	static_assert(sizeof(BGSBodyPartData) == 0x158);
 }

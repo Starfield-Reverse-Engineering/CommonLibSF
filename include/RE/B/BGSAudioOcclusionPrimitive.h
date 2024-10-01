@@ -16,5 +16,5 @@ namespace RE
 		float unkE0;  // E0
 		float unkE4;  // E4
 	};
-	static_assert(sizeof(BGSAudioOcclusionPrimitive) == 0xE8);
+	static_assert(sizeof(BGSAudioOcclusionPrimitive) == 0xF0);
 }

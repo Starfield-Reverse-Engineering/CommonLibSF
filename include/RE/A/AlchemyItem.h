@@ -56,5 +56,5 @@ namespace RE
 		// members
 		Data data;  // 280
 	};
-	static_assert(sizeof(AlchemyItem) == 0x2D0);
+	static_assert(sizeof(AlchemyItem) == 0x2D8);
 }

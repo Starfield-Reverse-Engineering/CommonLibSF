@@ -444,5 +444,5 @@ namespace RE
 		// members
 		TESForm* objectArray[DEFAULT_OBJECTS::kTotal];  // 030
 	};
-	static_assert(sizeof(BGSDefaultObjectManager) == 0xB90);
+	static_assert(sizeof(BGSDefaultObjectManager) == 0xB98);
 }

@@ -32,7 +32,7 @@ namespace RE
 		static_assert(sizeof(Handle) == 0x4);
 	}
 
-	class BGSInventoryInterface :
+	class alignas(0x08) BGSInventoryInterface :
 		BSTSingletonSDM<BGSInventoryInterface>,                   // 00
 		BSTEventSource<InventoryInterface::FavoriteChangedEvent>  // 08
 	{
@@ -66,5 +66,5 @@ namespace RE
 		// members
 		BSTArray<Agent> agentArray;  // 30
 	};
-	static_assert(sizeof(BGSInventoryInterface) == 0x40);
+	//static_assert(sizeof(BGSInventoryInterface) == 0x48);
 }

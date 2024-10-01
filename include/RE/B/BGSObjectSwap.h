@@ -19,5 +19,5 @@ namespace RE
 		std::uint64_t unk48;  // 48
 		std::uint64_t unk50;  // 50
 	};
-	static_assert(sizeof(BGSObjectSwap) == 0x58);
+	static_assert(sizeof(BGSObjectSwap) == 0x60);
 }

@@ -34,5 +34,5 @@ namespace RE
 
 		~BGSWeaponBarrelModel() override;  // 00
 	};
-	static_assert(sizeof(BGSWeaponBarrelModel) == 0x50);
+	static_assert(sizeof(BGSWeaponBarrelModel) == 0x58);
 }

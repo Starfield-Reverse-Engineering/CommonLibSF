@@ -60,5 +60,5 @@ namespace RE
 		BGSAttachParentArray     attachParents;     // 258
 		std::uint8_t             unk278;            // 278
 	};
-	static_assert(sizeof(TESObjectCONT) == 0x280);
+	static_assert(sizeof(TESObjectCONT) == 0x288);
 }

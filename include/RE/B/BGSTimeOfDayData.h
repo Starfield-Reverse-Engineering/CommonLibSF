@@ -18,5 +18,5 @@ namespace RE
 		BSFloatCurve luminanceAtTime;           // 130
 		float        lightLuminanceMultiplier;  // 170
 	};
-	static_assert(sizeof(BGSTimeOfDayData) == 0x178);
+	static_assert(sizeof(BGSTimeOfDayData) == 0x180);
 }

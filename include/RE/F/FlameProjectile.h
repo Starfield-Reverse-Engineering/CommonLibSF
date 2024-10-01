@@ -16,6 +16,6 @@ namespace RE
 		float expirationTimer;  // 260
 		float coneAngle;        // 264
 	};
-	static_assert(sizeof(FlameProjectile) == 0x250);
+	static_assert(sizeof(FlameProjectile) == 0x260);
 
 }

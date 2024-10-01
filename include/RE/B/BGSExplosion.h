@@ -64,5 +64,5 @@ namespace RE
 		// members
 		BGSExplosionData data;  // 140
 	};
-	static_assert(sizeof(BGSExplosion) == 0x1E8);
+	static_assert(sizeof(BGSExplosion) == 0x1F0);
 }

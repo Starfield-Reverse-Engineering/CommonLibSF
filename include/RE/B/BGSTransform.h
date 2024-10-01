@@ -29,5 +29,5 @@ namespace RE
 		TransformData data;   // 30
 		std::uint8_t  unk54;  // 54
 	};
-	static_assert(sizeof(BGSTransform) == 0x58);
+	static_assert(sizeof(BGSTransform) == 0x60);
 }

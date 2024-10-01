@@ -24,5 +24,5 @@ namespace RE
 		std::uint32_t           unk78;  // 78
 		std::uint32_t           unk7C;  // 7C
 	};
-	static_assert(sizeof(BGSSpeechChallengeObject) == 0x80);
+	static_assert(sizeof(BGSSpeechChallengeObject) == 0x88);
 }

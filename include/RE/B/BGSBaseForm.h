@@ -12,7 +12,7 @@ namespace RE
 
 		~BGSBaseForm() override;  // 00
 	};
-	static_assert(sizeof(BGSBaseForm) == 0x30);
+	static_assert(sizeof(BGSBaseForm) == 0x38);
 
 	template <class T, FormType>
 	class BGSBaseFormT :

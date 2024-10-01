@@ -23,5 +23,5 @@ namespace RE
 		std::uint64_t   unk58;  // 58
 		std::uint32_t   unk60;  // 60
 	};
-	static_assert(sizeof(BGSReferenceGroup) == 0x68);
+	static_assert(sizeof(BGSReferenceGroup) == 0x70);
 }

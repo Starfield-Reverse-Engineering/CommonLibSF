@@ -30,5 +30,5 @@ namespace RE
 		float                    unk2DC;         // 2DC
 		std::uint32_t            unk2E0;         // 2E0
 	};
-	static_assert(sizeof(TESFlora) == 0x2E8);
+	static_assert(sizeof(TESFlora) == 0x2F0);
 }

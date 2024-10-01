@@ -22,5 +22,5 @@ namespace RE
 		TESObjectREFR* tempRef;    // 220
 		BGSVoiceType*  voiceType;  // 228
 	};
-	static_assert(sizeof(BGSTalkingActivator) == 0x230);
+	static_assert(sizeof(BGSTalkingActivator) == 0x238);
 }

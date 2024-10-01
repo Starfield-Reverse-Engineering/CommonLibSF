@@ -61,5 +61,5 @@ namespace RE
 		BSSimpleList<WeatherSettings*> weatherSettings;  // 48
 		Timing                         timing;           // 58
 	};
-	static_assert(sizeof(TESClimate) == 0x60);
+	static_assert(sizeof(TESClimate) == 0x68);
 }

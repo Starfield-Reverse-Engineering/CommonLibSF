@@ -45,5 +45,5 @@ namespace RE
 		float                                       turbulenceDirectionAmplitude;  // 68
 		float                                       turbulenceDirectionFrequency;  // 6C
 	};
-	static_assert(sizeof(BGSForceData) == 0x70);
+	static_assert(sizeof(BGSForceData) == 0x78);
 }

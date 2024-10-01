@@ -62,5 +62,5 @@ namespace RE
 		float                        maxFootstepParticleDist;  // 140
 		std::uint32_t                unk144;                   // 144
 	};
-	static_assert(sizeof(BGSImpactData) == 0x148);
+	static_assert(sizeof(BGSImpactData) == 0x150);
 }

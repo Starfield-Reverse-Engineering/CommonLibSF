@@ -40,5 +40,5 @@ namespace RE
 		std::uint64_t    unk110;        // 110
 		std::uint32_t    unk118;        // 118
 	};
-	static_assert(sizeof(BGSSnapTemplate) == 0x120);
+	static_assert(sizeof(BGSSnapTemplate) == 0x128);
 }

@@ -23,5 +23,5 @@ namespace RE
 		std::uint32_t unk50;       // 50
 		std::uint8_t  unk54;       // 54
 	};
-	static_assert(sizeof(BGSConditionForm) == 0x58);
+	static_assert(sizeof(BGSConditionForm) == 0x60);
 }

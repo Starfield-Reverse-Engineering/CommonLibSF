@@ -25,5 +25,5 @@ namespace RE
 		std::uint32_t flags;      // 64
 		TESResponse*  responses;  // 68
 	};
-	static_assert(sizeof(TESTopicInfo) == 0x70);
+	static_assert(sizeof(TESTopicInfo) == 0x78);
 }

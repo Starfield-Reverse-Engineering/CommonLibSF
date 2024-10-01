@@ -21,5 +21,5 @@ namespace RE::BGSSurface
 		std::uint64_t           unk50;  // 50
 		BSTArray<std::uint32_t> unk58;  // 58
 	};
-	static_assert(sizeof(Tree) == 0x68);
+	static_assert(sizeof(Tree) == 0x70);
 }

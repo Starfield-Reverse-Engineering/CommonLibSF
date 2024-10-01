@@ -60,5 +60,5 @@ namespace RE
 		BGSArtObject*        artObject;                            // 248
 		AVMData              avmData;                              // 250
 	};
-	static_assert(sizeof(TESObjectARMA) == 0x278);
+	static_assert(sizeof(TESObjectARMA) == 0x280);
 }

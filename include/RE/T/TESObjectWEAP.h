@@ -52,5 +52,5 @@ namespace RE
 		BGSMod::Attachment::Mod*                   embeddedWeaponMod;  // 268
 		std::uint8_t                               unk270;             // 270
 	};
-	static_assert(sizeof(TESObjectWEAP) == 0x278);
+	static_assert(sizeof(TESObjectWEAP) == 0x280);
 }

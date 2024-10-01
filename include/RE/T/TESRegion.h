@@ -68,5 +68,5 @@ namespace RE
 		std::uint32_t                      unk60;       // 60
 		std::uint32_t                      unk64;       // 64
 	};
-	static_assert(sizeof(TESRegion) == 0x68);
+	static_assert(sizeof(TESRegion) == 0x70);
 }

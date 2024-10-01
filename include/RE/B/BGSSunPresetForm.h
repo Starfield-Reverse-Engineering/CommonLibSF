@@ -39,5 +39,5 @@ namespace RE::BSGalaxy
 		NightSettings      nightPreset;     // 74
 		std::uint64_t      unk98;           // 98
 	};
-	static_assert(sizeof(BGSSunPresetForm) == 0xA0);
+	static_assert(sizeof(BGSSunPresetForm) == 0xA8);
 }

@@ -20,5 +20,5 @@ namespace RE
 		std::uint32_t unk3C;  // 3C
 		std::int32_t  unk40;  // 40
 	};
-	static_assert(sizeof(BGSTraversal) == 0x48);
+	static_assert(sizeof(BGSTraversal) == 0x50);
 }

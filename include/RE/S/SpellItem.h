@@ -45,5 +45,5 @@ namespace RE
 		// members
 		Data data;  // 1F0
 	};
-	static_assert(sizeof(SpellItem) == 0x218);
+	static_assert(sizeof(SpellItem) == 0x220);
 }

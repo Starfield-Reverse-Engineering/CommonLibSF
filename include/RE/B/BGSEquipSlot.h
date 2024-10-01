@@ -30,5 +30,5 @@ namespace RE
 		ActorValueInfo*                   conditionActorValue;  // 50
 		REX::EnumSet<Flag, std::uint32_t> flags;                // 58
 	};
-	static_assert(sizeof(BGSEquipSlot) == 0x60);
+	static_assert(sizeof(BGSEquipSlot) == 0x68);
 }

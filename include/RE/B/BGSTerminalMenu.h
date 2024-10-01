@@ -25,5 +25,5 @@ namespace RE
 		std::uint64_t      unk70;  // 70
 		std::uint32_t      unk78;  // 78
 	};
-	static_assert(sizeof(BGSTerminalMenu) == 0x80);
+	static_assert(sizeof(BGSTerminalMenu) == 0x88);
 }

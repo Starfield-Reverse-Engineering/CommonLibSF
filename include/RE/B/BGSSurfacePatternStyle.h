@@ -12,5 +12,5 @@ namespace RE::BGSSurface
 
 		~PatternStyle() override;  // 00
 	};
-	static_assert(sizeof(PatternStyle) == 0x30);
+	static_assert(sizeof(PatternStyle) == 0x38);
 }

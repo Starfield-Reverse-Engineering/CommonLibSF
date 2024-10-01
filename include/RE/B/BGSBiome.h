@@ -121,5 +121,5 @@ namespace RE
 		std::uint32_t                        unk450;                  // 450
 		std::uint8_t                         unk454;                  // 454
 	};
-	static_assert(sizeof(BGSBiome) == 0x458);
+	static_assert(sizeof(BGSBiome) == 0x460);
 }

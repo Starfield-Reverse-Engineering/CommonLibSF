@@ -38,5 +38,5 @@ namespace RE
 		Data             data;          // 138
 		TESEffectShader* effectShader;  // 140
 	};
-	static_assert(sizeof(BGSArtObject) == 0x148);
+	static_assert(sizeof(BGSArtObject) == 0x150);
 }

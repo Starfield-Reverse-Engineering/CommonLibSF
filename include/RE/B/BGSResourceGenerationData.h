@@ -16,5 +16,5 @@ namespace RE
 		// members
 		BSTArray<void*> unk30;  // 30
 	};
-	static_assert(sizeof(BGSResourceGenerationData) == 0x40);
+	static_assert(sizeof(BGSResourceGenerationData) == 0x48);
 }

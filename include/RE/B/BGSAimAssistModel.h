@@ -51,5 +51,5 @@ namespace RE
 
 		~BGSAimAssistModel() override;  // 00
 	};
-	static_assert(sizeof(BGSAimAssistModel) == 0x98);
+	static_assert(sizeof(BGSAimAssistModel) == 0xA0);
 }

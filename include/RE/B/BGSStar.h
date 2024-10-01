@@ -29,6 +29,6 @@ namespace RE
 			BGSTimeOfDayData*        timeOfDay;  // 78
 			BGSAudio::WwiseSoundHook unk80;      // 80
 		};
-		static_assert(sizeof(BGSStar) == 0xB0);
+		static_assert(sizeof(BGSStar) == 0xB8);
 	}
 }

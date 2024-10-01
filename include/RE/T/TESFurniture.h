@@ -73,5 +73,5 @@ namespace RE
 		BSTArray<BSFurnitureMarker> markersArray;         // 268
 		std::uint32_t               unk278;               // 278
 	};
-	static_assert(sizeof(TESFurniture) == 0x280);
+	static_assert(sizeof(TESFurniture) == 0x288);
 }

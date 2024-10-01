@@ -36,5 +36,5 @@ namespace RE
 		BGSKeyword*     animationFaceArchetype;  // 40
 		VOICE_TYPE_DATA data;                    // 48
 	};
-	static_assert(sizeof(BGSVoiceType) == 0x50);
+	static_assert(sizeof(BGSVoiceType) == 0x58);
 }

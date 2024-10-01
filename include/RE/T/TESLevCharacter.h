@@ -17,5 +17,5 @@ namespace RE
 
 		~TESLevCharacter() override;  // 00
 	};
-	static_assert(sizeof(TESLevCharacter) == 0x168);
+	static_assert(sizeof(TESLevCharacter) == 0x170);
 }

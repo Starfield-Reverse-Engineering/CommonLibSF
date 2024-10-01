@@ -27,5 +27,5 @@ namespace RE
 		// members
 		BGSSnapTemplateComponent snapTemplate;  // 030
 	};
-	static_assert(sizeof(TESObject) == 0x48);
+	static_assert(sizeof(TESObject) == 0x50);
 }

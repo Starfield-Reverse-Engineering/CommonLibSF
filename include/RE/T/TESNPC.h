@@ -106,5 +106,5 @@ namespace RE
 		std::uint64_t                                             unk440;           // 440
 		REX::Enum<PRONOUN_TYPE, std::uint8_t>                     pronoun;          // 448
 	};
-	static_assert(sizeof(TESNPC) == 0x450);
+	static_assert(sizeof(TESNPC) == 0x458);
 }

@@ -24,5 +24,5 @@ namespace RE
 		std::uint64_t            unk68;     // 68
 		std::uint16_t            unk70;     // 70
 	};
-	static_assert(sizeof(BGSWwiseKeywordMapping) == 0x78);
+	static_assert(sizeof(BGSWwiseKeywordMapping) == 0x80);
 }

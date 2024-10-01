@@ -35,5 +35,5 @@ namespace RE
 		TESObjectSTATData        data;          // 138
 		BGSAudio::WwiseSoundHook ambientSound;  // 140
 	};
-	static_assert(sizeof(TESObjectSTAT) == 0x170);
+	static_assert(sizeof(TESObjectSTAT) == 0x178);
 }

@@ -30,5 +30,5 @@ namespace RE
 		SplineData           data;          // 0E0
 		BGSMaterialPathForm* materialPath;  // 100
 	};
-	static_assert(sizeof(BGSBendableSpline) == 0x108);
+	static_assert(sizeof(BGSBendableSpline) == 0x110);
 }

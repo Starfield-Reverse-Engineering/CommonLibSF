@@ -262,7 +262,7 @@ namespace RE
 		std::uint8_t                           formChangeFlags;  // 2C
 		std::uint8_t                           unk2D;            // 2D
 		REX::Enum<FormType, std::uint8_t>      formType;         // 2E
-		std::uint8_t                           loadOrderIndex;   // 2F - init'd to 0xFF
+		std::uint16_t                          loadOrderIndex;   // 2F - init'd to 0xFFFF
 	};
-	static_assert(sizeof(TESForm) == 0x30);
+	static_assert(sizeof(TESForm) == 0x38);
 }

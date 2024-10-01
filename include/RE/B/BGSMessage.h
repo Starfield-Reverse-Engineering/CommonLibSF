@@ -52,5 +52,5 @@ namespace RE
 		std::int32_t                             unk88;        // 88
 		BSFixedStringCS                          unk90;        // 90
 	};
-	static_assert(sizeof(BGSMessage) == 0x98);
+	static_assert(sizeof(BGSMessage) == 0xA0);
 }

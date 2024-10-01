@@ -33,5 +33,5 @@ namespace RE
 		// members
 		BSTArray<BGSFootstep*> entries[ACTOR_MOVEMENT_TYPES::kTotal];  // 30
 	};
-	static_assert(sizeof(BGSFootstepSet) == 0x80);
+	static_assert(sizeof(BGSFootstepSet) == 0x88);
 }

@@ -34,5 +34,5 @@ namespace RE
 		BSTArray<Entry>       entries;         // 48
 		BSTArray<void*>       swapCollection;  // 58
 	};
-	static_assert(sizeof(BGSLayeredMaterialSwap) == 0x68);
+	static_assert(sizeof(BGSLayeredMaterialSwap) == 0x70);
 }

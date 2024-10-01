@@ -20,5 +20,5 @@ namespace RE
 		BGSEditorID                 formEditorID;             // E8
 		BGSGenericBaseFormTemplate* genericBaseFormTemplate;  // F8
 	};
-	static_assert(sizeof(BGSGenericBaseForm) == 0x100);
+	static_assert(sizeof(BGSGenericBaseForm) == 0x108);
 }

@@ -65,5 +65,5 @@ namespace RE
 
 		~BGSAimDownSightModel() override;  // 00
 	};
-	static_assert(sizeof(BGSAimDownSightModel) == 0x70);
+	static_assert(sizeof(BGSAimDownSightModel) == 0x78);
 }

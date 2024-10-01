@@ -32,5 +32,5 @@ namespace RE
 		std::uint64_t unk170;      // 170
 		BGSArtObject* artObject;   // 178
 	};
-	static_assert(sizeof(BGSSnapTemplateNode) == 0x180);
+	static_assert(sizeof(BGSSnapTemplateNode) == 0x188);
 }

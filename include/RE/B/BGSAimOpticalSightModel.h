@@ -47,5 +47,5 @@ namespace RE
 
 		~BGSAimOpticalSightModel() override;  // 00
 	};
-	static_assert(sizeof(BGSAimOpticalSightModel) == 0x80);
+	static_assert(sizeof(BGSAimOpticalSightModel) == 0x88);
 }

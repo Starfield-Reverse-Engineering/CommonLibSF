@@ -27,5 +27,5 @@ namespace RE
 		REX::Enum<ReverbClass, std::uint32_t> reverbClass;  // 30
 		BGSAudio::WwiseGUID                   audioBus;     // 38
 	};
-	static_assert(sizeof(BGSReverbParameters) == 0x48);
+	static_assert(sizeof(BGSReverbParameters) == 0x50);
 }

@@ -22,5 +22,5 @@ namespace RE
 		BGSCameraPath*  parentPath;  // 68
 		BGSCameraPath*  prevPath;    // 70
 	};
-	static_assert(sizeof(BGSCameraPath) == 0x78);
+	static_assert(sizeof(BGSCameraPath) == 0x80);
 }

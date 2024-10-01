@@ -44,5 +44,5 @@ namespace RE
 		virtual void            SetCombatStyle(TESCombatStyle*);  // 84
 		virtual TESForm*        GetAsForm();                      // 85
 	};
-	static_assert(sizeof(TESActorBase) == 0x260);
+	static_assert(sizeof(TESActorBase) == 0x268);
 }

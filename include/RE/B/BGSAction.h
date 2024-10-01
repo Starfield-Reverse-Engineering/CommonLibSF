@@ -15,5 +15,5 @@ namespace RE
 		// members
 		std::uint32_t index;  // 80
 	};
-	static_assert(sizeof(BGSAction) == 0x80);
+	static_assert(sizeof(BGSAction) == 0x88);
 }

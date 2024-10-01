@@ -16,5 +16,5 @@ namespace RE
 		// members
 		BSFloatCurve curve;  // 30
 	};
-	static_assert(sizeof(BGSCurveForm) == 0x70);
+	static_assert(sizeof(BGSCurveForm) == 0x78);
 }

@@ -15,5 +15,5 @@ namespace RE
 
 		~BGSLevSpaceCell() override;  // 00
 	};
-	static_assert(sizeof(BGSLevSpaceCell) == 0x90);
+	static_assert(sizeof(BGSLevSpaceCell) == 0x98);
 }

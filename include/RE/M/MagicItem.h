@@ -83,5 +83,5 @@ namespace RE
 		std::uint32_t                                                preloadCount;     // 13C
 		BSTSmartPointer<QueuedFile, BSTSmartPointerGamebryoRefCount> preloadedItem;    // 148
 	};
-	static_assert(sizeof(MagicItem) == 0x150);
+	static_assert(sizeof(MagicItem) == 0x158);
 }

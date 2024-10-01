@@ -18,5 +18,5 @@ namespace RE
 		INTERIOR_DATA                       data;                              // 30
 		BGSDirectionalAmbientLightingColors directionalAmbientLightingColors;  // A8
 	};
-	static_assert(sizeof(BGSLightingTemplate) == 0xC0);
+	static_assert(sizeof(BGSLightingTemplate) == 0xC8);
 }

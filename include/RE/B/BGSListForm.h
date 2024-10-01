@@ -26,5 +26,5 @@ namespace RE
 		BSTArray<std::uint32_t>* scriptAddedTempForms;  // 78
 		std::uint32_t            scriptAddedFormCount;  // 80
 	};
-	static_assert(sizeof(BGSListForm) == 0x88);
+	static_assert(sizeof(BGSListForm) == 0x90);
 }

@@ -25,5 +25,5 @@ namespace RE
 		std::uint64_t unk78;              // 78
 		std::uint8_t  unk80;              // 80
 	};
-	static_assert(sizeof(TESIdleForm) == 0x88);
+	static_assert(sizeof(TESIdleForm) == 0x90);
 }

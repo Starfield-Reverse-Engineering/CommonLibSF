@@ -41,5 +41,5 @@ namespace RE
 		RuleSet                                 rules[10];     // 38
 		BSTArray<const BGSInstanceNamingRules*> mergeSources;  // D8
 	};
-	static_assert(sizeof(BGSInstanceNamingRules) == 0xE8);
+	static_assert(sizeof(BGSInstanceNamingRules) == 0xF0);
 }

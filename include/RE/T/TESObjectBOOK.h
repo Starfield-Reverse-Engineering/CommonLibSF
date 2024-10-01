@@ -74,5 +74,5 @@ namespace RE
 		BGSLocalizedString unk250;               // 250
 		BGSLocalizedString unk258;               // 258
 	};
-	static_assert(sizeof(TESObjectBOOK) == 0x260);
+	static_assert(sizeof(TESObjectBOOK) == 0x268);
 }

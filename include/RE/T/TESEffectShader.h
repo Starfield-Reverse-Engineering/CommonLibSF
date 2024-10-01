@@ -47,5 +47,5 @@ namespace RE
 		EffectShaderData       data;            // 58
 		std::uint32_t          unkC8;           // C8
 	};
-	static_assert(sizeof(TESEffectShader) == 0xD0);
+	static_assert(sizeof(TESEffectShader) == 0xD8);
 }
