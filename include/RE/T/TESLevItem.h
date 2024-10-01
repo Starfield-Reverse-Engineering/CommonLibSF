@@ -19,5 +19,5 @@ namespace RE
 
 		~TESLevItem() override;  // 00
 	};
-	static_assert(sizeof(TESLevItem) == 0x180);
+	static_assert(sizeof(TESLevItem) == 0x188);
 }

@@ -26,5 +26,5 @@ namespace RE
 		BGSKeyword* flavorAnim;    // 158
 		BGSAction*  action;        // 160
 	};
-	static_assert(sizeof(BGSIdleMarker) == 0x168);
+	static_assert(sizeof(BGSIdleMarker) == 0x170);
 }

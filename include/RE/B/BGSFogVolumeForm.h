@@ -27,5 +27,5 @@ namespace RE
 		REX::W32::XMFLOAT3 noiseScrollingVelocity;  // 5C
 		std::uint32_t      pad68;                   // 68
 	};
-	static_assert(sizeof(BGSFogVolumeForm) == 0x70);
+	static_assert(sizeof(BGSFogVolumeForm) == 0x78);
 }

@@ -34,5 +34,5 @@ namespace RE
 		std::uint64_t   unk90;         // 90
 		BSTArray<void*> unk98;         // 98
 	};
-	static_assert(sizeof(BGSPerk) == 0xA8);
+	static_assert(sizeof(BGSPerk) == 0xB0);
 }

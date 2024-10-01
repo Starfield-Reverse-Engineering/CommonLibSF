@@ -66,5 +66,5 @@ namespace RE
 		// members
 		BSTArray<Agent> agentArray;  // 30
 	};
-	static_assert(sizeof(BGSInventoryInterface) == 0x40);
+	static_assert(sizeof(BGSInventoryInterface) == 0x48);
 }

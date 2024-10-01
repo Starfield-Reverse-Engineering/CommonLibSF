@@ -18,5 +18,5 @@ namespace RE
 		BSTArray<void*>          unk0E0;  // 0E0
 		BGSAudio::WwiseSoundHook unk128;  // 0F0
 	};
-	static_assert(sizeof(BGSSoundEcho) == 0x120);
+	static_assert(sizeof(BGSSoundEcho) == 0x128);
 }

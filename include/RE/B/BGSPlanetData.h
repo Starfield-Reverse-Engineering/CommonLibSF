@@ -27,6 +27,6 @@ namespace RE
 			float             periAngleInDegrees;     // 44
 			std::uint32_t     resourceCreationSpeed;  // 48
 		};
-		static_assert(sizeof(PlanetData) == 0x50);
+		static_assert(sizeof(PlanetData) == 0x58);
 	}
 }

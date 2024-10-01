@@ -37,5 +37,5 @@ namespace RE
 
 		~BGSLensFlare() override;  // 00
 	};
-	static_assert(sizeof(BGSLensFlare) == 0x68);
+	static_assert(sizeof(BGSLensFlare) == 0x70);
 }

@@ -30,5 +30,5 @@ namespace RE
 		// members
 		Data data;  // 40
 	};
-	static_assert(sizeof(BGSDamageType) == 0x50);
+	static_assert(sizeof(BGSDamageType) == 0x58);
 }

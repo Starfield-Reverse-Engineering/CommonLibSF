@@ -36,5 +36,5 @@ namespace RE
 		float                                                                           menuSortOrder;  // 8C
 		std::uint8_t                                                                    unk90;          // 90
 	};
-	static_assert(sizeof(BGSCraftableForm) == 0x98);
+	static_assert(sizeof(BGSCraftableForm) == 0xA0);
 }

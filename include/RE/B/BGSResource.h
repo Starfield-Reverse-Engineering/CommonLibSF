@@ -41,5 +41,5 @@ namespace RE
 		BGSConstructibleObject* produce;       // 100
 		std::uint8_t            unk108;        // 108
 	};
-	static_assert(sizeof(BGSResource) == 0x110);
+	static_assert(sizeof(BGSResource) == 0x118);
 }

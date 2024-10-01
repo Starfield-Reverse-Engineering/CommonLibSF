@@ -56,5 +56,5 @@ namespace RE
 		BGSLocalizedString shortDesc;    // 210
 		TESModel           shellCasing;  // 218
 	};
-	static_assert(sizeof(TESAmmo) == 0x238);
+	static_assert(sizeof(TESAmmo) == 0x240);
 }

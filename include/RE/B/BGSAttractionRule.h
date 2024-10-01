@@ -29,5 +29,5 @@ namespace RE
 		BGSEditorID formEditorID;    // 30
 		Rule        attractionRule;  // 40
 	};
-	static_assert(sizeof(BGSAttractionRule) == 0x50);
+	static_assert(sizeof(BGSAttractionRule) == 0x58);
 }

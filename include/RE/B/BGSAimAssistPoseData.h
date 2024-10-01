@@ -26,5 +26,5 @@ namespace RE
 		AttachPoint           attachPoint;  // 30
 		BSTArray<AttachPoint> connections;  // 48
 	};
-	static_assert(sizeof(BGSAimAssistPoseData) == 0x58);
+	static_assert(sizeof(BGSAimAssistPoseData) == 0x60);
 }

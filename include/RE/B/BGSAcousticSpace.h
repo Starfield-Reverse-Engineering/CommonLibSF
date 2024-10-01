@@ -32,5 +32,5 @@ namespace RE
 		std::uint8_t             unk195;           // 195
 		std::uint32_t            unk198;           // 198
 	};
-	static_assert(sizeof(BGSAcousticSpace) == 0x1A0);
+	static_assert(sizeof(BGSAcousticSpace) == 0x1A8);
 }

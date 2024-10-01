@@ -44,5 +44,5 @@ namespace RE
 		DecalData*    decalData;     // 390
 		std::uint16_t flags;         // 398
 	};
-	static_assert(sizeof(BGSTextureSet) == 0x3A0);
+	static_assert(sizeof(BGSTextureSet) == 0x3A8);
 }

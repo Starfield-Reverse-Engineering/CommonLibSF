@@ -19,5 +19,5 @@ namespace RE
 		BGSEditorID formEditorID;  // 30
 		float       value;         // 40
 	};
-	static_assert(sizeof(TESGlobal) == 0x48);
+	static_assert(sizeof(TESGlobal) == 0x50);
 }

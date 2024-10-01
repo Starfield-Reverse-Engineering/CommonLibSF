@@ -34,5 +34,5 @@ namespace RE
 		BSTArray<BGSLayeredMaterialSwap*> materialSwaps;  // 1B0
 		std::uint32_t                     unk1C0;         // 1C0
 	};
-	static_assert(sizeof(BGSPackIn) == 0x1C8);
+	static_assert(sizeof(BGSPackIn) == 0x1D0);
 }

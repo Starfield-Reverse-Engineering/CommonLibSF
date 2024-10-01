@@ -16,5 +16,5 @@ namespace RE
 		BGSEditorID             formEditorID;  // 30
 		BSTArray<BSFixedString> components;    // 40
 	};
-	static_assert(sizeof(BGSGenericBaseFormTemplate) == 0x50);
+	static_assert(sizeof(BGSGenericBaseFormTemplate) == 0x58);
 }

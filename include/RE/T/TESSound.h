@@ -20,5 +20,5 @@ namespace RE
 		BGSAudio::WwiseSoundHook sound;   // 110 - SMLS
 		std::uint64_t            unk140;  // 140
 	};
-	static_assert(sizeof(TESSound) == 0x148);
+	static_assert(sizeof(TESSound) == 0x150);
 }

@@ -25,5 +25,5 @@ namespace RE
 		BGSLegendaryItem* legendaryTemplate;   // 120
 		BSTArray<void*>   unk128[3];           // 128
 	};
-	static_assert(sizeof(BGSLegendaryItem) == 0x158);
+	static_assert(sizeof(BGSLegendaryItem) == 0x160);
 }

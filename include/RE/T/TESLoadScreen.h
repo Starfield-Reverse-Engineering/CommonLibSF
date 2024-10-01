@@ -35,5 +35,5 @@ namespace RE
 		LoadNIFData*       loadNIFData;  // 50
 		BGSLocalizedString loadingText;  // 58
 	};
-	static_assert(sizeof(TESLoadScreen) == 0x60);
+	static_assert(sizeof(TESLoadScreen) == 0x68);
 }

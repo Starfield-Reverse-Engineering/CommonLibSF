@@ -43,5 +43,5 @@ namespace RE
 		BGSKeyword*                                                                     unk190;       // 190
 		std::uint32_t                                                                   unk198;       // 198
 	};
-	static_assert(sizeof(BGSConstructibleObject) == 0x1A0);
+	static_assert(sizeof(BGSConstructibleObject) == 0x1A8);
 }

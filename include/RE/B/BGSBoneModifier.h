@@ -15,5 +15,5 @@ namespace RE
 		// members
 		void* unk30;  // 30
 	};
-	static_assert(sizeof(BGSBoneModifier) == 0x38);
+	static_assert(sizeof(BGSBoneModifier) == 0x40);
 }

@@ -29,5 +29,5 @@ namespace RE::BGSSurface
 		std::uint8_t            unk69;  // 69
 		std::uint8_t            unk6A;  // 6A
 	};
-	static_assert(sizeof(Block) == 0x70);
+	static_assert(sizeof(Block) == 0x78);
 }

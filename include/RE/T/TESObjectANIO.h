@@ -19,5 +19,5 @@ namespace RE
 		// members
 		BGSEditorID formEditorID;  // 58
 	};
-	static_assert(sizeof(TESObjectANIO) == 0x68);
+	static_assert(sizeof(TESObjectANIO) == 0x70);
 }

@@ -12,5 +12,5 @@ namespace RE
 
 		~BGSChallengeForm() override;  // 00
 	};
-	static_assert(sizeof(BGSChallengeForm) == 0x30);
+	static_assert(sizeof(BGSChallengeForm) == 0x38);
 }

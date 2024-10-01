@@ -57,5 +57,5 @@ namespace RE
 		REX::EnumSet<Flag, std::uint8_t> flags;            // 250
 		BSTArray<TESForm*>               randomTeleports;  // 258
 	};
-	static_assert(sizeof(TESObjectDOOR) == 0x268);
+	static_assert(sizeof(TESObjectDOOR) == 0x270);
 }

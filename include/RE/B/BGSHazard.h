@@ -64,5 +64,5 @@ namespace RE
 		BGSHazardData data;        // 128
 		TESCondition  conditions;  // 198
 	};
-	static_assert(sizeof(BGSHazard) == 0x1A8);
+	static_assert(sizeof(BGSHazard) == 0x1B0);
 }

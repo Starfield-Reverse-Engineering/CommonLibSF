@@ -17,5 +17,5 @@ namespace RE
 		// members
 		AlchemyItem* poison;  // 2B0
 	};
-	static_assert(sizeof(ArrowProjectile) == 0x2B0);
+	static_assert(sizeof(ArrowProjectile) == 0x2C0);
 }

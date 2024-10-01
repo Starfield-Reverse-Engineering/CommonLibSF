@@ -40,5 +40,5 @@ namespace RE
 		BGSLocalizedString shortName;  // 248
 		std::uint32_t      flags;      // 250
 	};
-	static_assert(sizeof(TESObjectMISC) == 0x258);
+	static_assert(sizeof(TESObjectMISC) == 0x260);
 }

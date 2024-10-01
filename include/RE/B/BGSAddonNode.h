@@ -34,5 +34,5 @@ namespace RE
 		std::uint8_t             unk148[776];  // 148 - reflection data
 		ADDON_DATA               data;         // 450
 	};
-	static_assert(sizeof(BGSAddonNode) == 0x458);
+	static_assert(sizeof(BGSAddonNode) == 0x460);
 }

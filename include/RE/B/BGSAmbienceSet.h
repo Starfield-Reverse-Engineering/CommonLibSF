@@ -20,5 +20,5 @@ namespace RE
 		bool                     unk48;  // 48
 		BGSAudio::WwiseSoundHook unk50;  // 50
 	};
-	static_assert(sizeof(BGSAmbienceSet) == 0x80);
+	static_assert(sizeof(BGSAmbienceSet) == 0x88);
 }

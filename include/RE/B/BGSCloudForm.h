@@ -94,5 +94,5 @@ namespace RE
 		std::array<CloudPlane, 4> planes;             // 230
 		BGSEffectSequenceForm*    cloudCardSequence;  // 3D0
 	};
-	static_assert(sizeof(BGSCloudForm) == 0x3D8);
+	static_assert(sizeof(BGSCloudForm) == 0x3E0);
 }

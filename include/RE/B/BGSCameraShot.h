@@ -77,5 +77,5 @@ namespace RE
 		TESCondition     conditions;  // D0
 		BSFixedString    animPath;    // E0
 	};
-	static_assert(sizeof(BGSCameraShot) == 0xE8);
+	static_assert(sizeof(BGSCameraShot) == 0xF0);
 }

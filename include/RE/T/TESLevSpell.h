@@ -15,5 +15,5 @@ namespace RE
 
 		~TESLevSpell() override;  // 00
 	};
-	static_assert(sizeof(TESLevSpell) == 0x140);
+	static_assert(sizeof(TESLevSpell) == 0x148);
 }

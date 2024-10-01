@@ -29,5 +29,5 @@ namespace RE
 		std::uint32_t                  flags;        // 134
 		void*                          unk280;       // 280
 	};
-	static_assert(sizeof(Hazard) == 0x120);
+	static_assert(sizeof(Hazard) == 0x128);
 }

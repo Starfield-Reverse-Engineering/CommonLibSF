@@ -92,5 +92,5 @@ namespace RE
 		// members
 		BGSVolumetricLightingSettings settings;  // 30
 	};
-	static_assert(sizeof(BGSVolumetricLighting) == 0xB0);
+	static_assert(sizeof(BGSVolumetricLighting) == 0xB8);
 }

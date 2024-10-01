@@ -28,5 +28,5 @@ namespace RE
 		// members
 		BSSimpleList<SECONDARY_DAMAGE> secondaryDamages;  // 30
 	};
-	static_assert(sizeof(BGSSecondaryDamageList) == 0x48);
+	static_assert(sizeof(BGSSecondaryDamageList) == 0x50);
 }

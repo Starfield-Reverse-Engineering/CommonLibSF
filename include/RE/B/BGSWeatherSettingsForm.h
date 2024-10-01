@@ -151,5 +151,5 @@ namespace RE
 		std::uint64_t           unk2E8;                           // 2E8
 		std::uint64_t           unk2F0;                           // 2F0
 	};
-	static_assert(sizeof(BGSWeatherSettingsForm) == 0x2F8);
+	static_assert(sizeof(BGSWeatherSettingsForm) == 0x300);
 }

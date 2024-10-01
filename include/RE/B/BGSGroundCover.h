@@ -27,5 +27,5 @@ namespace RE
 		std::uint64_t unk78;  // 78
 		std::uint32_t unk80;  // 80
 	};
-	static_assert(sizeof(BGSGroundCover) == 0x88);
+	static_assert(sizeof(BGSGroundCover) == 0x90);
 }

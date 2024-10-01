@@ -115,5 +115,5 @@ namespace RE
 		std::uint64_t               unk1D0;                    // 1D0
 		TESCondition                conditions;                // 1D8
 	};
-	static_assert(sizeof(EffectSetting) == 0x1E8);
+	static_assert(sizeof(EffectSetting) == 0x1F0);
 }

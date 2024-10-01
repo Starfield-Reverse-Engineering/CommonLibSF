@@ -19,5 +19,5 @@ namespace RE
 		BSTSmartPointer<BGSDecalGroup> decalGroup;           // 260 - NiPointer?
 		bool                           collisionGroupReset;  // 268
 	};
-	static_assert(sizeof(GrenadeProjectile) == 0x250);
+	static_assert(sizeof(GrenadeProjectile) == 0x260);
 }

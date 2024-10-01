@@ -138,5 +138,5 @@ namespace RE
 		std::uint32_t      unk144;    // 144
 		std::uint32_t      unk148;    // 148
 	};
-	static_assert(sizeof(BGSAtmosphere) == 0x150);
+	static_assert(sizeof(BGSAtmosphere) == 0x158);
 }

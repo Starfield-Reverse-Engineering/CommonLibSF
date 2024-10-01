@@ -38,5 +38,5 @@ namespace RE
 		std::vector<ReactionData*> reactionData;   // 60
 		std::uint32_t              unk78;          // 78
 	};
-	static_assert(sizeof(BGSAffinityEvent) == 0x80);
+	static_assert(sizeof(BGSAffinityEvent) == 0x88);
 }

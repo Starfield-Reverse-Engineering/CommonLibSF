@@ -38,5 +38,5 @@ namespace RE
 
 		~BGSMeleeAimAssistModel() override;  // 00
 	};
-	static_assert(sizeof(BGSMeleeAimAssistModel) == 0x60);
+	static_assert(sizeof(BGSMeleeAimAssistModel) == 0x68);
 }

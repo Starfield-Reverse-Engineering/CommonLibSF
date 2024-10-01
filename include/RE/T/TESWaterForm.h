@@ -105,6 +105,6 @@ namespace RE
 		NiPoint3                 linearVelocity;          // 1D0
 		NiPoint3                 angularVelocity;         // 1DC
 	};
-	static_assert(sizeof(TESWaterForm) == 0x1E8);
-	static_assert(offsetof(TESWaterForm, data) == 0xB0);
+	static_assert(sizeof(TESWaterForm) == 0x1F0);
+	static_assert(offsetof(TESWaterForm, data) == 0xB8);
 }

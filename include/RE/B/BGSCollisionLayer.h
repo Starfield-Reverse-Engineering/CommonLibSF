@@ -29,5 +29,5 @@ namespace RE
 		BSFixedString                     name;          // 40
 		BSTArray<BGSCollisionLayer*>      collidesWith;  // 48
 	};
-	static_assert(sizeof(BGSCollisionLayer) == 0x58);
+	static_assert(sizeof(BGSCollisionLayer) == 0x60);
 }

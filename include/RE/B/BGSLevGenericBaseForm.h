@@ -18,5 +18,5 @@ namespace RE
 
 		~BGSLevGenericBaseForm() override;  // 00
 	};
-	static_assert(sizeof(BGSLevGenericBaseForm) == 0x168);
+	static_assert(sizeof(BGSLevGenericBaseForm) == 0x170);
 }

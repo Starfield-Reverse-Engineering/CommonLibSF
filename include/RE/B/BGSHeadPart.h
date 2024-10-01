@@ -61,5 +61,5 @@ namespace RE
 		REX::Enum<HeadPartType, std::uint32_t> type;               // 140
 		std::uint32_t                          unk144;             // 144
 	};
-	static_assert(sizeof(BGSHeadPart) == 0x148);
+	static_assert(sizeof(BGSHeadPart) == 0x150);
 }

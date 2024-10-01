@@ -23,5 +23,5 @@ namespace RE::BGSSurface
 		std::uint32_t unk448[256];   // 448
 		std::uint64_t unk848;        // 848
 	};
-	static_assert(sizeof(Pattern) == 0x850);
+	static_assert(sizeof(Pattern) == 0x858);
 }

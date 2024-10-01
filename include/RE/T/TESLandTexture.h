@@ -32,5 +32,5 @@ namespace RE
 		float              unk58;         // 58
 		std::int32_t       unk5C;         // 5C
 	};
-	static_assert(sizeof(TESLandTexture) == 0x60);
+	static_assert(sizeof(TESLandTexture) == 0x68);
 }

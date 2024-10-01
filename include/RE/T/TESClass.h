@@ -33,5 +33,5 @@ namespace RE
 		// members
 		CLASS_DATA data;  // 70 - DATA
 	};
-	static_assert(sizeof(TESClass) == 0x80);
+	static_assert(sizeof(TESClass) == 0x88);
 }

@@ -31,5 +31,5 @@ namespace RE
 		MOVABLE_STATIC_DATA data;    // 1B8
 		float               unk1BC;  // 1BC
 	};
-	static_assert(sizeof(BGSMovableStatic) == 0x1C0);
+	static_assert(sizeof(BGSMovableStatic) == 0x1C8);
 }

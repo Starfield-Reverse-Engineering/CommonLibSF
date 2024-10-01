@@ -91,5 +91,5 @@ namespace RE
 		std::uint64_t                                       unk210;                  // 210
 		mutable BSReadWriteLock                             locker;                  // 218
 	};
-	static_assert(sizeof(BGSLocation) == 0x220);
+	static_assert(sizeof(BGSLocation) == 0x228);
 }

@@ -31,5 +31,5 @@ namespace RE
 		BGSMaterialPathForm* material;  // E8
 		Data                 data;      // F0
 	};
-	static_assert(sizeof(BGSProjectedDecal) == 0x100);
+	static_assert(sizeof(BGSProjectedDecal) == 0x108);
 }

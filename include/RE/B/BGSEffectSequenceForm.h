@@ -46,5 +46,5 @@ namespace RE
 		// members
 		EffectSequenceMap map;  // 30
 	};
-	static_assert(sizeof(BGSEffectSequenceForm) == 0x88);
+	static_assert(sizeof(BGSEffectSequenceForm) == 0x90);
 }

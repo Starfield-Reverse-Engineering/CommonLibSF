@@ -27,5 +27,5 @@ namespace RE
 		void*                                 unk2AF;                 // 2AF
 		void*                                 unk2B7;                 // 2B7
 	};
-	static_assert(sizeof(MissileProjectile) == 0x2A0);
+	static_assert(sizeof(MissileProjectile) == 0x2B0);
 }

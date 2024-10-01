@@ -71,5 +71,5 @@ namespace RE
 		// members
 		GRASS_DATA data;  // 100 - DATA
 	};
-	static_assert(sizeof(TESGrass) == 0x128);
+	static_assert(sizeof(TESGrass) == 0x130);
 }

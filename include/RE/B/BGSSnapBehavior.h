@@ -33,5 +33,5 @@ namespace RE
 		// members
 		BSTArray<SNAP_BEHAVIOR_DATA*> snapBehaviors;  // 30
 	};
-	static_assert(sizeof(BGSSnapBehavior) == 0x40);
+	static_assert(sizeof(BGSSnapBehavior) == 0x48);
 }
