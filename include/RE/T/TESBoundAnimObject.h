@@ -11,5 +11,5 @@ namespace RE
 
 		~TESBoundAnimObject() override;  // 00
 	};
-	static_assert(sizeof(TESBoundAnimObject) == 0xE0);
+	static_assert(sizeof(TESBoundAnimObject) == 0xE8);
 }

@@ -404,5 +404,5 @@ namespace RE
 	private:
 		void AddLockChange();
 	};
-	static_assert(sizeof(TESObjectREFR) == 0xD0);
+	static_assert(sizeof(TESObjectREFR) == 0xD8);
 }

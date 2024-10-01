@@ -192,8 +192,8 @@ namespace SFSE
 
 		constexpr void HasNoStructUse(const bool a_value) noexcept { SetOrClearBit(structureCompatibility, 1 << 0, a_value); }
 
-		// 1 << 2 is for runtime 1.8.86 and later
-		constexpr void IsLayoutDependent(const bool a_value) noexcept { SetOrClearBit(structureCompatibility, 1 << 2, a_value); }
+		// 1 << 3 is for runtime 1.14.70 and later
+		constexpr void IsLayoutDependent(const bool a_value) noexcept { SetOrClearBit(structureCompatibility, 1 << 3, a_value); }
 
 		constexpr void CompatibleVersions(std::initializer_list<REL::Version> a_versions) noexcept
 		{

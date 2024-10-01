@@ -69,7 +69,7 @@ namespace RE::BGSMod
 			std::uint8_t         unkFB;          // FB
 			std::uint8_t         unkFC;          // FC
 		};
-		static_assert(sizeof(Mod) == 0x100);
+		static_assert(sizeof(Mod) == 0x108);
 	}
 
 	namespace Template

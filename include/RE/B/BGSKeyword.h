@@ -22,5 +22,5 @@ namespace RE
 		BSFixedString                  unk50;         // 50
 		BSTEventSource<OnDestroyEvent> destroyEvent;  // 58
 	};
-	static_assert(sizeof(BGSKeyword) == 0x78);
+	static_assert(sizeof(BGSKeyword) == 0x80);
 }

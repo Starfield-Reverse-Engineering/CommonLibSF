@@ -134,5 +134,5 @@ namespace RE
 		TESWorldSpace*                                        unk380;              // 380
 		std::uint64_t                                         unk388;              // 388
 	};
-	static_assert(sizeof(TESWorldSpace) == 0x390);
+	static_assert(sizeof(TESWorldSpace) == 0x398);
 }

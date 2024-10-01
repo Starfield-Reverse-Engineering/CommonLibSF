@@ -50,5 +50,5 @@ namespace RE
 		BGSObjectPlacementDefaults placementDefaults;  // 0C8
 		std::uint32_t              unk0D8;             // 0D8
 	};
-	static_assert(sizeof(TESBoundObject) == 0xE0);
+	static_assert(sizeof(TESBoundObject) == 0xE8);
 }

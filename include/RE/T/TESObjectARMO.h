@@ -99,5 +99,5 @@ namespace RE
 		std::uint64_t                          unk368;         // 368
 		std::uint64_t                          unk370;         // 370
 	};
-	static_assert(sizeof(TESObjectARMO) == 0x378);
+	static_assert(sizeof(TESObjectARMO) == 0x380);
 }

@@ -172,5 +172,5 @@ namespace RE
 		Unk9F8                     unk9F0[SEXES::kTotal];            // 9F0
 		BGSLocalizedString         unkA10;                           // A10
 	};
-	static_assert(sizeof(TESRace) == 0xA18);
+	static_assert(sizeof(TESRace) == 0xA20);
 }

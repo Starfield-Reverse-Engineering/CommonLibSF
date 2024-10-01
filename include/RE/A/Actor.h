@@ -382,5 +382,5 @@ namespace RE
 		std::uint64_t                                    unk510;                   // 510
 		std::uint8_t                                     unk518[88];               // 518
 	};
-	static_assert(sizeof(Actor) == 0x570);
+	static_assert(sizeof(Actor) == 0x578);
 }
