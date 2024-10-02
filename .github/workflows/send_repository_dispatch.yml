@@ -19,6 +19,8 @@ jobs:
   send-repository-dispatch:
     runs-on: ubuntu-latest
 
+    if: github.repository_owner == 'Starfield-Reverse-Engineering'
+
     steps:
       - name: Repository Dispatch
         uses: peter-evans/repository-dispatch@v3
