@@ -1,0 +1,28 @@
+name: Send repository dispatch to Starfield-Reverse-Engineering/CommonLibSF-vcpkg
+
+on:
+  push:
+    branches: main
+    paths:
+      - "include/**"
+      - "src/**"
+      - "cmake/**"
+      - "CMakeLists.txt"
+      - "CMakePresets.json"
+  workflow_dispatch:
+
+concurrency:
+  group: send-repository-dispatch
+  cancel-in-progress: true
+
+jobs:
+  send-repository-dispatch:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Repository Dispatch
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.REPOSITORY_DISPATCH_TOKEN }}
+          repository: Starfield-Reverse-Engineering/CommonLibSF-vcpkg
+          event-type: update-clib-port-event
