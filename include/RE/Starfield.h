@@ -156,6 +156,7 @@
 #include "RE/B/BGSSpeechChallengeObject.h"
 #include "RE/B/BGSStar.h"
 #include "RE/B/BGSStaticCollection.h"
+#include "RE/B/BGSStoryManagerTreeForm.h"
 #include "RE/B/BGSStoryTeller.h"
 #include "RE/B/BGSSunPresetForm.h"
 #include "RE/B/BGSSurfaceBlock.h"
