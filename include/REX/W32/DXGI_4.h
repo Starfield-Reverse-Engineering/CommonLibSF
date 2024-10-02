@@ -44,7 +44,7 @@ namespace REX::W32
 namespace REX::W32
 {
 	struct __declspec(novtable, uuid("645967A4-1392-4310-A798-8053CE3E93FD"))
-		IDXGIAdapter3 : public IDXGIAdapter2
+	IDXGIAdapter3 : public IDXGIAdapter2
 	{
 		virtual HRESULT RegisterHardwareContentProtectionTeardownStatusEvent(HANDLE a_event, std::uint32_t* a_cookie) = 0;
 		virtual void    UnregisterHardwareContentProtectionTeardownStatus(std::uint32_t a_cookie) = 0;
@@ -55,20 +55,20 @@ namespace REX::W32
 	};
 
 	struct __declspec(novtable, uuid("1BC6EA02-EF36-464F-BF0C-21CA39E5168A"))
-		IDXGIFactory4 : public IDXGIFactory3
+	IDXGIFactory4 : public IDXGIFactory3
 	{
 		virtual HRESULT EnumAdapterByLuid(LUID a_luid, const IID& a_iid, void** a_adapter) = 0;
 		virtual HRESULT EnumWarpAdapter(const IID& a_iid, void** a_adapter) = 0;
 	};
 
 	struct __declspec(novtable, uuid("DC7DCA35-2196-414D-9F53-617884032A60"))
-		IDXGIOutput4 : public IDXGIOutput3
+	IDXGIOutput4 : public IDXGIOutput3
 	{
 		virtual HRESULT CheckOverlayColorSpaceSupport(DXGI_FORMAT a_format, DXGI_COLOR_SPACE_TYPE a_colorSpace, IUnknown* a_concernedDevice, std::uint32_t* a_flags) = 0;
 	};
 
 	struct __declspec(novtable, uuid("94D99BDB-F1F8-4AB0-B236-7DA0170EDAB1"))
-		IDXGISwapChain3 : public IDXGISwapChain2
+	IDXGISwapChain3 : public IDXGISwapChain2
 	{
 		virtual std::uint32_t GetCurrentBackBufferIndex(void) = 0;
 		virtual HRESULT       CheckColorSpaceSupport(DXGI_COLOR_SPACE_TYPE a_colorSpace, std::uint32_t* a_colorSpaceSupport) = 0;

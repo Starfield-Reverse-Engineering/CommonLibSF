@@ -15,7 +15,7 @@ namespace RE
 			public BSIntrusiveRefCounted
 		{
 		public:
-			virtual ~IStackCallbackFunctor(){};  // 00
+			virtual ~IStackCallbackFunctor() {};  // 00
 
 			// add
 			virtual void CallQueued() = 0;             // 01

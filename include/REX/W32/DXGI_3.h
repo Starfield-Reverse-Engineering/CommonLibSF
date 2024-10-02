@@ -70,7 +70,7 @@ namespace REX::W32
 namespace REX::W32
 {
 	struct __declspec(novtable, uuid("2633066B-4514-4C7A-8FD8-12EA98059D18"))
-		IDXGIDecodeSwapChain : public IUnknown
+	IDXGIDecodeSwapChain : public IUnknown
 	{
 		virtual HRESULT                             PresentBuffer(std::uint32_t a_bufferToPresent, std::uint32_t a_syncInterval, std::uint32_t a_flags) = 0;
 		virtual HRESULT                             SetSourceRect(const RECT* a_rect) = 0;
@@ -84,38 +84,38 @@ namespace REX::W32
 	};
 
 	struct __declspec(novtable, uuid("6007896C-3244-4AFD-BF18-A6D3BEDA5023"))
-		IDXGIDevice3 : public IDXGIDevice2
+	IDXGIDevice3 : public IDXGIDevice2
 	{
 		virtual void Trim(void) = 0;
 	};
 
 	struct __declspec(novtable, uuid("25483823-CD46-4C7D-86CA-47AA95B837BD"))
-		IDXGIFactory3 : public IDXGIFactory2
+	IDXGIFactory3 : public IDXGIFactory2
 	{
 		virtual std::uint32_t GetCreationFlags(void) = 0;
 	};
 
 	struct __declspec(novtable, uuid("41E7D1F2-A591-4F7B-A2E5-FA9C843E1C12"))
-		IDXGIFactoryMedia : public IUnknown
+	IDXGIFactoryMedia : public IUnknown
 	{
 		virtual HRESULT CreateSwapChainForCompositionSurfaceHandle(IUnknown* a_device, HANDLE a_surface, const DXGI_SWAP_CHAIN_DESC1* a_desc, IDXGIOutput* a_restrictToOutput, IDXGISwapChain1** a_swapChain) = 0;
 		virtual HRESULT CreateDecodeSwapChainForCompositionSurfaceHandle(IUnknown* a_device, HANDLE a_surface, DXGI_DECODE_SWAP_CHAIN_DESC* a_desc, IDXGIResource* a_yuvDecodeBuffers, IDXGIOutput* a_restrictToOutput, IDXGIDecodeSwapChain** a_swapChain) = 0;
 	};
 
 	struct __declspec(novtable, uuid("595E39D1-2724-4663-99B1-DA969DE28364"))
-		IDXGIOutput2 : public IDXGIOutput1
+	IDXGIOutput2 : public IDXGIOutput1
 	{
 		virtual BOOL SupportsOverlays(void) = 0;
 	};
 
 	struct __declspec(novtable, uuid("8A6BB301-7E7E-41F4-A8E0-5B32F7F99B18"))
-		IDXGIOutput3 : public IDXGIOutput2
+	IDXGIOutput3 : public IDXGIOutput2
 	{
 		virtual HRESULT CheckOverlaySupport(DXGI_FORMAT a_enumFormat, IUnknown* a_concernedDevice, std::uint32_t* a_flags) = 0;
 	};
 
 	struct __declspec(novtable, uuid("A8BE2AC4-199F-4946-B331-79599FB98DE7"))
-		IDXGISwapChain2 : public IDXGISwapChain1
+	IDXGISwapChain2 : public IDXGISwapChain1
 	{
 		virtual HRESULT SetSourceSize(std::uint32_t a_width, std::uint32_t a_height) = 0;
 		virtual HRESULT GetSourceSize(std::uint32_t* a_width, std::uint32_t* a_height) = 0;
@@ -127,7 +127,7 @@ namespace REX::W32
 	};
 
 	struct __declspec(novtable, uuid("DD95B90B-F05F-4F6A-BD65-25BFB264BD84"))
-		IDXGISwapChainMedia : public IUnknown
+	IDXGISwapChainMedia : public IUnknown
 	{
 		virtual HRESULT GetFrameStatisticsMedia(DXGI_FRAME_STATISTICS_MEDIA* a_stats) = 0;
 		virtual HRESULT SetPresentDuration(std::uint32_t a_duration) = 0;

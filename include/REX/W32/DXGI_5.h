@@ -60,26 +60,26 @@ namespace REX::W32
 namespace REX::W32
 {
 	struct __declspec(novtable, uuid("95B4F95F-D8DA-4CA4-9EE6-3B76D5968A10"))
-		IDXGIDevice4 : public IDXGIDevice3
+	IDXGIDevice4 : public IDXGIDevice3
 	{
 		virtual HRESULT OfferResources1(std::uint32_t a_numResources, IDXGIResource* const* a_resources, DXGI_OFFER_RESOURCE_PRIORITY a_priority, std::uint32_t a_flags) = 0;
 		virtual HRESULT ReclaimResources1(std::uint32_t a_numResources, IDXGIResource* const* a_resources, DXGI_RECLAIM_RESOURCE_RESULTS* a_results) = 0;
 	};
 
 	struct __declspec(novtable, uuid("7632E1F5-EE65-4DCA-87FD-84CD75F8838D"))
-		IDXGIFactory5 : public IDXGIFactory4
+	IDXGIFactory5 : public IDXGIFactory4
 	{
 		virtual HRESULT CheckFeatureSupport(DXGI_FEATURE a_feature, void* a_featureSupportData, std::uint32_t a_featureSupportDataSize) = 0;
 	};
 
 	struct __declspec(novtable, uuid("80A07424-AB52-42EB-833C-0C42FD282D98"))
-		IDXGIOutput5 : public IDXGIOutput4
+	IDXGIOutput5 : public IDXGIOutput4
 	{
 		virtual HRESULT DuplicateOutput1(IUnknown* a_device, std::uint32_t a_flags, std::uint32_t a_supportedFormatsCount, const DXGI_FORMAT* a_supportedFormats, IDXGIOutputDuplication** a_outputDuplication) = 0;
 	};
 
 	struct __declspec(novtable, uuid("3D585D5A-BD4A-489E-B1F4-3DBCB6452FFB"))
-		IDXGISwapChain4 : public IDXGISwapChain3
+	IDXGISwapChain4 : public IDXGISwapChain3
 	{
 		virtual HRESULT SetHDRMetaData(DXGI_HDR_METADATA_TYPE a_type, std::uint32_t a_size, void* a_metaData) = 0;
 	};

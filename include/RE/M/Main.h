@@ -18,9 +18,9 @@ namespace RE
 		struct SceneGraphRoot
 		{
 			// members
-			std::byte   pad00[0x78];     // 00
-			NiAVObject* worldCameraRoot; // 78 - NiNode
-			NiCamera*   worldCamera;     // 80
+			std::byte   pad00[0x78];      // 00
+			NiAVObject* worldCameraRoot;  // 78 - NiNode
+			NiCamera*   worldCamera;      // 80
 		};
 		// static_assert(offsetof(SceneGraphRoot, SceneGraphRoot::worldCamera) == 0x80); // FIXME: clang-cl chokes on this assertion
 

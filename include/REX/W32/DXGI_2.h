@@ -170,13 +170,13 @@ namespace REX::W32
 namespace REX::W32
 {
 	struct __declspec(novtable, uuid("0AA1AE0A-FA0E-4B84-8644-E05FF8E5ACB5"))
-		IDXGIAdapter2 : public IDXGIAdapter1
+	IDXGIAdapter2 : public IDXGIAdapter1
 	{
 		virtual HRESULT GetDesc2(DXGI_ADAPTER_DESC2* a_desc) = 0;
 	};
 
 	struct __declspec(novtable, uuid("05008617-FBFD-4051-A790-144884B4F6A9"))
-		IDXGIDevice2 : public IDXGIDevice1
+	IDXGIDevice2 : public IDXGIDevice1
 	{
 		virtual HRESULT OfferResources(std::uint32_t a_numResources, IDXGIResource* const* a_resources, DXGI_OFFER_RESOURCE_PRIORITY a_priority) = 0;
 		virtual HRESULT ReclaimResources(std::uint32_t a_numResources, IDXGIResource* const* a_resources, BOOL* a_discarded) = 0;
@@ -184,14 +184,14 @@ namespace REX::W32
 	};
 
 	struct __declspec(novtable, uuid("EA9DBF1A-C88E-4486-854A-98AA0138F30C"))
-		IDXGIDisplayControl : public IUnknown
+	IDXGIDisplayControl : public IUnknown
 	{
 		virtual BOOL IsStereoEnabled(void) = 0;
 		virtual void SetStereoEnabled(BOOL a_enabled) = 0;
 	};
 
 	struct __declspec(novtable, uuid("50C83A1C-E072-4C48-87B0-3630FA36A6D0"))
-		IDXGIFactory2 : public IDXGIFactory1
+	IDXGIFactory2 : public IDXGIFactory1
 	{
 		virtual BOOL    IsWindowedStereoEnabled(void) = 0;
 		virtual HRESULT CreateSwapChainForHwnd(IUnknown* a_device, HWND a_wnd, const DXGI_SWAP_CHAIN_DESC1* a_desc, const DXGI_SWAP_CHAIN_FULLSCREEN_DESC* a_fullscreenDesc, IDXGIOutput* a_restrictToOutput, IDXGISwapChain1** a_swapChain) = 0;
@@ -207,7 +207,7 @@ namespace REX::W32
 	};
 
 	struct __declspec(novtable, uuid("00CDDEA8-939B-4B83-A340-A685226666CC"))
-		IDXGIOutput1 : public IDXGIOutput
+	IDXGIOutput1 : public IDXGIOutput
 	{
 		virtual HRESULT GetDisplayModeList1(DXGI_FORMAT a_enumFormat, std::uint32_t a_flags, std::uint32_t* a_numModes, DXGI_MODE_DESC1* a_desc) = 0;
 		virtual HRESULT FindClosestMatchingMode1(const DXGI_MODE_DESC1* a_modeToMatch, DXGI_MODE_DESC1* a_closestMatch, IUnknown* a_concernedDevice) = 0;
@@ -216,7 +216,7 @@ namespace REX::W32
 	};
 
 	struct __declspec(novtable, uuid("191CFAC3-A341-470D-B26E-A864F428319C"))
-		IDXGIOutputDuplication : public IDXGIObject
+	IDXGIOutputDuplication : public IDXGIObject
 	{
 		virtual void    GetDesc(DXGI_OUTDUPL_DESC* a_desc) = 0;
 		virtual HRESULT AcquireNextFrame(std::uint32_t a_timeoutInMilliseconds, DXGI_OUTDUPL_FRAME_INFO* a_frameInfo, IDXGIResource** a_desktopResource) = 0;
@@ -229,20 +229,20 @@ namespace REX::W32
 	};
 
 	struct __declspec(novtable, uuid("30961379-4609-4A41-998E-54FE567EE0C1"))
-		IDXGIResource1 : public IDXGIResource
+	IDXGIResource1 : public IDXGIResource
 	{
 		virtual HRESULT CreateSubresourceSurface(std::uint32_t a_index, IDXGISurface2** a_surface) = 0;
 		virtual HRESULT CreateSharedHandle(const SECURITY_ATTRIBUTES* a_attributes, std::uint32_t a_access, const wchar_t* a_name, HANDLE* a_handle) = 0;
 	};
 
 	struct __declspec(novtable, uuid("ABA496DD-B617-4CB8-A866-BC44D7EB1FA2"))
-		IDXGISurface2 : public IDXGISurface1
+	IDXGISurface2 : public IDXGISurface1
 	{
 		virtual HRESULT GetResource(const IID& a_iid, void** a_parentResource, std::uint32_t* a_subresourceIndex) = 0;
 	};
 
 	struct __declspec(novtable, uuid("790A45F7-0D42-4876-983A-0A55CFE6F4AA"))
-		IDXGISwapChain1 : public IDXGISwapChain
+	IDXGISwapChain1 : public IDXGISwapChain
 	{
 		virtual HRESULT GetDesc1(DXGI_SWAP_CHAIN_DESC1* a_desc) = 0;
 		virtual HRESULT GetFullscreenDesc(DXGI_SWAP_CHAIN_FULLSCREEN_DESC* a_desc) = 0;

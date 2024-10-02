@@ -114,7 +114,7 @@ namespace RE
 			return func(this, a_arg1, a_arg2);
 		}
 
-		virtual void Unk0F(){};  // 0F
+		virtual void Unk0F() {};  // 0F
 
 		virtual std::uint64_t Unk10()  // 10
 		{

@@ -5,7 +5,7 @@
 namespace REX::W32
 {
 	struct __declspec(novtable, uuid("00000000-0000-0000-c000-000000000046"))
-		IUnknown
+	IUnknown
 	{
 		virtual HRESULT       QueryInterface(const IID& a_iid, void** a_object) = 0;
 		virtual std::uint32_t AddRef() = 0;

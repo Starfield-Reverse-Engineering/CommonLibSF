@@ -741,21 +741,21 @@ namespace REX::W32
 namespace REX::W32
 {
 	struct __declspec(novtable, uuid("8BA5FB08-5195-40e2-AC58-0D989C3A0102"))
-		ID3DBlob : public IUnknown
+	ID3DBlob : public IUnknown
 	{
 		virtual void*       GetBufferPointer(void) = 0;
 		virtual std::size_t GetBufferSize(void) = 0;
 	};
 
 	struct __declspec(novtable, uuid("A06EB39A-50DA-425B-8C31-4EECD6C270F3"))
-		ID3DDestructionNotifier : public IUnknown
+	ID3DDestructionNotifier : public IUnknown
 	{
 		virtual HRESULT RegisterDestructionCallback(PFN_DESTRUCTION_CALLBACK a_callbackFn, void* a_data, std::uint32_t* a_callbackID) = 0;
 		virtual HRESULT UnregisterDestructionCallback(std::uint32_t a_callbackID) = 0;
 	};
 
 	struct __declspec(novtable)  // uuid(?)
-		ID3DInclude : public IUnknown
+	ID3DInclude : public IUnknown
 	{
 		virtual HRESULT Open(D3D_INCLUDE_TYPE a_includeType, const char* a_fileName, const void* a_parentData, const void** a_data, std::uint32_t* a_bytes) = 0;
 		virtual HRESULT Close(const void* a_data) = 0;

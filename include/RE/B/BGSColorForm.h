@@ -29,7 +29,7 @@ namespace RE
 		{
 			std::uint32_t color;
 			float         remappingIndex;
-		};                                             // 40
+		};  // 40
 		TESCondition                      conditions;  // 48
 		REX::EnumSet<Flag, std::uint32_t> flags;       // 58
 	};

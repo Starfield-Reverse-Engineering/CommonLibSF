@@ -398,7 +398,7 @@ namespace REX::W32
 namespace REX::W32
 {
 	struct __declspec(novtable, uuid("aec22fb8-76f3-4639-9be0-28eb43a67a2e"))
-		IDXGIObject : public IUnknown
+	IDXGIObject : public IUnknown
 	{
 		virtual HRESULT SetPrivateData(const GUID& a_iid, std::uint32_t a_dataSize, const void* a_data) = 0;
 		virtual HRESULT SetPrivateDataInterface(const GUID& a_iid, const IUnknown* a_unknown) = 0;
@@ -407,13 +407,13 @@ namespace REX::W32
 	};
 
 	struct __declspec(novtable, uuid("3d3e0379-f9de-4d58-bb6c-18d62992f1a6"))
-		IDXGIDeviceSubObject : public IDXGIObject
+	IDXGIDeviceSubObject : public IDXGIObject
 	{
 		virtual HRESULT GetDevice(const GUID& a_iid, void** a_device) = 0;
 	};
 
 	struct __declspec(novtable, uuid("035f3ab4-482e-4e50-b41f-8a7f8bd8960b"))
-		IDXGIResource : public IDXGIDeviceSubObject
+	IDXGIResource : public IDXGIDeviceSubObject
 	{
 		virtual HRESULT GetSharedHandle(HANDLE* a_sharedHandle) = 0;
 		virtual HRESULT GetUsage(DXGI_USAGE* a_usage) = 0;
@@ -422,14 +422,14 @@ namespace REX::W32
 	};
 
 	struct __declspec(novtable, uuid("9d8e1289-d7b3-465f-8126-250e349af85d"))
-		IDXGIKeyedMutex : public IDXGIDeviceSubObject
+	IDXGIKeyedMutex : public IDXGIDeviceSubObject
 	{
 		virtual HRESULT AcquireSync(std::uint64_t a_key, std::uint32_t a_milliseconds) = 0;
 		virtual HRESULT ReleaseSync(std::uint64_t a_key) = 0;
 	};
 
 	struct __declspec(novtable, uuid("cafcb56c-6ac3-4889-bf47-9e23bbd260ec"))
-		IDXGISurface : public IDXGIDeviceSubObject
+	IDXGISurface : public IDXGIDeviceSubObject
 	{
 		virtual HRESULT GetDesc(DXGI_SURFACE_DESC* a_desc) = 0;
 		virtual HRESULT Map(DXGI_MAPPED_RECT* a_lockedRect, std::uint32_t a_mapFlags) = 0;
@@ -437,14 +437,14 @@ namespace REX::W32
 	};
 
 	struct __declspec(novtable, uuid("4AE63092-6327-4c1b-80AE-BFE12EA32B86"))
-		IDXGISurface1 : public IDXGISurface
+	IDXGISurface1 : public IDXGISurface
 	{
 		virtual HRESULT GetDC(BOOL a_discard, HDC* a_hdc) = 0;
 		virtual HRESULT ReleaseDC(RECT* a_dirtyRect) = 0;
 	};
 
 	struct __declspec(novtable, uuid("2411e7e1-12ac-4ccf-bd14-9798e8534dc0"))
-		IDXGIAdapter : public IDXGIObject
+	IDXGIAdapter : public IDXGIObject
 	{
 		virtual HRESULT EnumOutputs(std::uint32_t a_outputSize, IDXGIOutput** a_output) = 0;
 		virtual HRESULT GetDesc(DXGI_ADAPTER_DESC* a_desc) = 0;
@@ -452,13 +452,13 @@ namespace REX::W32
 	};
 
 	struct __declspec(novtable, uuid("29038f61-3839-4626-91fd-086879011a05"))
-		IDXGIAdapter1 : public IDXGIAdapter
+	IDXGIAdapter1 : public IDXGIAdapter
 	{
 		virtual HRESULT GetDesc1(DXGI_ADAPTER_DESC1* a_desc) = 0;
 	};
 
 	struct __declspec(novtable, uuid("ae02eedb-c735-4690-8d52-5a8dc20213aa"))
-		IDXGIOutput : public IDXGIObject
+	IDXGIOutput : public IDXGIObject
 	{
 		virtual HRESULT GetDesc(DXGI_OUTPUT_DESC* a_desc) = 0;
 		virtual HRESULT GetDisplayModeList(DXGI_FORMAT a_enumFormat, std::uint32_t a_flags, std::uint32_t* a_numModes, DXGI_MODE_DESC* a_desc) = 0;
@@ -475,7 +475,7 @@ namespace REX::W32
 	};
 
 	struct __declspec(novtable, uuid("310d36a0-d2e7-4c0a-aa04-6a9d23b8886a"))
-		IDXGISwapChain : public IDXGIDeviceSubObject
+	IDXGISwapChain : public IDXGIDeviceSubObject
 	{
 		virtual HRESULT Present(std::uint32_t a_syncInterval, std::uint32_t a_flags) = 0;
 		virtual HRESULT GetBuffer(std::uint32_t a_buffer, const GUID& a_iid, void** a_surface) = 0;
@@ -490,7 +490,7 @@ namespace REX::W32
 	};
 
 	struct __declspec(novtable, uuid("7b7166ec-21c7-44ae-b21a-c9ae321ae369"))
-		IDXGIFactory : public IDXGIObject
+	IDXGIFactory : public IDXGIObject
 	{
 		virtual HRESULT EnumAdapters(std::uint32_t a_adapterSize, IDXGIAdapter** a_adapter) = 0;
 		virtual HRESULT MakeWindowAssociation(HWND a_windowHandle, std::uint32_t a_flags) = 0;
@@ -500,14 +500,14 @@ namespace REX::W32
 	};
 
 	struct __declspec(novtable, uuid("770aae78-f26f-4dba-a829-253c83d1b387"))
-		IDXGIFactory1 : public IDXGIFactory
+	IDXGIFactory1 : public IDXGIFactory
 	{
 		virtual HRESULT EnumAdapters1(std::uint32_t a_adapterSize, IDXGIAdapter1** a_adapter) = 0;
 		virtual BOOL    IsCurrent(void) = 0;
 	};
 
 	struct __declspec(novtable, uuid("54ec77fa-1377-44e6-8c32-88fd5f44c84c"))
-		IDXGIDevice : public IDXGIObject
+	IDXGIDevice : public IDXGIObject
 	{
 		virtual HRESULT GetAdapter(IDXGIAdapter** a_adapter) = 0;
 		virtual HRESULT CreateSurface(const DXGI_SURFACE_DESC* a_desc, std::uint32_t a_numSurfaces, DXGI_USAGE a_usage, const DXGI_SHARED_RESOURCE* a_sharedResource, IDXGISurface** a_surface) = 0;
@@ -517,7 +517,7 @@ namespace REX::W32
 	};
 
 	struct __declspec(novtable, uuid("77db970f-6276-48ba-ba28-070143b4392c"))
-		IDXGIDevice1 : public IDXGIDevice
+	IDXGIDevice1 : public IDXGIDevice
 	{
 		virtual HRESULT SetMaximumFrameLatency(std::uint32_t a_maxLatency) = 0;
 		virtual HRESULT GetMaximumFrameLatency(std::uint32_t* a_maxLatency) = 0;

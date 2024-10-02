@@ -79,26 +79,26 @@ namespace REX::W32
 namespace REX::W32
 {
 	struct __declspec(novtable, uuid("3C8D99D1-4FBF-4181-A82C-AF66BF7BD24E"))
-		IDXGIAdapter4 : public IDXGIAdapter3
+	IDXGIAdapter4 : public IDXGIAdapter3
 	{
 		virtual HRESULT GetDesc3(DXGI_ADAPTER_DESC3* a_desc) = 0;
 	};
 
 	struct __declspec(novtable, uuid("C1B6694F-FF09-44A9-B03C-77900A0A1D17"))
-		IDXGIFactory6 : public IDXGIFactory5
+	IDXGIFactory6 : public IDXGIFactory5
 	{
 		virtual HRESULT EnumAdapterByGpuPreference(std::uint32_t a_adapterFlags, DXGI_GPU_PREFERENCE a_gpuPreference, const IID& a_iid, void** a_adapter) = 0;
 	};
 
 	struct __declspec(novtable, uuid("A4966EED-76DB-44DA-84C1-EE9A7AFB20A8"))
-		IDXGIFactory7 : public IDXGIFactory6
+	IDXGIFactory7 : public IDXGIFactory6
 	{
 		virtual HRESULT RegisterAdaptersChangedEvent(HANDLE a_event, std::uint32_t* a_cookie) = 0;
 		virtual HRESULT UnregisterAdaptersChangedEvent(std::uint32_t a_cookie) = 0;
 	};
 
 	struct __declspec(novtable, uuid("068346E8-AAEC-4B84-ADD7-137F513F77A1"))
-		IDXGIOutput6 : public IDXGIOutput5
+	IDXGIOutput6 : public IDXGIOutput5
 	{
 		virtual HRESULT GetDesc1(DXGI_OUTPUT_DESC1* a_desc) = 0;
 		virtual HRESULT CheckHardwareCompositionSupport(std::uint32_t* a_flags) = 0;

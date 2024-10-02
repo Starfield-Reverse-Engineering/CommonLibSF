@@ -429,7 +429,7 @@ namespace REX::W32
 namespace REX::W32
 {
 	struct __declspec(novtable, uuid("BF798030-483A-4DA2-AA99-5D64ED369700"))
-		IDirectInput8A : public IUnknown
+	IDirectInput8A : public IUnknown
 	{
 		virtual HRESULT CreateDevice(const GUID&, IDirectInputDevice8A**, IUnknown*) noexcept = 0;
 		virtual HRESULT EnumDevices(std::uint32_t, LPDIENUMDEVICESCALLBACKA, void*, std::uint32_t) noexcept = 0;
@@ -442,7 +442,7 @@ namespace REX::W32
 	};
 
 	struct __declspec(novtable, uuid("54D41080-DC15-4833-A41B-748F73A38179"))
-		IDirectInputDevice8A : public IUnknown
+	IDirectInputDevice8A : public IUnknown
 	{
 		virtual HRESULT GetCapabilities(DIDEVCAPS*) noexcept = 0;
 		virtual HRESULT EnumObjects(LPDIENUMDEVICEOBJECTSCALLBACKA, void*, std::uint32_t) noexcept = 0;
@@ -476,7 +476,7 @@ namespace REX::W32
 	};
 
 	struct __declspec(novtable, uuid("E7E1F7C0-88D2-11D0-9AD0-00A0C9A06E35"))
-		IDirectInputEffect : public IUnknown
+	IDirectInputEffect : public IUnknown
 	{
 		virtual HRESULT Initialize(HINSTANCE, std::uint32_t, const GUID&) noexcept = 0;
 		virtual HRESULT GetEffectGuid(GUID*) noexcept = 0;

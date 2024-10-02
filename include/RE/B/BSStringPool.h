@@ -61,7 +61,7 @@ namespace RE
 			{
 				std::uint32_t _length;  // Number of bytes (even for wchar_t).
 				Entry*        _right;
-			};                                 // 08
+			};  // 08
 			volatile std::uint32_t _refCount;  // 10
 			std::uint8_t           _flags;     // 14
 		};
