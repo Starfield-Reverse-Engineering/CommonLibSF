@@ -27,7 +27,9 @@ jobs:
         run: "& ${{ github.workspace }}/.github/make-directives.ps1 ${{ github.workspace }}"
 
       - name: Run clang-format
-        uses: jayllyz/clang-format-action@v1
+        uses: DoozyX/clang-format-lint-action@v0.18.1
+        with:
+          inplace: True
 
       - name: Add & Commit
         id: registry
