@@ -22,7 +22,7 @@
 ### Using the CommonLibSF plugin templates
 
 - [CLibSFPluginTemplate](https://github.com/Starfield-Reverse-Engineering/CLibSFPluginTemplate)
-  - Uses **CMake**. Consumes CommonLibSF as a git submodule or a local fork.
+  - Uses **CMake**. Consumes CommonLibSF as [vcpkg port](https://github.com/Starfield-Reverse-Engineering/CommonLibSF-vcpkg).
 - [commonlibsf-template-xmake](https://github.com/Starfield-Reverse-Engineering/commonlibsf-template-xmake)
   - Uses **XMake**. Consumes CommonLibSF as an [xrepo package](https://github.com/Starfield-Reverse-Engineering/commonlibsf-xrepo), a git submodule, or a local fork.
 
