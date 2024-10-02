@@ -1,0 +1,37 @@
+name: Update vcpkg baselines
+
+on:
+  schedule:
+    - cron: 0 */6 * * *
+  repository_dispatch:
+    types: [update-baselines-event]
+  workflow_dispatch:
+
+permissions: write-all
+
+concurrency:
+  group: update-vcpkg-baselines
+  cancel-in-progress: true
+
+jobs:
+  update-vcpkg-baselines:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.EDIT_WORKFLOW_TOKEN }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.12
+
+      - run: python .github/update_vcpkg_baselines.py
+
+      - name: Add & Commit
+        uses: EndBug/add-and-commit@v9
+        with:
+          default_author: github_actions
+          message: "ci: update vcpkg baselines"

@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.26)
+cmake_minimum_required(VERSION 3.30)
 message("Using toolchain file ${CMAKE_TOOLCHAIN_FILE}.")
 
 # singleton target across multiple projects
@@ -7,7 +7,7 @@ if(TARGET CommonLibSF)
 endif()
 
 # options if not defined
-option(SFSE_SUPPORT_XBYAK "Enables trampoline support for Xbyak." OFF)
+option(SFSE_SUPPORT_XBYAK "Enables trampoline support for xbyak." OFF)
 option(SFSE_BUILD_TESTS "Builds the tests." OFF)
 
 # info
@@ -19,11 +19,7 @@ project(
 # standards & flags
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_INTERPROCEDURAL_OPTIMIZATION ON)
-set(CMAKE_INTERPROCEDURAL_OPTIMIZATION_DEBUG OFF)
 set(CMAKE_OPTIMIZE_DEPENDENCIES ON)
-
-set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 
 include(GNUInstallDirs)
 
@@ -35,10 +31,14 @@ endif()
 # dependencies
 find_package(spdlog CONFIG REQUIRED)
 
-file(GLOB_RECURSE SOURCES CONFIGURE_DEPENDS
-  "${CMAKE_CURRENT_SOURCE_DIR}/include/*"
-  "${CMAKE_CURRENT_SOURCE_DIR}/src/*"
+file(
+  GLOB_RECURSE
+  SOURCES
+  CONFIGURE_DEPENDS
+  ${CMAKE_CURRENT_SOURCE_DIR}/include/*
+  ${CMAKE_CURRENT_SOURCE_DIR}/src/*
 )
+list(REMOVE_ITEM SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/include/SFSE/Impl/PCH.h)
 
 source_group(
   TREE ${CMAKE_CURRENT_SOURCE_DIR}
@@ -46,143 +46,109 @@ source_group(
 )
 
 function(configure_target TARGET_NAME)
+  if(SFSE_SUPPORT_XBYAK)
+    find_package(xbyak CONFIG REQUIRED)
+  endif()
+
   target_compile_definitions(
     ${TARGET_NAME}
     PUBLIC
     WINVER=0x0A00 # windows 10, minimum supported version by starfield
     _WIN32_WINNT=0x0A00
-    "$<$<BOOL:${SFSE_SUPPORT_XBYAK}>:SFSE_SUPPORT_XBYAK=1>"
+    $<$<BOOL:${SFSE_SUPPORT_XBYAK}>:SFSE_SUPPORT_XBYAK=1>
+    WIN32_LEAN_AND_MEAN
+    NOMINMAX
+    _ITERATOR_DEBUG_LEVEL=0
   )
 
   # FIXME: https://gitlab.kitware.com/cmake/cmake/-/issues/24922
   set_property(
     TARGET ${TARGET_NAME}
     PROPERTY VS_USER_PROPS
-    "${CMAKE_CURRENT_SOURCE_DIR}/cmake/build_stl_modules.props"
+    ${CMAKE_CURRENT_SOURCE_DIR}/cmake/build_stl_modules.props
   )
 
-  if(MSVC)
-    target_compile_options(
-      ${TARGET_NAME}
-      PUBLIC
-      /bigobj # support large object file format
-      /utf-8 # assume UTF-8 sources even without a BOM
+  target_compile_options(
+    ${TARGET_NAME}
+    PUBLIC
+    /bigobj # support large object file format
+    /wd4005 # macro redefinition
+    /wd4068 # unknown pragma
+    /wd4200 # nonstandard extension used: zero-sized array in struct/union
+    /wd4201 # nonstandard extension used: nameless struct/union
+  )
 
-      # warnings -> errors
-      /we4715 # 'function' : not all control paths return a value
-
-      # disable warnings
-      /wd4005 # macro redefinition
-      /wd4061 # enumerator 'identifier' in switch of enum 'enumeration' is not explicitly handled by a case label
-      /wd4068 # unknown pragma
-      /wd4200 # nonstandard extension used : zero-sized array in struct/union
-      /wd4201 # nonstandard extension used : nameless struct/union
-      /wd4265 # 'type': class has virtual functions, but its non-trivial destructor is not virtual; instances of this class may not be destructed correctly
-      /wd4266 # 'function' : no override available for virtual member function from base 'type'; function is hidden
-      /wd4267 # 'var' : conversion from 'size_t' to 'type', possible loss of data
-      /wd4371 # 'classname': layout of class may have changed from a previous version of the compiler due to better packing of member 'member'
-      /wd4514 # 'function' : unreferenced inline function has been removed
-      /wd4582 # 'type': constructor is not implicitly called
-      /wd4583 # 'type': destructor is not implicitly called
-      /wd4623 # 'derived class' : default constructor was implicitly defined as deleted because a base class default constructor is inaccessible or deleted
-      /wd4625 # 'derived class' : copy constructor was implicitly defined as deleted because a base class copy constructor is inaccessible or deleted
-      /wd4626 # 'derived class' : assignment operator was implicitly defined as deleted because a base class assignment operator is inaccessible or deleted
-      /wd4710 # 'function' : function not inlined
-      /wd4711 # function 'function' selected for inline expansion
-      /wd4820 # 'bytes' bytes padding added after construct 'member_name'
-      /wd4996
-      /wd5026 # 'type': move constructor was implicitly defined as deleted
-      /wd5027 # 'type': move assignment operator was implicitly defined as deleted
-      /wd5045 # Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
-      /wd5053 # support for 'explicit(<expr>)' in C++17 and earlier is a vendor extension
-      /wd5204 # 'type-name': class has virtual functions, but its trivial destructor is not virtual; instances of objects derived from this class may not be destructed correctly
-      /wd5220 # 'member': a non-static data member with a volatile qualified type no longer implies that compiler generated copy / move constructors and copy / move assignment operators are not trivial
-    )
-  endif()
-
-  if(CMAKE_CXX_COMPILER_FRONTEND_VARIANT STREQUAL "MSVC" AND CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
-    set(CLIBSF_COMPILEFLAGS_RELEASE /fp:fast /GR- /Gw /O2)
+  if(CMAKE_CXX_COMPILER_FRONTEND_VARIANT STREQUAL MSVC AND CMAKE_CXX_COMPILER_ID STREQUAL Clang)
+    set(CLIBSF_COMPILEFLAGS_RELEASE /Ob3 /GR- /Gw /Qvec -flto -fsplit-lto-unit -fvirtual-function-elimination -fwhole-program-vtables)
 
     target_compile_options(
       ${TARGET_NAME} PRIVATE
-      /D_ITERATOR_DEBUG_LEVEL=0
-      /cgthreads8
-      /diagnostics:caret
-      /EHsc
-      /fp:contract
-      /fp:except-
-      /guard:cf-
-      /permissive-
-      /Zc:__cplusplus
-      /Zc:rvalueCast
-      /Zc:ternary
-      /external:W0
+      /Zc:alignedNew
+      /Zc:char8_t
+      /Zc:sizedDealloc
+      /Zc:strictStrings
+      /Zc:threadSafeInit
+      -fansi-escape-codes
+      -fcolor-diagnostics
+      -fcomplete-member-pointers
+      -fexperimental-library
+      -fforce-emit-vtables
+      -fms-compatibility
+      -fms-extensions
+      -fstrict-aliasing
       -Wno-overloaded-virtual
       -Wno-delete-non-abstract-non-virtual-dtor
       -Wno-inconsistent-missing-override
       -Wno-reinterpret-base-class
       -Wno-return-type
       -Wno-invalid-offsetof
-      -Wno-switch)
-
-    target_compile_options(${TARGET_NAME} PRIVATE $<$<CONFIG:Release>:${CLIBSF_COMPILEFLAGS_RELEASE}>)
-  elseif(CMAKE_CXX_COMPILER_FRONTEND_VARIANT STREQUAL "MSVC" AND CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
-    set(CLIBSF_COMPILEFLAGS_RELEASE /fp:fast /GR- /Gw /O2 /Ob3 /Qpar)
+      -Wno-switch
+      -Wno-unused-command-line-argument
+      $<$<CONFIG:Release>:${CLIBSF_COMPILEFLAGS_RELEASE}>
+    )
+  elseif(CMAKE_CXX_COMPILER_FRONTEND_VARIANT STREQUAL MSVC AND CMAKE_CXX_COMPILER_ID STREQUAL MSVC)
+    set(CLIBSF_COMPILEFLAGS_RELEASE /fp:fast /Ob3 /GL /GR- /Gw /Qpar)
 
     target_compile_options(
-      ${TARGET_NAME} PRIVATE
-      /D_ITERATOR_DEBUG_LEVEL=0
+      ${TARGET_NAME}
+      PRIVATE
       /cgthreads8
       /diagnostics:caret
-      /EHsc
-      /fp:contract
-      /fp:except-
-      /guard:cf-
+      /jumptablerdata
       /MP
-      /permissive-
       /W4
       /Zc:__cplusplus
       /Zc:enumTypes
-      /Zc:lambda
-      /Zc:preprocessor
-      /Zc:referenceBinding
-      /Zc:rvalueCast
+      /Zc:inline
       /Zc:templateScope
-      /Zc:ternary
-      /external:anglebrackets
-      /external:W0)
-
-    target_compile_options(${TARGET_NAME} PRIVATE $<$<CONFIG:Release>:${CLIBSF_COMPILEFLAGS_RELEASE}>)
+      $<$<CONFIG:Release>:${CLIBSF_COMPILEFLAGS_RELEASE}>
+    )
   endif()
 
   target_include_directories(
     ${TARGET_NAME}
     PUBLIC
-    "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>"
-    "$<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>"
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+    $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>
   )
-
-  target_link_libraries(
-    ${TARGET_NAME}
-    PUBLIC
-    advapi32.lib
-    bcrypt.lib
-    dbghelp.lib
-    dxgi.lib
-    ole32.lib
-    spdlog::spdlog
-    version.lib
-    ws2_32.lib
-  )
-
-  if(SFSE_SUPPORT_XBYAK)
-    find_package(xbyak CONFIG REQUIRED)
-  endif()
 
   target_precompile_headers(
     ${TARGET_NAME}
     PRIVATE
     include/SFSE/Impl/PCH.h
+  )
+
+  target_link_libraries(
+    ${TARGET_NAME}
+    PUBLIC
+    spdlog::spdlog
+    advapi32.lib
+    bcrypt.lib
+    dbghelp.lib
+    dxgi.lib
+    ole32.lib
+    version.lib
+    ws2_32.lib
   )
 endfunction()
 
