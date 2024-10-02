@@ -9,10 +9,7 @@ namespace RE
 	class Actor;
 	class TESObjectCELL;
 	class TESObjectREFR;
-}
 
-namespace RE::Events
-{
 	struct TESLoadGameEvent
 	{
 		[[nodiscard]] static BSTEventSource<TESLoadGameEvent>* GetEventSource()
@@ -105,7 +102,7 @@ namespace RE::Events
 		// members
 		NiPointer<TESObjectREFR> actor;
 		TESFormID                baseObject;
-		std::uint32_t            origRef;
+		TESFormID                origRef;
 		std::uint16_t            uniqueID;
 		bool                     equipped;
 	};
@@ -122,6 +119,7 @@ namespace RE::Events
 				return func();
 			}
 
+			// members
 			NiPointer<TESObjectREFR> ref;
 		};
 
@@ -134,6 +132,7 @@ namespace RE::Events
 				return func();
 			}
 
+			// members
 			NiPointer<TESObjectREFR> ref;
 		};
 	};
@@ -180,6 +179,7 @@ namespace RE::Events
 			return func();
 		}
 
+		// members
 		NiPointer<TESObjectREFR> source;
 		NiPointer<TESObjectREFR> target;
 		std::uint32_t            state;
@@ -333,7 +333,7 @@ namespace RE::Events
 		}
 	};
 
-	struct BGSPlanet
+	namespace BGSPlanet
 	{
 		struct PlayerKnowledgeFlagSetEvent
 		{
@@ -2880,7 +2880,7 @@ namespace RE::Events
 		}
 	};
 
-	struct ModelReferenceEffectEvents
+	namespace ModelReferenceEffectEvents
 	{
 		struct ReferenceEffectFinished
 		{
@@ -3132,7 +3132,7 @@ namespace RE::Events
 		}
 	};
 
-	struct Spaceship
+	namespace Spaceship
 	{
 		struct TakeOffEvent
 		{
@@ -3567,7 +3567,7 @@ namespace RE::Events
 		[[nodiscard]] static BSTEventSource<TESCellFullyLoadedEvent>* GetEventSource()
 		{
 			using func_t = decltype(&TESCellFullyLoadedEvent::GetEventSource);
-			static REL::Relocation<func_t> func{ REL::ID(107143) };
+			static REL::Relocation<func_t> func{ ID::TESCellFullyLoadedEvent::GetEventSource };
 			return func();
 		}
 
@@ -3580,17 +3580,37 @@ namespace RE::Events
 		[[nodiscard]] static BSTEventSource<TESContainerChangedEvent>* GetEventSource()
 		{
 			using func_t = decltype(&TESContainerChangedEvent::GetEventSource);
-			static REL::Relocation<func_t> func{ REL::ID(107155) };
+			static REL::Relocation<func_t> func{ ID::TESContainerChangedEvent::GetEventSource };
 			return func();
 		}
 
 		// members
-		TESFormID     source;     // 00
-		TESFormID     target;     // 04
-		TESFormID     item;       // 08
-		std::uint32_t itemCount;  // 0C
-		std::uint32_t itemRef;    // 10
+		TESFormID     source;      // 00
+		TESFormID     target;      // 04
+		TESFormID     baseObject;  // 08
+		std::uint32_t itemCount;   // 0C
+		TESFormID     itemRef;     // 10
+		std::uint16_t uniqueID;    // 14
+		std::uint64_t unk18;       // 18
+		std::uint32_t unk20;       // 20
 	};
+	static_assert(sizeof(TESContainerChangedEvent) == 0x28);
+
+	struct TESDeathEvent
+	{
+		[[nodiscard]] static BSTEventSource<TESDeathEvent>* GetEventSource()
+		{
+			using func_t = decltype(&TESDeathEvent::GetEventSource);
+			static REL::Relocation<func_t> func{ ID::TESDeathEvent::GetEventSource };
+			return func();
+		}
+
+		// members
+		NiPointer<TESObjectREFR> actorDying;   // 00
+		NiPointer<TESObjectREFR> actorKiller;  // 08
+		bool                     dead;         // 10
+	};
+	static_assert(sizeof(TESDeathEvent) == 0x18);
 
 	struct TESFormDeleteEvent
 	{
@@ -3615,8 +3635,8 @@ namespace RE::Events
 		}
 
 		// members
-		std::uint32_t oldFormID;
-		std::uint32_t newFormID;
+		TESFormID oldFormID;
+		TESFormID newFormID;
 	};
 
 	struct TESFurnitureEvent
@@ -3654,14 +3674,17 @@ namespace RE::Events
 		[[nodiscard]] static BSTEventSource<TESObjectLoadedEvent>* GetEventSource()
 		{
 			using func_t = decltype(&TESObjectLoadedEvent::GetEventSource);
-			static REL::Relocation<func_t> func{ REL::ID(107177) };
+			static REL::Relocation<func_t> func{ ID::TESObjectLoadedEvent::GetEventSource };
 			return func();
 		}
 
 		// members
-		TESFormID formID;
-		bool      loaded;
+		TESFormID     formID;  // 00
+		bool          loaded;  // 04
+		std::uint8_t  pad05;   // 05
+		std::uint16_t pad06;   // 06
 	};
+	static_assert(sizeof(TESObjectLoadedEvent) == 0x8);
 
 	struct TESPickNewIdleEvent
 	{
