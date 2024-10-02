@@ -27,7 +27,7 @@ jobs:
         run: "& ${{ github.workspace }}/.github/make-directives.ps1 ${{ github.workspace }}"
 
       - name: Run clang-format
-        uses: DoozyX/clang-format-lint-action@v0.18.1
+        uses: DoozyX/clang-format-lint-action@v0.18
         with:
           inplace: True
 
