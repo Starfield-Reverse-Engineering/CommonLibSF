@@ -6,14 +6,18 @@
   "homepage": "https://github.com/Starfield-Reverse-Engineering/CommonLibSF",
   "license": "GPL-3.0-or-later",
   "builtin-baseline": "f0f811770e0538fcb295a1750c0a5e0de5131d29",
-  "dependencies": ["spdlog"],
+  "dependencies": [
+    "spdlog"
+  ],
   "vcpkg-configuration": {
     "registries": [
       {
         "kind": "git",
         "baseline": "e376718dc96bd2a6431cc8f7b05eca555d51a123",
         "repository": "https://github.com/ThirdEyeSqueegee/vcpkg-ports",
-        "packages": ["spdlog"]
+        "packages": [
+          "spdlog"
+        ]
       }
     ]
   }
