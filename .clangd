@@ -1,0 +1,19 @@
+CompileFlags:
+  Compiler: clang-cl
+
+Index:
+  StandardLibrary: Yes
+
+Diagnostics:
+  ClangTidy:
+    FastCheckFilter: Loose
+
+Hover:
+  ShowAKA: Yes
+
+---
+If:
+  PathMatch: ../CommonLibSSE-NG
+
+Index:
+  Background: Skip

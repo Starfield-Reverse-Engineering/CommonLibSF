@@ -2,32 +2,22 @@
   "version": 6,
   "cmakeMinimumRequired": {
     "major": 3,
-    "minor": 26,
-    "patch": 0
+    "minor": 30
   },
   "configurePresets": [
     {
-      "name": "common",
-      "hidden": true,
-      "cacheVariables": {
-        "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreaded$<$<CONFIG:Debug>:Debug>DLL"
-      }
-    },
-    {
       "name": "packaging-vcpkg",
       "hidden": true,
-      "cacheVariables": {
-        "CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
-        "VCPKG_TARGET_TRIPLET": "x64-windows-static-md",
-        "VCPKG_HOST_TRIPLET": "x64-windows-static-md"
-      }
+      "toolchainFile": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake"
     },
     {
       "name": "buildtype-debug-msvc",
       "hidden": true,
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Debug",
-        "CMAKE_CONFIGURATION_TYPES": "Debug"
+        "CMAKE_CONFIGURATION_TYPES": "Debug",
+        "VCPKG_TARGET_TRIPLET": "x64-windows-static-md",
+        "VCPKG_HOST_TRIPLET": "x64-windows-static-md"
       }
     },
     {
@@ -35,7 +25,9 @@
       "hidden": true,
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Release",
-        "CMAKE_CONFIGURATION_TYPES": "Release"
+        "CMAKE_CONFIGURATION_TYPES": "Release",
+        "VCPKG_TARGET_TRIPLET": "x64-windows-static-md-release",
+        "VCPKG_HOST_TRIPLET": "x64-windows-static-md-release"
       }
     },
     {
@@ -43,7 +35,9 @@
       "hidden": true,
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Debug",
-        "CMAKE_CONFIGURATION_TYPES": "Debug"
+        "CMAKE_CONFIGURATION_TYPES": "Debug",
+        "VCPKG_TARGET_TRIPLET": "x64-windows-static-md",
+        "VCPKG_HOST_TRIPLET": "x64-windows-static-md"
       }
     },
     {
@@ -51,7 +45,9 @@
       "hidden": true,
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Release",
-        "CMAKE_CONFIGURATION_TYPES": "Release"
+        "CMAKE_CONFIGURATION_TYPES": "Release",
+        "VCPKG_TARGET_TRIPLET": "x64-windows-static-md-release",
+        "VCPKG_HOST_TRIPLET": "x64-windows-static-md-release"
       }
     },
     {
@@ -100,7 +96,6 @@
     {
       "name": "build-debug-msvc-msvc",
       "inherits": [
-        "common",
         "packaging-vcpkg",
         "buildtype-debug-msvc",
         "generator-msvc",
@@ -111,7 +106,6 @@
     {
       "name": "build-debug-msvc-ninja",
       "inherits": [
-        "common",
         "packaging-vcpkg",
         "buildtype-debug-msvc",
         "generator-ninja",
@@ -123,7 +117,6 @@
       "name": "build-debug-clang-cl-msvc",
       "toolset": "ClangCL",
       "inherits": [
-        "common",
         "packaging-vcpkg",
         "buildtype-debug-clang-cl",
         "generator-msvc",
@@ -134,7 +127,6 @@
     {
       "name": "build-debug-clang-cl-ninja",
       "inherits": [
-        "common",
         "packaging-vcpkg",
         "buildtype-debug-clang-cl",
         "generator-ninja",
@@ -145,7 +137,6 @@
     {
       "name": "build-release-msvc-msvc",
       "inherits": [
-        "common",
         "packaging-vcpkg",
         "buildtype-release-msvc",
         "generator-msvc",
@@ -156,7 +147,6 @@
     {
       "name": "build-release-msvc-ninja",
       "inherits": [
-        "common",
         "packaging-vcpkg",
         "buildtype-release-msvc",
         "generator-ninja",
@@ -168,7 +158,6 @@
       "name": "build-release-clang-cl-msvc",
       "toolset": "ClangCL",
       "inherits": [
-        "common",
         "packaging-vcpkg",
         "buildtype-release-clang-cl",
         "generator-msvc",
@@ -179,7 +168,6 @@
     {
       "name": "build-release-clang-cl-ninja",
       "inherits": [
-        "common",
         "packaging-vcpkg",
         "buildtype-release-clang-cl",
         "generator-ninja",

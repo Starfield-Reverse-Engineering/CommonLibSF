@@ -1,19 +1,18 @@
 {
   "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg-tool/main/docs/vcpkg.schema.json",
   "name": "commonlibsf",
-  "version-date": "2024-07-13",
+  "version-string": "latest",
   "description": "A collaborative reverse-engineered library for Starfield.",
   "homepage": "https://github.com/Starfield-Reverse-Engineering/CommonLibSF",
   "license": "GPL-3.0-or-later",
-  "supports": "windows & x64",
-  "builtin-baseline": "7a57b42f959ad138a5283477fe2e6c97a7cb852f",
-  "dependencies": ["spdlog", "xbyak"],
+  "builtin-baseline": "f0f811770e0538fcb295a1750c0a5e0de5131d29",
+  "dependencies": ["spdlog"],
   "vcpkg-configuration": {
     "registries": [
       {
         "kind": "git",
+        "baseline": "e376718dc96bd2a6431cc8f7b05eca555d51a123",
         "repository": "https://github.com/ThirdEyeSqueegee/vcpkg-ports",
-        "baseline": "4464251a08810053868f982a09db1f8cec4d9ee0",
         "packages": ["spdlog"]
       }
     ]
