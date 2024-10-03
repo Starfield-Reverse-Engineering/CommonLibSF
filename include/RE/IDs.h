@@ -401,6 +401,11 @@ namespace RE::ID
 		inline constexpr REL::ID IsSpaceshipLanded{ 173880 };
 	}
 
+	namespace TESQuest
+	{
+		inline constexpr REL::ID IsStageDone{ 112585 };
+	}
+
 	namespace TESWorldSpace
 	{
 		inline constexpr REL::ID GetLocationFromCoordinates{ 107914 };
