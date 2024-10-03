@@ -4,6 +4,7 @@ namespace RE::ID
 {
 	namespace Actor
 	{
+		inline constexpr REL::ID EvaluatePackage{ 150640 };
 		inline constexpr REL::ID IsHostileToActor{ 150777 };
 	}
 
