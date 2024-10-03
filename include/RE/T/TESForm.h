@@ -47,6 +47,7 @@ namespace RE
 		{
 			kDeleted = 1 << 5,
 			kPersistent = 1 << 10,
+			kDisabled = 1 << 11,
 		};
 
 		~TESForm() override;  // 00
@@ -219,6 +220,7 @@ namespace RE
 		[[nodiscard]] bool IsCredits() const noexcept { return GetFormID() == 0x0000000F; }
 		[[nodiscard]] bool IsDeleted() const noexcept { return GetFormFlags().all(FormFlags::kDeleted); }
 		[[nodiscard]] bool IsDigiPick() const noexcept { return GetFormID() == 0x0000000A; }
+		[[nodiscard]] bool IsDisabled() const noexcept { return GetFormFlags().all(FormFlags::kDisabled); }
 
 		[[nodiscard]] bool IsNot(FormType a_type) const noexcept { return !Is(a_type); }
 
