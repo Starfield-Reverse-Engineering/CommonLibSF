@@ -4,6 +4,7 @@
 
 namespace RE
 {
+	class TESFile;
 	class TESForm;
 
 	class IBGSBaseFormData

@@ -2,9 +2,11 @@
 
 namespace RE
 {
-	class IAnimationGraphManagerHolder
+	class __declspec(novtable) IAnimationGraphManagerHolder
 	{
 	public:
+		SF_RTTI(IAnimationGraphManagerHolder);
+
 		virtual ~IAnimationGraphManagerHolder();  // 00
 
 		// add
