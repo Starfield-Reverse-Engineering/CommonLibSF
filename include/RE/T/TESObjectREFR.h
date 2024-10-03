@@ -369,6 +369,7 @@ namespace RE
 		[[nodiscard]] TESBoundObject*       GetBaseObject() { return data.objectReference.get(); }
 		[[nodiscard]] const TESBoundObject* GetBaseObject() const { return data.objectReference.get(); }
 		[[nodiscard]] BGSLocation*          GetCurrentLocation();
+		[[nodiscard]] float                 GetDistance(NiPointer<TESObjectREFR> a_other, bool a_disabledRefs = false, bool a_ignoreWorldspace = false) const;
 		[[nodiscard]] TESObjectREFR*        GetLinkedRef(BGSKeyword* a_keyword);
 		[[nodiscard]] REFR_LOCK*            GetLock() const;
 		[[nodiscard]] LOCK_LEVEL            GetLockLevel() const;
@@ -377,6 +378,7 @@ namespace RE
 		[[nodiscard]] constexpr float       GetPositionX() const noexcept { return data.location.x; }
 		[[nodiscard]] constexpr float       GetPositionY() const noexcept { return data.location.y; }
 		[[nodiscard]] constexpr float       GetPositionZ() const noexcept { return data.location.z; }
+		[[nodiscard]] float                 GetScale() const;
 		[[nodiscard]] TESObjectREFR*        GetSpaceship(bool a_arg1 = true);
 		[[nodiscard]] TESObjectREFR*        GetSpaceshipParentDock();
 		[[nodiscard]] Actor*                GetSpaceshipPilot();

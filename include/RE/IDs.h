@@ -384,9 +384,11 @@ namespace RE::ID
 		inline constexpr REL::ID AddLockChange{ 106386 };
 		inline constexpr REL::ID GetCalcLevel{ 107531 };
 		inline constexpr REL::ID GetCurrentLocation{ 106554 };
+		inline constexpr REL::ID GetDistance{ 106562 };
 		inline constexpr REL::ID GetLinkedRef{ 107578 };
 		inline constexpr REL::ID GetLock{ 107581 };
 		inline constexpr REL::ID GetParentWorldSpace{ 106696 };
+		inline constexpr REL::ID GetScale{ 106658 };
 		inline constexpr REL::ID GetSpaceship{ 173851 };
 		inline constexpr REL::ID GetSpaceshipParentDock{ 174134 };
 		inline constexpr REL::ID GetSpaceshipPilot{ 173834 };
