@@ -43,6 +43,13 @@ namespace RE
 		return func(this);
 	}
 
+	float TESObjectREFR::GetDistance(NiPointer<TESObjectREFR> a_other, bool a_disabledRefs, bool a_ignoreWorldspace) const
+	{
+		using func_t = decltype(&TESObjectREFR::GetDistance);
+		static REL::Relocation<func_t> func{ ID::TESObjectREFR::GetDistance };
+		return func(this, a_other, a_disabledRefs, a_ignoreWorldspace);
+	}
+
 	TESObjectREFR* TESObjectREFR::GetLinkedRef(BGSKeyword* a_keyword)
 	{
 		using func_t = decltype(&TESObjectREFR::GetLinkedRef);
@@ -67,6 +74,13 @@ namespace RE
 	{
 		using func_t = decltype(&TESObjectREFR::GetParentWorldSpace);
 		static REL::Relocation<func_t> func{ ID::TESObjectREFR::GetParentWorldSpace };
+		return func(this);
+	}
+
+	float TESObjectREFR::GetScale() const
+	{
+		using func_t = decltype(&TESObjectREFR::GetScale);
+		static REL::Relocation<func_t> func{ ID::TESObjectREFR::GetScale };
 		return func(this);
 	}
 

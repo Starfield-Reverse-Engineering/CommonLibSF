@@ -22,18 +22,25 @@ namespace RE
 
 		[[nodiscard]] static ProcessLists* GetSingleton()
 		{
-			static REL::Relocation<ProcessLists**> singleton{ REL::ID(878338) };
+			static REL::Relocation<ProcessLists**> singleton{ ID::ProcessLists::Singleton };
 			return *singleton;
 		}
 
+		[[nodiscard]] bool AreHostileActorsNear(BSScrapArray<ActorHandle>* a_hostileActors = nullptr)
+		{
+			using func_t = decltype(&ProcessLists::AreHostileActorsNear);
+			static REL::Relocation<func_t> func{ ID::ProcessLists::AreHostileActorsNear };
+			return func(this, a_hostileActors);
+		}
+
 		// members
-		std::byte               pad10[0x3B];             // 010
-		bool                    runDetection;            // 044
-		std::byte               pad45[0x13];             // 045
-		BSTArray<std::uint32_t> highActorHandles;        // 058
-		BSTArray<std::uint32_t> lowActorHandles;         // 068
-		BSTArray<std::uint32_t> middleHighActorHandles;  // 078
-		BSTArray<std::uint32_t> middleLowActorHandles;   // 088
+		std::byte             pad10[0x3B];             // 010
+		bool                  runDetection;            // 044
+		std::byte             pad45[0x13];             // 045
+		BSTArray<ActorHandle> highActorHandles;        // 058
+		BSTArray<ActorHandle> lowActorHandles;         // 068
+		BSTArray<ActorHandle> middleHighActorHandles;  // 078
+		BSTArray<ActorHandle> middleLowActorHandles;   // 088
 	};
 	static_assert(offsetof(ProcessLists, runDetection) == 0x44);
 	static_assert(offsetof(ProcessLists, highActorHandles) == 0x58);

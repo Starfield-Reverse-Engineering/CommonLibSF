@@ -4,6 +4,7 @@ namespace RE::ID
 {
 	namespace Actor
 	{
+		inline constexpr REL::ID EvaluatePackage{ 150640 };
 		inline constexpr REL::ID IsHostileToActor{ 150777 };
 	}
 
@@ -282,6 +283,12 @@ namespace RE::ID
 		inline constexpr REL::ID singleton{ 865059 };
 	}
 
+	namespace ProcessLists
+	{
+		inline constexpr REL::ID AreHostileActorsNear{ 154040 };
+		inline constexpr REL::ID Singleton{ 878338 };
+	}
+
 	namespace REFR_LOCK
 	{
 		inline constexpr REL::ID GetLockLevel{ 84103 };
@@ -383,9 +390,11 @@ namespace RE::ID
 		inline constexpr REL::ID AddLockChange{ 106386 };
 		inline constexpr REL::ID GetCalcLevel{ 107531 };
 		inline constexpr REL::ID GetCurrentLocation{ 106554 };
+		inline constexpr REL::ID GetDistance{ 106562 };
 		inline constexpr REL::ID GetLinkedRef{ 107578 };
 		inline constexpr REL::ID GetLock{ 107581 };
 		inline constexpr REL::ID GetParentWorldSpace{ 106696 };
+		inline constexpr REL::ID GetScale{ 106658 };
 		inline constexpr REL::ID GetSpaceship{ 173851 };
 		inline constexpr REL::ID GetSpaceshipParentDock{ 174134 };
 		inline constexpr REL::ID GetSpaceshipPilot{ 173834 };
@@ -396,6 +405,11 @@ namespace RE::ID
 		inline constexpr REL::ID IsObjectEquipped{ 106991 };
 		inline constexpr REL::ID IsSpaceshipDocked{ 174146 };
 		inline constexpr REL::ID IsSpaceshipLanded{ 173880 };
+	}
+
+	namespace TESQuest
+	{
+		inline constexpr REL::ID IsStageDone{ 112585 };
 	}
 
 	namespace TESWorldSpace

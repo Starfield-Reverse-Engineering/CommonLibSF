@@ -277,6 +277,7 @@ namespace RE
 		virtual void         Unk_1A0();                                                                              // 1A0
 		virtual void         Unk_1A1();                                                                              // 1A1
 
+		void               EvaluatePackage(bool a_immediate = false, bool a_resetAI = false);
 		[[nodiscard]] bool IsHostileToActor(Actor* a_actor);
 
 		// members

@@ -24,6 +24,13 @@ namespace RE
 
 		~TESQuest() override;  // 00
 
+		[[nodiscard]] bool IsStageDone(std::uint16_t a_stage) const
+		{
+			using func_t = decltype(&TESQuest::IsStageDone);
+			static REL::Relocation<func_t> func{ ID::TESQuest::IsStageDone };
+			return func(this, a_stage);
+		}
+
 		// members
 		std::byte  pad38[0xD6];  // 038
 		QUEST_DATA data;         // 108
