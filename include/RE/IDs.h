@@ -283,6 +283,12 @@ namespace RE::ID
 		inline constexpr REL::ID singleton{ 865059 };
 	}
 
+	namespace ProcessLists
+	{
+		inline constexpr REL::ID AreHostileActorsNear{ 154040 };
+		inline constexpr REL::ID Singleton{ 878338 };
+	}
+
 	namespace REFR_LOCK
 	{
 		inline constexpr REL::ID GetLockLevel{ 84103 };
