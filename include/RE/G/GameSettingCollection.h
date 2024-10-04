@@ -21,7 +21,7 @@ namespace RE
 
 		[[nodiscard]] Setting* GetSetting(const char* a_name)
 		{
-			using func_t = Setting*(*)(GameSettingCollection*, const char*);
+			using func_t = Setting* (*)(GameSettingCollection*, const char*);
 			static REL::Relocation<func_t> func{ ID::GameSettingCollection::GetSetting };
 			return func(this, a_name);
 		}
