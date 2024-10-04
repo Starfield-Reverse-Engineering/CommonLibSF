@@ -10,15 +10,14 @@
 #include "RE/N/NiSmartPointer.h"
 #include "RE/T/TESFullName.h"
 #include "RE/T/TESHandleForm.h"
+#include "RE/T/TESObjectREFR.h"
 
 namespace RE
 {
-	class TESObjectREFR;
 	class TESWorldSpace;
 
 	struct EXTERIOR_DATA
 	{
-	public:
 		// members
 		std::int32_t  cellX;  // 00
 		std::int32_t  cellY;  // 04
@@ -93,8 +92,26 @@ namespace RE
 		[[nodiscard]] bool IsInterior() const noexcept { return cellFlags.any(Flag::kInterior); }
 		[[nodiscard]] bool UsesPlanetGravity() const noexcept { return cellFlags.any(Flag::kUsePlanetGravity); }
 
-		void ForEachReference(std::function<BSContainer::ForEachResult(const NiPointer<TESObjectREFR>&)> a_callback) const;
-		void ForEachReferenceInRange(const NiPoint3A& a_origin, float a_radius, std::function<BSContainer::ForEachResult(const NiPointer<TESObjectREFR>&)> a_callback) const;
+		void ForEachReference(std::function<BSContainer::ForEachResult(const NiPointer<TESObjectREFR>&)> a_callback) const
+		{
+			const BSAutoReadLock locker(lock);
+			for (const auto& ref : references) {
+				if (ref && a_callback(ref) == BSContainer::ForEachResult::kStop) {
+					break;
+				}
+			}
+		}
+
+		void ForEachReferenceInRange(const NiPoint3A& a_origin, float a_radius, std::function<BSContainer::ForEachResult(const NiPointer<TESObjectREFR>&)> a_callback) const
+		{
+			const float squaredRadius = a_radius * a_radius;
+			ForEachReference([&](const NiPointer<TESObjectREFR>& ref) {
+				const auto distance = a_origin.GetSquaredDistance(ref->GetPosition());
+				return distance <= squaredRadius ?
+				           a_callback(ref) :
+				           BSContainer::ForEachResult::kContinue;
+			});
+		}
 
 		// members
 		REX::EnumSet<Flag, std::uint32_t>   cellFlags;       // 040

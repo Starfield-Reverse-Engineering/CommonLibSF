@@ -15,12 +15,7 @@ namespace RE
 			kTotal
 		};
 
-		constexpr Color() noexcept :
-			red(0),
-			green(0),
-			blue(0),
-			alpha(0)
-		{}
+		constexpr Color() noexcept = default;
 
 		constexpr Color(const Color& a_rhs) noexcept :
 			red(a_rhs.red),
@@ -264,14 +259,21 @@ namespace RE
 			return *this;
 		}
 
-		std::uint32_t ToInt() const;
-		std::string   ToHex() const;
+		std::uint32_t ToInt() const
+		{
+			return ((red & 0xFF) << 24) + ((green & 0xFF) << 16) + ((blue & 0xFF) << 8) + (alpha & 0xFF);
+		}
+
+		std::string ToHex() const
+		{
+			return std::format("{:X}{:X}{:X}{:X}", red, green, blue, alpha);
+		}
 
 		// members
-		std::uint8_t red;    // 0
-		std::uint8_t green;  // 1
-		std::uint8_t blue;   // 2
-		std::uint8_t alpha;  // 3
+		std::uint8_t red{ 0 };    // 0
+		std::uint8_t green{ 0 };  // 1
+		std::uint8_t blue{ 0 };   // 2
+		std::uint8_t alpha{ 0 };  // 3
 	};
 	static_assert(sizeof(Color) == 0x4);
 }

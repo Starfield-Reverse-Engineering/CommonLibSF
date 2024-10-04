@@ -36,7 +36,11 @@ namespace RE
 			}
 		};
 
-		ILogger* GetLoggerSingleton();
+		[[nodiscard]] static ILogger* GetLoggerSingleton()
+		{
+			static REL::Relocation<ILogger**> singleton{ ID::idLogging::Singleton };
+			return *singleton;
+		}
 	}
 
 	// in an anonymous namespace in the exe

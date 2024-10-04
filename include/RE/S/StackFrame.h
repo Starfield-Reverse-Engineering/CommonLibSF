@@ -1,20 +1,27 @@
 #pragma once
 
 #include "RE/B/BSTSmartPointer.h"
+#include "RE/S/Stack.h"
 #include "RE/V/Variable.h"
 
 namespace RE::BSScript
 {
 	class IFunction;
 	class ObjectTypeInfo;
-	class Stack;
 	class Variable;
 
 	class StackFrame
 	{
 	public:
-		[[nodiscard]] std::uint32_t GetPageForFrame() const;
-		[[nodiscard]] Variable&     GetStackFrameVariable(std::uint32_t a_index, std::uint32_t a_pageHint) const;
+		[[nodiscard]] std::uint32_t GetPageForFrame() const
+		{
+			return parent->GetPageForFrame(this);
+		}
+
+		[[nodiscard]] Variable& GetStackFrameVariable(std::uint32_t a_index, std::uint32_t a_pageHint) const
+		{
+			return parent->GetStackFrameVariable(this, a_index, a_pageHint);
+		}
 
 		// members
 		Stack*                          parent;             // 00

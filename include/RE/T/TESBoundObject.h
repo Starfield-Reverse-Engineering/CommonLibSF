@@ -4,6 +4,7 @@
 #include "RE/B/BGSObjectPlacementDefaults.h"
 #include "RE/B/BGSPreviewTransform.h"
 #include "RE/N/NiPoint3.h"
+#include "RE/N/NiSmartPointer.h"
 #include "RE/T/TESObject.h"
 
 namespace RE

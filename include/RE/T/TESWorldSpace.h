@@ -34,7 +34,12 @@ namespace RE
 
 		~TESWorldSpace() override;  // 00
 
-		[[nodiscard]] BGSLocation* GetLocationFromCoordinates(const NiPoint3A& a_coordinates);
+		[[nodiscard]] BGSLocation* GetLocationFromCoordinates(const NiPoint3A& a_coordinates)
+		{
+			using func_t = decltype(&TESWorldSpace::GetLocationFromCoordinates);
+			static REL::Relocation<func_t> func{ ID::TESWorldSpace::GetLocationFromCoordinates };
+			return func(this, a_coordinates);
+		}
 
 		// members
 		BGSEditorID                                           formEditorID;        // 078
