@@ -15,6 +15,11 @@ namespace RE::ID
 		inline constexpr REL::ID WornHasKeyword{ 106992 };
 	}
 
+	namespace ActorUtils
+	{
+		inline constexpr REL::ID ChangeAnimArchetype{ 150497 };
+	}
+
 	namespace ActorValue
 	{
 		inline constexpr REL::ID GetSingleton{ 36266 };
