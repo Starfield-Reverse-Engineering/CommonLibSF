@@ -7,12 +7,13 @@
 #include "RE/I/IStoreAnimationActions.h"
 #include "RE/M/MagicTarget.h"
 #include "RE/P/PerkRankData.h"
+#include "RE/T/TESNPC.h"
 #include "RE/T/TESObjectREFR.h"
 
 namespace RE
 {
-	class TESNPC;
 	class AIProcess;
+	class BGSKeyword;
 	class BGSPerk;
 	class CombatController;
 	class CombatGroup;
@@ -50,7 +51,6 @@ namespace RE
 
 	struct Perks
 	{
-	public:
 		// members
 		BSTArray<PerkRankData>* perkRanks;  // 00
 		BSTArray<void*>         unk10;      // 08
@@ -277,8 +277,88 @@ namespace RE
 		virtual void         Unk_1A0();                                                                              // 1A0
 		virtual void         Unk_1A1();                                                                              // 1A1
 
-		void               EvaluatePackage(bool a_immediate = false, bool a_resetAI = false);
-		[[nodiscard]] bool IsHostileToActor(Actor* a_actor);
+		void EvaluatePackage(bool a_immediate = false, bool a_resetAI = false)
+		{
+			using func_t = decltype(&Actor::EvaluatePackage);
+			static REL::Relocation<func_t> func{ ID::Actor::EvaluatePackage };
+			func(this, a_immediate, a_resetAI);
+		}
+
+		[[nodiscard]] TESNPC* GetNPC()
+		{
+			return GetBaseObject()->As<TESNPC>();
+		}
+
+		[[nodiscard]] const TESNPC* GetNPC() const
+		{
+			return GetBaseObject()->As<TESNPC>();
+		}
+
+		[[nodiscard]] bool IsHostileToActor(Actor* a_actor)
+		{
+			using func_t = decltype(&Actor::IsHostileToActor);
+			static REL::Relocation<func_t> func{ ID::Actor::IsHostileToActor };
+			return func(this, a_actor);
+		}
+
+		[[nodiscard]] bool IsInWater() const
+		{
+			return boolBits.all(RE::Actor::BOOL_BITS::kInWater);
+		}
+
+		[[nodiscard]] bool IsInCombatSearch() const
+		{
+			return boolBits.all(RE::Actor::BOOL_BITS::kSearchingInCombat);
+		}
+
+		[[nodiscard]] bool IsJumping()
+		{
+			using func_t = decltype(&Actor::IsJumping);
+			static REL::Relocation<func_t> func{ ID::Actor::IsJumping };
+			return func(this);
+		}
+
+		[[nodiscard]] bool IsOverEncumbered()
+		{
+			using func_t = decltype(&Actor::IsOverEncumbered);
+			static REL::Relocation<func_t> func{ ID::Actor::IsOverEncumbered };
+			return func(this);
+		}
+
+		[[nodiscard]] bool IsSneaking()
+		{
+			using func_t = decltype(&Actor::IsSneaking);
+			static REL::Relocation<func_t> func{ ID::Actor::IsSneaking };
+			return func(this);
+		}
+
+		void SetSkinTone(std::uint32_t a_index)
+		{
+			using func_t = decltype(&Actor::SetSkinTone);
+			static REL::Relocation<func_t> func{ ID::Actor::SetSkinTone };
+			func(this, a_index);
+		}
+
+		void UpdateAppearance(bool a_arg1, std::uint32_t a_flags, bool a_changeRace)
+		{
+			using func_t = decltype(&Actor::UpdateAppearance);
+			static REL::Relocation<func_t> func{ ID::Actor::UpdateAppearance };
+			func(this, a_arg1, a_flags, a_changeRace);
+		}
+
+		void UpdateChargenAppearance()
+		{
+			using func_t = decltype(&Actor::UpdateChargenAppearance);
+			static REL::Relocation<func_t> func{ ID::Actor::UpdateChargenAppearance };
+			func(this);
+		}
+
+		[[nodiscard]] bool WornHasKeyword(BGSKeyword* a_keyword)
+		{
+			using func_t = decltype(&Actor::WornHasKeyword);
+			static REL::Relocation<func_t> func{ ID::Actor::WornHasKeyword };
+			return func(this, a_keyword);
+		}
 
 		// members
 		REX::EnumSet<BOOL_BITS, std::uint32_t>           boolBits;                 // 200
@@ -384,4 +464,13 @@ namespace RE
 		std::uint8_t                                     unk518[88];               // 518
 	};
 	static_assert(sizeof(Actor) == 0x578);
+
+	class MenuActor :
+		public Actor
+	{
+	public:
+		SF_RTTI_VTABLE(MenuActor);
+
+		virtual ~MenuActor() override;  // 00
+	};
 }

@@ -6,6 +6,13 @@ namespace RE::ID
 	{
 		inline constexpr REL::ID EvaluatePackage{ 150640 };
 		inline constexpr REL::ID IsHostileToActor{ 150777 };
+		inline constexpr REL::ID IsJumping{ 150985 };
+		inline constexpr REL::ID IsOverEncumbered{ 150999 };
+		inline constexpr REL::ID IsSneaking{ 151014 };
+		inline constexpr REL::ID SetSkinTone{ 146270 };
+		inline constexpr REL::ID UpdateAppearance{ 151216 };
+		inline constexpr REL::ID UpdateChargenAppearance{ 146273 };
+		inline constexpr REL::ID WornHasKeyword{ 106992 };
 	}
 
 	namespace ActorValue
@@ -15,7 +22,7 @@ namespace RE::ID
 
 	namespace ActorEquipManager
 	{
-		inline constexpr REL::ID singleton{ 879425 };
+		inline constexpr REL::ID Singleton{ 879425 };
 		inline constexpr REL::ID EquipObject{ 151991 };
 		inline constexpr REL::ID UnequipObject{ 152007 };
 	}
