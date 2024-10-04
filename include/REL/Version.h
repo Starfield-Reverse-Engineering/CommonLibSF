@@ -205,7 +205,6 @@ namespace REL
 	}
 }
 
-#ifdef __cpp_lib_format
 template <class CharT>
 struct std::formatter<REL::Version, CharT> : formatter<std::string, CharT>
 {
@@ -215,7 +214,6 @@ struct std::formatter<REL::Version, CharT> : formatter<std::string, CharT>
 		return formatter<std::string, CharT>::format(a_version.string(), a_ctx);
 	}
 };
-#endif
 
 #ifdef FMT_VERSION
 template <class CharT>

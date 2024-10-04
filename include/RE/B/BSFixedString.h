@@ -207,3 +207,13 @@ namespace RE
 	using BSFixedStringW = detail::BSFixedString<wchar_t, false>;
 	using BSFixedStringWCS = detail::BSFixedString<wchar_t, true>;
 }
+
+template <class CharT, bool CS>
+struct std::formatter<RE::detail::BSFixedString<CharT, CS>, CharT> : formatter<std::string_view, CharT>
+{
+	template <class FormatContext>
+	constexpr auto format(const RE::detail::BSFixedString<CharT, CS>& a_str, FormatContext& a_ctx) const
+	{
+		return formatter<std::string_view, CharT>::format(a_str.c_str(), a_ctx);
+	}
+};
