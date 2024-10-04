@@ -403,6 +403,7 @@
 #include "RE/T/TESModel.h"
 #include "RE/T/TESModelTri.h"
 #include "RE/T/TESNPC.h"
+#include "RE/T/TESNPCData.h"
 #include "RE/T/TESObject.h"
 #include "RE/T/TESObjectACTI.h"
 #include "RE/T/TESObjectANIO.h"

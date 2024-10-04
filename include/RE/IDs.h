@@ -387,6 +387,15 @@ namespace RE::ID
 		inline constexpr REL::ID DeriveGeneticParentAppearance{ 112005 };
 	}
 
+	namespace TESNPCData
+	{
+		namespace ChargenDataModel
+		{
+			inline constexpr REL::ID Singleton{ 879332 };
+			inline constexpr REL::ID Update{ 100686 };
+		}
+	}
+
 	namespace TESObjectARMO
 	{
 		inline constexpr REL::ID CanUseArmor{ 103501 };
