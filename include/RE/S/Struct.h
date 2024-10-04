@@ -8,13 +8,22 @@
 namespace RE::BSScript
 {
 	class StructTypeInfo;
-	class Variable;
 
 	class Struct :
 		public BSIntrusiveRefCounted  // 00
 	{
 	public:
-		~Struct();
+		~Struct()
+		{
+			if (constructed) {
+				const std::uint32_t size = type ? type->variables.size() : 0;
+				for (std::uint32_t i = 0; i < size; ++i) {
+					variables[i].reset();
+				}
+
+				constructed = false;
+			}
+		}
 
 		// members
 		BSSpinLock                      structLock;           // 04

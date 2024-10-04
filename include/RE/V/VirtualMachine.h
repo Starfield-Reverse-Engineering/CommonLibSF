@@ -5,6 +5,7 @@
 #include "RE/B/BSLock.h"
 #include "RE/B/BSTEvent.h"
 #include "RE/E/ErrorLogger.h"
+#include "RE/G/GameVM.h"
 #include "RE/I/IClientVM.h"
 #include "RE/I/IVMDebugInterface.h"
 #include "RE/I/IVMFunctionMessageDispatch.h"
@@ -94,9 +95,7 @@ namespace RE::BSScript
 			using RE::BSScript::IVirtualMachine::SendEvent;
 			//using RE::BSTEventSource<RE::BSScript::StatsEvent>::SendEvent;
 
-		public:
 			// override (IVirtualMachine)
-			// add
 			virtual void                                     SetLoader(ILoader* a_newLoader) override;                                                                                                                                                                                                                                                                       // 01
 			virtual void                                     SetLinkedCallback(ITypeLinkedCallback* a_typeLinkedCallback) override;                                                                                                                                                                                                                                          // 02
 			virtual void                                     Update(float a_updateBudget) override;                                                                                                                                                                                                                                                                          // 03
@@ -224,7 +223,11 @@ namespace RE::BSScript
 			// override (IVMFunctionMessageDispatch)
 			virtual void Unk00() override;  // 00
 
-			static VirtualMachine* GetSingleton();
+			[[nodiscard]] static VirtualMachine* GetSingleton()
+			{
+				auto vm = GameVM::GetSingleton();
+				return vm ? static_cast<VirtualMachine*>(vm->impl.get()) : nullptr;
+			}
 
 			//bool StackExists(std::uint32_t stack_id);
 

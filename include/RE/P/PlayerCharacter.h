@@ -65,9 +65,16 @@ namespace RE
 		virtual void Unk_1A4();  // 1A4
 		virtual void Unk_1A5();  // 1A5
 
-		[[nodiscard]] static PlayerCharacter* GetSingleton();
+		[[nodiscard]] static PlayerCharacter* GetSingleton()
+		{
+			static REL::Relocation<PlayerCharacter**> singleton{ ID::PlayerCharacter::Singleton };
+			return *singleton;
+		}
 
-		bool IsInChargen();
+		[[nodiscard]] bool IsInChargen()
+		{
+			return *(stl::adjust_pointer<bool>(this, 0xF24));
+		}
 
 		// members
 		std::uint64_t  unk0650;          // 0650

@@ -70,17 +70,48 @@ namespace RE
 		void SetEnabled(bool a_enabled) override;     // 02
 		void Unk_04() override;                       // 04
 
-		static PlayerCamera* GetSingleton();
+		[[nodiscard]] static PlayerCamera* GetSingleton()
+		{
+			static REL::Relocation<PlayerCamera**> singleton{ ID::PlayerCamera::Singleton };
+			return *singleton;
+		}
 
-		void ForceFirstPerson();
-		void ForceThirdPerson();
-		bool IsInFirstPerson() const;
-		bool IsInThirdPerson() const;
-		void SetCameraState(CameraState a_cameraState);
+		void ForceFirstPerson()
+		{
+			using func_t = decltype(&PlayerCamera::ForceFirstPerson);
+			static REL::Relocation<func_t> func{ ID::PlayerCamera::ForceFirstPerson };
+			return func(this);
+		}
 
-		// More...
+		void ForceThirdPerson()
+		{
+			using func_t = decltype(&PlayerCamera::ForceThirdPerson);
+			static REL::Relocation<func_t> func{ ID::PlayerCamera::ForceThirdPerson };
+			return func(this);
+		}
 
-	private:
-		bool QCameraEquals(CameraState a_cameraState) const;
+		bool IsInFirstPerson() const
+		{
+			return QCameraEquals(CameraState::kFirstPerson);
+		}
+
+		bool IsInThirdPerson() const
+		{
+			return QCameraEquals(CameraState::kThirdPerson);
+		}
+
+		void SetCameraState(CameraState a_cameraState)
+		{
+			using func_t = decltype(&PlayerCamera::SetCameraState);
+			static REL::Relocation<func_t> func{ ID::PlayerCamera::SetCameraState };
+			return func(this, a_cameraState);
+		}
+
+		bool QCameraEquals(CameraState a_cameraState) const
+		{
+			using func_t = decltype(&PlayerCamera::QCameraEquals);
+			static REL::Relocation<func_t> func{ ID::PlayerCamera::QCameraEquals };
+			return func(this, a_cameraState);
+		}
 	};
 }

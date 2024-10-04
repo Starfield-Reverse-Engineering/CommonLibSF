@@ -67,7 +67,7 @@ namespace RE
 		Scaleform::Ptr<IMenu> GetMenu(const BSFixedString& a_menuName) const
 		{
 			auto it = menuMap.find(a_menuName);
-			return it != menuMap.end() ? it->Value.menu : nullptr;
+			return it != menuMap.end() ? it->value.menu : nullptr;
 		}
 
 		Scaleform::Ptr<Scaleform::GFx::Movie> GetMenuMovie(const BSFixedString& a_menuName) const

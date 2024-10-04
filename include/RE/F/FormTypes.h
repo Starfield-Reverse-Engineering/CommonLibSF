@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/F/FORM_ENUM_STRING.h"
+
 namespace RE
 {
 	enum class FormType
@@ -223,8 +225,21 @@ namespace RE
 		kTotal  // D7
 	};
 
-	[[nodiscard]] const char* FormTypeToString(FormType a_formType);
-	[[nodiscard]] FormType    StringToFormType(std::string_view a_formType);
+	[[nodiscard]] inline const char* FormTypeToString(FormType a_formType)
+	{
+		return FORM_ENUM_STRING::GetFormEnumString()[std::to_underlying(a_formType)].formString;
+	}
+
+	[[nodiscard]] inline FormType StringToFormType(std::string_view a_formType)
+	{
+		for (auto& iter : FORM_ENUM_STRING::GetFormEnumString()) {
+			if (_stricmp(iter.formString, a_formType.data()) == 0) {
+				return iter.formType;
+			}
+		}
+
+		return FormType::kNONE;
+	}
 }
 
 namespace std
@@ -253,17 +268,15 @@ struct fmt::formatter<RE::FormType>
 };
 #endif
 
-#ifdef __cpp_lib_format
 template <class CharT>
 struct std::formatter<RE::FormType, CharT> : std::formatter<std::string_view, CharT>
 {
 	template <class FormatContext>
-	auto format(RE::FormType a_formType, FormatContext& a_ctx)
+	constexpr auto format(RE::FormType a_formType, FormatContext& a_ctx) const
 	{
 		return formatter<std::string_view, CharT>::format(FormTypeToString(a_formType), a_ctx);
 	}
 };
-#endif
 
 #define SF_FORMTYPE(TYPE) \
 	inline static constexpr auto FORMTYPE = RE::FormType::k##TYPE

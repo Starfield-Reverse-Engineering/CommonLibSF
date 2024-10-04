@@ -5,8 +5,6 @@
 
 namespace RE::BSScript
 {
-	class TypeInfo;
-
 	class __declspec(novtable) IComplexType :
 		public BSIntrusiveRefCounted  // 08
 	{

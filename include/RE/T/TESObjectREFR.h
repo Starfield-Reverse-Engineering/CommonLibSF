@@ -14,6 +14,7 @@
 #include "RE/I/IPostAnimationChannelUpdateFunctor.h"
 #include "RE/N/NiPoint3.h"
 #include "RE/N/NiSmartPointer.h"
+#include "RE/T/TESBoundObject.h"
 #include "RE/T/TESHandleForm.h"
 
 namespace RE
@@ -31,7 +32,6 @@ namespace RE
 	class BSAnimationGraphEvent;
 	class BSTransformDeltaEvent;
 	class NiAVObject;
-	class TESBoundObject;
 	class TESModel;
 	class TESObjectCELL;
 	class TESRace;
@@ -362,36 +362,36 @@ namespace RE
 		void ForEachEquippedItem(std::function<BSContainer::ForEachResult(const BGSInventoryItem&)> a_callback) const;
 		void ForEachInventoryItem(std::function<BSContainer::ForEachResult(const BGSInventoryItem&)> a_callback) const;
 
-		[[nodiscard]] constexpr NiPoint3    GetAngle() const { return data.angle; }
-		[[nodiscard]] constexpr float       GetAngleX() const { return data.angle.x; }
-		[[nodiscard]] constexpr float       GetAngleY() const { return data.angle.y; }
-		[[nodiscard]] constexpr float       GetAngleZ() const { return data.angle.z; }
-		[[nodiscard]] TESBoundObject*       GetBaseObject() { return data.objectReference.get(); }
-		[[nodiscard]] const TESBoundObject* GetBaseObject() const { return data.objectReference.get(); }
-		[[nodiscard]] BGSLocation*          GetCurrentLocation();
-		[[nodiscard]] float                 GetDistance(NiPointer<TESObjectREFR> a_other, bool a_disabledRefs = false, bool a_ignoreWorldspace = false) const;
-		[[nodiscard]] TESObjectREFR*        GetLinkedRef(BGSKeyword* a_keyword);
-		[[nodiscard]] REFR_LOCK*            GetLock() const;
-		[[nodiscard]] LOCK_LEVEL            GetLockLevel() const;
-		[[nodiscard]] TESWorldSpace*        GetParentWorldSpace();
-		[[nodiscard]] constexpr NiPoint3    GetPosition() const noexcept { return data.location; }
-		[[nodiscard]] constexpr float       GetPositionX() const noexcept { return data.location.x; }
-		[[nodiscard]] constexpr float       GetPositionY() const noexcept { return data.location.y; }
-		[[nodiscard]] constexpr float       GetPositionZ() const noexcept { return data.location.z; }
-		[[nodiscard]] float                 GetScale() const;
-		[[nodiscard]] TESObjectREFR*        GetSpaceship(bool a_arg1 = true);
-		[[nodiscard]] TESObjectREFR*        GetSpaceshipParentDock();
-		[[nodiscard]] Actor*                GetSpaceshipPilot();
-		[[nodiscard]] std::int32_t          GetValue();
-		[[nodiscard]] bool                  HasKeyword(BGSKeyword* a_keyword);
-		[[nodiscard]] bool                  IsCrimeToActivate();
-		[[nodiscard]] bool                  IsInSpace(bool a_arg1);
-		[[nodiscard]] bool                  IsLocked() const;
-		[[nodiscard]] bool                  IsObjectEquipped(TESBoundObject* a_object);
-		[[nodiscard]] bool                  IsSpaceshipDocked();
-		[[nodiscard]] bool                  IsSpaceshipLanded();
-		void                                Lock();
-		void                                Unlock();
+		[[nodiscard]] constexpr NiPoint3              GetAngle() const { return data.angle; }
+		[[nodiscard]] constexpr float                 GetAngleX() const { return data.angle.x; }
+		[[nodiscard]] constexpr float                 GetAngleY() const { return data.angle.y; }
+		[[nodiscard]] constexpr float                 GetAngleZ() const { return data.angle.z; }
+		[[nodiscard]] NiPointer<TESBoundObject>       GetBaseObject() { return data.objectReference; }
+		[[nodiscard]] NiPointer<const TESBoundObject> GetBaseObject() const { return data.objectReference; }
+		[[nodiscard]] BGSLocation*                    GetCurrentLocation();
+		[[nodiscard]] float                           GetDistance(NiPointer<TESObjectREFR> a_other, bool a_disabledRefs = false, bool a_ignoreWorldspace = false) const;
+		[[nodiscard]] TESObjectREFR*                  GetLinkedRef(BGSKeyword* a_keyword);
+		[[nodiscard]] REFR_LOCK*                      GetLock() const;
+		[[nodiscard]] LOCK_LEVEL                      GetLockLevel() const;
+		[[nodiscard]] TESWorldSpace*                  GetParentWorldSpace();
+		[[nodiscard]] constexpr NiPoint3              GetPosition() const noexcept { return data.location; }
+		[[nodiscard]] constexpr float                 GetPositionX() const noexcept { return data.location.x; }
+		[[nodiscard]] constexpr float                 GetPositionY() const noexcept { return data.location.y; }
+		[[nodiscard]] constexpr float                 GetPositionZ() const noexcept { return data.location.z; }
+		[[nodiscard]] float                           GetScale() const;
+		[[nodiscard]] TESObjectREFR*                  GetSpaceship(bool a_arg1 = true);
+		[[nodiscard]] TESObjectREFR*                  GetSpaceshipParentDock();
+		[[nodiscard]] Actor*                          GetSpaceshipPilot();
+		[[nodiscard]] std::int32_t                    GetValue();
+		[[nodiscard]] bool                            HasKeyword(BGSKeyword* a_keyword);
+		[[nodiscard]] bool                            IsCrimeToActivate();
+		[[nodiscard]] bool                            IsInSpace(bool a_arg1);
+		[[nodiscard]] bool                            IsLocked() const;
+		[[nodiscard]] bool                            IsObjectEquipped(TESBoundObject* a_object);
+		[[nodiscard]] bool                            IsSpaceshipDocked();
+		[[nodiscard]] bool                            IsSpaceshipLanded();
+		void                                          Lock();
+		void                                          Unlock();
 
 		// members
 		OBJ_REFR                                      data;           // 78

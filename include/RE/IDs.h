@@ -6,6 +6,18 @@ namespace RE::ID
 	{
 		inline constexpr REL::ID EvaluatePackage{ 150640 };
 		inline constexpr REL::ID IsHostileToActor{ 150777 };
+		inline constexpr REL::ID IsJumping{ 150985 };
+		inline constexpr REL::ID IsOverEncumbered{ 150999 };
+		inline constexpr REL::ID IsSneaking{ 151014 };
+		inline constexpr REL::ID SetSkinTone{ 146270 };
+		inline constexpr REL::ID UpdateAppearance{ 151216 };
+		inline constexpr REL::ID UpdateChargenAppearance{ 146273 };
+		inline constexpr REL::ID WornHasKeyword{ 106992 };
+	}
+
+	namespace ActorUtils
+	{
+		inline constexpr REL::ID ChangeAnimArchetype{ 150497 };
 	}
 
 	namespace ActorValue
@@ -15,7 +27,7 @@ namespace RE::ID
 
 	namespace ActorEquipManager
 	{
-		inline constexpr REL::ID singleton{ 879425 };
+		inline constexpr REL::ID Singleton{ 879425 };
 		inline constexpr REL::ID EquipObject{ 151991 };
 		inline constexpr REL::ID UnequipObject{ 152007 };
 	}
@@ -203,6 +215,13 @@ namespace RE::ID
 			inline constexpr REL::ID HandleStepRequest{ 167587 };
 		}
 	}
+
+	namespace GameSettingCollection
+	{
+		inline constexpr REL::ID Singleton{ 879099 };
+		inline constexpr REL::ID GetSetting{ 88638 };
+	}
+
 	namespace GameVM
 	{
 		inline constexpr REL::ID singleton{ 878371 };
@@ -210,7 +229,7 @@ namespace RE::ID
 
 	namespace idLogging
 	{
-		inline constexpr REL::ID singleton{ 895197 };
+		inline constexpr REL::ID Singleton{ 895197 };
 	}
 
 	namespace idTCP
@@ -271,7 +290,7 @@ namespace RE::ID
 
 	namespace PlayerCamera
 	{
-		inline constexpr REL::ID singleton{ 878523 };
+		inline constexpr REL::ID Singleton{ 878523 };
 		inline constexpr REL::ID ForceFirstPerson{ 166029 };
 		inline constexpr REL::ID ForceThirdPerson{ 166031 };
 		inline constexpr REL::ID SetCameraState{ 166078 };
@@ -280,7 +299,7 @@ namespace RE::ID
 
 	namespace PlayerCharacter
 	{
-		inline constexpr REL::ID singleton{ 865059 };
+		inline constexpr REL::ID Singleton{ 865059 };
 	}
 
 	namespace ProcessLists
@@ -372,6 +391,21 @@ namespace RE::ID
 		inline constexpr REL::ID DecRefCount{ 35164 };
 		inline constexpr REL::ID LookupByID{ 86125 };
 		inline constexpr REL::ID LookupByEditorID{ 86123 };
+	}
+
+	namespace TESNPC
+	{
+		inline constexpr REL::ID CopyAppearance{ 111992 };
+		inline constexpr REL::ID DeriveGeneticParentAppearance{ 112005 };
+	}
+
+	namespace TESNPCData
+	{
+		namespace ChargenDataModel
+		{
+			inline constexpr REL::ID Singleton{ 879332 };
+			inline constexpr REL::ID Update{ 100686 };
+		}
 	}
 
 	namespace TESObjectARMO

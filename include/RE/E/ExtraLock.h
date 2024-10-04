@@ -30,9 +30,28 @@ namespace RE
 			kLeveled = 1 << 2
 		};
 
-		[[nodiscard]] LOCK_LEVEL     GetLockLevel(const TESObjectREFR* a_owner) const;
-		[[nodiscard]] constexpr bool IsLocked() const noexcept { return flags.all(Flag::kLocked); }
-		void                         SetLocked(bool a_locked);
+		[[nodiscard]] LOCK_LEVEL GetLockLevel(const TESObjectREFR* a_owner) const
+		{
+			if (IsLocked()) {
+				using func_t = decltype(&REFR_LOCK::GetLockLevel);
+				static REL::Relocation<func_t> func{ ID::REFR_LOCK::GetLockLevel };
+				return func(this, a_owner);
+			} else {
+				return LOCK_LEVEL::kUnlocked;
+			}
+		}
+
+		[[nodiscard]] constexpr bool IsLocked() const noexcept
+		{
+			return flags.all(Flag::kLocked);
+		}
+
+		void SetLocked(bool a_locked)
+		{
+			flags.set(a_locked, Flag::kLocked);
+			if (!a_locked)
+				numTries = 0;
+		}
 
 		// members
 		TESKey*                          key;        // 00
