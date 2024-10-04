@@ -217,7 +217,7 @@ namespace RE::ID
 
 	namespace idLogging
 	{
-		inline constexpr REL::ID singleton{ 895197 };
+		inline constexpr REL::ID Singleton{ 895197 };
 	}
 
 	namespace idTCP
@@ -278,7 +278,7 @@ namespace RE::ID
 
 	namespace PlayerCamera
 	{
-		inline constexpr REL::ID singleton{ 878523 };
+		inline constexpr REL::ID Singleton{ 878523 };
 		inline constexpr REL::ID ForceFirstPerson{ 166029 };
 		inline constexpr REL::ID ForceThirdPerson{ 166031 };
 		inline constexpr REL::ID SetCameraState{ 166078 };
@@ -287,7 +287,7 @@ namespace RE::ID
 
 	namespace PlayerCharacter
 	{
-		inline constexpr REL::ID singleton{ 865059 };
+		inline constexpr REL::ID Singleton{ 865059 };
 	}
 
 	namespace ProcessLists
@@ -379,6 +379,12 @@ namespace RE::ID
 		inline constexpr REL::ID DecRefCount{ 35164 };
 		inline constexpr REL::ID LookupByID{ 86125 };
 		inline constexpr REL::ID LookupByEditorID{ 86123 };
+	}
+
+	namespace TESNPC
+	{
+		inline constexpr REL::ID CopyAppearance{ 111992 };
+		inline constexpr REL::ID DeriveGeneticParentAppearance{ 112005 };
 	}
 
 	namespace TESObjectARMO
