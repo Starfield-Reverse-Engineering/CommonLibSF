@@ -203,6 +203,13 @@ namespace RE::ID
 			inline constexpr REL::ID HandleStepRequest{ 167587 };
 		}
 	}
+
+	namespace GameSettingCollection
+	{
+		inline constexpr REL::ID Singleton{ 879099 };
+		inline constexpr REL::ID GetSetting{ 88638 };
+	}
+
 	namespace GameVM
 	{
 		inline constexpr REL::ID singleton{ 878371 };
