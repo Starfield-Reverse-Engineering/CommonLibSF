@@ -85,7 +85,7 @@ namespace RE::BSScript
 				const auto& mappings = _proxy->type->varNameIndexMap;
 				const auto  it = mappings.find(a_name);
 				if (it != mappings.end()) {
-					const auto& var = _proxy->variables[it->Value];
+					const auto& var = _proxy->variables[it->value];
 					return detail::UnpackVariable<T>(var);
 				}
 			}
@@ -107,7 +107,7 @@ namespace RE::BSScript
 				auto&      mappings = _proxy->type->varNameIndexMap;
 				const auto it = mappings.find(a_name);
 				if (it != mappings.end()) {
-					auto& var = _proxy->variables[it->Value];
+					auto& var = _proxy->variables[it->value];
 					detail::PackVariable(var, std::forward<T>(a_val));
 					return true;
 				}
