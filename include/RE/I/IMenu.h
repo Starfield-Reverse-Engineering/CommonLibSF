@@ -231,6 +231,7 @@ namespace RE
 		std::uint64_t                         unk118;        // 118
 		std::uint64_t                         unk120;        // 120
 		std::uint64_t                         unk128;        // 128
+		std::uint64_t                         unk130;        // 130
 	};
 	static_assert(offsetof(IMenu, uiMovie) == 0x088);
 	static_assert(offsetof(IMenu, menuName) == 0x0B0);
