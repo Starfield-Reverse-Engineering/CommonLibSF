@@ -24,14 +24,14 @@ namespace RE
 		virtual ~GameMenuBase() = default;  // 00
 
 		//override
-		virtual uint64_t Unk10() override
+		virtual std::uint64_t Unk10() override
 		{
 			using func_t = decltype(&GameMenuBase::Unk10);
 			static REL::Relocation<func_t> func(REL::ID(141505));
 			return func(this);
 		};
 
-		virtual uint64_t Unk11() override
+		virtual std::uint64_t Unk11() override
 		{
 			using func_t = decltype(&GameMenuBase::Unk11);
 			static REL::Relocation<func_t> func(REL::ID(141506));
@@ -65,7 +65,7 @@ namespace RE
 			return result;
 		}
 
-		void RegisterNativeFunction(const char* a_name, uint64_t a_idx)
+		void RegisterNativeFunction(const char* a_name, std::uint64_t a_idx)
 		{
 			if (!uiMovie) {
 				return;

@@ -36,6 +36,13 @@ namespace RE
 		struct PerkEntryUpdatedEvent;
 	}
 
+	enum class ACTOR_COMBAT_STATE : std::int32_t
+	{
+		kNone = 0,
+		kCombat = 1,
+		kSearching = 2,
+	};
+
 	enum class ACTOR_CRITICAL_STAGE
 	{
 		kNone = 0,

@@ -7,8 +7,12 @@
 namespace RE
 {
 	class Actor;
+	class TESBoundObject;
+	class TESObjectBOOK;
 	class TESObjectCELL;
 	class TESObjectREFR;
+
+	enum class ACTOR_COMBAT_STATE : std::int32_t;
 
 	struct TESLoadGameEvent
 	{
@@ -100,11 +104,11 @@ namespace RE
 		}
 
 		// members
-		NiPointer<TESObjectREFR> actor;
-		TESFormID                baseObject;
-		TESFormID                origRef;
-		std::uint16_t            uniqueID;
-		bool                     equipped;
+		NiPointer<Actor> actor;       // 00
+		TESFormID        baseObject;  // 08
+		TESFormID        origRef;     // 0C
+		std::uint16_t    uniqueID;    // 10
+		bool             equipped;    // 12
 	};
 	static_assert(sizeof(TESEquipEvent) == 0x18);
 
@@ -180,10 +184,11 @@ namespace RE
 		}
 
 		// members
-		NiPointer<TESObjectREFR> source;
-		NiPointer<TESObjectREFR> target;
-		std::uint32_t            state;
+		NiPointer<Actor>   source;  // 00
+		NiPointer<Actor>   target;  // 08 - nullptr when combat state is none
+		ACTOR_COMBAT_STATE state;   // 10
 	};
+	static_assert(sizeof(TESCombatEvent) == 0x18);
 
 	struct UpdateActivateListenerEvent
 	{
@@ -209,13 +214,27 @@ namespace RE
 	{
 		struct Event
 		{
+			enum class Type : std::int32_t
+			{
+				kFirst,
+				kThird,
+			};
+
 			[[nodiscard]] static BSTEventSource<FirstThirdPersonSwitch::Event>* GetEventSource()
 			{
 				using func_t = decltype(&FirstThirdPersonSwitch::Event::GetEventSource);
 				static REL::Relocation<func_t> func{ REL::ID(34458) };
 				return func();
 			}
+
+			[[nodiscard]] constexpr bool IsFirst() const noexcept { return type == Type::kFirst; }
+			[[nodiscard]] constexpr bool IsThird() const noexcept { return type == Type::kThird; }
+
+			// members
+			Type oldType;
+			Type type;
 		};
+		static_assert(sizeof(FirstThirdPersonSwitch::Event) == 0x8);
 	};
 
 	struct HideSubtitleEvent
@@ -280,7 +299,13 @@ namespace RE
 				static REL::Relocation<func_t> func{ REL::ID(86518) };
 				return func();
 			}
+
+			// members
+			TESBoundObject*          item;
+			NiPointer<TESObjectREFR> itemRef;
+			NiPointer<Actor>         actor;
 		};
+		static_assert(sizeof(TESHarvestEvent::ItemHarvested) == 0x18);
 	};
 
 	struct HUDNotification_MissionActiveWidgetUpdate
@@ -325,13 +350,26 @@ namespace RE
 
 	struct CellAttachDetachEvent
 	{
+		enum class Type : std::int32_t
+		{
+			kPreAttach,
+			kPostAttach,
+			kPreDetach,
+			kPostDetach
+		};
+		
 		[[nodiscard]] static BSTEventSource<CellAttachDetachEvent>* GetEventSource()
 		{
 			using func_t = decltype(&CellAttachDetachEvent::GetEventSource);
 			static REL::Relocation<func_t> func{ REL::ID(84784) };
 			return func();
 		}
+
+		// members
+		TESObjectCELL* cell;  // 00
+		Type           type;  // 08
 	};
+	static_assert(sizeof(CellAttachDetachEvent) == 0x10);
 
 	namespace BGSPlanet
 	{
@@ -2070,6 +2108,26 @@ namespace RE
 		}
 	};
 
+	struct CharGen_RollOffLocomotion
+	{
+		[[nodiscard]] static BSTEventSource<CharGen_RollOffLocomotion>* GetEventSource()
+		{
+			using func_t = decltype(&CharGen_RollOffLocomotion::GetEventSource);
+			static REL::Relocation<func_t> func{ REL::ID(141208) };
+			return func();
+		}
+	};
+
+	struct CharGen_RollOnLocomotion
+	{
+		[[nodiscard]] static BSTEventSource<CharGen_RollOnLocomotion>* GetEventSource()
+		{
+			using func_t = decltype(&CharGen_RollOnLocomotion::GetEventSource);
+			static REL::Relocation<func_t> func{ REL::ID(141209) };
+			return func();
+		}
+	};
+
 	struct CharGen_RotatePaperdoll
 	{
 		[[nodiscard]] static BSTEventSource<CharGen_RotatePaperdoll>* GetEventSource()
@@ -2096,6 +2154,16 @@ namespace RE
 		{
 			using func_t = decltype(&CharGen_SetBackground::GetEventSource);
 			static REL::Relocation<func_t> func{ REL::ID(141212) };
+			return func();
+		}
+	};
+
+	struct CharGen_SetBlockInputUnderPopup
+	{
+		[[nodiscard]] static BSTEventSource<CharGen_SetBlockInputUnderPopup>* GetEventSource()
+		{
+			using func_t = decltype(&CharGen_SetBlockInputUnderPopup::GetEventSource);
+			static REL::Relocation<func_t> func{ REL::ID(141213) };
 			return func();
 		}
 	};
@@ -2216,6 +2284,16 @@ namespace RE
 		{
 			using func_t = decltype(&CharGen_SwitchBodyType::GetEventSource);
 			static REL::Relocation<func_t> func{ REL::ID(141225) };
+			return func();
+		}
+	};
+
+	struct CharGen_SwitchLocomotion
+	{
+		[[nodiscard]] static BSTEventSource<CharGen_SwitchLocomotion>* GetEventSource()
+		{
+			using func_t = decltype(&CharGen_SwitchLocomotion::GetEventSource);
+			static REL::Relocation<func_t> func{ REL::ID(141226) };
 			return func();
 		}
 	};
@@ -3457,6 +3535,9 @@ namespace RE
 				static REL::Relocation<func_t> func{ REL::ID(103540) };
 				return func();
 			}
+
+			// members
+			TESObjectBOOK* book;  // 00
 		};
 	};
 
@@ -3483,7 +3564,12 @@ namespace RE
 				static REL::Relocation<func_t> func{ REL::ID(106834) };
 				return func();
 			}
+
+			// members
+			NiPointer<Actor>         source;  // 00
+			NiPointer<TESObjectREFR> target;  // 08
 		};
+		static_assert(sizeof(Activation::Event) == 0x10);
 	};
 
 	struct ActorCellChangeEvent
@@ -3498,7 +3584,7 @@ namespace RE
 			}
 
 			// members
-			NiPointer<Actor> actor;
+			NiPointer<Actor> actor;  // 00
 		};
 	};
 
@@ -3550,7 +3636,12 @@ namespace RE
 			static REL::Relocation<func_t> func{ REL::ID(107136) };
 			return func();
 		}
+
+		// members
+		NiPointer<TESObjectREFR> target;  // 00
+		NiPointer<TESObjectREFR> source;  // 08
 	};
+	static_assert(sizeof(TESActivateEvent) == 0x10);
 
 	struct TESBookReadEvent
 	{
@@ -3560,7 +3651,10 @@ namespace RE
 			static REL::Relocation<func_t> func{ REL::ID(107141) };
 			return func();
 		}
-	};
+
+		// members
+		NiPointer<TESObjectREFR> ref;  // 00
+	}; 
 
 	struct TESCellFullyLoadedEvent
 	{
@@ -3572,7 +3666,7 @@ namespace RE
 		}
 
 		// members
-		NiPointer<TESObjectCELL> cell;
+		NiPointer<TESObjectCELL> cell;  // 00
 	};
 
 	struct TESContainerChangedEvent
@@ -3606,9 +3700,9 @@ namespace RE
 		}
 
 		// members
-		NiPointer<TESObjectREFR> actorDying;   // 00
-		NiPointer<TESObjectREFR> actorKiller;  // 08
-		bool                     dead;         // 10
+		NiPointer<Actor> actorDying;   // 00
+		NiPointer<Actor> actorKiller;  // 08
+		bool             dead;         // 10
 	};
 	static_assert(sizeof(TESDeathEvent) == 0x18);
 
@@ -3624,6 +3718,7 @@ namespace RE
 		// members
 		TESFormID formID;
 	};
+	static_assert(sizeof(TESFormDeleteEvent) == 0x4);
 
 	struct TESFormIDRemapEvent
 	{
@@ -3638,16 +3733,32 @@ namespace RE
 		TESFormID oldFormID;
 		TESFormID newFormID;
 	};
+	static_assert(sizeof(TESFormIDRemapEvent) == 0x8);
 
 	struct TESFurnitureEvent
 	{
+		enum class Type : std::int32_t
+		{
+			kEnter,
+			kExit
+		};
+
 		[[nodiscard]] static BSTEventSource<TESFurnitureEvent>* GetEventSource()
 		{
 			using func_t = decltype(&TESFurnitureEvent::GetEventSource);
 			static REL::Relocation<func_t> func{ REL::ID(107168) };
 			return func();
 		}
+
+		[[nodiscard]] constexpr bool IsEnter() const noexcept { return type == Type::kEnter; }
+		[[nodiscard]] constexpr bool IsExit() const noexcept { return type == Type::kExit; }
+
+		// members
+		std::byte                pad00[0x8];  // 00 - wtf is this now? it used to be an NiPointer<Actor> in previous games
+		NiPointer<TESObjectREFR> furniture;   // 08
+		Type                     type;        // 10
 	};
+	static_assert(sizeof(TESFurnitureEvent) == 0x18);
 
 	struct TESGrabReleaseEvent
 	{
@@ -3657,7 +3768,12 @@ namespace RE
 			static REL::Relocation<func_t> func{ REL::ID(107169) };
 			return func();
 		}
+
+		// members
+		NiPointer<TESObjectREFR> target;   // 00
+		bool                     grabbed;  // 08
 	};
+	static_assert(sizeof(TESGrabReleaseEvent) == 0x10);
 
 	struct TESMissionAcceptedEvent
 	{
@@ -3704,6 +3820,9 @@ namespace RE
 			static REL::Relocation<func_t> func{ REL::ID(107193) };
 			return func();
 		}
+
+		// members
+		NiPointer<TESObjectREFR> ref;  // 00
 	};
 
 	struct TESResolveNPCTemplatesEvent
@@ -3752,6 +3871,10 @@ namespace RE
 				static REL::Relocation<func_t> func{ REL::ID(151162) };
 				return func();
 			}
+
+			// members
+			TESBoundObject*  item;   // 00
+			NiPointer<Actor> actor;  // 08
 		};
 	};
 
@@ -3778,7 +3901,13 @@ namespace RE
 				static REL::Relocation<func_t> func{ REL::ID(153651) };
 				return func();
 			}
+
+			// members
+			TESFaction*  faction;    // 00
+			std::int32_t bounty;     // 08
+			std::int32_t oldBounty;  // 0C
 		};
+		static_assert(sizeof(Bounty::Event) == 0x10);
 	};
 
 	struct CriticalHitEvent
@@ -3830,7 +3959,11 @@ namespace RE
 				static REL::Relocation<func_t> func{ REL::ID(153662) };
 				return func();
 			}
+
+			// members
+			std::uint32_t level;
 		};
+		static_assert(sizeof(LevelIncrease::Event) == 0x4);
 	};
 
 	struct PlayerAmmoChanged
@@ -3848,6 +3981,7 @@ namespace RE
 			std::uint32_t clipCount;
 			std::uint32_t reserveCount;
 		};
+		static_assert(sizeof(PlayerAmmoChanged::Event) == 0x8);
 	};
 
 	struct TerminalHacked
@@ -3861,5 +3995,19 @@ namespace RE
 				return func();
 			}
 		};
+	};
+
+	struct WeaponFiredEvent
+	{
+		[[nodiscard]] static auto GetEventSource()
+		{
+			static REL::Relocation<BSTEventSource<WeaponFiredEvent>*> ptr{ REL::ID(773902) };
+			return ptr.get();
+		}
+
+		// members
+		void*            unk00;  // 00
+		void*            unk08;  // 08
+		NiPointer<Actor> actor;  // 10
 	};
 }
