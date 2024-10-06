@@ -357,7 +357,7 @@ namespace RE
 			kPreDetach,
 			kPostDetach
 		};
-		
+
 		[[nodiscard]] static BSTEventSource<CellAttachDetachEvent>* GetEventSource()
 		{
 			using func_t = decltype(&CellAttachDetachEvent::GetEventSource);
@@ -3654,7 +3654,7 @@ namespace RE
 
 		// members
 		NiPointer<TESObjectREFR> ref;  // 00
-	}; 
+	};
 
 	struct TESCellFullyLoadedEvent
 	{
