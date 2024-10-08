@@ -191,8 +191,9 @@ namespace RE::ID
 
 	namespace ConsoleLog
 	{
-		inline constexpr REL::ID singleton{ 879277 };
-		inline constexpr REL::ID VPrint{ 166358 };
+		inline constexpr REL::ID Singleton{ 879277 };
+		inline constexpr REL::ID AddString{ 166357 };
+		inline constexpr REL::ID Print{ 166358 };
 	}
 
 	namespace ExtraDataList
