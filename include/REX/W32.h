@@ -15,6 +15,7 @@
 #include "REX/W32/DXGI_5.h"
 #include "REX/W32/DXGI_6.h"
 #include "REX/W32/KERNEL32.h"
+#include "REX/W32/NT.h"
 #include "REX/W32/OLE32.h"
 #include "REX/W32/USER32.h"
 #include "REX/W32/VERSION.h"

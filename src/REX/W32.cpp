@@ -3,10 +3,12 @@
 #include "REX/W32/DBGHELP.h"
 #include "REX/W32/DXGI.h"
 #include "REX/W32/KERNEL32.h"
+#include "REX/W32/NT.h"
 #include "REX/W32/OLE32.h"
 #include "REX/W32/SHELL32.h"
 #include "REX/W32/USER32.h"
 #include "REX/W32/VERSION.h"
+#include "REX/W32/WS2_32.h"
 
 // ADVAPI32
 
@@ -641,6 +643,15 @@ namespace REX::W32
 	bool WriteProcessMemory(HANDLE a_process, void* a_address, const void* a_buf, std::size_t a_bufLen, std::size_t* a_bufWritten) noexcept
 	{
 		return ::W32_IMPL_WriteProcessMemory(a_process, a_address, a_buf, a_bufLen, a_bufWritten);
+	}
+}
+
+// NT
+namespace REX::W32
+{
+	TEB* NtCurrentTeb() noexcept
+	{
+		return reinterpret_cast<TEB*>(__readgsqword(offsetof(NT_TIB, self)));
 	}
 }
 
