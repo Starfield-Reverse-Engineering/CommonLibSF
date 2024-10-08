@@ -9,7 +9,7 @@ namespace REX::W32
 	struct RTL_USER_PROCESS_PARAMETERS;
 	struct UNICODE_STRING;
 
-	using PS_POST_PROCESS_INIT_ROUTINE = void(*)();
+	using PS_POST_PROCESS_INIT_ROUTINE = void (*)();
 
 	struct LIST_ENTRY
 	{
@@ -34,25 +34,25 @@ namespace REX::W32
 
 	struct PEB
 	{
-		std::byte                     reserved1[2];
-		std::byte                     beingDebugged;
-		std::byte                     reserved2[1];
-		void*                         reserved3[2];
-		PEB_LDR_DATA*                 ldr;
-		RTL_USER_PROCESS_PARAMETERS*  processParameters;
-		void*                         reserved4[3];
-		void*                         atlThunkSListPtr;
-		void*                         reserved5;
-		std::uint32_t                 reserved6;
-		void*                         reserved7;
-		std::uint32_t                 reserved8;
-		std::uint32_t                 atlThunkSListPtr32;
-		void*                         reserved9[45];
-		std::byte                     reserved10[96];
-		PS_POST_PROCESS_INIT_ROUTINE  postProcessInitRoutine;
-		std::byte                     reserved11[128];
-		void*                         reserved12[1];
-		std::uint32_t                 sessionID;
+		std::byte                    reserved1[2];
+		std::byte                    beingDebugged;
+		std::byte                    reserved2[1];
+		void*                        reserved3[2];
+		PEB_LDR_DATA*                ldr;
+		RTL_USER_PROCESS_PARAMETERS* processParameters;
+		void*                        reserved4[3];
+		void*                        atlThunkSListPtr;
+		void*                        reserved5;
+		std::uint32_t                reserved6;
+		void*                        reserved7;
+		std::uint32_t                reserved8;
+		std::uint32_t                atlThunkSListPtr32;
+		void*                        reserved9[45];
+		std::byte                    reserved10[96];
+		PS_POST_PROCESS_INIT_ROUTINE postProcessInitRoutine;
+		std::byte                    reserved11[128];
+		void*                        reserved12[1];
+		std::uint32_t                sessionID;
 	};
 
 	struct PEB_LDR_DATA
