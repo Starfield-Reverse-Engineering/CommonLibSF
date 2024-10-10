@@ -60,7 +60,7 @@ namespace RE
 
 		inline static UI* GetSingleton()
 		{
-			static REL::Relocation<UI**> singleton{ ID::UI::singleton };
+			static REL::Relocation<UI**> singleton{ ID::UI::Singleton };
 			return *singleton;
 		}
 
