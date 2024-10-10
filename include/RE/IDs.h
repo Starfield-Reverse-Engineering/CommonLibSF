@@ -371,6 +371,16 @@ namespace RE::ID
 		inline constexpr REL::ID GetEventSource{ 107143 };
 	}
 
+	namespace TESCondition
+	{
+		inline constexpr REL::ID CheckValue{ 116112 };
+	}
+
+	namespace TESConditionItem
+	{
+		inline constexpr REL::ID IsTrue{ 116127 };
+	}
+
 	namespace TESContainerChangedEvent
 	{
 		inline constexpr REL::ID GetEventSource{ 107155 };
