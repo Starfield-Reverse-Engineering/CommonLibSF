@@ -12,7 +12,6 @@ namespace RE::ID
 		inline constexpr REL::ID SetSkinTone{ 146270 };
 		inline constexpr REL::ID UpdateAppearance{ 151216 };
 		inline constexpr REL::ID UpdateChargenAppearance{ 146273 };
-		inline constexpr REL::ID WornHasKeyword{ 106992 };
 	}
 
 	namespace ActorUtils
@@ -484,6 +483,7 @@ namespace RE::ID
 		inline constexpr REL::ID IsObjectEquipped{ 106991 };
 		inline constexpr REL::ID IsSpaceshipDocked{ 174146 };
 		inline constexpr REL::ID IsSpaceshipLanded{ 173880 };
+		inline constexpr REL::ID WornHasKeyword{ 106992 };
 	}
 
 	namespace TESQuest

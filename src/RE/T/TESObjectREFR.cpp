@@ -159,6 +159,13 @@ namespace RE
 		return func(this);
 	}
 
+	bool TESObjectREFR::WornHasKeyword(BGSKeyword* a_keyword)
+	{
+		using func_t = decltype(&TESObjectREFR::WornHasKeyword);
+		static REL::Relocation<func_t> func{ ID::TESObjectREFR::WornHasKeyword };
+		return func(this, a_keyword);
+	}
+
 	void TESObjectREFR::Lock()
 	{
 		if (const auto lock = GetLock()) {
