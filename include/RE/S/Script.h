@@ -2,14 +2,27 @@
 
 #include "RE/B/BSStringT.h"
 #include "RE/B/BSTList.h"
-#include "RE/T/TESForm.h"
-#include "RE/T/TESQuest.h"
+#include "RE/N/NiSmartPointer.h"
 
 namespace RE
 {
+	class Actor;
+	class BGSPackageDataList;
+	class BGSStoryEvent;
 	class Script;
+	class TESForm;
+	class TESObjectREFR;
+	class TESQuest;
 
-	enum class SCRIPT_OUTPUT;
+	namespace BGSMod::Template
+	{
+		class Item;
+	}
+
+	struct ScriptLocals;
+	struct SCRIPT_PARAMETER;
+
+	enum class SCRIPT_OUTPUT : std::int32_t;
 
 	struct ACTION_OBJECT
 	{
@@ -19,6 +32,22 @@ namespace RE
 	};
 	static_assert(sizeof(ACTION_OBJECT) == 0x10);
 
+    struct ConditionCheckParams
+	{
+		// members
+		NiPointer<TESObjectREFR> actionRef;           // 00
+		NiPointer<TESObjectREFR> targetRef;           // 08
+		TESQuest*                scopeQuest;          // 10
+		BGSStoryEvent*           scopeEvent;          // 18
+		NiPointer<Actor>         scopeActor;          // 20
+		BGSPackageDataList*      runningPackageData;  // 28
+		BGSMod::Template::Item*  objectTemplateItem;  // 30
+		TESForm*                 extraForms[5];       // 38
+		std::uint32_t            extraFormCount;      // 60
+		bool                     outDispFailure;      // 64
+	};
+	static_assert(sizeof(ConditionCheckParams) == 0x68);
+
 	struct SCRIPT_EFFECT_DATA
 	{
 		// members
@@ -27,6 +56,37 @@ namespace RE
 		float secondsElapsed;      // 4
 	};
 	static_assert(sizeof(SCRIPT_EFFECT_DATA) == 0x8);
+
+	struct SCRIPT_FUNCTION
+	{
+		using ConditionFunction_t = bool (*)(ConditionCheckParams& a_data, void* a_param2, void* a_param1, float& a_returnValue);
+		using ExecuteFunction_t = bool (*)(const SCRIPT_PARAMETER* a_paramInfo, const char*, TESObjectREFR* a_object, TESObjectREFR* a_objectContainer, Script* a_script, ScriptLocals* a_scriptLocals, float* a_result, std::uint32_t* a_opcodeOffsetPtr);
+
+		// members
+		const char*         functionName;         // 00
+		const char*         shortName;            // 08
+		std::uint32_t       output;               // 10
+		std::uint32_t       pad14;                // 14
+		const char*         helpString;           // 18
+		std::uint8_t        referenceFunction;    // 20
+		std::uint8_t        pad21;                // 21
+		std::uint16_t       numParams;            // 22
+		std::uint32_t       pad24;                // 24
+		SCRIPT_PARAMETER*   params;               // 28
+		ExecuteFunction_t   executeFunction;      // 30
+		void*               compileFunction;      // 38
+		ConditionFunction_t conditionFunction;    // 40
+		std::uint8_t        editorFilter;         // 48
+		std::uint8_t        invalidatesCellList;  // 49
+		std::uint8_t        unk4A;                // 4A
+		std::uint8_t        unk4B;                // 4B
+		std::uint8_t        unk4C;                // 4C
+		std::uint8_t        unk4E;                // 4D
+		std::uint8_t        unk4F;                // 4F
+		std::uint8_t        unk50;                // 50
+		std::uint8_t        unk51;                // 51
+	};
+	static_assert(sizeof(SCRIPT_FUNCTION) == 0x58);
 
 	struct alignas(4) SCRIPT_HEADER
 	{
@@ -59,15 +119,6 @@ namespace RE
 	};
 	static_assert(sizeof(SCRIPT_OPERATOR) == 0x8);
 
-	struct SCRIPT_PARAMETER_DEF
-	{
-		// members
-		std::uint32_t paramType;         // 00
-		std::uint8_t  canBeVariable;     // 04
-		std::uint8_t  referencedObject;  // 05
-	};
-	static_assert(sizeof(SCRIPT_PARAMETER_DEF) == 0x8);
-
 	struct SCRIPT_PARAMETER
 	{
 		// members
@@ -76,6 +127,15 @@ namespace RE
 		bool          optional{};       // 0C
 	};
 	static_assert(sizeof(SCRIPT_PARAMETER) == 0x10);
+
+	struct SCRIPT_PARAMETER_DEF
+	{
+		// members
+		std::uint32_t paramType;         // 00
+		std::uint8_t  canBeVariable;     // 04
+		std::uint8_t  referencedObject;  // 05
+	};
+	static_assert(sizeof(SCRIPT_PARAMETER_DEF) == 0x8);
 
 	struct SCRIPT_REFERENCED_OBJECT
 	{
@@ -118,40 +178,10 @@ namespace RE
 	};
 	static_assert(sizeof(ScriptVariable) == 0x20);
 
-	using ExecuteFunction = bool (*)(const SCRIPT_PARAMETER* a_paramInfo, const char*, TESObjectREFR* a_object, TESObjectREFR* a_objectContainer, Script* a_script, ScriptLocals* a_scriptLocals, float* a_result, std::uint32_t* a_opcodeOffsetPtr);
-
 	class Script
 	{
 	public:
 		SF_RTTI_VTABLE(Script);
-
-		struct SCRIPT_FUNCTION
-		{
-			// members
-			const char*       functionName;         // 00
-			const char*       shortName;            // 08
-			std::uint32_t     output;               // 10
-			std::uint32_t     pad14;                // 14
-			const char*       helpString;           // 18
-			std::uint8_t      referenceFunction;    // 20
-			std::uint8_t      pad21;                // 21
-			std::uint16_t     numParams;            // 22
-			std::uint32_t     pad24;                // 24
-			SCRIPT_PARAMETER* params;               // 28
-			ExecuteFunction   executeFunction;      // 30
-			void*             compileFunction;      // 38
-			void*             conditionFunction;    // 40
-			std::uint8_t      editorFilter;         // 48
-			std::uint8_t      invalidatesCellList;  // 49
-			std::uint8_t      unk4A;                // 4A
-			std::uint8_t      unk4B;                // 4B
-			std::uint8_t      unk4C;                // 4C
-			std::uint8_t      unk4E;                // 4D
-			std::uint8_t      unk4F;                // 4F
-			std::uint8_t      unk50;                // 50
-			std::uint8_t      unk51;                // 51
-		};
-		static_assert(sizeof(SCRIPT_FUNCTION) == 0x58);
 
 		enum
 		{

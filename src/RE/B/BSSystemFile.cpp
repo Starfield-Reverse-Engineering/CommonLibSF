@@ -131,7 +131,7 @@ namespace RE
 	std::uint32_t BSSystemFile::DeleteFileA(const char* a_path)
 	{
 		using func_t = decltype(&BSSystemFile::DeleteFileA);
-		static REL::Relocation<func_t> func{ ID::BSSystemFile::DeleteFileA };
+		static REL::Relocation<func_t> func{ ID::BSSystemFile::DeleteFileA };  // TODO: ID changed
 		return func(a_path);
 	}
 

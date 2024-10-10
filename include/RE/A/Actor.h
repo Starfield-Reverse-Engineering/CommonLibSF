@@ -13,7 +13,6 @@
 namespace RE
 {
 	class AIProcess;
-	class BGSKeyword;
 	class BGSPerk;
 	class CombatController;
 	class CombatGroup;
@@ -358,13 +357,6 @@ namespace RE
 			using func_t = decltype(&Actor::UpdateChargenAppearance);
 			static REL::Relocation<func_t> func{ ID::Actor::UpdateChargenAppearance };
 			func(this);
-		}
-
-		[[nodiscard]] bool WornHasKeyword(BGSKeyword* a_keyword)
-		{
-			using func_t = decltype(&Actor::WornHasKeyword);
-			static REL::Relocation<func_t> func{ ID::Actor::WornHasKeyword };
-			return func(this, a_keyword);
 		}
 
 		// members

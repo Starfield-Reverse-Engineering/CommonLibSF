@@ -15,9 +15,15 @@ namespace RE
 
 namespace RE::BGSMod
 {
+	class Container
+	{
+	public:
+		SF_RTTI(BGSMod__Container);
+	};
+
 	namespace Attachment
 	{
-		class Mod :
+		class __declspec(novtable) Mod :
 			public TESForm,              // 00
 			public TESFullName,          // 30
 			public TESDescription,       // 40
@@ -39,7 +45,7 @@ namespace RE::BGSMod
 
 				struct Include
 				{
-					RE::BGSMod::Attachment::Mod*             mod;
+					BGSMod::Attachment::Mod*                 mod;
 					std::uint8_t                             level;
 					REX::EnumSet<IncludesFlag, std::uint8_t> flags;
 				};
@@ -74,7 +80,18 @@ namespace RE::BGSMod
 
 	namespace Template
 	{
-		class Items : public BaseFormComponent
+		class __declspec(novtable) Item :
+			public TESFullName,       // 00
+			public BGSMod::Container  // 10
+		{
+		public:
+			SF_RTTI_VTABLE(BGSMod__Template__Item);
+
+			~Item() override;  // 00
+		};
+
+		class __declspec(novtable) Items :
+			public BaseFormComponent  // 00
 		{
 		public:
 			SF_RTTI_VTABLE(BGSMod__Template__Items);
@@ -91,7 +108,7 @@ namespace RE::BGSMod
 			virtual void Unk_0D();  // 0D
 
 			// members
-			BSTArray<void*> unk08;  // 08
+			BSTArray<Item*> items;  // 08
 			BSFixedString   unk18;  // 18
 		};
 		static_assert(sizeof(Items) == 0x20);

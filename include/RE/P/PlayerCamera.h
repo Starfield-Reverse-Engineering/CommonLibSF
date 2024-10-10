@@ -103,7 +103,7 @@ namespace RE
 		void SetCameraState(CameraState a_cameraState)
 		{
 			using func_t = decltype(&PlayerCamera::SetCameraState);
-			static REL::Relocation<func_t> func{ ID::PlayerCamera::SetCameraState };
+			static REL::Relocation<func_t> func{ ID::PlayerCamera::SetCameraState };  // TODO: ID changed
 			return func(this, a_cameraState);
 		}
 

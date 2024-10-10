@@ -111,7 +111,7 @@ namespace RE
 	inline void GetEntry<wchar_t>(BSStringPool::Entry*& a_result, const wchar_t* a_string, bool a_caseSensitive)
 	{
 		using func_t = decltype(&GetEntry<wchar_t>);
-		static REL::Relocation<func_t> func{ ID::BSStringPool::GetEntry_wchar_t_ };
+		static REL::Relocation<func_t> func{ ID::BSStringPool::GetEntry_wchar_t_ };  // TODO: ID changed
 		return func(a_result, a_string, a_caseSensitive);
 	}
 }
