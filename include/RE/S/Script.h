@@ -32,7 +32,7 @@ namespace RE
 	};
 	static_assert(sizeof(ACTION_OBJECT) == 0x10);
 
-    struct ConditionCheckParams
+	struct ConditionCheckParams
 	{
 		// members
 		NiPointer<TESObjectREFR> actionRef;           // 00
