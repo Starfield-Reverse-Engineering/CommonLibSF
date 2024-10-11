@@ -33,6 +33,9 @@ target("commonlibsf")
     -- set target kind
     set_kind("static")
 
+    -- set build by default
+    set_default(os.scriptdir() == os.projectdir())
+
     -- add packages
     add_packages("spdlog", { public = true })
 
