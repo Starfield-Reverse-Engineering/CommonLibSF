@@ -32,7 +32,7 @@ constinit auto SFSEPlugin_Version = []() noexcept {
     return v;
 }();]]
 
-local PLUGIN_VERSION_FILE = [[
+local PLUGIN_RC_FILE = [[
 #include <winres.h>
 
 1 VERSIONINFO
@@ -76,6 +76,15 @@ rule("commonlibsf.plugin")
 
         target:set("arch", "x64")
         target:set("kind", "shared")
+
+        target:add("installfiles", target:targetfile(), { prefixdir = "SFSE/Plugins" })
+        target:add("installfiles", target:symbolfile(), { prefixdir = "SFSE/Plugins" })
+
+        if os.getenv("XSE_SF_MODS_PATH") then
+            target:set("installdir", path.join(os.getenv("XSE_SF_MODS_PATH"), target:name()))
+        elseif os.getenv("XSE_SF_GAME_PATH") then
+            target:set("installdir", path.join(os.getenv("XSE_SF_GAME_PATH"), "Data"))
+        end
 
         local conf = target:extraconf("rules", "commonlibsf.plugin")
         local conf_dir = path.join(target:autogendir(), "rules", "commonlibsf", "plugin")
@@ -151,5 +160,49 @@ rule("commonlibsf.plugin")
         end
 
         add_file("plugin.cpp", PLUGIN_FILE)
-        add_file("version.rc", PLUGIN_VERSION_FILE)
+        add_file("version.rc", PLUGIN_RC_FILE)
+    end)
+
+    on_install(function(target)
+        local srcfiles, dstfiles = target:installfiles()
+        if srcfiles and dstfiles then
+            for idx, srcfile in ipairs(srcfiles) do
+                os.trycp(srcfile, dstfiles[idx])
+            end
+        end
+    end)
+
+    on_package(function(target)
+        import("core.project.config")
+        import("core.project.project")
+        import("utils.archive")
+
+        local archive_name = target:name() .. "-" .. (target:version() or "0.0.0") .. ".zip"
+        print("packing %s .. ", archive_name)
+
+        local root_dir = path.join(os.tmpdir(), "packages", project.name() or "", target:name())
+        os.tryrm(root_dir)
+
+        local srcfiles, dstfiles = target:installfiles(path.join(root_dir, "Data"))
+        if srcfiles and dstfiles then
+            for idx, srcfile in ipairs(srcfiles) do
+                os.trycp(srcfile, dstfiles[idx])
+            end
+        end
+
+        local archive_path = path.join(config.buildir(), "packages", archive_name)
+        local old_dir = os.cd(root_dir)
+        local archive_files = os.files("**")
+        os.cd(old_dir)
+        archive.archive(path.absolute(archive_path), archive_files, { curdir = root_dir })
+    end)
+
+    after_build(function(target)
+        import("core.project.depend")
+        import("core.project.project")
+        import("core.project.task")
+
+        depend.on_changed(function()
+            task.run("install")
+        end, { files = project.allfiles(), changed = target:is_rebuilt()})
     end)
