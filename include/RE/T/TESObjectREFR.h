@@ -26,6 +26,7 @@ namespace RE
 	class Actor;
 	class ActorCause;
 	class BGSEquipSlot;
+	class BGSKeyword;
 	class BGSLocation;
 	class BGSObjectInstance;
 	class BGSScene;
@@ -392,6 +393,7 @@ namespace RE
 		[[nodiscard]] bool                            IsSpaceshipLanded();
 		void                                          Lock();
 		void                                          Unlock();
+		[[nodiscard]] bool                            WornHasKeyword(BGSKeyword* a_keyword);
 
 		// members
 		OBJ_REFR                                      data;           // 78

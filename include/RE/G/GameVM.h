@@ -162,7 +162,7 @@ namespace RE
 
 		[[nodiscard]] static GameVM* GetSingleton()
 		{
-			static REL::Relocation<GameVM**> singleton{ ID::GameVM::singleton };
+			static REL::Relocation<GameVM**> singleton{ ID::GameVM::Singleton };
 			return *singleton;
 		}
 
@@ -174,7 +174,7 @@ namespace RE
 		static void BindEverythingToScript(BSScript::IVirtualMachine** a_vm)
 		{
 			using func_t = decltype(&BindEverythingToScript);
-			static REL::Relocation<func_t> func{ REL::ID(171438) };
+			static REL::Relocation<func_t> func{ ID::GameVM::BindEverythingToScript };
 			return func(a_vm);
 		}
 

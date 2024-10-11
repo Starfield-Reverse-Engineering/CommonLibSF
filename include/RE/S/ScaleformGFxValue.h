@@ -169,154 +169,154 @@ namespace RE::Scaleform::GFx
 			void ObjectAddRef(Value* a_val, void* a_obj)
 			{
 				using func_t = decltype(&ObjectInterface::ObjectAddRef);
-				static REL::Relocation<func_t> func{ ID::Scaleform::ObjectInterface::ObjectAddRef };
+				static REL::Relocation<func_t> func{ ID::Scaleform::GFx::Value::ObjectInterface::ObjectAddRef };
 				return func(this, a_val, a_obj);
 			}
 
 			void ObjectRelease(Value* a_val, void* a_obj)
 			{
 				using func_t = decltype(&ObjectInterface::ObjectRelease);
-				static REL::Relocation<func_t> func{ ID::Scaleform::ObjectInterface::ObjectRelease };
+				static REL::Relocation<func_t> func{ ID::Scaleform::GFx::Value::ObjectInterface::ObjectRelease };
 				return func(this, a_val, a_obj);
 			}
 
 			bool HasMember(void* a_data, const char* a_name, bool a_isdobj) const
 			{
 				using func_t = decltype(&ObjectInterface::HasMember);
-				static REL::Relocation<func_t> func{ ID::Scaleform::ObjectInterface::HasMember };
+				static REL::Relocation<func_t> func{ ID::Scaleform::GFx::Value::ObjectInterface::HasMember };
 				return func(this, a_data, a_name, a_isdobj);
 			}
 
 			bool GetMember(void* a_data, const char* a_name, Value* a_val, bool a_isdobj) const
 			{
 				using func_t = decltype(&ObjectInterface::GetMember);
-				static REL::Relocation<func_t> func{ ID::Scaleform::ObjectInterface::GetMember };
+				static REL::Relocation<func_t> func{ ID::Scaleform::GFx::Value::ObjectInterface::GetMember };
 				return func(this, a_data, a_name, a_val, a_isdobj);
 			}
 
 			bool SetMember(void* a_data, const char* a_name, const Value& a_value, bool a_isdobj)
 			{
 				using func_t = decltype(&ObjectInterface::SetMember);
-				static REL::Relocation<func_t> func{ ID::Scaleform::ObjectInterface::SetMember };
+				static REL::Relocation<func_t> func{ ID::Scaleform::GFx::Value::ObjectInterface::SetMember };
 				return func(this, a_data, a_name, a_value, a_isdobj);
 			}
 
 			bool Invoke(void* a_data, Value* a_result, const char* a_name, const Value* a_args, std::size_t a_numArgs, bool a_isdobj)
 			{
 				using func_t = decltype(&ObjectInterface::Invoke);
-				static REL::Relocation<func_t> func{ ID::Scaleform::ObjectInterface::Invoke };
+				static REL::Relocation<func_t> func{ ID::Scaleform::GFx::Value::ObjectInterface::Invoke };
 				return func(this, a_data, a_result, a_name, a_args, a_numArgs, a_isdobj);
 			}
 
 			void VisitMembers(void* a_data, ObjVisitor* a_visitor, bool a_isdobj)
 			{
 				using func_t = decltype(&ObjectInterface::VisitMembers);
-				static REL::Relocation<func_t> func{ ID::Scaleform::ObjectInterface::VisitMembers };
+				static REL::Relocation<func_t> func{ ID::Scaleform::GFx::Value::ObjectInterface::VisitMembers };
 				return func(this, a_data, a_visitor, a_isdobj);
 			}
 
 			std::uint32_t GetArraySize(void* a_data)
 			{
 				using func_t = decltype(&ObjectInterface::GetArraySize);
-				static REL::Relocation<func_t> func{ ID::Scaleform::ObjectInterface::GetArraySize };
+				static REL::Relocation<func_t> func{ ID::Scaleform::GFx::Value::ObjectInterface::GetArraySize };
 				return func(this, a_data);
 			}
 
 			bool SetArraySize(void* a_data, std::uint32_t a_size)
 			{
 				using func_t = decltype(&ObjectInterface::SetArraySize);
-				static REL::Relocation<func_t> func{ ID::Scaleform::ObjectInterface::SetArraySize };
+				static REL::Relocation<func_t> func{ ID::Scaleform::GFx::Value::ObjectInterface::SetArraySize };
 				return func(this, a_data, a_size);
 			}
 
 			bool GetElement(void* a_data, std::uint32_t a_index, Value* a_value)
 			{
 				using func_t = decltype(&ObjectInterface::GetElement);
-				static REL::Relocation<func_t> func{ ID::Scaleform::ObjectInterface::GetElement };
+				static REL::Relocation<func_t> func{ ID::Scaleform::GFx::Value::ObjectInterface::GetElement };
 				return func(this, a_data, a_index, a_value);
 			}
 
 			bool SetElement(void* a_data, std::uint32_t a_index, const Value& a_value)
 			{
 				using func_t = decltype(&ObjectInterface::SetElement);
-				static REL::Relocation<func_t> func{ ID::Scaleform::ObjectInterface::SetElement };
+				static REL::Relocation<func_t> func{ ID::Scaleform::GFx::Value::ObjectInterface::SetElement };
 				return func(this, a_data, a_index, a_value);
 			}
 
 			void VisitElements(void* a_data, ArrVisitor* a_visitor, std::uint32_t a_index, std::int32_t a_count)
 			{
 				using func_t = decltype(&ObjectInterface::VisitElements);
-				static REL::Relocation<func_t> func{ ID::Scaleform::ObjectInterface::VisitElements };
+				static REL::Relocation<func_t> func{ ID::Scaleform::GFx::Value::ObjectInterface::VisitElements };
 				return func(this, a_data, a_visitor, a_index, a_count);
 			}
 
 			bool PushBack(void* a_data, const Value& a_value)
 			{
 				using func_t = decltype(&ObjectInterface::PushBack);
-				static REL::Relocation<func_t> func{ ID::Scaleform::ObjectInterface::PushBack };
+				static REL::Relocation<func_t> func{ ID::Scaleform::GFx::Value::ObjectInterface::PushBack };
 				return func(this, a_data, a_value);
 			}
 
 			bool PopBack(void* a_data, Value* a_value)
 			{
 				using func_t = decltype(&ObjectInterface::PopBack);
-				static REL::Relocation<func_t> func{ ID::Scaleform::ObjectInterface::PopBack };
+				static REL::Relocation<func_t> func{ ID::Scaleform::GFx::Value::ObjectInterface::PopBack };
 				return func(this, a_data, a_value);
 			}
 
 			bool RemoveElements(void* a_data, std::uint32_t a_index, std::int32_t a_count)
 			{
 				using func_t = decltype(&ObjectInterface::RemoveElements);
-				static REL::Relocation<func_t> func{ ID::Scaleform::ObjectInterface::RemoveElements };
+				static REL::Relocation<func_t> func{ ID::Scaleform::GFx::Value::ObjectInterface::RemoveElements };
 				return func(this, a_data, a_index, a_count);
 			}
 
 			bool GetParent(void* a_data, Value* a_value)
 			{
 				using func_t = decltype(&ObjectInterface::GetParent);
-				static REL::Relocation<func_t> func{ ID::Scaleform::ObjectInterface::GetParent };
+				static REL::Relocation<func_t> func{ ID::Scaleform::GFx::Value::ObjectInterface::GetParent };
 				return func(this, a_data, a_value);
 			}
 
 			bool GetText(void* a_data, Value* a_value, bool a_html)
 			{
 				using func_t = decltype(&ObjectInterface::GetText);
-				static REL::Relocation<func_t> func{ ID::Scaleform::ObjectInterface::GetText };
+				static REL::Relocation<func_t> func{ ID::Scaleform::GFx::Value::ObjectInterface::GetText };
 				return func(this, a_data, a_value, a_html);
 			}
 
 			bool SetText(void* a_data, const char* a_text, bool a_html)
 			{
 				using func_t = decltype(&ObjectInterface::SetText);
-				static REL::Relocation<func_t> func{ ID::Scaleform::ObjectInterface::SetText };
+				static REL::Relocation<func_t> func{ ID::Scaleform::GFx::Value::ObjectInterface::SetText };
 				return func(this, a_data, a_text, a_html);
 			}
 
 			bool SetTextW(void* a_data, const wchar_t* a_text, bool a_html)
 			{
 				using func_t = decltype(&ObjectInterface::SetTextW);
-				static REL::Relocation<func_t> func{ ID::Scaleform::ObjectInterface::SetTextW };
+				static REL::Relocation<func_t> func{ ID::Scaleform::GFx::Value::ObjectInterface::SetTextW };
 				return func(this, a_data, a_text, a_html);
 			}
 
 			bool CreateEmptyMovieClip(void* a_data, Value* a_value, const char* a_name, std::int32_t a_depth)
 			{
 				using func_t = decltype(&ObjectInterface::CreateEmptyMovieClip);
-				static REL::Relocation<func_t> func{ ID::Scaleform::ObjectInterface::CreateEmptyMovieClip };
+				static REL::Relocation<func_t> func{ ID::Scaleform::GFx::Value::ObjectInterface::CreateEmptyMovieClip };
 				return func(this, a_data, a_value, a_name, a_depth);
 			}
 
 			bool GotoAndPlayL(void* a_data, const char* a_frame, bool a_stop)
 			{
 				using func_t = decltype(&ObjectInterface::GotoAndPlayL);
-				static REL::Relocation<func_t> func{ ID::Scaleform::ObjectInterface::GotoAndPlayL };
+				static REL::Relocation<func_t> func{ ID::Scaleform::GFx::Value::ObjectInterface::GotoAndPlayL };
 				return func(this, a_data, a_frame, a_stop);
 			}
 
 			bool GotoAndPlay(void* a_data, std::uint32_t a_frame, bool a_stop)
 			{
 				using func_t = decltype(&ObjectInterface::GotoAndPlay);
-				static REL::Relocation<func_t> func{ ID::Scaleform::ObjectInterface::GotoAndPlay };
+				static REL::Relocation<func_t> func{ ID::Scaleform::GFx::Value::ObjectInterface::GotoAndPlay };
 				return func(this, a_data, a_frame, a_stop);
 			}
 

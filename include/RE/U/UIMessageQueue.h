@@ -1,8 +1,10 @@
 #pragma once
 
+#include "RE/B/BSFixedString.h"
+
 namespace RE
 {
-	enum UIMessage : uint32_t
+	enum UIMessage : std::uint32_t
 	{
 		kShow = 0,
 		kHide = 2
@@ -24,7 +26,7 @@ namespace RE
 						 //...more?
 	};
 
-	enum UI_MESSAGE_RESULT : int64_t
+	enum UI_MESSAGE_RESULT : std::int64_t
 	{
 		kHandled = 0,
 		kIgnore,
@@ -36,14 +38,14 @@ namespace RE
 	public:
 		static UIMessageQueue* GetSingleton()
 		{
-			static REL::Relocation<UIMessageQueue**> singleton{ REL::ID(878637) };
+			static REL::Relocation<UIMessageQueue**> singleton{ ID::UIMessageQueue::Singleton };
 			return *singleton;
 		}
 
-		int64_t AddMessage(const BSFixedString& a_menuName, UIMessage a_message)
+		std::int64_t AddMessage(const BSFixedString& a_menuName, UIMessage a_message)
 		{
 			using func_t = decltype(&UIMessageQueue::AddMessage);
-			static REL::Relocation<func_t> func{ REL::ID(187268) };
+			static REL::Relocation<func_t> func{ ID::UIMessageQueue::AddMessage };
 			return func(this, a_menuName, a_message);
 		}
 	};
