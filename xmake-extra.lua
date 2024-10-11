@@ -209,5 +209,5 @@ rule("commonlibsf.plugin")
             if srcfiles and #srcfiles > 0 and dstfiles and #dstfiles > 0 then 
                 task.run("install")
             end
-        end, { files = project.allfiles(), changed = target:is_rebuilt()})
+        end, { changed = target:is_rebuilt(), files = { target:targetfile() } })
     end)
