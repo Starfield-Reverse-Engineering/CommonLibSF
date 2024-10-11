@@ -165,7 +165,7 @@ rule("commonlibsf.plugin")
 
     on_install(function(target)
         local srcfiles, dstfiles = target:installfiles()
-        if srcfiles and dstfiles then
+        if srcfiles and #srcfiles > 0 and dstfiles and #dstfiles > 0 then
             for idx, srcfile in ipairs(srcfiles) do
                 os.trycp(srcfile, dstfiles[idx])
             end
@@ -184,10 +184,12 @@ rule("commonlibsf.plugin")
         os.tryrm(root_dir)
 
         local srcfiles, dstfiles = target:installfiles(path.join(root_dir, "Data"))
-        if srcfiles and dstfiles then
+        if srcfiles and #srcfiles > 0 and dstfiles and #dstfiles > 0 then
             for idx, srcfile in ipairs(srcfiles) do
                 os.trycp(srcfile, dstfiles[idx])
             end
+        else
+            return
         end
 
         local archive_path = path.join(config.buildir(), "packages", archive_name)
@@ -203,6 +205,9 @@ rule("commonlibsf.plugin")
         import("core.project.task")
 
         depend.on_changed(function()
-            task.run("install")
+            local srcfiles, dstfiles = target:installfiles()
+            if srcfiles and #srcfiles > 0 and dstfiles and #dstfiles > 0 then 
+                task.run("install")
+            end
         end, { files = project.allfiles(), changed = target:is_rebuilt()})
     end)
