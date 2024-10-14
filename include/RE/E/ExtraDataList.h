@@ -63,6 +63,13 @@ namespace RE
 			return static_cast<T*>(GetByType(T::EXTRADATATYPE));
 		}
 
+		[[nodiscard]] bool HasQuestObjectAlias() const
+		{
+			using func_t = decltype(&ExtraDataList::HasQuestObjectAlias);
+			static REL::Relocation<func_t> func{ ID::ExtraDataList::HasQuestObjectAlias };
+			return func(this);
+		}
+
 		[[nodiscard]] bool HasType(ExtraDataType a_type) const noexcept
 		{
 			using func_t = bool (*)(const ExtraDataList*, ExtraDataType);
