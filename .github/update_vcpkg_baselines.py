@@ -1,5 +1,4 @@
 from json import dumps, load
-from re import sub
 from subprocess import run
 
 vcpkg_repo = "https://github.com/microsoft/vcpkg"
@@ -32,13 +31,3 @@ vcpkg_json_str += "\n"
 
 with open("./vcpkg.json", "w", newline="\r\n") as f:
     f.write(vcpkg_json_str)
-
-with open("./.github/workflows/main_ci.yml") as f:
-    main_ci_yml = f.read()
-
-main_ci_yml = sub(
-    r"(VCPKG_COMMIT_ID: ).*", f"VCPKG_COMMIT_ID: {vcpkg_ref}", main_ci_yml
-)
-
-with open("./.github/workflows/main_ci.yml", "w") as f:
-    f.write(main_ci_yml)
