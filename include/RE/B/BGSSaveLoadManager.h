@@ -17,5 +17,10 @@ namespace RE
 			static REL::Relocation<func_t> func{ ID::BGSSaveLoadManager::DeleteSaveFile };
 			return func(this, a_filename, a_unk1, a_unk2);
 		}
+
+		// members
+		std::uint8_t  unk00[0x110];     // 000
+		std::uint64_t currentPlayerID;  // 110
 	};
+	static_assert(offsetof(BGSSaveLoadManager, currentPlayerID) == 0x110);
 }
