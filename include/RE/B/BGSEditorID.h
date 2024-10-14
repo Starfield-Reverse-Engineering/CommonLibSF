@@ -33,6 +33,13 @@ namespace RE
 
 		[[nodiscard]] TESForm* owner() const { return _owner; }
 
+		void Register(const char* a_editorID, const RE::TESForm* a_form)
+		{
+			using func_t = decltype(&BGSEditorID::Register);
+			static REL::Relocation<func_t> func{ ID::BGSEditorID::Register };
+			return func(this, a_editorID, a_form);
+		}
+
 	private:
 		// members
 		BSFixedString _data;     // 00

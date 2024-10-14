@@ -42,6 +42,11 @@ namespace RE::ID
 		inline constexpr REL::ID GetSingleton{ 82283 };
 	}
 
+	namespace BGSEditorID
+	{
+		inline constexpr REL::ID Register{ 86172 };
+	}
+
 	namespace BGSEntryPoint
 	{
 		inline constexpr REL::ID HandleEntryPoint{ 110912 };
@@ -224,6 +229,7 @@ namespace RE::ID
 
 	namespace ExtraDataList
 	{
+		inline constexpr REL::ID HasQuestObjectAlias{ 83336 };
 		inline constexpr REL::ID HasType{ 83208 };
 	}
 
