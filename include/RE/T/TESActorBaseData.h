@@ -112,15 +112,16 @@ namespace RE
 		ACTOR_BASE_DATA        actorData;         // 08
 		std::int32_t           changeFlags;       // 1C
 		BSTArray<FACTION_RANK> factions;          // 20
-		TESForm**              templateForms;     // 30
-		TESForm**              unk38;             // 38
-		TESForm*               baseTemplateForm;  // 40
-		TESLevItem*            deathItem;         // 48
-		TESGlobal*             legendChance;      // 50
-		TESForm*               legendTemplate;    // 58
-		BGSVoiceType*          voiceType;         // 60
-		std::uint32_t          unk68;             // 68
-		std::uint32_t          unk6C;             // 6C
+		std::uint64_t          pad30;             // 30
+		TESForm**              templateForms;     // 38
+		TESForm**              unk40;             // 40
+		TESForm*               baseTemplateForm;  // 48
+		TESLevItem*            deathItem;         // 50
+		TESGlobal*             legendChance;      // 58
+		TESForm*               legendTemplate;    // 60
+		BGSVoiceType*          voiceType;         // 68
+		std::uint32_t          unk70;             // 70
+		std::uint32_t          unk74;             // 74
 	};
-	static_assert(sizeof(TESActorBaseData) == 0x70);
+	static_assert(sizeof(TESActorBaseData) == 0x78);
 }
