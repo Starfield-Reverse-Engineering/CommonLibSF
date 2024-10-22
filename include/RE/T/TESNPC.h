@@ -152,5 +152,4 @@ namespace RE
 		REX::Enum<PRONOUN_TYPE, std::uint8_t>                           pronoun;          // 450
 	};
 	static_assert(sizeof(TESNPC) == 0x458);
-	constexpr auto i = offsetof(TESNPC, pronoun);
 }
