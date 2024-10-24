@@ -5,6 +5,17 @@
 
 namespace RE
 {
+	class HUDModeType
+	{
+	public:
+		HUDModeType(const char* a_str) :
+			str(a_str)
+		{}
+
+		// members
+		BSFixedString str;
+	};
+
 	class GameMenuBase :
 		public IMenu  // 00
 	{
