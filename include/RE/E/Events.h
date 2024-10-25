@@ -1445,7 +1445,6 @@ namespace RE
 		}
 	};
 
-
 	struct InventoryMenu_HideModel
 	{
 		[[nodiscard]] static BSTEventSource<InventoryMenu_HideModel>* GetEventSource()
@@ -2269,10 +2268,10 @@ namespace RE
 		}
 
 		// members
-		std::uint64_t    unk00;     // 00 - Guard ActorHandle?
-		TESFaction*      faction;   // 08
-		BGSLocation*     location;  // 10 - nullptr if no location
-		std::uint32_t    value;     // 18
+		std::uint64_t unk00;     // 00 - Guard ActorHandle?
+		TESFaction*   faction;   // 08
+		BGSLocation*  location;  // 10 - nullptr if no location
+		std::uint32_t value;     // 18
 	};
 	static_assert(sizeof(PlayerJailEvent) == 0x20);
 
@@ -3808,7 +3807,7 @@ namespace RE
 		bool                     usesHitData;       // 110
 	};
 	static_assert(sizeof(TESHitEvent) == 0x120);
-	
+
 	struct TESLoadGameEvent
 	{
 		[[nodiscard]] static BSTEventSource<TESLoadGameEvent>* GetEventSource()
