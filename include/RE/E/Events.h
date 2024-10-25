@@ -7,7 +7,9 @@
 namespace RE
 {
 	class Actor;
+	class BGSAttackData;
 	class BGSLocation;
+	class bhkNPCollisionObject;
 	class HUDModeType;
 	class TESBoundObject;
 	class TESObjectBOOK;
@@ -3756,6 +3758,54 @@ namespace RE
 		};
 		static_assert(sizeof(TESHarvestEvent::ItemHarvested) == 0x18);
 	};
+
+	struct DamageImpactData
+	{
+		// members
+		NiPoint3A                       location;  // 00
+		NiPoint3A                       normal;    // 10
+		NiPoint3A                       velocity;  // 20
+		NiPointer<bhkNPCollisionObject> colObj;    // 30
+	};
+	static_assert(sizeof(DamageImpactData) == 0x40);
+
+	class HitData
+	{
+	public:
+		// members
+		DamageImpactData                  impactData;      // 00
+		std::uint32_t                     aggressor;       // 40 - ActorHandle
+		std::uint32_t                     target;          // 44 - ActorHandle
+		std::uint32_t                     sourceRef;       // 48 - ObjectRefHandle
+		std::uint64_t                     attackData;      // 50 - NiPointer<BGSAttackData>
+		BGSObjectInstanceT<TESObjectWEAP> weapon;          // 58
+		SpellItem*                        criticalEffect;  // 68
+		SpellItem*                        hitEffect;       // 70
+		std::uint64_t                     unk78;           // 78
+		const TESAmmo*                    ammo;            // 80
+		std::byte                         pad88[0x68];     // 88
+	};
+	static_assert(sizeof(HitData) == 0xF0);
+
+	struct TESHitEvent
+	{
+		[[nodiscard]] static BSTEventSource<TESHitEvent>* GetEventSource()
+		{
+			using func_t = decltype(&TESHitEvent::GetEventSource);
+			static REL::Relocation<func_t> func{ REL::ID(34450) };
+			return func();
+		}
+
+		// members
+		HitData                  hitData;           // 000
+		NiPointer<TESObjectREFR> target;            // 0F0
+		NiPointer<TESObjectREFR> cause;             // 0F8
+		BSFixedString            material;          // 100
+		TESFormID                sourceFormID;      // 108
+		TESFormID                projectileFormID;  // 10C
+		bool                     usesHitData;       // 110
+	};
+	static_assert(sizeof(TESHitEvent) == 0x120);
 	
 	struct TESLoadGameEvent
 	{
