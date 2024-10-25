@@ -7,10 +7,12 @@
 namespace RE
 {
 	class Actor;
+	class BGSLocation;
 	class HUDModeType;
 	class TESBoundObject;
 	class TESObjectBOOK;
 	class TESObjectCELL;
+	class TESObjectMISC;
 	class TESObjectREFR;
 
 	enum class ACTOR_COMBAT_STATE : std::int32_t;
@@ -59,7 +61,10 @@ namespace RE
 
 			// members
 			NiPointer<Actor> actor;  // 00
+			TESObjectCELL*   cellA;  // 08
+			TESObjectCELL*   cellB;  // 10
 		};
+		static_assert(sizeof(ActorCellChangeEvent::Event) == 0x18);
 	};
 
 	struct ActorItemEquipped
@@ -78,6 +83,21 @@ namespace RE
 			NiPointer<Actor> actor;  // 08
 		};
 		static_assert(sizeof(ActorItemEquipped::Event) == 0x10);
+	};
+
+	struct AttachReference
+	{
+		struct Event
+		{
+			[[nodiscard]] static auto GetEventSource()
+			{
+				static REL::Relocation<BSTEventSource<AttachReference::Event>*> ptr{ REL::ID(778826) };
+				return ptr.get();
+			}
+
+			// members
+			NiPointer<TESObjectREFR> ref;  // 00
+		};
 	};
 
 	struct AutoLoadDoorRolloverEvent
@@ -173,6 +193,32 @@ namespace RE
 		};
 	};
 
+	struct BGSActorEvent
+	{
+		// members
+		ActorHandle actor;  // 00
+	};
+	static_assert(sizeof(BGSActorEvent) == 0x4);
+
+	struct BGSActorCellEvent :
+		public BGSActorEvent
+	{
+		enum class Type : std::uint32_t
+		{
+			kEnter = 0,
+			kLeave = 1
+		};
+
+		[[nodiscard]] auto GetCell() const { return TESForm::LookupByID<TESObjectCELL>(formID); }
+
+		[[nodiscard]] constexpr bool IsEnter() const noexcept { return type == Type::kEnter; }
+		[[nodiscard]] constexpr bool IsLeave() const noexcept { return type == Type::kLeave; }
+
+		// members
+		TESFormID formID;
+		Type      type;
+	};
+
 	struct BGSAffinityEventEvent
 	{
 		[[nodiscard]] static BSTEventSource<BGSAffinityEventEvent>* GetEventSource()
@@ -261,8 +307,11 @@ namespace RE
 			}
 
 			// members
-			TESObjectBOOK* book;  // 00
+			TESObjectBOOK* book;     // 00
+			bool           hasAV;    // 08
+			bool           hasPerk;  // 09
 		};
+		static_assert(sizeof(BooksRead::Event) == 0x10);
 	};
 
 	struct Bounty
@@ -1505,6 +1554,24 @@ namespace RE
 		}
 	};
 
+	struct ItemSteal
+	{
+		struct Event
+		{
+			[[nodiscard]] static BSTEventSource<ItemSteal::Event>* GetEventSource()
+			{
+				using func_t = decltype(&ItemSteal::Event::GetEventSource);
+				static REL::Relocation<func_t> func{ REL::ID(153659) };
+				return func();
+			}
+
+			// members
+			std::uint32_t  count;  // 00
+			TESObjectMISC* item;   // 04
+		};
+		static_assert(sizeof(ItemSteal::Event) == 0x10);
+	};
+
 	struct LevelIncrease
 	{
 		struct Event
@@ -1816,7 +1883,7 @@ namespace RE
 		[[nodiscard]] static BSTEventSource<PauseMenu_ConfirmLoad>* GetEventSource()
 		{
 			using func_t = decltype(&PauseMenu_ConfirmLoad::GetEventSource);
-			static REL::Relocation<func_t> func{ REL::ID(141615) };
+			static REL::Relocation<func_t> func{ REL::ID(141616) };
 			return func();
 		}
 	};
@@ -1994,6 +2061,16 @@ namespace RE
 		}
 	};
 
+	struct PickRefStateChangedEvent
+	{
+		[[nodiscard]] static BSTEventSource<PickRefStateChangedEvent>* GetEventSource()
+		{
+			using func_t = decltype(&PickRefStateChangedEvent::GetEventSource);
+			static REL::Relocation<func_t> func{ REL::ID(86519) };
+			return func();
+		}
+	};
+
 	struct PickRefUpdateEvent
 	{
 		[[nodiscard]] static BSTEventSource<PickRefUpdateEvent>* GetEventSource()
@@ -2031,6 +2108,22 @@ namespace RE
 		};
 		static_assert(sizeof(PlayerAmmoChanged::Event) == 0x8);
 	};
+
+	struct PlayerAssaultActorEvent
+	{
+		[[nodiscard]] static BSTEventSource<PlayerAssaultActorEvent>* GetEventSource()
+		{
+			using func_t = decltype(&PlayerAssaultActorEvent::GetEventSource);
+			static REL::Relocation<func_t> func{ REL::ID(107120) };
+			return func();
+		}
+
+		// members
+		NiPointer<Actor> actor;     // 00
+		BGSLocation*     location;  // 08 - nullptr if no location
+		bool             isCrime;   // 10
+	};
+	static_assert(sizeof(PlayerAssaultActorEvent) == 0x18);
 
 	struct PlayerControls
 	{
@@ -2095,6 +2188,42 @@ namespace RE
 		};
 	};
 
+	struct PlayerCrimeGoldEvent
+	{
+		enum class Type : std::uint32_t
+		{
+			kNone = static_cast<std::underlying_type_t<Type>>(-1),
+			kSteal,
+			kPickpocket,
+			kTrespass,
+			kAttack,
+			kMurder,
+			kEscape,
+			kUnused,
+		};
+
+		[[nodiscard]] static BSTEventSource<PlayerCrimeGoldEvent>* GetEventSource()
+		{
+			using func_t = decltype(&PlayerCrimeGoldEvent::GetEventSource);
+			static REL::Relocation<func_t> func{ REL::ID(107122) };
+			return func();
+		}
+
+		[[nodiscard]] constexpr bool IsSteal() const noexcept { return type == Type::kSteal; }
+		[[nodiscard]] constexpr bool IsPickpocket() const noexcept { return type == Type::kPickpocket; }
+		[[nodiscard]] constexpr bool IsTrespass() const noexcept { return type == Type::kTrespass; }
+		[[nodiscard]] constexpr bool IsAttack() const noexcept { return type == Type::kAttack; }
+		[[nodiscard]] constexpr bool IsMurder() const noexcept { return type == Type::kMurder; }
+		[[nodiscard]] constexpr bool IsEscape() const noexcept { return type == Type::kEscape; }
+
+		// members
+		std::uint64_t unk00;    // 00
+		TESFaction*   faction;  // 08
+		std::uint32_t value;    // 10
+		Type          type;     // 18
+	};
+	static_assert(sizeof(PlayerCrimeGoldEvent) == 0x18);
+
 	struct PlayerCrosshairModeEvent
 	{
 		[[nodiscard]] static BSTEventSource<PlayerCrosshairModeEvent>* GetEventSource()
@@ -2128,6 +2257,55 @@ namespace RE
 		};
 	};
 
+	struct PlayerJailEvent
+	{
+		[[nodiscard]] static BSTEventSource<PlayerJailEvent>* GetEventSource()
+		{
+			using func_t = decltype(&PlayerJailEvent::GetEventSource);
+			static REL::Relocation<func_t> func{ REL::ID(107124) };
+			return func();
+		}
+
+		// members
+		std::uint64_t    unk00;     // 00 - Guard ActorHandle?
+		TESFaction*      faction;   // 08
+		BGSLocation*     location;  // 10 - nullptr if no location
+		std::uint32_t    value;     // 18
+	};
+	static_assert(sizeof(PlayerJailEvent) == 0x20);
+
+	struct PlayerMurderActorEvent
+	{
+		[[nodiscard]] static BSTEventSource<PlayerMurderActorEvent>* GetEventSource()
+		{
+			using func_t = decltype(&PlayerMurderActorEvent::GetEventSource);
+			static REL::Relocation<func_t> func{ REL::ID(107126) };
+			return func();
+		}
+
+		// members
+		NiPointer<Actor> actor;     // 00
+		BGSLocation*     location;  // 08 - nullptr if no location
+		bool             isCrime;   // 10
+	};
+	static_assert(sizeof(PlayerMurderActorEvent) == 0x18);
+
+	struct PlayerPayFineEvent
+	{
+		[[nodiscard]] static BSTEventSource<PlayerPayFineEvent>* GetEventSource()
+		{
+			using func_t = decltype(&PlayerPayFineEvent::GetEventSource);
+			static REL::Relocation<func_t> func{ REL::ID(107127) };
+			return func();
+		}
+
+		// members
+		std::uint64_t unk00;    // 00
+		TESFaction*   faction;  // 08
+		std::uint32_t value;    // 10
+	};
+	static_assert(sizeof(PlayerPayFineEvent) == 0x18);
+
 	struct PlayerSetWeaponStateEvent
 	{
 		[[nodiscard]] static BSTEventSource<PlayerSetWeaponStateEvent>* GetEventSource()
@@ -2148,9 +2326,25 @@ namespace RE
 		}
 
 		// members
-		bool sneaking;  // 00
+		bool isSneaking;  // 00
 	};
 	static_assert(sizeof(PlayerSneakingChangeEvent) == 0x1);
+
+	struct PlayerTrespassEvent
+	{
+		[[nodiscard]] static BSTEventSource<PlayerTrespassEvent>* GetEventSource()
+		{
+			using func_t = decltype(&PlayerTrespassEvent::GetEventSource);
+			static REL::Relocation<func_t> func{ REL::ID(107131) };
+			return func();
+		}
+
+		// members
+		NiPointer<Actor> actor;     // 00
+		BGSLocation*     location;  // 08 - nullptr if no location
+		bool             isCrime;   // 10
+	};
+	static_assert(sizeof(PlayerTrespassEvent) == 0x18);
 
 	struct PlayerUpdateEvent
 	{
@@ -2222,6 +2416,8 @@ namespace RE
 				static REL::Relocation<func_t> func{ REL::ID(151744) };
 				return func();
 			}
+
+			NiPointer<Actor> actor;  // 00
 		};
 	};
 
@@ -2683,8 +2879,8 @@ namespace RE
 		BSFixedString sound;        // 08
 		bool          canThrottle;  // 10
 		bool          isWarning;    // 11
-		bool          isRadio;      // 12 - TODO: verify name
 	};
+	static_assert(sizeof(ShowHUDMessageEvent) == 0x18);
 
 	struct ShowingQuestMarketTextEvent
 	{
@@ -2704,7 +2900,11 @@ namespace RE
 			static REL::Relocation<func_t> func{ REL::ID(137014) };
 			return func();
 		}
+
+		// members
+		bool unk00;  // 00
 	};
+	static_assert(sizeof(ShowLongShipBootup) == 0x1);
 
 	struct ShowSubtitleEvent
 	{
@@ -3329,6 +3529,37 @@ namespace RE
 	};
 	static_assert(sizeof(TESActivateEvent) == 0x10);
 
+	struct TESActorActivatedRefEvent
+	{
+		[[nodiscard]] static BSTEventSource<TESActorActivatedRefEvent>* GetEventSource()
+		{
+			using func_t = decltype(&TESActorActivatedRefEvent::GetEventSource);
+			static REL::Relocation<func_t> func{ REL::ID(107139) };
+			return func();
+		}
+
+		// members
+		NiPointer<Actor>         actor;   // 00
+		NiPointer<TESObjectREFR> target;  // 08
+	};
+	static_assert(sizeof(TESActorActivatedRefEvent) == 0x10);
+
+	struct TESActorLocationChangeEvent
+	{
+		[[nodiscard]] static BSTEventSource<TESActorLocationChangeEvent>* GetEventSource()
+		{
+			using func_t = decltype(&TESActorLocationChangeEvent::GetEventSource);
+			static REL::Relocation<func_t> func{ REL::ID(107140) };
+			return func();
+		}
+
+		// members
+		NiPointer<Actor> actor;        // 00
+		BGSLocation*     oldLocation;  // 08
+		BGSLocation*     newLocation;  // 10
+	};
+	static_assert(sizeof(TESActorLocationChangeEvent) == 0x18);
+
 	struct TESBookReadEvent
 	{
 		[[nodiscard]] static BSTEventSource<TESBookReadEvent>* GetEventSource()
@@ -3755,7 +3986,13 @@ namespace RE
 				static REL::Relocation<func_t> func{ REL::ID(119425) };
 				return func();
 			}
+
+			// members
+			NiPointer<TESObjectREFR> workshop;  // 00
+			NiPointer<TESObjectREFR> item;      // 08
+			NiPointer<TESObjectREFR> source;    // 10 - game always passes PlayerCharacter?
 		};
+		static_assert(sizeof(ItemMovedEvent) == 0x18);
 
 		struct ItemPlacedEvent
 		{
@@ -3765,7 +4002,14 @@ namespace RE
 				static REL::Relocation<func_t> func{ REL::ID(119426) };
 				return func();
 			}
+
+			// members
+			bool                     unk00;     // 00
+			NiPointer<TESObjectREFR> workshop;  // 08
+			NiPointer<TESObjectREFR> item;      // 10
+			NiPointer<TESObjectREFR> source;    // 18 - game always passes PlayerCharacter?
 		};
+		static_assert(sizeof(ItemPlacedEvent) == 0x20);
 
 		struct ItemProducedEvent
 		{
@@ -3785,7 +4029,13 @@ namespace RE
 				static REL::Relocation<func_t> func{ REL::ID(119428) };
 				return func();
 			}
+
+			// members
+			NiPointer<TESObjectREFR> workshop;  // 00
+			NiPointer<TESObjectREFR> item;      // 08
+			NiPointer<TESObjectREFR> source;    // 10 - game always passes PlayerCharacter?
 		};
+		static_assert(sizeof(ItemRemovedEvent) == 0x18);
 
 		struct ItemRepairedEvent
 		{
@@ -3885,6 +4135,9 @@ namespace RE
 				static REL::Relocation<func_t> func{ REL::ID(119439) };
 				return func();
 			}
+
+			// members
+			NiPointer<TESObjectREFR> workshop;  // 00
 		};
 
 		struct WorkshopModeEvent
@@ -3895,6 +4148,10 @@ namespace RE
 				static REL::Relocation<func_t> func{ REL::ID(119440) };
 				return func();
 			}
+
+			// members
+			NiPointer<TESObjectREFR> workshop;  // 00
+			NiPointer<TESObjectREFR> source;    // 08 - game always passes PlayerCharacter?
 		};
 
 		struct WorkshopOutputLinkEvent
