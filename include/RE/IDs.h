@@ -324,6 +324,12 @@ namespace RE::ID
 		inline constexpr REL::ID Notify{ 107339 };
 	}
 
+	namespace Main
+	{
+		inline constexpr REL::ID Singleton{ 881027 };
+		inline constexpr REL::ID WorldRoot{ 887308 };
+	}
+
 	namespace msvc
 	{
 		namespace type_info

@@ -31,19 +31,24 @@ namespace RE
 
 		[[nodiscard]] static Main* GetSingleton()
 		{
-			static REL::Relocation<Main**> singleton{ REL::ID(881027) };
+			static REL::Relocation<Main**> singleton{ ID::Main::Singleton };
 			return *singleton;
 		}
 
-		[[nodiscard]] static SceneGraphRoot* WorldRoot()
+		[[nodiscard]] static SceneGraphRoot* GetWorldRoot()
 		{
-			static REL::Relocation<SceneGraphRoot**> worldRoot{ REL::ID(887308) };
+			static REL::Relocation<SceneGraphRoot**> worldRoot{ ID::Main::WorldRoot };
 			return *worldRoot;
 		}
 
-		[[nodiscard]] static NiCamera* WorldRootCamera()
+		[[nodiscard]] static NiCamera* GetWorldRootCamera()
 		{
-			return WorldRoot()->worldCamera;
+			return GetWorldRoot()->worldCamera;
 		}
+
+		// members
+		std::byte pad008[0x440];     // 008
+		bool      isGameMenuPaused;  // 448
 	};
+	static_assert(offsetof(Main, isGameMenuPaused) == 0x448);
 }
