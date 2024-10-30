@@ -359,6 +359,11 @@ namespace RE::ID
 		inline constexpr REL::ID GetThreadScrapHeap{ 36848 };
 	}
 
+	namespace MenuTopicManager
+	{
+		inline constexpr REL::ID Singleton{ 879316 };
+	}
+
 	namespace Misc
 	{
 		inline constexpr REL::ID DebugNotification{ 138728 };
