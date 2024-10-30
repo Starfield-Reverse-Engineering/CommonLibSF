@@ -1,6 +1,7 @@
 #pragma once
 
 #include "RE/B/BSCoreTypes.h"
+#include "RE/B/BSPointerHandle.h"
 #include "RE/B/BSTEvent.h"
 #include "RE/N/NiSmartPointer.h"
 
@@ -198,7 +199,7 @@ namespace RE
 	struct BGSActorEvent
 	{
 		// members
-		ActorHandle actor;  // 00
+		BSPointerHandle<Actor> actor;  // 00
 	};
 	static_assert(sizeof(BGSActorEvent) == 0x4);
 
@@ -3773,9 +3774,9 @@ namespace RE
 	public:
 		// members
 		DamageImpactData                      impactData;      // 00
-		std::uint32_t                         aggressor;       // 40 - ActorHandle
-		std::uint32_t                         target;          // 44 - ActorHandle
-		std::uint32_t                         sourceRef;       // 48 - ObjectRefHandle
+		BSPointerHandle<Actor>                aggressor;       // 40
+		BSPointerHandle<Actor>                target;          // 44
+		BSPointerHandle<TESObjectREFR>        sourceRef;       // 48
 		std::uint64_t                         attackData;      // 50 - NiPointer<BGSAttackData>
 		BGSObjectInstanceT<TESObjectWEAP>     weapon;          // 58
 		SpellItem*                            criticalEffect;  // 68

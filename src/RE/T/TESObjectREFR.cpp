@@ -2,22 +2,9 @@
 
 #include "RE/B/BGSInventoryItem.h"
 #include "RE/E/ExtraLock.h"
-#include "RE/M/Misc.h"
 
 namespace RE
 {
-	NiPointer<TESObjectREFR> TESObjectREFR::LookupByHandle(RefHandle a_refHandle)
-	{
-		NiPointer<TESObjectREFR> ref;
-		LookupReferenceByHandle(a_refHandle, ref);
-		return ref;
-	}
-
-	bool TESObjectREFR::LookupByHandle(RefHandle a_refHandle, NiPointer<TESObjectREFR>& a_refrOut)
-	{
-		return LookupReferenceByHandle(a_refHandle, a_refrOut);
-	}
-
 	void TESObjectREFR::ForEachEquippedItem(std::function<BSContainer::ForEachResult(const BGSInventoryItem&)> a_callback) const
 	{
 		ForEachInventoryItem([&](const BGSInventoryItem& a_invItem) {

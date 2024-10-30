@@ -28,13 +28,6 @@ namespace RE
 		return setting;
 	}
 
-	inline bool LookupReferenceByHandle(const RefHandle& a_handle, NiPointer<TESObjectREFR>& a_refrOut)
-	{
-		using func_t = decltype(&LookupReferenceByHandle);
-		static REL::Relocation<func_t> func{ ID::Misc::LookupReferenceByHandle };
-		return func(a_handle, a_refrOut);
-	}
-
 	inline void PlayMenuSound(const char* a_editorID, const char* a_arg3 = nullptr, float a_arg4 = 0.0f)
 	{
 		std::uint32_t arg1 = 0;
