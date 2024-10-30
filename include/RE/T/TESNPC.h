@@ -10,7 +10,6 @@
 #include "RE/B/BSTEvent.h"
 #include "RE/B/BSTScatterTable.h"
 #include "RE/N/NiPoint3.h"
-#include "RE/S/Sexes.h"
 #include "RE/T/TESActorBase.h"
 #include "RE/T/TESRace.h"
 #include "RE/T/TESRaceForm.h"
@@ -27,7 +26,7 @@ namespace RE
 	class TESFaction;
 	class TESFurniture;
 
-	class TESNPC :
+	class __declspec(novtable) TESNPC :
 		public TESActorBase,                     // 000
 		public TESRaceForm,                      // 278
 		public BGSOverridePackCollection,        // 288
@@ -56,9 +55,6 @@ namespace RE
 
 		~TESNPC() override;  // 00
 
-		[[nodiscard]] TESClass* GetClass() const { return npcClass; }
-		[[nodiscard]] TESRace*  GetRace() const { return formRace; }
-
 		[[nodiscard]] bool ContainsKeyword(std::string_view a_editorID)
 		{
 			if (ContainsKeywordString(a_editorID))
@@ -84,9 +80,36 @@ namespace RE
 			return func(this, a_source);
 		}
 
-		[[nodiscard]] SEX GetSex() const
+		[[nodiscard]] TESClass* GetClass() const
 		{
-			return IsFemale() ? SEX::kFemale : SEX::kMale;
+			return npcClass;
+		}
+
+		[[nodiscard]] TESRace* GetRace() const
+		{
+			return formRace;
+		}
+
+		[[nodiscard]] TESNPC* GetRootFaceNPC() noexcept
+		{
+			return const_cast<TESNPC*>(static_cast<const TESNPC*>(this)->GetRootFaceNPC());
+		}
+
+		[[nodiscard]] const TESNPC* GetRootFaceNPC() const noexcept
+		{
+			auto root = this;
+			while (root->faceNPC)
+				root = root->faceNPC;
+
+			return root;
+		}
+
+		[[nodiscard]] TESObjectARMO* GetSkin() const
+		{
+			if (formSkin)
+				return formSkin;
+
+			return formRace ? formRace->formSkin : nullptr;
 		}
 
 		[[nodiscard]] bool HasKeyword(std::string_view a_editorID)
