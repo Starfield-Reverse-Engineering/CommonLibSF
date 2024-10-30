@@ -7,6 +7,7 @@
 #include "RE/A/AVMData.h"
 #include "RE/A/Actor.h"
 #include "RE/A/ActorEquipManager.h"
+#include "RE/A/ActorKnowledge.h"
 #include "RE/A/ActorPackage.h"
 #include "RE/A/ActorState.h"
 #include "RE/A/ActorUtils.h"

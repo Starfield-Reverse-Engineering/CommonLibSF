@@ -399,6 +399,7 @@ namespace RE::ID
 	{
 		inline constexpr REL::ID AreHostileActorsNear{ 154040 };
 		inline constexpr REL::ID Singleton{ 878338 };
+		inline constexpr REL::ID ToggleAI{ 154056 };
 	}
 
 	namespace REFR_LOCK
