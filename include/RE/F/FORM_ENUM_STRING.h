@@ -9,7 +9,7 @@ namespace RE
 	public:
 		[[nodiscard]] static std::span<FORM_ENUM_STRING, 215> GetFormEnumString()
 		{
-			static REL::Relocation<FORM_ENUM_STRING(*)[215]> formEnumString{ REL::ID(761416) };
+			static REL::Relocation<FORM_ENUM_STRING(*)[215]> formEnumString{ ID::FORM_ENUM_STRING::FormEnumString };
 			return { *formEnumString };
 		}
 

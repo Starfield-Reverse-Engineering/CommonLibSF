@@ -402,12 +402,6 @@ namespace RE
 	};
 	static_assert(sizeof(DEFAULT_OBJECT_DATA) == 0x20);
 
-	[[nodiscard]] inline std::span<DEFAULT_OBJECT_DATA, DEFAULT_OBJECT::kTotal> GetDefaultObjectData()
-	{
-		static REL::Relocation<DEFAULT_OBJECT_DATA(*)[DEFAULT_OBJECT::kTotal]> data{ REL::ID(761776) };
-		return { *data };
-	}
-
 	class BGSDefaultObjectManager :
 		public TESForm,                                       // 00
 		public BSTSingletonImplicit<BGSDefaultObjectManager>  // 30
@@ -416,6 +410,8 @@ namespace RE
 		SF_RTTI_VTABLE(BGSDefaultObjectManager);
 		SF_FORMTYPE(DOBJ);
 
+		~BGSDefaultObjectManager() override;  // 00
+
 		[[nodiscard]] static BGSDefaultObjectManager* GetSingleton()
 		{
 			using func_t = decltype(&BGSDefaultObjectManager::GetSingleton);
@@ -423,7 +419,11 @@ namespace RE
 			return func();
 		}
 
-		~BGSDefaultObjectManager() override;  // 00
+		[[nodiscard]] static std::span<DEFAULT_OBJECT_DATA, DEFAULT_OBJECT::kTotal> GetDefaultObjectData()
+		{
+			static REL::Relocation<DEFAULT_OBJECT_DATA(*)[DEFAULT_OBJECT::kTotal]> data{ ID::BGSDefaultObjectManager::DefaultObjectData };
+			return { *data };
+		}
 
 		[[nodiscard]] TESForm* GetDefaultObject(DEFAULT_OBJECT a_obj) const noexcept
 		{
@@ -432,7 +432,7 @@ namespace RE
 		}
 
 		template <class T>
-		[[nodiscard]] T* GetDefaultObject(DEFAULT_OBJECT a_obj) const  //
+		[[nodiscard]] T* GetDefaultObject(DEFAULT_OBJECT a_obj) const
 			requires(std::derived_from<T, TESForm> &&
 					 !std::is_pointer_v<T> &&
 					 !std::is_reference_v<T>)
