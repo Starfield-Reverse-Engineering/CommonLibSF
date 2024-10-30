@@ -452,6 +452,11 @@ namespace RE::ID
 		inline constexpr REL::ID RegisterNativeFunction{ 187274 };
 	}
 
+	namespace TES
+	{
+		inline constexpr REL::ID Singleton{ 881024 };
+	}
+
 	namespace TESActorBaseData
 	{
 		inline constexpr REL::ID GetLevel{ 85868 };
