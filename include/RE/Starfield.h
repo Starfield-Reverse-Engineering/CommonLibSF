@@ -3,6 +3,7 @@
 #include "SFSE/Impl/PCH.h"
 
 #include "RE/A/AIProcess.h"
+#include "RE/A/AITimeStamp.h"
 #include "RE/A/AVMData.h"
 #include "RE/A/Actor.h"
 #include "RE/A/ActorEquipManager.h"
@@ -229,6 +230,7 @@
 #include "RE/C/ConsoleLog.h"
 #include "RE/D/DebuggerMessages.h"
 #include "RE/D/DecalData.h"
+#include "RE/D/DetectionState.h"
 #include "RE/E/EffectArchetypes.h"
 #include "RE/E/EffectItem.h"
 #include "RE/E/EffectSetting.h"
@@ -304,6 +306,7 @@
 #include "RE/M/MemoryManager.h"
 #include "RE/M/MenuOpenCloseEvent.h"
 #include "RE/M/MenuPaperDoll.h"
+#include "RE/M/MenuTopicManager.h"
 #include "RE/M/Misc.h"
 #include "RE/M/MissileProjectile.h"
 #include "RE/M/msvc.h"
