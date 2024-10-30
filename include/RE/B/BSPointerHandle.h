@@ -60,7 +60,6 @@ namespace RE
 		}
 
 	private:
-
 		HandleType _handle{ 0 };  // 00
 	};
 
@@ -74,7 +73,8 @@ namespace RE
 
 		template <class Y>
 		BSPointerHandle(BSPointerHandle<Y, Handle> a_rhs) noexcept
-			requires(std::convertible_to<Y*, T*>) :
+			requires(std::convertible_to<Y*, T*>)
+			:
 			_handle(a_rhs._handle)
 		{}
 
@@ -136,7 +136,7 @@ namespace RE
 	public:
 		static bool GetSmartPointer(const BSPointerHandle<T>& a_in, NiPointer<T>& a_out)
 		{
-			using func_t = bool(*)(const BSPointerHandle<T>& a_in, NiPointer<T>& a_out);
+			using func_t = bool (*)(const BSPointerHandle<T>& a_in, NiPointer<T>& a_out);
 			static REL::Relocation<func_t> func{ ID::BSPointerHandleManagerInterface::GetSmartPointer };
 			return func(a_in, a_out);
 		}

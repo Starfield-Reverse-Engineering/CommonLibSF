@@ -35,8 +35,8 @@ namespace RE
 		}
 
 		// members
-		std::byte      pad[0xD8];       // 010
-		TESObjectCELL* interiorCell;    // 0E8
+		std::byte      pad[0xD8];     // 010
+		TESObjectCELL* interiorCell;  // 0E8
 	};
 	static_assert(offsetof(TES, interiorCell) == 0xE8);
 }

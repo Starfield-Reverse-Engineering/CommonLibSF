@@ -25,7 +25,7 @@ namespace RE
 		virtual ~UIMessageData() = default;
 
 		UI_MESSAGE_TYPE type;  // 08
-						       //...more?
+							   //...more?
 	};
 
 	enum UI_MESSAGE_RESULT : std::int64_t

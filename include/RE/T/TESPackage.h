@@ -20,7 +20,6 @@ namespace RE
 
 	struct PackageLocation
 	{
-
 	};
 
 	struct PackageTarget

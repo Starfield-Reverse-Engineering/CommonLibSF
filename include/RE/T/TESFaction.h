@@ -5,7 +5,7 @@
 
 namespace RE
 {
-	class TESReactionForm : 
+	class TESReactionForm :
 		public BaseFormComponent  // 00
 	{
 	public:

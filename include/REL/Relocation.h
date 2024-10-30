@@ -152,7 +152,7 @@ namespace REL
 	template <class T>
 	bool EmplaceVTable(T* a_ptr)
 	{
-		auto address = T::VTABLE[0].address();	
+		auto address = T::VTABLE[0].address();
 		if (address) {
 			reinterpret_cast<std::uintptr_t*>(a_ptr)[0] = address;
 			return true;
