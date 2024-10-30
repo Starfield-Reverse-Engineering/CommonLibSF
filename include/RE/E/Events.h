@@ -1,6 +1,7 @@
 #pragma once
 
 #include "RE/B/BSCoreTypes.h"
+#include "RE/B/BSPointerHandle.h"
 #include "RE/B/BSTEvent.h"
 #include "RE/N/NiSmartPointer.h"
 
@@ -11,6 +12,7 @@ namespace RE
 	class BGSLocation;
 	class bhkNPCollisionObject;
 	class HUDModeType;
+	class SpellItem;
 	class TESBoundObject;
 	class TESObjectBOOK;
 	class TESObjectCELL;
@@ -198,7 +200,7 @@ namespace RE
 	struct BGSActorEvent
 	{
 		// members
-		ActorHandle actor;  // 00
+		BSPointerHandle<Actor> actor;  // 00
 	};
 	static_assert(sizeof(BGSActorEvent) == 0x4);
 
@@ -1225,6 +1227,23 @@ namespace RE
 		}
 	};
 
+	struct DaysPassed
+	{
+		struct Event
+		{
+			[[nodiscard]] static BSTEventSource<DaysPassed::Event>* GetEventSource()
+			{
+				using func_t = decltype(&DaysPassed::Event::GetEventSource);
+				static REL::Relocation<func_t> func{ REL::ID(148411) };
+				return func();
+			}
+
+			// members
+			std::int32_t days;  // 00
+		};
+		static_assert(sizeof(DaysPassed::Event) == 0x4);
+	};
+
 	struct DialogueMenu_OnDialogueSelect
 	{
 		[[nodiscard]] static BSTEventSource<DialogueMenu_OnDialogueSelect>* GetEventSource()
@@ -1353,6 +1372,32 @@ namespace RE
 			{
 				using func_t = decltype(&HideSubtitleEvent::Event::GetEventSource);
 				static REL::Relocation<func_t> func{ REL::ID(133630) };
+				return func();
+			}
+		};
+	};
+
+	struct HourPassed
+	{
+		struct Event
+		{
+			[[nodiscard]] static BSTEventSource<HourPassed::Event>* GetEventSource()
+			{
+				using func_t = decltype(&HourPassed::Event::GetEventSource);
+				static REL::Relocation<func_t> func{ REL::ID(148412) };
+				return func();
+			}
+		};
+	};
+
+	struct HoursPassed
+	{
+		struct Event
+		{
+			[[nodiscard]] static BSTEventSource<HoursPassed::Event>* GetEventSource()
+			{
+				using func_t = decltype(&HoursPassed::Event::GetEventSource);
+				static REL::Relocation<func_t> func{ REL::ID(167218) };
 				return func();
 			}
 		};
@@ -3219,6 +3264,23 @@ namespace RE
 		};
 	};
 
+	struct SpellsLearned
+	{
+		struct Event
+		{
+			[[nodiscard]] static BSTEventSource<SpellsLearned::Event>* GetEventSource()
+			{
+				using func_t = decltype(&SpellsLearned::Event::GetEventSource);
+				static REL::Relocation<func_t> func{ REL::ID(151932) };
+				return func();
+			}
+
+			// members
+			SpellItem* spell;  // 00
+		};
+		static_assert(sizeof(SpellsLearned::Event) == 0x8);
+	};
+
 	struct StarMap
 	{
 		struct PlanetTraitKnownEvent
@@ -3773,9 +3835,9 @@ namespace RE
 	public:
 		// members
 		DamageImpactData                      impactData;      // 00
-		std::uint32_t                         aggressor;       // 40 - ActorHandle
-		std::uint32_t                         target;          // 44 - ActorHandle
-		std::uint32_t                         sourceRef;       // 48 - ObjectRefHandle
+		BSPointerHandle<Actor>                aggressor;       // 40
+		BSPointerHandle<Actor>                target;          // 44
+		BSPointerHandle<TESObjectREFR>        sourceRef;       // 48
 		std::uint64_t                         attackData;      // 50 - NiPointer<BGSAttackData>
 		BGSObjectInstanceT<TESObjectWEAP>     weapon;          // 58
 		SpellItem*                            criticalEffect;  // 68
@@ -3817,6 +3879,20 @@ namespace RE
 			return func();
 		}
 	};
+
+	struct TESLockChangedEvent
+	{
+		[[nodiscard]] static BSTEventSource<TESLockChangedEvent>* GetEventSource()
+		{
+			using func_t = decltype(&TESLockChangedEvent::GetEventSource);
+			static REL::Relocation<func_t> func{ REL::ID(107174) };
+			return func();
+		}
+
+		// members
+		const NiPointer<TESObjectREFR> ref;
+	};
+	static_assert(sizeof(TESLockChangedEvent) == 0x8);
 
 	struct TESMissionAcceptedEvent
 	{
@@ -3906,6 +3982,37 @@ namespace RE
 		TESFormID formID;  // 00
 	};
 	static_assert(sizeof(TESResolveNPCTemplatesEvent) == 0x4);
+
+	struct TESSleepStartEvent
+	{
+		[[nodiscard]] static BSTEventSource<TESSleepStartEvent>* GetEventSource()
+		{
+			using func_t = decltype(&TESSleepStartEvent::GetEventSource);
+			static REL::Relocation<func_t> func{ REL::ID(107199) };
+			return func();
+		}
+
+		// members
+		float                    timeStart;  // 00
+		float                    timeEnd;    // 04
+		NiPointer<TESObjectREFR> bed;        // 08
+	};
+	static_assert(sizeof(TESSleepStartEvent) == 0x10);
+
+	struct TESSleepStopEvent
+	{
+		[[nodiscard]] static BSTEventSource<TESSleepStopEvent>* GetEventSource()
+		{
+			using func_t = decltype(&TESSleepStopEvent::GetEventSource);
+			static REL::Relocation<func_t> func{ REL::ID(107200) };
+			return func();
+		}
+
+		// members
+		bool                     interrupted;  // 00
+		NiPointer<TESObjectREFR> bed;          // 01
+	};
+	static_assert(sizeof(TESSleepStopEvent) == 0x10);
 
 	struct TraitDiscoveryTextEvent
 	{

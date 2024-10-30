@@ -4,9 +4,10 @@
 
 namespace RE
 {
-	enum UIMessage : std::uint32_t
+	enum class UI_MESSAGE_TYPE : std::uint32_t
 	{
 		kShow = 0,
+		kUpdate = 1,
 		kHide = 2
 	};
 
@@ -14,6 +15,7 @@ namespace RE
 	{
 	public:
 		virtual ~IUIMessageData() = default;
+
 		virtual void* GetRTTI() = 0;
 	};
 
@@ -22,8 +24,8 @@ namespace RE
 	public:
 		virtual ~UIMessageData() = default;
 
-		UIMessage type;  //08
-						 //...more?
+		UI_MESSAGE_TYPE type;  // 08
+						       //...more?
 	};
 
 	enum UI_MESSAGE_RESULT : std::int64_t
@@ -42,11 +44,11 @@ namespace RE
 			return *singleton;
 		}
 
-		std::int64_t AddMessage(const BSFixedString& a_menuName, UIMessage a_message)
+		std::int64_t AddMessage(const BSFixedString& a_menuName, UI_MESSAGE_TYPE a_type)
 		{
 			using func_t = decltype(&UIMessageQueue::AddMessage);
 			static REL::Relocation<func_t> func{ ID::UIMessageQueue::AddMessage };
-			return func(this, a_menuName, a_message);
+			return func(this, a_menuName, a_type);
 		}
 	};
 }

@@ -5,6 +5,7 @@
 #include "RE/B/BGSLocalizedString.h"
 #include "RE/B/BSContainer.h"
 #include "RE/B/BSLock.h"
+#include "RE/B/BSPointerHandle.h"
 #include "RE/B/BSTEvent.h"
 #include "RE/B/BSTSmartPointer.h"
 #include "RE/E/ExtraDataList.h"
@@ -357,9 +358,6 @@ namespace RE
 		virtual void         Unk_12E();                                                                                                                                                                                                                                                               // 12E
 		virtual void         Unk_12F();                                                                                                                                                                                                                                                               // 12F
 
-		static NiPointer<TESObjectREFR> LookupByHandle(RefHandle a_refHandle);
-		static bool                     LookupByHandle(RefHandle a_refHandle, NiPointer<TESObjectREFR>& a_refrOut);
-
 		void ForEachEquippedItem(std::function<BSContainer::ForEachResult(const BGSInventoryItem&)> a_callback) const;
 		void ForEachInventoryItem(std::function<BSContainer::ForEachResult(const BGSInventoryItem&)> a_callback) const;
 
@@ -396,14 +394,14 @@ namespace RE
 		[[nodiscard]] bool                            WornHasKeyword(BGSKeyword* a_keyword);
 
 		// members
-		OBJ_REFR                                      data;           // 78
-		BSGuarded<BGSInventoryList*, BSReadWriteLock> inventoryList;  // 98
-		TESObjectCELL*                                parentCell;     // A8
-		BSGuarded<LOADED_REF_DATA*, BSReadWriteLock>  loadedData;     // B0
-		BSTSmartPointer<ExtraDataList>                extraDataList;  // C0
-		std::uint16_t                                 scale;          // C8
-		std::uint8_t                                  unkE2;          // CA
-		std::uint8_t                                  flags;          // CB
+		OBJ_REFR                                      data;           // 80
+		BSGuarded<BGSInventoryList*, BSReadWriteLock> inventoryList;  // A0
+		TESObjectCELL*                                parentCell;     // B0
+		BSGuarded<LOADED_REF_DATA*, BSReadWriteLock>  loadedData;     // B8
+		BSTSmartPointer<ExtraDataList>                extraDataList;  // C8
+		std::uint16_t                                 scale;          // D0
+		std::uint8_t                                  unkE2;          // D2
+		std::uint8_t                                  flags;          // D3
 
 	private:
 		void AddLockChange();

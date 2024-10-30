@@ -44,35 +44,36 @@ namespace RE
 			Others = HandScanner | Takeoff | Inventory | Gravjump | FarTravel,
 		};
 
-		uint32_t index;
-		uint32_t state;
-		uint64_t unk08;
-		uint64_t unk10;
-		uint64_t unk18;
-
-		uint64_t SetUserFlags(uint64_t flags, bool enabled)
+		std::uint64_t SetUserFlags(std::uint64_t a_flags, bool a_enabled)
 		{
 			using func_t = decltype(&BSInputEnableLayer::SetUserFlags);
-			static REL::Relocation<func_t> func(REL::ID(106486));
-			return func(this, flags, enabled);
+			static REL::Relocation<func_t> func{ ID::BSInputEnableLayer::SetUserFlags };
+			return func(this, a_flags, a_enabled);
 		}
 
-		uint64_t SetOtherFlags(uint64_t flags, bool enabled)
+		std::uint64_t SetOtherFlags(std::uint64_t a_flags, bool a_enabled)
 		{
 			using func_t = decltype(&BSInputEnableLayer::SetOtherFlags);
-			static REL::Relocation<func_t> func(REL::ID(109447));
-			return func(this, flags, enabled);
+			static REL::Relocation<func_t> func{ ID::BSInputEnableLayer::SetOtherFlags };
+			return func(this, a_flags, a_enabled);
 		}
+
+		// members
+		std::uint32_t index;
+		std::uint32_t state;
+		std::uint64_t unk08;
+		std::uint64_t unk10;
+		std::uint64_t unk18;
 	};
 
 	class InputEnableLayer
 	{
 	public:
-		InputEnableLayer() {}
+		InputEnableLayer() = default;
 
-		InputEnableLayer(const char* layerName)
+		InputEnableLayer(const char* a_layerName)
 		{
-			Create(layerName);
+			Create(a_layerName);
 		}
 
 		~InputEnableLayer()
@@ -80,14 +81,15 @@ namespace RE
 			Free();
 		}
 
-		bool Create(const char* layerName)
+		bool Create(const char* a_layerName)
 		{
 			bool result = true;
 			if (!data) {
-				result = BSInputEnableManager::GetSingleton()->CreateLayer(this, layerName);
+				result = BSInputEnableManager::GetSingleton()->CreateLayer(this, a_layerName);
 				if (!result)
 					data = nullptr;
 			}
+
 			return result;
 		}
 
@@ -96,25 +98,27 @@ namespace RE
 			bool result = true;
 			if (data) {
 				using func_t = decltype(&InputEnableLayer::Free);
-				static REL::Relocation<func_t> func(REL::ID(36626));
+				static REL::Relocation<func_t> func{ ID::InputEnableLayer::Free };
 				result = func(this);
 				data = nullptr;
 			}
+
 			return result;
 		}
 
-		void SetUserFlags(uint64_t flags, bool enabled)
+		void SetUserFlags(std::uint64_t a_flags, bool a_enabled)
 		{
 			if (data)
-				data->SetUserFlags(flags, enabled);
+				data->SetUserFlags(a_flags, a_enabled);
 		}
 
-		void SetOtherFlags(uint64_t flags, bool enabled)
+		void SetOtherFlags(std::uint64_t a_flags, bool a_enabled)
 		{
 			if (data)
-				data->SetOtherFlags(flags, enabled);
+				data->SetOtherFlags(a_flags, a_enabled);
 		}
 
+		// members
 		BSInputEnableLayer* data{ nullptr };
 	};
 }

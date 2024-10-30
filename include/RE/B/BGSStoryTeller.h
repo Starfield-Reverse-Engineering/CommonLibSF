@@ -13,7 +13,7 @@ namespace RE
 
 		[[nodiscard]] static BGSStoryTeller* GetSingleton()
 		{
-			static REL::Relocation<BGSStoryTeller**> singleton{ REL::ID(878850) };
+			static REL::Relocation<BGSStoryTeller**> singleton{ ID::BGSStoryTeller::Singleton };
 			return *singleton;
 		}
 

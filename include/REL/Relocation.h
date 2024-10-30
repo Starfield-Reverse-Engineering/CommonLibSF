@@ -149,6 +149,18 @@ namespace REL
 		}
 	}
 
+	template <class T>
+	bool EmplaceVTable(T* a_ptr)
+	{
+		auto address = T::VTABLE[0].address();	
+		if (address) {
+			reinterpret_cast<std::uintptr_t*>(a_ptr)[0] = address;
+			return true;
+		}
+
+		return true;
+	}
+
 	template <class F, class... Args>
 	constexpr std::invoke_result_t<F, Args...> invoke(F&& a_func, Args&&... a_args)  //
 		noexcept(std::is_nothrow_invocable_v<F, Args...>)

@@ -34,7 +34,7 @@ namespace RE
 		void AddObjectToContainer(TESForm* a_owner, TESBoundObject* a_obj, std::int32_t a_count, ContainerItemExtra* a_itemExtra)
 		{
 			using func_t = decltype(&TESContainer::AddObjectToContainer);
-			static REL::Relocation<func_t> func{ REL::ID(85991) };
+			static REL::Relocation<func_t> func{ ID::TESContainer::AddObjectToContainer };
 			return func(this, a_owner, a_obj, a_count, a_itemExtra);
 		}
 

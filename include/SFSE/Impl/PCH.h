@@ -298,17 +298,6 @@ namespace SFSE::stl
 	}
 
 	template <class T>
-	bool emplace_vtable(T* a_ptr)
-	{
-		auto address = T::VTABLE[0].address();
-		if (!address) {
-			return false;
-		}
-		reinterpret_cast<std::uintptr_t*>(a_ptr)[0] = address;
-		return true;
-	}
-
-	template <class T>
 	void memzero(volatile T* a_ptr, const std::size_t a_size = sizeof(T))
 	{
 		const auto     begin = reinterpret_cast<volatile char*>(a_ptr);

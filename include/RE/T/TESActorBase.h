@@ -7,6 +7,7 @@
 #include "RE/B/BGSPerkRankArray.h"
 #include "RE/B/BGSPropertySheet.h"
 #include "RE/B/BGSSkinForm.h"
+#include "RE/S/Sexes.h"
 #include "RE/T/TESAIForm.h"
 #include "RE/T/TESActorBaseData.h"
 #include "RE/T/TESBoundAnimObject.h"
@@ -18,7 +19,7 @@ namespace RE
 {
 	class TESCombatStyle;
 
-	class TESActorBase :
+	class __declspec(novtable) TESActorBase :
 		public TESBoundAnimObject,         // 000
 		public TESActorBaseData,           // 0E0
 		public TESContainer,               // 168
@@ -43,6 +44,11 @@ namespace RE
 		virtual TESCombatStyle* GetCombatStyle();                 // 83
 		virtual void            SetCombatStyle(TESCombatStyle*);  // 84
 		virtual TESForm*        GetAsForm();                      // 85
+
+		[[nodiscard]] SEX GetSex() const
+		{
+			return IsFemale() ? SEX::kFemale : SEX::kMale;
+		}
 	};
 	static_assert(sizeof(TESActorBase) == 0x270);
 }

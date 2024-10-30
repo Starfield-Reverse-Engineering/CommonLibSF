@@ -290,6 +290,13 @@ namespace RE
 			func(this, a_immediate, a_resetAI);
 		}
 
+		[[nodiscard]] ActorKnowledge* GetActorKnowledge(Actor* a_actor)
+		{
+			using func_t = decltype(&Actor::GetActorKnowledge);
+			static REL::Relocation<func_t> func{ ID::Actor::GetActorKnowledge };
+			return func(this, a_actor);
+		}
+
 		[[nodiscard]] TESNPC* GetNPC()
 		{
 			return GetBaseObject()->As<TESNPC>();
@@ -298,6 +305,11 @@ namespace RE
 		[[nodiscard]] const TESNPC* GetNPC() const
 		{
 			return GetBaseObject()->As<TESNPC>();
+		}
+
+		[[nodiscard]] bool IsDead() const
+		{
+			return boolBits.all(RE::Actor::BOOL_BITS::kDead);
 		}
 
 		[[nodiscard]] bool IsHostileToActor(Actor* a_actor)
@@ -324,11 +336,21 @@ namespace RE
 			return func(this);
 		}
 
+		[[nodiscard]] bool IsMurderAlarmed() const
+		{
+			return boolBits.all(RE::Actor::BOOL_BITS::kMurderAlarm);
+		}
+
 		[[nodiscard]] bool IsOverEncumbered()
 		{
 			using func_t = decltype(&Actor::IsOverEncumbered);
 			static REL::Relocation<func_t> func{ ID::Actor::IsOverEncumbered };
 			return func(this);
+		}
+
+		[[nodiscard]] bool IsParalyzed() const
+		{
+			return boolBits.all(RE::Actor::BOOL_BITS::kParalyzed);
 		}
 
 		[[nodiscard]] bool IsSneaking()
@@ -360,30 +382,29 @@ namespace RE
 		}
 
 		// members
-		REX::EnumSet<BOOL_BITS, std::uint32_t>           boolBits;                 // 200
-		float                                            unk204;                   // 204
-		BSGuarded<BSTArray<void*>, BSSpinLock>           unk208;                   // 208 - BGSBody?
-		AIProcess*                                       currentProcess;           // 220
-		std::uint64_t                                    unk228;                   // 228
+		REX::EnumSet<BOOL_BITS, std::uint32_t>           boolBits;                 // 208
+		float                                            unk20C;                   // 20C
+		BSGuarded<BSTArray<void*>, BSSpinLock>           unk210;                   // 210 - BGSBody?
+		AIProcess*                                       currentProcess;           // 228
 		std::uint64_t                                    unk230;                   // 230
 		std::uint64_t                                    unk238;                   // 238
 		std::uint64_t                                    unk240;                   // 240
-		CombatController*                                combatController;         // 248
-		std::uint64_t                                    unk250;                   // 250
-		ActorValueStorage                                avStorage;                // 258
-		std::uint64_t                                    unk280;                   // 280
-		REX::EnumSet<ACTOR_CRITICAL_STAGE, std::int32_t> criticalStage;            // 288
-		std::uint32_t                                    dialogueItemTarget;       // 28C - TESPointerHandle
-		std::uint32_t                                    currentCombatTarget;      // 290 - TESPointerHandle
-		std::uint32_t                                    myKiller;                 // 294 - TESPointerHandle
-		std::uint64_t                                    unk298;                   // 298
+		std::uint64_t                                    unk248;                   // 248
+		CombatController*                                combatController;         // 250
+		std::uint64_t                                    unk258;                   // 258
+		ActorValueStorage                                avStorage;                // 260
+		std::uint64_t                                    unk288;                   // 288
+		REX::EnumSet<ACTOR_CRITICAL_STAGE, std::int32_t> criticalStage;            // 290
+		std::uint32_t                                    dialogueItemTarget;       // 294 - TESPointerHandle
+		std::uint32_t                                    currentCombatTarget;      // 298 - TESPointerHandle
+		std::uint32_t                                    myKiller;                 // 29C - TESPointerHandle
 		std::uint64_t                                    unk2A0;                   // 2A0
-		std::uint32_t                                    actionValue;              // 2A8
-		float                                            timerOnAction;            // 2AC
-		std::uint64_t                                    unk2B0;                   // 2B0
-		std::uint32_t                                    intimidateBribeDayStamp;  // 2B8
-		std::uint32_t                                    unk2BC;                   // 2BC
-		std::uint64_t                                    unk2C0;                   // 2C0
+		std::uint64_t                                    unk2A8;                   // 2A8
+		std::uint32_t                                    actionValue;              // 2B0
+		float                                            timerOnAction;            // 2B4
+		std::uint64_t                                    unk2B8;                   // 2B8
+		std::uint32_t                                    intimidateBribeDayStamp;  // 2C0
+		std::uint32_t                                    unk2C4;                   // 2C4
 		std::uint64_t                                    unk2C8;                   // 2C8
 		std::uint64_t                                    unk2D0;                   // 2D0
 		std::uint64_t                                    unk2D8;                   // 2D8
@@ -401,14 +422,14 @@ namespace RE
 		std::uint64_t                                    unk338;                   // 338
 		std::uint64_t                                    unk340;                   // 340
 		std::uint64_t                                    unk348;                   // 348
-		TESRace*                                         race;                     // 350
-		Perks*                                           perks;                    // 358
-		std::uint32_t                                    unk360;                   // 360
-		mutable BSReadWriteLock                          perkArrayLock;            // 364
-		std::uint32_t                                    unk35C;                   // 35C
-		REX::EnumSet<BOOL_FLAGS, std::uint32_t>          boolFlags;                // 370
-		REX::EnumSet<BOOL_FLAGS2, std::uint32_t>         boolFlags2;               // 374
-		std::uint64_t                                    unk378;                   // 378
+		std::uint64_t                                    unk350;                   // 350
+		TESRace*                                         race;                     // 358
+		Perks*                                           perks;                    // 360
+		std::uint32_t                                    unk368;                   // 368
+		mutable BSReadWriteLock                          perkArrayLock;            // 36C
+		std::uint32_t                                    unk374;                   // 374
+		REX::EnumSet<BOOL_FLAGS, std::uint32_t>          boolFlags;                // 378
+		REX::EnumSet<BOOL_FLAGS2, std::uint32_t>         boolFlags2;               // 37C
 		std::uint64_t                                    unk380;                   // 380
 		std::uint64_t                                    unk388;                   // 388
 		std::uint64_t                                    unk390;                   // 390
@@ -460,7 +481,8 @@ namespace RE
 		std::uint64_t                                    unk500;                   // 500
 		std::uint64_t                                    unk508;                   // 508
 		std::uint64_t                                    unk510;                   // 510
-		std::uint8_t                                     unk518[88];               // 518
+		std::uint64_t                                    unk518;                   // 518
+		std::uint8_t                                     unk520[88];               // 520
 	};
 	static_assert(sizeof(Actor) == 0x578);
 

@@ -5,6 +5,7 @@ namespace RE::ID
 	namespace Actor
 	{
 		inline constexpr REL::ID EvaluatePackage{ 150640 };
+		inline constexpr REL::ID GetActorKnowledge{ 150669 };
 		inline constexpr REL::ID IsHostileToActor{ 150777 };
 		inline constexpr REL::ID IsJumping{ 150985 };
 		inline constexpr REL::ID IsOverEncumbered{ 150999 };
@@ -39,6 +40,7 @@ namespace RE::ID
 
 	namespace BGSDefaultObjectManager
 	{
+		inline constexpr REL::ID DefaultObjectData{ 761776 };
 		inline constexpr REL::ID GetSingleton{ 82283 };
 	}
 
@@ -75,6 +77,23 @@ namespace RE::ID
 		inline constexpr REL::ID DeleteSaveFile{ 147844 };
 	}
 
+	namespace BGSStoryTeller
+	{
+		inline constexpr REL::ID Singleton{ 878850 };
+	}
+
+	namespace BSInputEnableLayer
+	{
+		inline constexpr REL::ID SetUserFlags{ 106486 };
+		inline constexpr REL::ID SetOtherFlags{ 109447 };
+	}
+
+	namespace BSInputEnableManager
+	{
+		inline constexpr REL::ID CreateLayer{ 179101 };
+		inline constexpr REL::ID Singleton{ 878792 };
+	}
+
 	namespace BSLog
 	{
 		inline constexpr REL::ID ctor{ 184813 };
@@ -93,6 +112,11 @@ namespace RE::ID
 		inline constexpr REL::ID lock{ 73879 };
 		inline constexpr REL::ID try_lock{ 74235 };
 		inline constexpr REL::ID unlock{ 73895 };
+	}
+
+	namespace BSPointerHandleManagerInterface
+	{
+		inline constexpr REL::ID GetSmartPointer{ 72432 };
 	}
 
 	namespace BSReadWriteLock
@@ -233,6 +257,16 @@ namespace RE::ID
 		inline constexpr REL::ID HasType{ 83208 };
 	}
 
+	namespace FORM_ENUM_STRING
+	{
+		inline constexpr REL::ID FormEnumString{ 761416 };
+	}
+
+	namespace GameMenuBase
+	{
+		inline constexpr REL::ID Ctor{ 130577 };
+	}
+
 	namespace GameScript
 	{
 		namespace RemoteDebugger
@@ -275,10 +309,31 @@ namespace RE::ID
 		inline constexpr REL::ID Write{ 211266 };
 	}
 
+	namespace INIPrefSettingCollection
+	{
+		inline constexpr REL::ID Singleton{ 885866 };
+	}
+
+	namespace INISettingCollection
+	{
+		inline constexpr REL::ID Singleton{ 885862 };
+	}
+
+	namespace InputEnableLayer
+	{
+		inline constexpr REL::ID Free{ 36626 };
+	}
+
 	namespace LockPickedEvent
 	{
 		inline constexpr REL::ID GetEventSource{ 107115 };
 		inline constexpr REL::ID Notify{ 107339 };
+	}
+
+	namespace Main
+	{
+		inline constexpr REL::ID Singleton{ 881027 };
+		inline constexpr REL::ID WorldRoot{ 887308 };
 	}
 
 	namespace msvc
@@ -303,6 +358,11 @@ namespace RE::ID
 		inline constexpr REL::ID Allocate{ 33962 };
 		inline constexpr REL::ID Free{ 34032 };
 		inline constexpr REL::ID GetThreadScrapHeap{ 36848 };
+	}
+
+	namespace MenuTopicManager
+	{
+		inline constexpr REL::ID Singleton{ 879316 };
 	}
 
 	namespace Misc
@@ -340,6 +400,7 @@ namespace RE::ID
 	{
 		inline constexpr REL::ID AreHostileActorsNear{ 154040 };
 		inline constexpr REL::ID Singleton{ 878338 };
+		inline constexpr REL::ID ToggleAI{ 154056 };
 	}
 
 	namespace REFR_LOCK
@@ -385,6 +446,11 @@ namespace RE::ID
 				}
 			}
 		}
+
+		namespace MemoryHeapPT
+		{
+			inline constexpr REL::ID Singleton{ 820297 };
+		}
 	}
 
 	namespace ScrapHeap
@@ -397,6 +463,16 @@ namespace RE::ID
 	{
 		inline constexpr REL::ID GetConsoleCommands{ 841465 };
 		inline constexpr REL::ID GetScriptCommands{ 841467 };
+	}
+
+	namespace SWFToCodeFunctionHandler
+	{
+		inline constexpr REL::ID RegisterNativeFunction{ 187274 };
+	}
+
+	namespace TES
+	{
+		inline constexpr REL::ID Singleton{ 881024 };
 	}
 
 	namespace TESActorBaseData
@@ -418,6 +494,11 @@ namespace RE::ID
 	namespace TESConditionItem
 	{
 		inline constexpr REL::ID IsTrue{ 116127 };
+	}
+
+	namespace TESContainer
+	{
+		inline constexpr REL::ID AddObjectToContainer{ 85991 };
 	}
 
 	namespace TESContainerChangedEvent

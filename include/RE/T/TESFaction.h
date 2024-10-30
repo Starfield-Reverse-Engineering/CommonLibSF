@@ -5,9 +5,17 @@
 
 namespace RE
 {
-	class TESFaction :
-		public TESForm,     // 000
-		public TESFullName  // 030
+	class TESReactionForm : 
+		public BaseFormComponent  // 00
+	{
+	public:
+		SF_RTTI(TESReactionForm);
+	};
+
+	class __declspec(novtable) TESFaction :
+		public TESForm,         // 000
+		public TESFullName,     // 038
+		public TESReactionForm  // 040
 	{
 	public:
 		SF_RTTI_VTABLE(TESFaction);

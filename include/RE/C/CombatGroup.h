@@ -29,7 +29,7 @@ namespace RE
 		AITimer                        searchUpdateTimer;            // 0E8
 		AITimer                        searchAreaUpdateTimer;        // 0F0
 		AITimeStamp                    unkF8;                        // 0F8
-		ActorHandle                    targetToSearchFor;            // 0FC
+		BSPointerHandle<Actor>         targetToSearchFor;            // 0FC
 		BGSWorldLocation               searchTargetLoc;              // 100
 		float                          searchRadius;                 // 118
 		std::uint32_t                  unk11C;                       // 11C
