@@ -66,7 +66,7 @@ namespace RE
 			_value.s = _defaultValue.s = _strdup(a_value);
 		}
 
-		virtual ~Setting() { stl::emplace_vtable(this); }  // 00
+		virtual ~Setting() { REL::EmplaceVTable(this); }  // 00
 
 		// add
 		[[nodiscard]] virtual bool IsPrefSetting() { return false; }  // 01
