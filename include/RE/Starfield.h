@@ -197,6 +197,7 @@
 #include "RE/B/BSIntrusiveRefCounted.h"
 #include "RE/B/BSLock.h"
 #include "RE/B/BSLog.h"
+#include "RE/B/BSPauseRequester.h"
 #include "RE/B/BSPointerHandle.h"
 #include "RE/B/BSReflection.h"
 #include "RE/B/BSResourceEnums.h"
