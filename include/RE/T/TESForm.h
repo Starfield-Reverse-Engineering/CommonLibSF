@@ -159,31 +159,31 @@ namespace RE
 			return func(this);
 		}
 
-		[[nodiscard]] static TESForm* LookupByID(TESFormID a_formID)
+		[[nodiscard]] static TESForm* GetFormByID(TESFormID a_formID)
 		{
 			using func_t = TESForm* (*)(TESFormID);
-			static REL::Relocation<func_t> func{ ID::TESForm::LookupByID };
+			static REL::Relocation<func_t> func{ ID::TESForm::GetFormByID };
 			return func(a_formID);
 		}
 
 		template <class T>
-		[[nodiscard]] static T* LookupByID(TESFormID a_formID)
+		[[nodiscard]] static T* GetFormByID(TESFormID a_formID)
 		{
-			const auto form = LookupByID(a_formID);
+			const auto form = GetFormByID(a_formID);
 			return form ? form->As<T>() : nullptr;
 		}
 
-		[[nodiscard]] static TESForm* LookupByEditorID(const BSFixedString& a_editorID)
+		[[nodiscard]] static TESForm* GetFormByEditorID(const BSFixedString& a_editorID)
 		{
 			using func_t = TESForm* (*)(const BSFixedString&);
-			static REL::Relocation<func_t> func{ ID::TESForm::LookupByEditorID };
+			static REL::Relocation<func_t> func{ ID::TESForm::GetFormByEditorID };
 			return func(a_editorID);
 		}
 
 		template <class T>
-		[[nodiscard]] static T* LookupByEditorID(const BSFixedString& a_editorID)
+		[[nodiscard]] static T* GetFormByEditorID(const BSFixedString& a_editorID)
 		{
-			const auto form = LookupByEditorID(a_editorID);
+			const auto form = GetFormByEditorID(a_editorID);
 			return form ? form->As<T>() : nullptr;
 		}
 
