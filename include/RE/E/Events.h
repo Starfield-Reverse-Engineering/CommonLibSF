@@ -2290,6 +2290,24 @@ namespace RE
 		}
 	};
 
+	struct PlayerDifficultySettingChanged
+	{
+		struct Event
+		{
+			[[nodiscard]] static BSTEventSource<PlayerDifficultySettingChanged::Event>* GetEventSource()
+			{
+				using func_t = decltype(&PlayerDifficultySettingChanged::Event::GetEventSource);
+				static REL::Relocation<func_t> func{ REL::ID(153667) };
+				return func();
+			}
+
+			// members
+			std::uint32_t oldDifficulty;  // 00
+			std::uint32_t newDifficulty;  // 04
+		};
+		static_assert(sizeof(PlayerDifficultySettingChanged::Event) == 0x8);
+	};
+
 	struct PlayerFastTravel
 	{
 		struct Event
