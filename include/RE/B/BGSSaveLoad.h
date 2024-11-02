@@ -80,8 +80,8 @@ namespace RE
 	};
 
 	class BGSSaveLoadManager :
-		public BSTEventSink<PlayerNameEvent::NameChangedEvent>,
-		public BSPauseRequester
+		public BSTEventSink<PlayerNameEvent::NameChangedEvent>,  // 000
+		public BSPauseRequester                                  // 008
 	{
 	public:
 		SF_RTTI_VTABLE(BGSSaveLoadManager);
