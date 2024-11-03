@@ -213,7 +213,7 @@ namespace RE
 			kLeave = 1
 		};
 
-		[[nodiscard]] auto GetCell() const { return TESForm::GetFormByID<TESObjectCELL>(formID); }
+		[[nodiscard]] auto GetCell() const { return TESForm::LookupByID<TESObjectCELL>(formID); }
 
 		[[nodiscard]] constexpr bool IsEnter() const noexcept { return type == Type::kEnter; }
 		[[nodiscard]] constexpr bool IsLeave() const noexcept { return type == Type::kLeave; }

@@ -527,8 +527,8 @@ namespace RE::ID
 	{
 		inline constexpr REL::ID DecExternalRefCount{ 34165 };
 		inline constexpr REL::ID DecRefCount{ 35164 };
-		inline constexpr REL::ID GetFormByID{ 86125 };
-		inline constexpr REL::ID GetFormByEditorID{ 86123 };
+		inline constexpr REL::ID LookupByID{ 86125 };
+		inline constexpr REL::ID LookupByEditorID{ 86123 };
 	}
 
 	namespace TESNPC
