@@ -233,6 +233,20 @@ namespace RE
 		}
 	};
 
+	struct BGSAppPausedEvent
+	{
+		[[nodiscard]] static BSTEventSource<BGSAppPausedEvent>* GetEventSource()
+		{
+			using func_t = decltype(&BGSAppPausedEvent::GetEventSource);
+			static REL::Relocation<func_t> func{ REL::ID(167011) };
+			return func();
+		}
+
+		// members
+		bool paused;  // 00
+	};
+	static_assert(sizeof(BGSAppPausedEvent) == 0x1);
+
 	struct BGSCellGridLoadEvent
 	{
 		[[nodiscard]] static BSTEventSource<BGSCellGridLoadEvent>* GetEventSource()
@@ -2288,6 +2302,24 @@ namespace RE
 			static REL::Relocation<func_t> func{ REL::ID(133601) };
 			return func();
 		}
+	};
+
+	struct PlayerDifficultySettingChanged
+	{
+		struct Event
+		{
+			[[nodiscard]] static BSTEventSource<PlayerDifficultySettingChanged::Event>* GetEventSource()
+			{
+				using func_t = decltype(&PlayerDifficultySettingChanged::Event::GetEventSource);
+				static REL::Relocation<func_t> func{ REL::ID(153667) };
+				return func();
+			}
+
+			// members
+			std::uint32_t oldDifficulty;  // 00
+			std::uint32_t newDifficulty;  // 04
+		};
+		static_assert(sizeof(PlayerDifficultySettingChanged::Event) == 0x8);
 	};
 
 	struct PlayerFastTravel
