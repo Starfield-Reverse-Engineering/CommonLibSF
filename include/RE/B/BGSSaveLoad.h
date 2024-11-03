@@ -1,7 +1,7 @@
 #pragma once
 
-#include "RE/B/BSPauseRequester.h"
 #include "RE/B/BSFixedString.h"
+#include "RE/B/BSPauseRequester.h"
 #include "RE/B/BSTArray.h"
 #include "RE/B/BSTEvent.h"
 #include "RE/B/BSTScatterTable.h"
@@ -16,7 +16,6 @@ namespace RE
 	class BGSSaveLoadFile
 	{
 	public:
-
 	};
 
 	class BGSSaveLoadFileEntry
@@ -75,7 +74,7 @@ namespace RE
 
 		struct AsyncRequest
 		{
-			using TaskFinishedCallback_t  = std::add_pointer_t<void(bool a_result)>;
+			using TaskFinishedCallback_t = std::add_pointer_t<void(bool a_result)>;
 		};
 	};
 
