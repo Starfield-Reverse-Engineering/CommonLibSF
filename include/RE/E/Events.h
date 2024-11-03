@@ -233,6 +233,20 @@ namespace RE
 		}
 	};
 
+	struct BGSAppPausedEvent
+	{
+		[[nodiscard]] static BSTEventSource<BGSAppPausedEvent>* GetEventSource()
+		{
+			using func_t = decltype(&BGSAppPausedEvent::GetEventSource);
+			static REL::Relocation<func_t> func{ REL::ID(167011) };
+			return func();
+		}
+
+		// members
+		bool paused;  // 00
+	};
+	static_assert(sizeof(BGSAppPausedEvent) == 0x1);
+
 	struct BGSCellGridLoadEvent
 	{
 		[[nodiscard]] static BSTEventSource<BGSCellGridLoadEvent>* GetEventSource()
