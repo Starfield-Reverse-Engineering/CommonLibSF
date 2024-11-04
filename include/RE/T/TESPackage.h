@@ -37,7 +37,6 @@ namespace RE
 		*/
 	};
 	//static_assert(sizeof(PackageTarget) == 0x18);
-	
 
 	class __declspec(novtable) TESPackage :
 		public TESForm  // 00
