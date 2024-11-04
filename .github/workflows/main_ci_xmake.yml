@@ -17,9 +17,9 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        mode:
-          - debug
-          - release
+        toolchain:
+          - msvc
+          - clang-cl
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -30,7 +30,7 @@ jobs:
           xmake-version: "latest"
 
       - name: Configure
-        run: xmake config -y --mode=${{ matrix.mode }} --vs_toolset=14.41
+        run: xmake config -y --mode=releasedbg --toolchain=${{ matrix.toolchain }} --vs_toolset=14.41
 
       - name: Build
         run: xmake build -y -vD

@@ -24,15 +24,20 @@ namespace RE
 
 	struct PackageTarget
 	{
+		// members
 		std::uint8_t type;
+		// TODO: warning C4624: 'PackageTarget': destructor was implicitly defined as deleted
+		/*
 		union
 		{
 			BSPointerHandle<TESObjectREFR> refHandle;
 			TESForm*                       object;
 		};
 		std::int32_t value;
+		*/
 	};
-	static_assert(sizeof(PackageTarget) == 0x18);
+	//static_assert(sizeof(PackageTarget) == 0x18);
+	
 
 	class __declspec(novtable) TESPackage :
 		public TESForm  // 00

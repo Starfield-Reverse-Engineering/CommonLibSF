@@ -119,7 +119,7 @@ namespace RE
 		virtual std::uint64_t Unk10()  // 10
 		{
 			using func_t = decltype(&IMenu::Unk10);
-			static REL::Relocation<uint64_t(IMenu*)> func(REL::ID(187241));
+			static REL::Relocation<func_t> func(REL::ID(187241));
 			return func(this);
 		};
 
