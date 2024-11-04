@@ -36,7 +36,7 @@ namespace RE
 			}
 		};
 
-		[[nodiscard]] static ILogger* GetLoggerSingleton()
+		[[nodiscard]] inline ILogger* GetLoggerSingleton()
 		{
 			static REL::Relocation<ILogger**> singleton{ ID::idLogging::Singleton };
 			return *singleton;

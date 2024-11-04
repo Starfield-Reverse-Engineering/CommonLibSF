@@ -306,7 +306,6 @@
 #include "RE/M/MagicTarget.h"
 #include "RE/M/Main.h"
 #include "RE/M/MemoryManager.h"
-#include "RE/M/MenuOpenCloseEvent.h"
 #include "RE/M/MenuPaperDoll.h"
 #include "RE/M/MenuTopicManager.h"
 #include "RE/M/Misc.h"

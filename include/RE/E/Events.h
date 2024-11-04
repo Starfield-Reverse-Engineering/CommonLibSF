@@ -1,6 +1,7 @@
 #pragma once
 
 #include "RE/B/BSCoreTypes.h"
+#include "RE/B/BSFixedString.h"
 #include "RE/B/BSPointerHandle.h"
 #include "RE/B/BSTEvent.h"
 #include "RE/N/NiSmartPointer.h"
@@ -1705,6 +1706,14 @@ namespace RE
 		}
 	};
 
+	struct MenuOpenCloseEvent
+	{
+		// members
+		BSFixedString menuName;  // 00
+		bool          opening;   // 08
+	};
+	static_assert(sizeof(MenuOpenCloseEvent) == 0x10);
+
 	struct MessageBoxMenu_OnBackOut
 	{
 		[[nodiscard]] static BSTEventSource<MessageBoxMenu_OnBackOut>* GetEventSource()
@@ -2253,7 +2262,8 @@ namespace RE
 		enum class Type : std::uint32_t
 		{
 			kNone = static_cast<std::underlying_type_t<Type>>(-1),
-			kSteal,
+
+			kSteal = 0,
 			kPickpocket,
 			kTrespass,
 			kAttack,

@@ -589,7 +589,6 @@ namespace RE::BSScript
 	void PackVariable(Variable& a_var, T&& a_val)  //
 		requires(detail::array<std::remove_reference_t<T>>)
 	{
-		using value_type = detail::decay_t<typename std::remove_cvref_t<T>::value_type>;
 		using reference_type =
 			std::conditional_t<
 				std::is_lvalue_reference_v<T>,

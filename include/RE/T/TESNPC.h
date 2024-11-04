@@ -20,11 +20,12 @@ namespace RE
 	class BGSListForm;
 	class BGSOutfit;
 	class BGSRelationship;
-	class MenuOpenCloseEvent;
 	class TESClass;
 	class TESCombatStyle;
 	class TESFaction;
 	class TESFurniture;
+
+	struct MenuOpenCloseEvent;
 
 	class __declspec(novtable) TESNPC :
 		public TESActorBase,                     // 000

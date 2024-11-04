@@ -8,8 +8,6 @@
 namespace RE
 {
 	class IMenu;
-	class MenuOpenCloseEvent;
-	class MenuModeChangeEvent;
 
 	namespace Scaleform
 	{
@@ -21,6 +19,8 @@ namespace RE
 	struct BIUIMenuVisiblePausedEndEvent;
 	struct BSCursorRotationChange;
 	struct BSCursorTypeChange;
+	struct MenuModeChangeEvent;
+	struct MenuOpenCloseEvent;
 	struct MenuPauseChangeEvent;
 	struct MenuPauseCounterChangeEvent;
 	struct TutorialEvent;

@@ -5,18 +5,18 @@
 
 namespace RE
 {
-	class MenuModeChangeEvent;
-	class MenuOpenCloseEvent;
 	class OtherEventEnabledEvent;
-	class TESHitEvent;
 	class UserEventEnabledEvent;
 
 	struct AnimationGraphDependentEvent;
 	struct BGSActorCellEvent;
 	struct BGSActorDeathEvent;
+	struct MenuModeChangeEvent;
+	struct MenuOpenCloseEvent;
 	struct PickRefUpdateEvent;
 	struct PositionPlayerEvent;
 	struct TargetHitEvent;
+	struct TESHitEvent;
 	struct TESFormDeleteEvent;
 
 	struct QuestStatus
