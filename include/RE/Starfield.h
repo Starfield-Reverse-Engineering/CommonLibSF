@@ -355,6 +355,7 @@
 #include "RE/S/ScaleformMemoryHeap.h"
 #include "RE/S/ScaleformPtr.h"
 #include "RE/S/ScaleformRefCount.h"
+#include "RE/S/SceneGraph.h"
 #include "RE/S/Script.h"
 #include "RE/S/Setting.h"
 #include "RE/S/SettingCollection.h"
