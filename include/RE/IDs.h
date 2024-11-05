@@ -251,6 +251,11 @@ namespace RE::ID
 		inline constexpr REL::ID deallocate{ 34440 };
 	}
 
+	namespace Calendar
+	{
+		inline constexpr REL::ID Singleton{ 878435 };
+	}
+
 	namespace ConsoleLog
 	{
 		inline constexpr REL::ID Singleton{ 879277 };

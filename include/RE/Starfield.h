@@ -221,6 +221,7 @@
 #include "RE/B/BarrierProjectile.h"
 #include "RE/B/BaseFormComponent.h"
 #include "RE/B/BeamProjectile.h"
+#include "RE/C/Calendar.h"
 #include "RE/C/ChargenMenu.h"
 #include "RE/C/CodeTasklet.h"
 #include "RE/C/CollisionLayers.h"
