@@ -2,14 +2,29 @@
 
 namespace RE
 {
-	class NiRefObject
+	class __declspec(novtable) NiRefObject
 	{
 	public:
 		SF_RTTI_VTABLE(NiRefObject);
 
 		virtual ~NiRefObject();
 
+		// add
+		virtual void* DeleteThis();  // 01
+
+		void DecRefCount()
+		{
+			if (_InterlockedExchangeAdd(&refCount, -1) == 1)
+				DeleteThis();
+		}
+
+		void IncRefCount()
+		{
+			_InterlockedExchangeAdd(&refCount, 1);
+		}
+
 		// members
-		std::uint32_t refCount;  // 08
+		volatile long refCount;  // 08
 	};
+	static_assert(sizeof(NiRefObject) == 0x10);
 }
