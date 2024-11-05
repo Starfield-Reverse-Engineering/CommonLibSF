@@ -9,7 +9,7 @@
 #include "RE/B/BSTArray.h"
 #include "RE/B/BSTEvent.h"
 #include "RE/B/BSTScatterTable.h"
-#include "RE/N/NiPoint3.h"
+#include "RE/N/NiPoint.h"
 #include "RE/T/TESActorBase.h"
 #include "RE/T/TESRace.h"
 #include "RE/T/TESRaceForm.h"

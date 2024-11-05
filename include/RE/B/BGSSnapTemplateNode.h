@@ -2,7 +2,7 @@
 
 #include "RE/B/BGSKeywordForm.h"
 #include "RE/B/BGSModelMaterialSwap.h"
-#include "RE/N/NiPoint3.h"
+#include "RE/N/NiPoint.h"
 #include "RE/T/TESBoundObject.h"
 
 namespace RE

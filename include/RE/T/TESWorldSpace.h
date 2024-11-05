@@ -3,7 +3,7 @@
 #include "RE/B/BGSEditorID.h"
 #include "RE/B/BSTEvent.h"
 #include "RE/B/BSTSmartPointer.h"
-#include "RE/N/NiPoint3.h"
+#include "RE/N/NiPoint.h"
 #include "RE/N/NiSmartPointer.h"
 #include "RE/T/TESForm.h"
 #include "RE/T/TESFullName.h"

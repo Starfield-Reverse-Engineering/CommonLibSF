@@ -2,7 +2,7 @@
 
 #include "RE/B/BGSBaseForm.h"
 #include "RE/I/IBGSBaseFormData.h"
-#include "RE/N/NiPoint3.h"
+#include "RE/N/NiPoint.h"
 
 namespace RE
 {

@@ -3,7 +3,7 @@
 #include "RE/B/BGSMod.h"
 #include "RE/B/BGSObjectPlacementDefaults.h"
 #include "RE/B/BGSPreviewTransform.h"
-#include "RE/N/NiPoint3.h"
+#include "RE/N/NiPoint.h"
 #include "RE/N/NiSmartPointer.h"
 #include "RE/T/TESObject.h"
 

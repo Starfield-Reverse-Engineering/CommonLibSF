@@ -1,7 +1,7 @@
 #pragma once
 
 #include "RE/B/BSTSmartPointer.h"
-#include "RE/N/NiPoint3.h"
+#include "RE/N/NiPoint.h"
 
 namespace RE
 {

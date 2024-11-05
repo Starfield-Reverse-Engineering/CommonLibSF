@@ -4,7 +4,7 @@
 #include "RE/B/BGSBodyPartDefs.h"
 #include "RE/B/BGSPreloadable.h"
 #include "RE/B/BSFixedString.h"
-#include "RE/N/NiPoint3.h"
+#include "RE/N/NiPoint.h"
 #include "RE/T/TESForm.h"
 #include "RE/T/TESModel.h"
 
