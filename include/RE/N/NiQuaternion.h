@@ -5,19 +5,14 @@ namespace RE
 	class NiQuaternion
 	{
 	public:
-		float w{ 1.0f };
-		float x{ 0.0f };
-		float y{ 0.0f };
-		float z{ 0.0f };
+		NiQuaternion() noexcept = default;
 
-		NiQuaternion() {}
+		NiQuaternion(float a_w, float a_x, float a_y, float a_z) noexcept :
+			w(a_w), x(a_x), y(a_y), z(a_z) {}
 
-		NiQuaternion(float w, float x, float y, float z) :
-			w(w), x(x), y(y), z(z) {}
-
-		NiQuaternion(const NiMatrix3& mat)
+		NiQuaternion(const NiMatrix3& a_mat) noexcept
 		{
-			FromMatrix(mat);
+			FromMatrix(a_mat);
 		}
 
 		static NiQuaternion Slerp(const NiQuaternion& prev, NiQuaternion next, float t)
@@ -260,6 +255,28 @@ namespace RE
 		{
 			return { -w, -x, -y, -z };
 		}
+
+		// members
+		float w{ 1.0F };  // 00
+		float x{ 0.0F };  // 04
+		float y{ 0.0F };  // 08
+		float z{ 0.0F };  // 0C
 	};
 	static_assert(sizeof(NiQuaternion) == 0x10);
 }
+
+template <>
+struct std::formatter<RE::NiQuaternion>
+{
+	template <class ParseContext>
+	constexpr auto parse(ParseContext& a_ctx)
+	{
+		return a_ctx.begin();
+	}
+
+	template <class FormatContext>
+	constexpr auto format(const RE::NiQuaternion& a_quat, FormatContext& a_ctx) const
+	{
+		return format_to(a_ctx.out(), "({}, {}, {}, {})", a_quat.w, a_quat.x, a_quat.y, a_quat.z);
+	}
+};
