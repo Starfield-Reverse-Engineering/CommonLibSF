@@ -42,7 +42,7 @@ namespace RE
 
 		float GetHoursPassedExact() const noexcept
 		{
-			return gameDaysPassed ? gameDaysPassed->value * 12.0f : 0.0f;
+			return gameDaysPassed ? gameDaysPassed->value * 24.0f : 0.0f;
 		}
 
 		std::uint16_t GetMonth() const noexcept
