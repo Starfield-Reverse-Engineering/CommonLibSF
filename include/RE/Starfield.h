@@ -363,6 +363,7 @@
 #include "RE/S/SettingCollectionMap.h"
 #include "RE/S/Sexes.h"
 #include "RE/S/SimpleAllocMemoryPagePolicy.h"
+#include "RE/S/Sky.h"
 #include "RE/S/SpellItem.h"
 #include "RE/S/Stack.h"
 #include "RE/S/StackFrame.h"

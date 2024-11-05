@@ -484,6 +484,7 @@ namespace RE::ID
 
 	namespace TES
 	{
+		inline constexpr REL::ID GetDeadCount{ 84704 };
 		inline constexpr REL::ID Singleton{ 881024 };
 	}
 
