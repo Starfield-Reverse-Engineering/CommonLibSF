@@ -1,35 +1,17 @@
 #pragma once
 
-#include "RE/N/NiPoint3.h"
+#include "RE/N/NiFrustum.h"
+#include "RE/N/NiPoint.h"
+#include "RE/N/NiRect.h"
 
 namespace RE
 {
-	template <class T>
-	class NiRect
+	class __declspec(novtable) NiCamera :
+		public NiAVObject
 	{
 	public:
-		T left;    // 00
-		T right;   // ??
-		T top;     // ??
-		T bottom;  // ??
-	};
+		SF_RTTI_VTABLE(NiCamera);
 
-	class NiFrustum
-	{
-	public:
-		float left;    // 00
-		float right;   // 04
-		float top;     // 08
-		float bottom;  // 0C
-		float _near;   // 10
-		float _far;    // 14
-		bool  ortho;   // 18
-	};
-	static_assert(sizeof(NiFrustum) == 0x1C);
-
-	class NiCamera : public NiAVObject
-	{
-	public:
 		virtual ~NiCamera() = default;
 
 		//leftBoundary and rightBoundary are outputted based on the W (radius) component of worldPt.
@@ -54,9 +36,9 @@ namespace RE
 			float    worldDiffRotated = (((a_worldPt.y - world.translate.y) * world.rotate[0][1]) +
                                          ((a_worldPt.x - world.translate.x) * world.rotate[0][0]) +
                                          ((a_worldPt.z - world.translate.z) * world.rotate[0][2])) -
-			                         viewFrustum._near;
+			                         viewFrustum.near;
 
-			result.z = worldDiffRotated * (1.0f / (viewFrustum._far - viewFrustum._near));
+			result.z = worldDiffRotated * (1.0f / (viewFrustum.far - viewFrustum.near));
 
 			float trace = (a_worldPt.x * worldToCam[3][0]) + (a_worldPt.y * worldToCam[3][1]) + ((a_worldPt.z * worldToCam[3][2]) + worldToCam[3][3]);
 			if (trace <= 0.00001f) {
@@ -80,7 +62,7 @@ namespace RE
 			return result;
 		}
 
-		// memebers
+		// members
 		float         unk[20];
 		float         worldToCam[4][4];
 		NiFrustum     viewFrustum;

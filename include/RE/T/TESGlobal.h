@@ -5,7 +5,8 @@
 
 namespace RE
 {
-	class TESGlobal : public TESForm
+	class __declspec(novtable) TESGlobal :
+		public TESForm
 	{
 	public:
 		SF_RTTI_VTABLE(TESGlobal);

@@ -1,120 +1,55 @@
 #pragma once
 
-#include "RE/N/NiPoint4.h"
+#include "RE/N/NiPoint.h"
 
 namespace RE
 {
 	class alignas(0x10) NiMatrix3
 	{
 	public:
-		void MakeIdentity() noexcept
-		{
-			entry[0].v = { 1.0F, 0.0F, 0.0F, 0.0F };
-			entry[1].v = { 0.0F, 1.0F, 0.0F, 0.0F };
-			entry[2].v = { 0.0F, 0.0F, 1.0F, 0.0F };
-		}
+		static const NiMatrix3 ZERO;
+		static const NiMatrix3 IDENTITY;
 
-		NiMatrix3 operator*(const NiMatrix3& rhs) const
-		{
-			NiMatrix3 tmp;
-			tmp.entry[0].pt[0] =
-				entry[0].pt[0] * rhs.entry[0].pt[0] +
-				entry[0].pt[1] * rhs.entry[1].pt[0] +
-				entry[0].pt[2] * rhs.entry[2].pt[0];
-			tmp.entry[1].pt[0] =
-				entry[1].pt[0] * rhs.entry[0].pt[0] +
-				entry[1].pt[1] * rhs.entry[1].pt[0] +
-				entry[1].pt[2] * rhs.entry[2].pt[0];
-			tmp.entry[2].pt[0] =
-				entry[2].pt[0] * rhs.entry[0].pt[0] +
-				entry[2].pt[1] * rhs.entry[1].pt[0] +
-				entry[2].pt[2] * rhs.entry[2].pt[0];
-			tmp.entry[0].pt[1] =
-				entry[0].pt[0] * rhs.entry[0].pt[1] +
-				entry[0].pt[1] * rhs.entry[1].pt[1] +
-				entry[0].pt[2] * rhs.entry[2].pt[1];
-			tmp.entry[1].pt[1] =
-				entry[1].pt[0] * rhs.entry[0].pt[1] +
-				entry[1].pt[1] * rhs.entry[1].pt[1] +
-				entry[1].pt[2] * rhs.entry[2].pt[1];
-			tmp.entry[2].pt[1] =
-				entry[2].pt[0] * rhs.entry[0].pt[1] +
-				entry[2].pt[1] * rhs.entry[1].pt[1] +
-				entry[2].pt[2] * rhs.entry[2].pt[1];
-			tmp.entry[0].pt[2] =
-				entry[0].pt[0] * rhs.entry[0].pt[2] +
-				entry[0].pt[1] * rhs.entry[1].pt[2] +
-				entry[0].pt[2] * rhs.entry[2].pt[2];
-			tmp.entry[1].pt[2] =
-				entry[1].pt[0] * rhs.entry[0].pt[2] +
-				entry[1].pt[1] * rhs.entry[1].pt[2] +
-				entry[1].pt[2] * rhs.entry[2].pt[2];
-			tmp.entry[2].pt[2] =
-				entry[2].pt[0] * rhs.entry[0].pt[2] +
-				entry[2].pt[1] * rhs.entry[1].pt[2] +
-				entry[2].pt[2] * rhs.entry[2].pt[2];
-			return tmp;
-		}
+		NiMatrix3() noexcept = default;
+		NiMatrix3(const NiPoint4& a_point0, const NiPoint4& a_point1, const NiPoint4& a_point2) noexcept;
+		NiMatrix3(
+			float a_x0, float a_y0, float a_z0, float a_w0,
+			float a_x1, float a_y1, float a_z1, float a_w1,
+			float a_x2, float a_y2, float a_z2, float a_w2) noexcept;
 
-		NiMatrix3 operator*(float scalar) const
-		{
-			NiMatrix3 result;
-			result.entry[0].pt[0] = entry[0].pt[0] * scalar;
-			result.entry[0].pt[1] = entry[0].pt[1] * scalar;
-			result.entry[0].pt[2] = entry[0].pt[2] * scalar;
-			result.entry[1].pt[0] = entry[1].pt[0] * scalar;
-			result.entry[1].pt[1] = entry[1].pt[1] * scalar;
-			result.entry[1].pt[2] = entry[1].pt[2] * scalar;
-			result.entry[2].pt[0] = entry[2].pt[0] * scalar;
-			result.entry[2].pt[1] = entry[2].pt[1] * scalar;
-			result.entry[2].pt[2] = entry[2].pt[2] * scalar;
-			return result;
-		}
+		NiPoint4&       operator[](std::size_t a_pos) noexcept;
+		const NiPoint4& operator[](std::size_t a_pos) const noexcept;
+		bool            operator==(const NiMatrix3& a_rhs) const noexcept;
+		bool            operator!=(const NiMatrix3& a_rhs) const noexcept;
 
-		NiPoint3 operator*(const NiPoint3& p) const
-		{
-			return NiPoint3(
-				entry[0].pt[0] * p.x + entry[0].pt[1] * p.y + entry[0].pt[2] * p.z,
-				entry[1].pt[0] * p.x + entry[1].pt[1] * p.y + entry[1].pt[2] * p.z,
-				entry[2].pt[0] * p.x + entry[2].pt[1] * p.y + entry[2].pt[2] * p.z);
-		}
+		NiMatrix3 operator*(const NiMatrix3& a_rhs) const noexcept;
+		NiMatrix3 operator*(float a_scalar) const noexcept;
+		NiPoint3  operator*(const NiPoint3& a_rhs) const noexcept;
 
-		RE::NiPoint4& operator[](size_t i)
-		{
-			assert(i < 3);
-			return entry[i];
-		}
+		void      MakeIdentity() noexcept;
+		NiMatrix3 Transpose() const noexcept;
 
-		const RE::NiPoint4& operator[](size_t i) const
-		{
-			assert(i < 3);
-			return entry[i];
-		}
-
-		bool ToEulerAnglesXYZ(float& a_x, float& a_y, float& a_z)
-		{
-			using func_t = decltype(&NiMatrix3::ToEulerAnglesXYZ);
-			static REL::Relocation<func_t> func{ ID::NiMatrix3::ToEulerAnglesXYZ };
-			return func(this, a_x, a_y, a_z);
-		}
-
-		NiMatrix3 Transpose() const
-		{
-			NiMatrix3 result;
-			result.entry[0].pt[0] = entry[0].pt[0];
-			result.entry[0].pt[1] = entry[1].pt[0];
-			result.entry[0].pt[2] = entry[2].pt[0];
-			result.entry[1].pt[0] = entry[0].pt[1];
-			result.entry[1].pt[1] = entry[1].pt[1];
-			result.entry[1].pt[2] = entry[2].pt[1];
-			result.entry[2].pt[0] = entry[0].pt[2];
-			result.entry[2].pt[1] = entry[1].pt[2];
-			result.entry[2].pt[2] = entry[2].pt[2];
-			return result;
-		}
+		bool ToEulerAnglesXYZ(NiPoint3& a_point) const;
+		bool ToEulerAnglesXYZ(float& a_x, float& a_y, float& a_z) const;
 
 		// members
 		NiPoint4 entry[3];  // 00
 	};
 	static_assert(sizeof(NiMatrix3) == 0x30);
 }
+
+template <>
+struct std::formatter<RE::NiMatrix3>
+{
+	template <class ParseContext>
+	constexpr auto parse(ParseContext& a_ctx)
+	{
+		return a_ctx.begin();
+	}
+
+	template <class FormatContext>
+	constexpr auto format(const RE::NiMatrix3& a_matrix, FormatContext& a_ctx) const
+	{
+		return format_to(a_ctx.out(), "[{}, {}, {}]", a_matrix[0], a_matrix[1], a_matrix[2]);
+	}
+};

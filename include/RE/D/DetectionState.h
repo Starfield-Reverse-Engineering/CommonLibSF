@@ -1,7 +1,7 @@
 #pragma once
 
 #include "RE/A/AITimeStamp.h"
-#include "RE/N/NiPoint3.h"
+#include "RE/N/NiPoint.h"
 #include "RE/N/NiRefObject.h"
 
 namespace RE

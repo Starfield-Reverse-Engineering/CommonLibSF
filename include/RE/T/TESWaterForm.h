@@ -1,7 +1,7 @@
 #pragma once
 
 #include "RE/C/Color.h"
-#include "RE/N/NiPoint3.h"
+#include "RE/N/NiPoint.h"
 #include "RE/T/TESForm.h"
 #include "RE/T/TESFullName.h"
 #include "RE/W/WwiseSoundHook.h"

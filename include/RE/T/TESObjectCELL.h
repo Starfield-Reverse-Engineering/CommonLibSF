@@ -6,7 +6,7 @@
 #include "RE/B/BSTSmartPointer.h"
 #include "RE/E/ExtraDataList.h"
 #include "RE/I/InteriorData.h"
-#include "RE/N/NiPoint3.h"
+#include "RE/N/NiPoint.h"
 #include "RE/N/NiSmartPointer.h"
 #include "RE/T/TESFullName.h"
 #include "RE/T/TESHandleForm.h"

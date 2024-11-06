@@ -1,18 +1,13 @@
 #pragma once
 
 #include "RE/N/NiMatrix3.h"
-#include "RE/N/NiPoint3.h"
+#include "RE/N/NiPoint.h"
 
 namespace RE
 {
 	class NiTransform
 	{
 	public:
-		// members
-		NiMatrix3 rotate;         // 00
-		NiPoint3  translate;      // 30
-		float     scale{ 1.0F };  // 3C
-
 		void MakeIdentity() noexcept
 		{
 			rotate.MakeIdentity();
@@ -52,6 +47,11 @@ namespace RE
 			result.translate = result.rotate * (-translate / result.scale);
 			return result;
 		}
+
+		// members
+		NiMatrix3 rotate;         // 00
+		NiPoint3  translate;      // 30
+		float     scale{ 1.0F };  // 3C
 	};
 	static_assert(sizeof(NiTransform) == 0x40);
 }

@@ -1,7 +1,7 @@
 #pragma once
 
 #include "RE/B/BSTList.h"
-#include "RE/N/NiPoint2.h"
+#include "RE/N/NiPoint.h"
 #include "RE/T/TESForm.h"
 
 namespace RE

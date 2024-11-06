@@ -13,7 +13,7 @@
 #include "RE/I/IKeywordFormBase.h"
 #include "RE/I/IMovementInterface.h"
 #include "RE/I/IPostAnimationChannelUpdateFunctor.h"
-#include "RE/N/NiPoint3.h"
+#include "RE/N/NiPoint.h"
 #include "RE/N/NiSmartPointer.h"
 #include "RE/T/TESBoundObject.h"
 #include "RE/T/TESHandleForm.h"
