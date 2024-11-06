@@ -114,7 +114,7 @@ namespace RE
 
 	bool NiMatrix3::ToEulerAnglesXYZ(float& a_x, float& a_y, float& a_z) const
 	{
-		using func_t = bool(*)(const NiMatrix3*, float&, float&, float&);
+		using func_t = bool (*)(const NiMatrix3*, float&, float&, float&);
 		static REL::Relocation<func_t> func{ ID::NiMatrix3::ToEulerAnglesXYZ };
 		return func(this, a_x, a_y, a_z);
 	}

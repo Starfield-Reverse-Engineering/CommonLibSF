@@ -44,10 +44,10 @@ namespace RE
 		}
 
 		// members
-		std::byte                                        pad010[0x18];   // 010
-		Sky*                                             sky;            // 028
-		std::byte                                        pad030[0xB8];   // 030
-		TESObjectCELL*                                   interiorCell;   // 0E8
+		std::byte      pad010[0x18];  // 010
+		Sky*           sky;           // 028
+		std::byte      pad030[0xB8];  // 030
+		TESObjectCELL* interiorCell;  // 0E8
 	};
 	static_assert(offsetof(TES, sky) == 0x28);
 	static_assert(offsetof(TES, interiorCell) == 0xE8);
