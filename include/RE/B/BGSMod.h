@@ -48,7 +48,7 @@ namespace RE::BGSMod
 
 				struct Include
 				{
-					RE::BGSMod::Attachment::Mod* mod;
+					BGSMod::Attachment::Mod* mod;
 					std::uint8_t                                 level;
 					stl::enumeration<IncludesFlag, std::uint8_t> flags;
 				};
@@ -165,5 +165,5 @@ namespace RE::BGSMod
 			BSFixedString   unk18;  // 18
 		};
 		static_assert(sizeof(Items) == 0x20);
-	} // namespace Template
-} // namespace RE::BGSMod
+	}
+}
