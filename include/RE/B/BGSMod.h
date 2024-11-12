@@ -135,27 +135,35 @@ namespace RE::BGSMod
 
 	namespace Template
 	{
-		class Items : public BaseFormComponent
+		class __declspec(novtable) Item :
+			public TESFullName,       // 00
+			public BGSMod::Container  // 10
+		{
+		public:
+			SF_RTTI_VTABLE(BGSMod__Template__Item);
+			~Item() override;  // 00
+		};
+		class __declspec(novtable) Items :
+			public BaseFormComponent  // 00
 		{
 		public:
 			SF_RTTI_VTABLE(BGSMod__Template__Items);
 
-			~Items() override; // 00
+			~Items() override;  // 00
 
 			// override (BaseFormComponent)
-			const BSFixedString& GetFormComponentType() const override; // 01 - { return "BGSMod_Template_Component"; }
-			void                 InitializeDataComponent() override;    // 02
+			const BSFixedString& GetFormComponentType() const override;  // 01 - { return "BGSMod_Template_Component"; }
+			void                 InitializeDataComponent() override;     // 02
 
 			// add
-			virtual void Unk_0B(); // 0B
-			virtual void Unk_0C(); // 0C
-			virtual void Unk_0D(); // 0D
+			virtual void Unk_0B();  // 0B
+			virtual void Unk_0C();  // 0C
+			virtual void Unk_0D();  // 0D
 
 			// members
-			BSTArray<void*> unk08; // 08
-			BSFixedString   unk18; // 18
+			BSTArray<Item*> items;  // 08
+			BSFixedString   unk18;  // 18
 		};
-
 		static_assert(sizeof(Items) == 0x20);
 	} // namespace Template
 } // namespace RE::BGSMod
