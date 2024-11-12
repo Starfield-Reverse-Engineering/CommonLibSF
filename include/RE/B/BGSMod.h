@@ -157,5 +157,5 @@ namespace RE::BGSMod
 		};
 
 		static_assert(sizeof(Items) == 0x20);
-	} // namespace Template
-} // namespace RE::BGSMod
+	}
+}
