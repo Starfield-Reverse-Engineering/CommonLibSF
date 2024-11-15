@@ -23,36 +23,36 @@ namespace RE
 	class WeaponAmmoData
 	{
 	public:
-		char         pad_0000[24];  // 0x0000
-		RE::TESAmmo* ammo;          // 0x0020
-		char         pad_0028[8];   // 0x0028
-		uint32_t     ammoCapacity;  // 0x0030
-		char         pad_0034[336]; // 0x0034
-	};                              // Size: 0x0184
+		char         pad_0000[24];   // 0x0000
+		RE::TESAmmo* ammo;           // 0x0020
+		char         pad_0028[8];    // 0x0028
+		uint32_t     ammoCapacity;   // 0x0030
+		char         pad_0034[336];  // 0x0034
+	};  // Size: 0x0184
 
 	static_assert(offsetof(WeaponAmmoData, ammo) == 0x18);
 
 	class WeaponDamageData
 	{
 	public:
-		char                                                                                                pad_0000[16];         // 0x0000 // a pointer?
-		float                                                                                               attackDamage;         // 0x0010
-		float                                                                                               rangeMin;             // 0x0014
-		float                                                                                               rangeMax;             // 0x0018
-		float                                                                                               Unk1;                 // 0x001C
-		float                                                                                               Unk2;                 // 0x0020
-		float                                                                                               Unk3;                 // 0x0024
-		float                                                                                               Unk4;                 // 0x0028
-		float                                                                                               Unk5;                 // 0x002C
-		float                                                                                               Unk6;                 // 0x0030
-		float                                                                                               outOfRangeDamageMult; // 0x0034
-		float                                                                                               critDamageMult;       // 0x0038
-		float                                                                                               N000001A5;            // 0x003C
-		RE::SpellItem* critEffect;           // 0x0040
-		float                                                                                               N00000175;            // 0x0048
-		float                                                                                               critChanceIncMult;    // 0x004C
-		RE::BSTArray<RE::BSTTuple3<RE::TESForm*, RE::BGSCurveForm*, RE::BGSTypedFormValuePair::SharedVal>>* damageTypes;          // 0x0050
-	};                                                                                                                            // Size: 0x0140
+		char                                                                                                pad_0000[16];          // 0x0000 // a pointer?
+		float                                                                                               attackDamage;          // 0x0010
+		float                                                                                               rangeMin;              // 0x0014
+		float                                                                                               rangeMax;              // 0x0018
+		float                                                                                               Unk1;                  // 0x001C
+		float                                                                                               Unk2;                  // 0x0020
+		float                                                                                               Unk3;                  // 0x0024
+		float                                                                                               Unk4;                  // 0x0028
+		float                                                                                               Unk5;                  // 0x002C
+		float                                                                                               Unk6;                  // 0x0030
+		float                                                                                               outOfRangeDamageMult;  // 0x0034
+		float                                                                                               critDamageMult;        // 0x0038
+		float                                                                                               N000001A5;             // 0x003C
+		RE::SpellItem*                                                                                      critEffect;            // 0x0040
+		float                                                                                               N00000175;             // 0x0048
+		float                                                                                               critChanceIncMult;     // 0x004C
+		RE::BSTArray<RE::BSTTuple3<RE::TESForm*, RE::BGSCurveForm*, RE::BGSTypedFormValuePair::SharedVal>>* damageTypes;           // 0x0050
+	};  // Size: 0x0140
 
 	static_assert(offsetof(WeaponDamageData, critChanceIncMult) == 0x4C);
 	static_assert(offsetof(WeaponDamageData, damageTypes) == 0x50);
@@ -63,20 +63,20 @@ namespace RE
 		void* unk;
 		void* instanceData;
 		void* FiringType;
-		char  pad_0000[0x4];             // 0x18
-		float burstDelaySeconds;         // 1C
-		float attackSeconds;             // 0x0020
-		float fireSeconds;               // 0x0024
-		float attackDelaySec;            // 0x0028
-		float boltChargeSec;             // 0x002C
-		float pad30;                     // 0x0030
-		float shotsPerSecond;            // 34 FIX
-		bool  overrideRateOfFire;        // 38
-		float unknown;                   // 3C
-		float triggerThresholdPrimary;   // 40
-		float unk44;                     // 44
-		float triggerThresholdSecondary; // 48 FIX
-		bool  DualTriggerSet;            // 50
+		char  pad_0000[0x4];              // 0x18
+		float burstDelaySeconds;          // 1C
+		float attackSeconds;              // 0x0020
+		float fireSeconds;                // 0x0024
+		float attackDelaySec;             // 0x0028
+		float boltChargeSec;              // 0x002C
+		float pad30;                      // 0x0030
+		float shotsPerSecond;             // 34 FIX
+		bool  overrideRateOfFire;         // 38
+		float unknown;                    // 3C
+		float triggerThresholdPrimary;    // 40
+		float unk44;                      // 44
+		float triggerThresholdSecondary;  // 48 FIX
+		bool  DualTriggerSet;             // 50
 	};
 
 	// static_assert(offsetof(WeaponFiringData, shotsPerSecond) == 0x34);
@@ -92,7 +92,7 @@ namespace RE
 	class WeaponDataFlags
 	{
 	public:
-		TESObjectWEAPInstanceData* pad1; // 0x0000
+		TESObjectWEAPInstanceData* pad1;  // 0x0000
 		TESObjectWEAPInstanceData* pad2;
 		uint8_t                    NonPlayable;
 		uint8_t                    PlayerOnly;
@@ -111,104 +111,104 @@ namespace RE
 	class WeaponDataGeneral
 	{
 	public:
-		char         pad_0000[16];     // 0x0000
-		void* equipSlot;        // 0x0010
-		char         pad_0018[24];     // 0x0018
-		void* barrelData;       // 0x0030
-		uint32_t     Type;             // 0x0038
-		float        baseWeight;       // 0x003C
-		std::int32_t baseValue;        // 0x0040
-		float        baseSpeed;        // 0x0044
-		float        attackOxygenCost; // 0x0048
-		char         pad_004C[1];      // 0x004C
-	};                                 // Size: 0x004D
+		char         pad_0000[16];      // 0x0000
+		void*        equipSlot;         // 0x0010
+		char         pad_0018[24];      // 0x0018
+		void*        barrelData;        // 0x0030
+		uint32_t     Type;              // 0x0038
+		float        baseWeight;        // 0x003C
+		std::int32_t baseValue;         // 0x0040
+		float        baseSpeed;         // 0x0044
+		float        attackOxygenCost;  // 0x0048
+		char         pad_004C[1];       // 0x004C
+	};  // Size: 0x004D
 
 	class WeapDataMelee
 	{
 	public:
-		char    pad_0000[16];  // 0x0000
-		float   N000001E6;     // 0x0010
-		float   bashDamage;    // 0x0014
-		float   reach;         // 0x0018
-		uint8_t Stagger;       // 0x001C
-		char    pad_001D[291]; // 0x001D
-	};                         // Size: 0x0140
+		char    pad_0000[16];   // 0x0000
+		float   N000001E6;      // 0x0010
+		float   bashDamage;     // 0x0014
+		float   reach;          // 0x0018
+		uint8_t Stagger;        // 0x001C
+		char    pad_001D[291];  // 0x001D
+	};  // Size: 0x0140
 
 	class WeaponDataPower
 	{
 	public:
-		char pad_0000[64]; // 0x0000
-	};                     // Size: 0x0040
+		char pad_0000[64];  // 0x0000
+	};  // Size: 0x0040
 
 	class WeapDataReload
 	{
 	public:
-		char  pad_0000[8]; // 0x0000
-		void* N000001F9;   // 0x0008
-		float Unknown;     // 0x0010
-		float Reloadspeed; // 0x0014
-		bool  Charging;    // 0x0018
-		bool  Single;      // 0x0019
-	};                     // Size: 0x001A
+		char  pad_0000[8];  // 0x0000
+		void* N000001F9;    // 0x0008
+		float Unknown;      // 0x0010
+		float Reloadspeed;  // 0x0014
+		bool  Charging;     // 0x0018
+		bool  Single;       // 0x0019
+	};  // Size: 0x001A
 
 	class WeapDataTurret
 	{
 	public:
-		char pad_0000[1088]; // 0x0000
-	};                       // Size: 0x0440
+		char pad_0000[1088];  // 0x0000
+	};  // Size: 0x0440
 
 	class WeapDataVariableRange
 	{
 	public:
-		char pad_0000[64]; // 0x0000
-	};                     // Size: 0x0040
+		char pad_0000[64];  // 0x0000
+	};  // Size: 0x0040
 
 	class WeapDataVisuals
 	{
 	public:
-		char pad_0000[64]; // 0x0000
-	};                     // Size: 0x0040
+		char pad_0000[64];  // 0x0000
+	};  // Size: 0x0040
 
 	class WeapDataShipWeapon
 	{
 	public:
-		char  pad_0000[32]; // 0x0000
-		float Unknown;      // 0x0020
-		char  pad_0024[4];  // 0x0024
-		float Unknown1;     // 0x0028
-		float Unknown2;     // 0x002C
-		float Unknown3;     // 0x0030
-		char  pad_0034[12]; // 0x0034
-	};                      // Size: 0x0040
+		char  pad_0000[32];  // 0x0000
+		float Unknown;       // 0x0020
+		char  pad_0024[4];   // 0x0024
+		float Unknown1;      // 0x0028
+		float Unknown2;      // 0x002C
+		float Unknown3;      // 0x0030
+		char  pad_0034[12];  // 0x0034
+	};  // Size: 0x0040
 
 	class WeaponDataAudio
 	{
 	public:
-		char pad_0000[64]; // 0x0000
-	};                     // Size: 0x0040
+		char pad_0000[64];  // 0x0000
+	};  // Size: 0x0040
 
 	class WeaponDataCharge
 	{
 	public:
-		char pad_0000[64]; // 0x0000
-	};                     // Size: 0x0040
+		char pad_0000[64];  // 0x0000
+	};  // Size: 0x0040
 
 	class WeaponDataAim
 	{
 	public:
 		void* pad0;
 		void* pa8;
-		float sightedTransitionSeconds; // 10
+		float sightedTransitionSeconds;  // 10
 		// float pad;
-		void* aimDownSightTemplate; // 18
-		void* pad;                  // 20 AimDownSightData
-		void* aimModel;             // 28
-		void* pad30;                // 30 AimModelData
-		std::uint64_t pad38;                // 38
-		std::uint64_t pad40;                // 40
-		std::uint64_t pad48;                // 48
-		std::uint64_t pad50;                // 50
-		std::uint8_t  accuracyBonus;        // 58 Confirm later
+		void*         aimDownSightTemplate;  // 18
+		void*         pad;                   // 20 AimDownSightData
+		void*         aimModel;              // 28
+		void*         pad30;                 // 30 AimModelData
+		std::uint64_t pad38;                 // 38
+		std::uint64_t pad40;                 // 40
+		std::uint64_t pad48;                 // 48
+		std::uint64_t pad50;                 // 50
+		std::uint8_t  accuracyBonus;         // 58 Confirm later
 	};
 
 	static_assert(offsetof(WeaponDataAim, sightedTransitionSeconds) == 0x10);
@@ -219,27 +219,26 @@ namespace RE
 	class TESObjectWEAPInstanceData
 	{
 	public:
-		char                   pad_0000[24];          // 0x0000
-		WeaponDataAim* WeaponDataAim;         // 0x0018
-		WeaponAmmoData* WeaponAmmoData;        // 0x0020
-		WeaponDataAudio* WeaponDataAudio;       // 0x0028
-		WeaponDataCharge* WeaponDataCharge;      // 0x0030
-		WeaponDamageData* WeaponDamage;          // 0x0038
-		WeaponFiringData* WeaponFiringData;      // 0x0040
-		WeaponDataFlags* WeaponFlags;           // 0x0048
-		WeaponDataGeneral* WeapDataGeneral;       // 0x0050
-		WeapDataMelee* WeapDataMelee;         // 0x0058
-		WeaponDataPower* WeapDataPower;         // 0x0060
-		WeapDataReload* WeapDataReload;        // 0x0068
-		WeapDataTurret* WeapDataTurret;        // 0x0070
-		WeapDataVariableRange* WeapDataVariableRange; // 0x0078
-		WeapDataVisuals* WeapDataVisuals;       // 0x0080
-		WeapDataShipWeapon* WeapDataShipWeapon;    // 0x0088
+		char                   pad_0000[24];           // 0x0000
+		WeaponDataAim*         WeaponDataAim;          // 0x0018
+		WeaponAmmoData*        WeaponAmmoData;         // 0x0020
+		WeaponDataAudio*       WeaponDataAudio;        // 0x0028
+		WeaponDataCharge*      WeaponDataCharge;       // 0x0030
+		WeaponDamageData*      WeaponDamage;           // 0x0038
+		WeaponFiringData*      WeaponFiringData;       // 0x0040
+		WeaponDataFlags*       WeaponFlags;            // 0x0048
+		WeaponDataGeneral*     WeapDataGeneral;        // 0x0050
+		WeapDataMelee*         WeapDataMelee;          // 0x0058
+		WeaponDataPower*       WeapDataPower;          // 0x0060
+		WeapDataReload*        WeapDataReload;         // 0x0068
+		WeapDataTurret*        WeapDataTurret;         // 0x0070
+		WeapDataVariableRange* WeapDataVariableRange;  // 0x0078
+		WeapDataVisuals*       WeapDataVisuals;        // 0x0080
+		WeapDataShipWeapon*    WeapDataShipWeapon;     // 0x0088
 	};
 
 	static_assert(offsetof(TESObjectWEAPInstanceData, WeaponAmmoData) == 0x20);
 	static_assert(offsetof(TESObjectWEAPInstanceData, WeaponDamage) == 0x38);
-
 
 	namespace BGSMod::Attachment
 	{
@@ -270,7 +269,7 @@ namespace RE
 		BGSEditorID                                formEditorID;       // 230
 		BSTSmartPointer<TESObjectWEAPInstanceData> weaponData;         // 240
 		BGSAttachParentArray                       attachParents;      // 248
-		BGSMod::Attachment::Mod* embeddedWeaponMod;  // 268
+		BGSMod::Attachment::Mod*                   embeddedWeaponMod;  // 268
 		std::uint8_t                               unk270;             // 270
 	};
 	static_assert(sizeof(TESObjectWEAP) == 0x280);
