@@ -311,6 +311,18 @@ namespace REL
 			safe_fill(address(), a_value, a_count);
 		}
 
+#ifdef SFSE_SUPPORT_XBYAK
+		void write_func(const std::size_t a_count, const std::uintptr_t a_dst)
+			requires(std::same_as<value_type, std::uintptr_t>);
+
+		template <class F>
+		void write_func(const std::size_t a_count, const F a_dst)
+			requires(std::same_as<value_type, std::uintptr_t>)
+		{
+			write_func(a_count, stl::unrestricted_cast<std::uintptr_t>(a_dst));
+		}
+#endif
+
 		constexpr std::uintptr_t write_vfunc(const std::size_t a_idx, const std::uintptr_t a_newFunc)
 			requires(std::same_as<value_type, std::uintptr_t>)
 		{
