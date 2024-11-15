@@ -7,6 +7,9 @@ if(TARGET CommonLibSF)
 endif()
 
 # options if not defined
+option(REX_OPTION_INI "Enables ini config support for REX." OFF)
+option(REX_OPTION_JSON "Enables json config support for REX." OFF)
+option(REX_OPTION_TOML "Enables toml config support for REX." OFF)
 option(SFSE_SUPPORT_XBYAK "Enables trampoline support for xbyak." OFF)
 option(SFSE_BUILD_TESTS "Builds the tests." OFF)
 
@@ -55,6 +58,9 @@ function(configure_target TARGET_NAME)
     PUBLIC
     WINVER=0x0A00 # windows 10, minimum supported version by starfield
     _WIN32_WINNT=0x0A00
+    "$<$<BOOL:${REX_OPTION_INI}>:REX_OPTION_INI=1>"
+    "$<$<BOOL:${REX_OPTION_JSON}>:REX_OPTION_JSON=1>"
+    "$<$<BOOL:${REX_OPTION_TOML}>:REX_OPTION_TOML=1>"
     $<$<BOOL:${SFSE_SUPPORT_XBYAK}>:SFSE_SUPPORT_XBYAK=1>
     WIN32_LEAN_AND_MEAN
     NOMINMAX

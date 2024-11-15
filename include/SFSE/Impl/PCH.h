@@ -106,13 +106,14 @@
 
 static_assert(std::is_integral_v<std::time_t> && sizeof(std::time_t) == sizeof(std::size_t), "wrap std::time_t instead");
 
+#include "REX/REX/Enum.h"
+#include "REX/REX/EnumSet.h"
+#include "REX/W32/KERNEL32.h"
+#include "REX/W32/USER32.h"
+
 #pragma warning(push)
 #include <spdlog/spdlog.h>
 #pragma warning(pop)
-
-#include "REX/REX.h"
-#include "REX/W32/KERNEL32.h"
-#include "REX/W32/USER32.h"
 
 #define AsAddress(ptr) std::bit_cast<std::uintptr_t>(ptr)
 #define AsPointer(addr) std::bit_cast<void*>(addr)
