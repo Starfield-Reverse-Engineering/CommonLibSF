@@ -15,6 +15,24 @@ add_rules("mode.debug", "mode.releasedbg")
 includes("xmake-extra.lua")
 
 -- define options
+option("rex_ini", function()
+    set_default(false)
+    set_description("Enable ini config support for REX")
+    add_defines("REX_OPTION_INI=1")
+end)
+
+option("rex_json", function()
+    set_default(false)
+    set_description("Enable json config support for REX")
+    add_defines("REX_OPTION_JSON=1")
+end)
+
+option("rex_toml", function()
+    set_default(false)
+    set_description("Enable toml config support for REX")
+    add_defines("REX_OPTION_TOML=1")
+end)
+
 option("sfse_xbyak", function()
     set_default(false)
     set_description("Enable trampoline support for Xbyak")
@@ -23,6 +41,18 @@ end)
 
 -- require packages
 add_requires("spdlog", { configs = { header_only = false, std_format = true } })
+
+if has_config("rex_ini") then
+    add_requires("simpleini")
+end
+
+if has_config("rex_json") then
+    add_requires("nlohmann_json")
+end
+
+if has_config("rex_toml") then
+    add_requires("toml11")
+end
 
 if has_config("sfse_xbyak") then
     add_requires("xbyak")
@@ -39,12 +69,24 @@ target("commonlibsf")
     -- add packages
     add_packages("spdlog", { public = true })
 
+    if has_config("rex_ini") then
+        add_packages("simpleini", { public = true })
+    end
+
+    if has_config("rex_json") then
+        add_packages("nlohmann_json", { public = true })
+    end
+
+    if has_config("rex_toml") then
+        add_packages("toml11", { public = true })
+    end
+
     if has_config("sfse_xbyak") then
         add_packages("xbyak", { public = true })
     end
 
     -- add options
-    add_options("sfse_xbyak", { public = true })
+    add_options("rex_ini", "rex_json", "rex_toml", "sfse_xbyak", { public = true })
 
     -- add system links
     add_syslinks("advapi32", "bcrypt", "dbghelp", "dxgi", "ole32", "shell32", "user32", "version", "ws2_32")
