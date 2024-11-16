@@ -278,6 +278,39 @@ namespace REL
 			return stl::unrestricted_cast<value_type>(_address);
 		}
 
+		template <std::ptrdiff_t O = 0>
+		void replace_func(const std::size_t a_count, const std::uintptr_t a_dst)
+			requires(std::same_as<value_type, std::uintptr_t>)
+		{
+#pragma pack(push, 1)
+			struct Assembly
+			{
+				std::uint8_t  jmp;
+				std::uint8_t  modrm;
+				std::int32_t  disp;
+				std::uint64_t addr;
+			};
+			static_assert(sizeof(Assembly) == 0xE);
+#pragma pack(pop)
+
+			Assembly assembly{
+				.jmp = static_cast<std::uint8_t>(0xFF),
+				.modrm = static_cast<std::uint8_t>(0x25),
+				.disp = static_cast<std::int32_t>(0),
+				.addr = static_cast<std::uint64_t>(a_dst),
+			};
+
+			safe_fill(address() + O, INT3, a_count);
+			safe_write(address() + O, &assembly, sizeof(assembly));
+		}
+
+		template <std::ptrdiff_t O = 0, class F>
+		void replace_func(const std::size_t a_count, const F a_dst)
+			requires(std::same_as<value_type, std::uintptr_t>)
+		{
+			replace_func<O>(a_count, stl::unrestricted_cast<std::uintptr_t>(a_dst));
+		}
+
 		void write(const void* a_src, std::size_t a_count)
 			requires(std::same_as<value_type, std::uintptr_t>)
 		{
@@ -337,18 +370,6 @@ namespace REL
 		{
 			safe_fill(address(), a_value, a_count);
 		}
-
-#ifdef SFSE_SUPPORT_XBYAK
-		void write_func(const std::size_t a_count, const std::uintptr_t a_dst)
-			requires(std::same_as<value_type, std::uintptr_t>);
-
-		template <class F>
-		void write_func(const std::size_t a_count, const F a_dst)
-			requires(std::same_as<value_type, std::uintptr_t>)
-		{
-			write_func(a_count, stl::unrestricted_cast<std::uintptr_t>(a_dst));
-		}
-#endif
 
 		constexpr std::uintptr_t write_vfunc(const std::size_t a_idx, const std::uintptr_t a_newFunc)
 			requires(std::same_as<value_type, std::uintptr_t>)
