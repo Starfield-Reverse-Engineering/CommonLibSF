@@ -30,7 +30,7 @@ jobs:
           xmake-version: "latest"
 
       - name: Configure
-        run: xmake config -y --mode=releasedbg --toolchain=${{ matrix.toolchain }} --vs_toolset=14.41
+        run: xmake config -y --mode=releasedbg --toolchain=${{ matrix.toolchain }} --vs_toolset=14
 
       - name: Build
         run: xmake build -y -vD
