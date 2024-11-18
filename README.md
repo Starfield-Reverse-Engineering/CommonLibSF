@@ -73,6 +73,11 @@ The main requirement of this license is: if you link your mod against CommonLibS
     </a>
   </td>
   <td align="center">
+    <a href="https://github.com/shad0wshayd3" title="shad0wshayd3">
+      <img src="https://avatars.githubusercontent.com/u/2724172?v=4" width="50;" alt="shad0wshayd3"/>
+    </a>
+  </td>
+  <td align="center">
     <a href="https://github.com/nikitalita" title="nikitalita">
       <img src="https://avatars.githubusercontent.com/u/69168929?v=4" width="50;" alt="nikitalita"/>
     </a>
@@ -80,11 +85,6 @@ The main requirement of this license is: if you link your mod against CommonLibS
   <td align="center">
     <a href="https://github.com/TommInfinite" title="TommInfinite">
       <img src="https://avatars.githubusercontent.com/u/81481291?v=4" width="50;" alt="TommInfinite"/>
-    </a>
-  </td>
-  <td align="center">
-    <a href="https://github.com/shad0wshayd3" title="shad0wshayd3">
-      <img src="https://avatars.githubusercontent.com/u/2724172?v=4" width="50;" alt="shad0wshayd3"/>
     </a>
   </td>
   <td align="center">
@@ -135,6 +135,11 @@ The main requirement of this license is: if you link your mod against CommonLibS
   <td align="center">
     <a href="https://github.com/gazzamc" title="Gary McGovern">
       <img src="https://avatars.githubusercontent.com/u/7975925?v=4" width="50;" alt="Gary McGovern"/>
+    </a>
+  </td>
+  <td align="center">
+    <a href="https://github.com/Zzyxz" title="Zzyxz">
+      <img src="https://avatars.githubusercontent.com/u/33715692?v=4" width="50;" alt="Zzyxz"/>
     </a>
   </td>
   <td align="center">
