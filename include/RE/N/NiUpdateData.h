@@ -4,8 +4,9 @@ namespace RE
 {
 	class NiPoint4;
 
-	struct NiUpdateData
+	class NiUpdateData
 	{
+	public:
 		// members
 		float         delta = 0;
 		float         unk04 = 0;
