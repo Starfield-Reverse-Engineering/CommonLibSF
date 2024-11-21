@@ -41,6 +41,10 @@ namespace REX
 
 		void SetValue(T a_value) { m_value = a_value; }
 
+	public:
+		operator T&() { return m_value; }
+		operator const T&() const { return m_value; }
+
 	protected:
 		T m_value;
 		T m_valueDefault;
