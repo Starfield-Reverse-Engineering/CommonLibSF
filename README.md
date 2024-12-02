@@ -78,8 +78,8 @@ The main requirement of this license is: if you link your mod against CommonLibS
     </a>
   </td>
   <td align="center">
-    <a href="https://github.com/nikitalita" title="nikitalita">
-      <img src="https://avatars.githubusercontent.com/u/69168929?v=4" width="50;" alt="nikitalita"/>
+    <a href="https://github.com/nikitalita" title="Nikita">
+      <img src="https://avatars.githubusercontent.com/u/69168929?v=4" width="50;" alt="Nikita"/>
     </a>
   </td>
   <td align="center">
