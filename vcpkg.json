@@ -13,7 +13,7 @@
     "registries": [
       {
         "kind": "git",
-        "baseline": "f77b98856f76ef2b57928d8f62b3aee497fd6ad8",
+        "baseline": "6abaa8a737b8e8318ee7597fee5c5d5e639f8ad0",
         "repository": "https://github.com/ThirdEyeSqueegee/vcpkg-ports",
         "packages": [
           "spdlog"
