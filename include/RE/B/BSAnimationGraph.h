@@ -1,9 +1,9 @@
 #pragma once
 
 #include "RE/B/BSIntrusiveRefCounted.h"
+#include "RE/B/BSLock.h"
 #include "RE/B/BSTEvent.h"
 #include "RE/B/BSTSmartPointer.h"
-#include "RE/B/BSLock.h"
 
 namespace RE
 {
