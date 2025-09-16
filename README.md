@@ -1,5 +1,7 @@
 # CommonLibSF
 
+# This repo is unmaintained, please go to [libxse/commonlibsf](https://github.com/libxse/commonlibsf) for updates
+
 ## A collaborative reverse-engineered library for Starfield
 
 [![C++23](https://img.shields.io/static/v1?label=standard&message=c%2B%2B23&color=blue&logo=c%2B%2B&&logoColor=red&style=flat)](https://en.cppreference.com/w/cpp/compiler_support)
